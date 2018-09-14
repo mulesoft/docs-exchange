@@ -1,0 +1,14 @@
+= About Sharing Assets
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can use Exchange private or Exchange portal to share Mule XML example code, templates, connectors, APIs, and custom information assets. Sharing assets helps your organization model and reuse code and APIs for ease of access and to provide a repository.
+
+Exchange private makes it easy to share assets with internal developers by giving them viewer, contributor, or administrator access. Additionally, assets created within a business group are automatically shared with developers within that business group.
+
+Exchange portal enables Exchange administrators to share assets externally with developers outside of their own organization.
+
+Both Exchange views also let users review assets so that asset providers can get feedback.
+
+See the xref:exchange2-faq.adoc[FAQ] for additional information.

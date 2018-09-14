@@ -1,0 +1,58 @@
+= Anypoint Exchange
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Exchange provides the benefit of being able to discover, share, and incorporate assets and resources into your applications. Anypoint Exchange helps you create API developer portals, view and test APIs, simulate data to APIs (Mocking Service), create assets, and use API Notebooks to describe and test API functions.
+
+== Get Started
+
+. From the public https://www.anypoint.mulesoft.com/exchange/[Exchange], click an asset and view its description.
+. Click Login to view a private Exchange for your organization.
+. After you log in, click Public Portal in your organization to view public APIs available to anyone.
+
+After you log into Exchange, you can create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets.
+
+== Try APIs
+
+. Click All Types > REST APIs and choose any API.
+. Click the asset and notice how the API functions appear in the left
+navigation area. Exchange lets you view the functions in an API.
+. Click a function and more information appears. At the right side of the screen, you can test the API by entering sample values to send to the API and get responses from the API.
+
+== Need More Information on an Asset?
+
+Click the Helpful Links item in the left navigation area for links to documentation.
+
+== About Content
+
+Exchange assets are accessible in Anypoint Studio (connectors, templates, and examples), API Manager and Runtime Manager (APIs), and you can publish APIs from Design Center to Exchange.
+
+MuleSoft certifies its public content, and reviews and approves partner connectors. All private content is internal to an organization and not visible outside their organization. Customers are responsible for any private content they publish within their Exchange.
+
+== Content Types
+
+Both the public and private content in Exchange can consist of the following kinds of elements:
+
+* Connectors - Facilitate easy integration of a Mule applications with third-party APIs and standard integration protocols. Use connectors within your application's flows to send and receive data via a protocol or specific API. Anypoint Studio comes bundled with a large set of connectors, but in the Exchange are many more.
+
+* REST files - APIs can be RAML or OAS files that describe an API's structure. These APIs can be referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
+
+* SOAP files - WSDL files that describe an API's structure.
+
+* HTTP APIs - Lets you add a URL to describe the structure of an HTTP API for use in Studio or in Design Center.
+
+* Examples - Mule projects that explain what the elements are in Studio and how they work together to achieve certain objectives. Examples are implementation projects that show how the example can be leveraged to achieve specific API and integration objectives. Examples are applications that are ready to run and demonstrate a use case or solution.
+
+* Templates - Mule projects that cover typical enterprise integration use cases. Find one that performs what you need, provide it user credentials, and it should be good to deploy! You can also customize or extend templates as needed. Templates provide ackaged integration patterns that address common use cases and are built on best practices. Templates are use case applications to which you add your information to complete a user case or solution.
++
+The examples and templates categories depend on the purpose for which each project is built: templates are almost ready to use just-add-water solutions, while examples are intended to increase your understanding of Studio elements and to build your own solution. You can also use an example as a starting point for an actual deployable project or a template as a tool for understanding concepts.
++
+* Custom - Custom assets provide descriptions and an optional file to explain aspects of your system, to provide instructional videos, or describe product or organizational documentation.
+
+== See Also
+
+* xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
+* xref:migrate.adoc[Migrate Assets from Exchange 1]
+* https://forums.mulesoft.com[MuleSoft Forum]
+* https://support.mulesoft.com[Contact MuleSoft Support]

@@ -1,0 +1,73 @@
+= To Create an Asset
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+In Anypoint Exchange private and Exchange portal, to share an API, example, template, or connector means that
+you first create an asset corresponding to the asset type.
+
+How you create an asset depends on its type.
+
+* For OAS 2.0, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *New* menu.
+* For a RAML specification, first use Design Center, and publish the API to Exchange. You can also publish RAMLs programatically using the Exchange Experience API.
+* For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
+* For a connector, see xref:to-publish-assets-maven.adoc[To Publish and Deploy Exchange Assets Using Maven].
+
+Each asset in Exchange is versioned. You can manage which versions are visible by deprecating a version to hide it, and you can delete versions if needed.
+
+Note: In addition to asset versions, APIs have a consumer facing API version that is shown at the top of an asset's detail screen. This API version is defined by API providers.
+
+This illustration summarizes how each asset type (in blue) appears in Exchange:
+
+image::ex2-exchange-assets.png[Illustration - How Assets appear in Exchange]
+
+== Creating an API Asset
+
+An API asset specifies what an interface consists of including its functions, descriptions, how to handle return codes, and dependencies.
+
+. In Exchange, click New.
+. Specify a name for the asset.
+. Click the asset type from the drop-down list:
++
+* API Spec - OAS: Provide an OAS/Swagger 2.0 API specification file. (Exchange does not support OAS 3.0.) OAS specifications can be either a YAML (.yaml) or JSON (.json) file.
+* API Spec - WSDL: Provide a WSDL (SOAP API) specification file.
++
+The HTTP API does not require a file, this type of asset provides an API endpoint
+that is defined by API Manager.
++
+. For OAS and WSDL assets:
++
+.. Click Choose File to locate the API specification file.
+.. Select the Main file of the API. If the file is a zip, the Main file should be in the root directory inside the zip. If the file is not a zip or if it has only one Main file, it's selected automatically.
++
+. Click Publish.
+
+== Advanced Settings
+
+Exchange generates the GroupId, AssetId, and Version automatically. You can change the values if needed. For an OAS asset, you can set the asset version and the API version separately.
+
+The Advanced settings are most often used to change the version number.
+
+== Creating a Custom Asset
+
+A custom asset lets you share information about any aspect of your organization such as announcements, documentation, videos, and sharing files. You can add an optional file to your Custom asset that users can download. The file is stored in Exchange.
+
+. Click New.
+. Specify a name for the asset.
+. Click the Custom Asset Type.
+. If you want to share a file with users, click Choose File to locate the file.
+. Click Publish.
+
+== To Add a File to an Existing Asset
+
+If you have contributor or admin access to an asset, you can add a file to an existing asset.
+
+Click the asset and click Add New Version. The new version screen lets you change the asset name, choose a file to add, and change the asset's version.
+
+If you don't want to add a new version, if you have contributor or admin access to an asset, serve the file from a web server in your organization and edit the asset to add a link to the file in the asset's description.
+
+== See Also
+
+* Next: xref:to-describe-an-asset.adoc[To Describe an Asset].
+* link:/design-center/v/1.0/upload-raml-task[Create a RAML file in API Designer and import to Exchange].
+* xref:to-publish-assets-maven.adoc[To Publish and Deploy Exchange Assets Using Maven].

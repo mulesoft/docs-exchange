@@ -1,0 +1,49 @@
+= To Request Access
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+APIs that have been protected by a Client ID enforcement policy require API consumers to create an application to hold the Client ID and Secret. This lets the app access the API as well as provide consumer analytics for an API developer.
+
+If terms and conditions are set for an asset, you are prompted to accept the terms before access can be granted.
+
+. Click an API asset to view more details.
+. Click Request Access.
+. If you do not have an application you want to provide access for, click Create A New Application in the Request Access menu. See below for more information.
+. If you are using an existing application, choose from the list of applications.
+. Choose the API Instance from the list of APIs.
+. Choose the service-level agreement (SLA) value for the application.
+. Click Request Access.
++
+The Request API Access menu opens to show that the API access was successful. This screen lists the client ID and client secret for this API access instance.
+
+== Create a New Application
+
+Choose from the screens that follow for what to provide:
+
+* If an organization uses OAuth authentication, this screen appears:
++
+image::ex2-edit-app2.png[Screenshot - Create New Application]
++
+Specify:
++
+** The application name.
+** An optional description for the application.
+** An optional spplication URL for where the app resides. If not specified, the app is assumed to be in the Runtime Manager.
+** An optional URL for an OAuth 2 callback.
+
+* If an organization has external authentication, this screen appears:
++
+image::ex2-edit-app.png[Screenshot - External Authentication]
++
+Specify the same values as above, but also:
++
+The OAuth 2 grant type:
++
+** Implicit Grant
+** Authorization Code Grant
+** Refresh Token
+
+== See Also
+
+* https://www.google.com/search?q=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token&oq=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token[Search to compare grant types]

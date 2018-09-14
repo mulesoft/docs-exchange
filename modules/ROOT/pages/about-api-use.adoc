@@ -1,0 +1,17 @@
+= About Consuming an API
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Exchange provides significant features for API providers to easily publish and share APIs with developers inside and outside of an organization.
+
+Exchange helps API consumers understand API functionality and test features with:
+
+* API console to view API functions. This console appears to the right of a REST API detail screen.
+* API Notebook to view API documentation and to test API features.
+* Simulate data to an API using the mocking service.
+
+== See Also
+
+* xref:to-describe-an-asset.adoc[To Describe an Asset] - Describes how to
+view and experiment with REST API functionality directly in Exchange

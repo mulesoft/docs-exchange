@@ -1,0 +1,21 @@
+= To Download an Asset
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Download lets you download a copy of the asset, or in the case of a Custom asset, the optional file attached to the asset when it was created.
+
+Click the Download button in the task bar. image:ex2-icon-download.png[Download button in the taskbar]
+
+The results vary by file type:
+
+* RAML: Downloads a zip file of the RAML file.
+* OAS: Click the down arrow image:ex2-icon-download-with-arrow.png[Download button for OAS with OAS and RAML choices]
++
+Choose the format As OAS or As RAML. If the original is in the
+alternate format, Exchange converts the file to your choice. OAS downloads in the original format
+of either JSON or YAML. A RAML downloads as a zip file.
++
+* WSDL: Downloads the WSDL as a WSDL file.
+* Custom, with a file: Downloads the same format file that you uploaded, but the file name is based on your application name. For example, if you upload a text file for the Inventory Distribution project, Exchange downloads inventory-distribution.txt.
+* Custom without a file: The Download button does not appear.

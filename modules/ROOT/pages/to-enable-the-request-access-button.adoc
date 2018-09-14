@@ -1,0 +1,35 @@
+= To Enable the Request Access Button to Display
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+This topic requires the Exchange Administrator role.
+
+Users specify what applications can have access to an API by clicking the
+Request Access button image:ex2-request-access.png[Button - Request Access].
+
+Exchange Administrators see the Request Access in the More Options menu image:ex2-more-options-icon.png[Button - More Options - 3 dot menu].
+
+However, just creating an API asset does not cause the Request Access button to display.
+You have to configure the asset first:
+
+. In API Manager, click Manage API > Manage API from Exchange to open the API.
+. Use the URL of your API asset in Exchange as the Implementation URI in API Manager.
+. After opening your API in API Manager, you can view the API Instance ID value as well as other useful information.
+. To return to Exchange, click View API in Exchange.
+. In Exchange, the Request Access button appears in the three dot menu.
+
+Note: in API Manager, the API's Status is marked as Unregistered. To register the API, deploy the API to Runtime Manager; however, changing the API Status to Registered is not required for the API to be usable in Exchange.
+
+== Request Access Display Criteria
+
+To see the Request Access button in a public portal requires:
+
+* A published API in Exchange of REST, SOAP, or HTTP API. The REST API can be either an OAS or RAML API specification.
+* An instance created in API Manager with the API.
+* Set the instance as public in the API Instances link.
+* Set the instance’s URL in API Instances if not present.
+
+== See Also
+
+* xref:to-request-access.adoc[To Request Access].

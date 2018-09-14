@@ -1,0 +1,246 @@
+= To Find Asset Information
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Exchange helps you find assets. You can search for assets, click All Types to filter for specific assets, or combine search
+text with an All Types filter.
+
+== About All Types Filters
+
+* Connectors - Packaged connectivity to an endpoint developed and deployed on Anypoint Platform with third-party APIs and standard integration protocols.
+* Templates - Packaged integration patterns that address common use cases and are built on best practices. You can add your information to complete the template's use case or solution.
+* Examples - Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
+* REST APIs - A RAML or OAS API specification.
+* SOAP APIs - An API description in a WSDL that helps make the adoption of the Anypoint Platform easier and faster.
+* HTTP APIs - A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
+* RAML Fragments - A RAML document that has a version and an identifier, but is not in itself a complete RAML specification.
+* Custom - Blogs, articles, and more - Links that assist with knowledge sharing.
+
+== About Asset Details
+
+When you click an asset, Exchange provides detail information:
+
+* Left navigation area - Lists additional pages, saved search terms, application names, instances, and for a REST API,
+the HTTP functions in the REST specification.
+* Right detail panel - Lists the asset type, when the asset was created and by which organization, when the asset was last published, the version, and the asset's dependencies. For REST APIs, the right panel lets you test the API by creating example calls, test data (mocking), and the ability to send data to the API and view the results.
+
+== About Exchange Search
+
+Search lets you find Exchange assets that contain one or more terms
+in an asset title, asset ID, or a tag in an asset. You can also combine search terms with the filters listed in All Types.
+Searches only apply to the Exchange you are viewing.
+If you search in a private Exchange, the search only lists the
+private Exchange assets and not public Exchange assets.
+
+== To Search for Phrases
+
+You can put a space between words to search for
+case insensitive text that begins with each word you specify.
+This is similar to putting the `*` wildcard regular expression after each word.
+For example searching for `mq module` finds any asset that has text that
+starts with `mq` or `module`.
+
+Each word in a multiple word phrase needs to be present in an asset name, asset ID, or tag
+for a search to succeed.
+
+If you separate search words with any other character than a space, Exchange
+converts the character to a space before searching.
+
+=== About Search Separators
+
+Search lets you find Exchange assets that contain one or more terms in an asset name, asset ID, or a tag.
+
+If you input search words connected by non-alphanumeric symbols, Exchange replaces the symbols with spaces before searching for the term. The search string only succeeds if both words are present in the result. This is the same as the `word1 AND word2` relationship.
+
+Exchange searches asset names, asset ID values, and tag values. Assets migrated from Exchange 1 also allow the search to include text in an asset's description.
+
+Example search terms:
+
+[source,text,linenums]
+----
+sales:connect
+Sales-Connect
+connect:/sales
+-connect -sales
+----
+
+The table that follows shows how each search term is interpreted depending on the values in the Asset Name,
+Asset ID, and Tags for an asset. If the search term maps to the values correctly, a match occurs. If not,
+the reason is provided.
+
+[%header%autowidth.spread]
+|===
+|Asset Name |Asset ID |Tags |Matches?
+|Salesforce API |salesforce-api |mule-Connector |Yes
+|Salesforce Connector |salesforce-connector |REST |Yes
+|Validations API |validations-api |salesforce-connecting |Yes
+|Optimized API |optimized-api |resource:/connect, salesforce:enabled |Yes
+|Cisco Sales API  |cisco-sales-api |Connecting, Productive |Yes
+|Cisco Connector |cisco-connector |com.cisco.connector.sales
+|Yes, because the tag is split into separate terms.
+|Salesforce API |salesforce-api |muleconnector, MuleConnector |No. `connect` was not found.
+|Salesforce Connec |salesforce-connec |REST |No. `connect` was not found.
+|Validations API |validations-api |connector |No. `sales` was not found.
+|Cisco Presales API |cisco-presales-api |Connector, api |No. `sales` was not found.
+|===
+
+=== About Phrase Search Separators
+
+Exchange search features phrase search, which allows you to query for a group of terms inside quotation marks. Phrase searches match an asset only if all the exact terms inside quotes appear in consecutive order.
+
+If you input any of the following searches in Exchange, Exchange replaces  non-alphanumeric symbols to spaces before searching for assets.
+
+Example search terms:
+
+[source,text,linenums]
+----
+Api: "Sales connect"
+Api "Sales-connect"
+Api "Sales:/connect"
+Api-"Sales/connect"
+"Sales connect":Api
+----
+
+The table that follows shows how each search term is interpreted depending on the values in the Asset Name,
+Asset ID, and Tags for an asset. If the search term maps to the values correctly, a match occurs. If not,
+the reason is provided.
+
+[%header%autowidth.spread]
+|===
+|Asset Name |Asset ID |Tags |Matches?
+|Salesforce API |salesforce-api |mule-Connector |No. `sales connect` was not found.
+|Salesforce Connector |salesforce-connector |REST |No
+|Sales Connect Asset |validations-api |mule-connector |Yes
+|Sales Connect Images |validations-images |mule-connector |No. `api` was not found.
+|Optimized API |optimized-api |resource:/connect, sales:enabled |No. `sales connect` was not found.
+|Optimized API |optimized-api |resource:/sales, connect:enabled |No. `sales connect` was not found, because each term is in different tags.
+|Optimized API |optimized-api |sales:/connect |Yes
+|===
+
+== About Search Using Query Language
+
+Using query language allows you to search assets by tags, categories, and custom fields.
+
+=== Search by Tags
+
+You can use the following structure to search by tags: `tag:"some value"` or `tag:value`
+Double quotes are not necessary if the tag has no spaces.
+Also, tag search is case insensitive.
+
+The table that follows shows examples that match or not with the searched assets:
+
+[%header%autowidth.spread]
+|===
+|Search |Tags |Matches?
+|tag:"some value" |some value |Yes
+|tag:"some value" |value |No
+|tag:"value" |value |Yes
+|tag:value |value |Yes
+|tag:VALUE |value |Yes
+|tag:VaLuE |value |Yes
+|tag:value |val |No
+|===
+
+=== Search by Categories
+
+You can use the following structure to search by categories: `category:"some key" = "some value"`
+Double quotes are not necessary if the category has no spaces in the key or value.
+The key can include the asterisk (`*`) regular expression to search for characters within a category name.
+Also, key and value are case sensitive, but if you search for the value in lowercase it matches anyway.
+
+The table that follows shows examples that match or not with the searched assets:
+
+[%header%autowidth.spread]
+|===
+|Search |Category |Matches?
+|category:my-key = my-value |my-key:my-value |Yes
+|category:my-key = MY-VALUE |my-key:MY-VALUE |Yes
+|category:my-key = my-value |my-key:MY-VALUE |Yes
+|category:"my key" = "my value" |my key:my value |Yes
+|category:"key" = "value" |my key:my value |No
+|category:key = value |my-key:my-value |No
+|category:this.* = value |this.is.my.key:value |Yes
+|category:*my.key = value |this.is.my.key:value |Yes
+|category:this.* = value |this.is.my.key:some-value |No
+|category:this.* = some-* |this.is.my.key:some-value |No
+|===
+
+You can search for a combination of different categories, but you can't search for multiple values of the same category. Multiple search terms use an implicit AND. OR is not supported.
+
+The following search terms return all assets marked as both System APIs and Salesforce products:
+
+`category:"API Type" = "System API" category:"Product" = "Salesforce"`
+
+=== Search by Custom Fields
+
+Similar to search by Categories, you can search for `field` instead `category` in the query language.
+You can use the following structure to search by categories: `field:"some key" = "some value"`
+Double quotes are not necessary if the custom field has no spaces in key or value.
+The key can include the asterisk (`*`) regular expression to search for characters within a field name.
+Also, key and value are case sensitive, but if you search for the value in lowercase it matches anyway.
+
+The table that follows shows examples that match or not with the searched assets:
+
+[%header%autowidth.spread]
+|===
+|Search |Field |Matches?
+|field:my-key = my-value |my-key:my-value |Yes
+|field:my-key = MY-VALUE |my-key:MY-VALUE |Yes
+|field:my-key = my-value |my-key:MY-VALUE |Yes
+|field:my-key = My-ValUe |my-key:MY-VALUE |No
+|field:MY-KEY = my-value |my-key:my-value |No
+|field:my-key = 10 |my-key:10 |Yes
+|field:"my key" = "my value" |my key:my value |Yes
+|field:"key" = "value" |my key:my value |No
+|field:key = value |my-key:my-value |No
+|field:this.* = value |this.is.my.key:value |Yes
+|field:*my.key = value |this.is.my.key:value |Yes
+|field:this.* = value |this.is.my.key:some-value |No
+|field:this.* = some-* |this.is.my.key:some-value |No
+|===
+
+
+== To Save Search
+
+. Enter a search term and click Save This Search.
+. Exchange prompts you to give the search a name, and to select if the search is for your organization or personal. Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
+. View the left navigation bar to see the saved searches. Exchange lists search terms specific to your business group. Below those terms are saved searches you created.
++
+image::ex2-saved-searches-groups.png[Saved Search Groups]
+
+== To View REST API Elements in an Asset
+
+. In the left navigation area you can view RAML or OAS API specification information such as resources and the methods in each resource. Click a method button to view information about the API:
++
+image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
++
+. Use the right side of a method view to experiment with the API. This functionality is similar to what you can expect in programs such as Postman where you can specify custom HTTP headers and test each API's method using the API's endpoint.
+. Click Request Access to tie the API you're viewing to one of your applications so that you can use the API to send and receive data that your application can consume.
+
+== To Test an API with API Notebook
+
+. Click API Notebook in the content page if one is available for the API.
+. After you read the description for usage information, you can experiment with the example in the code block to try different parameters and values, and see the results in real time.
+. Click Play to test the method in the code example and view the results.
+
+== To View Assets by Business Group
+
+Anypoint Platform provides the option for business groups that organize content into categories.
+
+In Anypoint Exchange, different assets may appear in each business group. Each organization
+chooses which assets are in each business group.
+
+If you cannot find
+an asset in one group, it may be in another business group. If you cannot view a business group, contact your site's administrator.
+
+To change business groups, click a group name from the taskbar.
+
+image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-down menu]
+
+== See Also
+
+* xref:about-my-applications.adoc[About My Applications]
+* xref:to-configure-api-settings.adoc[To Configure API Instances]
+* xref:6@studio::exchange-integration.adoc[Anypoint Studio integration with Exchange]
+* https://beta-anypt.docs-stgx.mulesoft.com/anypoint-studio/v/7/export-to-exchange-task[Share an example or template from Studio to Exchange]

@@ -1,0 +1,251 @@
+= To Publish and Deploy Exchange Assets Using Maven
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: maven, publish, deploy, facade
+
+Anypoint Exchange provides the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Maven Facade] that enables Maven clients to publish and consume assets using Maven. The Maven Facade can publish connectors, examples, and templates as Exchange assets. You can publish APIs directly in Exchange. You can also use the Maven Facade to publish APIs.
+
+== Prerequisites
+
+This document assumes you are familiar with Maven, programming concepts, and command line
+operations on your computer or server.
+
+Note: You must have a unique artifact name and organization ID to publish your asset.
+
+== To View Your Organization ID
+
+To construct the elements of a Maven POM file, you need to determine your organization ID:
+
+. Log into Anypoint Platform and click Access Management.
+. Click the organization name for the top level or a business group, and view your Organization ID in the Organization Info screen.
+. Copy the organization ID and add it to the examples that follow for how to set up your project's POM file.
+
+== To Publish an Asset to Exchange Using Maven
+
+You can use the information in this topic to publish Mule 3 and Mule 4 assets including connectors.
+
+. Modify the groupId of the Maven project to be your Organization ID in your project's POM file:
++
+[source,xml,linenums]
+----
+ ...
+ <groupId>ORGANIZATION_ID</groupId>
+ ...
+----
++
+If you are publishing your asset to the master organization, the group ID is the same as the organization ID.
+The URL format is:
++
+`+https://maven.anypoint.mulesoft.com/api/v1/organizations/ORGANIZATION_ID/maven+`
++
+In the EU, use:
++
+`+https://maven.eu1.anypoint.mulesoft.com/api/v1/organizations/ORGANIZATION_ID/maven+`
++
+If you are publishing your asset to a business group, the group ID is the same as the business group ID.
+The URL format is:
++
+`+https://maven.anypoint.mulesoft.com/api/v1/organizations/BUSINESS_GROUP_ID/maven+`
++
+In the EU, use:
++
+`+https://maven.eu1.anypoint.mulesoft.com/api/v1/organizations/BUSINESS_GROUP_ID/maven+`
++
+. Add the asset type in properties part in your project's POM file. For example:
++
+[source,xml,linenums]
+----
+ ...
+ <properties>
+  ...
+  <mule.version>3.9.0</mule.version>
+  <mule.tools.version>1.2</mule.tools.version>
+  <type>app</type>
+ </properties>
+ ...
+----
++
+*Notes:*
++
+** Mule 3 applications can be deployed setting the property <type> to `app`. The asset won't be displayed in Exchange asset list.
+** Mule 3 `templates` and `examples` should be deployed using Anypoint Studio 6.3 or above.
+** For Mule 3 or Mule 4 connectors, do not specify a `<type>` value. The Maven Facade determines the type automatically.
+** For Mule 4 assets, do not specify the <type> element. In the `mule-maven-plugin` configuration, set the `classifier` as `mule-application` (default), `mule-application-template`, `mule-application-example` or `mule-policy`. For example:
++
+[source,xml,linenums]
+----
+...
+<plugin>
+    <groupId>org.mule.tools.maven</groupId>
+    <artifactId>mule-maven-plugin</artifactId>
+    <version>${mule.maven.plugin.version}</version>
+    <extensions>true</extensions>
+    <configuration>
+        <classifier>mule-application-example</classifier>
+    </configuration>
+</plugin>
+...
+----
++
++
+. Add the Maven facade as a repository in the distribution management section of your project's POM file:
++
+[source,xml,linenums]
+----
+ ...
+  <distributionManagement>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/ORGANIZATION_ID/maven</url>
+      <layout>default</layout>
+    </repository>
+  </distributionManagement>
+  ...
+----
++
+In the EU, the POM file is:
++
+[source,xml,linenums]
+----
+ ...
+  <distributionManagement>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.eu1.anypoint.mulesoft.com/api/v1/organizations/ORGANIZATION_ID/maven</url>
+      <layout>default</layout>
+    </repository>
+  </distributionManagement>
+  ...
+----
++
+*Note:* The <id> and <name> elements are arbitrary names you create to identify the repository and any other organizational identifiers. The <id> value must be the same in the pom.xml file as in the ~/.m2/settings.xml file. The <id> connects the pom.xml file with information to log into the organization's URL.
++
+. Update the settings.xml file in your Maven .m2 directory. After you install Maven, the `mvn clean` command creates the .m2 directory. On a Mac or Linux, the directory resides at `~/.m2` whereas under Windows, the directory resides at `<default-drive>\Users\YOUR_USER_NAME\.m2` that contains your Anypoint Platform credentials. The Maven client reads the settings file when Maven runs.
++
+Example settings.xml file:
++
+[source,xml,linenums]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    <server>
+      <id>Repository</id>
+      <username>myusername</username>
+      <password>mypassword</password>
+    </server>
+  </servers>
+</settings>
+----
++
+. Publish your asset to Exchange using this Maven command:
++
+[source,console]
+----
+mvn deploy
+----
+. You can use the following URL syntax to share the location of an asset:
++
+----
+https://anypoint.mulesoft.com/exchange/api/v1/assets/ORGANIZATION_ID/ASSET_ID
+----
++
+Substitute ORGANIZATION_ID for the Exchange's organization ID and ASSET_ID for the asset ID.
++
+For the EU, the share URL is:
++
+----
+https://eu1.anypoint.mulesoft.com/exchange/api/v1/assets/ORGANIZATION_ID/ASSET_ID
+----
+
+== To Publish Federated Assets
+
+. Get the access token by logging into Anypoint Platform and copying this URL to the browser address bar:
++
+----
+https://anypoint.mulesoft.com/accounts/api/profile
+----
++
+. Search for `access_token` in the displayed values.
+. Add the access token to the `+~/.m2/settings.xml+` (Mac or Linux), or `C:\Users\YOUR_USER_NAME\.m2\settings.xml` (Windows) file:
++
+[source,xml,linenums]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+          http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    <server>
+      <id>Repository</id>
+      <username>~~~Token~~~</username>
+      <password>ACCESS_TOKEN</password>
+    </server>
+  </servers>
+</settings>
+----
+
+== To Consume an Exchange Asset with Maven
+
+Add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
+and add the Maven facade as a repository in the `repositories` section.
+
+[source,xml,linenums]
+----
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ ...
+
+  <dependencies>
+    <dependency>
+      <groupId>org.mule.modules</groupId>
+      <artifactId>mule-module-metoo</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+  </dependencies>
+
+ ...
+
+  <repositories>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/ORG_ID/maven</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+ ...
+</project>
+----
+
+Replace ORG_ID with your organization ID.
+
+You can use `+https://maven.anypoint.mulesoft.com/api/v1/maven+` as a valid URL for the `+<url>+` value, as this is the default to publish to the master organization. In the EU, use `+https://maven.eu1.anypoint.mulesoft.com/api/v1/maven+` as the URL.
+
+In the EU, the <repositories> section is:
+
+[source,xml,linenums]
+----
+  <repositories>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.eu1.anypoint.mulesoft.com/api/v1/organizations/ORG_ID/maven</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+----
+
+== See Also
+
+* https://eu1.anypoint.mulesoft.com/exchange/[EU Exchange]
+* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Maven Facade API]
+* https://maven.apache.org/[Apache Maven]

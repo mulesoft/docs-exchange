@@ -1,0 +1,33 @@
+= To Delete an Asset in Exchange
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can delete an asset in the first 7 days of its creation and reuse the asset's same name, group, asset ID, and version. A delete within the first 7 days is known as a hard delete.
+
+If you delete the asset after 7 days, you can't reuse the same name, business group name, account ID, and version.
+A delete after 7 days is known as a soft delete. After 7 days if you want to reuse the asset name,
+choose a new version number or put the asset in a different business group.
+
+To delete an asset:
+
+. Click the three-dot Settings icon at the upper right:
++
+image::ex2-delete-asset.png[Delete Asset menu]
++
+Alternatively, you can delete a single API version using the version menu:
++
+image::ex2-delete-version.png[Delete a version of an asset]
++
+Changing a RAML version? See xref:to-change-raml-version.adoc[To Change a RAML Version].
++
+. Confirm the action when prompted, or click Cancel to exit the prompt.
+
+== Delete Notes
+
+* If an asset has never had a lower version number, you can create a lower version number, but not if you are reusing a previously deleted version. For example, if an asset starts with version 2, you can add a version 1. However if the asset started with version 1, a version 2 was added, and version 1 was deleted, you can't add version 1 back.
+* Deleting an asset or a version checks for any assets that are dependent on the asset or the asset version and displays a warning to prevent deletion until all the dependencies are removed.
+
+== See Also
+
+* xref:to-deprecate-asset.adoc[To Deprecate an Asset]

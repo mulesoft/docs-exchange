@@ -1,0 +1,81 @@
+= FAQ: Exchange 1
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: faq, exchange
+
+== How do I create a Private Exchange?
+
+Access Exchange at `+https://anypoint.mulesoft.com/exchange1+` and click Login. Click Add Item to create a new asset.
+
+Anypoint Exchange 1 doesn't host your files but provides links to them. The content
+you put in your Private Exchange must be hosted through an HTTP service.
+
+== Why is there no install button for a connector?
+
+To install a connector, first open Anypoint Studio and click the Exchange icon in the Studio taskbar.
+
+image::ex1-icon.png[Exchange button in Studio]
+
+You can locate and install the connector.
+
+To use Exchange 1, click Preferences > Anypoint Studio > Exchange and set the Exchange Settings URL to the https://anypoint.mulesoft.com/exchange1/ value.
+
+== What is the difference between an example and a template?
+
+An example is a Studio project that you can import into Studio and run that demonstrates how to handle a use case or solution.
+
+A template is a Studio project that you can import that is a starting point that pre-configures a use case that you can augment with additional Studio building blocks to create a solution.
+
+== How can I add a new category to the left navigation area in a private Exchange?
+
+If you are an owner for a site or in the *Organization Administrators* role:
+
+. Ensure that you have the Anypoint Platform *Exchange Administrators* role.
+. Click Exchange and click Edit Terms to add or rename categories in Exchange.
+. A category must have an object and a filter to appear. Click one or more of the object circles for C (Connector), T (Template), E (Example), R (RAMLs), W (WSDLs), or O (Others).
++
+image::ex1-category-objects.png[Object categories settings buttons]
++
+. Click Save Changes after editing terms, or Discard to quit any changes you made.
+
+Note: When you create a category, you must be in the Master Organization. If you create a category in a business group, the category does not appear.
+
+
+== Can I publish whitepapers, Word docs, etc. that aren’t Mule projects or Connectors?
+
+If each document is not shared, you can use an API portal for each and provide the portal's URL in your Exchange item. If each document is shared on your network, you can create a new Others item in Exchange and provide links to the shared items.
+
+== Can I share our Private Exchange with people outside my organization such as third-party contractors?
+
+Yes if you invite them to your Anypoint Platform.
+
+== How do I prevent content from being seen by other users until it is approved?
+
+Others can't see work in progress or pending approval objects unless they are an administrator. You can use the Exchange Contributor and Exchange Viewer roles to prevent users from seeing works in progress.
+
+== Should I use Exchange if we already have an API Portal?
+
+Yes, but each has different functions. The Exchange provides a common framework for sharing information, videos, and documentation on one or more items. A portal provides downloads, links, and information about a single API. Users do not go to an API trying to find specific documents such as a Whitepaper or a Word document, nor can one search for these documents across APIs. The best use of an API portal is to document a single API and share a document relating to the API, and to use Exchange to provide access to each API and its documentation.
+
+== How do I change user accounts in Exchange from Studio?
+
+You can change your user account in Studio. Right-click your project in
+Package Explorer and click Anypoint Platform > Configure > Anypoint Studio > Authentication > Add. In the Anypoint Platform Sign In menu, enter your Anypoint Platform username and password. Click Sign In. You can also use the Anypoint Platform Sign In menu to register for access to Anypoint Platform for the first time.
+
+== How can users view the content of a business group?
+
+Users must be assigned to the Exchange Viewer role. Users can view the master organization without being assigned to the Exchange Viewer role, but not business groups. If users are invited to a business group, they won't see other business groups until assigned Roles access.
+
+To assign Exchange Viewer access, sign into Anypoint Platform and click Access Management > Roles. Click Exchange Viewers and the blue plus sign to add a user.
+
+== Where should I host a WSDL to put in Exchange?
+
+You can host the WSDL from any web server. You just need to provide the link to the WSDL when
+you create your entry in Exchange.
+
+== See Also
+
+* https://anypoint.mulesoft.com/exchange1/#!/[Anypoint Exchange 1].
+* https://anypoint.mulesoft.com/exchange1/#!/?types=template[View templates in Anypoint Exchange].
+* https://anypoint.mulesoft.com/exchange1/#!/?types=example[View examples in Anypoint Exchange].

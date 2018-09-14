@@ -1,0 +1,23 @@
+= To Change a RAML Version
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Changing a RAML version cannot be done in Anypoint Exchange. Instead, you can change the RAML version
+either in the RAML specification itself or when you publish to Anypoint Exchange using Design Center.
+
+From the RAML specification:
+
+Change the `version:` element in your RAML specification.
+You can use a text editor or API Designer in the Design Center feature of Anypoint Platform.
+When you update the version element in the RAML specification and publish to Exchange, the publish
+menu automatically picks up the change from the `version:` element.
+
+When you publish to Exchange:
+
+. From Design Center, open your API. No changes are necessary.
+. Click the Publish to Exchange button (image:ex-publish-to-exchange-button.png[]).
++
+image::apim-publish-api-spec.png[]
++
+. Change the API Version value. You can also change the Asset Version (the version of the Exchange asset).

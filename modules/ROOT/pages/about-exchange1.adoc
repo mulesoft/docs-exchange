@@ -1,0 +1,15 @@
+= About Exchange 1
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Exchange 1 provides access to the legacy version of Exchange in the cloud and on-premises.
+
+Exchange 1 lets you view MuleSoft and private Exchange assets.
+
+== See Also
+
+* xref:migrate.adoc[To Migrate Assets from Exchange 1 to Exchange 2]
+* xref:exchange1-faq.adoc[Exchange 1 FAQ]
+* https://anypoint.mulesoft.com/exchange1/#!/[Anypoint Exchange 1]
+* xref:release-notes::exchange/exchange-on-prem-release-notes.adoc[Anypoint Exchange Private Cloud Edition Release Notes]

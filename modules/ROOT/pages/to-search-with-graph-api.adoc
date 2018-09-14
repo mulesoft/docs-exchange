@@ -1,0 +1,204 @@
+= To Search Using the Graph API
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: query, exchange, exchange2, graph, api, graph api
+
+The Exchange Graph API lets you search Exchange assets for a string value. You can specify what values
+to receive in each search.
+
+Because the Graph API accesses Anypoint Exchange and Anypoint Platform, inquiries should
+have an access token if you want to access assets in private exchange. If you only search for MuleSoft public assets, you don't need an access token.
+
+*Notes:*
+
+* The Exchange Graph API can be used without an Anypoint Platform account. In that case, only assets made publicly available by MuleSoft are returned.
+* To utilize this API to access private content, you must be provisioned with an Anypoint Platform account.
+
+== To Obtain an Access Token
+
+You only need an access token if you are searching for assets that are not created by MuleSoft.
+
+Access tokens expire sometime between 15 to 180 minutes (ask your organization administrator), so you may need to get a new token while doing searches.
+
+. Log into Anypoint Platform.
+. Obtain an access token with a curl command such as the following. You can also use Postman or another application for sending HTTP commands.
++
+[source,json,linenums]
+----
+curl -X POST \
+  https://anypoint.mulesoft.com/accounts/login \
+  -H 'content-type: application/json' \
+  -d '{
+  "username": "YOUR_ANYPOINT_PLATFORM_USER_NAME",
+  "password": "YOUR_ANYPOINT_PLATFORM_PASSWORD"
+}'
+----
+
+See also https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/api/v1/pages/Authentication/[Access Management API Authentication].
+
+== Graph API Access URL
+
+You can access the Graph API at the `+https://anypoint.mulesoft.com/graph/api/v1/graphql+` URL. To search
+using the API, send a POST command containing the search string.
+
+For example:
+
+[source,json,linenums]
+----
+curl -X POST \
+  https://anypoint.mulesoft.com/graph/api/v1/graphql \
+  -H 'content-type: application/json' \
+  -d '{"query": "{ assets(query: { searchTerm: \"searchTerm\" }) { groupId, assetId, version } }"}'
+----
+
+The query field contains the GraphQL query, which allows fetching more asset fields.
+
+[source,json,linenums]
+----
+{
+  assets(asset: {groupId: "some-group-id", assetId: "some-asset-id", version: "some-version-1.2.3"}) {
+    # Possible fields to retrieve
+    groupId
+    assetId
+    version
+    description
+    name
+    type
+    tags {
+      value
+      key
+    }
+    createdBy {
+      id
+      userName
+      firstName
+      lastName
+    }
+    files {
+      classifier
+      packaging
+      externalLink
+      md5
+    }
+    rating
+    numberOfRates
+    createdAt
+    organizationId
+    assetLink
+    runtimeVersion
+    productAPIVersion
+    dependencies {
+      groupId
+      assetId
+      version
+      name
+      type
+    }
+    related(relationshipType: OtherVersions) {
+      groupId
+      assetId
+      version
+      name
+      type
+      runtimeVersion
+      productAPIVersion
+    }
+  }
+}
+----
+
+You can get the group ID, asset ID, and version of a Mule 4.x asset with this example:
+
+[source,json,linenums]
+----
+curl -X POST \
+  https://anypoint.mulesoft.com/graph/api/v1/graphql \
+  -H 'content-type: application/json' \
+  -d '{"query":"{assets(query: {tags: {key: \"min-mule-version\", value: \"4.0.0\"}}) {groupId assetId version}}"}'
+----
+
+== To Search Only a Private Exchange
+
+. Get the organization ID for the Private Exchange by clicking an asset in your Private Exchange.
++
+An example URL is:
++
+----
+https://anypoint.mulesoft.com/exchange/42424242/product-api/1.0.0/
+----
++
+`42424242` is the organization ID.
++
+. Add the organization ID using the organizationIds field.
++
+A single organization ID would be:
++
+`organizationIds: ["42424242"]`
++
+[source,json,linenums]
+----
+{
+  assets(
+    query: {
+      searchTerm: "product",
+      organizationsIds: ["4141141", "32322", "2342345"]
+    },
+    latestVersionsOnly: true
+  ) {
+    assetId,
+    description
+  }
+}
+----
++
+The output for this example is:
++
+[source,json,linenums]
+----
+{
+  "data": {
+    "assets": [
+      {
+        "assetId": "product-datatype",
+        "description": "Product Datatype Asset"
+      },
+      {
+        "assetId": "product-api",
+        "description": "Product API Asset"
+      }
+    ]
+  }
+}
+----
+
+== Reference: Query Filter Parameters
+
+You can specify filters to display additional information about each asset.
+
+The following filters let you refine query output:
+
+[%header%autowidth.spread]
+|===
+|Parameter |Description
+|assetId |Asset ID for each asset.
+|createdAt |Date and time an asset was created, for example, 2018-08-11T04:48:20.585Z.
+|createdBy { id, userName, firstName, lastName } |Display who created the asset.
+|dependencies { groupId, assetId, version, name, type } |Returns the assets the listed asset depends on.
+|files { classifier, packaging, externalLink, md5 } |File information.
+|name |Asset name.
+|numberOfRates |The number of star ratings for an asset.
+|organizationId |Organization ID for an asset.
+|rating |Star rating value for an asset.
+|runtimeVersion |Mule Runtime version.
+|tags { value, key, mutable } |The asset tags. The tags created in the user interface and when publishing are only `value` tags (they don't have a key). Tags created in the user interface are mutable while the others are immutable. Tags with a key and value are special tags created by Exchange to describe the asset.
+|type |Lowercase values corresponding to the Exchange All Types menu: connector, template, example, rest-api, soap-api, raml-fragment, and custom.
+|version |Version for an asset.
+|groupId |Group ID for an asset.
+|===
+
+== See Also
+
+* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-graph-http/[Exchange Graph API]
+* https://www.anypoint.mulesoft.com/exchange/[Anypoint Exchange]
+* xref:index.adoc[Exchange Documentation]

@@ -1,0 +1,76 @@
+= To Customize an Exchange Public Portal
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+If you have Exchange Administrator or Organization Owner access, you can customize the appearance of an Exchange Public Portal.
+
+Access the public portal and click Customize at the right of the navigation bar.
+
+== Portal Default Settings
+
+If you need to revert portal customizations back to their default settings, use these values:
+
+* Background color: #262728
+* Text color: #FFFFFF
+* Text color (active): #00A2DF
+* https://cdn.anypoint.mulesoft.com/artifacts/exchange-ui/images/hero-image-default.png[Welcome section Hero image]
++
+*Note:* Open the image in a browser and right click to save the image to your computer. In Exchange, you can upload
+the image to replace the image in your portal from the image on your computer.
++
+* Welcome section text color: #FFFFFF
+
+== Banner Text
+
+After you click Customize, click in the banner text. Delete text you want to change,
+and add new text.
+
+== Top Bar Customizations
+
+You can change the appearance of the top navigation bar.
+
+=== Logo Image
+
+Choose a logo image file. If the image in the file is larger than 60 pixels high, Exchange resizes the image to 60 pixels high. Exchange resizes the image proportionally, for example, Exchange resizes a 500 by 500 pixel image to 60 by 60 pixels.
+
+The image file format can be .svg, .png, .jpg, or .gif.
+
+=== Favicon for the Browser Tab
+
+Choose a favicon image to appear in the browser tab for the public portal. The maximum size for the image depends on
+browser requirements. The favicon.ico file can contain up to 5 sizes, such as 16x16, 32x32, 64x64, 128x128, and 512x512.
+
+=== Background Color
+
+Choose an red-green-blue (RGB) hexadecimal value for the color of the top taskbar.
+
+=== Text Color
+
+Specify the hexadecimal RGB color for the top bar text. The colors are in the range of #FFFFFF for white to #000000 for black. At least 3 hex characters must be specified, for example, specifying #F42 generates a value of #FF4422. The field is not case sensitive.
+
+=== Active Text Color
+
+Specify the hexadecimal RGB color for the top bar text when the text is selected with a mouseover. The colors are in the range of #FFFFFF for white to #000000 for black. At least 3 hex characters must be specified, for example, specifying #F42 generates a value of #FF4422. The field is not case sensitive.
+
+== Hero Image Banner
+
+Choose an image for the banner for the public portal. The hero image file format can be .png, .jpg, or .gif.
+The maximum file size for the banner image is 2 MB. The banner image can also be an animated GIF file.
+
+The image you specify is stretched to fit the window size as determined by the browser's window size. The height is fixed to 220px.
+
+=== Banner Text Color
+
+Specify the hexadecimal red-green-blue color for the banner text. The colors are in the range of #FFFFFF for white to #000000 for black. At least 3 hex characters must be specified, for example, specifying #F42 generates a value of #FF4422. The field is not case sensitive.
+
+== Custom Page
+
+Custom pages appear as tabs at the top of the public portal. Use the Exchange Visual or Markdown editor to add text, images, or videos to a page.
+
+To delete a custom page, click Delete Page. If this button is not visible resize the public portal browser window to display the Delete Page button.
+
+== See Also
+
+* xref:to-describe-an-asset.adoc[To Describe an Asset]
+* https://stackoverflow.com/questions/4014823/does-a-favicon-have-to-be-32x32-or-16x16[Stack Overflow Favicon discussion]

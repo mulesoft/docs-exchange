@@ -1,0 +1,30 @@
+= To Configure API Instances
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Exchange lets you configure whether REST, SOAP, and HTTP API services are public or private in a Private Exchange or in an Exchange Portal. Typical services that you would set visibility for are proxies or policies associated with your API that you set using API Manager.
+
+After you register an API from Exchange in API Manager, the instances for the API appear in Exchange in the API Instances list in the left navigation bar.
+
+You can also create an API instance if your API is managed by another API management program outside of Anypoint Platform.
+
+Access differs by Exchange type:
+
+* In a Private Exchange, API Instances appears for HTTP, REST, and SOAP APIs. If you are an asset administrator, you can change the visibility of API instances and add new instances:
++
+** If you want an instance public, change the Visibility indicator.
+** You can edit the instance by clicking the pencil icon, or delete the instance by clicking the X icon.
++
+* In an Exchange Portal, API Instances appears for SOAP and HTTP APIs. All instances in an Exchange Portal are read only.
+
+*Notes:*
+
+* Visibility for each instance is either private or public:
+** Public pertains to any user within a business group's Exchange Portal.
+** Private is only for those who can see the asset via Sharing the asset or per an Anypoint Platform role.
+* If listed, the Mocking Service appears for REST APIs to let you know it's available. The Mocking Service provides data that you can use to test API features. The Mocking Service is always public.
+
+== See Also
+
+* link:/design-center/v/1.0/design-mocking-service[Simulating Calls to an API]

@@ -1,0 +1,25 @@
+= About Exchange Public Portals
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Exchange enables organizations to create a customized external view of Exchange
+within an organization with specific logo, banner image, text, and a favicon for the browser tab.
+
+Exchange public portals are available on the internet to everyone and are used to
+externalize an organization's APIs to outside developers. The Exchange portals replace what used to be known
+as a Developer Portal. With Exchange portals you can customize the look and content of the portal.
+
+Exchange public portals let an organization share REST, SOAP, and HTTP APIs.
+
+Exchange Administrators can share an API asset to a public portal as described in the sections that follow.
+
+== To Update the Description of an Asset in a Portal
+
+. Locate the asset in your organization's Exchange.
+. Edit the asset's description, and when done, publish the asset.
+. Return to the portal and click the asset. The description updates automatically after changing the description in the asset.
+
+== See Also
+
+* xref:to-customize-portal.adoc[To Customize an Exchange Public Portal]

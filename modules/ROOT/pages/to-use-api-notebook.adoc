@@ -1,0 +1,96 @@
+= To Document an Asset Using API Notebook
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+API Notebook lets you document an API's functionality with explanations that accompany code windows. Users can
+change the code and execute it by clicking the Play button in each code block. You can create a new API Notebook
+from the Exchange editor and use JavaScript code in the code blocks.
+
+image::ex2-api-notebook.png[Screenshot - Exchange API Notebook showing text above an interactive code block]
+
+. If you are documenting a RAML, use the Design Center in Anypoint Platform to improve and test your RAML, and to publish the API to Anypoint Exchange.
++
+If you are documenting an OAS specification, create a new Exchange asset and choose API Spec - OAS. Note: The OAS specification is converted into RAML so you can follow the RAML conventions in the API Notebook.
+. Click the asset to view details.
+. Click Edit and click the API Notebook icon image:ex2-api-notebook-icon.png[Icon - API Notebook in the Editor] in the editor.
+. Add a description for the asset.
+. In the Visual editor, the API Notebook icon creates a panel where you can add JavaScript code items. Enter the first letter of the function you want to add and Notebook lists the available functions starting with that letter.
++
+If you are using Markdown, each notebook entry is enclosed in a block of 3 tick marks, for example:
++
+[source,javascript,linenums]
+----
+```notebook
+// Authenticate client
+API.authenticate(myclient);
+```
+----
+
+== API Notebook Program Flow for External APIs
+
+If you are accessing an external API such as the Instagram API, fetch the client using the Anypoint Asset
+Portal Service at the `+https://anypoint.mulesoft.com/exchange/api/v1/health+` URL.
+
+The fetch code is:
+
+[source,javascript]
+----
+fetch('https://anypoint.mulesoft.com/exchange/api/v1/health').then((res) => res.json())
+----
+
+Enable users to authenticate with the API:
+
+[source,text,linenums]
+----
+// Authenticate Instagram.
+// This asks you to authenticate with your personal account.
+// Don't worry, we have no idea who you are.
+API.authenticate(instagramApi);
+----
+
+You can then construct your notebook to use the API.
+
+== API Notebook Program Flow for API Manager APIs
+
+. Create a client in the notebook to initialize access to your API using the API.createClient function.
++
+Syntax: `API.createClient('CLIENT_NAME', 'URL_TO_API_MANAGER_API');`
++
+. Authenticate the client with Anypoint Platform using the API.authenticate function.
++
+Syntax: `API.authenticate(CLIENT_NAME);`
++
+. Create your notebook based on the functionality in your REST API. Each function is based on the names
+of your RAML descriptor blocks. For example, for the `getdetails` client and with a block called `/info`, to document the GET call, the function description in the notebook is: `getdetails.info.get();`
++
+You can add extra parameters to function call with an array, for example:
++
+`me.function.post[{ orgId: 'myorg'}) ...]`
++
+. Test the API in Exchange by setting elements in the code blocks and clicking Play. Ensure all code blocks
+work without causing errors in the code.
+
+[NOTE]
+====
+The create and authentication calls must be in separate notebook calls:
+
+[source,javascript,linenums]
+----
+```notebook
+fetch(’https://anypoint.mulesoft.com/exchange/api/v1/health').then((res) => res.json())
+API.createClient(‘github’, ‘https://anypoint.mulesoft.com/apiplatform/repository/v2/organizations/ORG_ID/public/apis/7782/versions/7918/files/root’);
+
+```
+
+```notebook
+
+API.authenticate(github);
+``` (edited)
+----
+====
+
+== See Also
+
+* For API Notebook function descriptions, see link:/api-manager/creating-an-api-notebook[API Notebook Reference].
+* https://docs.mulesoft.com/design-center/v/1.0/upload-raml-task[To Upload an Existing RAML File to Exchange].

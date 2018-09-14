@@ -1,0 +1,116 @@
+= To Describe an Asset
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+. Click an asset.
+. Click Edit to add a description. The editor lets you change the appearance of text,
+insert code samples, block quotes, and horizontal lines. You can also insert a link
+to an external resource and to an image. The image has to be served on the web.
++
+The Markdown editor also lets you add a link to a YouTube or Vimeo video to your asset description.
++
+. After you create a page, you can add additional pages, tags, terms and conditions,
+and change versions for an asset or if describing an API, for versioning the API as well.
+
+== Change an Asset Title
+
+. Position your mouse pointer in the asset's title and add the text you want the title to be.
+. Press the Enter (or Return) key on your keyboard.
++
+If you don't press the Enter (Return) key, the title reverts to its former text.
++
+If you edit the title and click out of the edit field rather than press Enter (Return), the title does not display your changes. Click back in the title field to see your changes. If you publish the page without pressing Enter, you don't see your changes. Your changes are only present in the field when you click in the title field again, but they are not made visible until you press Enter (Return).
+
+== Add an Image
+
+You can copy and paste an image directly into the Exchange page:
+
+. Click Edit
+. Click Visual mode
+. If your image is on your computer, drag the image to the Exchange page, or copy and paste to the Exchange page.
++
+If the image is on a web server, copy the image and paste it into the Exchange page.
+
+Alternatively you can click the image icon in the editor and provide a URL to an illustration available on the web.
+
+In Markdown, use this syntax to reference a web served image:
+
+`+![some alt text](http://www.example.com/image/png.png)+`
+
+== Add Secondary Pages
+
+. Click an asset and click Edit.
+. In the left navigation area, click Add New Page and press the Return key on your keyboard to create the page. You can create as many pages as needed. In Exchange Portals, click Add Content Pages.
+. Add a description to the page. Anything you can add on the main page can be added to the subordinate page.
+. After creating a page, click Save As Draft so you don't lose content if Exchange times out.
+. When done creating pages, click Publish.
+
+In Edit mode, you can reorder pages by clicking the page name and dragging the page up or down in the left nav bar.
+
+== Create Asset Tags
+
+Tags help users find your asset. Users can search in Exchange for a tag name to locate your asset.
+
+. Click an asset in your private Exchange.
+. Click Add A Tag: image:ex2-add-a-tag.png[Add a tag button]
++
+Tags can only be lowercase. If you enter uppercase, Exchange converts the letters to lowercase. Special characters are permitted. You can have any number of tags.
++
+. To verify, search for the asset using a tag you added.
+
+== Specify Terms and Conditions
+
+. Click an asset and click Edit.
+. Click Add Terms and Conditions: image:ex2-terms.png[Terms and Conditions button]
+. Use the editor to specify the terms and conditions for this asset.
+. Click Save As Draft.
+. Publish.
+
+Note: Only available for APIs. Users are then prompted to accept the terms and conditions when requesting API access.
+
+== Change the Version of an Asset
+
+Exchange lets you version an API separately from an asset's version.
+
+. Click an asset to view details.
+. Click the version indicator in the title: image:ex2-api-version.png[Version Indicator in title button].
+. Change the version as needed and press the Return key on your keyboard.
+
+To change the asset version, click Add New Version: image:ex2-add-new-version.png[Asset Version button].
+
+See also: xref:to-change-raml-version.adoc[To Change a RAML Version].
+
+== Editor Notes
+
+* To use the link control, type text, select the text, and click the link control to specify the link URL.
+* If your Exchange session times out while you're editing, select all the text on the page and copy it to your
+clipboard. Then after you log back in, you can paste the content back into the page and save your draft. When a timeout occurs, unsaved content is purged.
+* You can access international characters by pressing and holding a character.
+* If you are editing descriptions for many assets, instead of clicking an asset to open it from Exchange, instead right-click the asset and click Open Link in New Window to open the asset in a new browser window. Otherwise, after you publish an asset, control returns to the start of the filter/search list.
+* Keyboard shortcuts (work in Visual and Markdown): Bold: ctrl-b/cmd-b, Italics: ctrl-i/cmd-i, Heading: ctrl-d/cmd-d, Blockquote: ctrl-e/cmd-e, Code Block: ctrl-j/cmd-j, Numbered List: ctrl-o/cmd-o, Bullet List: ctrl-u/cmd-u, Insert Link: ctrl-k/cmd-k.
+
+== Markdown Notes
+
+* Anypoint Exchange uses GitHub Markdown. Everything works in GitHub Markdown except for syntax highlighting, which is not supported in Exchange.
+* Basic HTML 5 code elements are supported in Markdown, such as div, button, a, ul, ol, table, p, span, pre, and code.
+* Insert a link: `+[MuleSoft.com](http://www.mulesoft.com)+` or:
++
+[source,text,linenums]
+----
+[MuleSoft.com][1]
+
+[1]: https://mulesoft.com
+----
++
+* Insert a YouTube video: `+![linkname](https://www.youtube.com/embed/YOUR_YOUTUBE_ID_HERE)+` +
+For example: `+![](https://www.youtube.com/embed/K3tuHUZ1J04)+`
++
+* Insert a Vimeo video: `[linkname](VIMEO_URL)`
+* Add the asset ID to a youtu.be URL: +
+Change: `+https://youtu.be/EhJM1GawQec+` +
+To: `+![](https://www.youtube.com/embed/EhJM1GawQec)+`
+
+== See Also
+
+* https://guides.github.com/features/mastering-markdown/[GitHub Markdown]

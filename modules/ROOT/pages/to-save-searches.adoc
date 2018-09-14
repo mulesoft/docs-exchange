@@ -1,0 +1,22 @@
+= To Save Searches
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+As an Exchange administrator, you can save searches that your
+users can click to access assets within a business group.
+
+While users can view and click the searches, only an
+Exchange administrator can save, rename, or delete the saved searches.
+
+. Change to the business group where you want to add saved searches.
+. Specify a search in the search field.
+. Click Save This Search.
+. In the Save Search window, specify the name for the search, and save the search name.
+The saved searches appear in the left navigation bar of the
+Assets page under the Organization Searches heading.
+. If needed, click the settings button for the search to the right of
+the search name in the left navigation area.
+. To rename the search, select the text in the navigation bar field and
+provide a new name followed by pressing the Enter or Return key on your keyboard.
+. To delete the search, click Delete from the search name Setting menu.

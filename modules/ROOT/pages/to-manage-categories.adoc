@@ -1,0 +1,59 @@
+= To Manage Categories
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Exchange Administrators and Organization Owners can create categories to group Exchange access types.
+Categories let users organize assets into different groups to improve asset browsing and discovery.
+
+For example, a category called API Type with possible values `System API`, `Experience API`,
+and `Integration API` is applied to assets of type REST API, SOAP API, and HTTP API:
+
+image::ex-categories-api-type.png[Settings Category for API Type]
+
+*Note:* You must have one or more categories defined in the Settings page for the Add Category prompt
+to appear on your organization's assets.
+
+== To Create a Category
+
+. In Anypoint Exchange, click Login and log into your organization.
+. Click Settings in the left navigation area.
+. Click Add New Category.
+. Specify a category name. Each category name must be unique.
+. Specify one or more values. Each category must have a value.
+. Press the Return/Enter key or click the plus sign next to the value to confirm the value:
++
+image::ex-category-value.png[Value plus sign]
++
+Note: If a plus sign is not clicked, the check mark to indicate the category has no
+effect.
++
+. Choose the asset types that the category corresponds to.
+. Click the checkmark to enable the category.
+
+== To Apply a Category
+
+. Click an asset in your organization.
+. In Categories in the right side details menu, click Add Category and choose the category and value from the drop-down menu.
+
+== To Search with Categories
+
+In the Exchange search field, specify the `category:` search term and the category value to list the assets.
+
+For example, to find assets of API Type, search for `category:"API Type" = "System API"`.
+
+You can search for a combination of different categories, but you can't search for multiple values of the same category. Multiple search terms use an implicit AND. OR is not supported.
+
+The following search terms return all assets marked as both System APIs and Salesforce products:
+
+`category:"API Type" = "System API" category:"Product" = "Salesforce"`
+
+== To Change or Delete a Category
+
+Categories can be deleted at the individual asset level which only removes the category from that asset.
+Categories can also be deleted at the global level in Settings, but doing so removes the category from all assets.
+
+== See Also
+
+* https://forums.mulesoft.com[MuleSoft Forum]
+* https://support.mulesoft.com[Contact MuleSoft Support]

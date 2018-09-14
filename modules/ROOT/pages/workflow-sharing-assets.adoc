@@ -1,0 +1,18 @@
+= Workflow: Sharing Assets
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Exchange provides the ability to share assets in Exchange private and Exchange portal.
+
+. xref:to-create-an-asset.adoc[Create an Asset] - To share an asset, you need to create an asset in Exchange.
+. xref:to-describe-an-asset.adoc[Describe an Asset] - How to add a description, additional pages, terms and conditions, tags, and change versions.
+. xref:to-download-an-asset.adoc[Download an Asset] - Copy the asset to your computer.
+. xref:about-my-applications.adoc[My Applications] - Describes the list of applications, which provide a contract between an API and a user who has access to the API.
+. xref:to-share-api-asset-to-portal.adoc[Share an asset to a public portal] - Lists API assets in a public portal so that external users can access the APIs.
+. xref:to-delete-asset.adoc[Delete an Asset] - Remove an asset.
+. xref:to-publish-an-asset.adoc[Publish an Asset] - Publish an asset for others to view.
+
+== See Also
+
+*  xref:about-api-use.adoc[API Management] - Share assets programmatically.

@@ -1,0 +1,87 @@
+= To Migrate Assets from Exchange 1
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Exchange 2 introduces a new way of working with your assets. Where Exchange 1 is a listing service that only provides links to where assets are stored, Exchange 2 is a package management system that stores assets.
+
+Migration to Exchange 2 differs by asset type:
+
+[%header,cols="30a,70a"]
+|===
+|Asset Type |Migration Approach
+|Example, Template |Anypoint Studio > Publish to Exchange.
+|OAS REST API |Publish using Exchange.
+|RAML REST API |Publish using Design Center - Note: The API Designer in Design Center is only available to new customers. Existing customers must continue to use the API Designer in API Manager and must wait for the next release to migrate APIs.
+|WSDL SOAP API |Publish using Exchange.
+|Connectors |Use Node.js connector-uploader program.
+|===
+
+== Migrate an Example or Template to Exchange
+
+Note: This procedure requires Maven.
+
+. In Anypoint Exchange 1, for an example or template from your private Exchange, click Download to copy the asset to your computer.
+. Open Anypoint Studio 6.4.1 and later, and click File > Import.
+. In the Import menu, click Anypoint Studio > Anypoint Studio Generated Deployable Archive (.zip). Click Next. For the zip file name, click the `...` browse button, click the name of the zip file you downloaded, and click Open.
+. Click Finish. Click OK for the Runtime version.
+. If you have not used Maven before, right-click the project name in the Package Explorer and click Mule >
+Configure Maven to locate the folder where you downloaded Maven.
+In Studio, click Test Maven Configuration to ensure Maven is ready to use and click OK.
++
+When Maven is ready, right-click the project name in the Package Explorer and click Mule > Mavenize.
+At the Maven Support prompt, click Yes.
++
+. In the Action to Perform menu, click OK.
+. Right-click the project name and click Anypoint Platform > Publish to Exchange.
+. Studio prompts you for your Anypoint Platform username and password. Click Signin. Or click Configure to specify an external identity provider such as OAuth and the organization's domain.
+. In the Publish to Exchange menu:
+.. If present in the Name field, remove special characters such as an underscore and parentheses. Only letters, numbers, spaces, dots, and dashes are permitted.
+.. If present in the Version field, remove the `-SNAPSHOT` value.
+.. Set the Project Type to either Example or Template as needed.
+. After setting all fields as required, click Finish. Click Yes for the Proceed Anyway prompt.
+. Upon successful deployment, a link appears to let you view the asset in Exchange 2. Click the link.
+. Click the asset in Exchange 2 and click Edit. In the Exchange editor, click Visual. Copy the description text from Exchange 1 to the Exchange 2 editor and paste the description into the editor. Format as needed. Click Save As Draft to save
+your edits. Click Publish.
+. In Studio, click OK to dismiss the publish to Exchange menu.
+
+== Migrate a SOAP API WSDL
+
+. Go to Exchange 1 and download your WSDL file.
+. Go to Exchange 2 and click New.
+. Select API Spec - WSDL in the types drop-down.
+. In the File field, select your WSDL file.
+. Fill in the remaining fields.
+. Click Create.
+
+== Migrate a REST API RAML
+_Requires November 2017 Release_
+
+. Go to the API Manager Portal for the API and export the API Specification as a zip file.
+. Go to Design Center API Designer and create a project of type API Specification.
+. Import the zip.
+. Publish to Exchange 2.
+
+== Migrate Connectors From Exchange 1 to Exchange 2
+
+. Download and install NPM.
+. Log into your private Exchange and download the connector to your computer.
+. Locate the connector's JAR file, pom.xml file, and Studio Plugin zip file.
+. Get the connector-uploader Node.js application:
++
+----
+npm install -g connector-uploader
+----
++
+. Run the upload program:
++
+----
+connector-uploader
+----
++
+. When prompted, enter the Anypoint Platform credentials for the organization you want to upload the connector to. You are asked to select a business group and enter the Asset ID and version. The Group ID is generated for you. You are prompted to specify each file to upload if you are uploading more than one connector.
+
+== See Also
+
+* https://youtu.be/BOAR9glreMw[Migrate SOAP Assets Video]
+* https://youtu.be/WTIJrYydViQ[Migrate RAML REST Assets]
