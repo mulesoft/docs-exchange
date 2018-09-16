@@ -1,5 +1,5 @@
 name: exchange
 title: Exchange
-version: master
+version: 'latest'
 nav:
 - modules/ROOT/nav.adoc
