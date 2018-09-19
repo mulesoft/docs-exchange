@@ -1,4 +1,5 @@
 .xref:index.adoc[Anypoint Exchange]
+* xref:index.adoc[About Exchange]
 * xref:to-find-info.adoc[To Find Asset Information]
 * xref:about-sharing-assets.adoc[About Sharing Assets]
  ** xref:workflow-sharing-assets.adoc[Workflow: Sharing Assets]
