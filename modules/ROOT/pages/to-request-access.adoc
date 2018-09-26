@@ -1,4 +1,4 @@
-= To Request Access
+= Requesting Access
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -17,7 +17,7 @@ If terms and conditions are set for an asset, you are prompted to accept the ter
 +
 The Request API Access menu opens to show that the API access was successful. This screen lists the client ID and client secret for this API access instance.
 
-== Create a New Application
+== Creating a New Application
 
 Choose from the screens that follow for what to provide:
 

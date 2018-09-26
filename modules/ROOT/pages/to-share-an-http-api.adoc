@@ -1,4 +1,4 @@
-= To Share an HTTP API Asset
+= Sharing an HTTP API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

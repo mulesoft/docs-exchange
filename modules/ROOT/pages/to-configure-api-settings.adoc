@@ -1,4 +1,4 @@
-= To Configure API Instances
+= Configuring API Instances
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

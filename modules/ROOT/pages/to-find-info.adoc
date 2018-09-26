@@ -1,4 +1,4 @@
-= To Find Asset Information
+= Finding Asset Information
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,7 +6,7 @@ endif::[]
 Exchange helps you find assets. You can search for assets, click All Types to filter for specific assets, or combine search
 text with an All Types filter.
 
-== About All Types Filters
+== All Types Filters
 
 * Connectors - Packaged connectivity to an endpoint developed and deployed on Anypoint Platform with third-party APIs and standard integration protocols.
 * Templates - Packaged integration patterns that address common use cases and are built on best practices. You can add your information to complete the template's use case or solution.
@@ -17,7 +17,7 @@ text with an All Types filter.
 * RAML Fragments - A RAML document that has a version and an identifier, but is not in itself a complete RAML specification.
 * Custom - Blogs, articles, and more - Links that assist with knowledge sharing.
 
-== About Asset Details
+== Asset Details
 
 When you click an asset, Exchange provides detail information:
 
@@ -25,7 +25,7 @@ When you click an asset, Exchange provides detail information:
 the HTTP functions in the REST specification.
 * Right detail panel - Lists the asset type, when the asset was created and by which organization, when the asset was last published, the version, and the asset's dependencies. For REST APIs, the right panel lets you test the API by creating example calls, test data (mocking), and the ability to send data to the API and view the results.
 
-== About Exchange Search
+== Exchange Search
 
 Search lets you find Exchange assets that contain one or more terms
 in an asset title, asset ID, or a tag in an asset. You can also combine search terms with the filters listed in All Types.
@@ -33,7 +33,7 @@ Searches only apply to the Exchange you are viewing.
 If you search in a private Exchange, the search only lists the
 private Exchange assets and not public Exchange assets.
 
-== To Search for Phrases
+== Searching for Phrases
 
 You can put a space between words to search for
 case insensitive text that begins with each word you specify.
@@ -47,7 +47,7 @@ for a search to succeed.
 If you separate search words with any other character than a space, Exchange
 converts the character to a space before searching.
 
-=== About Search Separators
+=== Search Separators
 
 Search lets you find Exchange assets that contain one or more terms in an asset name, asset ID, or a tag.
 
@@ -85,7 +85,7 @@ the reason is provided.
 |Cisco Presales API |cisco-presales-api |Connector, api |No. `sales` was not found.
 |===
 
-=== About Phrase Search Separators
+=== Phrase Search Separators
 
 Exchange search features phrase search, which allows you to query for a group of terms inside quotation marks. Phrase searches match an asset only if all the exact terms inside quotes appear in consecutive order.
 
@@ -142,7 +142,7 @@ The table that follows shows examples that match or not with the searched assets
 |tag:value |val |No
 |===
 
-=== Search by Categories
+=== Searching by Categories
 
 You can use the following structure to search by categories: `category:"some key" = "some value"`
 Double quotes are not necessary if the category has no spaces in the key or value.
@@ -172,7 +172,7 @@ The following search terms return all assets marked as both System APIs and Sale
 
 `category:"API Type" = "System API" category:"Product" = "Salesforce"`
 
-=== Search by Custom Fields
+=== Searching by Custom Fields
 
 Similar to search by Categories, you can search for `field` instead `category` in the query language.
 You can use the following structure to search by categories: `field:"some key" = "some value"`
@@ -201,7 +201,7 @@ The table that follows shows examples that match or not with the searched assets
 |===
 
 
-== To Save Search
+== Saving a Search
 
 . Enter a search term and click Save This Search.
 . Exchange prompts you to give the search a name, and to select if the search is for your organization or personal. Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
@@ -209,7 +209,7 @@ The table that follows shows examples that match or not with the searched assets
 +
 image::ex2-saved-searches-groups.png[Saved Search Groups]
 
-== To View REST API Elements in an Asset
+== Viewing REST API Elements in an Asset
 
 . In the left navigation area you can view RAML or OAS API specification information such as resources and the methods in each resource. Click a method button to view information about the API:
 +
@@ -218,13 +218,13 @@ image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
 . Use the right side of a method view to experiment with the API. This functionality is similar to what you can expect in programs such as Postman where you can specify custom HTTP headers and test each API's method using the API's endpoint.
 . Click Request Access to tie the API you're viewing to one of your applications so that you can use the API to send and receive data that your application can consume.
 
-== To Test an API with API Notebook
+== Testing an API with API Notebook
 
 . Click API Notebook in the content page if one is available for the API.
 . After you read the description for usage information, you can experiment with the example in the code block to try different parameters and values, and see the results in real time.
 . Click Play to test the method in the code example and view the results.
 
-== To View Assets by Business Group
+== Viewing Assets by Business Group
 
 Anypoint Platform provides the option for business groups that organize content into categories.
 
@@ -240,7 +240,6 @@ image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-dow
 
 == See Also
 
-* xref:about-my-applications.adoc[About My Applications]
-* xref:to-configure-api-settings.adoc[To Configure API Instances]
+* xref:about-my-applications.adoc[Using My Applications]
+* xref:to-configure-api-settings.adoc[Configuring API Instances]
 * xref:6@studio::exchange-integration.adoc[Anypoint Studio integration with Exchange]
-* https://beta-anypt.docs-stgx.mulesoft.com/anypoint-studio/v/7/export-to-exchange-task[Share an example or template from Studio to Exchange]

@@ -1,4 +1,4 @@
-= About Exchange Public Portals
+= Working With Exchange Public Portals
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -14,7 +14,7 @@ Exchange public portals let an organization share REST, SOAP, and HTTP APIs.
 
 Exchange Administrators can share an API asset to a public portal as described in the sections that follow.
 
-== To Update the Description of an Asset in a Portal
+== Updating the Description of an Asset in a Portal
 
 . Locate the asset in your organization's Exchange.
 . Edit the asset's description, and when done, publish the asset.
@@ -22,4 +22,4 @@ Exchange Administrators can share an API asset to a public portal as described i
 
 == See Also
 
-* xref:to-customize-portal.adoc[To Customize an Exchange Public Portal]
+* xref:to-customize-portal.adoc[Customizing an Exchange Public Portal]

@@ -1,4 +1,4 @@
-= To Deprecate an Asset in Exchange
+= Deprecating an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -30,4 +30,4 @@ and can click Revert to restore access to the version.
 
 == See Also
 
-* xref:to-delete-asset.adoc[To Delete an Asset]
+* xref:to-delete-asset.adoc[Deleting an Asset]

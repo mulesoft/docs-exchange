@@ -282,7 +282,7 @@ Templates and examples are both submitted to the Exchange in the same way. You c
 
 For your project to be automatically importable into Studio via  Exchange, it must be packaged into a .zip file that must be structured in a particular way.
 
-If you use the January 2015 - Update Site 1 version of Anypoint Studio or newer, exporting your project already produces a zip file that has the necessary structure. To expose your Mule Project on  Exchange:
+If you use the January 2015 - Update Site 1 version of Anypoint Studio or later, exporting your project already produces a zip file that has the necessary structure. To expose your Mule Project on  Exchange:
 
 * Select File > Export.
 * Click Mule > Anypoint Studio Project to Mule Deployable Archive (includes Studio metadata)
@@ -446,8 +446,8 @@ The content that is shown in the list by default depends in the organization or 
 
 == See Also
 
-* xref:release-notes::exchange/exchange-on-prem-release-notes.adoc[Anypoint Exchange Private Cloud Edition Release Notes].
-* xref:exchange1-faq.adoc[Exchange1 FAQ].
-* https://www.mulesoft.com/resources/esb/top-five-data-integration-patterns[integration patterns].
-* Learn the different ways you can xref:runtime-manager::deployment-strategies.adoc[Deploy] your app.
-* Read a http://blogs.mulesoft.com/dev/mule-dev/anypoint-templates-database-intro/[Blog Post] and http://blogs.mulesoft.com/dev/mule-dev/connected-company-part-1-salesforce-integration-templates/[Another One] about templates that center around Salesforce.
+* xref:release-notes::exchange/exchange-on-prem-release-notes.adoc[Anypoint Exchange Private Cloud Edition Release Notes]
+* xref:exchange1-faq.adoc[FAQ: Exchange 1]
+* https://www.mulesoft.com/resources/esb/top-five-data-integration-patterns[integration patterns]
+* Learn the different ways you can xref:runtime-manager::deployment-strategies.adoc[Deploy] your app
+* Read a http://blogs.mulesoft.com/dev/mule-dev/anypoint-templates-database-intro/[Blog Post] and http://blogs.mulesoft.com/dev/mule-dev/connected-company-part-1-salesforce-integration-templates/[Another One] about templates that center around Salesforce

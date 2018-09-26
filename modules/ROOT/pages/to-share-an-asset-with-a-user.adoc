@@ -1,4 +1,4 @@
-= To Share an Asset
+= Sharing an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

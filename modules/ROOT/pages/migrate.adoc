@@ -1,4 +1,4 @@
-= To Migrate Assets from Exchange 1
+= Migrating Assets from Exchange 1 to Exchange 2
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -83,5 +83,5 @@ connector-uploader
 
 == See Also
 
-* https://youtu.be/BOAR9glreMw[Migrate SOAP Assets Video]
-* https://youtu.be/WTIJrYydViQ[Migrate RAML REST Assets]
+* https://youtu.be/BOAR9glreMw[Migrating SOAP Assets Video]
+* https://youtu.be/WTIJrYydViQ[Migrating RAML REST Assets]

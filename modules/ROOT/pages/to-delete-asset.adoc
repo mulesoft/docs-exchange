@@ -1,4 +1,4 @@
-= To Delete an Asset in Exchange
+= Deleting an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -30,4 +30,4 @@ Changing a RAML version? See xref:to-change-raml-version.adoc[To Change a RAML V
 
 == See Also
 
-* xref:to-deprecate-asset.adoc[To Deprecate an Asset]
+* xref:to-deprecate-asset.adoc[Deprecating an Asset]

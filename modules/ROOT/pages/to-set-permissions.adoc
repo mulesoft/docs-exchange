@@ -1,4 +1,4 @@
-= To Set User Access Permissions
+= Setting User Access Permissions
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -45,5 +45,5 @@ view, download, edit the content, delete, and share the asset.
 
 == See Also
 
-* xref:access-management::roles.adoc[Access Management Roles].
-* xref:access-management::managing-permissions.adoc[Access Management Managing Permissions].
+* xref:access-management::roles.adoc[Access Management Roles]
+* xref:access-management::managing-permissions.adoc[Access Management Managing Permissions]

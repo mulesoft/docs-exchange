@@ -1,4 +1,4 @@
-= To Create an Asset
+= Creating an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -58,7 +58,7 @@ A custom asset lets you share information about any aspect of your organization 
 . If you want to share a file with users, click Choose File to locate the file.
 . Click Publish.
 
-== To Add a File to an Existing Asset
+== Adding a File to an Existing Asset
 
 If you have contributor or admin access to an asset, you can add a file to an existing asset.
 
@@ -68,6 +68,6 @@ If you don't want to add a new version, if you have contributor or admin access 
 
 == See Also
 
-* Next: xref:to-describe-an-asset.adoc[To Describe an Asset].
-* link:/design-center/v/1.0/upload-raml-task[Create a RAML file in API Designer and import to Exchange].
-* xref:to-publish-assets-maven.adoc[To Publish and Deploy Exchange Assets Using Maven].
+* Next: xref:to-describe-an-asset.adoc[Describing an Asset]
+* link:/design-center/v/1.0/upload-raml-task[Creating a RAML file in API Designer and import to Exchange]
+* xref:to-publish-assets-maven.adoc[Publishing and Deploying Exchange Assets Using Maven]

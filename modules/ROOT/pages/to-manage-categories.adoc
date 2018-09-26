@@ -1,4 +1,4 @@
-= To Manage Categories
+= Managing Categories
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -14,7 +14,7 @@ image::ex-categories-api-type.png[Settings Category for API Type]
 *Note:* You must have one or more categories defined in the Settings page for the Add Category prompt
 to appear on your organization's assets.
 
-== To Create a Category
+== Creating a Category
 
 . In Anypoint Exchange, click Login and log into your organization.
 . Click Settings in the left navigation area.
@@ -31,12 +31,12 @@ effect.
 . Choose the asset types that the category corresponds to.
 . Click the checkmark to enable the category.
 
-== To Apply a Category
+== Applying a Category
 
 . Click an asset in your organization.
 . In Categories in the right side details menu, click Add Category and choose the category and value from the drop-down menu.
 
-== To Search with Categories
+== Searching with Categories
 
 In the Exchange search field, specify the `category:` search term and the category value to list the assets.
 
@@ -48,7 +48,7 @@ The following search terms return all assets marked as both System APIs and Sale
 
 `category:"API Type" = "System API" category:"Product" = "Salesforce"`
 
-== To Change or Delete a Category
+== Changing or Deleting a Category
 
 Categories can be deleted at the individual asset level which only removes the category from that asset.
 Categories can also be deleted at the global level in Settings, but doing so removes the category from all assets.

@@ -1,4 +1,4 @@
-= To Download an Asset
+= Downloading an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

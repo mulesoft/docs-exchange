@@ -1,4 +1,4 @@
-= About Administrator Tasks
+= Handling Administrator Tasks
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,9 +7,9 @@ Anypoint Exchange provides those with the Exchange Administrator capabilities no
 
 You can perform the following tasks as an Exchange Administrator:
 
-* xref:to-set-permissions.adoc[Set Exchange role permissions] - Determine who in your organization should be an Exchange Administrator, Contributor, or Viewer. You can also provide role access for individual assets.
-* xref:to-save-searches.adoc[To Save Searches] - Save and maintain searches for assets within a business group.
-* xref:to-share-an-asset-with-a-user.adoc[To Share an Asset] - Enable another user in your organization to access this asset. You can also use Share to publish an API asset to a Public Portal.
-* xref:to-enable-the-request-access-button.adoc[Use API Manager to add the Request Access button] - This enables you to specify which API assets can be shared with users.
-* xref:to-deprecate-asset.adoc[To Deprecate an Asset] - Remove access to a version within an asset but keep the asset available. Users can access other versions within the asset.
-* xref:migrate.adoc[To Migrate Exchange 1 Assets to Exchange 2] - How to handle assets moved from Exchange 1.
+* xref:to-set-permissions.adoc[Setting Exchange role permissions] - Determine who in your organization should be an Exchange Administrator, Contributor, or Viewer. You can also provide role access for individual assets.
+* xref:to-save-searches.adoc[Saving Searches] - Save and maintain searches for assets within a business group.
+* xref:to-share-an-asset-with-a-user.adoc[Sharing an Asset] - Enable another user in your organization to access this asset. You can also use Share to publish an API asset to a Public Portal.
+* xref:to-enable-the-request-access-button.adoc[Using API Manager to Add the Request Access Button] - This enables you to specify which API assets can be shared with users.
+* xref:to-deprecate-asset.adoc[Deprecating an Asset] - Remove access to a version within an asset but keep the asset available. Users can access other versions within the asset.
+* xref:migrate.adoc[Migrating Exchange 1 Assets to Exchange 2] - How to handle assets moved from Exchange 1.

@@ -19,7 +19,7 @@ image::ex1-icon.png[Exchange button in Studio]
 
 You can locate and install the connector.
 
-To use Exchange 1, click Preferences > Anypoint Studio > Exchange and set the Exchange Settings URL to the https://anypoint.mulesoft.com/exchange1/ value.
+To use Exchange 1, click Preferences > Anypoint Studio > Exchange and set the Exchange Settings URL to the `+https://anypoint.mulesoft.com/exchange1+` value.
 
 == What is the difference between an example and a template?
 
@@ -76,6 +76,6 @@ you create your entry in Exchange.
 
 == See Also
 
-* https://anypoint.mulesoft.com/exchange1/#!/[Anypoint Exchange 1].
-* https://anypoint.mulesoft.com/exchange1/#!/?types=template[View templates in Anypoint Exchange].
-* https://anypoint.mulesoft.com/exchange1/#!/?types=example[View examples in Anypoint Exchange].
+* https://anypoint.mulesoft.com/exchange1/#!/[Anypoint Exchange 1]
+* https://anypoint.mulesoft.com/exchange1/#!/?types=template[View templates in Anypoint Exchange]
+* https://anypoint.mulesoft.com/exchange1/#!/?types=example[View examples in Anypoint Exchange]

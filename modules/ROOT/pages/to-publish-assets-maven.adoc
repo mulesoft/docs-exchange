@@ -1,4 +1,4 @@
-= To Publish and Deploy Exchange Assets Using Maven
+= Publishing Assets Using Maven
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -13,7 +13,7 @@ operations on your computer or server.
 
 Note: You must have a unique artifact name and organization ID to publish your asset.
 
-== To View Your Organization ID
+== Viewing Your Organization ID
 
 To construct the elements of a Maven POM file, you need to determine your organization ID:
 
@@ -21,7 +21,7 @@ To construct the elements of a Maven POM file, you need to determine your organi
 . Click the organization name for the top level or a business group, and view your Organization ID in the Organization Info screen.
 . Copy the organization ID and add it to the examples that follow for how to set up your project's POM file.
 
-== To Publish an Asset to Exchange Using Maven
+== Publishing an Asset to Exchange Using Maven
 
 You can use the information in this topic to publish Mule 3 and Mule 4 assets including connectors.
 
@@ -163,7 +163,7 @@ For the EU, the share URL is:
 https://eu1.anypoint.mulesoft.com/exchange/api/v1/assets/ORGANIZATION_ID/ASSET_ID
 ----
 
-== To Publish Federated Assets
+== Publishing Federated Assets
 
 . Get the access token by logging into Anypoint Platform and copying this URL to the browser address bar:
 +
@@ -191,7 +191,7 @@ https://anypoint.mulesoft.com/accounts/api/profile
 </settings>
 ----
 
-== To Consume an Exchange Asset with Maven
+== Consuming an Exchange Asset with Maven
 
 Add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
 and add the Maven facade as a repository in the `repositories` section.

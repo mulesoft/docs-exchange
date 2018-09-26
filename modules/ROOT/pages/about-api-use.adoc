@@ -1,4 +1,4 @@
-= About Consuming an API
+= Consuming an API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -13,5 +13,5 @@ Exchange helps API consumers understand API functionality and test features with
 
 == See Also
 
-* xref:to-describe-an-asset.adoc[To Describe an Asset] - Describes how to
+* xref:to-describe-an-asset.adoc[Describing an Asset] - Describes how to
 view and experiment with REST API functionality directly in Exchange

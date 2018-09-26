@@ -1,4 +1,4 @@
-= Exchange 2 FAQ
+= FAQ: Exchange 2
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -82,5 +82,5 @@ https://anypoint.mulesoft.com/apiplatform/repository/v2/organizations/<org-id>/a
 
 == See Also
 
-* https://forums.mulesoft.com[MuleSoft Forum].
-* https://support.mulesoft.com[Contact MuleSoft Support].
+* https://forums.mulesoft.com[MuleSoft Forum]
+* https://support.mulesoft.com/s/knowledge[Knowledge Base Articles]

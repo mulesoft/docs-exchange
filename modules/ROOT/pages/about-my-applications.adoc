@@ -1,4 +1,4 @@
-= About My Applications
+= Using My Applications
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -23,4 +23,4 @@ Applications in My Applications are registered using API Manager in Anypoint Pla
 
 == See Also
 
-* xref:to-request-access.adoc[To Request Access]
+* xref:to-request-access.adoc[Requesting Access]
