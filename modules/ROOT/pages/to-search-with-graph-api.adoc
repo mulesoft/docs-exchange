@@ -1,4 +1,4 @@
-= Searching With Graph API
+= Search With Graph API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -15,7 +15,7 @@ have an access token if you want to access assets in private exchange. If you on
 * The Exchange Graph API can be used without an Anypoint Platform account. In that case, only assets made publicly available by MuleSoft are returned.
 * To utilize this API to access private content, you must be provisioned with an Anypoint Platform account.
 
-== Obtaining an Access Token
+== Obtain an Access Token
 
 You only need an access token if you are searching for assets that are not created by MuleSoft.
 
@@ -118,7 +118,7 @@ curl -X POST \
   -d '{"query":"{assets(query: {tags: {key: \"min-mule-version\", value: \"4.0.0\"}}) {groupId assetId version}}"}'
 ----
 
-== Searching a Private Exchange
+== Search a Private Exchange
 
 . Get the organization ID for the Private Exchange by clicking an asset in your Private Exchange.
 +
