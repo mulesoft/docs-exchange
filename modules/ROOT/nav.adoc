@@ -14,7 +14,7 @@
 ** xref:to-share-an-http-api.adoc[Work With an HTTP API]
 ** xref:exchange2-faq.adoc[FAQ: Exchange 2]
 * xref:about-api-use.adoc[Consume an API]
-** xref:about-my-applications.adoc[Use My Applications]
+** xref:about-my-applications.adoc[Hold an API Contract in My Applications]
 ** xref:to-request-access.adoc[Request Access]
 ** xref:to-deploy-using-rest-connect.adoc[Convert a RAML to a Connector With REST Connect]
 * xref:about-platform-apis.adoc[Use Platform APIs]
