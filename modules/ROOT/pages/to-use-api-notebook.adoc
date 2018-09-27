@@ -92,5 +92,5 @@ API.authenticate(github);
 
 == See Also
 
-* For API Notebook function descriptions, see link:/api-manager/creating-an-api-notebook[API Notebook Reference].
+* For API Notebook function descriptions, see xref:1.x@api-manager::creating-an-api-notebook.adoc[API Notebook Reference].
 * https://docs.mulesoft.com/design-center/v/1.0/upload-raml-task[To Upload an Existing RAML File to Exchange].
