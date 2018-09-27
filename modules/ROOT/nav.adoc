@@ -28,7 +28,7 @@
 * xref:about-administration-tasks.adoc[Administer Exchange]
 ** xref:to-share-an-asset-with-a-user.adoc[Share an Asset]
 ** xref:to-save-searches.adoc[Save Searches]
-** xref:to-enable-the-request-access-button.adoc[Display the Request Access Button]
+** xref:to-enable-the-request-access-button.adoc[Enable the Request Access Button]
 ** xref:to-deprecate-asset.adoc[Deprecate an Asset]
 ** xref:to-set-permissions.adoc[Permit User Access]
 * xref:about-exchange1.adoc[Work With Exchange 1]
