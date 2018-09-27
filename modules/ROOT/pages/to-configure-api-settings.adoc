@@ -1,4 +1,4 @@
-= Configuring API Instances
+= Configure API Instances
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -27,4 +27,4 @@ Access differs by Exchange type:
 
 == See Also
 
-* link:/design-center/v/1.0/design-mocking-service[Simulating Calls to an API]
+* link:/design-center/v/1.0/design-mocking-service[Simulate Calls to an API]
