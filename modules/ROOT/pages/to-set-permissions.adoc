@@ -1,4 +1,4 @@
-= Setting User Access Permissions
+= Enable User Access
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
