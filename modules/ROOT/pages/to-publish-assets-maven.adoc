@@ -1,4 +1,4 @@
-= Publishing Assets Using Maven
+= Publish an Asset Using Maven
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -13,7 +13,7 @@ operations on your computer or server.
 
 Note: You must have a unique artifact name and organization ID to publish your asset.
 
-== Viewing Your Organization ID
+== View Your Organization ID
 
 To construct the elements of a Maven POM file, you need to determine your organization ID:
 
@@ -87,7 +87,6 @@ In the EU, use:
 </plugin>
 ...
 ----
-+
 +
 . Add the Maven facade as a repository in the distribution management section of your project's POM file:
 +
@@ -163,7 +162,7 @@ For the EU, the share URL is:
 https://eu1.anypoint.mulesoft.com/exchange/api/v1/assets/ORGANIZATION_ID/ASSET_ID
 ----
 
-== Publishing Federated Assets
+== Publish a Federated Asset
 
 . Get the access token by logging into Anypoint Platform and copying this URL to the browser address bar:
 +
@@ -191,7 +190,7 @@ https://anypoint.mulesoft.com/accounts/api/profile
 </settings>
 ----
 
-== Consuming an Exchange Asset with Maven
+== Consume an Asset with Maven
 
 Add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
 and add the Maven facade as a repository in the `repositories` section.
