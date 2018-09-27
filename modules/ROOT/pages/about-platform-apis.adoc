@@ -1,4 +1,4 @@
-= Using Exchange Platform APIs
+= Use Exchange Platform APIs
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -11,10 +11,10 @@ The Maven facade also lets you publish federated assets.
 
 Topics:
 
-* xref:to-publish-assets-maven.adoc[Publishing and Deploying Exchange Assets Using Maven]
-* xref:to-search-with-graph-api.adoc[Searching With the Graph API]
+* xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]
+* xref:to-search-with-graph-api.adoc[Search With the Graph API]
 
 == See Also
 
-* xref:about-api-use.adoc[Consuming an API]
-* xref:to-configure-api-settings.adoc[Configuring API Instances]
+* xref:about-api-use.adoc[Consume an API]
+* xref:to-configure-api-settings.adoc[Configure API Instances]
