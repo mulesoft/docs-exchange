@@ -69,5 +69,6 @@ If you don't want to add a new version, if you have contributor or admin access 
 == See Also
 
 * Next: xref:to-describe-an-asset.adoc[Describe an Asset]
-* link:/design-center/v/1.0/upload-raml-task[Create a RAML file in API Designer and import to Exchange]
+* xref:design-center::upload-raml-task.adoc[Create a RAML file in API Designer and import to Exchange]
 * xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]
+

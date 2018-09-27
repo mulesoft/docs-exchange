@@ -27,4 +27,4 @@ Access differs by Exchange type:
 
 == See Also
 
-* link:/design-center/v/1.0/design-mocking-service[Simulate Calls to an API]
+* xref:design-center::design-mocking-service.adoc[Simulating Calls to an API]
