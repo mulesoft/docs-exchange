@@ -1,4 +1,4 @@
-= Sharing an HTTP API
+= Work With an HTTP API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
