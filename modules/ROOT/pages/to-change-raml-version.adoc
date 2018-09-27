@@ -1,4 +1,4 @@
-= Changing a RAML Version
+= Change a RAML Version
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
