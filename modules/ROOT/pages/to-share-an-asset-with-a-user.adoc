@@ -1,11 +1,9 @@
-= Sharing an Asset
+= Share an Asset With a User
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 Exchange Administrators can share an asset with another user.
-
-== Share With a User
 
 If the person is not in your organization,
 click Access Management > Users to add them.
