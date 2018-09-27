@@ -1,4 +1,4 @@
-= Creating an Asset
+= Create an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -21,7 +21,7 @@ This illustration summarizes how each asset type (in blue) appears in Exchange:
 
 image::ex2-exchange-assets.png[Illustration - How Assets appear in Exchange]
 
-== Creating an API Asset
+== Create an API Asset
 
 An API asset specifies what an interface consists of including its functions, descriptions, how to handle return codes, and dependencies.
 
@@ -48,7 +48,7 @@ Exchange generates the GroupId, AssetId, and Version automatically. You can chan
 
 The Advanced settings are most often used to change the version number.
 
-== Creating a Custom Asset
+== Create a Custom Asset
 
 A custom asset lets you share information about any aspect of your organization such as announcements, documentation, videos, and sharing files. You can add an optional file to your Custom asset that users can download. The file is stored in Exchange.
 
@@ -58,7 +58,7 @@ A custom asset lets you share information about any aspect of your organization 
 . If you want to share a file with users, click Choose File to locate the file.
 . Click Publish.
 
-== Adding a File to an Existing Asset
+== Add a File to an Existing Asset
 
 If you have contributor or admin access to an asset, you can add a file to an existing asset.
 
@@ -68,6 +68,6 @@ If you don't want to add a new version, if you have contributor or admin access 
 
 == See Also
 
-* Next: xref:to-describe-an-asset.adoc[Describing an Asset]
-* link:/design-center/v/1.0/upload-raml-task[Creating a RAML file in API Designer and import to Exchange]
-* xref:to-publish-assets-maven.adoc[Publishing and Deploying Exchange Assets Using Maven]
+* Next: xref:to-describe-an-asset.adoc[Describe an Asset]
+* link:/design-center/v/1.0/upload-raml-task[Create a RAML file in API Designer and import to Exchange]
+* xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]
