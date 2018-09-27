@@ -1,4 +1,4 @@
-= Deleting an Asset
+= Delete an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -23,11 +23,11 @@ Changing a RAML version? See xref:to-change-raml-version.adoc[To Change a RAML V
 +
 . Confirm the action when prompted, or click Cancel to exit the prompt.
 
-== Delete Notes
+== Notes
 
 * If an asset has never had a lower version number, you can create a lower version number, but not if you are reusing a previously deleted version. For example, if an asset starts with version 2, you can add a version 1. However if the asset started with version 1, a version 2 was added, and version 1 was deleted, you can't add version 1 back.
 * Deleting an asset or a version checks for any assets that are dependent on the asset or the asset version and displays a warning to prevent deletion until all the dependencies are removed.
 
 == See Also
 
-* xref:to-deprecate-asset.adoc[Deprecating an Asset]
+* xref:to-deprecate-asset.adoc[Deprecate an Asset]
