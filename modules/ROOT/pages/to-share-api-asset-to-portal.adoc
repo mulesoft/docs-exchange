@@ -1,4 +1,4 @@
-= Sharing an API Asset to a Public Portal
+= Share an API Asset in a Public Portal
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -12,10 +12,9 @@ returned to the previous Share menu.
 . Click the version of the asset you want to publish in the public portal.
 . Click Share. If no action occurs when you click Share, refresh your browser and log in again to repeat sharing the asset.
 
-A public portal is visible to anyone on the internet who has the URL of the portal. The URL for a public portal starts with `+https://anypoint.mulesoft.com/exchange/portals/ORGANIZATION_NAME/+`. To remove an asset from a public portal, you need to make the asset
-private as described in the next section.
+A public portal is visible to anyone on the internet who has the URL of the portal. The URL for a public portal starts with `+https://anypoint.mulesoft.com/exchange/portals/ORGANIZATION_NAME/+`. To remove an asset from a public portal, you need to make the asset private as described in the next section.
 
-== Removing an Asset from a Public Portal
+== Remove an Asset from a Public Portal
 
 *Note:* This procedure only takes the asset out of a portal. It doesn't delete the asset.
 
@@ -28,4 +27,4 @@ setting in the asset's Overview has changed to Private.
 
 == See Also
 
-* xref:about-portals.adoc[Working With Exchange Public Portals]
+* xref:about-portals.adoc[Work With Exchange Public Portals]
