@@ -1,4 +1,4 @@
-= Customizing an Exchange Public Portal
+= Customize a Public Portal
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -72,5 +72,5 @@ To delete a custom page, click Delete Page. If this button is not visible resize
 
 == See Also
 
-* xref:to-describe-an-asset.adoc[Describing an Asset]
+* xref:to-describe-an-asset.adoc[Describe an Asset]
 * https://stackoverflow.com/questions/4014823/does-a-favicon-have-to-be-32x32-or-16x16[Stack Overflow Favicon discussion]
