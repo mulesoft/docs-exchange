@@ -1,4 +1,4 @@
-= Requesting Access
+= Request Access to an API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -17,7 +17,7 @@ If terms and conditions are set for an asset, you are prompted to accept the ter
 +
 The Request API Access menu opens to show that the API access was successful. This screen lists the client ID and client secret for this API access instance.
 
-== Creating a New Application
+== Create a New Application
 
 Choose from the screens that follow for what to provide:
 
@@ -46,4 +46,4 @@ The OAuth 2 grant type:
 
 == See Also
 
-* https://www.google.com/search?q=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token&oq=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token[Search to compare grant types]
+* https://www.google.com/search?q=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token&oq=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token[Grant types]
