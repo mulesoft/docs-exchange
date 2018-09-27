@@ -79,7 +79,7 @@ Exchange lets you version an API separately from an asset's version.
 
 To change the asset version, click Add New Version: image:ex2-add-new-version.png[Asset Version button].
 
-See also: xref:to-change-raml-version.adoc[Changing a RAML Version].
+See also: xref:to-change-raml-version.adoc[Change a RAML Version].
 
 == Editor Notes
 
