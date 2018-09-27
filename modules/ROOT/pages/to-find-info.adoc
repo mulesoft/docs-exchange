@@ -1,4 +1,4 @@
-= Finding Asset Information
+= Search Exchange
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -118,7 +118,7 @@ the reason is provided.
 |Optimized API |optimized-api |sales:/connect |Yes
 |===
 
-== About Search Using Query Language
+== Search With a Query Language
 
 Using query language allows you to search assets by tags, categories, and custom fields.
 
@@ -142,7 +142,7 @@ The table that follows shows examples that match or not with the searched assets
 |tag:value |val |No
 |===
 
-=== Searching by Categories
+=== Search by Categories
 
 You can use the following structure to search by categories: `category:"some key" = "some value"`
 Double quotes are not necessary if the category has no spaces in the key or value.
@@ -172,7 +172,7 @@ The following search terms return all assets marked as both System APIs and Sale
 
 `category:"API Type" = "System API" category:"Product" = "Salesforce"`
 
-=== Searching by Custom Fields
+=== Search by Custom Fields
 
 Similar to search by Categories, you can search for `field` instead `category` in the query language.
 You can use the following structure to search by categories: `field:"some key" = "some value"`
@@ -201,7 +201,7 @@ The table that follows shows examples that match or not with the searched assets
 |===
 
 
-== Saving a Search
+== Save a Search
 
 . Enter a search term and click Save This Search.
 . Exchange prompts you to give the search a name, and to select if the search is for your organization or personal. Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
@@ -209,7 +209,7 @@ The table that follows shows examples that match or not with the searched assets
 +
 image::ex2-saved-searches-groups.png[Saved Search Groups]
 
-== Viewing REST API Elements in an Asset
+== View REST API Elements in an Asset
 
 . In the left navigation area you can view RAML or OAS API specification information such as resources and the methods in each resource. Click a method button to view information about the API:
 +
@@ -218,13 +218,13 @@ image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
 . Use the right side of a method view to experiment with the API. This functionality is similar to what you can expect in programs such as Postman where you can specify custom HTTP headers and test each API's method using the API's endpoint.
 . Click Request Access to tie the API you're viewing to one of your applications so that you can use the API to send and receive data that your application can consume.
 
-== Testing an API with API Notebook
+== Test an API with API Notebook
 
 . Click API Notebook in the content page if one is available for the API.
 . After you read the description for usage information, you can experiment with the example in the code block to try different parameters and values, and see the results in real time.
 . Click Play to test the method in the code example and view the results.
 
-== Viewing Assets by Business Group
+== View Assets by Business Group
 
 Anypoint Platform provides the option for business groups that organize content into categories.
 
@@ -240,6 +240,6 @@ image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-dow
 
 == See Also
 
-* xref:about-my-applications.adoc[Using My Applications]
-* xref:to-configure-api-settings.adoc[Configuring API Instances]
+* xref:about-my-applications.adoc[Hold an API Contract With My Applications]
+* xref:to-configure-api-settings.adoc[Configure API Instances]
 * xref:6@studio::exchange-integration.adoc[Anypoint Studio integration with Exchange]
