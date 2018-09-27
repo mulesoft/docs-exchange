@@ -1,11 +1,11 @@
-= Simulating Data in REST APIs
+= Simulate Data in REST APIs
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 Exchange lets you provide simulated data for testing OAS or RAML REST APIs. The simulated data is provided in the Mocking Service feature.
 
-Simulating data access (Mocking Service) appears in Exchange:
+Simulated data access (Mocking Service) appears in Exchange:
 
 * In the API console that appears on the right side of an asset detail screen. The Mocking Service lets you add simulated data to an API function and test the API with the data.
 +
@@ -19,12 +19,12 @@ image::ex2-mock-in-versions.png[Mocking instance in versions]
 +
 image::ex2-api-instances.png[API Instances Mocking Service URL]
 
-== Simulating Data in an API
+== Simulate Data in an API
 
 . From Design Center > API Specification, provide example data that the implementation returns. Alternatively, you can develop an OAS (Swagger) specification from a text editor and add the example data there.
 . In the REST specification provide an HTTP status code for a successful API call.
 
-== Testing a REST API With Simulated Data
+== Test a REST API With Simulated Data
 
 . In Exchange, click a REST API.
 . Click a function such as GET.
@@ -37,5 +37,5 @@ the HTTP 200 OK status to indicate success, and lists the data that is sent from
 
 == See Also
 
-* xref:to-change-raml-version.adoc[Changing a RAML Version]
-* link:/design-center/v/1.0/design-mocking-service[Simulating Calls to an API]
+* xref:to-change-raml-version.adoc[Change a RAML Version]
+* link:/design-center/v/1.0/design-mocking-service[Simulate Calls to an API]
