@@ -1,4 +1,4 @@
-= Deprecating an Asset
+= Deprecate an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -30,4 +30,4 @@ and can click Revert to restore access to the version.
 
 == See Also
 
-* xref:to-delete-asset.adoc[Deleting an Asset]
+* xref:to-delete-asset.adoc[Delete an Asset]
