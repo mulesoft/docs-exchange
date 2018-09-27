@@ -33,7 +33,7 @@ Searches only apply to the Exchange you are viewing.
 If you search in a private Exchange, the search only lists the
 private Exchange assets and not public Exchange assets.
 
-== Searching for Phrases
+== Search for a Phrase
 
 You can put a space between words to search for
 case insensitive text that begins with each word you specify.
