@@ -1,4 +1,4 @@
-= Using API Notebook
+= Document an API With API Notebook
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -9,9 +9,9 @@ from the Exchange editor and use JavaScript code in the code blocks.
 
 image::ex2-api-notebook.png[Screenshot - Exchange API Notebook showing text above an interactive code block]
 
-. If you are documenting a RAML, use the Design Center in Anypoint Platform to improve and test your RAML, and to publish the API to Anypoint Exchange.
+. To document a RAML, use the Design Center in Anypoint Platform to improve and test your RAML, and to publish the API to Anypoint Exchange.
 +
-If you are documenting an OAS specification, create a new Exchange asset and choose API Spec - OAS. Note: The OAS specification is converted into RAML so you can follow the RAML conventions in the API Notebook.
+To document an OAS specification, create a new Exchange asset and choose API Spec - OAS. Note: The OAS specification is converted into RAML so you can follow the RAML conventions in the API Notebook.
 . Click the asset to view details.
 . Click Edit and click the API Notebook icon image:ex2-api-notebook-icon.png[Icon - API Notebook in the Editor] in the editor.
 . Add a description for the asset.
@@ -93,4 +93,4 @@ API.authenticate(github);
 == See Also
 
 * For API Notebook function descriptions, see link:/api-manager/creating-an-api-notebook[API Notebook Reference].
-* https://docs.mulesoft.com/design-center/v/1.0/upload-raml-task[Uploading an Existing RAML File to Exchange].
+* https://docs.mulesoft.com/design-center/v/1.0/upload-raml-task[Upload an Existing RAML File to Exchange].
