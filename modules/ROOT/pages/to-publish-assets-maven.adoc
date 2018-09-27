@@ -21,7 +21,7 @@ To construct the elements of a Maven POM file, you need to determine your organi
 . Click the organization name for the top level or a business group, and view your Organization ID in the Organization Info screen.
 . Copy the organization ID and add it to the examples that follow for how to set up your project's POM file.
 
-== Publishing an Asset to Exchange Using Maven
+== Publish an Asset Using Maven
 
 You can use the information in this topic to publish Mule 3 and Mule 4 assets including connectors.
 
@@ -34,7 +34,7 @@ You can use the information in this topic to publish Mule 3 and Mule 4 assets in
  ...
 ----
 +
-If you are publishing your asset to the master organization, the group ID is the same as the organization ID.
+When publishing your asset to the master organization, the group ID for the asset is the same as the organization ID.
 The URL format is:
 +
 `+https://maven.anypoint.mulesoft.com/api/v1/organizations/ORGANIZATION_ID/maven+`
