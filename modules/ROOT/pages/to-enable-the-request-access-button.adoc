@@ -1,4 +1,4 @@
-= Displaying the Request Access Button
+= Enable the Request Access Button
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -32,4 +32,4 @@ To see the Request Access button in a public portal requires:
 
 == See Also
 
-* xref:to-request-access.adoc[Requesting Access].
+* xref:to-request-access.adoc[Request Access].
