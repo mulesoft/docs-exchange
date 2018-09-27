@@ -1,4 +1,4 @@
-= Documenting an API
+= Document an API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -12,10 +12,10 @@ If you don't use a base URI in your RAML, or use an API instance, you can use th
 
 Topics:
 
-* xref:to-use-api-notebook.adoc[Documenting an Asset Using API Notebook]
-* xref:to-configure-api-settings.adoc[Configuring API Instances]
+* xref:to-use-api-notebook.adoc[Use API Notebook]
+* xref:to-configure-api-settings.adoc[Configure API Instances]
 
 == See Also
 
-* xref:to-describe-an-asset.adoc[Describing an Asset]
-* xref:to-publish-an-asset.adoc[Publishing Asset Draft Content]
+* xref:to-describe-an-asset.adoc[Describe an Asset]
+* xref:to-publish-an-asset.adoc[Publish Asset Draft Content]
