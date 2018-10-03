@@ -243,4 +243,3 @@ image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-dow
 * xref:about-my-applications.adoc[About My Applications]
 * xref:to-configure-api-settings.adoc[To Configure API Instances]
 * xref:6@studio::exchange-integration.adoc[Anypoint Studio integration with Exchange]
-* https://beta-anypt.docs-stgx.mulesoft.com/anypoint-studio/v/7/export-to-exchange-task[Share an example or template from Studio to Exchange]
