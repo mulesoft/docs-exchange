@@ -29,7 +29,7 @@ Specify:
 +
 ** The application name.
 ** An optional description for the application.
-** An optional spplication URL for where the app resides. If not specified, the app is assumed to be in the Runtime Manager.
+** An optional application URL for where the app resides. If not specified, the app is assumed to be in the Runtime Manager.
 ** An optional URL for an OAuth 2 callback.
 
 * If an organization has external authentication, this screen appears:
