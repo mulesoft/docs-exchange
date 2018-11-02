@@ -3,11 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-This repository contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain. It also provides a docker image for running this configuration.
+This repository contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain, and also provides a Docker image for running this configuration.
 
 == White Listing Your Domain
 
-Your domain needs to be whitelisted in Exchange for your public portal to work properly. To do so:
+Your domain needs to be white listed in Exchange for your public portal to work properly. To do so:
 
 . Get an access token from an Anypooint Platform user account that has the Organization Administrator role in the master organization:
 +
