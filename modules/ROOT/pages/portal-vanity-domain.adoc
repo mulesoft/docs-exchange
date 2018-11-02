@@ -1,4 +1,7 @@
 = Public Portal Vanity Domain
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
 This repository contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain. It also provides a docker image for running this configuration.
 
