@@ -9,7 +9,7 @@ This repository contains instructions and the necessary NGINX configuration for 
 
 Your domain needs to be white listed in Exchange for your public portal to work properly. To do so:
 
-. Get an access token from an Anypooint Platform user account that has the Organization Administrator role in the master organization:
+. Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
 +
 [source,console,linenums]
 ----
