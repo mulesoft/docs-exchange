@@ -5,7 +5,7 @@ endif::[]
 
 This repository contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain, and also provides a Docker image for running this configuration.
 
-== Whitelisting Your Domain
+== Whitelist Your Domain
 
 Your domain needs to be whitelisted in Exchange for your public portal to work properly. To do so:
 
@@ -25,7 +25,7 @@ curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATI
 +
 IMPORTANT: If this step is not followed, you cannot log into the portal or perform any actions that need authentication.
 
-== Set Up Your Own NGINX Configuration
+== Set Up NGINX
 
 If your organization already has a running NGINX configuration, you must include the necessary rules https://github.com/mulesoft-labs/anypoint-exchange-public-portal-proxy-image/blob/master/config/nginx.conf.template#L11-L30[in this document] and replace these variables: 
 
@@ -33,10 +33,10 @@ If your organization already has a running NGINX configuration, you must include
 ----
 PUBLIC_PORTAL_PATH: Your custom path. Must end with /.
 ANYPOINT_BASE_URL: Anypoint Platform URL for the desired region.
-ORGANIZATION_DOMAIN: Your organization's domain in anypoint platform.
+ORGANIZATION_DOMAIN: Your organization's domain in Anypoint Platform.
 ----
 
-For example, for the `Robocop` organization public portal with an anypoint domain of `robo-cop` to run on `developers.robocop.com/path/of/justice/`:
+For example, for the `Robocop` organization public portal with an Anypoint Platform domain of `robo-cop` to run on `developers.robocop.com/path/of/justice/`:
 
 [source,console,linenums]
 ----
@@ -50,7 +50,7 @@ NOTE: Your server must run using `https`.
 If set up correctly, you can access and navigate to `https://developers.robocop.com/path/of/justice/` exactly as if you were at `https://anypoint.mulesoft.com/exchange/portals/robo-cop/`.
 
 
-== Running the Docker Image
+== Run the Docker Image
 
 For a minimal working setup, an NGINX based Docker image is available.
 
