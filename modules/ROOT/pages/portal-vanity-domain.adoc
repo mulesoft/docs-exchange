@@ -1,0 +1,105 @@
+= Public Portal Vanity Domain
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+This repository contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain, and also provides a Docker image for running this configuration.
+
+== Whitelist Your Domain
+
+Your domain needs to be whitelisted in Exchange for your public portal to work properly. To do so:
+
+. Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
++
+[source,console]
+----
+ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
+----
++
+. Use the access token to whitelist your custom domain:
++
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/domain -XPUT -d "your.custom.domain" -H "content-type: text/plain" -H "authorization: bearer
+----
++
+IMPORTANT: If this step is not followed, you cannot log into the portal or perform any actions that need authentication.
+
+== Set Up NGINX
+
+If your organization already has a running NGINX configuration, you must include the necessary rules https://github.com/mulesoft-labs/anypoint-exchange-public-portal-proxy-image/blob/master/config/nginx.conf.template#L11-L30[in this document] and replace these variables: 
+
+[source,console,linenums]
+----
+PUBLIC_PORTAL_PATH: Your custom path. Must end with /.
+ANYPOINT_BASE_URL: Anypoint Platform URL for the desired region.
+ORGANIZATION_DOMAIN: Your organization's domain in Anypoint Platform.
+----
+
+For example, for the `Robocop` organization public portal with an Anypoint Platform domain of `robo-cop` to run on `developers.robocop.com/path/of/justice/`:
+
+[source,console,linenums]
+----
+PUBLIC_PORTAL_PATH: /path/of/justice/
+ANYPOINT_BASE_URL: https://anypoint.mulesoft.com
+ORGANIZATION_DOMAIN: robo-cop
+----
+
+NOTE: Your server must run using `https`.
+
+If set up correctly, you can access and navigate to `https://developers.robocop.com/path/of/justice/` exactly as if you were at `https://anypoint.mulesoft.com/exchange/portals/robo-cop/`.
+
+
+== Run the Docker Image
+
+For a minimal working setup, an NGINX based Docker image is available.
+
+. Set up Docker:
++
+If you're not familiar with Docker,  use https://docs.docker.com/get-started/[this Docker information to get started].
++
+. Get the image from the Docker hub:
++
+[source,console]
+----
+docker pull YOUR_USERNAME/anypoint-exchange-public-portal-proxy:latest
+----
++
+. Set up your domain's SSL certificate and specify the following directory structure (filenames must match):
++
+[source,console,linenums]
+----
+  .
+  └── ssl
+      ├── cert.crt
+      └── cert.key
+----
++
+. Run the following command:
++
+[source,console,linenums]
+----
+docker run -d \
+  -p 8080:80 -p 8443:443 \
+  -e "PUBLIC_PORTAL_PATH=/your/custom/base/path/" \
+  -e "ANYPOINT_BASE_URL=https://anypoint.mulesoft.com" \
+  -e "ORGANIZATION_DOMAIN=your-organization-domain" \
+  -v <full_path_to_cert>:/etc/nginx/ssl:ro \
+  <YOUR_USERNAME>/anypoint-exchange-public-portal-proxy
+----
++
+This setup passes the `https://full.domain.of.your.site.com/your/custom/base/path/` proxy to your organization's public portal.
+
+== Local Environment
+
+You can also use Docker Compose. This assumes certificates are at `./ssl` and the environment variables at `./.env`:
+
+[source,console]
+----
+docker-compose up
+----
+
+== See Also
+
+* https://forums.mulesoft.com[MuleSoft Forum]
+* https://support.mulesoft.com/s/knowledge[Knowledge Base Articles]
