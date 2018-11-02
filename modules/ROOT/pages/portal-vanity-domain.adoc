@@ -5,9 +5,9 @@ endif::[]
 
 This repository contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain, and also provides a Docker image for running this configuration.
 
-== White Listing Your Domain
+== Whitelisting Your Domain
 
-Your domain needs to be white listed in Exchange for your public portal to work properly. To do so:
+Your domain needs to be whitelisted in Exchange for your public portal to work properly. To do so:
 
 . Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
 +
@@ -16,7 +16,7 @@ Your domain needs to be white listed in Exchange for your public portal to work 
 ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
 ----
 +
-. Use the access token to white list your custom domain:
+. Use the access token to whitelist your custom domain:
 +
 [source,console]
 ----
@@ -60,7 +60,7 @@ If you're not familiar with Docker,  use https://docs.docker.com/get-started/[th
 +
 . Get the image from the Docker hub:
 +
-[source,console,linenums]
+[source,console]
 ----
 docker pull YOUR_USERNAME/anypoint-exchange-public-portal-proxy:latest
 ----
