@@ -11,7 +11,7 @@ Your domain needs to be whitelisted in Exchange for your public portal to work p
 
 . Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
 +
-[source,console,linenums]
+[source,console]
 ----
 ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
 ----
