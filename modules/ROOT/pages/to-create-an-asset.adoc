@@ -44,13 +44,24 @@ that is defined by API Manager.
 
 == Advanced Settings
 
-Exchange generates the GroupId, AssetId, and Version automatically. You can change the values if needed. For an OAS asset, you can set the asset version and the API version separately.
+Exchange generates the GroupId, AssetId, and version automatically. You can change the values if needed. For an OAS asset, you can set the asset version and the API version separately.
 
 The Advanced settings are most often used to change the version number.
 
-== Creating a Custom Asset
+== Create a Custom Asset
 
 A custom asset lets you share information about any aspect of your organization such as announcements, documentation, videos, and sharing files. You can add an optional file to your Custom asset that users can download. The file is stored in Exchange.
+
+*Note:* Exchange only permits the following file types as the optional file in a Custom asset:
+
+Images: `.jpg, .jpeg, .png, .gif, .svg` +
+Documents: `.doc, .docx, .pdf, .ppt, .pptx, .rtf, .vsd, .vsdx, .vss, .vsdx` +
+Compressed files: `.zip, .tgz, .jar, .gz, .7z` +
+Text files: `.txt, .json, .raml, .yaml, .yml, .md, .csv, .xml, .xsd, .wsdl, .html, .pom, .log, .sql`
+
+A file without a file type is not allowed. All file types are case insensitive.
+
+To create a Custom Asset:
 
 . Click New.
 . Specify a name for the asset.
@@ -58,7 +69,7 @@ A custom asset lets you share information about any aspect of your organization 
 . If you want to share a file with users, click Choose File to locate the file.
 . Click Publish.
 
-== To Add a File to an Existing Asset
+== Add a File to an Existing Asset
 
 If you have contributor or admin access to an asset, you can add a file to an existing asset.
 
