@@ -56,12 +56,12 @@ location ${PUBLIC_PORTAL_PATH} {
 With:
 [source,console,linenums]
 ----
-${PUBLIC_PORTAL_PATH}: Your custom path. Must end with /.
+${PUBLIC_PORTAL_PATH}: Your custom path. Must end with a forward slash "/".
 ${ANYPOINT_BASE_URL}: Anypoint Platform URL for the desired region.
 ${ORGANIZATION_DOMAIN}: Your organization's domain in Anypoint Platform.
 ----
 
-For example, for the `Robocop` organization public portal with an Anypoint Platform domain of `robo-cop` to run on `developers.robocop.com/path/of/justice/`:
+For example, for the `Robocop` organization public portal with an Anypoint Platform domain of `robo-cop` to run on `+developers.robocop.com/path/of/justice/+`:
 
 [source,console,linenums]
 ----
@@ -72,7 +72,7 @@ ${ORGANIZATION_DOMAIN}: robo-cop
 
 NOTE: Your server must run using `https`.
 
-If set up correctly, you can access and navigate to `https://developers.robocop.com/path/of/justice/` exactly as if you were at `https://anypoint.mulesoft.com/exchange/portals/robo-cop/`.
+If set up correctly, you can access and navigate to `+https://developers.robocop.com/path/of/justice/+` exactly as if you were at `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`.
 
 == See Also
 
