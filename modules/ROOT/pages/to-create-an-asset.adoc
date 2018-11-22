@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 In Anypoint Exchange private and Exchange portal, to share an API, example, template, or connector means that
 you first create an asset corresponding to the asset type.
