@@ -19,7 +19,7 @@ Each asset in Exchange is versioned. You can manage which versions are visible b
 
 Note: In addition to asset versions, APIs have a consumer facing API version that is shown at the top of an asset's detail screen. This API version is defined by API providers.
 
-This illustration summarizes how each asset type (in blue) appears in Exchange:
+This illustration summarizes how each asset type (in green) appears in Exchange:
 
 image::ex2-exchange-assets.png[Illustration - How Assets appear in Exchange]
 
