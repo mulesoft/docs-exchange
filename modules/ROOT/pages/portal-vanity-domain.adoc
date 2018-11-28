@@ -20,14 +20,14 @@ ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "user
 +
 [source,console]
 ----
-curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/domain -XPUT -d "your.custom.domain" -H "content-type: text/plain" -H "authorization: bearer
+curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/domain -XPUT -d "your.custom.domain" -H "content-type: text/plain" -H "authorization: bearer"
 ----
 +
 IMPORTANT: If this step is not followed, you cannot log into the portal or perform any actions that need authentication.
 
 == Set Up NGINX
 
-If your organization already has a running NGINX configuration, you must include the following rules and replace the corresponding variables: 
+If your organization already has a running NGINX configuration, you must include the following rules and replace the corresponding variables:
 
 [source,console,linenums]
 ----
