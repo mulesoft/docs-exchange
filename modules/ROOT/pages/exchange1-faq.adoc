@@ -1,8 +1,10 @@
-= FAQ: Exchange 1
+= FAQ: Exchange 1 (Old Version)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: faq, exchange
+
+This page describes Exchange 1, which is a legacy product. We recommend that all users xref:migrate.adoc[migrate] to the current version, xref:index.adoc[Exchange 2].
 
 == How do I create a Private Exchange?
 

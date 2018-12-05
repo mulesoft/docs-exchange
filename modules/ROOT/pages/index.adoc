@@ -50,6 +50,14 @@ The examples and templates categories depend on the purpose for which each proje
 +
 * Custom - Custom assets provide descriptions and an optional file to explain aspects of your system, to provide instructional videos, or describe product or organizational documentation.
 
+== Versions
+
+This page applies to the current version, Exchange 2.7, released in October 2018.
+
+Documentation on Exchange 1 is at xref:about-exchange1.adoc[About Exchange 1 (Old Version)]. We encourage Exchange 1 users to xref:migrate.adoc[migrate] to Exchange 2.
+
+The full version history is available in the xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes].
+
 == See Also
 
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
