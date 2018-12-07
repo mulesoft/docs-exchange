@@ -28,7 +28,7 @@
  ** xref:to-customize-portal.adoc[To Customize an Exchange Public Portal]
  ** xref:portal-vanity-domain.adoc[Public Portal Vanity Domain]
 * xref:about-exchange1.adoc[About Exchange 1 (Old Version)]
- ** xref:exchange1.adoc[Anypoint Exchange 1 (Old Version)]
+ ** xref:exchange1.adoc[Using Exchange 1 (Old Version)]
  ** xref:exchange1-faq.adoc[FAQ: Exchange 1 (Old Version)]
 * xref:about-administration-tasks.adoc[About Administrator Tasks]
  ** xref:to-share-an-asset-with-a-user.adoc[To Share an Asset]
