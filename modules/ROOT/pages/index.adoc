@@ -52,7 +52,7 @@ The examples and templates categories depend on the purpose for which each proje
 
 == Versions
 
-This page applies to the current version, Exchange 2.7, released in October 2018.
+This page applies to the current version, Exchange 2.
 
 Documentation on Exchange 1 is at xref:about-exchange1.adoc[About Exchange 1 (Old Version)]. We encourage Exchange 1 users to xref:migrate.adoc[migrate] to Exchange 2.
 
