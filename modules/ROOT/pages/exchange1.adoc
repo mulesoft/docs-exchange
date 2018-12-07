@@ -1,10 +1,13 @@
-= Anypoint Exchange 1
+= Anypoint Exchange 1 (Old Version)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: exchange, content types
 
-Exchange 1 is home to the complete listing of connectors, templates, examples, APIs, and other learning information. You can  add assets to a private tenant of Anypoint Exchange for collaboration and sharing of internal best practices.
+[NOTE]
+This page describes Exchange 1, which is a legacy product. We recommend that all users xref:migrate.adoc[migrate] to the current version, xref:index.adoc[Exchange 2].
+
+Exchange 1 is home to the complete listing of connectors, templates, examples, APIs, and other learning information. It can be used in the cloud or on premises. You can add assets to a private tenant of Anypoint Exchange for collaboration and sharing of internal best practices.
 
 == Accessing Anypoint Exchange
 
