@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Exchange 1 is the previous version of Exchange in the cloud and on-premises. Exchange 1 is a legacy product. We recommend that all users xref:migrate.adoc[migrate] to the current version, xref:exchange/index.adoc[Exchange 2].
+Anypoint Exchange 1 is the previous version of Exchange in the cloud and on-premises. Exchange 1 is a legacy product. We recommend that all users xref:migrate.adoc[migrate] to the current version, xref:index.adoc[Exchange 2].
 
 Exchange 1 lets you view MuleSoft and private Exchange assets.
 
