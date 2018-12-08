@@ -5,7 +5,7 @@ endif::[]
 :keywords: faq, exchange
 
 [NOTE]
-This page describes Exchange 1, which is a legacy product. We recommend that all users xref:migrate.adoc[migrate] to the current version, xref:exchange/index.adoc[Exchange 2].
+This page describes Exchange 1, which is a legacy product. We recommend that all users xref:migrate.adoc[migrate] to the current version, xref:index.adoc[Exchange 2].
 
 == How do I create a Private Exchange?
 
