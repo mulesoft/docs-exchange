@@ -8,26 +8,26 @@ In Anypoint Exchange, a snapshot asset represents an asset that can be re-publis
 
 == How to create a snapshot asset version ?
 
-To create an snapshot asset you only have to add the `-SNAPSHOT` sufix to the asset version. For example: `1.0.0-SNAPSHOT`.
+To create a snapshot asset you only have to add the `-SNAPSHOT` suffix to the asset version. For example: `1.0.0-SNAPSHOT`.
 
 It can be created through Exchange manual publication, Design center, API Manager, Studio or directly from Exchange API or using Maven Facade.
 
-To republish an snapshot is not necessary to do any extra thing, publishing in the same way you did the fist time will be enough.
+To republish a snapshot is not necessary to do any extra thing, publishing in the same way you did the first time will be enough.
 
 
 == What happens when publishing a snapshot asset version ?
 
-Some things you should take in mind when you create an snapshot version.
+Some things you should take in mind when you create a snapshot version:
 
-* Although a snapshot version can be listed in the Exchange private portal, it can not be listed in the public portal. So, snapshot asset versions wont be showed in the public portal.
+* Although a snapshot version can be listed in the Exchange private portal, it can not be listed in the public portal. So, snapshot asset versions won't be shown in the public portal.
 * When a release version (ex: `1.0.0`) of a snapshot version (ex: `1.0.0-SNAPSHOT`) is created, the snapshot version wont be listable anymore.
-* When asking for assets through Exchange graph service, it don't retrieve the snapshot versions as default. To include them it is needed to add the property: `includeSnapshots: true`. To find more information, see `See Also` section.
+* When asking for assets through Exchange graph service, it doesn't retrieve the snapshot versions as default. To include them it is needed to add the property: `includeSnapshots: true`. To find more information, see `See Also` section.
 
 
 == What happens when re-publishing a snapshot asset version ?
 
 * A new portal for the snapshot version won't be created, so its portal will be the one that was created the first time.
-* If a new file has been created as part of the snapshot version, this one will be the only file of the version and the files of the previuos snapshot version won't exist anymore.
+* If a new file has been created as part of the snapshot version, this one will be the only file of the version and the files of the previous snapshot version won't exist anymore.
 * If the asset is a REST API, the OAS or RAML translation will be translated again and the connectors will be generated again too.
 
 
