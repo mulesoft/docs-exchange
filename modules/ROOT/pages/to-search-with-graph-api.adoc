@@ -172,6 +172,48 @@ The output for this example is:
 }
 ----
 
+== To Include Snapshot versions in the Search
+
+By default, snapshots are not showed in a listing query. To show them, add the `includeSnapshot: true` parameter.
+
+[source,json,linenums]
+----
+{
+  assets(
+    query: {
+      searchTerm: "snapshot-asset"
+    },
+    includeSnapshots: true
+  ) {
+    groupId,
+    assetId,
+    version
+  }
+}
+----
+
+The output for this example is:
+
+[source,json,linenums]
+----
+{
+  "data": {
+    "assets": [
+      {
+        "groupId": "53694f10-151f-41b8-b7f4-771123c6314c",
+        "assetId": "snapshot-asset",
+        "version": "2.0.0"
+      },
+      {
+        "groupId": "53694f10-151f-41b8-b7f4-771123c6314c",
+        "assetId": "snapshot-asset",
+        "version": "1.0.0-SNAPSHOT"
+      }
+    ]
+  }
+}
+----
+
 == Reference: Query Filter Parameters
 
 You can specify filters to display additional information about each asset.
