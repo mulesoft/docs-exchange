@@ -120,7 +120,7 @@ curl -X POST \
 
 == To Search Only a Private Exchange
 
-. Get the organization ID for the Private Exchange by clicking an asset in your Private Exchange.
+. Find the organization ID for the Private Exchange by clicking an asset in your Private Exchange.
 +
 An example URL is:
 +
@@ -130,7 +130,7 @@ https://anypoint.mulesoft.com/exchange/42424242/product-api/1.0.0/
 +
 `42424242` is the organization ID.
 +
-. Add the organization ID using the organizationIds field.
+. Add the organization ID using the organizationIds field and an https://github.com/mulesoft/docs-exchange/blob/latest/modules/ROOT/pages/to-search-with-graph-api.adoc#to-obtain-an-access-token[access token retrieved from the Access Management Authentication API] 
 +
 A single organization ID would be:
 +
@@ -139,15 +139,21 @@ A single organization ID would be:
 [source,json,linenums]
 ----
 {
-  assets(
-    query: {
-      searchTerm: "product",
-      organizationsIds: ["4141141", "32322", "2342345"]
-    },
-    latestVersionsOnly: true
-  ) {
-    assetId,
-    description
+  "query": "{
+    assets(
+      query: {
+        searchTerm: \"product\",
+        organizationsIds: [\"4141141\", \"32322\", \"2342345\"]
+      },
+      latestVersionsOnly: true
+    ) 
+    {
+      assetId,
+      description
+    }
+  }",
+  "variables": {
+    "accessToken": "da3929fd-818a-4808-82a3-f51cba83c76d"
   }
 }
 ----
