@@ -68,10 +68,13 @@ In the EU, use:
 +
 *Notes:*
 +
-** Mule 3 applications can be deployed setting the property <type> to `app`. The asset won't be displayed in Exchange asset list.
+** *Important:* The `<classifier>` element must be set to make the asset visible in Exchange. 
+** Mule 3 applications can be deployed setting the property <type> to `app`. The asset won't be displayed in the Exchange asset list.
 ** Mule 3 `templates` and `examples` should be deployed using Anypoint Studio 6.3 or above.
 ** For Mule 3 or Mule 4 connectors, do not specify a `<type>` value. The Maven Facade determines the type automatically.
-** For Mule 4 assets, do not specify the <type> element. In the `mule-maven-plugin` configuration, set the `classifier` as `mule-application` (default), `mule-application-template`, `mule-application-example` or `mule-policy`. For example:
+** For Mule 4 assets, do not specify the <type> element. In the `mule-maven-plugin` configuration, set `<classifier>` as `mule-application` (default), `mule-application-template`, `mule-application-example` or `mule-policy`.
++
+For example:
 +
 [source,xml,linenums]
 ----
