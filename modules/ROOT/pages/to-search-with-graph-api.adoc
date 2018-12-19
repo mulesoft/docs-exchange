@@ -174,7 +174,7 @@ The output for this example is:
 
 == To Include Snapshot versions in the Search
 
-By default, snapshots are not showed in a listing query. To show them, add the `includeSnapshot: true` parameter.
+By default, snapshots are not shown in a listing query. To show them, add the `includeSnapshot: true` parameter.
 
 [source,json,linenums]
 ----
