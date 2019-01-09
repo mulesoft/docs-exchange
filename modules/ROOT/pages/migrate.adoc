@@ -1,4 +1,4 @@
-= To Migrate Assets from Exchange 1
+= Migrate Assets from Exchange 1
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -12,7 +12,7 @@ Migration to Exchange 2 differs by asset type:
 |Asset Type |Migration Approach
 |Example, Template |Anypoint Studio > Publish to Exchange.
 |OAS REST API |Publish using Exchange.
-|RAML REST API |Publish using Design Center - Note: The API Designer in Design Center is only available to new customers. Existing customers must continue to use the API Designer in API Manager and must wait for the next release to migrate APIs.
+|RAML REST API |Publish using Exchange.
 |WSDL SOAP API |Publish using Exchange.
 |Connectors |Use Node.js connector-uploader program.
 |===
