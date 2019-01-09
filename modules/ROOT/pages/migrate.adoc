@@ -10,7 +10,7 @@ Migration to Exchange 2 differs by asset type:
 [%header,cols="30a,70a"]
 |===
 |Asset Type |Migration Approach
-|Example, Template |Anypoint Studio > Publish to Exchange.
+|Example, Template |Maven - see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]
 |OAS REST API |Publish using Exchange.
 |RAML REST API |Publish using API Designer or Exchange.
 |WSDL SOAP API |Publish using Exchange.
