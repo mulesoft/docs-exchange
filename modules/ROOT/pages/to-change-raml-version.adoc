@@ -1,22 +1,44 @@
-= To Change a RAML Version
+= Change a REST API Version
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
-Changing a RAML version cannot be done in Anypoint Exchange. Instead, you can change the RAML version
-either in the RAML specification itself or when you publish to Anypoint Exchange using Design Center.
+For both RAML and OAS API specifications within Exchange, you can change the version number from within Exchange using the *Add new version* button in the Exchange user interface.
 
-From the RAML specification:
+image::ex-add-new-version.png[]
+
+This opens the Publish a new asset window. 
+
+image::ex-publish-a-new-asset.png[]
+
+These fields are required: *File upload*, *Main file*, and *Version*.
+
+[%header%autowidth.spread]
+|===
+|Field |Description
+|File upload |For OAS, choose an OAS file with the .yaml or .json file types.
+For RAML, choose a RAML file with the .raml file type. Zip files are also accepted with the 
+file to upload residing in the zip file's root directory.
+|Main file |Specify the main file if the uploaded file is a fragment. Otherwise, Exchange 
+uses the same file name as the file you upload.
+|Version |The new version number. The Version and API version values need to agree 
+in that you can only choose minor version updates for a given API version. To set a major
+Version number, also increase the API version.
+|===
+
+You can also change the version number for RAMLs as described in the next sections.
+
+== Change a RAML Version from the Specification
 
 Change the `version:` element in your RAML specification.
 You can use a text editor or API Designer in the Design Center feature of Anypoint Platform.
-When you update the version element in the RAML specification and publish to Exchange, the publish
-menu automatically picks up the change from the `version:` element.
+When you update the version element in the RAML specification and publish to Exchange, the publish menu automatically picks up the change from the `version:` element.
 
-When you publish to Exchange:
+== Change a RAML Version When you Publish to Exchange
 
 . From Design Center, open your API. No changes are necessary.
-. Click the Publish to Exchange button (image:ex-publish-to-exchange-button.png[]).
+. Click the Publish to Exchange button (image::ex-publish-to-exchange-button.png[]).
 +
 image::apim-publish-api-spec.png[]
 +
