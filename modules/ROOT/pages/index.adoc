@@ -34,21 +34,14 @@ MuleSoft certifies its public content, and reviews and approves partner connecto
 
 Both the public and private content in Exchange can consist of the following kinds of elements:
 
-* Connectors - Facilitate easy integration of a Mule applications with third-party APIs and standard integration protocols. Use connectors within your application's flows to send and receive data via a protocol or specific API. Anypoint Studio comes bundled with a large set of connectors, but in the Exchange are many more.
-
-* REST files - APIs can be RAML or OAS files that describe an API's structure. These APIs can be referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
-
-* SOAP files - WSDL files that describe an API's structure.
-
-* HTTP APIs - Lets you add a URL to describe the structure of an HTTP API for use in Studio or in Design Center.
-
-* Examples - Mule projects that explain what the elements are in Studio and how they work together to achieve certain objectives. Examples are implementation projects that show how the example can be leveraged to achieve specific API and integration objectives. Examples are applications that are ready to run and demonstrate a use case or solution.
-
-* Templates - Mule projects that cover typical enterprise integration use cases. Find one that performs what you need, provide it user credentials, and it should be good to deploy! You can also customize or extend templates as needed. Templates provide ackaged integration patterns that address common use cases and are built on best practices. Templates are use case applications to which you add your information to complete a user case or solution.
-+
-The examples and templates categories depend on the purpose for which each project is built: templates are almost ready to use just-add-water solutions, while examples are intended to increase your understanding of Studio elements and to build your own solution. You can also use an example as a starting point for an actual deployable project or a template as a tool for understanding concepts.
-+
-* Custom - Custom assets provide descriptions and an optional file to explain aspects of your system, to provide instructional videos, or describe product or organizational documentation.
+* Connectors - Packaged connectivity to an endpoint developed and deployed on Anypoint Platform with third-party APIs and standard integration protocols. Use connectors within your application's flows to send and receive data using a protocol or specific API. Anypoint Studio comes with many bundled connectors, and Exchange has many more.
+* Templates - Packaged integration patterns built on best practices to address common use cases. You can add your information such as user credentials to complete the template's use case or solution, and you can customize or extend templates as needed.
+* Examples - Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
+* REST APIs - A RAML file or OAS file that specifies an API. These APIs can be referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
+* SOAP APIs - A WSDL file that specifies an API.
+* HTTP APIs - A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
+* API Spec Fragments - Also known as RAML fragments. A RAML document that has a version and an identifier, but is not in itself a complete RAML specification.
+* Custom - Custom assets provide descriptions and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation.
 
 == Versions
 
