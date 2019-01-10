@@ -1,7 +1,8 @@
-= To Set User Access Permissions
+= Set User Access Permissions
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 Exchange provides multiple ways to set up access management to meet governance requirements and at the same time drive collaboration across teams. Anypoint Platform comes with predefined role groups that can be set in the Access Management > Roles settings to provide users with different access levels.
 

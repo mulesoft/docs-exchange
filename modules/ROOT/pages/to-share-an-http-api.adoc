@@ -1,7 +1,8 @@
-= To Share an HTTP API Asset
+= Share an HTTP API Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 The HTTP API lets Private Exchange users specify a placeholder for an endpoint. After you create the HTTP API endpoint, you can optionally manage the endpoint with API Manager.
 

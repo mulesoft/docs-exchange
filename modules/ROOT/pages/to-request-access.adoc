@@ -1,7 +1,8 @@
-= To Request Access
+= Request Access
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 APIs that have been protected by a Client ID enforcement policy require API consumers to create an application to hold the Client ID and Secret. This lets the app access the API as well as provide consumer analytics for an API developer.
 

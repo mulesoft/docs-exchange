@@ -1,7 +1,8 @@
-= To Configure API Instances
+= Configure API Instances
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 Anypoint Exchange lets you configure whether REST, SOAP, and HTTP API services are public or private in a Private Exchange or in an Exchange Portal. Typical services that you would set visibility for are proxies or policies associated with your API that you set using API Manager.
 
@@ -27,4 +28,4 @@ Access differs by Exchange type:
 
 == See Also
 
-* xref:design-center::design-mocking-service.adoc[Simulating Calls to an API]
+* xref:design-center::design-mocking-service.adoc[Simulate Calls to an API]
