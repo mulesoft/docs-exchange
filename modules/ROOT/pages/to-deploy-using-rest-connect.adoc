@@ -1,28 +1,26 @@
-= Converting a RAML to a Connector Using REST Connect
+= REST Connect Connector Generator
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:keywords: faq, rest connect, connect, rest
+:imagesdir: ../assets/images/
 
-REST Connect quickly converts a RAML 1.0 API specification to a connector, which you can use in a Mule application in the Design Center feature of Anypoint Platform and in Anypoint Studio.
+The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 3 and Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
 
-When a user clicks the Publish to Exchange button, a REST API asset is created in Anypoint Exchange.
+REST Connect supports RAML v1.0. If you publish a RAML v0.8 API Specification, you receive an alert email. To have an auto-generated connector, convert your API specification to RAML v1.0.
 
-image::rest-connect-publish-to-exchange.png[Publish to Exchange Button]
+The Anypoint Exchange Download button lets you download the Mule 3 or Mule 4 Connector. 
 
-== Accessing Generated Connectors
-
-After publishing an API Spec from Design Center > API Designer, a REST API asset appears in Anypoint Exchange. Mule 3 and Mule 4 connectors are also created for the RAML specification and listed in the REST API asset as links. 
+== Access Generated Connectors
 
 In Exchange, you can download the Mule 3 or Mule 4 connector from the Download menu:
 
-image::ex-rest-connect-download.png[Download the connector]
+image::ex-downloads.png[]
 
-== RAML Specification Support
+NOTE: After deploying a REST asset to Exchange, refresh your screen to ensure that all download options are available.
 
-REST Connect supports RAML v1.0. If you publish a RAML v0.8 API Specification, you may receive an alert email. To have an auto-generated connector, convert your API specification to RAML v1.0.
+The Mule 3 connector downloads as a zip file, and the Mule 4 connector downloads as a JAR file. 
 
-== Security Scheme Support
+== REST Connect Security Scheme Support
 
 REST Connect supports the following security schemes:
 
@@ -213,11 +211,6 @@ uses:
             type: Post
 ----
 
-== OAS Support
-
-REST Connect supports RAML v1.0 and supports OAS through the OAS conversion feature in Exchange 2. Exchange lets you directly add an OAS file in the Exchange user interface. Exchange converts the OAS file to a RAML, and REST Connect generates a connector based on the RAML.
-
-You can also add an OAS file through API Designer in Design Center. API Designer converts the OAS file to a RAML and allows you to publish the RAML to Exchange. Once the RAML is published in Exchange, REST Connect generates a connector based on the RAML.
 
 == Metadata Limitations
 
@@ -310,30 +303,25 @@ securitySchemes:
 +
 . Create a new API specification project named Github API in Design Center, and copy and paste the example above. From the API Designer, click Publish to Exchange:
 +
-image::rest-connect-publish-to-exchange.png[Publish to Exchange icon in API Designer]
+image::rest-connect-publish-to-exchange.png[]
 +
 . Create a simple Mule application in Design Center of an HTTP Listener, the Github API, and a Logger. This app listens to `+https://my-app.cloudhub.io/getIssues+` and returns the results based on your search term.
 +
-image::rest-connect-dc-flow.png[Design Center flow]
+image::rest-connect-dc-flow.png[]
 +
 . Configure OAuth 2.0 with authorization code for a connector. Most of the fields are auto-populate based in the GitHub API specification.
 +
-image::rest-connect-api-config.png[API Configuration screen]
+image::rest-connect-api-config.png[]
 +
 . Get the Client ID and Client Secret for your GitHub Account. You can find your Client ID and Client Secret if you go to Settings > Developer settings in GitHub. If you don’t have an OAuth App in GitHub, you can  create one with the New OAuth App.
 . Because Github API’s base URL is api.github.com, you can put “/” in the Base Path.
 . Match and modify your external callback URL. The callback URL receives an access token from GitHub. By default, the connector shows `+http://my-app.cloudhub.io/callback+`, but you need to modify it specific to your app. The demo app’s callback URL should be `+http://githubapp-smky.cloudhub.io/callback+` so I need to replace “my-app” with “githubapp-smky.” You can find this information to go to the menu and select the copy link in Design Center.
 +
-image::rest-connect-ready-to-deploy.png[Ready to Deploy menu]
+image::rest-connect-ready-to-deploy.png[]
 +
 . After you get your external callback URL, specify the same URL in your GitHub settings.
 +
-image::rest-connect-auth-callback-url.png[Authorization Callback URL field]
+image::rest-connect-auth-callback-url.png[]
 +
 . You are ready to retrieve an access token from GitHub. In this case, go to `+http://githubapp-smky.cloudhub.io/authorize+` in a browser, your case would be `+http://my-app.cloudhub.io/authorize+` - replace my-app.cloudhub.io with the one you get with Copy link. When you reach this URL, your browser asks you to log into GitHub.
 . When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+` - my-app.cloudhub.io should be replaced with the one you get with `Copy link`.
-
-== See Also
-
-* https://forums.mulesoft.com[MuleSoft Forum]
-* https://support.mulesoft.com/s/knowledge[Knowledge Base Articles]
