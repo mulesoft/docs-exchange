@@ -6,8 +6,6 @@ endif::[]
 
 The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 3 and Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
 
-REST Connect supports RAML v1.0. If you publish a RAML v0.8 API Specification, you receive an alert email. To have an auto-generated connector, convert your API specification to RAML v1.0.
-
 The Anypoint Exchange Download button lets you download the Mule 3 or Mule 4 Connector. 
 
 == Access Generated Connectors
@@ -30,7 +28,7 @@ REST Connect supports the following security schemes:
 * Pass Through
 * Digest Authentication
 
-If you publish an API Specification with another authentication type, you may receive an alert email. To have an auto-generated connector, update your API specification to use one of the supported security schemes mentioned above.
+If you publish an API specification with another authentication type, you may receive an alert email. To have an auto-generated connector, update your API specification to use one of these supported security schemes.
 
 Basic Authentication Example:
 
@@ -314,7 +312,7 @@ image::rest-connect-dc-flow.png[]
 image::rest-connect-api-config.png[]
 +
 . Get the Client ID and Client Secret for your GitHub Account. You can find your Client ID and Client Secret if you go to Settings > Developer settings in GitHub. If you don’t have an OAuth App in GitHub, you can  create one with the New OAuth App.
-. Because Github API’s base URL is api.github.com, you can put “/” in the Base Path.
+. Because GitHub API’s base URL is api.github.com, you can put “/” in the Base Path.
 . Match and modify your external callback URL. The callback URL receives an access token from GitHub. By default, the connector shows `+http://my-app.cloudhub.io/callback+`, but you need to modify it specific to your app. The demo app’s callback URL should be `+http://githubapp-smky.cloudhub.io/callback+` so I need to replace “my-app” with “githubapp-smky.” You can find this information to go to the menu and select the copy link in Design Center.
 +
 image::rest-connect-ready-to-deploy.png[]
