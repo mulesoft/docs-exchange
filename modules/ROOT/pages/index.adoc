@@ -31,6 +31,7 @@ Exchange assets are accessible in Anypoint Studio (connectors, templates, and ex
 
 MuleSoft certifies its public content, and reviews and approves partner connectors. All private content is internal to an organization and not visible outside their organization. Customers are responsible for any private content they publish within their Exchange.
 
+[[content-types]]
 == Content Types
 
 Both the public and private content in Exchange can consist of the following kinds of elements:
