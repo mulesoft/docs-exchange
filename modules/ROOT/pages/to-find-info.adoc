@@ -7,16 +7,7 @@ endif::[]
 Exchange helps you find assets. You can search for assets, click All Types to filter for specific assets, or combine search
 text with an All Types filter.
 
-== Asset Types
-
-* Connectors - Packaged connectivity to an endpoint developed and deployed on Anypoint Platform with third-party APIs and standard integration protocols.
-* Templates - Packaged integration patterns that address common use cases and are built on best practices. You can add your information to complete the template's use case or solution.
-* Examples - Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
-* REST APIs - A RAML or OAS API specification.
-* SOAP APIs - An API description in a WSDL that helps make the adoption of the Anypoint Platform easier and faster.
-* HTTP APIs - A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
-* RAML Fragments - A RAML document that has a version and an identifier, but is not in itself a complete RAML specification.
-* Custom - Blogs, articles, and more - Links that assist with knowledge sharing.
+<<index.adoc#content-types,Content Types>> lists the different types of asset.
 
 == Asset Details
 
