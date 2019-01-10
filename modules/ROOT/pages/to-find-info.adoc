@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 Exchange helps you find assets. You can search for assets, click All Types to filter for specific assets, or combine search
 text with an All Types filter.
@@ -50,7 +51,7 @@ image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-dow
 
 If you cannot see additional groups, contact your Exchange administrator. 
 
-If you cannot find an asset in one group, it may be in another business group, or click *Assets* to search other assets. The left navigation area provides additional areas to search. The MuleSoft scope lists assets provided by MuleSoft.
+If you cannot find an asset in one group, it may be in another business group. To find assets from other business groups click *All assets*. The left navigation area provides additional areas to search. The "Provided by MuleSoft" scope lists assets provided by MuleSoft. The "All assets" scope lists assets provided by MuleSoft and your own master organization. Business group scopes list assets built by users within a business group.
 
 == View REST API Elements in an Asset
 
