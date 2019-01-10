@@ -451,6 +451,7 @@ The content that is shown in the list by default depends in the organization or 
 
 * xref:release-notes::exchange/exchange-on-prem-release-notes.adoc[Anypoint Exchange Private Cloud Edition Release Notes].
 * xref:exchange1-faq.adoc[Exchange1 FAQ].
+* xref:index.adoc[Exchange 2].
 * https://www.mulesoft.com/resources/esb/top-five-data-integration-patterns[integration patterns].
 * Learn the different ways you can xref:runtime-manager::deployment-strategies.adoc[Deploy] your app.
 * Read a http://blogs.mulesoft.com/dev/mule-dev/anypoint-templates-database-intro/[Blog Post] and http://blogs.mulesoft.com/dev/mule-dev/connected-company-part-1-salesforce-integration-templates/[Another One] about templates that center around Salesforce.
