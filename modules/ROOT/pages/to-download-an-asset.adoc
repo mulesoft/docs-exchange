@@ -8,21 +8,21 @@ Download lets you download a copy of the asset, or in the case of a Custom asset
 
 After creating a REST asset, Exchange generates a Mule 3 connector and a Mule 4 connector. Exchange also generates an OAS version for RAML assets, and a RAML version for OAS assets. After you create a new REST asset it may take a few minutes for these assets to appear on the Download menu.
 
-Click the Download button in the task bar. image:ex2-icon-download.png[Download button in the taskbar]
+Click the Download button in the task bar. image::ex2-icon-download.png[]
 
 The results vary by file type:
 
 * RAML: Click the down arrow.
 +
-image:ex2-download-from-raml.png[Download menu for RAML with RAML and OAS and Mule 4 connector and Mule 3 connector choices]
+image::ex2-download-from-raml.png[]
 +
-If you choose As RAML the original RAML file downloads as a zip file. If you choose As OAS, Exchange converts the file and it downloads as a zip file containing JSON. If you choose As Mule 4 connector, it downloads as a jar file you can add to a Studio 7 Mule project. If you choose As Mule 3 connector, it downloads as a zip file you can add to a Studio 6 Mule project.
+If you choose As RAML, the original RAML file downloads as a zip file. If you choose As OAS, Exchange downloads the API specification as a zip file containing a JSON file for the specification. If you choose As Mule 4 connector, it downloads as a jar file you can add to a Studio 7 Mule project. If you choose As Mule 3 connector, it downloads as a zip file you can add to a Studio 6 Mule project.
 +
 * OAS: Click the down arrow.
 +
-image:ex2-download-from-oas.png[Download menu for OAS with RAML and OAS and Mule 4 connector and Mule 3 connector choices]
+image::ex2-download-from-oas.png[]
 +
-If you choose As RAML, Exchange converts the file and it downloads as a zip file containing a RAML file. If you choose As OAS it downloads as a zip file containing a file in the original format of either JSON or YAML. If you choose As Mule 4 connector, it downloads as a jar file you can add to a Studio 7 Mule project. If you choose As Mule 3 connector, it downloads as a zip file you can add to a Studio 6 Mule project.
+If you choose As RAML, Exchange downloads the API specification as a zip file containing a RAML file for the specification. If you choose As OAS, it downloads as a zip file containing a file in the original format of either JSON or YAML. If you choose As Mule 4 connector, it downloads as a jar file you can add to a Studio 7 Mule project. If you choose As Mule 3 connector, it downloads as a zip file you can add to a Studio 6 Mule project.
 +
 * WSDL: Downloads as a WSDL file.
 * Connector: Downloads as a jar file.
