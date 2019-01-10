@@ -1,7 +1,8 @@
-= About Sharing Assets
+= Share Assets
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 You can use Exchange private or Exchange portal to share Mule XML example code, templates, connectors, APIs, and custom information assets. Sharing assets helps your organization model and reuse code and APIs for ease of access and to provide a repository.
 

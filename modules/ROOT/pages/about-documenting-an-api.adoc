@@ -1,7 +1,8 @@
-= About Documenting an API
+= Document an API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 Anypoint Exchange lets you create API Notebooks which let you describe each function in your API and provide a test area so that users can experiment with sending different values to the API and receiving output.
 

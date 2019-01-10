@@ -1,7 +1,8 @@
-= About Exchange Platform APIs
+= Exchange Platform APIs
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 Anypoint Exchange provides API features for publishing
 and consuming assets using Maven Facade and searching
@@ -11,10 +12,10 @@ The Maven facade also lets you publish federated assets.
 
 Topics:
 
-* xref:to-publish-assets-maven.adoc[To Publish and Deploy Exchange Assets Using Maven]
-* xref:to-search-with-graph-api.adoc[To Search Using the Graph API]
+* xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]
+* xref:to-search-with-graph-api.adoc[Search Using the Graph API]
 
 == See Also
 
-* xref:about-api-use.adoc[About Consuming an API]
-* xref:to-configure-api-settings.adoc[To Configure API Instances]
+* xref:about-api-use.adoc[Consume an API]
+* xref:to-configure-api-settings.adoc[Configure API Instances]

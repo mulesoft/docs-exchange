@@ -1,7 +1,8 @@
-= To Document an Asset Using API Notebook
+= Document an Asset Using API Notebook
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 API Notebook lets you document an API's functionality with explanations that accompany code windows. Users can
 change the code and execute it by clicking the Play button in each code block. You can create a new API Notebook
@@ -93,4 +94,4 @@ API.authenticate(github);
 == See Also
 
 * For API Notebook function descriptions, see xref:1.x@api-manager::creating-an-api-notebook.adoc[API Notebook Reference].
-* https://docs.mulesoft.com/design-center/v/1.0/upload-raml-task[To Upload an Existing RAML File to Exchange].
+* https://docs.mulesoft.com/design-center/v/1.0/upload-raml-task[Upload an Existing RAML File to Exchange].

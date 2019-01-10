@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 This document contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain.
 
@@ -54,6 +55,7 @@ location ${PUBLIC_PORTAL_PATH} {
 ----
 
 With:
+
 [source,console,linenums]
 ----
 ${PUBLIC_PORTAL_PATH}: Your custom path. Must end with a forward slash "/".

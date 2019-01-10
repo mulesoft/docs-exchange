@@ -1,7 +1,8 @@
-= To Save Searches
+= Save Searches
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 As an Exchange administrator, you can save searches that your
 users can click to access assets within a business group.

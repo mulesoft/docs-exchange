@@ -1,7 +1,8 @@
-= To Describe an Asset
+= Describe an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 . Click an asset.
 . Click Edit to add a description. The editor lets you change the appearance of text,

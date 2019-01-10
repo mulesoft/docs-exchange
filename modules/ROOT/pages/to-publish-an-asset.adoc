@@ -1,7 +1,8 @@
-= To Publish Asset Draft Content
+= Publish Asset Draft Content
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 When an asset is created, Exchange requires that you click Publish to complete creating the asset.
 Control then passes to the edit menu where you can add a description.
@@ -16,4 +17,4 @@ After updating the description, you can add tags, share your asset, or download 
 
 == See Also
 
-* xref:to-describe-an-asset.adoc[To Describe an Asset]
+* xref:to-describe-an-asset.adoc[Describe an Asset]

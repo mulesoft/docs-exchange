@@ -1,7 +1,8 @@
-= To Share an Asset
+= Share an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 Exchange Administrators can share an asset with another user.
 

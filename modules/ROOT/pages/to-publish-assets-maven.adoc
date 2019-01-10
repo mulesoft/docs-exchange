@@ -1,8 +1,8 @@
-= To Publish and Deploy Exchange Assets Using Maven
+= Publish and Deploy Exchange Assets Using Maven
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:keywords: maven, publish, deploy, facade
+:imagesdir: ../assets/images/
 
 Anypoint Exchange provides the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Maven Facade] that enables Maven clients to publish and consume assets using Maven. The Maven Facade can publish connectors, examples, and templates as Exchange assets. You can publish APIs directly in Exchange. You can also use the Maven Facade to publish APIs.
 
@@ -13,7 +13,7 @@ operations on your computer or server.
 
 Note: You must have a unique artifact name and organization ID to publish your asset.
 
-== To View Your Organization ID
+== View Your Organization ID
 
 To construct the elements of a Maven POM file, you need to determine your organization ID:
 
@@ -21,7 +21,7 @@ To construct the elements of a Maven POM file, you need to determine your organi
 . Click the organization name for the top level or a business group, and view your Organization ID in the Organization Info screen.
 . Copy the organization ID and add it to the examples that follow for how to set up your project's POM file.
 
-== To Publish an Asset to Exchange Using Maven
+== Publish an Asset to Exchange Using Maven
 
 You can use the information in this topic to publish Mule 3 and Mule 4 assets including connectors.
 
@@ -166,7 +166,7 @@ For the EU, the share URL is:
 https://eu1.anypoint.mulesoft.com/exchange/api/v1/assets/ORGANIZATION_ID/ASSET_ID
 ----
 
-== To Publish Federated Assets
+== Publish Federated Assets
 
 . Get the access token by logging into Anypoint Platform and copying this URL to the browser address bar:
 +
@@ -194,7 +194,7 @@ https://anypoint.mulesoft.com/accounts/api/profile
 </settings>
 ----
 
-== To Consume an Exchange Asset with Maven
+== Consume an Exchange Asset with Maven
 
 Add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
 and add the Maven facade as a repository in the `repositories` section.

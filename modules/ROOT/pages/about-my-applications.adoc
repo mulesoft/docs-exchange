@@ -1,19 +1,18 @@
-= About My Applications
+= My Applications
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
 The My Applications area in the Exchange details view for an asset lists
 applications that hold a contract between an API and a user.
 
-image::ex2-my-applications.png[Screenshot - My Applications]
+image::ex2-my-applications.png[]
 
 A contract holds information about the contract with a client ID and client secret for the API.
 Each application lists a description, its URL, redirect URIs, grant types, and a usage dashboard.
 
-The usage information lets you set the verification duration. If not specified, the range is the last
-8 days. The usage lists the total number of requests to the API, average latency, the error rate,
-and graphs for total requests, average latency, requests by HTTP status code, and the error percentage.
+The usage information lets you set the verification duration. If not specified, the range is the last 8 days. The usage lists the total number of requests to the API, average latency, the error rate, and graphs for total requests, average latency, requests by HTTP status code, and the error percentage.
 
 The applications result when users click Request Access to establish
 a link between an application and an API. Either the application already exists,
@@ -23,4 +22,4 @@ Applications in My Applications are registered using API Manager in Anypoint Pla
 
 == See Also
 
-* xref:to-request-access.adoc[To Request Access]
+* xref:to-request-access.adoc[Request Access]
