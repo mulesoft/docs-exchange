@@ -65,6 +65,8 @@ Text files: `.txt, .json, .raml, .yaml, .yml, .md, .csv, .xml, .xsd, .wsdl, .htm
 
 A file without a file type is not allowed. All file types are case insensitive.
 
+MuleSoft recommends deleting all old assets of types that are no longer permitted. Users can delete those files directly from Exchange.
+
 To create a Custom Asset:
 
 . Click *New asset*.
