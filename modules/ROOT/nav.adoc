@@ -11,7 +11,7 @@
  ** xref:to-manage-categories.adoc[Manage Categories]
  ** xref:to-delete-asset.adoc[Delete an Asset]
  ** xref:to-publish-an-asset.adoc[Publish Asset Draft Content]
- ** xref:to-change-raml-version.adoc[Change Version of an API Asset]
+ ** xref:to-change-raml-version.adoc[Change the Version of an API Asset]
  ** xref:to-share-an-http-api.adoc[Share an HTTP API]
  ** xref:exchange2-faq.adoc[FAQ]
 * xref:about-api-use.adoc[Consume an API]
