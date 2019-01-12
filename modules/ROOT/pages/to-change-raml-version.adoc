@@ -35,7 +35,7 @@ For RAML and OAS API specifications within Exchange, you can change the version 
 
 image::ex-add-new-version.png[]
 
-This opens the Publish a new asset window. 
+This opens the *Publish a new asset* window (as shown in <<Deploy a New API Version>>).
 
 These fields are required: *File upload*, *Main file*, and *Version*.
 
