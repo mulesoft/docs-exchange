@@ -1,4 +1,4 @@
-= Change Version of an API Asset
+= Change the Version of an API Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -36,8 +36,6 @@ For RAML and OAS API specifications within Exchange, you can change the version 
 image::ex-add-new-version.png[]
 
 This opens the Publish a new asset window. 
-
-image::ex-publish-a-new-asset.png[]
 
 These fields are required: *File upload*, *Main file*, and *Version*.
 
