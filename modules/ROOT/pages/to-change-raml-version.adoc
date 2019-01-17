@@ -10,7 +10,7 @@ Anypoint Exchange lets you create API assets for:
 * HTTP API
 * SOAP API
 
-This document describes how to change the version for any of these assets.
+This document describes how to change the version for any of these assets. Exchange versions follow the https://semver.org/[Semantic Versioning] model of major, minor, and patch releases.
 
 Each API asset contains a field for the *Version*, which is the version number of the asset, and the *API version*, which identifies the version of the API specification. For RAML, OAS, 
 and SOAP assets, the API specification version is coded inside the specification itself. Because an HTTP API asset is only an endpoint to which you can provide policies or proxies, the API version field doesn't apply. 
@@ -18,14 +18,14 @@ and SOAP assets, the API specification version is coded inside the specification
 The Version and API Version fields are only visible when you add a new asset or when
 you add a new version to an existing asset.
 
+For an HTTP API, because the asset is only an endpoint, it makes no sense to increase the patch or minor versions in every new publication. HTTP APIs therefore only have major version increases and also changes to the API version.
+
 == Deploy a New API Version
 
 You can deploy an API asset directly into Exchange using the *New asset* button. In the *Publish a new asset* window, the Advanced section lets you specify the version of the asset 
 in the *Version* field, and the version of the API specification in the *API version* field.
 
 image::ex-publish-a-new-asset.png[]
-
-If the Group ID and Asset ID match an existing asset of the same type, a new Asset Version is created. The API Version can be different than the existing one.
 
 You should only change the API Version when an updated API specification contains changes that are not compatible from the new version to the old version.
 
@@ -45,11 +45,11 @@ These fields are required: *File upload*, *Main file*, and *Version*.
 |File upload |For OAS, choose an OAS file with the .yaml or .json file types.
 For RAML, choose a RAML file with the .raml file type. Zip files are also accepted with the 
 file to upload residing in the zip file's root directory.
-|Main file |Specify the main file if the uploaded file is a fragment. Otherwise, Exchange 
-uses the same file name as the file you upload.
+|Main file |Specify the main file if the uploaded file is a zip. Otherwise, Exchange uses the same file name as the file you upload.
 |Version |The new version number. The Version and API version values need to agree 
 in that you can only choose minor version updates for a given API version. To set a major
-Version number, also increase the API version.
+Version number, also increase the API version. If you choose minor or patch version 
+updates, you should not change the API version.
 |===
 
 You can also change the version number for RAMLs as described in the next sections.
@@ -120,15 +120,17 @@ What is important is to manage the changes through a comprehensive versioning
 strategy. This includes a multiple month deprecation schedule and documentation that 
 is up to date and describes the change in sufficient level of detail. 
 
-Not all changes require a new version. APIs designed for backward compatibility do 
-normally not require new versions for minor changes and is a recommended practice 
-to design for this. Nevertheless, it is not always possible to design APIs in 
+Not all changes require a new version. APIs designed for backward compatibility 
+normally do not require a minor chagne, but should require a patch change. 
+
+Nevertheless, it is not always possible to design APIs in 
 that way. The table below outlines when to introduce a new version and when a 
-new version is not required.
+new version is not required. Typically when one clicks *Add new API operation* 
+a patch version increase occurs.
 
 [%header%,cols="20a,60a,20a"]
 |===
-|Type of Change |Requires a New Version |New Version is Not Required
+|Type of Change |Changes Requiring a Major Version |New Version is Not Required
 | Service contract |
 
 * Remove API endpoint
@@ -159,7 +161,7 @@ You should introduce a new version for:
 === When to Change Version Numbers
 
 * Major versions: When introducing a change in the structure of the API that requires the user of the API to adopt the interface on the consumer side.
-* Minor versions: When introducing a change to the API that does not require an API user to change, or when fixing a bug.
+* Minor versions: When introducing a change to the API that does not require an API user to change, or when fixing a bug. A minor version increase should be when the user can still use the same API version but the version breaks compatibility with the previous one. See https://semver.org/[Semantic Versioning] for more information.
 
 === API Version in Application URL
 
