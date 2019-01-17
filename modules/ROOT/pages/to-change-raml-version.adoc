@@ -121,7 +121,7 @@ strategy. This includes a multiple month deprecation schedule and documentation 
 is up to date and describes the change in sufficient level of detail. 
 
 Not all changes require a new version. APIs designed for backward compatibility 
-normally do not require a minor chagne, but should require a patch change. 
+normally do not require a minor change, but should require a patch change. 
 
 Nevertheless, it is not always possible to design APIs in 
 that way. The table below outlines when to introduce a new version and when a 
@@ -162,6 +162,7 @@ You should introduce a new version for:
 
 * Major versions: When introducing a change in the structure of the API that requires the user of the API to adopt the interface on the consumer side.
 * Minor versions: When introducing a change to the API that does not require an API user to change, or when fixing a bug. A minor version increase should be when the user can still use the same API version but the version breaks compatibility with the previous one. See https://semver.org/[Semantic Versioning] for more information.
+* Patch versions: When introducing a backward-compatible change.
 
 === API Version in Application URL
 
