@@ -194,6 +194,9 @@ https://anypoint.mulesoft.com/accounts/api/profile
 </settings>
 ----
 
+[IMPORTANT]
+`<username>` needs to be kept as in the example given that is used by the platform to identify the token will be used. You need to set your token in `<password>ACCESS_TOKEN</password>` tag.
+
 == Consume an Exchange Asset with Maven
 
 Add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
