@@ -195,7 +195,7 @@ https://anypoint.mulesoft.com/accounts/api/profile
 ----
 
 [IMPORTANT]
-`<username>` needs to be kept as in the example given that is used by the platform to identify the token will be used. You need to set your token in `<password>ACCESS_TOKEN</password>` tag.
+Do not change <username>~~~TOKEN~~~</username>, because that value tells the platform that you're using a token. Set your token in <password>ACCESS_TOKEN</password>.
 
 == Consume an Exchange Asset with Maven
 
