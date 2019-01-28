@@ -195,7 +195,7 @@ https://anypoint.mulesoft.com/accounts/api/profile
 ----
 
 [IMPORTANT]
-The value in `<username>` is a literal, don't change it. The value tells the platform that you're using a token. Set your token in <password>ACCESS_TOKEN</password>.
+The value in `<username>` is a literal, don't change it. The value tells the platform that you're using a token. Set your token in `<password>ACCESS_TOKEN</password>`.
 
 == Consume an Exchange Asset with Maven
 
