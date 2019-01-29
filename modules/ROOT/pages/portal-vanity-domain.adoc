@@ -24,11 +24,15 @@ ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "user
 curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/domain -XPUT -d "your.custom.domain" -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
 ----
 +
-IMPORTANT: If this step is not followed, you wont be able to log in to the portal or perform any actions that need authentication.
+IMPORTANT: If this step is not followed, you won't be able to log in to the portal or perform any actions that need authentication.
 
 == Set up a reverse proxy
 
-The goal is that users can access and navigate `+https://developers.robocop.com/path/of/justice/+` exactly as if they were at, for example, `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`. This can be achieved through a https://en.wikipedia.org/wiki/Reverse_proxy[reverse proxy]: requests to your specific domain have to be rerouted to the Anypoint Platform. In the following section, we provide example minimal NGINX configuration rules needed to implement the reverse proxy correctly. Also, please note that despite the specific configuration needed for your current web server implementation may need to vary slightly, the rules should be implemented in the same way.
+A reverse proxy allows users to access and navigate the vanity domain site exactly as if they were at the MuleSoft site. For example, users could access and navigate `+https://developers.robocop.com/path/of/justice/+` exactly as if they were at `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`.
+
+This can be achieved through a https://en.wikipedia.org/wiki/Reverse_proxy[reverse proxy] that reroutes requests to your specific domain to the Anypoint Platform. In the following section, we provide example minimal NGINX configuration rules needed to implement the reverse proxy correctly.
+
+You can set up the reverse proxy on servers other than NGINX, including Apache, content delivery networks (CDNs), and many more. The specific configuration needed for your current web server implementation may need to vary slightly, but the rules should be implemented in the same way.
 
 === Using NGINX
 
@@ -75,6 +79,8 @@ ${ORGANIZATION_DOMAIN}: robo-cop
 ----
 
 NOTE: Your server must run using `https`.
+
+If set up correctly, you can access and navigate to `+https://developers.robocop.com/path/of/justice/+` exactly as if you were at `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`.
 
 == See Also
 
