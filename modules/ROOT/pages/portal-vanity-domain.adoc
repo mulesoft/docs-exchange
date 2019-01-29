@@ -21,14 +21,16 @@ ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "user
 +
 [source,console]
 ----
-curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/domain -XPUT -d "your.custom.domain" -H "content-type: text/plain" -H "authorization: bearer"
+curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/domain -XPUT -d "your.custom.domain" -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
 ----
 +
-IMPORTANT: If this step is not followed, you cannot log into the portal or perform any actions that need authentication.
+IMPORTANT: If this step is not followed, you wont be able to log in to the portal or perform any actions that need authentication.
 
-== Set Up NGINX
+== Set up a reverse proxy
 
-If your organization already has a running NGINX configuration, you must include the following rules and replace the corresponding variables:
+The goal is that users can access and navigate `+https://developers.robocop.com/path/of/justice/+` exactly as if they were at, for example, `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`. This can be achieved through a https://en.wikipedia.org/wiki/Reverse_proxy[reverse proxy]: requests to your specific domain have to be rerouted to the Anypoint Platform. In the following section, we provide example minimal NGINX configuration rules needed to implement the reverse proxy correctly. Also, please note that despite the specific configuration needed for your current web server implementation may need to vary slightly, the rules should be implemented in the same way.
+
+=== Using NGINX
 
 [source,console,linenums]
 ----
@@ -73,8 +75,6 @@ ${ORGANIZATION_DOMAIN}: robo-cop
 ----
 
 NOTE: Your server must run using `https`.
-
-If set up correctly, you can access and navigate to `+https://developers.robocop.com/path/of/justice/+` exactly as if you were at `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`.
 
 == See Also
 
