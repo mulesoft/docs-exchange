@@ -25,6 +25,8 @@ Searches only apply to the Exchange you are viewing.
 If you search in a private Exchange, the search only lists the
 private Exchange assets and not public Exchange assets.
 
+You can also search by clicking Category or Tag elements. This creates a filtered search you can use to find similar assets.
+
 == Save a Search
 
 . Enter a search term and click Save This Search.
