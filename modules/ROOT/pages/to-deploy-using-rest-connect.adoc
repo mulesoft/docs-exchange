@@ -8,6 +8,8 @@ The Exchange backend uses REST Connect to transparently convert a REST API speci
 
 The Anypoint Exchange Download button lets you download the Mule 3 or Mule 4 Connector. 
 
+REST Connect does not currently support custom TLS configurations.
+
 == Access Generated Connectors
 
 In Exchange, you can download the Mule 3 or Mule 4 connector from the Download menu:
