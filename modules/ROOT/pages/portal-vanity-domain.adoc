@@ -81,7 +81,8 @@ Finally you need to add some headers for each one of the routes described above.
 
 [source,console,linenums]
 ----
-‘X-Forwarded-Path’ with your public portal path, Eg ‘path/of/justice/’. This path must end with a slash “/“.
+‘X-Forwarded-Path’: Base path of your vanity domain public portal URL.
+This can be anything (including just / for root path), it doesn't need to match the base path for the portal in anypoint.mulesoft.com domain. This path must end with a slash “/“. Eg: ‘path/of/justice/’
 ‘X-Forwarded-Host’ with your hostname, Eg ‘developers.robocop.com’
 ----
 
