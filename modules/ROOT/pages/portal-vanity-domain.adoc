@@ -36,54 +36,39 @@ You can set up the reverse proxy on servers other than NGINX, including Apache, 
 
 === Generic configuration
 
-A basic reverse proxy for a portal Vanity Domain configuration needs:
+To set up a basic reverse proxy for a portal vanity domain configuration, set up route mapping and custom headers.
 
-. Routes mapping
+==== Route mapping
 
-. Custom headers 
+Set up static resource route mapping for `shared`, `icons`, `exchange/api-console-components`, and `node_modules`. Regardless of your portal path, these routes need to be at the root level.
 
-==== Routes mapping
+For example:
 
-First you need to setup static resources routes mapping for ‘shared’, ‘icons’, ‘exchange/api-console-components’ and ‘node_modules’. This routes need to be at root level regardless your portal path.
+* Re-route `+https://developers.robocop.com/shared+` to `+https://anypoint.mulesoft.com/shared+`.
+* Re-route `+https://developers.robocop.com/icons+` to `+https://anypoint.mulesoft.com/icons+`.
+* Re-route `+https://developers.robocop.com/node_modules+` to `+https://anypoint.mulesoft.com/node_modules+`.
+* Re-route `+https://developers.robocop.com/exchange/api-console-components+` to `+https://anypoint.mulesoft.com/exchange/api-console-components+`.
 
-For example
+Route `callback` to `+https://anypoint.mulesoft.com/exchange/portals/+**{YOUR_ORGANIZATION_DOMAIN}**/callback`.
 
-`+https://developers.robocop.com/shared+` needs to be rerouted to `+https://anypoint.mulesoft.com/shared+`
+For example:
 
-`+https://developers.robocop.com/icons+` needs to be rerouted to `+https://anypoint.mulesoft.com/icons+`
+* Route `+https://developers.robocop.com/callback+` to `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/callback+`.
 
-`+https://developers.robocop.com/node_modules+` needs to be rerouted to `+https://anypoint.mulesoft.com/node_modules+`
+Route all your portal traffic to the Anypoint Platform. This depends on the portal path. Your portal path may be any path. The example's portal path is `path/of/justice/`.
 
-`+https://developers.robocop.com/exchange/api-console-components+` needs to be rerouted to `+https://anypoint.mulesoft.com/exchange/api-console-components+`
+For example:
 
-
-
-
-Then you need to route 'callback' root route to  `+https://anypoint.mulesoft.com/exchange/portals/+**{YOUR_ORGANIZATION_DOMAIN}**/callback`
-
-For example
-
-`+https://developers.robocop.com/callback+` to `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/callback+`
-
-After that, you need to route all your portal traffic to the Anypoint Platform.
-
-For example
-
-`+https://developers.robocop.com/path/of/justice/+` *_(and all routes under this path)_*
-To 
-`/https://anypoint.mulesoft.com/exchange/portals/robo-cop/`
-
-NOTE: For this example ‘path/of/justice/’ was set as your portal path, but it can be any path you want.
+* Route `+https://developers.robocop.com/path/of/justice/+` *_(and all routes under this path)_* to `/https://anypoint.mulesoft.com/exchange/portals/robo-cop/`.
 
 ==== Custom headers
 
-Finally you need to add some headers for each one of the routes described above.
+Add headers for each route described above.
 
 [source,console,linenums]
 ----
-‘X-Forwarded-Path’: Base path of your vanity domain public portal URL.
-This can be anything (including just / for root path), it doesn't need to match the base path for the portal in anypoint.mulesoft.com domain. This path must end with a slash “/“. Eg: ‘path/of/justice/’
-‘X-Forwarded-Host’: your public portal vanity domain, Eg ‘developers.robocop.com’
+'X-Forwarded-Path': Base path of your vanity domain public portal URL. This can be any path. It can be just '/' for the root path. It does not need to match the base path for the portal in the anypoint.mulesoft.com domain. This path must end with a slash ("/"). Example: 'path/of/justice/'
+'X-Forwarded-Host': Your public portal vanity domain. Example: 'developers.robocop.com'
 ----
 
 === Using NGINX
