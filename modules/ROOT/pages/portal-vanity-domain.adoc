@@ -44,10 +44,10 @@ Set up static resource route mapping for `shared`, `icons`, `exchange/api-consol
 
 For example:
 
-* Re-route `+https://developers.robocop.com/shared+` to `+https://anypoint.mulesoft.com/shared+`.
-* Re-route `+https://developers.robocop.com/icons+` to `+https://anypoint.mulesoft.com/icons+`.
-* Re-route `+https://developers.robocop.com/node_modules+` to `+https://anypoint.mulesoft.com/node_modules+`.
-* Re-route `+https://developers.robocop.com/exchange/api-console-components+` to `+https://anypoint.mulesoft.com/exchange/api-console-components+`.
+* Route `+https://developers.robocop.com/shared+` to `+https://anypoint.mulesoft.com/shared+`.
+* Route `+https://developers.robocop.com/icons+` to `+https://anypoint.mulesoft.com/icons+`.
+* Route `+https://developers.robocop.com/node_modules+` to `+https://anypoint.mulesoft.com/node_modules+`.
+* Route `+https://developers.robocop.com/exchange/api-console-components+` to `+https://anypoint.mulesoft.com/exchange/api-console-components+`.
 
 Route `callback` to `+https://anypoint.mulesoft.com/exchange/portals/+**{YOUR_ORGANIZATION_DOMAIN}**/callback`.
 
