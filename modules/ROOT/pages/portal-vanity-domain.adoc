@@ -34,6 +34,57 @@ This can be achieved through a https://en.wikipedia.org/wiki/Reverse_proxy[rever
 
 You can set up the reverse proxy on servers other than NGINX, including Apache, content delivery networks (CDNs), and many more. The specific configuration needed for your current web server implementation may need to vary slightly, but the rules should be implemented in the same way.
 
+=== Generic configuration
+
+A basic reverse proxy for a portal Vanity Domain configuration needs:
+
+. Routes mapping
+
+. Custom headers 
+
+==== Routes mapping
+
+First you need to setup static resources routes mapping for ‘shared’, ‘icons’, ‘exchange/api-console-components’ and ‘node_modules’. This routes need to be at root level regardless your portal path.
+
+For example
+
+`+https://developers.robocop.com/shared+` needs to be rerouted to `+https://anypoint.mulesoft.com/shared+`
+
+`+https://developers.robocop.com/icons+` needs to be rerouted to `+https://anypoint.mulesoft.com/icons+`
+
+`+https://developers.robocop.com/node_modules+` needs to be rerouted to `+https://anypoint.mulesoft.com/node_modules+`
+
+`+https://developers.robocop.com/api-console-components+` needs to be rerouted to `+https://anypoint.mulesoft.com/api-console-components+`
+
+
+
+
+Then you need to route 'callback' root route to  `+https://anypoint.mulesoft.com/exchange/portals/+**{YOUR_ORGANIZATION_DOMAIN}**/callback`
+
+For example
+
+`+https://developers.robocop.com/callback+` to `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/callback+`
+
+After that, you need to route all your portal traffic to the Anypoint Platform.
+
+For example
+
+`+https://developers.robocop.com/path/of/justice/+` *_(and all routes under this path)_*
+To 
+`/https://anypoint.mulesoft.com/exchange/portals/robo-cop/`
+
+NOTE: For this example ‘path/of/justice/’ was set as your portal path, but it can be any path you want.
+
+==== Custom headers
+
+Finally you need to add some headers for each one of the routes described above.
+
+[source,console,linenums]
+----
+‘X-Forwarded-Path’ with your public portal path, Eg ‘path/of/justice/’. This path must end with a slash “/“.
+‘X-Forwarded-Host’ with your hostname, Eg ‘developers.robocop.com’
+----
+
 === Using NGINX
 
 [source,console,linenums]
