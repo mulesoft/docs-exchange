@@ -83,7 +83,7 @@ Finally you need to add some headers for each one of the routes described above.
 ----
 ‘X-Forwarded-Path’: Base path of your vanity domain public portal URL.
 This can be anything (including just / for root path), it doesn't need to match the base path for the portal in anypoint.mulesoft.com domain. This path must end with a slash “/“. Eg: ‘path/of/justice/’
-‘X-Forwarded-Host’ with your hostname, Eg ‘developers.robocop.com’
+‘X-Forwarded-Host’: your public portal vanity domain, Eg ‘developers.robocop.com’
 ----
 
 === Using NGINX
