@@ -54,7 +54,7 @@ For example
 
 `+https://developers.robocop.com/node_modules+` needs to be rerouted to `+https://anypoint.mulesoft.com/node_modules+`
 
-`+https://developers.robocop.com/api-console-components+` needs to be rerouted to `+https://anypoint.mulesoft.com/api-console-components+`
+`+https://developers.robocop.com/exchange/api-console-components+` needs to be rerouted to `+https://anypoint.mulesoft.com/exchange/api-console-components+`
 
 
 
