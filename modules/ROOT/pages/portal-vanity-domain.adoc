@@ -40,14 +40,14 @@ To set up a basic reverse proxy for a portal vanity domain configuration, set up
 
 ==== Route mapping
 
-Set up static resource route mapping for `shared`, `icons`, `exchange/api-console-components`, and `node_modules`. Regardless of your portal path, these routes need to be at the root level.
+Set up static resource route mapping for `shared`, `icons`, `exchange/api-console`, and `node_modules`. Regardless of your portal path, these routes need to be at the root level.
 
 For example:
 
 * Route `+https://developers.robocop.com/shared+` to `+https://anypoint.mulesoft.com/shared+`.
 * Route `+https://developers.robocop.com/icons+` to `+https://anypoint.mulesoft.com/icons+`.
 * Route `+https://developers.robocop.com/node_modules+` to `+https://anypoint.mulesoft.com/node_modules+`.
-* Route `+https://developers.robocop.com/exchange/api-console-components+` to `+https://anypoint.mulesoft.com/exchange/api-console-components+`.
+* Route `+https://developers.robocop.com/exchange/api-console+` to `+https://anypoint.mulesoft.com/exchange/api-console+`.
 
 Route `callback` to `+https://anypoint.mulesoft.com/exchange/portals/+**{YOUR_ORGANIZATION_DOMAIN}**/callback`.
 
@@ -75,7 +75,7 @@ Add headers for each route described above.
 
 [source,console,linenums]
 ----
-location ~ /(shared|node_modules|icons|exchange/api-console-components) {
+location ~ /(shared|node_modules|icons|exchange/api-console) {
     proxy_set_header X-Forwarded-Host $http_host;
     proxy_set_header X-Forwarded-Path ${PUBLIC_PORTAL_PATH};
 
