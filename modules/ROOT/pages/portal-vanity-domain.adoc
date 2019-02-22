@@ -34,6 +34,43 @@ This can be achieved through a https://en.wikipedia.org/wiki/Reverse_proxy[rever
 
 You can set up the reverse proxy on servers other than NGINX, including Apache, content delivery networks (CDNs), and many more. The specific configuration needed for your current web server implementation may need to vary slightly, but the rules should be implemented in the same way.
 
+=== Generic configuration
+
+To set up a basic reverse proxy for a portal vanity domain configuration, set up route mapping and custom headers.
+
+==== Route mapping
+
+Set up static resource route mapping for `shared`, `icons`, `exchange/api-console-components`, and `node_modules`. Regardless of your portal path, these routes need to be at the root level.
+
+For example:
+
+* Route `+https://developers.robocop.com/shared+` to `+https://anypoint.mulesoft.com/shared+`.
+* Route `+https://developers.robocop.com/icons+` to `+https://anypoint.mulesoft.com/icons+`.
+* Route `+https://developers.robocop.com/node_modules+` to `+https://anypoint.mulesoft.com/node_modules+`.
+* Route `+https://developers.robocop.com/exchange/api-console-components+` to `+https://anypoint.mulesoft.com/exchange/api-console-components+`.
+
+Route `callback` to `+https://anypoint.mulesoft.com/exchange/portals/+**{YOUR_ORGANIZATION_DOMAIN}**/callback`.
+
+For example:
+
+* Route `+https://developers.robocop.com/callback+` to `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/callback+`.
+
+Route all your portal traffic to the Anypoint Platform. This depends on the portal path. Your portal path may be any path. The example's portal path is `path/of/justice/`.
+
+For example:
+
+* Route `+https://developers.robocop.com/path/of/justice/+` *_(and all routes under this path)_* to `/https://anypoint.mulesoft.com/exchange/portals/robo-cop/`.
+
+==== Custom headers
+
+Add headers for each route described above.
+
+[source,console,linenums]
+----
+'X-Forwarded-Path': Base path of your vanity domain public portal URL. This can be any path. It can be just '/' for the root path. It does not need to match the base path for the portal in the anypoint.mulesoft.com domain. This path must end with a slash ("/"). Example: 'path/of/justice/'
+'X-Forwarded-Host': Your public portal vanity domain. Example: 'developers.robocop.com'
+----
+
 === Using NGINX
 
 [source,console,linenums]
