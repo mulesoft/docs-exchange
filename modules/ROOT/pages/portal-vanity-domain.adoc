@@ -1,10 +1,10 @@
-= Public Portal Vanity Domain
+= How to customize Exchange Portal DNS record
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-This document contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain.
+This document contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain (your own custom domain instead of https://anypoint.mulesoft.com/exchange) by setting up a reverse proxy as described in this document.
 
 == Whitelist Your Domain
 
