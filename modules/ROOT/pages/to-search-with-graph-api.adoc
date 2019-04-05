@@ -142,7 +142,7 @@ A single organization ID would be:
   assets(
     query: {
       searchTerm: "product",
-      organizationsIds: ["4141141", "32322", "2342345"]
+      organizationIds: ["4141141", "32322", "2342345"]
     },
     latestVersionsOnly: true
   ) {
