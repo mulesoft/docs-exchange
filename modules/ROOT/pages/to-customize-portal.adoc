@@ -35,7 +35,7 @@ You can change the appearance of the top navigation bar.
 
 Choose a logo image file. If the image in the file is larger than 60 pixels high, Exchange resizes the image to 60 pixels high. Exchange resizes the image proportionally, for example, Exchange resizes a 500 by 500 pixel image to 60 by 60 pixels.
 
-The image file format can be .svg, .png, .jpg, or .gif.
+The image file format can be `bmp`, `gif`, `ico`, `jpe`, `jpeg`, `jpg`, `png`, `svg`, `tif`, `tiff`, or `webp`.
 
 === Favicon for the Browser Tab
 
@@ -56,7 +56,7 @@ Specify the hexadecimal RGB color for the top bar text when the text is selected
 
 == Hero Image Banner
 
-Choose an image for the banner for the public portal. The hero image file format can be .png, .jpg, or .gif.
+Choose an image for the banner for the public portal. The hero image file format can be `bmp`, `gif`, `ico`, `jpe`, `jpeg`, `jpg`, `png`, `svg`, `tif`, `tiff`, or `webp`.
 The maximum file size for the banner image is 2 MB. The banner image can also be an animated GIF file.
 
 The image you specify is stretched to fit the window size as determined by the browser's window size. The height is fixed to 220px.
