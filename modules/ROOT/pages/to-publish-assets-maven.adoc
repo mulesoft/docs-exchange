@@ -199,7 +199,7 @@ The value in `<username>` is a literal, don't change it. The value tells the pla
 
 == Consume an Exchange Asset with Maven
 
-You can consume published connectors, Mule applications and REST APIs using the Maven facade. Add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
+Using Maven Facade, you can consume connectors, Mule applications or REST APIs published in Exchange. Just add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
 and add the Maven facade as a repository in the `repositories` section.
 
 [source,xml,linenums]
@@ -250,7 +250,7 @@ In the EU, the <repositories> section is:
   </repositories>
 ----
 
-== Documenting and searching your published assets in Exchange
+== Document and search for your published Exchange Assets
 
 Not every asset that can be published to Exchange via Maven is listed in the Exchange UI. Connectors, examples, templates and Mule applications can be searched for and documented, but policies are not available for the time being.
 
