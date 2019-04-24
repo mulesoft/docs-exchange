@@ -208,7 +208,7 @@ The value in `<username>` is a literal, don't change it. The value tells the pla
 
 Java libraries and POM files cannot currently be published as Exchange assets.
 
-Assets that declare dependencies that are not published in Exchange are not currently supported.
+Mule 4 Extensions that declare dependencies that don't exist in Maven Central or the MuleSoft Maven repositories are not currently supported.
 
 == Document your Exchange Assets
 
