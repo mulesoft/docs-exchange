@@ -216,7 +216,7 @@ When you use Maven Facade to publish connectors, examples and templates, a docum
 
 == Consume an Exchange Asset with Maven
 
-Using Maven Facade, you can consume connectors, Mule applications and REST APIs published in Exchange. Just add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
+With Maven Facade you can consume connectors, Mule applications, and REST APIs published in Exchange. To consume an Exchange asset, add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
 and add the Maven facade as a repository in the `repositories` section.
 
 [source,xml,linenums]
