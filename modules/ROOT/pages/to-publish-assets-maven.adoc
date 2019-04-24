@@ -4,7 +4,13 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Anypoint Exchange provides the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Maven Facade] that enables Maven clients to publish and consume assets using Maven. The Maven Facade can publish connectors, examples, and templates as Exchange assets. You can publish APIs directly in Exchange. You can also use the Maven Facade to publish APIs.
+With Anypoint Exchange's https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Maven Facade], Maven clients can publish and consume these Exchange assets:
+
+* Connectors
+* Mule applications
+* Examples
+* Templates
+* Policies
 
 == Prerequisites
 
@@ -197,9 +203,20 @@ https://anypoint.mulesoft.com/accounts/api/profile
 [IMPORTANT]
 The value in `<username>` is a literal, don't change it. The value tells the platform that you're using a token. Set your token in `<password>ACCESS_TOKEN</password>`.
 
+
+== Dependencies external to Exchange
+
+Java libraries and POM files cannot currently be published as Exchange assets.
+
+Mule 4 Extensions that declare dependencies that don't exist in Maven Central or the MuleSoft Maven repositories are not currently supported.
+
+== Document your Exchange Assets
+
+When you use Maven Facade to publish connectors, examples and templates, a documentation portal is automatically created for them in Exchange and you can xref:to-describe-an-asset.adoc[document them normally].
+
 == Consume an Exchange Asset with Maven
 
-Add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
+With Maven Facade you can consume connectors, Mule applications, and REST APIs published in Exchange. To consume an Exchange asset, add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
 and add the Maven facade as a repository in the `repositories` section.
 
 [source,xml,linenums]
