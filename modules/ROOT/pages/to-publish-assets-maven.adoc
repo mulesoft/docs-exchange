@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Anypoint Exchange provides the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Maven Facade] that enables Maven clients to publish and consume assets using Maven. Using the Maven Facade, you can publish the following as Exchange assets:
+With Anypoint Exchange's https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Maven Facade], Maven clients can publish and consume these Exchange assets:
 
 * Connectors
 * Mule applications
@@ -204,13 +204,15 @@ https://anypoint.mulesoft.com/accounts/api/profile
 The value in `<username>` is a literal, don't change it. The value tells the platform that you're using a token. Set your token in `<password>ACCESS_TOKEN</password>`.
 
 
-== Handling dependencies external to Exchange
+== Dependencies external to Exchange
 
-For the time being, it is not possible to publish Java libraries and POM files as Exchange assets. Due to this, assets that declare dependencies that are not published in Exchange are not currently supported.
+Java libraries and POM files cannot currently be published as Exchange assets.
+
+Assets that declare dependencies that are not published in Exchange are not currently supported.
 
 == Document your Exchange Assets
 
-When connectors, examples and templates are published via Maven Facade, a documentation portal is automatically created for them in Exchange. Learn more about documenting your assets by https://docs.mulesoft.com/exchange/to-describe-an-asset[reading our docs].
+When you use Maven Facade to publish connectors, examples and templates, a documentation portal is automatically created for them in Exchange and you can xref:to-describe-an-asset.adoc[document them normally].
 
 == Consume an Exchange Asset with Maven
 
