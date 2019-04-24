@@ -206,7 +206,7 @@ The value in `<username>` is a literal, don't change it. The value tells the pla
 
 == Handling dependencies external to Exchange
 
-For the time being, it is not possible to publish Java libraries and POM files as Exchange assets. Due to this, assets that declare dependencies that are not published in Exchange are not currently supported. You can avoid this issue for templates, examples and Mule applications by publishing a https://stackoverflow.com/a/16222971[fat jar], which already includes all of the project dependencies.
+For the time being, it is not possible to publish Java libraries and POM files as Exchange assets. Due to this, assets that declare dependencies that are not published in Exchange are not currently supported.
 
 == Document your Exchange Assets
 
