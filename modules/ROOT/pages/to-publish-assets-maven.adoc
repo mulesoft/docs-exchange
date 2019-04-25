@@ -12,7 +12,7 @@ With Anypoint Exchange's https://anypoint.mulesoft.com/exchange/portals/anypoint
 * Templates
 * Policies
 
-Note: Only Maven deployed artifacts can be consumed by Maven.
+Note: Only Maven deployed assets can be consumed by Maven.
 
 == Prerequisites
 
