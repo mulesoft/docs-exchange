@@ -6,11 +6,17 @@ endif::[]
 
 This topic lists frequently asked questions and provides answers.
 
-== What is the expected review and approval workflow?
+== What is the expected workflow for reviewing and publishing drafts?
 
-Exchange provides a drafts feature. Organizations can create two roles for contributor and publisher, and share
-the URLs of pages awaiting publishing with those in the publisher role. You can create roles in Anypoint Platform >
-Access Management > Roles. Content in the draft state is hidden until the draft is published.
+Exchange provides a drafts feature. Content in the draft state is hidden until
+the draft is published.
+
+One user can create drafts and share the URLs with a second user, and the second
+user can review and publish these pages.
+
+All contributors have the same permissions, including the permission to publish
+drafts. The separation of duties is not enforced by Exchange and must be
+observed by the users.
 
 == Where is the latest version of the Developer Portal?
 
