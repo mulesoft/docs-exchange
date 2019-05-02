@@ -8,9 +8,17 @@ This topic lists frequently asked questions and provides answers.
 
 == What is the expected review and approval workflow?
 
-Exchange provides a drafts feature. Organizations can create two roles for contributor and publisher, and share
-the URLs of pages awaiting publishing with those in the publisher role. You can create roles in Anypoint Platform >
-Access Management > Roles. Content in the draft state is hidden until the draft is published.
+There are three asset roles in Exchange: Admin, Contributor, and Viewer. You
+can also create custom roles in Anypoint Platform > Access Management > Roles
+and assign them the same permissions as one of the three asset roles.
+Organizations can create two custom roles for "contributor" and "publisher,"
+both with the same permissions as the Contributor asset role.
+
+Exchange provides a drafts feature. A user who has the custom "contributor"
+role can create drafts and share the URLs with a user who has the custom
+"publisher" role. The user who has the custom "publisher" role can review,
+approve, and publish these pages. Content in the draft state is hidden until
+the draft is published.
 
 == Where is the latest version of the Developer Portal?
 
