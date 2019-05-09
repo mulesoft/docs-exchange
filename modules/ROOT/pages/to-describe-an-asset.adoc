@@ -49,6 +49,8 @@ In Markdown, use this syntax to reference a web served image:
 
 In Edit mode, you can reorder pages by clicking the page name and dragging the page up or down in the left nav bar.
 
+All page names are validated. Page names cannot start with `.`, cannot contain the characters `@`, `*`, `+`, `/`, `_`, or `\`, cannot be the reserved name `home`, cannot be the name of an existing page, and must be from 1 to 128 characters.
+
 == Create Asset Tags
 
 Tags help users find your asset. Users can search in Exchange for a tag name to locate your asset.
