@@ -18,6 +18,8 @@ All contributors have the same permissions, including the permission to publish
 drafts. The separation of duties is not enforced by Exchange and must be
 observed by the users.
 
+Users can delete a draft, which discards all changes made in the draft.
+
 == Where is the latest version of the Developer Portal?
 
 The MuleSoft Developer Portal is at https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/.
