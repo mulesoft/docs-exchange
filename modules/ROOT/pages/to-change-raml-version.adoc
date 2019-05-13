@@ -159,7 +159,7 @@ You should introduce a new version for:
 
 Include the API version in the application URL so that consumers can choose which version they want to call. 
 
-* For on premises deployment, the version is in the base URI and appears in the URL:
+* For on-premises deployment, the version is in the base URI and appears in the URL:
 +
 `+http://www.example.org/v1/api/customer/1234+`
 
