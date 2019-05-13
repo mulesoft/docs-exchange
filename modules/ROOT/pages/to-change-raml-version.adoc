@@ -63,7 +63,7 @@ When you update the version element in the RAML specification and publish to Exc
 === Change a RAML Version When you Publish to Exchange
 
 . From Design Center, open your API. No changes are necessary.
-. Click the Publish to Exchange button (image::ex-publish-to-exchange-button.png[]).
+. Click the Publish to Exchange button.
 +
 image::apim-publish-api-spec.png[]
 +
@@ -72,15 +72,6 @@ image::apim-publish-api-spec.png[]
 When a REST API based on a RAML file is created from Design Center and published to Exchange, the API version is retrieved from the version property in the RAML file.
 
 When publishing a new API version of an existing REST API, Exchange enforces an update of the major section of an asset's version.
-
-== Document an API Version
-
-Exchange provides documentation pages with information about an asset for API consumers. 
-You can create different documentation pages for each API Version.
-
-The API version that is being edited can be changed from the button next to the API Name.
-
-image::ex-title-version-setting.png[]
 
 == Multiple API and Asset Versions
 
@@ -168,13 +159,9 @@ You should introduce a new version for:
 
 Include the API version in the application URL so that consumers can choose which version they want to call. 
 
-* For on premises deployment, the version is in the base URI:
+* For on-premises deployment, the version is in the base URI and appears in the URL:
 +
 `+http://www.example.org/v1/api/customer/1234+`
-+
-* For CloudHub deployment, the version is in the domain:
-+
-`+http://www.example-v1.org/api/customer/1234+`
 
 === Naming Conventions
 
@@ -184,3 +171,12 @@ You can use these rules to define an API version:
 * Use a simple ordinal number, for example, "v1","v2", and so on.
 * Avoid using dot notation, for example, "v1.2".
 * Only specify the major version as part of the URL.
+
+== Document an API Version
+
+Exchange provides documentation pages with information about an asset for API consumers. 
+You can create different documentation pages for each API Version.
+
+The API version that is being edited can be changed from the button next to the API Name.
+
+image::ex-title-version-setting.png[]
