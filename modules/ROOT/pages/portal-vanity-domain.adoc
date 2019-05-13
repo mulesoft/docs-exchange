@@ -21,7 +21,7 @@ ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "user
 +
 [source,console]
 ----
-curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/domain -XPUT -d "your.custom.domain" -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
+curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/domain -XPUT -d your.custom.domain -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
 ----
 +
 IMPORTANT: If this step is not followed, you won't be able to log in to the portal or perform any actions that need authentication.
