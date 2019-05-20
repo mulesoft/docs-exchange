@@ -5,7 +5,7 @@ endif::[]
 
 == Before starting
 
-To perform the following actions, you must login to the Anypoint Platform and obtain an authentication token. Once obtained, every following request must be made with the header `Authorization=bearer ACCESS_TOKEN`:
+To manage portal resources using the Exchange Experience API, login to the Anypoint Platform and obtain an authentication token. Make every request with the header `Authorization: bearer ACCESS_TOKEN`:
 
 +
 [source,console]
@@ -17,13 +17,13 @@ ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "user
 == Deleting Asset Portal images
 The number of resources that can be uploaded to an asset's portal is currently limited to 100 items. Attempting to add another image after reaching the limit will result in an error. In order to allow for more images to be created, you can consult the existing uploaded images and delete them by using the Exchange Experience API.
 
-To list all:
+To list all resources of an asset portal:
     GET https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/resources
 
-To see a specific image:
+To get a specific resource of an asset portal:
     GET https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/resources/:resourceId
 
-To delete the resource:
+To delete a specific resource of an asset portal:
     DELETE https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/resources/:resourceId
 
 With:
@@ -35,13 +35,13 @@ With:
 == Deleting Public Portal images
 In the case of the organization's Public Portal, all images uploaded are subject to the 100 item limit. You can also list and delete existing resources by using the Exchange Experience API:
 
-To list all:
+To list all resources of the public portal:
     GET https://anypoint.mulesoft.com/exchange/api/v2/portals/:organizationDomain/draft/resources/
 
-To see a specific image:
+To get a specific resource of the public portal:
     GET https://anypoint.mulesoft.com/exchange/api/v2/portals/:organizationDomain/draft/resources/:resourceId
 
-To delete the resource:
+To delete a specific resource of the public portal:
     DELETE https://anypoint.mulesoft.com/exchange/api/v2/portals/:organizationDomain/draft/resources/:resourceId
 
 With:
