@@ -1,11 +1,18 @@
-= To Manage Portal Resources in Exchange
+= Manage Portal Resources
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images/
 
-== Before starting
+You can upload up to 100 resources to a portal. Each image is one resource. Attempting to add more will result in an error. You can delete resources to reduce the number and then add more up to the limit.
 
-To manage portal resources using the Exchange Experience API, login to the Anypoint Platform and obtain an authentication token. Make every request with the header `Authorization: bearer ACCESS_TOKEN`:
+This limit applies to asset portals and to the organization's public portal.
+
+These examples show how to list, retrieve, and delete resources from a portal with the Exchange Experience API.
+
+== Authentication
+
+Login to the Anypoint Platform and get an authentication token. Make every request with the header `Authorization: bearer ACCESS_TOKEN`.
 
 +
 [source,console]
@@ -14,16 +21,15 @@ ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "user
 ----
 +
 
-== Deleting Asset Portal images
-The number of resources that can be uploaded to an asset's portal is currently limited to 100 items. Attempting to add another image after reaching the limit will result in an error. In order to allow for more images to be created, you can consult the existing uploaded images and delete them by using the Exchange Experience API.
+== Asset Portals
 
-To list all resources of an asset portal:
+To list all resources on an asset portal:
     GET https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/resources
 
-To get a specific resource of an asset portal:
+To get a specific resource from an asset portal:
     GET https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/resources/:resourceId
 
-To delete a specific resource of an asset portal:
+To delete a specific resource from an asset portal:
     DELETE https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/resources/:resourceId
 
 With:
@@ -32,16 +38,15 @@ With:
     version: The asset's version
     resourceId: The image file name.
 
-== Deleting Public Portal images
-In the case of the organization's Public Portal, all images uploaded are subject to the 100 item limit. You can also list and delete existing resources by using the Exchange Experience API:
+== Public Portals
 
-To list all resources of the public portal:
+To list all resources on the public portal:
     GET https://anypoint.mulesoft.com/exchange/api/v2/portals/:organizationDomain/draft/resources/
 
-To get a specific resource of the public portal:
+To get a specific resource from the public portal:
     GET https://anypoint.mulesoft.com/exchange/api/v2/portals/:organizationDomain/draft/resources/:resourceId
 
-To delete a specific resource of the public portal:
+To delete a specific resource from the public portal:
     DELETE https://anypoint.mulesoft.com/exchange/api/v2/portals/:organizationDomain/draft/resources/:resourceId
 
 With:
