@@ -21,7 +21,7 @@ ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "user
 
 == Using the API
 
-To list all resources on the public portal:
+To list all resources:
 +
 [source,console]
 ----
@@ -30,7 +30,7 @@ To list all resources on the public portal:
 ----
 +
 
-To get a specific resource from the public portal:
+To get a specific resource:
 +
 [source,console]
 ----
@@ -39,7 +39,7 @@ To get a specific resource from the public portal:
 ----
 +
 
-To delete a specific resource from the public portal:
+To delete a specific resource:
 +
 [source,console]
 ----
