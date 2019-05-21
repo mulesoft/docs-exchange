@@ -6,7 +6,7 @@ endif::[]
 
 You can upload up to 100 resources to an asset portal. Each image is one resource. Attempting to add more will result in an error. You can delete resources to reduce the number and then add more up to the limit.
 
-These examples show how to list, retrieve, and delete resources from a public portal with the Exchange Experience API.
+These examples show how to list, retrieve, and delete resources from an asset portal with the Exchange Experience API.
 
 == Authentication
 
@@ -21,7 +21,7 @@ ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "user
 
 == Using the API
 
-To list all resources on an asset portal:
+To list all resources:
 +
 [source,console]
 ----
@@ -30,7 +30,7 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ver
 ----
 +
 
-To get a specific resource from an asset portal:
+To get a specific resource:
 +
 [source,console]
 ----
@@ -39,7 +39,7 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ver
 ----
 +
 
-To delete a specific resource from an asset portal:
+To delete a specific resource:
 
 +
 [source,console]
