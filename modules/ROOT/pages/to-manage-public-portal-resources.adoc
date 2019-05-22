@@ -14,7 +14,9 @@ Login to the Anypoint Platform and get an authentication token. Make every reque
 
 [source,console]
 ----
-ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
+ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login \
+-XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | \
+jq -r ".access_token")
 ----
 
 == Using the API
