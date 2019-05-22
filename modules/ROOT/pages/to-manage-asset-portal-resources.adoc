@@ -1,0 +1,57 @@
+= Manage Asset Portal Resources
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+You can upload up to 100 resources to an asset portal. Each image is one resource. Attempting to add more will result in an error. You can delete resources to reduce the number and then add more up to the limit.
+
+These examples show how to list, retrieve, and delete resources from an asset portal with the Exchange Experience API.
+
+== Authentication
+
+Login to the Anypoint Platform and get an authentication token. Make every request with the header `Authorization: bearer ACCESS_TOKEN`.
+
++
+[source,console]
+----
+ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
+----
++
+
+== Using the API
+
+To list all resources:
++
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/resources \
+  -H 'Authorization: bearer YOUR_ACCESS_TOKEN'
+----
++
+
+To get a specific resource:
++
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/resources/:resourceId \
+  -H 'Authorization: bearer YOUR_ACCESS_TOKEN'
+----
++
+
+To delete a specific resource:
+
++
+[source,console]
+----
+ curl -X DELETE \
+  https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/resources/:resourceId \
+  -H 'Authorization: bearer YOUR_ACCESS_TOKEN'
+----
++
+
+With:
+    groupId: The asset's groupId
+    assetId: The asset's assetId
+    version: The asset's version
+    resourceId: The image file name.
