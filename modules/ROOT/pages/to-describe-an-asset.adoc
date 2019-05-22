@@ -39,6 +39,8 @@ In Markdown, use this syntax to reference a web served image:
 
 `+![some alt text](http://www.example.com/image/png.png)+`
 
+Images uploaded before May 2019 can be accessed without authentication, and images uploaded after May 2019 require authentication. To disable unauthenticated access to an image uploaded before May 2019, download it, delete it, and upload it again.
+
 == Add Secondary Pages
 
 . Click an asset and click Edit.
