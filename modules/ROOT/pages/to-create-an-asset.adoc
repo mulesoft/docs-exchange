@@ -37,7 +37,7 @@ image::ex2-exchange-create-new-asset.png[Illustration - How to Create a new asse
 . Go to Exchange
 . Click on *New asset*
 
-image::ex2-exchange-create-new-asset-form.png[Illustration - Create a new asset form][height=300,width=600]
+image::ex2-exchange-create-new-asset-form.png[Illustration - Create a new asset form][height=400,width=700]
 
 . Specify a name for the asset
 . Select the asset type
@@ -46,7 +46,7 @@ image::ex2-exchange-create-new-asset-form.png[Illustration - Create a new asset 
 
 === Advanced Settings
 
-image::ex2-exchange-advance-settings-form.png[Illustration - Advance Settings][height=300,width=600]
+image::ex2-exchange-advance-settings-form.png[Illustration - Advance Settings][height=400,width=700]
 
 Exchange generates the GroupId, AssetId, and version automatically. You can change the values if needed. For API assets, you can set the asset version and the API version separately.
 
@@ -111,7 +111,7 @@ To create a Custom Asset:
 
 Once the asset has been created, you can add a new version from the asset portal.
 
-image::ex2-exchange-click-on-asset.png[Illustration - Click on asset in Exchange][height=300,width=600]
+image::ex2-exchange-click-on-asset.png[Illustration - Click on asset in Exchange][height=400,width=700]
 
 . Click on an asset (the asset portal is open)
 
