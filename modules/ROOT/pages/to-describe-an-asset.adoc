@@ -67,24 +67,39 @@ You can also delete the current added tag
 +
 
 
-== Edit asset portal pages
+== Edit asset portal
 
 image::ex2-exchange-click-on-edit-asset-portal.png[Illustration - Edit asset portal][height=300,width=300]
 
-. Click Edit to start editing the portal.
-The editor lets you change the appearance of text, insert code samples,
-block quotes, and horizontal lines. You can also insert a link to an external
-resource and to an image. The image has to be served on the web.
-+
-The Markdown editor also lets you add a link to a YouTube or Vimeo video to your asset description.
-+
-. After you create a page, you can add additional pages, tags, terms and conditions,
-and change versions for an asset or if describing an API, for versioning the API as well.
+. Click *Edit*.
+
 
 image::ex2-exchange-edditing-asset-portal.png[Illustration - Edit asset portal]
 
-After clicking on edit asset portal you should see the portal Editing mode
+. Start editing the portal.
+. The editor lets you change the appearance of text, insert code samples,
+block quotes, and horizontal lines. You can also insert a link to an external
+resource and to an image. The image has to be served on the web. _See below for details_
++
+The Markdown editor also lets you add a link to a YouTube or Vimeo video to your asset description.
++
+. After you describe the main page, you can click *Save as draft* to don't lose the content or click *Discard changes* if you want to discard them. If you save the draft, you can continue editing the pages before it is published
+. Once you create the main page, you can add additional pages and terms and conditions. _See below for details_
 
+image::ex2-exchange-publish-asset-portal.png[Illustration - Publish asset portal]
+
+. Once all the pages has been edited and saved you can click *Publish* to publish the portal.
+. Now, everyone in the organization can see your asset portal
+
+
+image::ex2-exchange-go-to-draft.png[Illustration - Go to draft asset portal]
+
+Until you publish the portal, it will be in _Draft Mode_, so, nobody will see the changes until it is published.
+If the *Publish* icon is not visible, click *Go To Draft* to see it.
+_The Go To Draft button appears only when you have started editing the portal, but you have not published it yet_
+
+
+== How to edit the a portal page
 
 === Add an Image
 
@@ -165,19 +180,6 @@ For example: `+![](https://www.youtube.com/embed/K3tuHUZ1J04)+`
 * Add the asset ID to a youtu.be URL: +
 Change: `+https://youtu.be/EhJM1GawQec+` +
 To: `+![](https://www.youtube.com/embed/EhJM1GawQec)+`
-
-
-== Change the Version of an Asset
-
-Exchange lets you version an API separately from an asset's version.
-
-. Click an asset.
-. Click the version indicator in the title: image:ex2-api-version.png[Version Indicator in title button].
-. Change the version as needed and press the Return key on your keyboard.
-
-To change the asset version, click Add New Version: image:ex2-add-new-version.png[Asset Version button].
-
-See also: xref:to-change-raml-version.adoc[To Change a RAML Version].
 
 
 == See Also
