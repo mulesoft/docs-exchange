@@ -37,7 +37,7 @@ image::ex2-exchange-create-new-asset.png[Illustration - How to Create a new asse
 . Go to Exchange
 . Click on *New asset*
 
-image::ex2-exchange-create-new-asset-form.png[Illustration - Create a new asset form]
+image::ex2-exchange-create-new-asset-form.png[Illustration - Create a new asset form][height=300,width=600]
 
 . Specify a name for the asset
 . Select the asset type
@@ -46,7 +46,7 @@ image::ex2-exchange-create-new-asset-form.png[Illustration - Create a new asset 
 
 === Advanced Settings
 
-image::ex2-exchange-advance-settings-form.png[Illustration - Advance Settings]
+image::ex2-exchange-advance-settings-form.png[Illustration - Advance Settings][height=300,width=600]
 
 Exchange generates the GroupId, AssetId, and version automatically. You can change the values if needed. For API assets, you can set the asset version and the API version separately.
 
@@ -58,7 +58,7 @@ The Advanced settings are most often used to change the version number.
 An API asset specifies what an interface consists of including its functions, descriptions, how to handle return codes, and dependencies.
 
 
-image::ex2-exchange-create-api-asset.png[Illustration - Advance Settings]
+image::ex2-exchange-create-api-asset.png[Illustration - Advance Settings][height=900,width=500]
 
 To create an API asset:
 
@@ -111,11 +111,11 @@ To create a Custom Asset:
 
 Once the asset has been created, you can add a new version from the asset portal.
 
-image::ex2-exchange-click-on-asset.png[Illustration - Click on asset in Exchange]
+image::ex2-exchange-click-on-asset.png[Illustration - Click on asset in Exchange][height=300,width=600]
 
 . Click on an asset (the asset portal is open)
 
-image::ex2-exchange-create-new-asset-version.png[Illustration - Create new asset version]
+image::ex2-exchange-create-new-asset-version.png[Illustration - Create new asset version][height=900,width=500]
 
 . Click *Add New Version* (behind the Versions table)
 . The new version screen lets you change the asset version, the version API version (if needed) and the File to upload (if the asset type requires it)
