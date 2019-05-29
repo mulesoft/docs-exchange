@@ -50,7 +50,7 @@ image::ex2-exchange-click-on-edit-icon.png[Illustration - Edit asset icon][heigh
 . Click on the pen icon beside the asset icon.
 . Select an image.
 +
-.. Once the icon is uploaded, if you want to remove the icon, click on the calcel icon beside the icon
+Once the icon is uploaded, if you want to remove the icon, click on the calcel icon beside the icon
 +
 . This action change the icon of all asset versions
 
@@ -63,7 +63,7 @@ image::ex2-exchange-click-on-add-asset-tag.png[Illustration - Add asset tags][he
 . Write a new tag.
 . Press Enter to confirm
 +
-.. You can also delete the current added tag
+You can also delete the current added tag
 +
 
 
