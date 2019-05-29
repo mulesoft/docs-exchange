@@ -6,11 +6,11 @@ endif::[]
 
 Once an asset has been created, you can edit its portal, changing its name, description and adding portal pages with content.
 
-image::ex2-exchange-click-on-asset.png[Illustration - Click on asset in Exchange]
+image::ex2-exchange-click-on-asset.png[Illustration - Click on asset in Exchange][height=350,width=700]
 
 To enter in an asset portal, click in the asset.
 
-image::ex2-exchange-asset-portal-empty.png[Illustration - Asset Portal]
+image::ex2-exchange-asset-portal-empty.png[Illustration - Asset Portal][height=400,width=700]
 
 This is an example of an asset portal.
 
@@ -19,7 +19,7 @@ This is an example of an asset portal.
 
 === Edit asset name
 
-image::ex2-exchange-click-on-edit-name.png[Illustration - Edit asset name]
+image::ex2-exchange-click-on-edit-name.png[Illustration - Edit asset name][height=200,width=400]
 
 . Click on the pen icon near to the asset's name or press the asset name.
 . Add the text you want the name to be.
@@ -32,7 +32,7 @@ To cancel the changes, click on the cancel icon.
 
 === Edit asset description
 
-image::ex2-exchange-click-on-edit-description.png[Illustration - Edit asset description]
+image::ex2-exchange-click-on-edit-description.png[Illustration - Edit asset description][height=200,width=400]
 
 . Click on the pen icon near to *Add description*.
 . Add the text you want the description of the asset to be.
@@ -45,7 +45,7 @@ To cancel the changes, click on the cancel icon.
 
 === Edit asset icon
 
-image::ex2-exchange-click-on-edit-icon.png[Illustration - Edit asset icon]
+image::ex2-exchange-click-on-edit-icon.png[Illustration - Edit asset icon][height=200,width=400]
 
 . Click on the pen icon beside the asset icon.
 . Select an image.
@@ -57,7 +57,7 @@ image::ex2-exchange-click-on-edit-icon.png[Illustration - Edit asset icon]
 
 === Add asset tags
 
-image::ex2-exchange-click-on-add-asset-tag.png[Illustration - Add asset tags]
+image::ex2-exchange-click-on-add-asset-tag.png[Illustration - Add asset tags][height=300,width=400]
 
 . Click on *Add a tag* behind the Versions table
 . Write a new tag.
@@ -69,7 +69,7 @@ image::ex2-exchange-click-on-add-asset-tag.png[Illustration - Add asset tags]
 
 == Edit asset portal pages
 
-image::ex2-exchange-click-on-edit-asset-portal.png[Illustration - Edit asset portal]
+image::ex2-exchange-click-on-edit-asset-portal.png[Illustration - Edit asset portal][height=300,width=300]
 
 . Click Edit to start editing the portal.
 The editor lets you change the appearance of text, insert code samples,
