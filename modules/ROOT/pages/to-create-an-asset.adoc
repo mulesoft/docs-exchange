@@ -58,7 +58,7 @@ The Advanced settings are most often used to change the version number.
 An API asset specifies what an interface consists of including its functions, descriptions, how to handle return codes, and dependencies.
 
 
-image::ex2-exchange-create-api-asset.png[Illustration - Advance Settings][height=900,width=500]
+image::ex2-exchange-create-api-asset.png[Illustration - Create API Asset][height=900,width=500]
 
 To create an API asset:
 
@@ -85,6 +85,8 @@ that is defined by API Manager.
 == Create a Custom Asset
 
 A custom asset lets you share information about any aspect of your organization such as announcements, documentation, videos, and sharing files. You can add an optional file to your Custom asset that users can download. The file is stored in Exchange.
+
+image::ex2-exchange-create-custom-asset.png[Illustration - Create API Asset][height=900,width=500]
 
 *Note:* Exchange only permits the following file types as the optional file in a Custom asset:
 
