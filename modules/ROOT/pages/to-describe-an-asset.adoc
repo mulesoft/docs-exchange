@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Once an asset has been created, you can edit its portal, changing its name, description and adding portal pages with content.
+Once an asset has been created, you can edit its portal, changing its name, its tags, its description, its icon and adding portal pages with content.
 
 image::ex2-exchange-click-on-asset.png[Illustration - Click on asset in Exchange][height=350,width=700]
 
@@ -12,8 +12,7 @@ To enter in an asset portal, click in the asset.
 
 image::ex2-exchange-asset-portal-empty.png[Illustration - Asset Portal][height=400,width=700]
 
-This is an example of an asset portal.
-
+This is an example of an empty asset portal.
 
 == Edit asset metadata
 
