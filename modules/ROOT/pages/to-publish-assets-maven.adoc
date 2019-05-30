@@ -77,7 +77,7 @@ In the EU, use:
 *Notes:*
 +
 ** *Important:* The `<classifier>` element must be set to make the asset visible in Exchange.
-** The `name` property represents the visible name of the asset. It only be used when the asset has the first version of a combination of a GroupId and an artifactId. If this property must be changed, it should be done from the asset portal: see xref:to-describe-an-asset.adoc[To Describe an Asset] for details.
+** The `name` property represents the visible name of the asset. It only be used when the asset has the first version of a combination of a GroupId and an artifactId. To change it, go to the asset portal: see xref:to-describe-an-asset.adoc[To Describe an Asset] for details.
 ** The `description` property represents the description of the asset. It only be used when the asset has the first version of a combination of a GroupId and an artifactId. To change it, go to the asset portal: see xref:to-describe-an-asset.adoc[To Describe an Asset] for details.
 ** Mule 3 applications can be deployed setting the property <type> to `app`. The asset won't be displayed in the Exchange asset list.
 ** Mule 3 `templates` and `examples` should be deployed using Anypoint Studio 6.3 or above.
