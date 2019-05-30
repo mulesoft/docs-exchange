@@ -26,7 +26,6 @@ image::ex2-exchange-click-on-edit-name.png[Illustration - Edit asset name][heigh
 +
 To cancel the changes, click on the cancel icon.
 +
-. This action change the name of all asset versions
 
 
 === Edit asset description
@@ -39,7 +38,6 @@ image::ex2-exchange-click-on-edit-description.png[Illustration - Edit asset desc
 +
 To cancel the changes, click on the cancel icon.
 +
-. This action change the description of all asset versions
 
 
 === Edit asset icon
@@ -51,7 +49,6 @@ image::ex2-exchange-click-on-edit-icon.png[Illustration - Edit asset icon][heigh
 +
 Once the icon is uploaded, if you want to remove the icon, click on the calcel icon beside the icon
 +
-. This action change the icon of all asset versions
 
 
 === Add asset tags
