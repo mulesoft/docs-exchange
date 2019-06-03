@@ -26,6 +26,7 @@ image::ex2-exchange-click-on-edit-name.png[Illustration - Edit asset name][heigh
 +
 To cancel the changes, click on the cancel icon.
 +
+_Note: Before the June 2019 release, individual asset versions could have different names. After the June 2019 release, changing the asset name will impact all asset versions._
 
 
 === Edit asset description
@@ -38,6 +39,7 @@ image::ex2-exchange-click-on-edit-description.png[Illustration - Edit asset desc
 +
 To cancel the changes, click on the cancel icon.
 +
+_Note: Before the June 2019 release, individual asset versions could have different names. After the June 2019 release, changing the asset description will impact all asset versions._
 
 
 === Edit asset icon
@@ -49,6 +51,7 @@ image::ex2-exchange-click-on-edit-icon.png[Illustration - Edit asset icon][heigh
 +
 Once the icon is uploaded, if you want to remove the icon, click on the calcel icon beside the icon
 +
+_Note: Before the June 2019 release, individual asset versions could have different names. After the June 2019 release, changing the asset icon will impact all asset versions._
 
 
 === Add asset tags
