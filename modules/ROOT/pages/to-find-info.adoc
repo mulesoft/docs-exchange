@@ -244,9 +244,7 @@ Examples:
 
 == Searching API Specifications
 
-Exchange searches API specification properties from the JSON LD provided by AMF.
-
-These properties are indexed:
+Exchange searches these API specification properties:
 
 * API Title
 * Base URI
@@ -266,22 +264,6 @@ Methods
 ** Name
 
 These property names are based on RAML specifications. Equivalent properties are indexed for OAS specifications. For example, RAML has base URI and OAS has host and path.
-
-Exchange searches data from these node types and properties in the JSON LD:
-
-[%header%autowidth.spread]
-|===
-|Type |Property
-|http:EndPoint |http:path
-|http:EndPoint |schema-org:name
-|http:EndPoint |schema-org:description
-|hydra:Operation |hydra:method
-|hydra:Operation |schema-org:description
-|http:Parameter |schema-org:name
-|http:Parameter |schema-org:description
-|schema-org:WebAPI |schema-org:name
-|http:Server |http:url
-|===
 
 API specification search example:
 
