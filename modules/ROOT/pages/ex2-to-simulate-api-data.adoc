@@ -6,17 +6,19 @@ endif::[]
 
 Exchange lets you provide simulated data for testing OAS or RAML REST APIs. The simulated data is provided in the Mocking Service feature.
 
-Simulating data access (Mocking Service) appears in Exchange:
+The Mocking Service appears in Exchange:
 
 * In the API console that appears on the right side of an asset detail screen. The Mocking Service lets you add simulated data to an API function and test the API with the data.
 +
 image::ex2-api-console.png[Mocking in API Console]
 +
-* As an instance with each version of an API.
+This page shows two URLs. The URL on the left is also used in Design Center and is public. The URL on the right is used only in Exchange and requires authentication.
++
+* Listed as an instance with each version of an API.
 +
 image::ex2-mock-in-versions.png[Mocking instance in versions]
 +
-* API Instances that lists the Mocking Service URL.
+* Listed on the *API instances* page that also lists the Mocking Service URL.
 +
 image::ex2-api-instances.png[API Instances Mocking Service URL]
 
