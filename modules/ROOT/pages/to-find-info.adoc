@@ -19,7 +19,14 @@ the HTTP functions in the REST specification.
 
 == Exchange Search
 
-Exchange Search looks for terms in asset names, tags, categories, properties defined in API specifications, custom attributes (also known as custom fields), and the portal content shown on the asset page. Search includes RAML and OAS APIs and all other assets in Exchange.
+Exchange Search looks for terms in:
+
+* each asset's name
+* tags
+* categories
+* custom attributes (also known as custom fields)
+* the content of the asset portal pages
+* xref:to-find-info.adoc#searching-api-specifications[properties defined in RAML and OAS API specifications]
 
 You can combine search terms with the filters listed in All Types.
 
