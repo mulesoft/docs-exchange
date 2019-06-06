@@ -36,8 +36,6 @@ Searches only apply to the Exchange you are viewing.
 
 If you search in a private Exchange, the search only lists the private Exchange assets and not public Exchange assets.
 
-If a search matches some versions of an asset and not other versions of the asset, then it returns the asset's latest matching version, even if that is not the asset's latest version.
-
 == Save a Search
 
 . Enter a search term and click Save This Search.
