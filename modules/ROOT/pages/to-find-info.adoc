@@ -21,12 +21,12 @@ the HTTP functions in the REST specification.
 
 Exchange Search looks for terms in:
 
-* each asset's name
-* tags
-* categories
-* custom attributes (also known as custom fields)
-* the content of the asset portal pages
-* xref:to-find-info.adoc#searching-api-specifications[properties defined in RAML and OAS API specifications]
+* Each asset's name
+* Tags
+* Categories
+* Custom attributes (also known as custom fields)
+* The content of the asset portal pages
+* xref:to-find-info.adoc#searching-api-specifications[Properties defined in RAML and OAS API specifications]
 
 You can combine search terms with the filters listed in All Types.
 
