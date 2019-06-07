@@ -32,9 +32,7 @@ You can combine search terms with the filters listed in All Types.
 
 You can also search by clicking Category or Tag elements. This creates a filtered search you can use to find similar assets.
 
-Searches only apply to the Exchange you are viewing.
-
-If you search in a private Exchange, the search only lists the private Exchange assets and not public Exchange assets.
+Searches only apply to the Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
 
 == Save a Search
 
