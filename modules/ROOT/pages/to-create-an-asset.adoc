@@ -62,7 +62,7 @@ A custom asset lets you share information about any aspect of your organization 
 *Note:* Exchange only permits the following file types as the optional file in a Custom asset:
 
 Images: `.jpg, .jpeg, .png, .gif, .svg` +
-Documents: `.doc, .docx, .pdf, .ppt, .pptx, .rtf, .vsd, .vsdx, .vss, .vsdx` +
+Documents: `.docx, .pdf, .pptx, .rtf, .vsdx, .vssx` +
 Compressed files: `.zip, .tgz, .jar, .gz, .7z` +
 Text files: `.txt, .json, .raml, .yaml, .yml, .md, .csv, .xml, .xsd, .wsdl, .html, .pom, .log, .sql`
 
