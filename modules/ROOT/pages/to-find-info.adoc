@@ -263,6 +263,7 @@ Methods
 ** Name
 * Types
 ** Name
+** Properties
 
 These property names are based on RAML specifications. Equivalent properties are indexed for OAS specifications. For example, RAML has base URI and OAS has host and path.
 
@@ -327,6 +328,7 @@ This API will be found by these searches:
 |team |Type name
 |leagues leagueId teams |Endpoint path
 |`/leagues/{leagueId}/teams` |Endpoint path
+|city |Type property name
 |===
 
 The last two searches are the same, because special characters are removed before searching.
