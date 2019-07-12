@@ -39,7 +39,7 @@ See also https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97b
 
 == Graph API Access URL
 
-You can access the Graph API at the `+https://anypoint.mulesoft.com/graph/api/v1/graphql+` URL. To search
+You can access the Graph API at the `+https://anypoint.mulesoft.com/graph/api/v1/graphiql+` URL. To search
 using the API, send a POST command containing the search string.
 
 For example:
@@ -47,7 +47,7 @@ For example:
 [source,json,linenums]
 ----
 curl -X POST \
-  https://anypoint.mulesoft.com/graph/api/v1/graphql \
+  https://anypoint.mulesoft.com/graph/api/v1/graphiql \
   -H 'content-type: application/json' \
   -d '{"query": "{ assets(query: { searchTerm: \"searchTerm\" }) { groupId, assetId, version } }"}'
 ----
