@@ -4,6 +4,10 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
+An organization's Exchange administrators control whether each API asset created in the organization is shared in the public portal. Set which users have the Exchange administrator role in the Access Management > Roles menu, and find more information in xref:to-set-permissions.adoc[Set User Access Permissions].
+
+== Add an Asset to a Public Portal
+
 . Click an API asset to show its details.
 . Click Share and click *Add to the public portal*.
 . (Optional) Click Share Internally if you decide to not put the asset in the public portal and instead return
@@ -30,3 +34,4 @@ setting in the asset's Overview has changed to Private.
 == See Also
 
 * xref:about-portals.adoc[Public Portals]
+* xref:to-set-permissions.adoc[Set User Access Permissions]
