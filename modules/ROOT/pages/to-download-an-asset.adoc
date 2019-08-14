@@ -28,5 +28,9 @@ If you choose As RAML, Exchange downloads the API specification as a zip file co
 * Connector: Downloads as a jar file.
 * Template: Downloads as a jar or zip file.
 * Example: Downloads as a zip file.
+* Policy: Click the down arrow.
++
+If you choose As Mule policy, Exchange downloads the policy definition as a jar file containing a YAML file for the definition. If you choose As Policy definition, Exchange downloads the definition as a YAML file.
++
 * Custom, with a file: Downloads the same format file that you uploaded, but the file name is based on your application name. For example, if you upload a text file for the Inventory Distribution project, Exchange downloads inventory-distribution.txt.
 * Custom without a file: The Download button does not appear.
