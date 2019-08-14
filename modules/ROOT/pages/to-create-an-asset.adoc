@@ -4,12 +4,12 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-In Anypoint Exchange private and Exchange portal, to share an API, example, template, or connector means that
+In Anypoint Exchange private and Exchange portal, to share an API, policy, example, template, or connector means that
 you first create an asset corresponding to the asset type.
 
 How you create an asset depends on its type.
 
-* For OAS 2.0, RAML, RAML fragments, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *New asset* menu.
+* For OAS 2.0, RAML, RAML fragments, HTTP, WSDL, Policy, and Custom assets, create the asset directly using the Exchange *New asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
 * You can also publish a RAML, and OAS and RAML fragments using Design Center and publishing the API to Exchange.
