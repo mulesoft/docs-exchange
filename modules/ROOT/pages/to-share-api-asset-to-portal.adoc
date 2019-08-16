@@ -4,32 +4,44 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-An organization's Exchange administrators control whether each API asset created in the organization is shared in the public portal. Set which users have the Exchange administrator role in the Access Management > Roles menu, and find more information in xref:to-set-permissions.adoc[Set User Access Permissions].
+You can use your organization's public portal to share API assets publicly. Developers inside and outside your organization can access the assets on the public portal.
+
+A public portal is visible to anyone who has the URL of the portal. The URL for a public portal starts with `+https://anypoint.mulesoft.com/exchange/portals/ORGANIZATION_NAME/+`.
+
+== Permissions to Control Asset Sharing
+
+An organization's Exchange administrators control whether each API asset created in the organization is shared in the public portal by adding assets to the public portal and removing assets from the public portal.
+
+Grant the Exchange administrator role to a user or revoke the role from a user with the *Access Management* -> *Roles* menu.
+
+For more information see xref:to-set-permissions.adoc[Set User Access Permissions].
 
 == Add an Asset to a Public Portal
 
-. Click an API asset to show its details.
-. Click Share and click *Add to the public portal*.
-. (Optional) Click Share Internally if you decide to not put the asset in the public portal and instead return
-to the previous Share menu.
-. (Optional) Click API Instances to manage instance visibility before proceeding. After following this link, you are
-returned to the previous Share menu.
-. Click the version of the asset you want to publish in the public portal.
-. Click Share. If no action occurs when you click Share, refresh your browser and log in again to repeat sharing the asset.
+Follow these steps to add an asset to a portal and make it public.
 
-A public portal is visible to anyone on the internet who has the URL of the portal. The URL for a public portal starts with `+https://anypoint.mulesoft.com/exchange/portals/ORGANIZATION_NAME/+`. To remove an asset from a public portal, you need to make the asset
-private as described in the next section.
+The asset is not deleted and is still available internally.
+
+. Select an API asset to show its details.
+. Select *Share* -> *Add to the public portal*.
+. (Optional) If you decide not to put the asset in the public portal, select *Share Internally* to return to the previous *Share* menu.
+. (Optional) If you wish to manage instance visibility before proceeding, select *API Instances*. After following this link, you are returned to the previous *Share* menu.
+. Select the version of the asset you want to publish in the public portal.
+. Select *Share*.
+
+If no action occurs, refresh your browser, log in again, and share the asset again.
 
 == Remove an Asset from a Public Portal
 
-*Note:* This procedure only takes the asset out of a portal. It doesn't delete the asset.
+Follow these steps to remove an asset from a portal and make it private.
 
-. Click the asset in Exchange and click Share.
-. Click Add to the Public Portal.
-. Click the version field checkbox to uncheck the field.
-. Click Share.
-. In Exchange, refresh the browser screen and you can see that the Visibility
-setting in the asset's Overview has changed to Private.
+The asset is not deleted and is still available internally.
+
+. Select the asset in Exchange and select *Share* -> *Add to the Public Portal*.
+. Uncheck the version field checkbox.
+. Select *Share*.
+. In Exchange, refresh the browser screen.
+. In the asset's *Overview* the *Visibility* setting is now *Private*.
 
 == See Also
 
