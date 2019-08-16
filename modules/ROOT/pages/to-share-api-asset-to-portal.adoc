@@ -20,7 +20,7 @@ For more information see xref:to-set-permissions.adoc[Set User Access Permission
 
 Follow these steps to add an asset to a portal and make it public.
 
-The asset is not deleted and is still available internally.
+Adding an asset to a portal does not delete the asset. It is still available internally.
 
 . Select an API asset to show its details.
 . Select *Share* -> *Add to the public portal*.
@@ -35,7 +35,7 @@ If no action occurs, refresh your browser, log in again, and share the asset aga
 
 Follow these steps to remove an asset from a portal and make it private.
 
-The asset is not deleted and is still available internally.
+Removing an asset from a portal does not delete the asset. It is still available internally.
 
 . Select the asset in Exchange and select *Share* -> *Add to the Public Portal*.
 . Uncheck the version field checkbox.
