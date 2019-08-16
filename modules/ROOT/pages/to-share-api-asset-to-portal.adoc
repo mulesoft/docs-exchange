@@ -18,7 +18,7 @@ For more information see xref:to-set-permissions.adoc[Set User Access Permission
 
 == Add an Asset to a Public Portal
 
-Follow these steps to add an asset to a portal and make it public.
+Follow these steps to add an asset to a portal and make the asset public.
 
 Adding an asset to a portal does not delete the asset. It is still available internally.
 
@@ -33,7 +33,7 @@ If no action occurs, refresh your browser, log in again, and share the asset aga
 
 == Remove an Asset from a Public Portal
 
-Follow these steps to remove an asset from a portal and make it private.
+Follow these steps to remove an asset from a portal and make the asset private.
 
 Removing an asset from a portal does not delete the asset. It is still available internally.
 
