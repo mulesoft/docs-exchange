@@ -27,6 +27,18 @@ This illustration summarizes how each asset type (in green) appears in Exchange:
 
 image::ex2-exchange-assets.png[Illustration - How Assets appear in Exchange]
 
+== Asset Limits
+
+Exchange uses an asset limit to prevent accidental or intentional denial of service by uploading too many assets.
+
+The limit is 500 assets for organizations with trial accounts, and 100,000 assets for other organizations.
+
+This asset count does not include soft deleted assets, hard deleted assets, or generated assets such as xref:to-deploy-using-rest-connect.adoc[Mule 3 and Mule 4 connectors generated automatically from APIs].
+
+Exchange shows a warning when an organization has reached 80% of its limit and an error when an organization has reached its limit.
+
+When the limit is reached, the *New asset* button on the home page and the *Add new version* button on the asset detail page show an error explaining that the limit has been reached and no more assets can be added.
+
 == Creating an API Asset
 
 An API asset specifies what an interface consists of including its functions, descriptions, how to handle return codes, and dependencies.
