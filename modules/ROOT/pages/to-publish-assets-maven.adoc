@@ -12,6 +12,8 @@ With Anypoint Exchange's https://anypoint.mulesoft.com/exchange/portals/anypoint
 * Templates
 * Policies
 
+NOTE: New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
+
 == Prerequisites
 
 This document assumes you are familiar with Maven, programming concepts, and command line
