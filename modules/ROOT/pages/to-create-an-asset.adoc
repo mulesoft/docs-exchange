@@ -39,6 +39,14 @@ When a master organization has reached 80% of its limit, Exchange shows a warnin
 
 When a master organization has reached its limit, Exchange shows an error. Also, using the *New asset* button on the home page or the *Add new version* button on the asset detail page shows an error explaining that the limit has been reached and no more assets can be added.
 
+Check the limit of your master organization with a CURL command like this. Replace `MASTER_ORGANIZATION_ID` with your master organization ID, and replace `ANYPOINT_TOKEN` with the authorization token with permissions for the master organization.
+
+----
+    curl -X GET \
+      https://anypoint.mulesoft.com/exchange/api/v1/organizations/MASTER_ORGANIZATION_ID/limits \
+      -H 'Authorization: bearer ANYPOINT_TOKEN'
+----
+
 == Creating an API Asset
 
 An API asset specifies what an interface consists of including its functions, descriptions, how to handle return codes, and dependencies.
