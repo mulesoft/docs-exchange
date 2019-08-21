@@ -19,4 +19,3 @@ Topics:
 == See Also
 
 * xref:to-describe-an-asset.adoc[To Describe an Asset]
-* xref:to-publish-an-asset.adoc[To Publish Asset Draft Content]

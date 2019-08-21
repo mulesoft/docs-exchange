@@ -4,113 +4,77 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Once an asset has been created, you can edit its portal, changing its name, its tags, its description, its icon and adding portal pages with content.
+You can edit an asset's portal, change its name, icon, description, and tags, and add portal pages with content.
 
-image::ex2-exchange-click-on-asset.png[Illustration - Click on asset in Exchange][height=350,width=700]
+In Exchange, open the asset list and select the asset. Exchange shows the asset portal.
 
-To enter in an asset portal, click in the asset.
+== Edit Asset Name
 
-image::ex2-exchange-asset-portal-empty.png[Illustration - Asset Portal][height=400,width=700]
+. Select the asset name or the pen icon after the asset name.
+. Enter the new asset name.
+. (Optional) To cancel the changes, select the cancel icon.
+. To save the new name, press the enter or return key on your keyboard, or select the check icon.
 
-This is an example of an empty asset portal.
-
-== Edit asset metadata
-
-=== Edit asset name
-
-image::ex2-exchange-click-on-edit-name.png[Illustration - Edit asset name][height=200,width=400]
-
-. Click on the pen icon near to the asset's name or press the asset name.
-. Add the text you want the name to be.
-. Press the Enter or click the check icon to change the asset name.
-+
-To cancel the changes, click on the cancel icon.
-+
-_Note: Before the June 2019 release, individual asset versions could have different names. After the June 2019 release, changing the asset name will impact all asset versions._
+NOTE: Before the August 2019 release, the versions of an asset could have different names. After the August 2019 release, a new asset name applies to all versions of the asset.
 
 
-=== Edit asset description
+== Edit Asset Icon
 
-image::ex2-exchange-click-on-edit-description.png[Illustration - Edit asset description][height=200,width=400]
-
-. Click on the pen icon near to *Add description*.
-. Add the text you want the description of the asset to be.
-. Click the check icon to behind the asset description.
-+
-To cancel the changes, click on the cancel icon.
-+
-_Note: Before the June 2019 release, individual asset versions could have different names. After the June 2019 release, changing the asset description will impact all asset versions._
-
-
-=== Edit asset icon
-
-image::ex2-exchange-click-on-edit-icon.png[Illustration - Edit asset icon][height=200,width=400]
-
-. Click on the pen icon beside the asset icon.
+. Select the pen icon beside the asset icon.
 . Select an image.
-+
-Once the icon is uploaded, if you want to remove the icon, click on the calcel icon beside the icon
-+
-_Note: Before the June 2019 release, individual asset versions could have different names. After the June 2019 release, changing the asset icon will impact all asset versions._
+. (Optional) To remove an asset icon, select the cancel icon beside the asset icon.
+
+NOTE: Before the August 2019 release, the versions of an asset could have different icons. After the August 2019 release, a new asset icon applies to all versions of the asset.
 
 
-=== Add asset tags
+== Edit Asset Description
 
-image::ex2-exchange-click-on-add-asset-tag.png[Illustration - Add asset tags][height=300,width=400]
+. Select the pen icon after the asset description.
+. Enter the new asset description.
+. (Optional) To cancel the changes, select the cancel icon.
+. To save the new name, select the check icon.
 
-. Click on *Add a tag* behind the Versions table
-. Write a new tag.
-. Press Enter to confirm
-+
-You can also delete the current added tag
-+
+NOTE: Before the August 2019 release, the versions of an asset could have different descriptions. After the August 2019 release, a new asset description applies to all versions of the asset.
 
 
-== Edit asset portal
+== Add Asset Tags
 
-image::ex2-exchange-click-on-edit-asset-portal.png[Illustration - Edit asset portal][height=300,width=300]
+You can search by tag name for assets in Exchange.
 
-. Click *Edit*.
+Tags can only be lower case, and upper case tags are converted to lowercase. Special characters are permitted. An asset can have any number of tags.
 
-
-image::ex2-exchange-edditing-asset-portal.png[Illustration - Edit asset portal]
-
-. Start editing the portal.
-. The editor lets you change the appearance of text, insert code samples,
-block quotes, and horizontal lines. You can also insert a link to an external
-resource and to an image. The image has to be served on the web. _See below for details_
-+
-The Markdown editor also lets you add a link to a YouTube or Vimeo video to your asset description.
-+
-. After you describe the main page, you can click *Save as draft* to don't lose the content or click *Discard changes* if you want to discard them. If you save the draft, you can continue editing the pages before it is published
-. Once you create the main page, you can add additional pages and terms and conditions. _See below for details_
-
-image::ex2-exchange-publish-asset-portal.png[Illustration - Publish asset portal]
-
-. Once all the pages has been edited and saved you can click *Publish* to publish the portal.
-. Now, everyone in the organization can see your asset portal
+. In the sidebar *Tags* list select *Add a tag*.
+. Enter the new tag.
+. Press the enter or return key on your keyboard.
 
 
-image::ex2-exchange-go-to-draft.png[Illustration - Go to draft asset portal]
+== Remove Asset Tags
 
-Until you publish the portal, it will be in _Draft Mode_, so, nobody will see the changes until it is published.
-If the *Publish* icon is not visible, click *Go To Draft* to see it.
-_The Go To Draft button appears only when you have started editing the portal, but you have not published it yet_
+To remove a tag, in the sidebar *Tags* list, select the *X* next to the tag text.
 
 
-== How to edit the a portal page
+== Edit Asset Portal
+
+. Select *Edit*.
+. Enter the new portal content.
+. In the editor you can change the appearance of text and insert code samples, block quotes, and horizontal lines.
+. Add images and videos as described below.
+. After you write the main page, select either *Discard changes* or *Save as draft*. You can edit and save a draft any number of times before publishing. Drafts are not visible to other users until they are published. When an asset has an unpublished draft, Exchange displays a *Go to draft* button to edit it.
+. Add secondary pages and terms and conditions as described below.
+. After you edit and save all your pages, publish the portal by selecting *Publish*.
+. Your asset portal is now visible to everyone in the organization.
 
 === Add an Image
 
 You can copy and paste an image directly into the Exchange page:
 
-. Click Edit
-. Click Visual mode
+. Select *Edit*.
+. Select *Visual mode*.
 . If your image is on your computer, drag the image to the Exchange page, or copy and paste to the Exchange page.
 +
 If the image is on a web server, copy the image and paste it into the Exchange page.
 
-Alternatively you can click the image icon in the editor and provide a URL to an illustration available on the web.
+Alternatively, select the image icon in the editor and provide a URL to an illustration available on the web.
 
 In Markdown, use this syntax to reference a web served image:
 
@@ -121,11 +85,11 @@ Images uploaded before May 2019 can be accessed without authentication, and imag
 
 === Add Secondary Pages
 
-. Click Edit.
-. In the left navigation area, click Add New Page and press the Return key on your keyboard to create the page. You can create as many pages as needed. In Exchange Portals, click Add Content Pages.
-. Add a description to the page. Anything you can add on the main page can be added to the subordinate page.
-. After creating a page, click Save As Draft so you don't lose content if Exchange times out.
-. When done creating pages, click Publish.
+. Select *Edit*.
+. In the left navigation area, select *Add New Page* and press the enter or return key on your keyboard to create the page. You can create as many pages as needed. In Exchange Portals, click *Add Content Pages*.
+. Add a description to the page. Secondary pages support the same options as the main page.
+. After creating a page, select *Save As Draft*.
+. After you edit and save all your pages, select *Publish*.
 
 In Edit mode, you can reorder pages by clicking the page name and dragging the page up or down in the left nav bar.
 
@@ -140,13 +104,13 @@ All page names are validated:
 
 === Specify Terms and Conditions
 
-. Click an asset and click Edit.
-. Click Add Terms and Conditions: image:ex2-terms.png[Terms and Conditions button]
+. Select an asset and select *Edit*.
+. Select *Add Terms and Conditions*: image:ex2-terms.png[Terms and Conditions button]
 . Use the editor to specify the terms and conditions for this asset.
-. Click Save As Draft.
-. Publish.
+. Select *Save As Draft*.
+. Select *Publish*.
 
-Note: Only available for APIs. Users are then prompted to accept the terms and conditions when requesting API access.
+NOTE: Terms and conditions are only available for API assets. Users are prompted to accept the terms and conditions when requesting API access.
 
 
 === Editor Notes
