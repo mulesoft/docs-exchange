@@ -8,14 +8,14 @@ You can edit an asset's portal, change its name, icon, description, and tags, an
 
 In Exchange, open the asset list and select the asset. Exchange shows the asset portal.
 
-== Edit Asset Name
+== Edit Asset Portal Name
 
-. Select the asset name or the pen icon after the asset name.
-. Enter the new asset name.
+. Select the asset portal name or the pen icon after the name.
+. Enter the new name.
 . (Optional) To cancel the changes, select the cancel icon.
 . To save the new name, press the enter or return key on your keyboard, or select the check icon.
 
-NOTE: Before the August 2019 release, the versions of an asset could have different names. After the August 2019 release, a new asset name applies to all versions of the asset.
+NOTE: Before the August 2019 release, the versions of an asset could have different names. After the August 2019 release, a new name applies to all versions of the asset.
 
 
 == Edit Asset Icon
@@ -34,7 +34,7 @@ NOTE: Before the August 2019 release, the versions of an asset could have differ
 . (Optional) To cancel the changes, select the cancel icon.
 . To save the new name, select the check icon.
 
-NOTE: Before the August 2019 release, the versions of an asset could have different descriptions. After the August 2019 release, a new asset description applies to all versions of the asset.
+NOTE: A new asset description applies to all versions of the asset.
 
 
 == Add Asset Tags

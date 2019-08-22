@@ -35,7 +35,7 @@ An API asset specifies an interface, including its functions, descriptions, how 
 To create an API asset:
 
 . In Exchange, select *New asset*.
-. Enter the asset name.
+. Enter the asset portal name.
 . Select the asset type from the drop-down list:
 +
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
@@ -72,11 +72,32 @@ MuleSoft recommends deleting all old Custom assets containing files of types tha
 To create a custom asset:
 
 . In Exchange, select *New asset*.
-. Enter the asset name.
+. Enter the asset portal name.
 . Select the asset type *Custom* from the drop-down list.
 . (Optional) To share a file with users, choose the file.
 . (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, and *Version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. The advanced settings are most often used to change the asset version.
 . Select *Publish*.
+
+
+== Asset Name, Icon, and Description Properties
+
+You can create assets in API Designer or Exchange. After the asset is created, the asset name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[To Describe an Asset].
+
+=== Properties of Assets Created in API Designer
+
+API Designer reads and uses the name of the asset from the RAML specification.
+
+Before the asset is published in Exchange, you can edit the name in API Designer.
+
+After the asset is published in Exchange, the name is used as the asset portal name. Any publication from API Designer to update the version of an asset in Exchange has the name field disabled, and shows the name from Exchange. The name, icon, and description properties can only be changed in the Exchange asset details page.
+
+=== Properties of Assets Created in Exchange
+
+When you create an asset in Exchange, you enter the name.
+
+The name cannot be changed when adding a new version in Exchange.
+
+The name, icon, and description properties can only be changed in the Exchange asset details page.
 
 
 == Create a New Version of an Existing Asset
