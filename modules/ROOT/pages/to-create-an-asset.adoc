@@ -90,6 +90,8 @@ If you have contributor or admin access to an asset, you can add a new version f
 . (Optional) Choose a file to upload.
 . Select *Publish*.
 
+The new version of the asset has the same name, icon, and description as the previous version. Any changes to these properties apply to all versions of the asset.
+
 
 == See Also
 
