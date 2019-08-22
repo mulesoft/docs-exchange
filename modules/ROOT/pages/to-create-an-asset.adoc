@@ -29,11 +29,11 @@ image::ex2-exchange-assets.png[Illustration - How Assets appear in Exchange]
 
 == Asset Limits
 
-Exchange uses an asset limit to prevent accidental or intentional denial of service by uploading too many assets.
+Exchange prevents resource exhaustion attacks by limiting the number of asset versions that can be published.
 
 The limit is 500 assets for master organizations with trial accounts, and 100 000 (one hundred thousand) assets for other master organizations.
 
-This asset count does not include soft deleted assets, hard deleted assets, or generated assets such as xref:to-deploy-using-rest-connect.adoc[Mule 3 and Mule 4 connectors generated automatically from APIs].
+This asset count does not include deleted assets or generated assets such as xref:to-deploy-using-rest-connect.adoc[Mule 3 and Mule 4 connectors generated automatically from APIs].
 
 When a master organization has reached 80% of its limit, Exchange shows a warning.
 
