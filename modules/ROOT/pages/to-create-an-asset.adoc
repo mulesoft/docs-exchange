@@ -81,7 +81,7 @@ To create a custom asset:
 
 == Asset Name, Icon, and Description Properties
 
-You can create assets in API Designer or Exchange. After the asset is created, the asset name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[To Describe an Asset].
+You can create assets in API Designer or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[To Describe an Asset].
 
 === Properties of Assets Created in API Designer
 
