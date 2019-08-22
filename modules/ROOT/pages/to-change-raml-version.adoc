@@ -20,6 +20,8 @@ you add a new version to an existing asset.
 
 For an HTTP API, because the asset is only an endpoint, it makes no sense to increase the patch or minor versions in every new publication. HTTP APIs therefore only have major version increases and also changes to the API version.
 
+When creating a new version of an asset, the name, icon, and description of the previous version are used. To change these properties use the instructions in xref:to-describe-an-asset.adoc[Describe an Asset]. Any changes to the asset name, icon, or description apply to all versions of the asset.
+
 == Deploy a New API Version
 
 You can deploy an API asset directly into Exchange using the *New asset* button. In the *Publish a new asset* window, the Advanced section lets you specify the version of the asset 
