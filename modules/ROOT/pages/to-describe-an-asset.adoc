@@ -34,7 +34,7 @@ NOTE: Before the August 2019 release, the versions of an asset could have differ
 . (Optional) To cancel the changes, select the cancel icon.
 . To save the new name, select the check icon.
 
-NOTE: A new asset description applies to all versions of the asset.
+NOTE: The asset description applies to all versions of the asset.
 
 
 == Add Asset Tags
