@@ -3,10 +3,10 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can delete an asset in the first 7 days of its creation and reuse the asset's same name, group, asset ID, and version. A delete within the first 7 days is known as a _hard delete_.
+You can delete an asset in the first seven days of its creation and reuse that asset's name, group, asset ID, and version. A delete within the first seven days is known as a _hard delete_.
 
-If you delete the asset after 7 days, you can't reuse the same name, business group name, account ID, and version.
-A delete after 7 days is known as a _soft delete_. After 7 days if you want to reuse the asset name,
+If you delete the asset after seven days, you can't reuse its name, business group name, account ID, and version.
+A delete after seven days is known as a _soft delete_. After seven days, if you want to reuse the asset name,
 choose a new version number or put the asset in a different business group.
 
 To delete an asset:
