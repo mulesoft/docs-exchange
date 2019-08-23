@@ -47,6 +47,18 @@ Check the limit of your master organization with a CURL command like this. Repla
       -H 'Authorization: bearer ANYPOINT_TOKEN'
 ----
 
+Get lists of assets with a CURL command like this, varying the `limit` and `offset` values as needed. Replace `MASTER_ORGANIZATION_ID` with your master organization ID, and replace `ANYPOINT_TOKEN` with the authorization token with permissions for the master organization.
+
+----
+    curl -X POST \
+      https://anypoint.mulesoft.com/graph/api/v1/graphql \
+      -H 'content-type: application/json' \
+      -H 'Authorization: bearer ANYPOINT_TOKEN' \
+      -d '{"query":"{assets(query: { masterOrganizationId:\"MASTER_ORGANIZATION_ID\", limit: 20, offset: 10 }) {groupId assetId version}}"}'
+----
+
+See xref:to-search-with-graph-api.adoc[Search Using the Graph API] for more information about searching for assets.
+
 == Creating an API Asset
 
 An API asset specifies what an interface consists of including its functions, descriptions, how to handle return codes, and dependencies.
