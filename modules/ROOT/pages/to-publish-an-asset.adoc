@@ -1,0 +1,20 @@
+= Publish Asset Draft Content
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+When an asset is created, Exchange requires that you click Publish to complete creating the asset.
+Control then passes to the edit menu where you can add a description.
+
+If you add a description, you need to publish the asset draft content so that the description is
+visible to users who utilize the asset. To publish the asset draft update,
+click Publish image:ex2-publish.png[Button - Publish in the task bar].
+
+If this icon is not visible, click Go To Draft.
+
+After updating the description, you can add tags, share your asset, or download a copy.
+
+== See Also
+
+* xref:to-describe-an-asset.adoc[Describe an Asset]
