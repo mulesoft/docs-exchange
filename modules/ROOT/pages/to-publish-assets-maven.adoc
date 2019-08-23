@@ -16,7 +16,7 @@ NOTE: New assets count toward your organization's xref:to-create-an-asset.adoc#a
 
 == Prerequisites
 
-This document assumes you are familiar with Maven, programming concepts, and command line
+To benefit from this documentation, you must be familiar with Maven, programming concepts, and command line
 operations on your computer or server.
 
 Note: You must have a unique artifact name and organization ID to publish your asset.
