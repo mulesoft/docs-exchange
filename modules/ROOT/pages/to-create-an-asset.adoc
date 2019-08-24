@@ -25,11 +25,47 @@ Note: In addition to asset versions, APIs have a consumer facing API version tha
 
 This illustration summarizes how each asset type (in green) appears in Exchange:
 
-image::ex2-exchange-assets.png[Illustration - How Assets appear in Exchange]
+image::ex2-exchange-assets.png[]
+
+== Asset Limits
+
+Exchange prevents resource exhaustion attacks by limiting the number of asset versions that can be published.
+
+The limit is 500 assets for master organizations with trial accounts, and 100 000 (one hundred thousand) assets for other master organizations.
+
+This asset count does not include deleted assets or generated assets such as xref:to-deploy-using-rest-connect.adoc[Mule 3 and Mule 4 connectors generated automatically from APIs].
+
+When a master organization has reached 80% of its limit, Exchange shows a warning.
+
+When a master organization has reached its limit, Exchange shows an error. Also, using the *New asset* button on the home page or the *Add new version* button on the asset detail page shows an error explaining that the limit has been reached and no more assets can be added.
+
+Check the limit of your master organization with a CURL command like this:
+
+----
+    curl -X GET \
+      https://anypoint.mulesoft.com/exchange/api/v1/organizations/MASTER_ORGANIZATION_ID/limits \
+      -H 'Authorization: bearer ANYPOINT_TOKEN'
+----
+
+Replace `MASTER_ORGANIZATION_ID` with your master organization ID, and replace `ANYPOINT_TOKEN` with the authorization token with permissions for the master organization.
+
+Get lists of assets with a CURL command like this:
+
+----
+    curl -X POST \
+      https://anypoint.mulesoft.com/graph/api/v1/graphql \
+      -H 'content-type: application/json' \
+      -H 'Authorization: bearer ANYPOINT_TOKEN' \
+      -d '{"query":"{assets(query: { masterOrganizationId:\"MASTER_ORGANIZATION_ID\", limit: 20, offset: 10 }) {groupId assetId version}}"}'
+----
+
+Replace `MASTER_ORGANIZATION_ID` with your master organization ID, and replace `ANYPOINT_TOKEN` with the authorization token with permissions for the master organization. Vary the `limit` and `offset` values as needed.
+
+See xref:to-search-with-graph-api.adoc[Search Using the Graph API] for more information about searching for assets.
 
 == Creating an API Asset
 
-An API asset specifies what an interface consists of including its functions, descriptions, how to handle return codes, and dependencies.
+An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
 
 . In Exchange, click *New asset*.
 . Specify a name for the asset.
