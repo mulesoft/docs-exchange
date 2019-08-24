@@ -19,13 +19,20 @@ the HTTP functions in the REST specification.
 
 == Exchange Search
 
-Search lets you find Exchange assets that contain one or more terms
-in an asset title, asset ID, or a tag in an asset. You can also combine search terms with the filters listed in All Types.
-Searches only apply to the Exchange you are viewing.
-If you search in a private Exchange, the search only lists the
-private Exchange assets and not public Exchange assets.
+Exchange Search looks for terms in:
+
+* Each asset's name
+* Tags
+* Categories
+* Custom attributes (also known as custom fields)
+* The content of the asset portal pages
+* xref:to-find-info.adoc#searching-api-specifications[Properties defined in RAML and OAS API specifications]
+
+You can combine search terms with the filters listed in All Types.
 
 You can also search by clicking Category or Tag elements. This creates a filtered search you can use to find similar assets.
+
+Searches only apply to the Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
 
 == Save a Search
 
@@ -69,19 +76,16 @@ This is similar to putting the `*` wildcard regular expression after each word.
 For example searching for `mq module` finds any asset that has text that
 starts with `mq` or `module`.
 
-Each word in a multiple word phrase needs to be present in an asset name, asset ID, or tag
-for a search to succeed.
+Searching for a multiple word phrase shows assets that have every word in the phrase.
 
-If you separate search words with any other character than a space, Exchange
+If you separate search words with any character other than a space, Exchange
 converts the character to a space before searching.
 
 === Search Separators
 
-Search lets you find Exchange assets that contain one or more terms in an asset name, asset ID, or a tag.
+Search lets you find Exchange assets that contain one or more terms.
 
 If you input search words connected by non-alphanumeric symbols, Exchange replaces the symbols with spaces before searching for the term. The search string only succeeds if both words are present in the result. This is the same as the `word1 AND word2` relationship.
-
-Exchange searches asset names, asset ID values, and tag values. Assets migrated from Exchange 1 also allow the search to include text in an asset's description.
 
 Example search terms:
 
@@ -117,7 +121,7 @@ the reason is provided.
 
 Exchange search features phrase search, which allows you to query for a group of terms inside quotation marks. Phrase searches match an asset only if all the exact terms inside quotes appear in consecutive order.
 
-If you input any of the following searches in Exchange, Exchange replaces  non-alphanumeric symbols to spaces before searching for assets.
+If you input any of the following searches in Exchange, Exchange replaces non-alphanumeric symbols with spaces before searching for assets.
 
 Example search terms:
 
@@ -153,10 +157,12 @@ Using query language allows you to search assets by tags, categories, and custom
 === Search by Tags
 
 You can use the following structure to search by tags: `tag:"some value"` or `tag:value`
-Double quotes are not necessary if the tag has no spaces.
-Also, tag search is case insensitive.
 
-The table that follows shows examples that match or not with the searched assets:
+Double quotes are not necessary if the tag has no spaces.
+
+Tag search is case insensitive.
+
+Examples:
 
 [%header%autowidth.spread]
 |===
@@ -173,11 +179,14 @@ The table that follows shows examples that match or not with the searched assets
 === Search by Categories
 
 You can use the following structure to search by categories: `category:"some key" = "some value"`
-Double quotes are not necessary if the category has no spaces in the key or value.
-The key can include the asterisk (`*`) regular expression to search for characters within a category name.
-Also, key and value are case sensitive, but if you search for the value in lowercase it matches anyway.
 
-The table that follows shows examples that match or not with the searched assets:
+Double quotes are not necessary if the category has no spaces in the key or value.
+
+The key can include the asterisk (`*`) regular expression to search for characters within a category name.
+
+Key and value are case sensitive, except that if you search for the value in lowercase it matches.
+
+Examples:
 
 [%header%autowidth.spread]
 |===
@@ -194,7 +203,9 @@ The table that follows shows examples that match or not with the searched assets
 |category:this.* = some-* |this.is.my.key:some-value |No
 |===
 
-You can search for a combination of different categories, but you can't search for multiple values of the same category. Multiple search terms use an implicit AND. OR is not supported.
+You can search for a combination of different categories, but you can't search for multiple values of the same category.
+
+Multiple search terms use an implicit AND. OR is not supported.
 
 The following search terms return all assets marked as both System APIs and Salesforce products:
 
@@ -203,12 +214,16 @@ The following search terms return all assets marked as both System APIs and Sale
 === Search by Custom Fields
 
 Similar to search by Categories, you can search for `field` instead `category` in the query language.
-You can use the following structure to search by categories: `field:"some key" = "some value"`
-Double quotes are not necessary if the custom field has no spaces in key or value.
-The key can include the asterisk (`*`) regular expression to search for characters within a field name.
-Also, key and value are case sensitive, but if you search for the value in lowercase it matches anyway.
 
-The table that follows shows examples that match or not with the searched assets:
+You can use the following structure to search by categories: `field:"some key" = "some value"`
+
+Double quotes are not necessary if the custom field has no spaces in key or value.
+
+The key can include the asterisk (`*`) regular expression to search for characters within a field name.
+
+Key and value are case sensitive, except that if you search for the value in lowercase it matches.
+
+Examples:
 
 [%header%autowidth.spread]
 |===
@@ -227,6 +242,96 @@ The table that follows shows examples that match or not with the searched assets
 |field:this.* = value |this.is.my.key:some-value |No
 |field:this.* = some-* |this.is.my.key:some-value |No
 |===
+
+== Searching API Specifications
+
+Exchange searches these API specification properties:
+
+* API Title
+* Base URI
+* Endpoints
+** Path
+** Display name
+** Description
+Methods
+** Method type (GET, POST, ...)
+** Description
+* Query Parameters
+** Name
+** Description
+* URI Parameters
+** Name
+* Types
+** Name
+** Properties
+
+These property names are based on RAML specifications. Equivalent properties are indexed for OAS specifications. For example, RAML has base URI and OAS has host and path.
+
+API specification search example:
+
+[source,text,linenums]
+----
+#%RAML 1.0
+---
+title: Leagues API
+version: v1
+baseUri: https://leagues.com/api/
+
+types:
+ Team:
+   properties:
+     name: string
+     city: string
+
+/leagues/{leagueId}:
+ displayName: League resource
+ description: Contains all the information about a league
+ uriParameters:
+   leagueId:
+     displayName: League ID
+     description: The ID of the league to retrieve information from
+ /teams:
+   get:
+     displayName: Teams directory
+     description: Get list of all teams in the league
+     queryParameters:
+       offset:
+         displayName: Offset
+         description: Offset for the result set
+     responses:
+       200:
+         body:
+           application/json:
+               type: Team[]
+   post:
+     displayName: Create team
+     description: Creates a new team in the league
+     responses:
+       201:
+         description: New team has been created
+----
+
+This API will be found by these searches:
+
+[%header%autowidth.spread]
+|===
+|Search term |Matches
+|league API |API title
+|leagues.com |API baseUri
+|`/leagues` |Endpoint path
+|League resource |Endpoint display name
+|Information about a league |Endpoint description
+|POST |Endpoint method
+|create team |Endpoint method description
+|offset |Query parameter name, Query parameter description
+|leagueid |URI parameter name
+|team |Type name
+|leagues leagueId teams |Endpoint path
+|`/leagues/{leagueId}/teams` |Endpoint path
+|city |Type property name
+|===
+
+The last two searches are the same, because special characters are removed before searching.
 
 == See Also
 

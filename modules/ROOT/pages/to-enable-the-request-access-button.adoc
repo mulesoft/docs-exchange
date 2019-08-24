@@ -9,7 +9,7 @@ This topic requires the Exchange Administrator role.
 Users specify what applications can have access to an API by clicking the
 Request Access button image:ex2-request-access.png[Button - Request Access].
 
-Exchange Administrators see the Request Access in the More Options menu image::ex2-more-options-icon.png[].
+Exchange Administrators see the Request Access in the More Options menu image:ex2-more-options-icon.png[More Options icon].
 
 However, just creating an API asset does not cause the Request Access button to display.
 You have to configure the asset first:
