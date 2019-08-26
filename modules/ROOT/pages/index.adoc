@@ -39,7 +39,7 @@ Both the public and private content in Exchange can consist of the following kin
 * Connectors - Packaged connectivity to an endpoint developed and deployed on Anypoint Platform with third-party APIs and standard integration protocols. Use connectors within your application's flows to send and receive data using a protocol or specific API. Anypoint Studio comes with many bundled connectors, and Exchange has many more.
 * Templates - Packaged integration patterns built on best practices to address common use cases. You can add your information such as user credentials to complete the template's use case or solution, and you can customize or extend templates as needed.
 * Examples - Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
-* Policies - Configuration modules to extend the functionality of an API and enforce capabilities, such as security.
+* Policies - Configuration modules to extend the functionality of an API and enforce capabilities such as security.
 * REST APIs - A RAML file or OAS file that specifies an API. These APIs can be referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
 * SOAP APIs - A WSDL file that specifies an API.
 * HTTP APIs - A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
