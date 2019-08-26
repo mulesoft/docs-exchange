@@ -13,8 +13,8 @@ text with an All Types filter.
 
 When you click an asset, Exchange provides detailed information:
 
-* Left navigation area - Lists additional pages, saved search terms, application names, instances, and for a REST API,
-the HTTP functions in the REST specification.
+* Left navigation area - Lists additional pages, saved search terms, application names, and instances. For a REST API,
+this area lists the HTTP functions in the REST specification. For a policy, this area lists *Terms and conditions* and *APIs using this policy*.
 * Right detail panel - Lists the asset type, when the asset was created and by which organization, when the asset was last published, the version, and the asset's dependencies. For REST APIs, the right panel lets you test the API by creating example calls, test data (mocking), and the ability to send data to the API and view the results.
 
 == Exchange Search
