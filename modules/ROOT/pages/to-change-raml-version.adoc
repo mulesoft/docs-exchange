@@ -12,18 +12,19 @@ Anypoint Exchange lets you create API assets for:
 
 This document describes how to change the version for any of these assets. Exchange versions follow the https://semver.org/[Semantic Versioning] model of major, minor, and patch releases.
 
-Each API asset contains a field for the *Version*, which is the version number of the asset, and the *API version*, which identifies the version of the API specification. For RAML, OAS, 
-and SOAP assets, the API specification version is coded inside the specification itself. Because an HTTP API asset is only an endpoint to which you can provide policies or proxies, the API version field doesn't apply. 
+Each API asset contains a Version field, which is the version number of the asset, and an API version field, which identifies the version of the API specification. For RAML, OAS, and SOAP assets, the API specification version is coded inside the specification itself.
 
-The Version and API Version fields are only visible when you add a new asset or when
-you add a new version to an existing asset.
+Because an HTTP API asset is an endpoint, to which you can provide only policies or proxies, the API version field doesn't apply. HTTP APIs have only major version increases and do not have minor or patch version changes.
 
-For an HTTP API, because the asset is only an endpoint, it makes no sense to increase the patch or minor versions in every new publication. HTTP APIs therefore only have major version increases and also changes to the API version.
+The Version and API version fields are visible only when you add a new asset or when you add a new version to an existing asset.
 
-== Deploy a New API Version
+When creating a new version of an asset, the name, icon, and description of the previous version are used. To change these properties use the instructions in xref:to-describe-an-asset.adoc[Describe an Asset]. Any changes to the name, icon, or description apply to all versions of the asset.
 
-You can deploy an API asset directly into Exchange using the *New asset* button. In the *Publish a new asset* window, the Advanced section lets you specify the version of the asset 
-in the *Version* field, and the version of the API specification in the *API version* field.
+NOTE: New asset versions count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
+
+== Deploy a New API Asset
+
+You can deploy an API asset directly into Exchange using the *New asset* button. In the *Publish a new asset* window, the Advanced section enables you to specify the version of the asset in the *Version* field, and the version of the API specification in the *API version* field.
 
 image::ex-publish-a-new-asset.png[]
 

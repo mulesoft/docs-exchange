@@ -12,9 +12,11 @@ With Anypoint Exchange's https://anypoint.mulesoft.com/exchange/portals/anypoint
 * Templates
 * Policies
 
+NOTE: New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
+
 == Prerequisites
 
-This document assumes you are familiar with Maven, programming concepts, and command line
+To benefit from this documentation, you must be familiar with Maven, programming concepts, and command line
 operations on your computer or server.
 
 Note: You must have a unique artifact name and organization ID to publish your asset.
@@ -65,6 +67,8 @@ In the EU, use:
  ...
  <properties>
   ...
+  <name>asset name</name>
+  <description>asset description</description>
   <mule.version>3.9.0</mule.version>
   <mule.tools.version>1.2</mule.tools.version>
   <type>app</type>
@@ -74,7 +78,9 @@ In the EU, use:
 +
 *Notes:*
 +
-** *Important:* The `<classifier>` element must be set to make the asset visible in Exchange. 
+** *Important:* The `<classifier>` element must be set to make the asset visible in Exchange.
+** The `name` property represents the visible name of the asset. If you are publishing the first version of a GA (GroupId and AssetId combination), the asset name is taken from the POM file. If there is already at least one version of the GA, the `name` property is ignored. You can change the name in the asset portal as described in xref:to-describe-an-asset.adoc[Describe an Asset].
+** The `description` property represents the description of the asset. If you are publishing the first version of a GA (GroupId and AssetId combination), the asset description is taken from the POM file. If there is already at least one version of the GA, the `description` property is ignored. You can change the description in the asset portal as described in xref:to-describe-an-asset.adoc[Describe an Asset].
 ** Mule 3 applications can be deployed setting the property <type> to `app`. The asset won't be displayed in the Exchange asset list.
 ** Mule 3 `templates` and `examples` should be deployed using Anypoint Studio 6.3 or above.
 ** For Mule 3 or Mule 4 connectors, do not specify a `<type>` value. The Maven Facade determines the type automatically.
