@@ -18,6 +18,8 @@ Because an HTTP API asset is an endpoint, to which you can provide only policies
 
 The Version and API version fields are visible only when you add a new asset or when you add a new version to an existing asset.
 
+When creating a new version of an asset, the name, icon, and description of the previous version are used. To change these properties use the instructions in xref:to-describe-an-asset.adoc[Describe an Asset]. Any changes to the name, icon, or description apply to all versions of the asset.
+
 NOTE: New asset versions count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
 
 == Deploy a New API Asset

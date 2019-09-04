@@ -11,7 +11,7 @@ How you create an asset depends on its type.
 
 * For OAS 2.0, RAML, RAML fragments, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *New asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
-* For a connector or policy, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
+* For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
 * You can also publish a RAML, and OAS and RAML fragments using Design Center and publishing the API to Exchange.
 +
 Another way to publish these type of assets is using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
@@ -63,13 +63,15 @@ Replace `MASTER_ORGANIZATION_ID` with your master organization ID, and replace `
 
 See xref:to-search-with-graph-api.adoc[Search Using the Graph API] for more information about searching for assets.
 
-== Creating an API Asset
+== Create an API Asset
 
 An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
 
-. In Exchange, click *New asset*.
-. Specify a name for the asset.
-. Click the asset type from the drop-down list:
+To create an API asset:
+
+. In Exchange, select *New asset*.
+. Enter the asset portal name.
+. Select the asset type from the drop-down list:
 +
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
 * REST API - OAS: Provide an OAS/Swagger 2.0 API specification file. (Exchange does not support OAS 3.0.) OAS specifications can be either a YAML (.yaml) or JSON (.json) file.
@@ -80,16 +82,12 @@ that is defined by API Manager.
 +
 . For RAML, API Spec Fragment, OAS, and WSDL assets:
 +
-.. Click Choose File to locate the API specification file.
+.. Select *Choose File* to locate the API specification file.
 .. Select the Main file of the API. If the file is a zip, the Main file should be in the root directory inside the zip. If the file is not a zip or if it has only one Main file, it's selected automatically.
 +
-. Click Publish.
+. (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
+. Select *Publish*.
 
-== Advanced Settings
-
-Exchange generates the GroupId, AssetId, and version automatically. You can change the values if needed. For an OAS asset, you can set the asset version and the API version separately.
-
-The Advanced settings are most often used to change the version number.
 
 == Create a Custom Asset
 
@@ -106,21 +104,50 @@ A file without a file type is not allowed. All file types are case insensitive.
 
 MuleSoft recommends deleting all old Custom assets containing files of types that are no longer permitted. For any Custom asset containing a non-supported file, delete the asset to remove the file.
 
-To create a Custom Asset:
+To create a custom asset:
 
-. Click *New asset*.
-. Specify a name for the asset.
-. Click the Custom Asset Type.
-. If you want to share a file with users, click Choose File to locate the file.
-. Click Publish.
+. In Exchange, select *New asset*.
+. Enter the asset portal name.
+. Select the asset type *Custom* from the drop-down list.
+. (Optional) To share a file with users, choose the file.
+. (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, and *Version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. The advanced settings are most often used to change the asset version.
+. Select *Publish*.
 
-== Add a File to an Existing Asset
 
-If you have contributor or admin access to an asset, you can add a file to an existing asset.
+== Asset Name, Icon, and Description Properties
 
-Click the asset and click Add New Version. The new version screen lets you change the asset name, choose a file to add, and change the asset's version.
+You can create assets in API Designer or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[Describe an Asset].
 
-If you don't want to add a new version, if you have contributor or admin access to an asset, serve the file from a web server in your organization and edit the asset to add a link to the file in the asset's description.
+=== Properties of Assets Created in API Designer
+
+API Designer reads and uses the name of the asset from the RAML specification.
+
+Before the asset is published in Exchange, you can edit the name in API Designer.
+
+After the asset is published in Exchange, the name is used as the asset portal name. Any publication from API Designer to update the version of an asset in Exchange has the name field disabled, and shows the name from Exchange. The name, icon, and description properties can only be changed in the Exchange asset details page.
+
+=== Properties of Assets Created in Exchange
+
+When you create an asset in Exchange, you enter the name.
+
+The name cannot be changed when adding a new version in Exchange.
+
+The name, icon, and description properties can only be changed in the Exchange asset details page.
+
+
+== Create a New Version of an Existing Asset
+
+If you have contributor or admin access to an asset, you can add a new version from the asset portal:
+
+. In Exchange, open the asset list and select the asset.
+. In the sidebar *Versions* table, select *Add New Version*.
+. Enter the *Version* (asset version).
+. (Optional) Enter the *API version*.
+. (Optional) Choose a file to upload.
+. Select *Publish*.
+
+The new version of the asset has the same name, icon, and description as the previous version. Any changes to these properties apply to all versions of the asset.
+
 
 == See Also
 

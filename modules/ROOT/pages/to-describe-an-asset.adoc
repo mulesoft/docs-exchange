@@ -4,36 +4,77 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-. Click an asset.
-. Click Edit to add a description. The editor lets you change the appearance of text,
-insert code samples, block quotes, and horizontal lines. You can also insert a link
-to an external resource and to an image. The image has to be served on the web.
-+
-The Markdown editor also lets you add a link to a YouTube or Vimeo video to your asset description.
-+
-. After you create a page, you can add additional pages, tags, terms and conditions,
-and change versions for an asset or if describing an API, for versioning the API as well.
+You can edit an asset's portal, change its name, icon, description, and tags, and add portal pages with content.
 
-== Change an Asset Title
+In Exchange, open the asset list and select the asset. Exchange shows the asset portal.
 
-. Position your mouse pointer in the asset's title and add the text you want the title to be.
-. Press the Enter (or Return) key on your keyboard.
-+
-If you don't press the Enter (Return) key, the title reverts to its former text.
-+
-If you edit the title and click out of the edit field rather than press Enter (Return), the title does not display your changes. Click back in the title field to see your changes. If you publish the page without pressing Enter, you don't see your changes. Your changes are only present in the field when you click in the title field again, but they are not made visible until you press Enter (Return).
+== Edit Asset Portal Name
 
-== Add an Image
+. Select the asset portal name or the pen icon after the name.
+. Enter the new name.
+. (Optional) To cancel the changes, select the cancel icon.
+. To save the new name, press the enter or return key on your keyboard, or select the check icon.
+
+NOTE: Before the August 2019 release, the versions of an asset could have different names. After the August 2019 release, a new name applies to all versions of the asset.
+
+
+== Edit Asset Icon
+
+. Select the pen icon beside the asset icon.
+. Select an image.
+. (Optional) To remove an asset icon, select the cancel icon beside the asset icon.
+
+NOTE: Before the August 2019 release, the versions of an asset could have different icons. After the August 2019 release, a new asset icon applies to all versions of the asset.
+
+
+== Edit Asset Description
+
+. Select the pen icon after the asset description.
+. Enter the new asset description.
+. (Optional) To cancel the changes, select the cancel icon.
+. To save the new name, select the check icon.
+
+NOTE: The asset description applies to all versions of the asset.
+
+
+== Add Asset Tags
+
+You can search by tag name for assets in Exchange.
+
+Tags can only be lower case, and upper case tags are converted to lowercase. Special characters are permitted. An asset can have any number of tags.
+
+. In the sidebar *Tags* list select *Add a tag*.
+. Enter the new tag.
+. Press the enter or return key on your keyboard.
+
+
+== Remove Asset Tags
+
+To remove a tag, in the sidebar *Tags* list, select the *X* next to the tag text.
+
+
+== Edit Asset Portal
+
+. Select *Edit*.
+. Enter the new portal content.
+. In the editor you can change the appearance of text and insert code samples, block quotes, and horizontal lines.
+. Add images and videos as described below.
+. After you write the main page, select either *Discard changes* or *Save as draft*. You can edit and save a draft any number of times before publishing. Drafts are not visible to other users until they are published. When an asset has an unpublished draft, Exchange displays a *Go to draft* button to edit it.
+. Add secondary pages and terms and conditions as described below.
+. After you edit and save all your pages, publish the portal by selecting *Publish*.
+. Your asset portal is now visible to everyone in the organization.
+
+=== Add an Image
 
 You can copy and paste an image directly into the Exchange page:
 
-. Click Edit
-. Click Visual mode
+. Select *Edit*.
+. Select *Visual mode*.
 . If your image is on your computer, drag the image to the Exchange page, or copy and paste to the Exchange page.
 +
 If the image is on a web server, copy the image and paste it into the Exchange page.
 
-Alternatively you can click the image icon in the editor and provide a URL to an illustration available on the web.
+Alternatively, select the image icon in the editor and provide a URL to an illustration available on the web.
 
 In Markdown, use this syntax to reference a web served image:
 
@@ -41,13 +82,14 @@ In Markdown, use this syntax to reference a web served image:
 
 Images uploaded before May 2019 can be accessed without authentication, and images uploaded after May 2019 require authentication. To disable unauthenticated access to an image uploaded before May 2019, download it, delete it, and upload it again.
 
-== Add Secondary Pages
 
-. Click an asset and click Edit.
-. In the left navigation area, click Add New Page and press the Return key on your keyboard to create the page. You can create as many pages as needed. In Exchange Portals, click Add Content Pages.
-. Add a description to the page. Anything you can add on the main page can be added to the subordinate page.
-. After creating a page, click Save As Draft so you don't lose content if Exchange times out.
-. When done creating pages, click Publish.
+=== Add Secondary Pages
+
+. Select *Edit*.
+. In the left navigation area, select *Add New Page* and press the enter or return key on your keyboard to create the page. You can create as many pages as needed. In Exchange Portals, click *Add Content Pages*.
+. Add a description to the page. Secondary pages support the same options as the main page.
+. After creating a page, select *Save As Draft*.
+. After you edit and save all your pages, select *Publish*.
 
 In Edit mode, you can reorder pages by clicking the page name and dragging the page up or down in the left nav bar.
 
@@ -59,40 +101,19 @@ All page names are validated:
 * Page names cannot contain these characters: `@` `*` `+` `/` `_` `\`
 * Page names cannot start with `.`
 
-== Create Asset Tags
 
-Tags help users find your asset. Users can search in Exchange for a tag name to locate your asset.
+=== Specify Terms and Conditions
 
-. Click an asset in your private Exchange.
-. Click Add A Tag: image:ex2-add-a-tag.png[Add a tag button]
-+
-Tags can only be lowercase. If you enter uppercase, Exchange converts the letters to lowercase. Special characters are permitted. You can have any number of tags.
-+
-. To verify, search for the asset using a tag you added.
-
-== Specify Terms and Conditions
-
-. Click an asset and click Edit.
-. Click Add Terms and Conditions: image:ex2-terms.png[Terms and Conditions button]
+. Select an asset and select *Edit*.
+. Select *Add Terms and Conditions*: image:ex2-terms.png[Terms and Conditions button]
 . Use the editor to specify the terms and conditions for this asset.
-. Click Save As Draft.
-. Publish.
+. Select *Save As Draft*.
+. Select *Publish*.
 
-Note: Only available for APIs. Users are then prompted to accept the terms and conditions when requesting API access.
+NOTE: Terms and conditions are only available for API assets. Users are prompted to accept the terms and conditions when requesting API access.
 
-== Change the Version of an Asset
 
-Exchange lets you version an API separately from an asset's version.
-
-. Click an asset to view details.
-. Click the version indicator in the title: image:ex2-api-version.png[Version Indicator in title button].
-. Change the version as needed and press the Return key on your keyboard.
-
-To change the asset version, click Add New Version: image:ex2-add-new-version.png[Asset Version button].
-
-See also: xref:to-change-raml-version.adoc[To Change a RAML Version].
-
-== Editor Notes
+=== Editor Notes
 
 * To use the link control, type text, select the text, and click the link control to specify the link URL.
 * If your Exchange session times out while you're editing, select all the text on the page and copy it to your
@@ -101,7 +122,8 @@ clipboard. Then after you log back in, you can paste the content back into the p
 * If you are editing descriptions for many assets, instead of clicking an asset to open it from Exchange, instead right-click the asset and click Open Link in New Window to open the asset in a new browser window. Otherwise, after you publish an asset, control returns to the start of the filter/search list.
 * Keyboard shortcuts (work in Visual and Markdown): Bold: ctrl-b/cmd-b, Italics: ctrl-i/cmd-i, Heading: ctrl-d/cmd-d, Blockquote: ctrl-e/cmd-e, Code Block: ctrl-j/cmd-j, Numbered List: ctrl-o/cmd-o, Bullet List: ctrl-u/cmd-u, Insert Link: ctrl-k/cmd-k.
 
-== Markdown Notes
+
+=== Markdown Notes
 
 * Anypoint Exchange uses GitHub Markdown. Everything works in GitHub Markdown except for syntax highlighting, which is not supported in Exchange.
 * Basic HTML 5 code elements are supported in Markdown, such as div, button, a, ul, ol, table, p, span, pre, and code.
@@ -121,6 +143,7 @@ For example: `+![](https://www.youtube.com/embed/K3tuHUZ1J04)+`
 * Add the asset ID to a youtu.be URL: +
 Change: `+https://youtu.be/EhJM1GawQec+` +
 To: `+![](https://www.youtube.com/embed/EhJM1GawQec)+`
+
 
 == See Also
 
