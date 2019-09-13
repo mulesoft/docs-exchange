@@ -89,16 +89,14 @@ API.createClient(‘github’, ‘https://anypoint.mulesoft.com/apiplatform/repo
 API.authenticate(github);
 ``` (edited)
 ----
-
-
-== API Notebook security concerns
-
-Because API notebooks run plain javascript in the browser, they can be used to access sensitive data. For that reason,  API Notebooks do not allow you to use javascript functionalities such as the following:
-
-- Global functions like “alert”, “prompt”, etc.
-- Global variables like “window”, “document”, “localStorage”, etc.
-
 ====
+
+== API Notebook security
+
+API notebooks run plain JavaScript in the browser. To ensure this does not leak sensitive data, API Notebooks blocks certain JavaScript functionality:
+
+* All global functions, including `alert` and `prompt`.
+* All global variables, including `window`, `document`, and `localStorage`.
 
 == See Also
 
