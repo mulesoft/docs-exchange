@@ -93,7 +93,7 @@ API.authenticate(github);
 
 == API Notebook security
 
-API notebooks run plain JavaScript in the browser. To ensure this does not leak sensitive data, API Notebooks blocks certain JavaScript functionality:
+API notebooks run plain JavaScript in the browser. To ensure this does not leak sensitive data, API Notebook disables certain JavaScript functionality:
 
 * All global functions, including `alert` and `prompt`.
 * All global variables, including `window`, `document`, and `localStorage`.
