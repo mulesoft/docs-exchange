@@ -327,7 +327,7 @@ This API will be found by these searches:
 |leagueid |URI parameter name
 |team |Type name
 |leagues leagueId teams |Endpoint path
-|`/leagues/{leagueId}/teams` |Endpoint path
+|`/leagues/\{leagueId\}/teams` |Endpoint path
 |city |Type property name
 |===
 
