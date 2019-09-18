@@ -120,7 +120,7 @@ that way. The table below outlines when to introduce a new version and when a
 new version is not required. Typically when one clicks *Add new API operation* 
 a patch version increase occurs.
 
-[%header%,cols="20a,60a,20a"]
+[%header,cols="20a,60a,20a"]
 |===
 |Type of Change |Changes Requiring a Major Version |New Version is Not Required
 | Service contract |

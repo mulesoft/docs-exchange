@@ -49,7 +49,7 @@ For example:
 * Route `+https://developers.robocop.com/node_modules+` to `+https://anypoint.mulesoft.com/node_modules+`.
 * Route `+https://developers.robocop.com/exchange/api-console+` to `+https://anypoint.mulesoft.com/exchange/api-console+`.
 
-Route `callback` to `+https://anypoint.mulesoft.com/exchange/portals/+**{YOUR_ORGANIZATION_DOMAIN}**/callback`.
+Route `callback` to `+https://anypoint.mulesoft.com/exchange/portals/YOUR_ORGANIZATION_DOMAIN/callback+`.
 
 For example:
 
