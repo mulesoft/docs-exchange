@@ -349,7 +349,7 @@ To use this feature:
 . Download and install Maven and the Anypoint Connector DevKit Plugin. For more information, see Anypoint Connector DevKit.
 . Create a new Anypoint Connector Project. Add to the project as needed.
 . Use Studio to export the connector as a zip file. Right-click the project name in Package Explorer and click Export > Mule > Anypoint Connector Update Site, Next, specify the path to save the zip file, and click Finish.
-. Open the zip file. Open the `content.xml` file with a text editor and search for the `id=` value followed by the `version=` value. In the following example, the last line shows the id as: `org.mule.tooling.ui.extension.my-connector.3.5.0.feature.group` and version as: `version='1.0.0.201607271521'` -- This ID string is the Feature ID that we refer to shortly. Feature IDs always look like `org.mule.tooling.ui.extension.\{anything\}.feature.group`.
+. Open the zip file. Open the `content.xml` file with a text editor and search for the `id=` value followed by the `version=` value. In the following example, the last line shows the ID as: `org.mule.tooling.ui.extension.my-connector.3.5.0.feature.group` and version as: `version='1.0.0.201607271521'` -- This ID string is the Feature ID that we refer to shortly. Feature IDs always look like `org.mule.tooling.ui.extension.\{anything\}.feature.group`.
 +
 [source,text,linenums]
 ----
