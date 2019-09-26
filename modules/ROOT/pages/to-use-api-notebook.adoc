@@ -97,6 +97,7 @@ API notebooks run plain JavaScript in the browser. To ensure sensitive data does
 
 * All global functions, including `alert` and `prompt`.
 * All global variables, including `window`, `document`, and `localStorage`.
+* The `XMLHttpRequest` object.
 
 == See Also
 
