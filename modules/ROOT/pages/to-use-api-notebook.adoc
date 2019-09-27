@@ -91,7 +91,7 @@ API.authenticate(github);
 ----
 ====
 
-== API Notebook security
+== API Notebook Security
 
 API notebooks run plain JavaScript in the browser. To ensure sensitive data does not leak, API Notebook disables certain JavaScript functionality:
 
