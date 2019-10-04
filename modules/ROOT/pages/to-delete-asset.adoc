@@ -25,7 +25,6 @@ Changing a RAML version? See xref:to-change-raml-version.adoc[To Change a RAML V
 
 == Delete Notes
 
-* If an asset has never had a lower version number, you can create a lower version number, but not if you are reusing a previously deleted version. For example, if an asset starts with version 2, you can add a version 1. However if the asset started with version 1, a version 2 was added, and version 1 was deleted, you can't add version 1 back.
 * Deleting an asset or a version checks for any assets that are dependent on the asset or the asset version and displays a warning to prevent deletion until all the dependencies are removed.
 * A policy asset cannot be deleted if it is applied to any managed API instances. The *APIs using this policy* tab on the policy asset's page shows which API instances have that policy applied. You can use API Manager to remove the policy from the instances, and then you can delete the policy.
 
