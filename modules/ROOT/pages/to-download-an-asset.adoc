@@ -8,6 +8,8 @@ Download lets you download a copy of the asset, or in the case of a Custom asset
 
 After creating a REST asset, Exchange generates a Mule 3 connector and a Mule 4 connector. Exchange also generates an OAS version for RAML assets, and a RAML version for OAS assets. After you create a new REST asset it may take a few minutes for these assets to appear on the Download menu.
 
+OAS versions were not automatically generated before January 2019. To generate an OAS version of an old asset, download the asset and upload it again.
+
 Click the Download button in the task bar. image:ex2-icon-download.png[]
 
 The results vary by file type:
