@@ -8,7 +8,7 @@ You can use your organization's public portal to share API assets publicly. Deve
 
 A public portal is visible to anyone who has the URL of the portal. The URL for a public portal starts with `+https://anypoint.mulesoft.com/exchange/portals/Domain_Name/+`.
 
-Replace `Domain_Name` with the domain name shown in Anypoint Access Management on the xref:access-management::organization.adoc#organization-page[*Organization* page].
+Replace `Domain_Name` with the domain name shown in Anypoint access management on the xref:access-management::organization.adoc#organization-page[*Organization* page].
 
 == Permissions to Control Asset Sharing
 
