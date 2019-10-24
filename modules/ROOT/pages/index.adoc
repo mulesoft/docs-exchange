@@ -60,4 +60,4 @@ The full version history is available in the xref:release-notes::exchange/anypoi
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
 * xref:migrate.adoc[Migrate Assets from Exchange 1]
 * https://forums.mulesoft.com[MuleSoft Forum]
-* https://support.mulesoft.com[Contact MuleSoft Support]
+* https://help.mulesoft.com[MuleSoft Help Center]
