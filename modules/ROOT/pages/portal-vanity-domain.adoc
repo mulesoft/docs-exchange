@@ -65,11 +65,11 @@ For example:
 
 Add headers for each route described above.
 
-[source,console,linenums]
-----
-'X-Forwarded-Path': Base path of your vanity domain public portal URL. This can be any path. It can be just '/' for the root path. It does not need to match the base path for the portal in the anypoint.mulesoft.com domain. This path must end with a slash ("/"). Example: 'path/of/justice/'
-'X-Forwarded-Host': Your public portal vanity domain. Example: 'developers.robocop.com'
-----
+* `X-Forwarded-Path` is the base path of your vanity domain public portal URL, such as `/path/of/justice/`.
++
+It can be any path that begins and ends with a slash ("/"), and it can be just '/' for the root path. It does not need to match the base path for the portal in the anypoint.mulesoft.com domain.
++
+* `X-Forwarded-Host` is your public portal vanity domain, such as `developers.robocop.com`.
 
 === Using NGINX
 
