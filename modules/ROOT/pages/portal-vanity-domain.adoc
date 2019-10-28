@@ -63,11 +63,11 @@ For example:
 
 ==== Custom headers
 
-Add headers for each route described above.
+Add headers for each of the routes described previously.
 
 * `X-Forwarded-Path` is the base path of your vanity domain public portal URL, such as `/path/of/justice/`.
 +
-It can be any path that begins and ends with a slash ("/"), and it can be just `/` for the root path. It does not need to match the base path for the portal in the anypoint.mulesoft.com domain.
+This path can be any path that begins and ends with a slash (`/`). It can be the root path represented by a single slash (`/`). This base path of the portal in your vanity domain does not need to match the base path of the portal in the anypoint.mulesoft.com domain.
 +
 * `X-Forwarded-Host` is your public portal vanity domain, such as `developers.robocop.com`.
 
