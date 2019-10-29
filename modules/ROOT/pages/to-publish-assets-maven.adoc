@@ -180,14 +180,16 @@ https://eu1.anypoint.mulesoft.com/exchange/api/v1/assets/ORGANIZATION_ID/ASSET_I
 
 == Publish Federated Assets
 
-. Get the access token by logging into Anypoint Platform and copying this URL to the browser address bar:
+. xref:access-management::saml-bearer-token.adoc[Get an API bearer token by using a SAML assertion].
 +
-----
-https://anypoint.mulesoft.com/accounts/api/profile
-----
+This is your access token.
 +
-. Search for `access_token` in the displayed values.
-. Add the access token to the `+~/.m2/settings.xml+` (Mac or Linux), or `C:\Users\YOUR_USER_NAME\.m2\settings.xml` (Windows) file:
+. Open the `settings.xml` file at `C:\Users\YOUR_USER_NAME\.m2\settings.xml` on Windows, or at `+~/.m2/settings.xml+` on macOS or Linux.
+. Do not change the value in `<username>`.
++
+This value tells the platform that you're using a token.
++
+. Set the value in `<password>` to your access token:
 +
 [source,xml,linenums]
 ----
@@ -205,10 +207,8 @@ https://anypoint.mulesoft.com/accounts/api/profile
   </servers>
 </settings>
 ----
-
-[IMPORTANT]
-The value in `<username>` is a literal, don't change it. The value tells the platform that you're using a token. Set your token in `<password>ACCESS_TOKEN</password>`.
-
++
+. Save the `settings.xml` file.
 
 == Dependencies external to Exchange
 
