@@ -1,0 +1,162 @@
+= Custom Fields
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Exchange Administrators and Organization Owners can create custom fields to extend the exchange asset metadata model.
+
+A custom field is a key-value pair that can be set to an asset version. It is the way to add custom data to any type of asset. 
+
+Custom fields are managed, in order words, each asset type will have a specific schema defined by an administrator. With this approach, if all the assets have a custom field configuration named "SupportEndDate" exchange could validate that the set value is a date.
+
+There are different supported types. Let's see some examples:
+
+## Enum
+
+First we need to create a custom field configuration
+
+```
+curl -X POST \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
+  -H 'Authorization: bearer <your token here>’ \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"dataType": “enum”,
+	“possibleValues”: [“OAS”,”RAML”],
+	"displayName": “SubType”,
+	"tagKey": “subType”
+}'
+```
+
+Now we can set this field to any asset that we have in our organization by calling:
+
+```
+curl -X PUT \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/subType \
+  -H 'Authorization: bearer <your token here>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"tagValue": ["OAS"]
+}'
+```
+
+## Number
+
+```
+curl -X POST \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
+  -H 'Authorization: bearer <your token here>’ \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"dataType": “number”,
+	"displayName": “Rating”,
+	"tagKey": “rating”
+}'
+```
+
+```
+curl -X PUT \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/rating \
+  -H 'Authorization: bearer <your token here>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"tagValue": 5
+}'
+```
+
+## Date
+
+```
+curl -X POST \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
+  -H 'Authorization: bearer <your token here>’ \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"dataType": “date”,
+	"displayName": “DueDate”,
+	"tagKey": “dueDate”
+}'
+```
+
+```
+curl -X PUT \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/dueDate \
+  -H 'Authorization: bearer <your token here>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"tagValue": "2020-01-01T20:00:00.000Z"
+}'
+```
+
+## Text 
+
+```
+curl -X POST \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
+  -H 'Authorization: bearer <your token here>’ \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"dataType": "text",
+	"displayName": "Email",
+	"tagKey": "email"
+}'
+```
+
+```
+curl -X PUT \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/email \
+  -H 'Authorization: bearer <your token here>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"tagValue": “john@doe.com”
+}'
+```
+
+## List of numbers
+
+```
+curl -X POST \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
+  -H 'Authorization: bearer <your token here>’ \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"dataType": "number-list",
+	"displayName": "SupportCases",
+	"tagKey": "supportCases"
+}'
+```
+
+```
+curl -X PUT \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/supportCases \
+  -H 'Authorization: bearer <your token here>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"tagValue": [1010,2020,3030]
+}'
+```
+
+## List of strings
+
+```
+curl -X POST \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
+  -H 'Authorization: bearer <your token here>’ \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"dataType": "text-list",
+	"displayName": "Maintainers",
+	"tagKey": "maintainers"
+}'
+```
+
+```
+curl -X PUT \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/maintainers \
+  -H 'Authorization: bearer <your token here>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"tagValue": ["John", "Alice", "Fred"]
+}'
+```
