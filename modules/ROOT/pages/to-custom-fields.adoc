@@ -165,5 +165,5 @@ curl -X PUT \
 
 Custom fields will be shown in the UI in the overview section
 
-
+image::custom-fields.png[]
 
