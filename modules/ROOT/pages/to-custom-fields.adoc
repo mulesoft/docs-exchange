@@ -162,3 +162,8 @@ curl -X PUT \
 	"tagValue": ["John", "Alice", "Fred"]
 }'
 ```
+
+Custom fields will be shown in the UI in the overview section
+
+
+
