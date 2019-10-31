@@ -167,3 +167,20 @@ Custom fields will be shown in the UI in the overview section
 
 image::custom-fields.png[]
 
+### Restricting assets types
+
+It's possible to add a custom field only to certain type of assets. For example, this custom field will only applied to REST APIs:
+
+```
+curl -X POST \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
+  -H 'Authorization: bearer <your token here>’ \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"dataType": “enum”,
+	“possibleValues”: [“OAS”,”RAML”],
+	"displayName": “SubType”,
+	"tagKey": “subType”,
+	"assetTypeRestrictions": ["rest-api"]
+}'
+```
