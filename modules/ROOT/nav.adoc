@@ -10,6 +10,7 @@
  ** xref:to-download-an-asset.adoc[Download an Asset]
  ** xref:to-share-api-asset-to-portal.adoc[Share an API Asset to a Public Portal]
  ** xref:to-manage-categories.adoc[Manage Categories]
+ ** xref:to-manage-custom-fields.adoc[Manage Custom Fields]
  ** xref:to-delete-asset.adoc[Delete an Asset]
  ** xref:to-change-raml-version.adoc[Change the Version of an API Asset]
  ** xref:to-share-an-http-api.adoc[Share an HTTP API]
