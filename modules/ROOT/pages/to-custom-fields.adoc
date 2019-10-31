@@ -28,7 +28,7 @@ curl -X POST \
 	“possibleValues”: [“OAS”,”RAML”],
 	"displayName": “SubType”,
 	"tagKey": “subType”
-}'
+  }'
 ```
 
 Now we can set this field to any asset that we have in our organization by calling:
@@ -40,7 +40,7 @@ curl -X PUT \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": ["OAS"]
-}'
+  }'
 ```
 
 ### Number
@@ -54,7 +54,7 @@ curl -X POST \
 	"dataType": “number”,
 	"displayName": “Rating”,
 	"tagKey": “rating”
-}'
+  }'
 ```
 
 ```
@@ -64,7 +64,7 @@ curl -X PUT \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": 5
-}'
+  }'
 ```
 
 ### Date
@@ -78,7 +78,7 @@ curl -X POST \
 	"dataType": “date”,
 	"displayName": “DueDate”,
 	"tagKey": “dueDate”
-}'
+  }'
 ```
 
 ```
@@ -102,7 +102,7 @@ curl -X POST \
 	"dataType": "text",
 	"displayName": "Email",
 	"tagKey": "email"
-}'
+  }'
 ```
 
 ```
@@ -112,7 +112,7 @@ curl -X PUT \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": “john@doe.com”
-}'
+  }'
 ```
 
 ### List of numbers
@@ -126,7 +126,7 @@ curl -X POST \
 	"dataType": "number-list",
 	"displayName": "SupportCases",
 	"tagKey": "supportCases"
-}'
+  }'
 ```
 
 ```
@@ -136,7 +136,7 @@ curl -X PUT \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": [1010,2020,3030]
-}'
+  }'
 ```
 
 ### List of strings
@@ -150,7 +150,7 @@ curl -X POST \
 	"dataType": "text-list",
 	"displayName": "Maintainers",
 	"tagKey": "maintainers"
-}'
+  }'
 ```
 
 ```
@@ -160,7 +160,7 @@ curl -X PUT \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": ["John", "Alice", "Fred"]
-}'
+  }'
 ```
 
 Custom fields will be shown in the UI in the overview section
@@ -182,5 +182,25 @@ curl -X POST \
 	"displayName": “SubType”,
 	"tagKey": “subType”,
 	"assetTypeRestrictions": ["rest-api"]
-}'
+  }'
 ```
+
+### Deleting a custom field from an asset version
+
+```
+curl -X DELETE \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/:tagKey \
+  -H 'Authorization: bearer <your token here>' \
+  -H 'Content-Type: application/json'
+```
+
+### Deleting a custom field
+
+```
+curl -X DELETE \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields/:tagKey \
+  -H 'Authorization: bearer <your token here>’ \
+  -H 'Content-Type: application/json'
+```
+
+
