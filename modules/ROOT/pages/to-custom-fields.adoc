@@ -10,9 +10,11 @@ A custom field is a key-value pair that can be set to an asset version. It is th
 
 Custom fields are managed, in order words, each asset type will have a specific schema defined by an administrator. With this approach, if all the assets have a custom field configuration named "SupportEndDate" exchange could validate that the set value is a date.
 
+## Supported types
+
 There are different supported types. Let's see some examples:
 
-## Enum
+### Enum
 
 First we need to create a custom field configuration
 
@@ -41,7 +43,7 @@ curl -X PUT \
 }'
 ```
 
-## Number
+### Number
 
 ```
 curl -X POST \
@@ -65,7 +67,7 @@ curl -X PUT \
 }'
 ```
 
-## Date
+### Date
 
 ```
 curl -X POST \
@@ -89,7 +91,7 @@ curl -X PUT \
 }'
 ```
 
-## Text 
+### Text 
 
 ```
 curl -X POST \
@@ -113,7 +115,7 @@ curl -X PUT \
 }'
 ```
 
-## List of numbers
+### List of numbers
 
 ```
 curl -X POST \
@@ -137,7 +139,7 @@ curl -X PUT \
 }'
 ```
 
-## List of strings
+### List of strings
 
 ```
 curl -X POST \
