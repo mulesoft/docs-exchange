@@ -82,7 +82,7 @@ Many organizations offer single sign-on (SSO) with a third party IdP for interna
 
 External users log in to onboard, obtain client IDs and client secrets, provide comments, and rate APIs.
 
-The admin can customize the login page with the organization's branding, including background color, text color, active text color, and a custom logo.
+The public portal customization for the organization's branding applies to the login page, including background color, text color, active text color, and a custom logo.
 
 == See Also
 
