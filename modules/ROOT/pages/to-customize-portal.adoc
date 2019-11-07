@@ -78,7 +78,7 @@ Users can always access an organization's Exchange public portal by using the An
 
 The option to use a third-party identity provider (IdP) such as Okta can be added to the login page by using Anypoint Platform xref:access-management::external-identity.adoc[identity management].
 
-Many organizations offer single sign-on (SSO) with a third party IdP for internal users and the Anypoint Platform login for external users.
+Many organizations offer single sign-on (SSO) with a third-party IdP for internal users and the Anypoint Platform login for external users.
 
 External users log in to onboard, obtain client IDs and client secrets, provide comments, and rate APIs.
 
