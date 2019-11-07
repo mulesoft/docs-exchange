@@ -72,6 +72,18 @@ To delete a custom page, click *Delete Page*. If this button is not visible resi
 
 To change the order of the custom page tabs, drag the entries in the *Custom pages* list into the desired order.
 
+== Custom Login
+
+Users can always access an organization's Exchange public portal with the Anypoint Platform login.
+
+The option to use a third party identity provider (IdP) such as Okta can be added with Anypoint Platform xref:access-management::external-identity.adoc[identity management].
+
+Many organizations offer single sign-on (SSO) with a third party IdP for internal users and the Anypoint Platform login for external users.
+
+External users log in to onboard, obtain client IDs and client secrets, provide comments, and rate APIs.
+
+The admin can customize the login page with the organization's branding, including background color, text color, active text color, and a custom logo.
+
 == See Also
 
 * xref:portal-vanity-domain.adoc[Public Portal Vanity Domain]
