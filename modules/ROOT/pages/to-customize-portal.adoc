@@ -72,7 +72,7 @@ To delete a custom page, click *Delete Page*. If this button is not visible resi
 
 To change the order of the custom page tabs, drag the entries in the *Custom pages* list into the desired order.
 
-== Custom Login
+== Login Page
 
 Users can always access an organization's Exchange public portal with the Anypoint Platform login.
 
