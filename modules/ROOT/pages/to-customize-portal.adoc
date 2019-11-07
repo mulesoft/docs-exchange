@@ -74,7 +74,7 @@ To change the order of the custom page tabs, drag the entries in the *Custom pag
 
 == Login Page
 
-Users can always access an organization's Exchange public portal with the Anypoint Platform login.
+Users can always access an organization's Exchange public portal by using the Anypoint Platform login.
 
 The option to use a third party identity provider (IdP) such as Okta can be added to the login page with Anypoint Platform xref:access-management::external-identity.adoc[identity management].
 
