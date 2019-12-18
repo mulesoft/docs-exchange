@@ -4,19 +4,23 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Exchange Administrators and Organization Owners can create custom fields to extend the exchange asset metadata model.
+Exchange administrators and organization owners can create custom fields to extend the Exchange asset metadata model and add custom data to any type of asset.
 
-A custom field is a key-value pair that can be set to an asset version. It is the way to add custom data to any type of asset. 
+A custom field is a key-value pair that can be added to an asset version.
 
-Custom fields are managed, in order words, each asset type will have a specific schema defined by an administrator. With this approach, if all the assets have a custom field configuration named "SupportEndDate" exchange could validate that the set value is a date.
+Custom fields are managed, which means each asset type has a specific schema defined by an administrator. This enables Exchange to validate the values. For example, an asset can have a custom field configuration named "SupportEndDate," and Exchange can ensure that the value set for this field is a valid date.
 
-## Supported types
+Exchange shows custom fields in an asset's overview section:
 
-There are different supported types. Let's see some examples:
+image::custom-fields.png[]
 
-### Enum
+== Supported types
 
-First we need to create a custom field configuration
+Exchange supports custom fields of the types enum, number, date, text, list of numbers, and list of strings.
+
+=== Enum
+
+Creating a custom field configuration:
 
 ```
 curl -X POST \
@@ -31,7 +35,7 @@ curl -X POST \
   }'
 ```
 
-Now we can set this field to any asset that we have in our organization by calling:
+Adding this field to any asset in an organization:
 
 ```
 curl -X PUT \
@@ -43,7 +47,7 @@ curl -X PUT \
   }'
 ```
 
-### Number
+=== Number
 
 ```
 curl -X POST \
@@ -67,7 +71,7 @@ curl -X PUT \
   }'
 ```
 
-### Date
+=== Date
 
 ```
 curl -X POST \
@@ -91,7 +95,7 @@ curl -X PUT \
 }'
 ```
 
-### Text 
+=== Text
 
 ```
 curl -X POST \
@@ -115,7 +119,7 @@ curl -X PUT \
   }'
 ```
 
-### List of numbers
+=== List of numbers
 
 ```
 curl -X POST \
@@ -139,7 +143,7 @@ curl -X PUT \
   }'
 ```
 
-### List of strings
+=== List of strings
 
 ```
 curl -X POST \
@@ -163,13 +167,9 @@ curl -X PUT \
   }'
 ```
 
-Custom fields will be shown in the UI in the overview section
+== Restricting Asset Types
 
-image::custom-fields.png[]
-
-### Restricting assets types
-
-It's possible to add a custom field only to certain type of assets. For example, this custom field will only applied to REST APIs:
+You can restrict a custom field so that it can only be added to certain types of assets. For example, this custom field will only apply to REST APIs:
 
 ```
 curl -X POST \
@@ -185,7 +185,7 @@ curl -X POST \
   }'
 ```
 
-### Deleting a custom field from an asset version
+== Deleting A Custom Field From An Asset Version
 
 ```
 curl -X DELETE \
@@ -194,7 +194,7 @@ curl -X DELETE \
   -H 'Content-Type: application/json'
 ```
 
-### Deleting a custom field
+== Deleting A Custom Field
 
 ```
 curl -X DELETE \
@@ -202,5 +202,3 @@ curl -X DELETE \
   -H 'Authorization: bearer <your token here>’ \
   -H 'Content-Type: application/json'
 ```
-
-
