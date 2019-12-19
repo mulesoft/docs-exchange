@@ -14,7 +14,7 @@ Exchange shows custom fields in an asset's overview section:
 
 image::custom-fields.png[]
 
-== Supported types
+== Supported Types
 
 Exchange supports custom fields of the types enum, number, date, text, list of numbers, and list of strings.
 
@@ -22,7 +22,8 @@ Exchange supports custom fields of the types enum, number, date, text, list of n
 
 Creating a custom field configuration:
 
-```
+[source,console,linenums]
+----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
   -H 'Authorization: bearer <your token here>’ \
@@ -33,11 +34,12 @@ curl -X POST \
 	"displayName": “SubType”,
 	"tagKey": “subType”
   }'
-```
+----
 
 Adding this field to any asset in an organization:
 
-```
+[source,console,linenums]
+----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/subType \
   -H 'Authorization: bearer <your token here>' \
@@ -45,11 +47,12 @@ curl -X PUT \
   -d '{
 	"tagValue": ["OAS"]
   }'
-```
+----
 
 === Number
 
-```
+[source,console,linenums]
+----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
   -H 'Authorization: bearer <your token here>’ \
@@ -59,9 +62,10 @@ curl -X POST \
 	"displayName": “Rating”,
 	"tagKey": “rating”
   }'
-```
+----
 
-```
+[source,console,linenums]
+----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/rating \
   -H 'Authorization: bearer <your token here>' \
@@ -69,11 +73,12 @@ curl -X PUT \
   -d '{
 	"tagValue": 5
   }'
-```
+----
 
 === Date
 
-```
+[source,console,linenums]
+----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
   -H 'Authorization: bearer <your token here>’ \
@@ -83,9 +88,10 @@ curl -X POST \
 	"displayName": “DueDate”,
 	"tagKey": “dueDate”
   }'
-```
+----
 
-```
+[source,console,linenums]
+----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/dueDate \
   -H 'Authorization: bearer <your token here>' \
@@ -93,11 +99,12 @@ curl -X PUT \
   -d '{
 	"tagValue": "2020-01-01T20:00:00.000Z"
 }'
-```
+----
 
 === Text
 
-```
+[source,console,linenums]
+----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
   -H 'Authorization: bearer <your token here>’ \
@@ -107,9 +114,10 @@ curl -X POST \
 	"displayName": "Email",
 	"tagKey": "email"
   }'
-```
+----
 
-```
+[source,console,linenums]
+----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/email \
   -H 'Authorization: bearer <your token here>' \
@@ -117,11 +125,12 @@ curl -X PUT \
   -d '{
 	"tagValue": “john@doe.com”
   }'
-```
+----
 
-=== List of numbers
+=== List of Numbers
 
-```
+[source,console,linenums]
+----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
   -H 'Authorization: bearer <your token here>’ \
@@ -131,9 +140,10 @@ curl -X POST \
 	"displayName": "SupportCases",
 	"tagKey": "supportCases"
   }'
-```
+----
 
-```
+[source,console,linenums]
+----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/supportCases \
   -H 'Authorization: bearer <your token here>' \
@@ -141,11 +151,12 @@ curl -X PUT \
   -d '{
 	"tagValue": [1010,2020,3030]
   }'
-```
+----
 
-=== List of strings
+=== List of Strings
 
-```
+[source,console,linenums]
+----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
   -H 'Authorization: bearer <your token here>’ \
@@ -155,9 +166,10 @@ curl -X POST \
 	"displayName": "Maintainers",
 	"tagKey": "maintainers"
   }'
-```
+----
 
-```
+[source,console,linenums]
+----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/maintainers \
   -H 'Authorization: bearer <your token here>' \
@@ -165,13 +177,14 @@ curl -X PUT \
   -d '{
 	"tagValue": ["John", "Alice", "Fred"]
   }'
-```
+----
 
-== Restricting Asset Types
+== Restrict Asset Types
 
 You can restrict a custom field so that it can only be added to certain types of assets. For example, this custom field will only apply to REST APIs:
 
-```
+[source,console,linenums]
+----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
   -H 'Authorization: bearer <your token here>’ \
@@ -183,22 +196,24 @@ curl -X POST \
 	"tagKey": “subType”,
 	"assetTypeRestrictions": ["rest-api"]
   }'
-```
+----
 
-== Deleting A Custom Field From An Asset Version
+== Delete a Custom Field from an Asset Version
 
-```
+[source,console,linenums]
+----
 curl -X DELETE \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/:tagKey \
   -H 'Authorization: bearer <your token here>' \
   -H 'Content-Type: application/json'
-```
+----
 
-== Deleting A Custom Field
+== Delete a Custom Field
 
-```
+[source,console,linenums]
+----
 curl -X DELETE \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields/:tagKey \
   -H 'Authorization: bearer <your token here>’ \
   -H 'Content-Type: application/json'
-```
+----
