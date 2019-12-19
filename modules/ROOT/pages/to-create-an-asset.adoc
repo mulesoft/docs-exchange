@@ -103,7 +103,9 @@ Text files: `.txt, .json, .raml, .yaml, .yml, .md, .csv, .xml, .xsd, .wsdl, .htm
 
 A file without a file type is not allowed. All file types are case insensitive.
 
-MuleSoft recommends deleting all old Custom assets containing files of types that are no longer permitted. For any Custom asset containing a non-supported file, delete the asset to remove the file.
+SVG files are limited to 100 KB or less.
+
+MuleSoft recommends deleting all old Custom assets containing files of types that are not permitted. For any Custom asset containing a non-supported file, delete the asset to remove the file.
 
 To create a custom asset:
 
@@ -152,6 +154,6 @@ The new version of the asset has the same name, icon, and description as the pre
 
 == See Also
 
-* Next: xref:to-describe-an-asset.adoc[To Describe an Asset].
-* xref:design-center::upload-raml-task.adoc[Create a RAML file in API Designer and import to Exchange].
-* xref:to-publish-assets-maven.adoc[To Publish and Deploy Exchange Assets Using Maven].
+* Next: xref:to-describe-an-asset.adoc[Describe an Asset]
+* xref:design-center::upload-raml-task.adoc[Create a RAML file in API Designer and import to Exchange]
+* xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]
