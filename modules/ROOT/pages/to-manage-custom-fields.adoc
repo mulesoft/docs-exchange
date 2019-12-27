@@ -14,35 +14,48 @@ Exchange shows custom fields in an asset's overview section:
 
 image::custom-fields.png[]
 
+== Get an Access Token
+
+Get an access token with a cURL command such as the following. Optionally, you can use Postman or another application instead of cURL for sending HTTP commands.
+
+Replace `YOUR_USERNAME` with your Anypoint Platform user account name and replace `YOUR_PASSWORD` with your password.
+
+[source,console]
+----
+ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
+----
+
+Use this access token in your API calls to configure and assign custom fields.
+
 == Supported Types
 
 Exchange supports custom fields of the types enum, number, date, text, list of numbers, and list of strings.
 
 === Enum
 
-Creating a custom field configuration:
+This example shows how to create a custom field of the type `enum` with the name *SubType* and the possible values *OAS* and *RAML*. Create your own custom field by setting the organization ID and changing the data parameters after the `-d` flag.
 
 [source,console,linenums]
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
-  -H 'Authorization: bearer <your token here>’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN’ \
   -H 'Content-Type: application/json' \
   -d '{
-	"dataType": “enum”,
-	“possibleValues”: [“OAS”,”RAML”],
-	"displayName": “SubType”,
-	"tagKey": “subType”
+	"dataType": "enum",
+	"possibleValues": ["OAS","RAML"],
+	"displayName": "SubType",
+	"tagKey": "subType"
   }'
 ----
 
-Adding this field to any asset in an organization:
+This example shows how to add this field to any asset in an organization. Add the field to your own asset by setting the organization ID, group ID, asset ID, and version in the URL, changing the tag key `subType` to your tag key, and changing the data parameters after the `-d` flag.
 
 [source,console,linenums]
 ----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/subType \
-  -H 'Authorization: bearer <your token here>' \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": ["OAS"]
@@ -51,24 +64,28 @@ curl -X PUT \
 
 === Number
 
+This example shows how to create a custom field of the type `number` with the name *Rating*. Create your own custom field by setting the organization ID and changing the data parameters after the `-d` flag.
+
 [source,console,linenums]
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
-  -H 'Authorization: bearer <your token here>’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN’ \
   -H 'Content-Type: application/json' \
   -d '{
-	"dataType": “number”,
-	"displayName": “Rating”,
-	"tagKey": “rating”
+	"dataType": "number",
+	"displayName": "Rating",
+	"tagKey": "rating"
   }'
 ----
+
+This example shows how to add this field to any asset in an organization. Add the field to your own asset by setting the organization ID, group ID, asset ID, and version in the URL, changing the tag key `rating` to your tag key, and changing the data parameters after the `-d` flag.
 
 [source,console,linenums]
 ----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/rating \
-  -H 'Authorization: bearer <your token here>' \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": 5
@@ -77,24 +94,28 @@ curl -X PUT \
 
 === Date
 
+This example shows how to create a custom field of the type `date` with the name *DueDate*. Create your own custom field by setting the organization ID and changing the data parameters after the `-d` flag.
+
 [source,console,linenums]
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
-  -H 'Authorization: bearer <your token here>’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN’ \
   -H 'Content-Type: application/json' \
   -d '{
-	"dataType": “date”,
-	"displayName": “DueDate”,
-	"tagKey": “dueDate”
+	"dataType": "date",
+	"displayName": "DueDate",
+	"tagKey": "dueDate"
   }'
 ----
+
+This example shows how to add this field to any asset in an organization. Add the field to your own asset by setting the organization ID, group ID, asset ID, and version in the URL, changing the tag key `dueDate` to your tag key, and changing the data parameters after the `-d` flag.
 
 [source,console,linenums]
 ----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/dueDate \
-  -H 'Authorization: bearer <your token here>' \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": "2020-01-01T20:00:00.000Z"
@@ -103,11 +124,13 @@ curl -X PUT \
 
 === Text
 
+This example shows how to create a custom field of the type `text` with the name *email*. Create your own custom field by setting the organization ID and changing the data parameters after the `-d` flag.
+
 [source,console,linenums]
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
-  -H 'Authorization: bearer <your token here>’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN’ \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "text",
@@ -116,24 +139,28 @@ curl -X POST \
   }'
 ----
 
+This example shows how to add this field to any asset in an organization. Add the field to your own asset by setting the organization ID, group ID, asset ID, and version in the URL, changing the tag key `email` to your tag key, and changing the data parameters after the `-d` flag.
+
 [source,console,linenums]
 ----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/email \
-  -H 'Authorization: bearer <your token here>' \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
-	"tagValue": “john@doe.com”
+	"tagValue": "john@doe.com"
   }'
 ----
 
 === List of Numbers
 
+This example shows how to create a custom field of the type `number-list` with the name *SupportCases*. Create your own custom field by setting the organization ID and changing the data parameters after the `-d` flag.
+
 [source,console,linenums]
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
-  -H 'Authorization: bearer <your token here>’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN’ \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "number-list",
@@ -142,11 +169,13 @@ curl -X POST \
   }'
 ----
 
+This example shows how to add this field to any asset in an organization. Add the field to your own asset by setting the organization ID, group ID, asset ID, and version in the URL, changing the tag key `supportCases` to your tag key, and changing the data parameters after the `-d` flag.
+
 [source,console,linenums]
 ----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/supportCases \
-  -H 'Authorization: bearer <your token here>' \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": [1010,2020,3030]
@@ -155,11 +184,13 @@ curl -X PUT \
 
 === List of Strings
 
+This example shows how to create a custom field of the type `text-list` with the name *Maintainers*. Create your own custom field by setting the organization ID and changing the data parameters after the `-d` flag.
+
 [source,console,linenums]
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
-  -H 'Authorization: bearer <your token here>’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN’ \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "text-list",
@@ -168,11 +199,13 @@ curl -X POST \
   }'
 ----
 
+This example shows how to add this field to any asset in an organization. Add the field to your own asset by setting the organization ID, group ID, asset ID, and version in the URL, changing the tag key `maintainers` to your tag key, and changing the data parameters after the `-d` flag.
+
 [source,console,linenums]
 ----
 curl -X PUT \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/maintainers \
-  -H 'Authorization: bearer <your token here>' \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"tagValue": ["John", "Alice", "Fred"]
@@ -181,39 +214,43 @@ curl -X PUT \
 
 == Restrict Asset Types
 
-You can restrict a custom field so that it can only be added to certain types of assets. For example, this custom field will only apply to REST APIs:
+You can restrict a custom field so that it can only be added to certain types of assets. This example shows how to create a custom field that only applies to REST APIs. Create your own custom field by setting the organization ID and changing the data parameters after the `-d` flag.
 
 [source,console,linenums]
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields \
-  -H 'Authorization: bearer <your token here>’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN’ \
   -H 'Content-Type: application/json' \
   -d '{
-	"dataType": “enum”,
-	“possibleValues”: [“OAS”,”RAML”],
-	"displayName": “SubType”,
-	"tagKey": “subType”,
+	"dataType": "enum",
+	"possibleValues": ["OAS","RAML"],
+	"displayName": "SubType",
+	"tagKey": "subType",
 	"assetTypeRestrictions": ["rest-api"]
   }'
 ----
 
 == Delete a Custom Field from an Asset Version
 
+This example shows how to delete the custom field `subType` from a specific asset version. Delete a custom field by setting the organization ID, group ID, asset ID, and version, and changing the tag key `subType` to your tag key.
+
 [source,console,linenums]
 ----
 curl -X DELETE \
-  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/:tagKey \
-  -H 'Authorization: bearer <your token here>' \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/:subType \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json'
 ----
 
 == Delete a Custom Field
 
+This example shows how to delete the custom field `subType` from all assets in an organization. Delete a custom field by setting the organization ID and changing the tag key `subType` to your tag key.
+
 [source,console,linenums]
 ----
 curl -X DELETE \
-  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields/:tagKey \
-  -H 'Authorization: bearer <your token here>’ \
+  https://anypoint.mulesoft.com/exchange/api/v1/organizations/:organizationId/fields/:subType \
+  -H 'Authorization: bearer $ACCESS_TOKEN’ \
   -H 'Content-Type: application/json'
 ----
