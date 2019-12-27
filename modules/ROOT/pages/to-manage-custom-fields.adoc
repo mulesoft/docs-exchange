@@ -16,7 +16,7 @@ image::custom-fields.png[]
 
 == Get an Access Token
 
-Get an access token with a cURL command such as the following. Optionally, you can use Postman or another application instead of cURL for sending HTTP commands.
+Get an access token with a cURL command such as the following. Optionally, instead of sending HTTP commands with cURL, you can use Postman or another application.
 
 Replace `YOUR_USERNAME` with your Anypoint Platform user account name and replace `YOUR_PASSWORD` with your password.
 
