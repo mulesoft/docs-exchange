@@ -33,7 +33,7 @@ Exchange supports custom fields of the types enum, number, date, text, list of n
 
 === Enum
 
-This example shows how to create a custom field of the type `enum` with the name *SubType* and the possible values *OAS* and *RAML*. Create your own custom field by setting the organization ID and changing the data parameters after the `-d` flag.
+This example shows how to create a custom field of the type `enum`, a list of enumerated values, with the name *SubType* and the possible values *OAS* and *RAML*. Create your own custom field by setting the organization ID and changing the data parameters after the `-d` flag.
 
 [source,console,linenums]
 ----
