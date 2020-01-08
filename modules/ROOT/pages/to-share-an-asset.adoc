@@ -42,10 +42,6 @@ The organization granting viewer access is the granting organization, and the or
 +
 Assets can only be shared with another organization if that organization has enabled receiving viewer access to assets from external organizations.
 +
-. The granting organization adds the receiving organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-org-access.adoc[External Organization Access].
-+
-Receiving organizations only appear in the Share menu if both organizations have added the other.
-+
 . Login to your Exchange administrator account in the granting organization.
 . Click an asset to show its details and click Share.
 . In the Share menu, begin typing the name of the external organization you want to share the asset with.
