@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-share-an-asset-with-a-user.adoc
 
-Exchange administrators can share an asset with another user or with a team in a separate organization.
+Exchange administrators can share an asset with another user in their organization, with the whole organization, or with an external organization.
 
 == Share With a User
 
@@ -20,31 +20,41 @@ Or click a filter to list only users who have Viewer, Contributor, or Admin righ
 
 You can also use the Share menu to change who you are sharing the asset with or to stop sharing with one or more users.
 
-== Share With an External Team
+== Share With Your Organization
 
-Exchange administrators can grant viewer access for an asset in their organization to teams in other organizations.
+Exchange administrators can grant viewer access for an asset to everyone in their organization.
 
-The organization granting viewer access is the granting organization, and the organization that includes the teams receiving access is the receiving organization.
+. Click an asset to show its details and click Share.
+. In the Share menu, begin typing the name of your organization.
+. Select the menu item for everyone at your organization.
 
-. The receiving organization adds the granting organization to its list of trusted organizations in Anypoint Access Management, as described in xref:access-management::external-org-access.adoc[External Organization Access].
+You can also use the Share menu to stop sharing the asset with everyone at the organization.
+
+Any Exchange user can click the *Shared with me* link in the left navigation menu of Exchange to show all assets shared with their user account and all assets shared with their organization.
+
+== Share With an External Organization
+
+Exchange administrators can grant viewer access for an asset to everyone in a chosen external organization.
+
+The organization granting viewer access is the granting organization, and the organization that receives access is the receiving organization.
+
+. The receiving organization adds the granting organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-org-access.adoc[External Organization Access].
 +
-Assets can only be shared with teams in another organization if that organization has enabled receiving viewer access to assets from external organizations.
+Assets can only be shared with another organization if that organization has enabled receiving viewer access to assets from external organizations.
 +
-. The granting organization adds the receiving organization to its list of trusted organizations in Anypoint Access Management, as described in xref:access-management::external-org-access.adoc[External Organization Access].
+. The granting organization adds the receiving organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-org-access.adoc[External Organization Access].
 +
-Receiving teams only appear in the Share menu if both organizations have added the other.
+Receiving organizations only appear in the Share menu if both organizations have added the other.
 +
 . Login to your Exchange administrator account in the granting organization.
 . Click an asset to show its details and click Share.
-. In the Share menu, begin typing the name of the team you want to share the asset with.
-. Select the team you want to grant viewer access to.
-. Repeat steps 5 and 6 to add additional teams to share the asset with.
+. In the Share menu, begin typing the name of the external organization you want to share the asset with.
+. Select the organization you want to grant viewer access to.
+. Repeat steps 5 and 6 to add additional organizations to share the asset with.
 
-You can also use the Share menu to change who you are sharing the asset with or to stop sharing with one or more teams.
+You can also use the Share menu to change who you are sharing the asset with or to stop sharing with one or more organizations.
 
-When the administrator grants viewer access to the asset, Exchange sends an email notification to the team maintainer of each receiving team.
-
-Any Exchange user can click the *Shared with me* link in the left navigation menu of Exchange to show all assets shared with their user account and all assets shared with any of their teams.
+Any Exchange user can click the *Shared with me* link in the left navigation menu of Exchange to show all assets shared with their user account and all assets shared with their organization.
 
 Only internal users can request access to an API or gain the contributor or administrator roles. To grant these permissions to a user from another organization, invite the user to become an internal user of your organization, and then grant the contributor, administrator, or API access requestor permissions.
 
