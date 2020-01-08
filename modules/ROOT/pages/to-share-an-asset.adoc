@@ -46,7 +46,7 @@ Assets can only be shared with another organization if that organization has ena
 . Click an asset to show its details and click Share.
 . In the Share menu, begin typing the name of the external organization you want to share the asset with.
 . Select the organization you want to grant viewer access to.
-. Repeat steps 5 and 6 to add additional organizations to share the asset with.
+. Repeat steps 4 and 5 to add additional organizations to share the asset with.
 
 You can also use the Share menu to change who you are sharing the asset with or to stop sharing with one or more organizations.
 
