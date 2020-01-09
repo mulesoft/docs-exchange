@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-share-an-asset-with-a-user.adoc
 
-Exchange administrators and asset administrators can share an asset with another user in their organization, with the whole organization, or with an external organization.
+Exchange administrators and asset administrators can share an asset with another user in their organization or with an external organization.
 
 == Share With a User
 
@@ -20,23 +20,9 @@ Or click a filter to list only users who have Viewer, Contributor, or Admin righ
 
 You can also use the Share menu to change who you are sharing the asset with or to stop sharing with one or more users.
 
-== Share With Your Organization
-
-Exchange administrators can grant viewer access for an asset to everyone in their organization.
-
-. Click an asset to show its details and click Share.
-. In the Share menu, begin typing the name of your organization.
-. Select the menu item for everyone at your organization.
-
-When an asset is shared with an organization, email notification is sent to the maintainer of the organization's default "All Users" team. Usually this is the organization administrator.
-
-You can also use the Share menu to stop sharing the asset with everyone at the organization.
-
-Any Exchange user can click the *Shared with me* link in the left navigation menu of Exchange to show all assets shared with their user account and all assets shared with their organization.
-
 == Share With an External Organization
 
-Exchange administrators can grant viewer access for an asset to everyone in a chosen external organization.
+Exchange administrators and asset administrators can grant viewer access for an asset to everyone in a chosen external organization.
 
 The organization granting viewer access is the granting organization, and the organization that receives access is the receiving organization.
 
