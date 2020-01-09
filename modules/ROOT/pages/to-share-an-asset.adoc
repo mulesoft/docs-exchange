@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-share-an-asset-with-a-user.adoc
 
-Exchange administrators can share an asset with another user in their organization, with the whole organization, or with an external organization.
+Exchange administrators and asset administrators can share an asset with another user in their organization, with the whole organization, or with an external organization.
 
 == Share With a User
 
