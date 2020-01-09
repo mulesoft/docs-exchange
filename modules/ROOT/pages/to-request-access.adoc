@@ -4,13 +4,22 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
+A user requesting access to an API registers a client application and creates a
+contract.
+
+API contracts are visible to API consumers in Exchange, and visible to API
+providers in API Manager.
+
+API providers can view, manage, and revoke these contracts with the steps in
+xref:api-manager::manage-client-apps-latest-task.adoc[Managing API Instance Contracts on API Manager].
+
 APIs that have been protected by a Client ID enforcement policy require API consumers to create an application to hold the Client ID and Secret. This lets the app access the API as well as provide consumer analytics for an API developer.
 
 If terms and conditions are set for an asset, you are prompted to accept the terms before access can be granted.
 
 . Click an API asset to view more details.
 . Click Request Access.
-. If you do not have an application you want to provide access for, click Create A New Application in the Request Access menu. See below for more information.
+. If you do not have an application you want to provide access for, click Create A New Application in the Request Access menu. See the following section for more information.
 . If you are using an existing application, choose from the list of applications.
 . Choose the API Instance from the list of APIs.
 . Choose the service-level agreement (SLA) value for the application.
