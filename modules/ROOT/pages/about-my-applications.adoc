@@ -23,9 +23,16 @@ or the user creates the application from the Request Access menu.
 
 Applications in My Applications are registered using API Manager in Anypoint Platform.
 
-Requesting access creates an API contract with the client credentials for a
-registered client application. API contracts are visible to API consumers in
-Exchange, and visible to API providers in API Manager.
+Requesting access registers a client and creates an API contract between an API
+and a client application.
+
+APIs that have been protected by a client ID enforcement policy require
+applications to have a client ID and client secret. This enables the
+application to access the API and provides consumer analytics for an API
+developer.
+
+API contracts are visible to API consumers in Exchange, and visible to API
+providers in API Manager.
 
 == See Also
 
