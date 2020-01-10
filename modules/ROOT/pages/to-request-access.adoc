@@ -4,8 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-A user requesting access to an API registers a client application and creates a
-contract.
+A user requesting access to an API creates an API contract.
 
 API contracts are visible to API consumers in Exchange, and visible to API
 providers in API Manager.
