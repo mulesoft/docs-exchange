@@ -4,11 +4,16 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-APIs that have been protected by a Client ID enforcement policy require API consumers to create an application to hold the Client ID and Secret. This lets the app access the API as well as provide consumer analytics for an API developer.
+Requesting access registers a client and creates an API contract between an API
+and a client application.
 
-Requesting access creates an API contract with the client credentials for a
-registered client application. API contracts are visible to API consumers in
-Exchange, and visible to API providers in API Manager.
+APIs that have been protected by a client ID enforcement policy require
+applications to have a client ID and client secret. This enables the
+application to access the API and provides consumer analytics for an API
+developer.
+
+API contracts are visible to API consumers in Exchange, and visible to API
+providers in API Manager.
 
 API providers can view, manage, and revoke these contracts with the steps in
 xref:api-manager::manage-client-apps-latest-task.adoc[Managing API Instance Contracts on API Manager].
