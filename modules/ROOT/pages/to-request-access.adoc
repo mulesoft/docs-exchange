@@ -18,7 +18,7 @@ providers in API Manager.
 API providers can view, manage, and revoke these contracts with the steps in
 xref:api-manager::manage-client-apps-latest-task.adoc[Managing API Instance Contracts on API Manager].
 
-If terms and conditions are set for an asset, you are prompted to accept the terms before access can be granted.
+If terms and conditions are set for an asset, you are prompted to accept the terms before access is granted.
 
 . Click an API asset to view more details.
 . Click Request Access.
