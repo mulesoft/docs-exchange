@@ -12,7 +12,7 @@ image::ex2-my-applications.png[]
 A contract holds information about the contract with a client ID and client secret for the API.
 Each application lists a description, its URL, redirect URIs, grant types, and a usage dashboard.
 
-The usage information lets you set the verification duration. If not specified,
+The usage information enables you to set the verification duration. If not specified,
 the range is the last 8 days. The usage lists the total number of requests to
 the API, average latency, the error rate, and graphs for total requests,
 average latency, requests by HTTP status code, and the error percentage.
