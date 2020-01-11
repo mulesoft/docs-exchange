@@ -4,8 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Requesting access registers a client and creates an API contract between an API
-and the client application.
+When you request access, the client application is registered and creates an
+API contract between the API and the client.
 
 APIs that are protected by a client ID enforcement policy require
 applications to have a client ID and client secret. This enables the
