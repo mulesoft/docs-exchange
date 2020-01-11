@@ -22,7 +22,7 @@ If terms and conditions are set for an asset, you are prompted to accept the ter
 
 . Click an API asset to view more details.
 . Click **Request Access**.
-. If you do not have an application you want to provide access for, click Create A New Application in the Request Access menu. See the following section for more information.
+. If you do not have an application to which to provide access, click **Request Access > Create A New Application**. See the following section for more information.
 . If you are using an existing application, choose from the list of applications.
 . Choose the API Instance from the list of APIs.
 . Choose the service-level agreement (SLA) value for the application.
