@@ -24,7 +24,7 @@ or the user creates the application from the Request Access menu.
 Applications in My Applications are registered using API Manager in Anypoint Platform.
 
 When you request access, a client is registered and creates an API contract between an API
-and a client application.
+and the client application.
 
 APIs that have been protected by a client ID enforcement policy require
 applications to have a client ID and client secret. This enables the
