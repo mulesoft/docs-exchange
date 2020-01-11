@@ -23,7 +23,7 @@ or the user creates the application from the Request Access menu.
 
 Applications in My Applications are registered using API Manager in Anypoint Platform.
 
-Requesting access registers a client and creates an API contract between an API
+When you request access, a client is registered and creates an API contract between an API
 and a client application.
 
 APIs that have been protected by a client ID enforcement policy require
