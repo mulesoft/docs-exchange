@@ -26,7 +26,7 @@ Applications in My Applications are registered using API Manager in Anypoint Pla
 When you request access, a client is registered and creates an API contract between an API
 and the client application.
 
-APIs that have been protected by a client ID enforcement policy require
+APIs that are protected by a client ID enforcement policy require
 applications to have a client ID and client secret. This enables the
 application to access the API and provides consumer analytics for an API
 developer.
