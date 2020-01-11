@@ -15,7 +15,7 @@ Each application lists a description, its URL, redirect URIs, grant types, and a
 The usage information enables you to set the verification duration. If not specified,
 the range is the previous eight days. The usage lists the total number of requests to
 the API, average latency, the error rate, and graphs for total requests,
-average latency, requests by HTTP status code, and the error percentage.
+requests by HTTP status code, and the error percentage.
 
 The applications result when users click Request Access to establish
 a link between an application and an API. Either the application already exists,
