@@ -17,14 +17,14 @@ the range is the previous eight days. The usage lists the total number of reques
 the API, average latency, the error rate, and graphs for total requests,
 requests by HTTP status code, and the error percentage.
 
-The applications result when users click Request Access to establish
-a link between an application and an API. Either the application already exists,
-or the user creates the application from the Request Access menu.
-
 Applications in My Applications are registered using API Manager in Anypoint Platform.
 
-When you request access, a client is registered and creates an API contract between an API
-and the client application.
+When you request access, the client application is registered and creates an
+API contract between the API and the client.
+
+If you don't have an application to link to your API, you can create the application
+in the Request Access menu. You can then click Request Access to connect your
+application and the API.
 
 APIs that are protected by a client ID enforcement policy require
 applications to have a client ID and client secret. This enables the
