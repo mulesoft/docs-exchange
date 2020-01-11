@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 
 Requesting access registers a client and creates an API contract between an API
-and a client application.
+and the client application.
 
 APIs that have been protected by a client ID enforcement policy require
 applications to have a client ID and client secret. This enables the
