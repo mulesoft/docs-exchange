@@ -4,15 +4,15 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-To implement an API, the client application must first request access. When the
-request is approved by the API, a contract is created between the client
-application and the API, and the client application is registered.
+To register a client application to an existing API, the client application
+must first request access. When the request is approved by the API owner, a
+contract is created between the client application and the API, and the client
+application is registered.
 
 APIs that are protected by a client ID enforcement policy require client
-applications to provide a client ID and client secret. The client ID and client
+applications to provide a client ID and optional client secret. The client ID and client
 secret credentials are automatically created when the client application is
-registered. These credentials enable the application to access the API and
-provide consumer analytics for an API developer.
+registered.
 
 API contracts are visible to API consumers in Exchange, and visible to API
 providers in API Manager.
