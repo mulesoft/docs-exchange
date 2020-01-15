@@ -9,14 +9,13 @@ applications that hold a contract between an API and a user.
 
 image::ex2-my-applications.png[]
 
-A contract holds information including a client ID and optional client secret
-for the API. Each application lists a description, its URL, redirect URIs,
+Each client application has a client ID, client secret, description, URL, redirect URIs,
 grant types, and a usage dashboard.
 
 The usage information enables you to set the verification duration. If not specified,
-the range is the previous eight days. The usage lists the total number of requests to
-the API, average latency, the error rate, and graphs for total requests,
-requests by HTTP status code, and the error percentage.
+the range is the previous eight days. The usage lists total number of requests to
+the API, average latency, error rate, and graphs for total requests,
+requests by HTTP status code, and error percentage.
 
 Applications in My Applications are registered using API Manager in Anypoint Platform.
 
