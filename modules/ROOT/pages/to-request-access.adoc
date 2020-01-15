@@ -22,11 +22,13 @@ applications.
 API providers can view, manage, and revoke these contracts by following the steps in
 xref:api-manager::manage-client-apps-latest-task.adoc[Managing API Instance Contracts on API Manager].
 
-If terms and conditions are set for an asset, you are prompted to accept the terms before access is granted.
+If terms and conditions are set for an asset, you are prompted to accept the
+terms before access is granted, and the created contract includes the terms and
+conditions.
 
 . Click an API asset to view more details.
-. Click **Request Access**.
-. If you do not have an application to which to provide access, click **Request Access > Create A New Application**. See the following section for more information.
+. Click *Request Access*.
+. If you do not have an application to which to provide access, click *Request Access > Create A New Application*. See the section "Create a New Application" for more information.
 . If you are using an existing application, choose from the list of applications.
 . Choose the API Instance from the list of APIs.
 . Choose the service-level agreement (SLA) value for the application.
