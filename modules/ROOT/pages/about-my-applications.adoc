@@ -35,8 +35,10 @@ applications to provide a client ID and optional client secret. The client ID an
 secret credentials are automatically created when the client application is
 registered.
 
-API contracts are visible to API consumers in Exchange, and visible to API
-providers in API Manager.
+An API owner can use API Manager to view all API contracts ever created for an
+API instance. An API consumer can use Exchange's *My Applications* page to view
+the API contracts created between an API instance and that consumer's client
+applications.
 
 == See Also
 
