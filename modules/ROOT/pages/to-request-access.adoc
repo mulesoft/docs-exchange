@@ -19,7 +19,7 @@ API instance. An API consumer can use Exchange's *My Applications* page to view
 the API contracts created between an API instance and that consumer's client
 applications.
 
-API providers can view, manage, and revoke these contracts with the steps in
+API providers can view, manage, and revoke these contracts by following the steps in
 xref:api-manager::manage-client-apps-latest-task.adoc[Managing API Instance Contracts on API Manager].
 
 If terms and conditions are set for an asset, you are prompted to accept the terms before access is granted.
