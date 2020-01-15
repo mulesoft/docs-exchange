@@ -4,13 +4,31 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-APIs that have been protected by a Client ID enforcement policy require API consumers to create an application to hold the Client ID and Secret. This lets the app access the API as well as provide consumer analytics for an API developer.
+To register a client application to an existing API, the client application
+must first request access. When the request is approved by the API owner, a
+contract is created between the client application and the API, and the client
+application is registered.
 
-If terms and conditions are set for an asset, you are prompted to accept the terms before access can be granted.
+APIs that are protected by a client ID enforcement policy require client
+applications to provide a client ID and optional client secret. The client ID and client
+secret credentials are automatically created when the client application is
+registered.
+
+An API owner can use API Manager to view all API contracts ever created for an
+API instance. An API consumer can use Exchange's *My Applications* page to view
+the API contracts created between an API instance and that consumer's client
+applications.
+
+API providers can view, manage, and revoke these contracts by following the steps in
+xref:api-manager::manage-client-apps-latest-task.adoc[Managing API Instance Contracts on API Manager].
+
+If terms and conditions are set for an asset, you are prompted to accept the
+terms before access is granted, and the created contract includes the terms and
+conditions.
 
 . Click an API asset to view more details.
-. Click Request Access.
-. If you do not have an application you want to provide access for, click Create A New Application in the Request Access menu. See below for more information.
+. Click *Request Access*.
+. If you do not have an application to which to provide access, click *Request Access > Create A New Application*. See the section "Create a New Application" for more information.
 . If you are using an existing application, choose from the list of applications.
 . Choose the API Instance from the list of APIs.
 . Choose the service-level agreement (SLA) value for the application.
