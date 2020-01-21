@@ -30,7 +30,7 @@ The organization granting viewer access is the granting organization, and the or
 +
 Assets can only be shared with another organization if that organization has enabled receiving viewer access to assets from external organizations.
 +
-. Login to your Exchange administrator account in the granting organization.
+. Login to your Exchange administrator or asset administrator account in the granting organization.
 . Click an asset to show its details and click Share.
 . In the Share menu, begin typing the name of the external organization you want to share the asset with.
 . Select the organization you want to grant viewer access to.
