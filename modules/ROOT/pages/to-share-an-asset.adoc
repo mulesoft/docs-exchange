@@ -42,7 +42,7 @@ You can also use the Share menu to change who you are sharing the asset with or 
 
 Any Exchange user can click the *Shared with me* link in the left navigation menu of Exchange to show all assets shared with their user account and all assets shared with their organization.
 
-Only internal users can request access to an API or gain the contributor or administrator roles. To grant these permissions to a user from another organization, invite the user to become an internal user of your organization, and then grant the contributor, administrator, or API access requestor permissions.
+Only internal users can request access to an API or gain the contributor or administrator roles.
 
 == See Also
 
