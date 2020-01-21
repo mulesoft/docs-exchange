@@ -9,16 +9,15 @@ Exchange administrators and asset administrators can share an asset with another
 
 == Share With a User
 
-If the person is not in your organization,
-click Access Management > Users to add them.
+If the person is not in your organization, click *Access Management* > *Users* to add them.
 
-. Click an asset to show its details and click Share.
-. In the Share menu, type a few letters of the person's name you want to share this asset with.
-Or click a filter to list only users who have Viewer, Contributor, or Admin rights.
-. Click Add.
-. Repeat steps 2 and 3 to add additional users to share the asset with.
+. Click an asset to show its details.
+. Click *Share*.
+. Begin typing the name of the person you want to share this asset with, and select that person in the list. You can optionally click a filter to show only users who have Viewer, Contributor, or Admin rights.
+. Click *Add*.
+. Repeat steps 3 and 4 to share with additional users.
 
-You can also use the Share menu to change who you are sharing the asset with or to stop sharing with one or more users.
+You can also click Share to change who you are sharing the asset with or to stop sharing with one or more users.
 
 == Share With an External Organization
 
@@ -31,18 +30,19 @@ The organization granting viewer access is the granting organization, and the or
 Assets can only be shared with another organization if that organization has enabled receiving viewer access to assets from external organizations.
 +
 . Login to your Exchange administrator or asset administrator account in the granting organization.
-. Click an asset to show its details and click Share.
-. In the Share menu, begin typing the name of the external organization you want to share the asset with.
-. Select the organization you want to grant viewer access to.
-. Repeat steps 4 and 5 to add additional organizations to share the asset with.
+. Click an asset to show its details.
+. Click Share.
+. Begin typing the name of the external organization you want to share this asset with.
+. Select the organization in the list.
+. Repeat steps 5 and 6 to share with additional organizations.
 
 When an asset is shared with an organization, email notification is sent to the organization administrators.
 
-You can also use the Share menu to change who you are sharing the asset with or to stop sharing with one or more organizations.
+You can also click Share to change who you are sharing the asset with or to stop sharing with one or more organizations.
 
 Any Exchange user can click the *Shared with me* link in the left navigation menu of Exchange to show all assets shared with their user account and all assets shared with their organization.
 
-Only internal users can request access to an API or gain the contributor or administrator roles.
+Only internal users in the same organization as the asset can request access to an API or gain the contributor or administrator roles.
 
 == See Also
 
