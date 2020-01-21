@@ -36,7 +36,7 @@ Assets can only be shared with another organization if that organization has ena
 . Select the organization you want to grant viewer access to.
 . Repeat steps 4 and 5 to add additional organizations to share the asset with.
 
-When an asset is shared with an organization, email notification is sent to the maintainer of the organization's default "All Users" team. Usually this is the organization administrator.
+When an asset is shared with an organization, email notification is sent to the organization administrators.
 
 You can also use the Share menu to change who you are sharing the asset with or to stop sharing with one or more organizations.
 
