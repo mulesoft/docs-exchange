@@ -15,20 +15,23 @@ If the person is not in your organization, click *Access Management* > *Users* t
 
 . Click an asset to show its details.
 . Click *Share*.
-. Begin typing the name of the person you want to share this asset with, and select that person in the list. You can optionally click a filter to show only users who have Viewer, Contributor, or Admin rights.
-. Click *Add*.
+. Begin typing the name of the person you want to share this asset with, and select that person in the list.
+. Select whether to grant the user Viewer, Contributor, or Admin rights.
 . Repeat steps 3 and 4 to share with additional users.
+. Click *Save*.
 
 You can also click *Share* to change who you are sharing the asset with or to stop sharing with one or more users.
 
 == Share With Your Organization
 
-Exchange administrators and asset administrators can grant viewer access for an asset to everyone in their organization.
+Exchange administrators and asset administrators can share an asset to everyone in their organization.
 
 . Click an asset to show its details.
 . Click *Share*.
 . Begin typing the name of your organization.
 . Select the list item for everyone at your organization.
+. Select whether to grant Viewer, Contributor, or Admin rights.
+. Click *Save*.
 
 When an asset is shared with an organization, email notification is sent to the organization administrators.
 
@@ -50,6 +53,7 @@ Assets can only be shared with another organization if that organization has ena
 . Begin typing the name of the external organization you want to share this asset with.
 . Select the organization in the list.
 . Repeat steps 5 and 6 to share with additional organizations.
+. Click *Save*.
 
 When an asset is shared with an organization, email notification is sent to the organization administrators.
 
