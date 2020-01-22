@@ -43,11 +43,11 @@ Exchange administrators and asset administrators can grant viewer access for an 
 
 The organization granting viewer access is the granting organization, and the organization that receives access is the receiving organization.
 
-. The receiving organization adds the granting organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-org-access.adoc[External Organization Access].
+. The receiving organization adds the granting organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-organization-access.adoc[External Organization Access].
 +
 Assets can only be shared with another organization if that organization has enabled receiving viewer access to assets from external organizations.
 +
-. The granting organization adds the receiving organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-org-access.adoc[External Organization Access].
+. The granting organization adds the receiving organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-organization-access.adoc[External Organization Access].
 . Login to your Exchange administrator or asset administrator account in the granting organization.
 . Click an asset to show its details.
 . Click *Share*.
@@ -76,4 +76,4 @@ If a custom policy is uploaded to Exchange and shared with an external organizat
 
 == See Also
 
-* xref:access-management::external-org-access.adoc[Access Management External Organization Access]
+* xref:access-management::external-organization-access.adoc[Access Management External Organization Access]
