@@ -48,4 +48,4 @@ view, download, edit the content, deprecate, delete, and share the asset.
 
 * xref:access-management::roles.adoc[Access Management Roles]
 * xref:access-management::managing-permissions.adoc[Access Management Managing Permissions]
-* xref:access-management::external-org-access.adoc[Access Management External Organization Access]
+* xref:access-management::external-organization-access.adoc[Access Management External Organization Access]
