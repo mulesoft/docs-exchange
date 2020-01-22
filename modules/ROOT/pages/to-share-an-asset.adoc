@@ -62,6 +62,18 @@ You can also click *Share* to change who you are sharing the asset with or to st
 
 Only internal users in the same organization as the asset can request access to an API or gain the contributor or administrator roles.
 
+=== Using Assets Shared with External Organizations
+
+If a connector is shared with an external organization, then in Studio or Flow Designer a user in the external organization can search for the connector, configure it, and use it in a Mule application.
+
+If an example or template is shared with an external organization, then in Studio or Flow Designer a user in the external organization can implement a Mule application based on the shared template.
+
+If a REST, SOAP, or HTTP API is created in Exchange and shared with an external organization, then API Manager cannot manage the API in the external organization. API Manager search results show only APIs from the external organization user's business group. In Studio a user in the external organization can use the API in the flow as a source for scaffolding an application.
+
+If a RAML fragment is created in Design Center and shared with an external organization, then in API Designer a user in the external organization can import the fragment and add it as a dependency in the new API specification. If the fragment is unshared, then the API specification in the external organization shows the same error that is shown if the fragment is deleted, "File not found."
+
+If a custom policy is uploaded to Exchange and shared with an external organization, then API Manager does not show the policy in the list of policies that can be applied to an API instance in the external organization.
+
 == See Also
 
 * xref:access-management::external-org-access.adoc[Access Management External Organization Access]
