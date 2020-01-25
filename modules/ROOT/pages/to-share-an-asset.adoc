@@ -39,7 +39,7 @@ You can also click *Share* to stop sharing the asset with everyone at the organi
 
 == Share with an External Organization
 
-Exchange administrators and asset administrators can grant viewer access for an asset to everyone in a chosen external organization.
+Exchange administrators and asset administrators can grant viewer access to an asset to everyone in a chosen external organization.
 
 The organization granting viewer access is the granting organization, and the organization that receives access is the receiving organization.
 
