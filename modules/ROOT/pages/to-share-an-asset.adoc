@@ -37,7 +37,7 @@ When an asset is shared with an organization, email notification is sent to the 
 
 You can also click *Share* to stop sharing the asset with everyone at the organization.
 
-== Share With an External Organization
+== Share with an External Organization
 
 Exchange administrators and asset administrators can grant viewer access for an asset to everyone in a chosen external organization.
 
