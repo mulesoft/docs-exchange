@@ -5,7 +5,8 @@ endif::[]
 
 Exchange administrators can perform the following tasks:
 
-* xref:to-set-permissions.adoc[Set Exchange role permissions] - Determine who in your organization should be an Exchange Administrator, Contributor, or Viewer. You can also provide role access for individual assets.
+* xref:to-set-permissions.adoc[Set Exchange role permissions]
+Determine who in your organization should be an Exchange administrator, contributor, or viewer. You can also provide role access for individual assets.
 * xref:to-save-searches.adoc[To Save Searches] - Save and maintain searches for assets within a business group.
 * xref:to-share-an-asset.adoc[To Share an Asset] - Grant access to view an asset to a user in your organization, to everyone in your organization, or to everyone in a chosen external organization. You can also use Share to publish an API asset to a Public Portal.
 * xref:to-enable-the-request-access-button.adoc[Use API Manager to add the Request Access button] - This enables you to specify which API assets can be shared with users.
