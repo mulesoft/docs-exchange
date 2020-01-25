@@ -35,7 +35,7 @@ Exchange administrators and asset administrators can share an asset with everyon
 
 When an asset is shared with an organization, email notification is sent to the organization administrators.
 
-You can also click *Share* to stop sharing the asset with everyone at the organization.
+You can also click *Share* to stop sharing the asset with everyone at your organization.
 
 == Share with an External Organization
 
