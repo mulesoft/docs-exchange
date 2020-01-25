@@ -49,7 +49,7 @@ Assets can only be shared with another organization if that organization has ena
 +
 . The granting organization adds the receiving organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-organization-access.adoc[External Organization Access].
 . Login to your Exchange administrator or asset administrator account in the granting organization.
-. Click an asset to show its details.
+. Click the asset to show its details.
 . Click *Share*.
 . Begin typing the name of the external organization you want to share this asset with.
 . Select the organization in the list.
