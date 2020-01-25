@@ -9,20 +9,20 @@ Exchange administrators and asset administrators can share an asset with another
 
 Any Exchange user can click the *Shared with me* link in the left navigation menu of Exchange to show all assets shared with their user account and all assets shared with their organization.
 
-== Share With a User
+== Share Assets with a User
 
-If a user that you want to share an asset with is not in your organization, click *Access Management* > *Users* to add them:
-
+. If a user that you want to share an asset with is not in your organization, click *Access Management* > *Users* to add them to your organization.
 . Click an asset to show its details.
 . Click *Share*.
-. Begin typing the name of the person you want to share this asset with, and select that person in the list.
-. Select whether to grant the user Viewer, Contributor, or Admin rights.
-. Repeat Steps 3 and 4 to share with additional users.
+. Begin typing the name of the person you want to share this asset with.
+. Select that person in the list.
+. Select whether to grant the user viewer, contributor, or administrator rights.
+. Repeat Steps 4, 5, and 6 to share with additional users.
 . Click *Save*.
 
 You can also click *Share* to change who you are sharing the asset with or to stop sharing with one or more users.
 
-== Share with Your Organization
+== Share Assets with Your Organization
 
 Exchange administrators and asset administrators can share an asset with everyone in their organization.
 
@@ -30,49 +30,49 @@ Exchange administrators and asset administrators can share an asset with everyon
 . Click *Share*.
 . Begin typing the name of your organization.
 . Select the list item for everyone at your organization.
-. Select whether to grant all members of your organization Viewer, Contributor, or Admin rights.
+. Select whether to grant all members of your organization viewer, contributor, or administrator rights.
 . Click *Save*.
 
 When an asset is shared with an organization, email notification is sent to the organization administrators.
 
 You can also click *Share* to stop sharing the asset with everyone at your organization.
 
-== Share with an External Organization
+== Share Assets with an External Organization
 
 Exchange administrators and asset administrators can grant viewer access to an asset to everyone in a chosen external organization.
 
-The organization granting viewer access is the granting organization, and the organization that receives access is the receiving organization.
+The granting organization holds an asset and grants viewer access to that asset to the receiving organization.
 
-. The receiving organization adds the granting organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-organization-access.adoc[External Organization Access].
+To grant viewer access to an asset to an external organization:
+
+. Each of the granting organization and the receiving organization adds the other to its External Access list in Anypoint Access Management, as described in xref:access-management::external-organization-access.adoc[External Organization Access].
 +
-Assets can only be shared with another organization if that organization has enabled receiving viewer access to assets from external organizations.
-+
-. The granting organization adds the receiving organization to its "External Access" list in Anypoint Access Management, as described in xref:access-management::external-organization-access.adoc[External Organization Access].
-. Login to your Exchange administrator or asset administrator account in the granting organization.
+Assets can be shared with another organization only if that organization has enabled receiving viewer access to assets from external organizations.
+. Log in to your Exchange administrator or asset administrator account in the granting organization.
 . Click the asset to show its details.
 . Click *Share*.
 . Begin typing the name of the external organization you want to share this asset with.
 . Select the organization in the list.
-. Repeat steps 6 and 7 to share with additional organizations.
+. Repeat steps 5 and 6 to share with additional organizations.
 . Click *Save*.
 
 When an asset is shared with an organization, email notification is sent to the organization administrators.
 
 You can also click *Share* to change who you are sharing the asset with or to stop sharing with one or more organizations.
 
-Only internal users in the same organization as the asset can request access to an API or gain the contributor or administrator roles.
+Only internal users in the granting organization can request access to an API or gain the contributor or administrator roles.
 
-=== Using Assets Shared with External Organizations
+=== Using Assets Shared by a Granting Organization
 
-If a connector is shared with an external organization, then a user in that organization can use Studio or Flow Designer to search for the connector, configure it, and use it in a Mule application.
+A user in a receiving organization can use Studio or Flow Designer to search for a shared connector, configure it, and use it in a Mule application.
 
-If an example or template is shared with an external organization, then a user in that organization can use Studio or Flow Designer to implement a Mule application based on the shared template.
+A user in a receiving organization can use Studio or Flow Designer to implement a Mule application based on a shared example or template.
 
-If a REST, SOAP, or HTTP API is created in Exchange and shared with an external organization, then API Manager cannot manage the API in the external organization. API Manager search results show only APIs from the external organization user's business group. In Studio a user in the external organization can use the API in the flow as a source for scaffolding an application.
+A user in a receiving organization cannot use API Manager to manage a shared REST, SOAP, or HTTP API that was created in Exchange in the granting organization. API Manager only shows APIs from the user's business group. However, the user can use the API in Studio in the flow as a source for scaffolding an application.
 
-If a RAML fragment is created in Design Center and shared with an external organization, then in API Designer a user in the external organization can import the fragment and add it as a dependency in the new API specification. If the fragment is unshared, then the API specification in the external organization shows the same error that is shown if the fragment is deleted, "File not found."
+A user in a receiving organization cannot use API Manager to apply a shared custom policy that was uploaded to Exchange in the granting organization. API Manager does not show policies shared by granting organizations in the list of policies that can be applied to an API instance.
 
-If a custom policy is uploaded to Exchange and shared with an external organization, then API Manager does not show the policy in the list of policies that can be applied to an API instance in the external organization.
+A user in a receiving organization can use API Designer to import a shared RAML fragment that was created in Design Center in the granting organization. The user can also add the fragment as a dependency in a new API specification. If the granting organization stops sharing the fragment or deletes the fragment, then the API specification shows the error "File not found."
 
 == See Also
 
