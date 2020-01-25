@@ -24,7 +24,7 @@ You can also click *Share* to change who you are sharing the asset with or to st
 
 == Share with Your Organization
 
-Exchange administrators and asset administrators can share an asset to everyone in their organization.
+Exchange administrators and asset administrators can share an asset with everyone in their organization.
 
 . Click an asset to show its details.
 . Click *Share*.
