@@ -30,7 +30,7 @@ Exchange administrators and asset administrators can share an asset with everyon
 . Click *Share*.
 . Begin typing the name of your organization.
 . Select the list item for everyone at your organization.
-. Select whether to grant Viewer, Contributor, or Admin rights.
+. Select whether to grant all members of your organization Viewer, Contributor, or Admin rights.
 . Click *Save*.
 
 When an asset is shared with an organization, email notification is sent to the organization administrators.
