@@ -20,6 +20,6 @@ This enables you to specify which API assets can be shared with users.
 * xref:to-deprecate-asset.adoc[Deprecate an asset]
 +
 Remove access to a version within an asset but keep the asset available. Users can access other versions within the asset.
-* xref:migrate.adoc[Migrate Exchange 1 assets to Exchange 2
+* xref:migrate.adoc[Migrate Exchange 1 assets to Exchange 2]
 +
 How to handle assets moved from Exchange 1.
