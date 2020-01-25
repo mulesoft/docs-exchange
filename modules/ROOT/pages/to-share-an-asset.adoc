@@ -64,7 +64,7 @@ Only internal users in the same organization as the asset can request access to 
 
 === Using Assets Shared with External Organizations
 
-If a connector is shared with an external organization, then in Studio or Flow Designer a user in the external organization can search for the connector, configure it, and use it in a Mule application.
+If a connector is shared with an external organization, then a user in that organization can use Studio or Flow Designer to search for the connector, configure it, and use it in a Mule application.
 
 If an example or template is shared with an external organization, then in Studio or Flow Designer a user in the external organization can implement a Mule application based on the shared template.
 
