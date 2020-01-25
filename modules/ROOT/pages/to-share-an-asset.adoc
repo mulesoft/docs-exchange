@@ -66,7 +66,7 @@ Only internal users in the same organization as the asset can request access to 
 
 If a connector is shared with an external organization, then a user in that organization can use Studio or Flow Designer to search for the connector, configure it, and use it in a Mule application.
 
-If an example or template is shared with an external organization, then in Studio or Flow Designer a user in the external organization can implement a Mule application based on the shared template.
+If an example or template is shared with an external organization, then a user in that organization can use Studio or Flow Designer to implement a Mule application based on the shared template.
 
 If a REST, SOAP, or HTTP API is created in Exchange and shared with an external organization, then API Manager cannot manage the API in the external organization. API Manager search results show only APIs from the external organization user's business group. In Studio a user in the external organization can use the API in the flow as a source for scaffolding an application.
 
