@@ -11,7 +11,7 @@ Any Exchange user can click the *Shared with me* link in the left navigation men
 
 == Share With a User
 
-If the person is not in your organization, click *Access Management* > *Users* to add them.
+If a user that you want to share an asset with is not in your organization, click *Access Management* > *Users* to add them:
 
 . Click an asset to show its details.
 . Click *Share*.
