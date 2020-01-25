@@ -17,7 +17,7 @@ If a user that you want to share an asset with is not in your organization, clic
 . Click *Share*.
 . Begin typing the name of the person you want to share this asset with, and select that person in the list.
 . Select whether to grant the user Viewer, Contributor, or Admin rights.
-. Repeat steps 3 and 4 to share with additional users.
+. Repeat Steps 3 and 4 to share with additional users.
 . Click *Save*.
 
 You can also click *Share* to change who you are sharing the asset with or to stop sharing with one or more users.
