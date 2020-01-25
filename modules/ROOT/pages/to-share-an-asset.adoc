@@ -22,7 +22,7 @@ If a user that you want to share an asset with is not in your organization, clic
 
 You can also click *Share* to change who you are sharing the asset with or to stop sharing with one or more users.
 
-== Share With Your Organization
+== Share with Your Organization
 
 Exchange administrators and asset administrators can share an asset to everyone in their organization.
 
