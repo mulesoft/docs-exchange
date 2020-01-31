@@ -10,11 +10,11 @@ Exchange provides multiple ways to set up access management to meet governance r
 
 These role groups pertain to every Business Group level:
 
-* Exchange Viewer: This role group gives permission to users to view and download assets within a business group. The users with this role group cannot add new assets, edit asset portal content, or share an asset with another user. Assign this role to those who consume your assets in a specific business group.
+* Exchange Viewers: This role group gives permission to users to view and download assets within a business group. The users with this role group cannot add new assets, edit asset portal content, or share an asset with another user. Assign this role to those who consume your assets in a specific business group.
 
-* Exchange Contributor: This role group gives permission to users to view, create, and download assets within a business group. Users with this role group can edit asset portal content in an existing asset version. Use this role to invite users to edit and maintain your asset portal descriptions.
+* Exchange Contributors: This role group gives permission to users to view, create, and download assets within a business group. Users with this role group can edit asset portal content in an existing asset version. Use this role to invite users to edit and maintain your asset portal descriptions.
 
-* Exchange Administrator: This role group gives permission to users to view, create, and download assets within a business group. Users with this role group can do everything that the Exchange Contributor and Exchange Viewer roles can do plus share an asset with another user, deprecate an asset, and delete an asset. Use this role to set up Exchange Administrator for all the assets within a specific business group.
+* Exchange Administrators: This role group gives permission to users to view, create, and download assets within a business group. Users with this role group can do everything that the Exchange Contributors and Exchange Viewers roles can do plus share an asset with another user, deprecate an asset, and delete an asset. Use this role to set up Exchange Administrators for all the assets within a specific business group.
 
 == Asset Roles
 
@@ -22,25 +22,34 @@ These role groups pertain to every asset level:
 
 These roles extend access on assets in addition to the role group that a user has at the business group level:
 
-* Asset Viewer: This role gives permission to users to view and download an asset. Users with this role cannot edit asset portal content or share an asset with another user. Use this role to invite a user outside your business group to view and download an asset.
+* Asset Viewers: This role gives permission to users to view and download an asset. Users with this role cannot edit asset portal content or share an asset with another user. Use this role to invite a user outside your business group to view and download an asset.
 
-* Asset Contributor: This role gives permission to users to view, add a new version, and download an asset. Use this role to invite a user outside your business group to view, download, and add edit portal content for an asset.
+* Asset Contributors: This role gives permission to users to view, add a new version, and download an asset. Use this role to invite a user outside your business group to view, download, and add edit portal content for an asset.
 
-* Asset Administrator: This role gives permission to users to view, create, download, deprecate, and delete an asset. Users with this role can do everything the Exchange Administrator role can do on a single asset only. This role is assigned by default to an asset creator. Use this role to extend administrator permissions on an asset to an additional user.
+* Asset Administrators: This role gives permission to users to view, create, download, deprecate, and delete an asset. Users with this role can do everything the Exchange Administrators role can do on a single asset only. This role is assigned by default to an asset creator. Use this role to extend administrator permissions on an asset to an additional user.
 
 == Summary of Exchange Roles
 
-image::ex2-roles-chart2.png[Chart Illustration - Role visibility actions]
+[%header%autowidth.spread]
+|===
+|Role |Visibility |Actions
+|Exchange Viewers |For all assets within a business group |View, Download
+|Exchange Contributors |For all assets within a business group |View, Download, Edit Portal
+|Exchange Administrators |For all assets within a business group |View, Download, Edit Portal, Delete, Share, Deprecate Asset Version, Manage API Instances
+|Asset Viewers |For a specific asset in any business group |View, Download
+|Asset Contributors |For a specific asset in any business group |View, Download, Edit Portal
+|Asset Administrators |For a specific asset in any business group |View, Download, Edit Portal, Delete, Share, Deprecate Asset Version, Manage API Instances
+|===
 
-* Exchange Viewer has visibility within a business group and can view and download assets.
-* Exchange Contributor has visibility within a business group and can view and download assets. This role can
+* Exchange Viewers have visibility within a business group and can view and download assets.
+* Exchange Contributors have visibility within a business group and can view and download assets. This role can
 also edit asset descriptions.
-* Exchange Administrator has visibility within a business group and can
+* Exchange Administrators have visibility within a business group and can
 view, download, edit descriptions, deprecate, delete, and share assets.
-* Asset Viewer can view an asset in a business group and can view and download the asset.
-* Asset Contributor can view an asset in a business group and can view and download the asset. This role can
+* Asset Viewers can view an asset in a business group and can view and download the asset.
+* Asset Contributors can view an asset in a business group and can view and download the asset. This role can
 also edit the asset's content.
-* Asset Administrator can view an asset in a business group and can
+* Asset Administrators can view an asset in a business group and can
 view, download, edit the content, deprecate, delete, and share the asset.
 
 
