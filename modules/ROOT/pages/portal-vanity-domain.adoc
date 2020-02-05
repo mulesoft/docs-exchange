@@ -59,7 +59,7 @@ Route all your portal traffic to the Anypoint Platform. This depends on the port
 
 For example:
 
-* Route `+https://developers.robocop.com/path/of/justice/+` *_(and all routes under this path)_* to `/https://anypoint.mulesoft.com/exchange/portals/robo-cop/`.
+* Route `+https://developers.robocop.com/path/of/justice/+` *_(and all routes under this path)_* to `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`.
 
 ==== Custom headers
 
