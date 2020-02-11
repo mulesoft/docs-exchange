@@ -13,7 +13,7 @@ These examples show how to list, retrieve, and delete resources from an asset po
 
 == Authentication
 
-Login to the Anypoint Platform and get an authentication token. Make every request with the header `Authorization: bearer ACCESS_TOKEN`.
+Log in to Anypoint Platform and get an authentication token. Begin every request with the header `Authorization: bearer ACCESS_TOKEN`.
 
 [source,console]
 ----
