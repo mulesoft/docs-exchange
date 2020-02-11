@@ -17,7 +17,7 @@ to appear on your organization's assets.
 
 == Create a Category
 
-. In Anypoint Exchange, click Login and log into your organization.
+. In Anypoint Exchange, click Login and log in to your organization.
 . Click Settings in the left navigation area.
 . Click Add New Category.
 . Specify a category name. Each category name must be unique.
