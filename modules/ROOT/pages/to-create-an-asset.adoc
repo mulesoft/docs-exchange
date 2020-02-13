@@ -24,7 +24,7 @@ Each asset in Exchange is versioned. You can manage which versions are visible b
 
 In addition to asset versions, APIs have a consumer facing API version that is shown at the top of an asset's detail screen. This API version is defined by API providers.
 
-RAML and OAS versions have been automatically generated for all RAML and OAS assets created since xref:release-notes::exchange/anypoint-exchange-release-notes.adoc#january-2019[January 12, 2019].
+RAML and OAS versions have been automatically generated for all RAML and OAS assets published since xref:release-notes::exchange/anypoint-exchange-release-notes.adoc#january-2019[January 12, 2019].
 
 This illustration summarizes how each asset type (in green) appears in Exchange:
 
