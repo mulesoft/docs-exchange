@@ -31,7 +31,7 @@ conditions.
 . Choose the API instance from the list.
 . If you are using an existing application, choose from the list of applications.
 +
-An application and its API instance use the same client provider. If xref:api-manager::configure-multiple-credential-providers.adoc[multiple client providers] have been configured in API Manager, then the application list shows only the applications that use the same client provider as the selected API instance.
+An application and its API instance use the same client provider. If an organization administrator has configured xref:api-manager::configure-multiple-credential-providers.adoc[multiple client providers] in API Manager, then the application list shows only the applications that use the same client provider as the selected API instance.
 . If you do not have an application to which to provide access, click *Select application > Create a new application*. See the section "Create a New Application" for more information.
 . Choose the service-level agreement (SLA) value for the application.
 . Click Request Access.
@@ -67,4 +67,5 @@ The OAuth 2 grant type:
 
 == See Also
 
+* xref:api-manager::configure-multiple-credential-providers.adoc[Configuring Multiple Identity Providers for Client Management] in API Manager documentation
 * https://www.google.com/search?q=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token&oq=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token[Search to compare grant types]
