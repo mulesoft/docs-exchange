@@ -24,7 +24,7 @@ Each asset in Exchange is versioned. You can manage which versions are visible b
 
 In addition to asset versions, APIs have a consumer facing API version that is shown at the top of an asset's detail screen. This API version is defined by API providers.
 
-Exchange asset versions follow the https://semver.org/[Semantic Versioning] model of major, minor, and patch releases. For example, if an asset is version 2.4.6, its major version is 2.x.x, its minor version is 2.4.x, and its patch version is 2.4.6.
+Exchange asset versions follow the https://semver.org/[Semantic Versioning] model of major, minor, and patch releases. For example, if an asset is version 2.4.6, then its major version is 2.x.x, its minor version is 2.4.x, and its patch version is 2.4.6.
 
 To select a minor version of an asset, use the menu next to the asset name at the top of the asset portal. To select a patch version of an asset, use the version list at the right.
 
