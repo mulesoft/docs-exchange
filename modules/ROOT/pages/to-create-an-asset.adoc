@@ -22,7 +22,11 @@ For example: `exchange asset upload --classifier raml --apiVersion v1 --name Hel
 
 Each asset in Exchange is versioned. You can manage which versions are visible by deprecating a version to hide it, and you can delete versions if needed.
 
-Select a minor version of an asset with the menu next to the asset name at the top of the asset portal, and select a patch version of an asset in the version list at the right.
+In addition to asset versions, APIs have a consumer facing API version that is shown at the top of an asset's detail screen. This API version is defined by API providers.
+
+Exchange asset versions follow the https://semver.org/[Semantic Versioning] model of major, minor, and patch releases. For example, if an asset is version 2.4.6, its major version is 2.x.x, its minor version is 2.4.x, and its patch version is 2.4.6.
+
+To select a minor version of an asset, use the menu next to the asset name at the top of the asset portal. To select a patch version of an asset, use the version list at the right.
 
 RAML and OAS versions have been automatically generated for all RAML and OAS assets published since xref:release-notes::exchange/anypoint-exchange-release-notes.adoc#january-2019[January 12, 2019].
 
@@ -88,7 +92,7 @@ that is defined by API Manager.
 .. Select *Choose File* to locate the API specification file.
 .. Select the Main file of the API. If the file is a zip, the Main file should be in the root directory inside the zip. If the file is not a zip or if it has only one Main file, it's selected automatically.
 +
-. (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, and *Version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. The advanced settings are most often used to change the asset version.
+. (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
 . Select *Publish*.
 
 
@@ -146,7 +150,8 @@ If you have contributor or admin access to an asset, you can add a new version f
 
 . In Exchange, open the asset list and select the asset.
 . In the sidebar *Versions* table, select *Add New Version*.
-. Enter the *Version*.
+. Enter the *Version* (asset version).
+. (Optional) Enter the *API version*.
 . (Optional) Choose a file to upload.
 . Select *Publish*.
 

@@ -4,7 +4,9 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-You can edit an asset's portal, change its name, icon, description, and tags, and add portal pages with content.
+You can edit an asset's portal, change its name, icon, description, tags, categories, and custom fields, and add portal pages with content.
+
+All versions of an asset have the same name, icon, description, and computed average rating. Each minor version of an asset has its own ratings and reviews, tags, categories, custom fields, and content pages, including an optional page of terms and conditions.
 
 In Exchange, open the asset list and select the asset. Exchange shows the asset portal.
 
