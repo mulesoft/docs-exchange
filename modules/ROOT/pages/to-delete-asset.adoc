@@ -15,7 +15,7 @@ To delete an asset:
 +
 image::ex2-delete-asset.png[Delete Asset menu]
 +
-Alternatively, you can delete a single API version using the version menu:
+Alternatively, you can delete a single version using the version menu:
 +
 image::ex2-delete-version.png[Delete a version of an asset]
 +
