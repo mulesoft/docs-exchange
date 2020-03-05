@@ -16,9 +16,7 @@ Each API asset contains a *Version* field for the asset version, and an *API ver
 
 Exchange asset versions follow the https://semver.org/[Semantic Versioning] model of major, minor, and patch releases. For example, if an asset is version 2.4.6, then its major version is 2.x.x, its minor version is 2.4.x, and its patch version is 2.4.6.
 
-Because an HTTP API asset is an endpoint, to which you can provide only policies or proxies, the *API version* field doesn't apply. HTTP APIs have only major version increases and do not have minor or patch version changes.
-
-The *Version* and *API version* fields are visible only when you add a new asset or when you add a new version to an existing asset.
+An HTTP API asset is an endpoint, to which you can provide only policies or proxies. HTTP APIs have only major version increases and do not have minor or patch version changes.
 
 When creating a new version of an asset, the name, icon, and description of the previous version are used. To change these properties use the instructions in xref:to-describe-an-asset.adoc[Describe an Asset]. Any changes to the name, icon, or description apply to all versions of the asset.
 
