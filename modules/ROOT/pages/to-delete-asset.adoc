@@ -9,7 +9,9 @@ If you delete the asset after seven days, you can't reuse its name, business gro
 A delete after seven days is known as a _soft delete_. After seven days, if you want to reuse the asset name,
 choose a new version number or put the asset in a different business group.
 
-Deleting an asset or a version checks for any assets that are dependent on the asset or the asset version and displays a warning to prevent deletion until all the dependencies are removed.
+Deleting an asset version checks for any assets that are dependent on the asset version and displays a warning to prevent deletion until all the dependencies are removed.
+
+Deleting an API or policy asset version checks for any API instances that are dependent on the asset version and displays a warning to prevent deletion until all the dependencies are removed. The *API instances* page displays each API asset's instances.
 
 A policy asset cannot be deleted if it is applied to any managed API instances. The *APIs using this policy* tab on the policy asset's page shows which API instances have that policy applied. You can use API Manager to remove the policy from the instances, and then you can delete the policy.
 
