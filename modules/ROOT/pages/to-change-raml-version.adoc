@@ -76,7 +76,7 @@ When publishing a new API version of an existing REST API, Exchange enforces an 
 
 == Multiple API and Asset Versions
 
-Each Exchange asset can have multiple asset versions. The REST, SOAP, and HTTP API also contain an API Version.
+Each Exchange asset can have multiple asset versions. The REST, SOAP, and HTTP API also contain an API version.
 
 For each API version, multiple asset versions can be published. These asset versions need to have the same major version.
 
