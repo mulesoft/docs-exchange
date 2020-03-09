@@ -193,4 +193,4 @@ You can create different documentation pages for each minor asset version.
 
 Select a minor asset version to edit with the menu next to the API name.
 
-image::ex-title-version-setting.png[]
+image::ex-title-version-setting.png[The minor version selection menu]
