@@ -114,7 +114,7 @@ strategy. This includes a multiple month deprecation schedule and documentation 
 is up to date and describes the change in sufficient level of detail. 
 
 Not all changes require a new version. APIs designed for backward compatibility
-normally do not require major changes, and should use minor or patch changes.
+normally do not require major changes and should use minor or patch changes.
 
 Nevertheless, it is not always possible to design APIs in 
 that way. The table below outlines when to introduce a new version and when a 
