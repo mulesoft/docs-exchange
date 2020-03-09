@@ -28,7 +28,7 @@ You can deploy an API asset directly into Exchange using the *New asset* button.
 
 image::ex-publish-a-new-asset.png[]
 
-Only change the API version when an updated API specification has changes that are not backwards compatible from the new version to the old version.
+Only change the API version when an updated API specification has changes that are not backward compatible from the new version to the old version.
 
 == Change RAML or OAS Version
 
