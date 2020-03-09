@@ -149,18 +149,23 @@ a minor version increase occurs.
 You should introduce a new major version for:
 
 * Quality of service (QoS)
-When a change affects the quality of service, such as response time and availability, you might need to change the major version and API version so that the QoS does not disable applications that use the API.
++
+When a change affects the quality of service, such as response time and availability, the change might not be backward compatible with the API's applications, so you might need to change the API's major version and API version.
 * Output message domain value changes
++
 Applications that use the API depend on the domain of values of fields in response messages. For instance, the API might return only certain products or specific payment methods. If the API starts returning values outside of a domain, it can adversely affect existing consumers. In this case, consider introducing a new major version and a new API version.
 
 === When to Change Version Numbers
 
 * Major versions
++
 When introducing a change in the structure of the API that requires the user of the API to adapt the interface on the consumer side, such as a new required operation argument
 * Minor versions
-When introducing a backward-compatible change to the API that does not require an API user to change, such as a new optional element
++
+When introducing a backward compatible change to the API that does not require an API user to change, such as a new optional element
 * Patch versions
-When introducing a backward-compatible bug fix or documentation update
++
+When introducing a backward compatible bug fix or documentation update
 
 See https://semver.org/[Semantic Versioning] for more information.
 
@@ -186,6 +191,6 @@ You can use these rules to define an API version:
 Exchange provides documentation pages with information about an asset for API consumers. 
 You can create different documentation pages for each minor asset version.
 
-The minor asset version that is being edited can be changed with the menu next to the API name.
+Select a minor asset version to edit with the menu next to the API name.
 
 image::ex-title-version-setting.png[]
