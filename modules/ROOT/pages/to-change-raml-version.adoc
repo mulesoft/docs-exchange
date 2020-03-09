@@ -159,7 +159,8 @@ Applications that use the API depend on the domain of values of fields in respon
 When introducing a change in the structure of the API that requires the user of the API to adapt the interface on the consumer side, such as a new required operation argument
 * Minor versions
 When introducing a backward-compatible change to the API that does not require an API user to change, such as a new optional element
-* Patch versions: When introducing a backward-compatible bug fix or documentation update.
+* Patch versions
+When introducing a backward-compatible bug fix or documentation update
 
 See https://semver.org/[Semantic Versioning] for more information.
 
