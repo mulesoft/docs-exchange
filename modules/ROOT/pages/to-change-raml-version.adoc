@@ -150,7 +150,8 @@ You should introduce a new major version for:
 
 * Quality of service (QoS)
 When a change affects the quality of service, such as response time and availability, you might need to change the major version and API version so that the QoS does not disable applications that use the API.
-* Output message domain value changes -- Applications that use the API depend on the domain of values of fields in response messages. For instance, the API may only return certain products or specific payment methods. If the API starts returning values outside of a domain, it can adversely affect existing consumers. In this case, consider introducing a new major version and a new API version.
+* Output message domain value changes
+Applications that use the API depend on the domain of values of fields in response messages. For instance, the API might return only certain products or specific payment methods. If the API starts returning values outside of a domain, it can adversely affect existing consumers. In this case, consider introducing a new major version and a new API version.
 
 === When to Change Version Numbers
 
