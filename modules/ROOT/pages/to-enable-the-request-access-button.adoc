@@ -35,7 +35,7 @@ A REST API can be either an OAS or RAML API specification.
 
 If the instance is private, then the portal displays the *Request Access* button only to logged in users.
 
-If the instance is public, then the portal always displays the *Request Access* button. If a logged out user requests access, then Exchange prompts them to log in.
+If the instance is public, then the portal displays the *Request Access* button to all users. If a logged out user requests access, then Exchange prompts them to log in.
 
 == See Also
 
