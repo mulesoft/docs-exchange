@@ -9,25 +9,19 @@ If you delete the asset after seven days, you can't reuse its name, business gro
 A delete after seven days is known as a _soft delete_. After seven days, if you want to reuse the asset name,
 choose a new version number or put the asset in a different business group.
 
-To delete an asset:
+If you try to delete an asset version with dependent assets, Exchange shows a warning. Remove the dependencies and then delete the asset version.
 
-. Click the three-dot Settings icon at the upper right:
-+
-image::ex2-delete-asset.png[Delete Asset menu]
-+
-Alternatively, you can delete a single API version using the version menu:
-+
+If you try to delete an API or policy asset version with dependent API instances, Exchange shows a warning. Remove the dependences and then delete the asset version. The *API instances* page displays each API asset's instances.
+
+You cannot delete a policy asset that is applied to any managed API instances. On the policy asset's page, the *APIs using this policy* tab shows which API instances have that policy applied. Use API Manager to remove the policy from the instances, and then delete the policy.
+
+To delete a patch version of an asset, open the version menu and click *Delete version*:
+
 image::ex2-delete-version.png[Delete a version of an asset]
-+
-Changing a RAML version? See xref:to-change-raml-version.adoc[To Change a RAML Version].
-+
-. Confirm the action when prompted, or click Cancel to exit the prompt.
 
-== Delete Notes
-
-* Deleting an asset or a version checks for any assets that are dependent on the asset or the asset version and displays a warning to prevent deletion until all the dependencies are removed.
-* A policy asset cannot be deleted if it is applied to any managed API instances. The *APIs using this policy* tab on the policy asset's page shows which API instances have that policy applied. You can use API Manager to remove the policy from the instances, and then you can delete the policy.
+To delete an entire asset, delete all of its patch versions.
 
 == See Also
 
 * xref:to-deprecate-asset.adoc[To Deprecate an Asset]
+* xref:to-change-raml-version.adoc[To Change a RAML Version]

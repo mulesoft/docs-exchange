@@ -10,13 +10,13 @@ Anypoint Exchange lets you create API assets for:
 * HTTP API
 * SOAP API
 
-This document describes how to change the version for any of these assets. Exchange versions follow the https://semver.org/[Semantic Versioning] model of major, minor, and patch releases.
+This document describes how to change the version for any of these assets.
 
-Each API asset contains a Version field, which is the version number of the asset, and an API version field, which identifies the version of the API specification. For RAML, OAS, and SOAP assets, the API specification version is coded inside the specification itself.
+Each API asset contains a *Version* field for the asset version, and an *API version* field for the version of the API specification. For RAML, OAS, and SOAP assets, the API specification version is coded inside the specification itself.
 
-Because an HTTP API asset is an endpoint, to which you can provide only policies or proxies, the API version field doesn't apply. HTTP APIs have only major version increases and do not have minor or patch version changes.
+Exchange asset versions follow the https://semver.org/[Semantic Versioning] model of major, minor, and patch releases. For example, if an asset is version 2.4.6, then its major version is 2.x.x, its minor version is 2.4.x, and its patch version is 2.4.6.
 
-The Version and API version fields are visible only when you add a new asset or when you add a new version to an existing asset.
+An HTTP API asset is an endpoint, to which you can provide only policies or proxies. HTTP APIs have only major version increases and do not have minor or patch version changes.
 
 When creating a new version of an asset, the name, icon, and description of the previous version are used. To change these properties use the instructions in xref:to-describe-an-asset.adoc[Describe an Asset]. Any changes to the name, icon, or description apply to all versions of the asset.
 
@@ -28,7 +28,7 @@ You can deploy an API asset directly into Exchange using the *New asset* button.
 
 image::ex-publish-a-new-asset.png[]
 
-You should only change the API Version when an updated API specification contains changes that are not compatible from the new version to the old version.
+Only change the API version when an updated API specification has changes that are not backward compatible from the new version to the old version.
 
 == Change RAML or OAS Version
 
@@ -36,7 +36,7 @@ For RAML and OAS API specifications within Exchange, you can change the version 
 
 image::ex-add-new-version.png[]
 
-This opens the *Publish a new asset* window (as shown in <<Deploy a New API Version>>).
+This opens the *Publish a new asset* window (as shown in <<deploy-a-new-api-asset>>).
 
 These fields are required: *File upload*, *Main file*, and *Version*.
 
@@ -76,7 +76,7 @@ When publishing a new API version of an existing REST API, Exchange enforces an 
 
 == Multiple API and Asset Versions
 
-Each Exchange Asset can have multiple asset versions. The REST, SOAP, and HTTP API also contain an API Version.
+Each Exchange asset can have multiple asset versions. The REST, SOAP, and HTTP API also contain an API version.
 
 For each API version, multiple asset versions can be published. These asset versions need to have the same major version.
 
@@ -113,17 +113,17 @@ What is important is to manage the changes through a comprehensive versioning
 strategy. This includes a multiple month deprecation schedule and documentation that 
 is up to date and describes the change in sufficient level of detail. 
 
-Not all changes require a new version. APIs designed for backward compatibility 
-normally do not require a minor change, but should require a patch change. 
+Not all changes require a new version. APIs designed for backward compatibility
+normally do not require major changes and should use minor or patch changes.
 
 Nevertheless, it is not always possible to design APIs in 
 that way. The table below outlines when to introduce a new version and when a 
 new version is not required. Typically when one clicks *Add new API operation* 
-a patch version increase occurs.
+a minor version increase occurs.
 
-[%header,cols="20a,60a,20a"]
+[%header,cols="20a,40a,40a"]
 |===
-|Type of Change |Changes Requiring a Major Version |New Version is Not Required
+|Type of Change |Changes Requiring a New Major Version |Changes Not Requiring a New Major Version
 | Service contract |
 
 * Remove API endpoint
@@ -144,18 +144,30 @@ a patch version increase occurs.
 |Accessibility |Restrict permissions |Relax permissions
 |===
 
-=== When to Introduce a New Version
+=== When to Introduce a New Major Version
 
-You should introduce a new version for:
+You should introduce a new major version for:
 
-* Quality of service (QoS) -- When a change affects the quality of service, such as response time and availability, the API version may need to change as the QoS can break applications that use the API.
-* Output message domain value changes -- Applications that use the API depend on the domain of values of fields in response messages. For instance, the API may only return certain products or specific payment methods. If the API starts returning values outside of a domain, it can adversely affect existing consumers. In this case, consider introducing a new API version.
+* Quality of service (QoS)
++
+When a change affects the quality of service, such as response time and availability, the change might not be backward compatible with the API's applications, so you might need to change the API's major version and API version.
+* Output message domain value changes
++
+Applications that use the API depend on the domain of values of fields in response messages. For instance, the API might return only certain products or specific payment methods. If the API starts returning values outside of a domain, it can adversely affect existing consumers. In this case, consider introducing a new major version and a new API version.
 
 === When to Change Version Numbers
 
-* Major versions: When introducing a change in the structure of the API that requires the user of the API to adopt the interface on the consumer side.
-* Minor versions: When introducing a change to the API that does not require an API user to change, or when fixing a bug. A minor version increase should be when the user can still use the same API version but the version breaks compatibility with the previous one. See https://semver.org/[Semantic Versioning] for more information.
-* Patch versions: When introducing a backward-compatible change.
+* Major versions
++
+When introducing a change in the structure of the API that requires the user of the API to adapt the interface on the consumer side, such as a new required operation argument
+* Minor versions
++
+When introducing a backward compatible change to the API that does not require an API user to change, such as a new optional element
+* Patch versions
++
+When introducing a backward compatible bug fix or documentation update
+
+See https://semver.org/[Semantic Versioning] for more information.
 
 === API Version in Application URL
 
@@ -177,8 +189,8 @@ You can use these rules to define an API version:
 == Document an API Version
 
 Exchange provides documentation pages with information about an asset for API consumers. 
-You can create different documentation pages for each API Version.
+You can create different documentation pages for each minor asset version.
 
-The API version that is being edited can be changed from the button next to the API Name.
+Select a minor asset version to edit with the menu next to the API name.
 
-image::ex-title-version-setting.png[]
+image::ex-title-version-setting.png[The minor version selection menu]
