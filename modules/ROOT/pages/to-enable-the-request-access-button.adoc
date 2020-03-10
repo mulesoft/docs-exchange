@@ -24,12 +24,15 @@ Note: in API Manager, the API's Status is marked as Unregistered. To register th
 
 == Request Access Display Criteria
 
-To see the Request Access button in a public portal requires:
+A public portal displays the *Request Access* button only after these steps:
 
-* A published API in Exchange of REST, SOAP, or HTTP API. The REST API can be either an OAS or RAML API specification.
-* An instance created in API Manager with the API.
-* Set the instance as public in the API Instances link.
-* Set the instance’s URL in API Instances if not present.
+* Publish a REST, SOAP, or HTTP API in Exchange.
++
+A REST API can be either an OAS or RAML API specification.
+* Create an instance of the API in API Manager.
+* Set the instance as public in *API Instances*.
+* If the instance's URL is not present, set the instance's URL in *API Instances*.
+* The user requesting access logs in to Exchange.
 
 == See Also
 
