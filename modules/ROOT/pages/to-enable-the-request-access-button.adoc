@@ -32,7 +32,10 @@ A REST API can be either an OAS or RAML API specification.
 * Create an instance of the API in API Manager.
 * Set the instance as public in *API Instances*.
 * If the instance's URL is not present, set the instance's URL in *API Instances*.
-* The user requesting access logs in to Exchange.
+
+If the instance is private, then the portal displays the *Request Access* button only to logged in users.
+
+If the instance is public, then the portal always displays the *Request Access* button. If a logged out user requests access, then Exchange prompts them to log in.
 
 == See Also
 
