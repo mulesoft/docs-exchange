@@ -28,9 +28,13 @@ conditions.
 
 . Click an API asset to view more details.
 . Click *Request Access*.
-. If you do not have an application to which to provide access, click *Request Access > Create A New Application*. See the section "Create a New Application" for more information.
+. Choose the API instance from the list.
 . If you are using an existing application, choose from the list of applications.
-. Choose the API Instance from the list of APIs.
++
+An application and its API instance use the same client provider. If an organization administrator has configured xref:api-manager::configure-multiple-credential-providers.adoc[multiple client providers] in Anypoint API Manager, then the application list shows only the applications that use the same client provider as the selected API instance.
+. If you do not have an application to which to provide access, click *Select application > Create a new application*. 
++
+See the section "Create a New Application" for more information.
 . Choose the service-level agreement (SLA) value for the application.
 . Click Request Access.
 +
@@ -65,4 +69,5 @@ The OAuth 2 grant type:
 
 == See Also
 
+* xref:api-manager::configure-multiple-credential-providers.adoc[Configuring Multiple Identity Providers for Client Management] in Anypoint API Manager documentation
 * https://www.google.com/search?q=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token&oq=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token[Search to compare grant types]
