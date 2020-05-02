@@ -51,7 +51,7 @@ The following search terms return all assets marked as both System APIs and Sale
 
 == Search with Categories in Exchange Cloud
 
-Select a category such as "API Type" from the list, and select one or more values such as "System API". Exchange shows assets that have one of the selected values for the selected category.
+Select a category such as "API Type" from the list, and select one or more values such as "System API". Anypoint Exchange shows assets that have one of the selected values for the selected category.
 
 You can search for a combination of categories, and you can search for multiple values for the same category. Multiple values for the same category are combined with the OR operator.
 
