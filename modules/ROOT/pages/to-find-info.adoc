@@ -34,7 +34,7 @@ You can combine search terms with the filters listed in All Types.
 
 You can also search by clicking Category or Tag elements. This creates a filtered search you can use to find similar assets.
 
-In Exchange Private Cloud Edition and GovCloud, searches only apply to the Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
+In Exchange Private Cloud Edition and GovCloud, searches apply only to the Anypoint Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
 
 In Exchange Cloud, you can select which of the organizations visible to you should be included in each search.
 
