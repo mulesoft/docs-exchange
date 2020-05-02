@@ -37,7 +37,7 @@ effect.
 . Click an asset in your organization.
 . In Categories in the right side details menu, click Add Category and choose the category and value from the drop-down menu.
 
-== Search with Categories
+== Search with Categories in Exchange Private Cloud Edition or GovCloud
 
 In the Exchange search field, specify the `category:` search term and the category value to list the assets.
 
@@ -48,6 +48,12 @@ You can search for a combination of different categories, but you can't search f
 The following search terms return all assets marked as both System APIs and Salesforce products:
 
 `category:"API Type" = "System API" category:"Product" = "Salesforce"`
+
+== Search with Categories in Exchange Cloud
+
+Select a category such as "API Type" from the list, and select one or more values such as "System API". Anypoint Exchange shows assets that have one of the selected values for the selected category.
+
+You can search for a combination of categories, and you can search for multiple values for the same category. Multiple values for the same category are combined with the OR operator.
 
 == Change or Delete a Category
 

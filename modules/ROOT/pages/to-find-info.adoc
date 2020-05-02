@@ -34,7 +34,9 @@ You can combine search terms with the filters listed in All Types.
 
 You can also search by clicking Category or Tag elements. This creates a filtered search you can use to find similar assets.
 
-Searches only apply to the Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
+In Exchange Private Cloud Edition and GovCloud, searches apply only to the Anypoint Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
+
+In Exchange Cloud, you can select which of the organizations visible to you should be included in each search.
 
 == Save a Search
 
@@ -70,7 +72,7 @@ image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
 . After you read the description for usage information, you can experiment with the example in the code block to try different parameters and values, and see the results in real time.
 . Click Play to test the method in the code example and view the results.
 
-== Search for Phrases
+== Search for Phrases in Exchange Private Cloud Edition or GovCloud
 
 You can put a space between words to search for
 case insensitive text that begins with each word you specify.
@@ -80,7 +82,7 @@ starts with `mq` or `module`.
 
 Searching for a multiple word phrase shows assets that have every word in the phrase.
 
-If you separate search words with any character other than a space, Exchange
+If you separate search words with any non-alphanumeric character other than a space, Anypoint Exchange
 converts the character to a space before searching.
 
 === Search Separators
@@ -152,9 +154,13 @@ the reason is provided.
 |Optimized API |optimized-api |sales:/connect |Yes
 |===
 
-== Search Using Query Language
+== Search by Tags and Categories in Exchange Cloud
 
-Using query language allows you to search assets by tags, categories, and custom fields.
+To search by tags and categories in Exchange Cloud, use the drop-down menus for tags and categories on the search page.
+
+== Search by Tags, Categories, and Custom Fields in Exchange Private Cloud Edition or GovCloud
+
+Using query language allows you to search assets by tags, categories, and custom fields in Exchange Private Cloud Edition or GovCloud.
 
 === Search by Tags
 
@@ -255,8 +261,8 @@ Exchange searches these API specification properties:
 ** Path
 ** Display name
 ** Description
-Methods
-** Method type (GET, POST, ...)
+* Methods
+** Method type (GET, POST, PUT)
 ** Description
 * Query Parameters
 ** Name
@@ -266,6 +272,9 @@ Methods
 * Types
 ** Name
 ** Properties
+* Traits
+* Properties
+* Security Schemas
 
 These property names are based on RAML specifications. Equivalent properties are indexed for OAS specifications. For example, RAML has base URI and OAS has host and path.
 
