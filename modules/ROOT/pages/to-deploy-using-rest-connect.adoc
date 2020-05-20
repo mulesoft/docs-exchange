@@ -32,6 +32,8 @@ REST Connect supports the following security schemes:
 
 If you publish an API specification with another authentication type, you may receive an alert email. To have an auto-generated connector, update your API specification to use one of these supported security schemes.
 
+If the operations defined in your API specification support multiple security schemes, only one will be used. It will be selected following the precedence order shown in the previous list - Basic Authentication first, Digest Authentication last -.
+
 Basic Authentication Example:
 
 [source,text,linenums]
