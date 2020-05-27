@@ -20,7 +20,7 @@ NOTE: After deploying a REST asset to Exchange, refresh your screen to ensure th
 
 The Mule 3 connector downloads as a zip file, and the Mule 4 connector downloads as a JAR file. 
 
-== API pecification format support
+== API specification format support
 
 REST Connect has support for these API speficication formats:
 
