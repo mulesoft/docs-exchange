@@ -67,6 +67,10 @@ The OAuth 2 grant type:
 ** Authorization Code Grant
 ** Refresh Token
 
+== API Groups
+
+When you request access to an API group, Exchange automatically compares all available contracts and applies the least restrictive contract. The application uses that contract to access the API group instance.
+
 == See Also
 
 * xref:api-manager::configure-multiple-credential-providers.adoc[Configuring Multiple Identity Providers for Client Management] in Anypoint API Manager documentation

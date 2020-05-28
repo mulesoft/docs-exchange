@@ -117,6 +117,13 @@ All page names are validated:
 NOTE: Terms and conditions are only available for API assets. Users are prompted to accept the terms and conditions when requesting API access.
 
 
+=== API Groups
+
+If any API in an API group has a terms and conditions page, then the API group has a terms and conditions page that cannot be deleted and that shows the terms and conditions of the underlying APIs.
+
+You may optionally add more terms and conditions to the API group's terms and conditions page.
+
+
 === Editor Notes
 
 * To use the link control, type text, select the text, and click the link control to specify the link URL.
