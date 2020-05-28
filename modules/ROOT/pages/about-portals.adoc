@@ -4,36 +4,42 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Exchange public portals are available on the internet to everyone and enable outside developers to access an organization's REST, SOAP, and HTTP APIs.
+Exchange public portals are accessible to anyone using the internet, enabling developers outside of an organization to access that organization's REST, SOAP, and HTTP APIs.
 
-Exchange portals replace what used to be known as a Developer Portal.
+Exchange public portals replace what used to be known as _developer portals_.
 
-You can customize the look and content of the portal with a logo, banner image, text, and a favicon for the browser tab.
+You can customize the appearance and the content of the portal by adding a logo, banner image, text, or a favicon for the browser tab.
 
 == Share an Asset or Update the Asset Description
 
-Exchange Administrators can share an API asset to a public portal.
+As an Exchange administrator, you can edit the description of your organization's API asset so that users outside the organization can identify it, and then share that asset by publishing to a public portal:
 
-. Locate the asset in your organization's Exchange.
-. Edit the asset's description, and when done, publish the asset.
-. Return to the portal and click the asset. The description updates automatically after changing the description in the asset.
+. Locate the asset in your organization's Exchange instance.
+. Edit the asset description and then publish the asset.
+. Verify the change by returning to the public portal and clicking the asset.
 
-== Users From Other Anypoint Organizations
+== How Users from Other Organizations Access Your Portal
 
-Users can view a public portal without logging in, and must log in to use features such as reviewing assets, downloading assets, creating a client application to request API access, and accessing an API.
+Anyone can view a public portal without logging in.
 
-Users from other Anypoint Platform organizations can use your public portal to register client applications so they can access your APIs. Because they do not belong to your organization, they are external users of your organization's portal.
+Anypoint users can click the *Login* button on any page to use features such as reviewing assets, downloading assets, creating a client application to request API access, and accessing an API.
 
-An organization administrator can see only the basic profile of an external user, which contains only this information:
+Anypoint users who belong to other Anypoint organizations and not your organization are _external users_ of your organization's portal.
 
-* Name
-* Username
-* Email
-* Primary organization name
+An organization administrator can see only the basic profile of an external user.
 
-The first time an external user logs in to your public portal, the portal requests permission for read-only access to this basic profile. When the user approves the request, they are added in the Anypoint Platform tab *Access Management* > *Users* > *External Users*. As your organization's administrator, you can enable or disable each external user on that tab. Disabled external users cannot sign in to your public portal.
+A basic profile has only these fields:
 
-To grant an external user permission to perform tasks such as deploying an application, invite the user to join your organization.
+* *Name*
+* *Username*
+* *Email*
+* *Primary Organization*
+
+The first time an external user attempts to log in to your public portal, the portal requests permission for read-only access to this basic profile. When the user approves this request, they are logged in to your public portal and their information is added to the *External Users* tab. To view this tab in Anypoint Platform click *Access Management* > *Users* > *External Users*.
+
+As your organization's administrator, you can enable or disable each external user on that tab. Users are enabled by default. If you disable them, they cannot log in to your public portal.
+
+Users in your organization can access features that external users cannot, such as deploying an application. You can invite an external user to join your organization so they can use these features.
 
 == See Also
 
