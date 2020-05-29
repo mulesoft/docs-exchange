@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 
 The My Applications area in the Exchange details view for an asset lists
-applications that hold a contract between an API and a user.
+applications that hold a contract between a user and an API or an API Group.
 
 image::ex2-my-applications.png[]
 
@@ -19,24 +19,24 @@ requests by HTTP status code, and error percentage.
 
 Applications in My Applications are registered using API Manager in Anypoint Platform.
 
-To register a client application to an existing API, the client application
-must first request access. When the request is approved by the API owner, a
-contract is created between the client application and the API, and the client
+To register a client application to an existing API or API Group, the client application
+must first request access. When the request is approved by the API or API Group owner, a
+contract is created between the client application and the API or API Group, and the client
 application is registered.
 
-If you don't have an application to link to your API, you can create the application
+If you don't have an application to link to the API or API Group, you can create the application
 in the Request Access menu. You can then click Request Access to connect your
-application and the API. Some APIs require selecting a service-level agreement
+application and the API or API Group. Some APIs and API Groups require selecting a service-level agreement
 (SLA), accepting terms and conditions, or both.
 
-APIs that are protected by a client ID enforcement policy require client
+APIs and API Groups that are protected by a client ID enforcement policy require client
 applications to provide a client ID and optional client secret. The client ID and client
 secret credentials are automatically created when the client application is
 registered.
 
 An API owner can use API Manager to view all API contracts ever created for an
-API instance. An API consumer can use Exchange's *My Applications* page to view
-the API contracts created between an API instance and that consumer's client
+API or API Group instance. An API consumer can use Exchange's *My Applications* page to view
+the API contracts created between an API instance or API Group instance and that consumer's client
 applications.
 
 == See Also
