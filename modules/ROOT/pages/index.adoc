@@ -48,7 +48,7 @@ Both the public and private content in Exchange can consist of the following kin
 * REST APIs - A RAML file or OAS file that specifies an API. These APIs can be referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
 * SOAP APIs - A WSDL file that specifies an API.
 * HTTP APIs - A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
-* API Groups - Using API Groups enables you to bundle your APIs and resources to solve specific user needs. Instead of using individual resources and APIs from a list, the users can request access to and use these APIs in a package that solves a specific problem for them.
+* API Groups - An API Group enables you to bundle your APIs into a single asset. Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
 * API Spec Fragments - Also known as RAML fragments. A RAML document that has a version and an identifier, but is not in itself a complete RAML specification.
 * Custom - Custom assets provide descriptions and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation.
 
