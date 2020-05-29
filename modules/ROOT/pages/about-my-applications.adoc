@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 
 The My Applications area in the Exchange details view for an asset lists
-applications that hold a contract between a user and an API or an API Group.
+applications that hold a contract with an API or an API Group.
 
 image::ex2-my-applications.png[]
 
@@ -36,7 +36,7 @@ registered.
 
 An API owner can use API Manager to view all API contracts ever created for an
 API or API Group instance. An API consumer can use Exchange's *My Applications* page to view
-the API contracts created between an API instance or API Group instance and that consumer's client
+the contracts created between an API instance or API Group instance and that consumer's client
 applications.
 
 == See Also
