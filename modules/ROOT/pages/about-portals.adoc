@@ -12,7 +12,7 @@ You can customize the appearance and the content of the portal by adding a logo,
 
 == Share an Asset or Update the Asset Description
 
-As an Exchange administrator, you can edit the description of your organization's asset so that users outside the organization can identify it, and then share that asset by publishing to a public portal:
+As an Exchange administrator, you can edit the description of an asset in your organization so that users outside the organization can identify it, and then share the asset by publishing to a public portal:
 
 . Locate the asset in your organization's Exchange instance.
 . Edit the asset description and then publish the asset.
