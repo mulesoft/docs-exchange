@@ -119,9 +119,9 @@ NOTE: Terms and conditions are only available for API assets. Users are prompted
 
 === API Groups
 
-If any API in an API group has a terms and conditions page, then the API group has a terms and conditions page that cannot be deleted and that shows the terms and conditions of the underlying APIs.
+If any API in an API Group has a terms and conditions page, then the API Group has a terms and conditions page that cannot be deleted and that shows the terms and conditions of the underlying APIs.
 
-You may optionally add more terms and conditions to the API group's terms and conditions page.
+Optionally, you may add more terms and conditions to the API Group's terms and conditions page.
 
 
 === Editor Notes

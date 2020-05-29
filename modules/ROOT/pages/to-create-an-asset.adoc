@@ -95,6 +95,17 @@ that is defined by API Manager.
 . (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
 . Select *Publish*.
 
+== Create an API Group Asset
+
+An API Group is an Exchange asset that enables organizations to publish a group of related APIs as a single unit, so developers' client applications can access that group as a single unit, with a single client ID and client secret.
+
+Each API Group can have multiple versions. Every major version of an API Group has one or more API Group instances. Each API Group instance is a group of API instances that are all in the same environment, such as development, testing, and production environments, and that all have the same identity provider. An API Group instance can contain API instances from multiple business groups.
+
+Creating an API Group requires having the group administrator role, and the asset administrator role for each of the APIs in the group. This ensures that a group creator can change the underlying APIs between private and public visibility levels.
+
+Every API instance in a group instance can be accessed through the group instance, and this access can be granted on the group instance contracts page, without approval on the API instance contracts page. You can view the group contracts for an API on the API's contracts page.
+
+If the API Group has any API content that is private, such as instances, pages, or terms and conditions, you see a warning when publishing the API. Private content is not published to the public portal. To ensure that all content in the API Group is published to the public portal, go to each API's page in Exchange and make the API public, and then publish the API Group.
 
 == Create a Custom Asset
 
