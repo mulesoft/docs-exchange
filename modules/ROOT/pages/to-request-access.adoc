@@ -69,7 +69,7 @@ The OAuth 2 grant type:
 
 == API Groups
 
-When you request access to an API group, the least restrictive available contract is applied. The application uses that contract to access the API group instance.
+When you request access to an API Group, the least restrictive available contract is applied. The application uses that contract to access the API Group instance.
 
 == See Also
 
