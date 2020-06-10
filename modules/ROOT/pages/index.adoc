@@ -54,13 +54,13 @@ You can add your information such as user credentials to complete the template's
 These APIs can be referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
 * SOAP APIs - A WSDL file that specifies an API
 * HTTP APIs - A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager
-* API Groups - An API Group enables you to bundle your APIs into a single asset
+* API Groups - A set of APIs bundled into a single asset
 +
 Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
 * API Spec Fragments - A RAML document that has a version and an identifier, but is not in itself a complete RAML specification
 +
 API spec fragments are also known as RAML fragments.
-* Custom - Custom assets provide descriptions and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation
+* Custom - A description and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation
 
 == Versions
 
