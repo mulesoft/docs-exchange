@@ -17,7 +17,7 @@ the range is the previous eight days. The usage lists total number of requests t
 the API, average latency, error rate, and graphs for total requests,
 requests by HTTP status code, and error percentage.
 
-Applications in My Applications are registered using API Manager in Anypoint Platform.
+Applications in *My Applications* are registered using API Manager in Anypoint Platform.
 
 To register a client application to an existing API or API Group, the client application
 must first request access. When the request is approved by the API or API Group owner, a
