@@ -67,7 +67,7 @@ The OAuth 2 grant type:
 ** Authorization Code Grant
 ** Refresh Token
 
-== API Groups
+== API Group Access
 
 In Exchange, each API Group is an asset with a portal. The *Group instances* page on the portal lists all of that API Group's instances.
 
