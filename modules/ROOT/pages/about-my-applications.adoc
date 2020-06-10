@@ -25,7 +25,7 @@ contract is created between the client application and the API or API Group, and
 application is registered.
 
 If you don't have an application to link to the API or API Group, you can create the application
-in the Request Access menu. You can then click Request Access to connect your
+in the *Request Access* menu. You can then click *Request Access* to connect your
 application and the API or API Group. Some APIs and API Groups require selecting a service-level agreement
 (SLA), accepting terms and conditions, or both.
 
