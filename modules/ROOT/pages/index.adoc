@@ -30,7 +30,7 @@ Click the Helpful Links item in the left navigation area for links to documentat
 
 Exchange assets are accessible in Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API Groups, and policies), and Runtime Manager (APIs), and you can publish APIs from Design Center to Exchange.
 
-MuleSoft certifies its public content, and reviews and approves partner connectors. All private content is internal to an organization and not visible outside their organization. Customers are responsible for any private content they publish within their Exchange.
+MuleSoft certifies its public content and reviews and approves partner connectors. All private content is internal to an organization and not visible outside that organization. Customers are responsible for any private content they publish within their Exchange instance.
 
 == Language Support
 
