@@ -101,7 +101,7 @@ An API Group is an asset that enables organizations to publish a group of API in
 
 API Groups are created in Anypoint API Manager and published to Exchange.
 
-API Groups have major versions such as 1.0.0, 2.0.0, or 3.0.0, but no minor or patch versions. Every version of an API Group has one or more API Group instances. Each API Group instance is a group of API instances that all have the same identity provider and the same environment type, either production or sandbox. An API Group instance can contain API instances from multiple business groups.
+API Groups have major versions, such as 1.0.0, 2.0.0, or 3.0.0, but no minor or patch versions. Every version of an API Group has one or more API Group instances. Each API Group instance is a group of API instances that all have the same identity provider and the same environment type, either production or sandbox. An API Group instance can contain API instances from multiple business groups.
 
 Creating an API Group requires having the group administrator role, and the asset administrator role for each of the APIs in the group. This ensures that a group creator can change the underlying APIs between private and public visibility levels.
 
