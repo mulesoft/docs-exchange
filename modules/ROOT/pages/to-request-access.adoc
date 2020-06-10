@@ -69,7 +69,7 @@ The OAuth 2 grant type:
 
 == API Groups
 
-In Exchange, each API Group is an asset with a portal. A *Group instances* page on the portal lists all of that API Group's instances.
+In Exchange, each API Group is an asset with a portal. The *Group instances* page on the portal lists all of that API Group's instances.
 
 When a developer requests access to the API Group for a client application, the developer selects an API Group instance, selects or creates a client application, and may optionally select a service-level agreement (SLA).
 
