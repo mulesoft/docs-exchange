@@ -4,11 +4,11 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-You can use Exchange private or Exchange portal to share Mule XML example code, templates, connectors, policies, APIs, API Groups, and custom information assets. Sharing assets helps your organization model and reuse code and APIs for ease of access and to provide a repository.
+You can use a private Exchange or an Exchange public portal to share Mule XML example code, templates, connectors, policies, APIs, API Groups, and custom information assets. Sharing assets provides a repository for code and APIs, and helps your organization access them easily, model them, and reuse them.
 
-Exchange private makes it easy to share assets with internal developers by giving them viewer, contributor, or administrator access. Additionally, assets created within a business group are automatically shared with developers within that business group.
+A private Exchange makes it easy to share assets with internal developers by giving them viewer, contributor, or administrator access. Additionally, assets created within a business group are automatically shared with developers within that business group.
 
-Exchange portal enables Exchange administrators to share assets externally with developers outside of their own organization.
+An Exchange public portal enables Exchange administrators to share assets externally with developers outside of their own organization.
 
 Both Exchange views also let users review assets so that asset providers can get feedback.
 
