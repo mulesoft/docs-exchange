@@ -16,26 +16,54 @@ Click the Download button in the task bar. image:ex2-icon-download.png[]
 
 The results vary by file type:
 
-* RAML: Click the down arrow.
+* RAML
++
+Click the down arrow.
 +
 image::ex2-download-from-raml.png[]
 +
 If you choose As RAML, the original RAML file downloads as a zip file. If you choose As OAS, Exchange downloads the API specification as a zip file containing a JSON file for the specification. If you choose As Mule 4 connector, it downloads as a jar file you can add to a Studio 7 Mule project. If you choose As Mule 3 connector, it downloads as a zip file you can add to a Studio 6 Mule project.
 +
-* OAS: Click the down arrow.
+* OAS
++
+Click the down arrow.
 +
 image::ex2-download-from-oas.png[]
 +
 If you choose As RAML, Exchange downloads the API specification as a zip file containing a RAML file for the specification. If you choose As OAS, it downloads as a zip file containing a file in the original format of either JSON or YAML. If you choose As Mule 4 connector, it downloads as a jar file you can add to a Studio 7 Mule project. If you choose As Mule 3 connector, it downloads as a zip file you can add to a Studio 6 Mule project.
 +
-* WSDL: Downloads as a WSDL file.
-* Connector: Downloads as a jar file.
-* Template: Downloads as a jar or zip file.
-* Example: Downloads as a zip file.
-* Policy: Click the down arrow.
+* WSDL
++
+Downloads as a WSDL file.
++
+* Connector
++
+Downloads as a jar file.
++
+* Template
++
+Downloads as a jar or zip file.
++
+* Example
++
+Downloads as a zip file.
++
+* Policy
++
+Click the down arrow.
 +
 If you choose *As Mule policy*, Exchange downloads the policy as a JAR file. If you choose *As Policy definition*, Exchange downloads the definition YAML file.
 +
-* Custom, with a file: Downloads the same format file that you uploaded, but the file name is based on your application name. For example, if you upload a text file for the Inventory Distribution project, Exchange downloads inventory-distribution.txt.
-* Custom without a file: The Download button does not appear.
-* API Group: The Download button does not appear.
+* Custom with a file
++
+Downloads the same format file that you uploaded, but the file name is based on your application name.
++
+For example, if you upload a text file for the Inventory Distribution project, Exchange downloads `inventory-distribution.txt`.
++
+* Custom without a file
++
+The *Download* button does not appear.
++
+* API Group
++
+The *Download* button does not appear.
