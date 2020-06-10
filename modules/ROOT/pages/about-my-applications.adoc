@@ -27,7 +27,7 @@ application is registered.
 If you don't have an application to link to the API or API Group, you can create the application
 in the *Request Access* menu. You can then click *Request Access* to connect your
 application and the API or API Group. Some APIs and API Groups require selecting a service-level agreement
-(SLA), accepting terms and conditions, or both.
+(SLA), and some APIs and API Groups require accepting terms and conditions.
 
 APIs and API Groups that are protected by a client ID enforcement policy require client
 applications to provide a client ID and optional client secret. The client ID and client
