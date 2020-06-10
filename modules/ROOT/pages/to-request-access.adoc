@@ -38,7 +38,7 @@ See the section "Create a New Application" for more information.
 . Choose the service-level agreement (SLA) value for the application.
 . Click Request Access.
 +
-The Request API Access menu opens to show that the access was automatically granted or submitted for review. This screen lists the client ID and client secret for this access instance.
+The *Request API Access* menu opens to show that the access was automatically granted or submitted for review. This screen lists the client ID and client secret for this access instance.
 
 == Create a New Application
 
