@@ -71,7 +71,7 @@ The OAuth 2 grant type:
 
 In Exchange, each API Group is an asset with a portal. The *Group instances* page on the portal lists all of that API Group's instances.
 
-When a developer requests access to the API Group for a client application, the developer selects an API Group instance, selects or creates a client application, and may optionally select a service-level agreement (SLA).
+When a developer requests access to the API Group for a client application, the developer selects an API Group instance, selects or creates a client application, and optionally selects a service-level agreement (SLA).
 
 A client application can have access to an API through multiple contracts, including contracts with only that API, and contracts with one or more API Groups that include the API. In this case, the least restrictive available contract for the API is applied.
 
