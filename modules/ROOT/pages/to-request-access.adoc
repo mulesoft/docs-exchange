@@ -73,7 +73,7 @@ In Exchange, each API Group is an asset with a portal. The *Group instances* pag
 
 When a developer requests access to the API Group for a client application, the developer selects an API Group instance, selects or creates a client application, and optionally selects a service-level agreement (SLA).
 
-A client application can have access to an API through multiple contracts, including contracts with only that API, and contracts with one or more API Groups that include the API. In this case, the least restrictive available contract for the API is applied.
+A client application can access an API either through a contract with only that API or through a contract with one or more API Groups that include the API. In this latter case, the least restrictive available contract for the API is applied.
 
 == See Also
 
