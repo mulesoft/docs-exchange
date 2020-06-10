@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The My Applications area in the Exchange details view for an asset lists
+The *My Applications* area in the Exchange details view for an asset lists
 applications that hold a contract with an API or an API Group.
 
 image::ex2-my-applications.png[]
