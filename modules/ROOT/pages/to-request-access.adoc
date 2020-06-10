@@ -4,19 +4,19 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-To register a client application to an existing API, the client application
-must first request access. When the request is approved by the API owner, a
-contract is created between the client application and the API, and the client
+To register a client application to an existing API instance or API Group instance, the client application
+requests access. When the owner of the instance approves the request, a
+contract is created between the client application and the instance, and the client
 application is registered.
 
-APIs that are protected by a client ID enforcement policy require client
+Instances that are protected by a client ID enforcement policy require client
 applications to provide a client ID and optional client secret. The client ID and client
 secret credentials are automatically created when the client application is
 registered.
 
-An API owner can use API Manager to view all API contracts ever created for an
-API instance. An API consumer can use Exchange's *My Applications* page to view
-the API contracts created between an API instance and that consumer's client
+An instance owner can use API Manager to view all API contracts ever created for an
+API instance or API Group instance. An API or API Group consumer can use the Exchange *My Applications* page to view
+the API contracts created between an API instance or API Group instance and that consumer's client
 applications.
 
 API providers can view, manage, and revoke these contracts by following the steps in
@@ -26,19 +26,19 @@ If terms and conditions are set for an asset, you are prompted to accept the
 terms before access is granted, and the created contract includes the terms and
 conditions.
 
-. Click an API asset to view more details.
+. Click an API or API Group asset to view more details.
 . Click *Request Access*.
-. Choose the API instance from the list.
+. Choose the instance from the list.
 . If you are using an existing application, choose from the list of applications.
 +
-An application and its API instance use the same client provider. If an organization administrator has configured xref:api-manager::configure-multiple-credential-providers.adoc[multiple client providers] in Anypoint API Manager, then the application list shows only the applications that use the same client provider as the selected API instance.
+An application and its instance use the same client provider. If an organization administrator has configured xref:api-manager::configure-multiple-credential-providers.adoc[multiple client providers] in Anypoint API Manager, then the application list shows only the applications that use the same client provider as the selected instance.
 . If you do not have an application to which to provide access, click *Select application > Create a new application*. 
 +
 See the section "Create a New Application" for more information.
 . Choose the service-level agreement (SLA) value for the application.
 . Click Request Access.
 +
-The Request API Access menu opens to show that the API access was successful. This screen lists the client ID and client secret for this API access instance.
+The *Request API Access* menu opens to show that the access was automatically granted or submitted for review. This screen lists the client ID and client secret for this access instance.
 
 == Create a New Application
 
@@ -67,9 +67,13 @@ The OAuth 2 grant type:
 ** Authorization Code Grant
 ** Refresh Token
 
-== API Groups
+== API Group Access
 
-When you request access to an API Group, the least restrictive available contract for each API is applied. The application uses that contract to access the API Group instance.
+In Exchange, each API Group is an asset with a portal. The *Group instances* page on the portal lists all of that API Group's instances.
+
+When a developer requests access to the API Group for a client application, the developer selects an API Group instance, selects or creates a client application, and optionally selects a service-level agreement (SLA).
+
+A client application can access an API either through a contract with only that API or through a contract with one or more API Groups that include the API. In this latter case, the least restrictive available contract for the API is applied.
 
 == See Also
 

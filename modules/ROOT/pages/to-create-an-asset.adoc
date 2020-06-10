@@ -5,10 +5,9 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-publish-an-asset.adoc
 
-In Anypoint Exchange private and Exchange portal, to share an API, policy, example, template, or connector means that
-you first create an asset corresponding to the asset type.
+To share an API, API Group, policy, example, template, or connector in either an Anypoint Exchange private instance or an Exchange public portal, create an asset of that asset type.
 
-How you create an asset depends on its type.
+The way to create an asset depends on its type.
 
 * For OAS 2.0, RAML, RAML fragments, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *New asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
@@ -19,6 +18,7 @@ Another way to publish these type of assets is using the https://anypoint.muleso
 * RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
 +
 For example: `exchange asset upload --classifier raml --apiVersion v1 --name HelloWorld --mainFile helloworld.raml helloword/1.0.0 /Users/nmouso/Downloads/helloworld.raml.zip`
+* API Groups are published to Exchange from Anypoint API Manager.
 
 Each asset in Exchange is versioned. You can manage which versions are visible by deprecating a version to hide it, and you can delete versions if needed.
 
@@ -97,15 +97,17 @@ that is defined by API Manager.
 
 == Create an API Group Asset
 
-An API Group is an Exchange asset that enables organizations to publish a group of related APIs as a single unit, so developers' client applications can access that group as a single unit, with a single client ID and client secret.
+An API Group is an asset that enables organizations to publish a group of API instances as a single unit, so that developer client applications can access the APIs as a group, using one client ID and, optionally, client secret.
 
-Each API Group can have multiple versions. Every major version of an API Group has one or more API Group instances. Each API Group instance is a group of API instances that are all in the same environment, such as development, testing, and production environments, and that all have the same identity provider. An API Group instance can contain API instances from multiple business groups.
+API Groups are created in Anypoint API Manager and published to Exchange.
+
+API Groups have major versions, such as 1.0.0, 2.0.0, or 3.0.0, but no minor or patch versions. Every version of an API Group has one or more API Group instances. Each API Group instance is a group of API instances that all have the same identity provider and the same environment type, either production or sandbox. An API Group instance can contain API instances from multiple business groups.
 
 Creating an API Group requires having the group administrator role, and the asset administrator role for each of the APIs in the group. This ensures that a group creator can change the underlying APIs between private and public visibility levels.
 
-Every API instance in a group instance can be accessed through the group instance, and this access can be granted on the group instance contracts page, without approval on the API instance contracts page. You can view the group contracts for an API on the API's contracts page.
+If an API Group has any private APIs, you see a warning when publishing the API Group to your public portal. The public portal never shows private content. To ensure that all content in the API Group is published to the public portal, go to each API's page in Exchange and make the API public, and then publish the API Group.
 
-If the API Group has any API content that is private, such as instances, pages, or terms and conditions, you see a warning when publishing the API. Private content is not published to the public portal. To ensure that all content in the API Group is published to the public portal, go to each API's page in Exchange and make the API public, and then publish the API Group.
+Warnings are also shown when publishing an API Group to your public portal if all of its API Group instances are private, and when making an API Group instance public if all of its API instances are private.
 
 == Create a Custom Asset
 
