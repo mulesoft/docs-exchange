@@ -35,7 +35,7 @@ secret credentials are automatically created when the client application is
 registered.
 
 An API owner can use API Manager to view all API contracts ever created for an
-API or API Group instance. An API consumer can use Exchange's *My Applications* page to view
+API or API Group instance. An API consumer can use the Exchange *My Applications* page to view
 the contracts created between an API instance or API Group instance and that consumer's client
 applications.
 
