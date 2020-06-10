@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-publish-an-asset.adoc
 
-In Anypoint Exchange private and Exchange portal, to share an API, API Group, policy, example, template, or connector, create an asset of that asset type.
+To share an API, API Group, policy, example, template, or connector in either an Anypoint Exchange private instance or an Exchange public portal, create an asset of that asset type.
 
 The way to create an asset depends on its type.
 
@@ -97,7 +97,7 @@ that is defined by API Manager.
 
 == Create an API Group Asset
 
-An API Group is an asset that enables organizations to publish a group of API instances as a single unit, so developers' client applications can access them as a group, using one client ID and client secret.
+An API Group is an asset that enables organizations to publish a group of API instances as a single unit, so that developer client applications can access the APIs as a group, using one client ID and, optionally, client secret.
 
 API Groups are created in Anypoint API Manager and published to Exchange.
 
