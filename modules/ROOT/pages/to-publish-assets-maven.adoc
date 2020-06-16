@@ -178,7 +178,7 @@ For the EU, the share URL is:
 https://eu1.anypoint.mulesoft.com/exchange/api/v1/assets/ORGANIZATION_ID/ASSET_ID
 ----
 
-== Publish Federated Assets
+== Publish and consume Federated Assets
 
 . xref:access-management::saml-bearer-token.adoc[Get an API bearer token by using a SAML assertion].
 +
