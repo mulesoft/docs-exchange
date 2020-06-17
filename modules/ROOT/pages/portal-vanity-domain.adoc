@@ -8,7 +8,7 @@ This document contains instructions and the necessary NGINX configuration for se
 
 == List Your Domain
 
-Exchange keeps a list of approved domains for security, also known as a whitelist. Add your public portal's domain to the list:
+Exchange keeps a list of approved domains for security. Add your public portal's domain to the list:
 
 . Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
 +
