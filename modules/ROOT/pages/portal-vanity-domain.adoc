@@ -6,9 +6,9 @@ endif::[]
 
 This document contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain.
 
-== Whitelist Your Domain
+== List Your Domain
 
-Your domain needs to be whitelisted in Exchange for your public portal to work properly. To do so:
+Exchange keeps a list of approved domains for security, also known as a whitelist. Add your public portal's domain to the list:
 
 . Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
 +
@@ -17,7 +17,7 @@ Your domain needs to be whitelisted in Exchange for your public portal to work p
 ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
 ----
 +
-. Use the access token to whitelist your custom domain:
+. Use the access token to add your custom domain to the list:
 +
 [source,console]
 ----
