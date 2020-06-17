@@ -28,7 +28,7 @@ Exchange asset versions follow the https://semver.org/[Semantic Versioning] mode
 
 To select a minor version of an asset, use the menu next to the asset name at the top of the asset portal. To select a patch version of an asset, use the version list at the right.
 
-RAML and OAS 2.0 versions have been automatically generated for all RAML and OAS assets published since xref:release-notes::exchange/anypoint-exchange-release-notes.adoc#january-2019[January 12, 2019].
+RAML versions have been automatically generated for all OAS assets published since xref:release-notes::exchange/anypoint-exchange-release-notes.adoc#january-2019[January 12, 2019], and OAS 2.0 versions have been automatically generated for all RAML assets published since that date.
 
 This illustration summarizes how each asset type (in green) appears in Exchange:
 
@@ -81,11 +81,10 @@ To create an API asset:
 . Select the asset type from the drop-down list:
 +
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
-* REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 versions.
+* REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
 * API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
-* HTTP API - This asset does not require a file, this type of asset provides an API endpoint 
-that is defined by API Manager. 
+* HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager. 
 +
 . For RAML, API Spec Fragment, OAS, and WSDL assets:
 +
