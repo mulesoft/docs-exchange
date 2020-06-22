@@ -68,6 +68,8 @@ Specify the same values as above, but also:
 *** Refresh Token
 *** Resource Owner Grant
 +
+Some external authentication providers offer only some of these grant types.
++
 ** If Exchange should automatically register the redirect URIs for API Notebook and API Console.
 
 == API Group Access
