@@ -61,11 +61,14 @@ image::ex2-edit-app.png[Screenshot - External Authentication]
 +
 Specify the same values as above, but also:
 +
-The OAuth 2 grant type:
+** The OAuth 2 grant type:
 +
-** Implicit Grant
-** Authorization Code Grant
-** Refresh Token
+*** Authorization Code Grant
+*** Implicit Grant
+*** Refresh Token
+*** Resource Owner Grant
++
+** If Exchange should automatically register the redirect URIs for API Notebook and API Console.
 
 == API Group Access
 
