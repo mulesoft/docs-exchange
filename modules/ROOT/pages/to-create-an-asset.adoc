@@ -9,10 +9,10 @@ To share an API, API Group, policy, example, template, or connector in either an
 
 The way to create an asset depends on its type.
 
-* For OAS 2.0, RAML, RAML fragments, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *New asset* menu.
+* For OAS, RAML, RAML fragments, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *New asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
-* You can also publish a RAML, and OAS and RAML fragments using Design Center and publishing the API to Exchange.
+* You can also publish a RAML, or OAS or RAML fragments, using Design Center, and publish the API to Exchange.
 +
 Another way to publish these type of assets is using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
 * RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
@@ -28,7 +28,7 @@ Exchange asset versions follow the https://semver.org/[Semantic Versioning] mode
 
 To select a minor version of an asset, use the menu next to the asset name at the top of the asset portal. To select a patch version of an asset, use the version list at the right.
 
-RAML and OAS versions have been automatically generated for all RAML and OAS assets published since xref:release-notes::exchange/anypoint-exchange-release-notes.adoc#january-2019[January 12, 2019].
+RAML versions have been automatically generated for all OAS assets published since xref:release-notes::exchange/anypoint-exchange-release-notes.adoc#january-2019[January 12, 2019], and OAS 2.0 versions have been automatically generated for all RAML assets published since that date.
 
 This illustration summarizes how each asset type (in green) appears in Exchange:
 
@@ -81,11 +81,10 @@ To create an API asset:
 . Select the asset type from the drop-down list:
 +
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
-* REST API - OAS: Provide an OAS/Swagger 2.0 API specification file. (Exchange does not support OAS 3.0.) OAS specifications can be either a YAML (.yaml) or JSON (.json) file.
+* REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
 * API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
-* HTTP API - This asset does not require a file, this type of asset provides an API endpoint 
-that is defined by API Manager. 
+* HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager. 
 +
 . For RAML, API Spec Fragment, OAS, and WSDL assets:
 +
