@@ -20,7 +20,17 @@ NOTE: After deploying a REST asset to Exchange, refresh your screen to ensure th
 
 The Mule 3 connector downloads as a zip file, and the Mule 4 connector downloads as a JAR file. 
 
-== REST Connect Security Scheme Support
+== API Specification Format Support
+
+REST Connect has support for these API specification formats:
+
+* OAS 3 - JSON
+* OAS 3 - YAML
+* OAS 2 - JSON
+* OAS 2 - YAML
+* RAML 1.0
+
+== Security Scheme Support
 
 REST Connect supports these security schemes:
 
