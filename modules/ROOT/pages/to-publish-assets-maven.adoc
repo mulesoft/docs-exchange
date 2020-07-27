@@ -19,7 +19,7 @@ NOTE: New assets count toward your organization's xref:to-create-an-asset.adoc#a
 To benefit from this documentation, you must be familiar with Maven, programming concepts, and command line
 operations on your computer or server.
 
-Your POM file must include the required plugin `org.mule.tools.maven.mule-maven-plugin`. Do not include the plugin `org.apache.maven.plugins.maven-deploy-plugin` in your POM file or settings file, because it is not compatible with the required plugin.
+Include the required plugin `org.mule.tools.maven.mule-maven-plugin` in your POM file. Do not include the plugin `org.apache.maven.plugins.maven-deploy-plugin` in your POM file or settings file, because it is not compatible with the required plugin.
 
 Note: You must have a unique artifact name and organization ID to publish your asset.
 
