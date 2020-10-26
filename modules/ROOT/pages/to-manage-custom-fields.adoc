@@ -43,7 +43,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "enum",
-	"possibleValues": ["OAS","RAML"],
+	"acceptedValues": ["OAS","RAML"],
 	"displayName": "SubType",
 	"tagKey": "subType"
   }'
@@ -224,7 +224,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "enum",
-	"possibleValues": ["OAS","RAML"],
+	"acceptedValues": ["OAS","RAML"],
 	"displayName": "SubType",
 	"tagKey": "subType",
 	"assetTypeRestrictions": ["rest-api"]
