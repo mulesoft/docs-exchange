@@ -1,4 +1,4 @@
-= Share an HTTP API Asset
+= Publish an HTTP API Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,9 +6,9 @@ endif::[]
 
 The HTTP API lets Private Exchange users specify a placeholder for an endpoint. After you create the HTTP API endpoint, you can optionally manage the endpoint with API Manager.
 
-The HTTP API asset contains a description for what the API endpoint does and how users can utilize the API for use with their programs.
+The HTTP API asset contains a description for what the API endpoint does and how users can connect the API to their programs.
 
-Users utilize API Manager to import the API from Exchange and can then associate proxies and manage policies and SLAs for the API.
+In API Manager, users import the API from Exchange and can then associate proxies and manage policies and SLAs for the API.
 
 . In a Private Exchange, click New.
 . Give the API a name and in Asset Type, click API - HTTP.
