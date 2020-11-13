@@ -1,4 +1,4 @@
-= To Delete an Asset in Exchange
+= Delete an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
