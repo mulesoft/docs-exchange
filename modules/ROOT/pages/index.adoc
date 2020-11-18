@@ -23,7 +23,7 @@ instances of Exchange created within your Anypoint Platform organization.
 
 . Visit https://www.anypoint.mulesoft.com/exchange/[Anypoint Exchange].
 . Scroll to view assets.
-. Click on an asset to view its description. If you log into Anypoint Platform, you can download an asset.
+. Click on an asset to view its description. If you log in to Anypoint Platform, you can download an asset.
 . Optionally, search for assets by type.
 
 === Find Resources in a Public Portal
@@ -86,11 +86,11 @@ API spec fragments are also known as RAML fragments.
 == Deprecated Exchange
 
 You may find an earlier version of Anypoint Exchange while searching the Internet.
-New content isn't published to this version, and is available to assist migration to the current Exchange version documented here.
+New content is not published to the earlier version. It is available to assist migration to the current Exchange version documented here.
 
 == What's Next?
 
-After you log into Exchange, you can create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets.
+After you log in to Exchange, you can create assets including APIs, connectors, templates, examples, API Notebooks, and custom assets.
 
 == See Also
 
