@@ -19,13 +19,18 @@ In Exchange you can enter search text to search for assets, click *All Types* to
 
 You can also search by clicking category or tag elements. This creates a filtered search you can use to find similar assets.
 
-The original Exchange search experience is avilable in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. The new Exchange search experience is available in the US cloud and the EU cloud.
+The original Exchange search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. The new Exchange search experience is available in the US cloud and the EU cloud.
+
+. New Exchange search experience
+image::search.png[New Exchange search experience]
 
 In the original Exchange search experience, searches apply only to the Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
 
 In the new Exchange search experience, you can select which of the organizations visible to you should be included in each search.
 
 To search by tags and categories in the new Exchange search experience, use the drop-down menus for tags and categories on the search page.
+
+To select the ranking of search results in the new Exchange search experience, use the *Sort by* drop-down menu to choose *Relevance* (default), *Name*, *Last modified*, or *Rating*. *Relevance* sorts the matching results by where a match is found in the asset metadata such as name, title, pages, and endpoints.
 
 == Save a Search
 
