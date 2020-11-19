@@ -13,11 +13,7 @@ Anypoint Exchange search looks for terms in:
 * The content of the asset portal pages
 * xref:to-find-info.adoc#searching-api-specifications[Properties defined in RAML and OAS API specifications]
 
-In Exchange you can enter search text to search for assets, click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the type menu.
-
-<<index.adoc#content-types,Content Types>> lists the different types of asset.
-
-You can also search by clicking category or tag elements. This creates a filtered search you can use to find similar assets.
+On an asset's details page, click a tag or category element to create a filtered search showing similar assets.
 
 The original Exchange search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. The new Exchange search experience is available in the US cloud and the EU cloud.
 
@@ -25,15 +21,21 @@ New Exchange search experience:
 
 image::search.png[New Exchange search experience]
 
+== Tags, Categories, and Ranking in the New Exchange Search Experience
+
+To filter search results by tags and categories in the new Exchange search experience, use the drop-down menus for tags and categories on the search page.
+
+To select the ranking of search results in the new Exchange search experience, use the *Sort by* drop-down menu to choose *Relevance* (default), *Name*, *Last modified*, or *Rating*. *Relevance* sorts the matching results by where a match is found in the asset metadata, such as name, title, pages, and API specification metadata. API specification metadata includes endpoints and types.
+
+== Searching in Organizations
+
 In the original Exchange search experience, searches apply only to the Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
 
-In the new Exchange search experience, you can select which of the organizations visible to you should be included in each search.
-
-To search by tags and categories in the new Exchange search experience, use the drop-down menus for tags and categories on the search page.
-
-To select the ranking of search results in the new Exchange search experience, use the *Sort by* drop-down menu to choose *Relevance* (default), *Name*, *Last modified*, or *Rating*. *Relevance* sorts the matching results by where a match is found in the asset metadata such as name, title, pages, and endpoints.
+In the new Exchange search experience, you can select which of the organizations visible to you should be included in each search. By default, no organization is selected in the drop-down menu, and Exchange searches MuleSoft's public assets and the assets of the master organization and its business groups.
 
 == Save a Search
+
+The original Exchange search experience and the new Exchange search experience save searches in the same way.
 
 . Enter a search term and click *Save This Search*.
 . Exchange prompts you to give the search a name, and to select if the search is for your organization or personal.
@@ -46,6 +48,8 @@ Exchange lists search terms specific to your business group. Below those terms a
 image::ex2-saved-searches-groups.png[Saved Search Groups]
 
 == Searching API Specifications
+
+The original Exchange search experience and the new Exchange search experience process API specifications in the same way.
 
 Exchange searches these API specification properties:
 
@@ -131,9 +135,9 @@ This API will be found by these searches:
 |offset |Query parameter name, Query parameter description
 |leagueid |URI parameter name
 |team |Type name
+|city |Type property name
 |leagues leagueId teams |Endpoint path
 |`/leagues/LEAGUE_ID/teams` |Endpoint path
-|city |Type property name
 |===
 
 The last two searches are the same, because special characters are removed before searching.
@@ -153,7 +157,7 @@ converts the character to a space before searching.
 
 === Search Separators
 
-Exchange search uses search separators to find Exchange assets that contain one or more terms.
+The original Exchange search experience uses search separators to find Exchange assets that contain one or more terms.
 
 If you input search words connected by non-alphanumeric symbols, Exchange replaces the symbols with spaces before searching for the term. The search string only succeeds if both words are present in the result. This is the same as the `word1 AND word2` relationship.
 
@@ -189,7 +193,7 @@ the reason is provided.
 
 === Phrase Search Separators
 
-Exchange search uses phrase search to find a group of terms inside quotation marks. Phrase searches match an asset only if all the exact terms inside quotes appear in consecutive order.
+The original Exchange search experience uses phrase search to find a group of terms inside quotation marks. Phrase searches match an asset only if all the exact terms inside quotes appear in consecutive order.
 
 If you input any of these searches in Exchange, Exchange replaces non-alphanumeric symbols with spaces before searching for assets.
 
@@ -221,7 +225,11 @@ the reason is provided.
 |===
 
 
-== Search by Tags, Categories, and Custom Fields in the Original Exchange Search Experience
+== Search by Types, Tags, Categories, and Custom Fields in the Original Exchange Search Experience
+
+In the original Exchange search experience, you can enter search text to search for assets, click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the type menu.
+
+<<index.adoc#content-types,Content Types>> lists the different types of asset.
 
 The original Exchange search experience uses query language to search assets by tags, categories, and custom fields.
 
