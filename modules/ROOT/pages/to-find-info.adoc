@@ -13,7 +13,7 @@ Anypoint Exchange search looks for terms in:
 * The content of the asset portal pages
 * xref:to-find-info.adoc#searching-api-specifications[Properties defined in RAML and OAS API specifications]
 
-On an asset's details page, click a tag or category element to create a filtered search showing similar assets.
+On an asset portal, click a tag or category element to create a filtered search showing similar assets.
 
 The original Exchange search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. The new Exchange search experience is available in the US cloud and the EU cloud.
 
@@ -329,10 +329,3 @@ Examples:
 |field:this.* = value |this.is.my.key:some-value |No
 |field:this.* = some-* |this.is.my.key:some-value |No
 |===
-
-
-== See Also
-
-* xref:about-my-applications.adoc[About My Applications]
-* xref:to-configure-api-settings.adoc[To Configure API Instances]
-* xref:6@studio::exchange-integration.adoc[Anypoint Studio integration with Exchange]
