@@ -21,7 +21,8 @@ You can also search by clicking category or tag elements. This creates a filtere
 
 The original Exchange search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. The new Exchange search experience is available in the US cloud and the EU cloud.
 
-. New Exchange search experience
+New Exchange search experience:
+
 image::search.png[New Exchange search experience]
 
 In the original Exchange search experience, searches apply only to the Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
