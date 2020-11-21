@@ -4,37 +4,58 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-When you click an asset, Anypoint Exchange provides detailed information:
+When you click an asset, Anypoint Exchange provides detailed information.
 
-* Left navigation area - Lists additional pages, saved search terms, application names, and instances. For a REST API,
-this area lists the HTTP functions in the REST specification. For a policy, this area lists *Terms and conditions* and *APIs using this policy*.
-* Right detail panel - Lists the asset type, when the asset was created and by which organization, when the asset was last published, a list of asset patch versions, and the tags and categories of the asset. For REST APIs, the right panel lets you test the API by creating example calls, test data (mocking), and the ability to send data to the API and view the results.
+The left navigation area lists:
 
-In the table of asset patch versions on the detail panel, each version has a drop-down menu with a *Version detail* option that shows information about that version, including who created it, when it was published, and any dependent assets.
+* Additional pages
+* Saved search terms
+* Application names
+* Instances
+* The HTTP functions in the REST specification (for a REST API)
+* Terms and conditions and APIs using this policy (for a policy)
+
+The right detail panel lists:
+
+* The asset type
+* When the asset was created and by which organization
+* When the asset was last published
+* A list of asset patch versions
+* The tags and categories of the asset
+
+For REST APIs, use the right panel to test the API by creating example calls and test data (mocking), so you can send data to the API and view the results.
+
+In the table of asset patch versions in the detail panel, each version has a drop-down menu with a *Version detail* option that shows information about that version, including who created it, when it was published, and any dependent assets.
 
 == View Assets by Business Group
 
-A business group provides a way to group individuals within an organization. A system administrator assigns users to belong to a business group. Each business group can have separate Exchange assets. You need to log into
-Anypoint Platform to view the business groups. Click a group name from the taskbar.
+A system administrator groups individuals within an organization into business groups. Each group has its own Exchange assets. To view the business groups, log in to Anypoint Platform and click a group name from the taskbar:
 
 image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-down menu]
 
-If you cannot see additional groups, contact your Exchange administrator. 
+An Exchange administrator sets the groups this menu shows to each user.
 
-If you cannot find an asset in one group, it may be in another business group. To find assets from other business groups, in the left navigation bar, click *All assets*. The left navigation area provides additional areas to search. The "Provided by MuleSoft" scope lists assets provided by MuleSoft. The "All assets" scope lists assets provided by MuleSoft and your own master organization. Business group scopes list assets built by users within a business group.
+If you cannot find an asset in the current business group scopes, search in other scopes. In the left navigation bar click *All assets* (assets provided by MuleSoft and your own master organization), *Provided by MuleSoft*, or a business group scope.
 
 == View REST API Elements in an Asset
 
-. In the left navigation area you can view RAML or OAS API specification information such as resources and the methods in each resource. Click a method button to view information about the API:
+View RAML or OAS API specification information, including resources and the methods in each resource, in the left navigation area.
+
+. Click a method button:
 +
 image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
 +
-. Use the right side of a method view to experiment with the API. This functionality is similar to what you can expect in programs such as Postman where you can specify custom HTTP headers and test each API's method using the API's endpoint.
-. Click Request Access to tie the API you're viewing to one of your applications so that you can use the API to send and receive data that your application can consume.
+. Experiment with the API in the right side of a method view.
++
+This is similar to using a program such as Postman to specify custom HTTP headers and test each API's method using the API's endpoint.
+. To connect the API you're viewing to one of your applications and use the API to send and receive data, click *Request Access*.
 
 == Test an API with API Notebook
 
-. Click API Notebook in the content page if one is available for the API.
-. After you read the description for usage information, you can experiment with the example in the code block to try different parameters and values, and see the results in real time.
-. Click Play to test the method in the code example and view the results.
+Many APIs have an API notebook for interactive testing.
 
+. Click *API Notebook* in the content page.
+. Read the description and usage information.
+. Click *Play* to test the method in the code example.
+. Exchange shows the results in real time.
+. Experiment with the example in the code block to try different parameters and values.
