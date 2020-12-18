@@ -1,0 +1,61 @@
+= Asset Details
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+When you click an asset, Anypoint Exchange provides detailed information.
+
+The left navigation area lists:
+
+* Additional pages
+* Saved search terms
+* Application names
+* Instances
+* The HTTP functions in the REST specification (for a REST API)
+* Terms and conditions and APIs using this policy (for a policy)
+
+The right detail panel lists:
+
+* The asset type
+* When the asset was created and by which organization
+* When the asset was last published
+* A list of asset patch versions
+* The tags and categories of the asset
+
+For REST APIs, use the right panel to test the API by creating example calls and test data (mocking), so you can send data to the API and view the results.
+
+In the table of asset patch versions in the detail panel, each version has a drop-down menu with a *Version detail* option that shows information about that version, including who created it, when it was published, and any dependent assets.
+
+== View Assets by Business Group
+
+A system administrator groups individuals within an organization into business groups. Each group has its own Exchange assets. To view the business groups, log in to Anypoint Platform and click a group name from the taskbar:
+
+image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-down menu]
+
+An Exchange administrator sets the groups this menu shows to each user.
+
+If you cannot find an asset in the current business group scopes, search in other scopes. In the left navigation bar click *All assets* (assets provided by MuleSoft and your own master organization), *Provided by MuleSoft*, or a business group scope.
+
+== View REST API Elements in an Asset
+
+View RAML or OAS API specification information, including resources and the methods in each resource, in the left navigation area.
+
+. Click a method button:
++
+image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
++
+. Experiment with the API in the right side of a method view.
++
+This is similar to using a program such as Postman to specify custom HTTP headers and test each API's method using the API's endpoint.
+. To connect the API you're viewing to one of your applications and use the API to send and receive data, click *Request Access*.
+
+== Test an API with API Notebook
+
+Many APIs have an API notebook for interactive testing.
+
+. Click *API Notebook* in the content page.
+. Read the description and usage information.
+. Click *Play* to test the method in the code example.
+. Exchange shows the results in real time.
+. Experiment with the example in the code block to try different parameters and values.
