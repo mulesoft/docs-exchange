@@ -13,9 +13,9 @@ Anypoint Exchange search looks for terms in:
 * The content of the asset portal pages
 * xref:to-find-info.adoc#searching-api-specifications[Properties defined in RAML and OAS API specifications]
 
-On an asset portal, click a tag or category element to create a filtered search showing similar assets.
+In an asset portal, click a tag or category element to create a filtered search showing similar assets.
 
-The original Exchange search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. The new Exchange search experience is available in the US cloud and the EU cloud.
+The original Exchange search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. The new Exchange search experience is available in the US cloud and the EU cloud. The new search includes more options for search ranking, and more options and a better inferface for searching by tags, categories, and organizations.
 
 New Exchange search experience:
 
@@ -23,37 +23,36 @@ image::search.png[New Exchange search experience]
 
 == Tags, Categories, and Ranking in the New Exchange Search Experience
 
-To filter search results by tags and categories in the new Exchange search experience, use the drop-down menus for tags and categories on the search page.
+To filter search results by tags and categories in the new Exchange search experience, use the drop-down menus on the search page.
 
 To select the ranking of search results in the new Exchange search experience, use the *Sort by* drop-down menu to choose *Relevance* (default), *Name*, *Last modified*, or *Rating*. *Relevance* sorts the matching results by where a match is found in the asset metadata, such as name, title, pages, and API specification metadata. API specification metadata includes endpoints and types.
 
 == Searching in Organizations
 
-In the original Exchange search experience, searches apply only to the Exchange organization you are viewing. If you search in a private Exchange organization, the search only lists that organization's assets and not MuleSoft's public assets.
+In the original Exchange search experience, searches apply only to the Exchange organization you are viewing. If you are viewing a private Exchange organization, the search lists only that organization's assets and not MuleSoft public assets.
 
 In the new Exchange search experience, you can select which of the organizations visible to you should be included in each search. By default, no organization is selected in the drop-down menu, and Exchange searches MuleSoft's public assets and the assets of the master organization and its business groups.
 
 == Save a Search
 
-The original Exchange search experience and the new Exchange search experience save searches in the same way.
+Use the same method to save searches in either the original Exchange search experience or the new Exchange search experience:
 
 . Enter a search term and click *Save This Search*.
-. Exchange prompts you to give the search a name, and to select if the search is for your organization or personal.
+. When prompted, give the search a name and select whether the search is an organization search or personal search.
 +
 Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
-. View the left navigation bar to see the saved searches.
+. Save the search.
+. Confirm that your search appeas in the saved searches in the left navigation bar.
 +
-Exchange lists search terms specific to your business group. Below those terms are saved searches you created.
+Exchange lists search terms specific to your business group. Below those terms are saved searches you created:
 +
 image::ex2-saved-searches-groups.png[Saved Search Groups]
 
 == Searching API Specifications
 
-The original Exchange search experience and the new Exchange search experience process API specifications in the same way.
+The new and original searches use the same method to search for these API specification properties:
 
-Exchange searches these API specification properties:
-
-* API Title
+* API title
 * Base URI
 * Endpoints
 ** Path
@@ -62,21 +61,21 @@ Exchange searches these API specification properties:
 * Methods
 ** Method type (GET, POST, PUT)
 ** Description
-* Query Parameters
+* Query parameters
 ** Name
 ** Description
-* URI Parameters
+* URI parameters
 ** Name
 * Types
 ** Name
 ** Properties
 * Traits
 * Properties
-* Security Schemas
+* Security schemas
 
-These property names are based on RAML specifications. Equivalent properties are indexed for OAS specifications. For example, RAML has base URI and OAS has host and path.
+These property names are based on RAML specifications. Equivalent properties are indexed for OAS specifications. For example, RAML uses base URI but OAS uses host and path.
 
-API specification search example:
+This example shows an API specification:
 
 [source,text,linenums]
 ----
@@ -120,7 +119,7 @@ types:
          description: New team has been created
 ----
 
-This API will be found by these searches:
+This API is found by these searches:
 
 [%header%autowidth.spread]
 |===
@@ -140,11 +139,11 @@ This API will be found by these searches:
 |`/leagues/LEAGUE_ID/teams` |Endpoint path
 |===
 
-The last two searches are the same, because special characters are removed before searching.
+Note that the last two searches are the same, because special characters are removed before searching.
 
-== Search for Phrases in the Original Exchange Search Experience
+== Search for Phrases by Using the Original Exchange Search Experience
 
-In the original Exchange search experience, to search for case insensitive text
+Using the original Exchange search experience, to search for case-insensitive text
 that begins with each word you specify, put a space between words.
 This is similar to putting the `*` wildcard regular expression after each word.
 For example, searching for `mq module` finds any asset that has text that
@@ -171,7 +170,7 @@ connect:/sales
 -connect -sales
 ----
 
-This table shows how each search term is interpreted depending on the values in the asset name,
+This table shows how each search term is interpreted based on the values in the asset name,
 asset ID, and tags for an asset. If the search term maps to the values correctly, a match occurs. If not,
 the reason is provided.
 
@@ -208,7 +207,7 @@ Api-"Sales/connect"
 "Sales connect":Api
 ----
 
-This table shows how each search term is interpreted depending on the values in the asset name,
+This table shows how each search term is interpreted based on the values in the asset name,
 asset ID, and tags for an asset. If the search term maps to the values correctly, a match occurs. If not,
 the reason is provided.
 
@@ -235,11 +234,11 @@ The original Exchange search experience uses query language to search assets by 
 
 === Search by Tags
 
-Search by tags with this structure: `tag:"some value"` or `tag:value`
+Search by tags using either `tag:"some value"` or `tag:value`.
 
 If the value has no spaces, then double quotes are optional.
 
-Tag search is case insensitive.
+Tag search is case-insensitive.
 
 Examples:
 
@@ -257,18 +256,18 @@ Examples:
 
 === Search by Categories
 
-Search by categories with this structure: `category:"some key" = "some value"`
+Search by categories using `category:"some key" = "some value"`.
 
 If the category has no spaces in the key or value, then double quotes are optional.
 
 The key can include the asterisk (`*`) regular expression to search for characters within a category name.
 
-The key is case sensitive.
+The key is case-sensitive.
 
 A search value matches an asset value if either of these is true:
 
-* The search value is entirely lower case.
-* The search value and the asset value have matching case.
+* The search value is entirely lowercase.
+* The letter case of the search value and the asset value match.
 
 Examples:
 
@@ -297,18 +296,18 @@ These search terms return all assets marked as both system APIs and Salesforce p
 
 === Search by Custom Fields
 
-Search by fields with this structure: `field:"some key" = "some value"`
+Search by fields using `field:"some key" = "some value"`.
 
 If the custom field has no spaces in the key or value, then double quotes are optional.
 
 The key can include the asterisk (`*`) regular expression to search for characters within a field name.
 
-The key is case sensitive.
+The key is case-sensitive.
 
 A search value matches an asset value if either of these is true:
 
-* The search value is entirely lower case.
-* The search value and the asset value have matching case.
+* The search value is entirely lowercase.
+* The letter case of the search value and the asset value match.
 
 Examples:
 
