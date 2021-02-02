@@ -12,3 +12,4 @@ Exchange 1 lets you view MuleSoft and private Exchange assets.
 * xref:migrate.adoc[To Migrate Assets from Exchange 1 to Exchange 2]
 * xref:exchange1-faq.adoc[Exchange 1 FAQ]
 * https://anypoint.mulesoft.com/exchange1/#!/[Anypoint Exchange 1]
+* xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
