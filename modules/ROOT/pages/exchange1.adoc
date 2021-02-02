@@ -449,7 +449,7 @@ The content that is shown in the list by default depends in the organization or 
 
 == See Also
 
-* xref:release-notes::exchange/exchange-on-prem-release-notes.adoc[Anypoint Exchange Private Cloud Edition Release Notes].
+* xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes].
 * xref:exchange1-faq.adoc[Exchange1 FAQ].
 * https://www.mulesoft.com/resources/esb/top-five-data-integration-patterns[integration patterns].
 * Learn the different ways you can xref:runtime-manager::deployment-strategies.adoc[Deploy] your app.
