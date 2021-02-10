@@ -96,6 +96,14 @@ To create an API asset:
 . (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
 . Select *Publish*.
 
+To create a zip file containing all the files in a folder, with the main file in the root directory of the zip file, use a command like this, replacing `myfolder` with the name of your folder and `name.zip` with the name for the new zip file.
+
+```
+cd myfolder; zip -r name.zip .
+```
+
+Do not use a command such as `zip -r name.zip myfolder`, which puts the folder in the root directory of the zip file, and causes an error message such as `The zip file does not contain a .raml file in the root directory`.
+
 == Create an API Group Asset
 
 An API Group is an asset that enables organizations to publish a group of API instances as a single unit, so that developer client applications can access the APIs as a group, using one client ID and, optionally, client secret.
