@@ -91,18 +91,18 @@ To create an API asset:
 . For RAML, API Spec Fragment, OAS, and WSDL assets:
 +
 .. Select *Choose File* to locate the API specification file.
-.. Select the Main file of the API. If the file is a zip, the Main file should be in the root directory inside the zip. If the file is not a zip or if it has only one Main file, it's selected automatically.
+.. Select the Main file of the API. If the file is a ZIP, the Main file should be in the root directory inside the ZIP. If the file is not a ZIP or if it has only one Main file, it's selected automatically.
 +
 . (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
 . Select *Publish*.
 
-To create a zip file containing all the files in a folder, with the main file in the root directory of the zip file, use a command like this, replacing `myfolder` with the name of your folder and `name.zip` with the name for the new zip file.
+To create a ZIP file and put the items in a folder into the root directory of the ZIP file, use a command like this. Replace `myfolder` with the name of your folder and `name.zip` with the name for the new ZIP file.
 
 ```
 cd myfolder; zip -r name.zip .
 ```
 
-Do not use a command such as `zip -r name.zip myfolder`, which puts the folder in the root directory of the zip file, and causes an error message such as `The zip file does not contain a .raml file in the root directory`.
+Do not use a command such as `zip -r name.zip myfolder`, which puts the folder into the root directory of the ZIP file. This causes an error message such as `The zip file does not contain a .raml file in the root directory`.
 
 == Create an API Group Asset
 
