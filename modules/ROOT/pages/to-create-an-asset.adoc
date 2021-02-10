@@ -91,7 +91,9 @@ To create an API asset:
 . For RAML, API Spec Fragment, OAS, and WSDL assets:
 +
 .. Select *Choose File* to locate the API specification file.
-.. Select the Main file of the API. If the file is a ZIP, the Main file should be in the root directory inside the ZIP. If the file is not a ZIP or if it has only one Main file, it's selected automatically.
+.. Select the main file of the API.
++
+If the file is a ZIP, the selected main file must be in the root directory of the ZIP file. If the file is not a ZIP or if the file is a ZIP file with only one main file, then the main file is selected automatically.
 +
 . (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
 . Select *Publish*.
