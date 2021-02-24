@@ -7,7 +7,7 @@ endif::[]
 
 To share an API, API Group, policy, example, template, or connector in either an Anypoint Exchange private instance or an Exchange public portal, create an asset of that asset type.
 
-The way to create an asset depends on its type.
+The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 
 * For OAS, RAML, RAML fragments, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *New asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
@@ -20,7 +20,7 @@ Another way to publish these type of assets is using the https://anypoint.muleso
 For example: `exchange asset upload --classifier raml --apiVersion v1 --name HelloWorld --mainFile helloworld.raml helloword/1.0.0 /Users/nmouso/Downloads/helloworld.raml.zip`
 * API Groups are published to Exchange from Anypoint API Manager.
 
-Each asset in Exchange is versioned. You can manage which versions are visible by deprecating a version to hide it, and you can delete versions if needed.
+Each asset in Exchange is versioned. You can manage which versions are visible by deprecating a version to hide it, and you can delete versions if needed. All versions of an asset always have the same type.
 
 In addition to asset versions, APIs have a consumer facing API version that is shown at the top of an asset's detail screen. This API version is defined by API providers.
 
@@ -75,6 +75,8 @@ See xref:to-search-with-graph-api.adoc[Search Using the Graph API] for more info
 == Create an API Asset
 
 An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
+
+Creating an asset sets the asset type, which cannot be changed. All versions of an asset always have the same type.
 
 To create an API asset:
 
