@@ -28,15 +28,15 @@ Note: You must have a unique artifact name and organization ID to publish your a
 
 To construct the elements of a Maven POM file, you need to determine your organization ID:
 
-. Log into Anypoint Platform and click Access Management.
-. Click the organization name for the top level or a business group, and view your Organization ID in the Organization Info screen.
+. Log in to Anypoint Platform and click Access Management.
+. Click the organization name for the top level or a business group, and view your organization ID in the organization info screen.
 . Copy the organization ID so you can add it to your project's POM file when you follow the examples.
 
 == Publish an Asset to Exchange Using Maven
 
 Use these steps to publish Mule 3 and Mule 4 assets, including connectors.
 
-. In your project's POM file, set the groupId of the Maven project to your Organization ID:
+. In your project's POM file, set the groupId of the Maven project to your organization ID:
 +
 [source,xml,linenums]
 ----
@@ -141,7 +141,7 @@ In the EU, use:
   ...
 ----
 +
-*Note:* The `<id>` and `<name>` elements are arbitrary names you create to identify the repository and any other organizational identifiers. The `<id>` value must be the same in the pom.xml file as in the `~/.m2/settings.xml` file. The `<id>` connects the pom.xml file with information to log into the organization's URL.
+*Note:* The `<id>` and `<name>` elements are arbitrary names you create to identify the repository and any other organizational identifiers. The `<id>` value must be the same in the pom.xml file as in the `~/.m2/settings.xml` file. The `<id>` connects the pom.xml file with information to log in to the organization's URL.
 +
 . Update the settings.xml file in your Maven `.m2` directory.
 +
