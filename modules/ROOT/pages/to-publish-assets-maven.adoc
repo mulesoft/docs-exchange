@@ -34,6 +34,8 @@ To construct the elements of a Maven POM file, you need to determine your organi
 
 == Publish an Asset to Exchange Using Maven
 
+This repository shows examples of publishing each asset type with Maven: https://github.com/mulesoft-labs/exchange-documentation-samples
+
 Use these steps to publish Mule 3 and Mule 4 assets, including connectors.
 
 . In your project's POM file, set the groupId of the Maven project to your organization ID:
@@ -63,22 +65,33 @@ In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/BUSINESS_GROUP_ID/maven+`
 +
-. In your project's POM file, add the asset type in the properties section.
+. In your project's POM file, set the asset type.
 +
 For example:
 +
 [source,xml,linenums]
 ----
- ...
- <properties>
-  ...
-  <name>asset name</name>
-  <description>asset description</description>
-  <mule.version>3.9.0</mule.version>
-  <mule.tools.version>1.2</mule.tools.version>
-  <type>app</type>
- </properties>
- ...
+...
+<name>Hello World Application Example</name>
+<description>A mule application example uploaded using Exchange Maven Facade v3</description>
+<build>
+    <testResources>
+        <testResource>
+            <directory>src/test/munit</directory>
+            <filtering>true</filtering>
+        </testResource>
+    </testResources>
+    <plugins>
+        <plugin>
+            <groupId>org.mule.tools.maven</groupId>
+            <artifactId>mule-maven-plugin</artifactId>
+            <version>${mule.maven.plugin.version}</version>
+            <extensions>true</extensions>
+            <configuration>
+                <classifier>mule-application-example</classifier>
+            </configuration>
+        </plugin>
+...
 ----
 +
 *Notes:*
@@ -90,24 +103,6 @@ For example:
 ** Deploy Mule 3 `templates` and `examples` by using Anypoint Studio 6.3 or above.
 ** For Mule 3 or Mule 4 connectors, do not specify a `<type>` value. The Maven Facade determines the type automatically.
 ** For Mule 4 assets, do not specify the `<type>` element. In the `mule-maven-plugin` configuration, set `<classifier>` as `mule-application` (default), `mule-application-template`, `mule-application-example` or `mule-policy`.
-+
-For example:
-+
-[source,xml,linenums]
-----
-...
-<plugin>
-    <groupId>org.mule.tools.maven</groupId>
-    <artifactId>mule-maven-plugin</artifactId>
-    <version>${mule.maven.plugin.version}</version>
-    <extensions>true</extensions>
-    <configuration>
-        <classifier>mule-application-example</classifier>
-    </configuration>
-</plugin>
-...
-----
-+
 +
 . Add the Maven facade as a repository in the distribution management section of your project's POM file:
 +
@@ -174,15 +169,15 @@ mvn deploy
 . To share the location of an asset, use this URL syntax:
 +
 ----
-https://anypoint.mulesoft.com/exchange/api/v3/assets/ORGANIZATION_ID/ASSET_ID
+https://anypoint.mulesoft.com/exchange/api/v3/assets/GROUP_ID/ASSET_ID
 ----
 +
-Replace ORGANIZATION_ID with the Exchange's organization ID and replace ASSET_ID with the asset ID.
+Replace GROUP_ID with the asset's group ID and replace ASSET_ID with the asset ID. In most cases the organization ID is the same as the group ID.
 +
 In the EU, use:
 +
 ----
-https://eu1.anypoint.mulesoft.com/exchange/api/v3/assets/ORGANIZATION_ID/ASSET_ID
+https://eu1.anypoint.mulesoft.com/exchange/api/v3/assets/GROUP_ID/ASSET_ID
 ----
 
 == Publish and Consume Federated Assets
@@ -225,7 +220,7 @@ Mule 4 Extensions that declare dependencies that don't exist in Maven Central or
 
 == Document your Exchange Assets
 
-When you use Maven Facade to publish connectors, examples and templates, a documentation portal is automatically created for them in Exchange and you can xref:to-describe-an-asset.adoc[document them normally].
+When you use Maven Facade to publish connectors, policies, custom assets, examples, and templates, a documentation portal is automatically created for them in Exchange and you can xref:to-describe-an-asset.adoc[document them normally].
 
 == Consume an Exchange Asset with Maven
 
