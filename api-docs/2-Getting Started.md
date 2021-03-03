@@ -34,7 +34,7 @@ Alternatively, if you sign in with an identity provider (IdP), you can use your 
 
 In the file `settings.xml` , specify the special user `~~~Token~~~`.
 
-Replace the PASSWORD with the Core Services access token.
+Replace `ACCESS_TOKEN` with the Core Services access token.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -128,9 +128,9 @@ This example publishes a `custom` asset.
     </build>
 ```
 
-##### Requirements:
+If the build fails during the deploy stage with a status code of 412 (Precondition Failed), then the `<goal>exchange-pre-deploy</goal>` has not been executed. To fix this error, ensure that goal is set inside the executions section of the plugin.
 
-If during the deploy stage the build fails with a status code of 412 (Precondition Failed) as follows:
+The error looks similar to this:
 
 ```
 [INFO] BUILD FAILURE
@@ -140,8 +140,6 @@ If during the deploy stage the build fails with a status code of 412 (Preconditi
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy (default-deploy) on project hello-world-pom: Failed to deploy artifacts: Could not transfer artifact 1da12ec1-7614-43a3-bf24-ff754cab8ddf:hello-world-pom:pom:1.0.3 from/to repository-id ([https://maven.anypoint.mulesoft.com/api/v3/organizations/orgId/maven/](http://localhost:8088/api/v3/organizations/1da12ec1-7614-43a3-bf24-ff754cab8ddf/maven/)): Transfer failed for [https://maven.anypoint.mulesoft.com](http://localhost:8088/api/v3/organizations/1da12ec1-7614-43a3-bf24-ff754cab8ddf/maven/)[/api/v3/organizations/](http://localhost:8088/api/v3/organizations/1da12ec1-7614-43a3-bf24-ff754cab8ddf/maven/1da12ec1-7614-43a3-bf24-ff754cab8ddf/hello-world-pom/1.0.3/hello-world-pom-1.0.3.pom)[orgId](http://localhost:8088/api/v3/organizations/1da12ec1-7614-43a3-bf24-ff754cab8ddf/maven/)[/maven/groupId/assetId/version/filename](http://localhost:8088/api/v3/organizations/1da12ec1-7614-43a3-bf24-ff754cab8ddf/maven/1da12ec1-7614-43a3-bf24-ff754cab8ddf/hello-world-pom/1.0.3/hello-world-pom-1.0.3.pom) 412 -> [Help 1]
 ```
-
-That means that the `<goal>exchange-pre-deploy</goal>` has not been executed, please ensure that it's set inside the executions section of the plugin
 
 ## Consume with Maven
 
