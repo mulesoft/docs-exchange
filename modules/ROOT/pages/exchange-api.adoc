@@ -38,7 +38,7 @@ To find your organization ID:
 
 Invoking any Exchange API requires an access token.
 
-Your organization administrator sets the access token expiration time to a value from 15 to 180 minutes. If you perform an operation such as a search that requires more time, you may need a new token.
+Your organization administrator sets the access token expiration time to a value from 15 to 180 minutes. If you perform a search or other operation that requires more time, you will need a new token.
 
 . Log in to Anypoint Platform.
 . Obtain an access token with a cURL command such as the following. You can also use Postman or another application for sending HTTP commands.
