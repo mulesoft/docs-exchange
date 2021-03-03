@@ -1,0 +1,94 @@
+= Publish Assets Using the Exchange API
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+With the Exchange API, you can publish and consume assets, add documentation pages, add or edit categories, and even manage your public portals. For the full API reference, please see the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[API documentation portal].
+
+The API supports all Exchange asset types:
+
+* REST APIs
+* SOAP APIs
+* Connectors
+* Mule applications
+* Examples
+* Templates
+* Policies
+* Custom assets
+
+NOTE: New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
+
+== Prerequisites
+
+To benefit from this documentation, you must be familiar with Exchange, programming concepts, and command line
+operations on your computer or server.
+
+NOTE: You must have a unique artifact name and organization ID to publish your asset.
+
+== Find Your Organization ID
+
+To find your organization ID:
+
+. Log in to Anypoint Platform and click Access Management.
+. Click the organization name for the top level or a business group, and view your organization ID in the organization info screen.
+. Copy the organization ID and use it in the following examples.
+
+== Obtain an Access Token
+
+Invoking any Exchange API requires an access token.
+
+Your organization administrator sets the access token expiration time to a value from 15 to 180 minutes. If you perform an operation such as a search that requires more time, you may need a new token.
+
+. Log in to Anypoint Platform.
+. Obtain an access token with a cURL command such as the following. You can also use Postman or another application for sending HTTP commands.
+
+Replace `ANYPOINT_USERNAME` with your Anypoint Platform user account name and replace `ANYPOINT_PASSWORD` with your password.
+
+[source,console]
+----
+curl --location --request POST 'https://anypoint.mulesoft.com/accounts/login' \
+     --header 'Content-Type: application/json' \
+     --header 'Accept: application/json' \
+     --data-raw '{
+        "username":"ANYPOINT_USERNAME",
+        "password":"ANYPOINT_PASSWORD"
+     }' | jq -r ".access_token"
+----
+
+Use this access token in your API calls.
+
+== Publish a REST API (RAML Spec)
+
+With Exchange API version 2 you can publish assets to Exchange either by submitting multipart form data or by passing a .pom file that contains the data.
+
+The API can also upload assets to Exchange either synchronously or asynchronously.
+
+The API can upload all supported asset types, including REST and SOAP APIs, connectors, Mule applications, examples, templates, policies, and custom assets.
+
+=== Asset Properties
+
+=== Asynchronous Publication
+
+== Describe Your Assets
+
+=== Add Tags
+
+=== Add Categories
+
+=== Add Custom Fields
+
+== Add and Update Documentation Pages
+
+=== Add a New Page
+
+=== Add Content to the Page
+
+=== Publish the Draft Page
+
+== Add Runtime Information to Your Asset
+
+== See Also
+
+* https://eu1.anypoint.mulesoft.com/exchange/[EU Exchange]
+* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange API]
