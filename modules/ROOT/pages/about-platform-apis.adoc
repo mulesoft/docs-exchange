@@ -5,8 +5,9 @@ endif::[]
 :imagesdir: ../assets/images/
 
 Anypoint Exchange provides API features for publishing
-and consuming assets using the Exchange API or the Exchange Maven Facade and searching
-for assets using the Graph API.
+and consuming assets by using the Exchange API, publishing
+and consuming assets by using the Exchange Maven Facade API, and searching
+for assets by using the Exchange Graph API.
 
 The Maven facade also lets you publish federated assets.
 
