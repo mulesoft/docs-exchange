@@ -64,7 +64,7 @@ The plugin performs these actions:
 
 These examples show how to configure your POM file.
 
-For complete examples, see the section [Examples](../Examples)).
+For complete examples, see the section [Examples](../Examples).
 
 ### Use mule-maven-plugin to publish Mule 4 assets
 
