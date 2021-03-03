@@ -68,15 +68,117 @@ The API can upload all supported asset types, including REST and SOAP APIs, conn
 
 === Asset Properties
 
-=== Asynchronous Publication
+Each API call to create an asset specifies multipart properties.
+
+[cols="1,4,2",options=header,width="100%"]
+|===
+|Property |Description |Required or Optional
+|name |The asset name that is visible on the Exchange portal page. |Required
+|description |The description of the asset. |Optional
+|type |The type of the asset to be created. |Required if the type cannot be inferred from the file extension
+|dependencies |A string of comma-separated dependencies, defined as: `dependencies=GROUP_ID:ASSET_ID:VERSION,GROUP_ID:ASSET_ID:VERSION` |Optional
+|keywords |A string of comma-separated values to be saved as an asset's attributes. Search queries can find assets by keyword. Example: `keywords=api,raml,auth,jwt,token` |Optional
+|properties |Some asset types require additional properties specified with the properties prefix, such as `apiVersion`, `mainFile`, or `assetLink`. Example: `properties.apiVersion = v1` |
+|===
+
+This example uses multipart form data to upload a RAML API spec to Exchange.
+
+Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with your local file path.
+
+[source,console]
+----
+curl -v \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -H 'x-sync-publication: true' \
+  -F 'name=RAML asset name' \
+  -F 'description=Description of the asset' \
+  -F 'keywords=this, is, the, best, raml' \
+  -F 'properties.mainFile=american-flights-api.raml' \
+  -F 'properties.apiVersion=v1' \
+  -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \  
+https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
+----
+
+=== Synchronous and Asynchronous Publication
+
+To use the synchronous method, add the header `x-sync-publication:true`.
+
+To use the asynchronous method, add the header `x-sync-publication:false` or send a request with no `x-sync-publication` header.
+
+If the asset is published asynchronously, then a response like this is returned:
+
+[source,console]
+----
+{
+"publicationStatusLink":"https://anypoint.mulesoft.com/exchange/api/v2/organizations/67ac7cde-c02c-457f-b826-da2474e63d5a/assets/67ac7cde-c02c-457f-b826-da2474e63d5a/wsdl-asset/1.0.0/publication/status/d47a22a5-90f6-49eb-bfd0-d9fff575e022"
+}
+----
+
+The endpoint `publicationStatusLink` provides the asset publication status.
 
 == Describe Your Assets
 
+After publishing your assets, enrich their metadata and make them easier to discover by adding optional xref:to-describe-an-asset.adoc#add-asset-tags[tags], xref:to-manage-categories.adoc[categories], and xref:to-manage-custom-fields.adoc[custom fields].
+
 === Add Tags
+
+This example shows how to insert or replace tags on an asset.
+
+Each asset is uniquely identified by the combination of its organization, group ID, asset ID, and version.
+
+To specify the asset, replace the identifiers `:organizationId`, `:groupId`, `:assetId`, and `:version`.
+
+NOTE: This command replaces any existing tags on the asset.
+
+[source,console]
+----
+curl 'https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags' \
+  -X 'PUT' \
+  -H 'accept: application/json' \
+  -H 'authorization: bearer ANYPOINT_TOKEN' \
+  -H 'content-type: application/json' \
+  -d '[{"value":"rest-api"}, {"value":"documentation"}]'
+----
 
 === Add Categories
 
+Categories are managed fields that the organization administrator adds and maintains.
+
+This example uses a previously created category with the name `apiType` and sets that category value to "System API" on the asset.
+
+Each asset is uniquely identified by the combination of its organization, group ID, asset ID, and version.
+
+To specify the asset, replace the identifiers `:organizationId`, `:groupId`, `:assetId`, and `:version`.
+
+[source,console]
+----
+curl -X PUT \ 
+https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/managed/apiType \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "tagValue": ["System API"]
+  }'
+----
+
 === Add Custom Fields
+
+This example uses a previously created custom field with name `subType` and sets that category value to "OAS" on the asset.
+
+Each asset is uniquely identified by the combination of its organization, group ID, asset ID, and version.
+
+To specify the asset, replace the identifiers `:organizationId`, `:groupId`, `:assetId`, and `:version`.
+
+[source,console]
+----
+curl -X PUT \ 
+https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/subType \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "tagValue": ["OAS"]
+  }'
+----
 
 == Add and Update Documentation Pages
 
