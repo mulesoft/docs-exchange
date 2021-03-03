@@ -1,8 +1,8 @@
 ## Publish Custom Assets
 
-It is now possible to publish custom assets through the Maven Facade API version 3 by using `exchange-mule-maven-plugin`. Custom assets can package any Maven reusable component, such as a Java library.
+Publish custom assets through the Maven Facade API version 3 by using `exchange-mule-maven-plugin`. Custom assets can package any Maven reusable component, such as a Java library.
 
-You can see examples of use in the Custom asset section [here](../Examples)
+For examples, see the custom asset section of the page [Examples](../Examples).
 
 ## Publication feedback
 
