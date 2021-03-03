@@ -28,7 +28,7 @@ The `<id>` value is arbitrary, but must have the same value in your pom.xml and 
 
 Exchange Maven Facade supports using a Core Services access token instead of a username and password.
 
-Obtain a token with this [request](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/#7573/)
+Obtain a token with this [request](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/#7573/).
 
 Alternatively, if you sign in with an identity provider (IdP), you can use your IdP token.
 
