@@ -128,6 +128,8 @@ This example publishes a `custom` asset.
     </build>
 ```
 
+#### Troubleshooting
+
 If the build fails during the deploy stage with a status code of 412 (Precondition Failed), then the `<goal>exchange-pre-deploy</goal>` has not been executed. To fix this error, ensure that goal is set inside the executions section of the plugin.
 
 The error looks similar to this:
