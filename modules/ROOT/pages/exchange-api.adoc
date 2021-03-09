@@ -30,7 +30,7 @@ NOTE: You must have a unique artifact ID and organization ID to publish your ass
 
 == Overview
 
-To publish assets to Exchange, this file covers these steps:
+This topic describes the steps needed to publish an asset to Exchange and add metadata using Exchange APIs:
 
 . <<find-your-organization-id>>
 . <<obtain-an-access-token>>
