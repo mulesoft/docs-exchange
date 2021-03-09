@@ -28,6 +28,26 @@ operations on your computer or server.
 
 NOTE: You must have a unique artifact ID and organization ID to publish your asset. The artifact ID consists of the group ID, asset ID, and version.
 
+== Overview
+
+To publish assets to Exchange, this file covers these steps:
+
+. <<find-your-organization-id>>
+. <<obtain-an-access-token>>
+. <<publish-an-asset>>
+.. <<set-asset-properties>>
+.. <<sync-and-async-publication>>
+. <<describe-your-assets>>
+.. <<add-tags>>
+.. <<add-categories>>
+.. <<add-custom-fields>>
+. <<add-update-doc-pages>>
+.. <<add-new-page-draft>>
+.. <<add-content-to-page>>
+.. <<publish-draft>>
+. <<add-runtime-info>>
+
+[[find-your-organization-id]]
 == Find Your Organization ID
 
 To find your organization ID:
@@ -36,6 +56,7 @@ To find your organization ID:
 . Click the organization name for the top level or a business group, and view your organization ID in the organization info screen.
 . Copy the organization ID and use it in the following examples.
 
+[[obtain-an-access-token]]
 == Obtain an Access Token
 
 Invoking any Exchange API requires an access token.
@@ -60,6 +81,7 @@ curl --location --request POST 'https://anypoint.mulesoft.com/accounts/login' \
 
 Use this access token in your API calls.
 
+[[publish-an-asset]]
 == Publish an Asset
 
 With Exchange API version 2 you can publish assets to Exchange either by submitting multipart form data or by passing a .pom file that contains the data.
@@ -70,7 +92,8 @@ The API can upload all supported asset types, including REST APIs, SOAP APIs, HT
 
 This example shows how to publish a REST API (RAML specification).
 
-=== Asset Properties
+[[set-asset-properties]]
+=== Set Asset Properties
 
 Each API call to create an asset specifies multipart properties.
 
@@ -105,7 +128,8 @@ curl -v \
 https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
 ----
 
-=== Synchronous and Asynchronous Publication
+[[sync-and-async-publication]]
+=== Specify Synchronous or Asynchronous Publication
 
 To use the synchronous method, add the header `x-sync-publication:true`.
 
@@ -122,10 +146,12 @@ If the asset is published asynchronously, then a response like this is returned:
 
 The endpoint `publicationStatusLink` provides the asset publication status.
 
+[[describe-your-assets]]
 == Describe Your Assets
 
 After publishing your assets, enrich their metadata and make them easier to discover by adding optional xref:to-describe-an-asset.adoc#add-asset-tags[tags], xref:to-manage-categories.adoc[categories], and xref:to-manage-custom-fields.adoc[custom fields].
 
+[[add-tags]]
 === Add Tags
 
 This example shows how to insert or replace tags on an asset.
@@ -146,6 +172,7 @@ curl 'https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ve
   -d '[{"value":"rest-api"}, {"value":"documentation"}]'
 ----
 
+[[add-categories]]
 === Add Categories
 
 Categories are managed fields that the organization administrator adds and maintains.
@@ -167,6 +194,7 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
   }'
 ----
 
+[[add-custom-fields]]
 === Add Custom Fields
 
 This example uses a previously created custom field with name `subType` and sets that category value to "OAS" on the asset.
@@ -186,6 +214,7 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
   }'
 ----
 
+[[add-update-doc-pages]]
 == Add and Update Documentation Pages
 
 Each Exchange asset has associated documentation to provide an overview and other information about the asset. These APIs require the Exchange administrator or Exchange contributor permissions.
@@ -196,6 +225,7 @@ To add or update documentation using the Exchange API:
 . Add content to the page.
 . Publish the draft.
 
+[[add-new-page-draft]]
 === Add a New Page in Draft Mode
 
 To add a new documentation page, use this command and replace `:groupId`, `:assetId`, and `:version` with the values for your asset.
@@ -213,6 +243,7 @@ When the command succeeds it returns the `pageId` of the newly created page.
 
 Exchange shows the new draft page on the asset's Exchange portal page under the default Home page. To edit this page and publish the draft, use either the portal user interface or the API steps below.
 
+[[add-content-to-page]]
 === Add Content to the Page
 
 Documentation pages are written in GitHub Markdown, described in detail in the xref:to-describe-an-asset#markdown-notes[Markdown Notes].
@@ -228,6 +259,7 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ver
   -d 'markdown *content* for this page'
 ----
 
+[[publish-draft]]
 === Publish the Draft
 
 When the content is ready, change the page's draft status to published by using this command. Publishing the draft publishes all the pages and content associated with the asset and currently in draft status.
@@ -239,6 +271,7 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ver
   -H 'Authorization: bearer ANYPOINT_TOKEN'
 ----
 
+[[add-runtime-info]]
 == Add Runtime Information to Your Asset
 
 After the API asset includes all the information necessary for consumers to discover, learn, and understand your API, add the server or instance information so consumers can invoke the API. Replace `:groupId`, `:assetId`, and `:versionGroup` with the group ID, asset ID, and version ID of the API asset.
