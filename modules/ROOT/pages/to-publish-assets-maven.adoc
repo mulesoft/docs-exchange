@@ -182,7 +182,7 @@ This example shows the `build` section of `pom.xml`.
         <plugin>
             <groupId>org.mule.tools.maven</groupId>
             <artifactId>exchange-mule-maven-plugin</artifactId>
-            <version>0.0.9</version>
+            <version>0.0.13</version>
             <executions>
                 <execution>
                     <id>validate</id>
