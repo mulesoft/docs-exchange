@@ -87,6 +87,8 @@ Each API call to create an asset specifies multipart properties.
 
 This example uses multipart form data to upload a RAML API spec to Exchange.
 
+Download the file used in this example from the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/minor/2.0/pages/Asset%20Creation/[asset creation] page on the Exchange API developer portal.
+
 Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with your local file path.
 
 [source,console]
