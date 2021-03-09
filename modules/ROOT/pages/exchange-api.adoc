@@ -10,6 +10,8 @@ The API supports all Exchange asset types:
 
 * REST APIs
 * SOAP APIs
+* HTTP APIs
+* API fragments
 * Connectors
 * Mule applications
 * Examples
@@ -24,7 +26,7 @@ NOTE: New assets count toward your organization's xref:to-create-an-asset.adoc#a
 To benefit from this documentation, you must be familiar with Exchange, programming concepts, and command line
 operations on your computer or server.
 
-NOTE: You must have a unique artifact name and organization ID to publish your asset.
+NOTE: You must have a unique artifact ID and organization ID to publish your asset. The artifact ID consists of the group ID, asset ID, and version.
 
 == Find Your Organization ID
 
@@ -58,13 +60,15 @@ curl --location --request POST 'https://anypoint.mulesoft.com/accounts/login' \
 
 Use this access token in your API calls.
 
-== Publish a REST API (RAML Spec)
+== Publish an Asset
 
 With Exchange API version 2 you can publish assets to Exchange either by submitting multipart form data or by passing a .pom file that contains the data.
 
 The API can also upload assets to Exchange either synchronously or asynchronously.
 
-The API can upload all supported asset types, including REST and SOAP APIs, connectors, Mule applications, examples, templates, policies, and custom assets.
+The API can upload all supported asset types, including REST APIs, SOAP APIs, HTTP APIs, API fragments, connectors, Mule applications, examples, templates, policies, and custom assets.
+
+This example shows how to publish a REST API (RAML specification).
 
 === Asset Properties
 
@@ -78,7 +82,7 @@ Each API call to create an asset specifies multipart properties.
 |type |The type of the asset to be created. |Required if the type cannot be inferred from the file extension
 |dependencies |A string of comma-separated dependencies, defined as: `dependencies=GROUP_ID:ASSET_ID:VERSION,GROUP_ID:ASSET_ID:VERSION` |Optional
 |keywords |A string of comma-separated values to be saved as an asset's attributes. Search queries can find assets by keyword. Example: `keywords=api,raml,auth,jwt,token` |Optional
-|properties |Some asset types require additional properties specified with the properties prefix, such as `apiVersion`, `mainFile`, or `assetLink`. Example: `properties.apiVersion = v1` |
+|properties |Some asset types require additional properties specified with the properties prefix, such as `apiVersion`, `mainFile`, or `assetLink`. Example: `properties.apiVersion = v1` |May be required for some properties and some asset types
 |===
 
 This example uses multipart form data to upload a RAML API spec to Exchange.
@@ -124,9 +128,9 @@ After publishing your assets, enrich their metadata and make them easier to disc
 
 This example shows how to insert or replace tags on an asset.
 
-Each asset is uniquely identified by the combination of its organization, group ID, asset ID, and version.
+Each asset is uniquely identified by the combination of its group ID, asset ID, and version.
 
-To specify the asset, replace the identifiers `:organizationId`, `:groupId`, `:assetId`, and `:version`.
+To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`.
 
 NOTE: This command replaces any existing tags on the asset.
 
@@ -146,9 +150,9 @@ Categories are managed fields that the organization administrator adds and maint
 
 This example uses a previously created category with the name `apiType` and sets that category value to "System API" on the asset.
 
-Each asset is uniquely identified by the combination of its organization, group ID, asset ID, and version.
+Each asset is uniquely identified by the combination of its group ID, asset ID, and version.
 
-To specify the asset, replace the identifiers `:organizationId`, `:groupId`, `:assetId`, and `:version`.
+To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`.
 
 [source,console]
 ----
@@ -165,9 +169,9 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
 
 This example uses a previously created custom field with name `subType` and sets that category value to "OAS" on the asset.
 
-Each asset is uniquely identified by the combination of its organization, group ID, asset ID, and version.
+Each asset is uniquely identified by the combination of its group ID, asset ID, and version.
 
-To specify the asset, replace the identifiers `:organizationId`, `:groupId`, `:assetId`, and `:version`.
+To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`.
 
 [source,console]
 ----
