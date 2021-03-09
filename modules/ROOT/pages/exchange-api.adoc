@@ -241,12 +241,12 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ver
 
 == Add Runtime Information to Your Asset
 
-After the API asset includes all the information necessary for consumers to discover, learn, and understand your API, add the server or instance information so consumers can invoke the API. Replace `:groupId`, `:assetId`, and `:versionGroup` with the group, asset ID, and version ID of the API asset.
+After the API asset includes all the information necessary for consumers to discover, learn, and understand your API, add the server or instance information so consumers can invoke the API. Replace `:groupId`, `:assetId`, and `:versionGroup` with the group ID, asset ID, and version ID of the API asset.
 
 [source,console]
 ----
 curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/versionGroups/:versionGroup/instances/external \
-  -X PATCH \
+  -X POST \
   -H 'Authorization: bearer ANYPOINT_TOKEN' \
   -d '{
     "name": "Production - US",
