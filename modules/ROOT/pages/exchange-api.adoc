@@ -182,13 +182,72 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
 
 == Add and Update Documentation Pages
 
-=== Add a New Page
+Each Exchange asset has associated documentation to provide an overview and other information about the asset. These APIs require the Exchange administrator or Exchange contributor permissions.
+
+To add or update documentation using the Exchange API:
+
+. Add a new page in draft mode.
+. Add content to the page.
+. Publish the draft.
+
+=== Add a New Page in Draft Mode
+
+To add a new documentation page, use this command and replace `:groupId`, `:assetId`, and `:version` with the values for your asset.
+
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/pages \
+  -X POST \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{ "pagePath": "Security" }'
+----
+
+When the command succeeds it returns the `pageId` of the newly created page.
+
+Exchange shows the new draft page on the asset's Exchange portal page under the default Home page. To edit this page and publish the draft, use either the portal user interface or the API steps below.
 
 === Add Content to the Page
 
-=== Publish the Draft Page
+Documentation pages are written in GitHub Markdown, described in detail in the xref:to-describe-an-asset#markdown-notes[Markdown Notes].
+
+To add your Markdown content, use this command and replace `:pageId` with the pageId returned by the previous command.
+
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal/draft/pages/:pageId \
+  -X PUT \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -H 'Content-Type: text/markdown' \
+  -d 'markdown *content* for this page'
+----
+
+=== Publish the Draft
+
+When the content is ready, change the page's draft status to published by using this command. Publishing the draft publishes all the pages and content associated with the asset and currently in draft status.
+
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/portal \
+  -X PATCH  \
+  -H 'Authorization: bearer ANYPOINT_TOKEN'
+----
 
 == Add Runtime Information to Your Asset
+
+After the API asset includes all the information necessary for consumers to discover, learn, and understand your API, add the server or instance information so consumers can invoke the API. Replace `:groupId`, `:assetId`, and `:versionGroup` with the group, asset ID, and version ID of the API asset.
+
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/versionGroups/:versionGroup/instances/external \
+  -X PATCH \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -d '{
+    "name": "Production - US",
+    "endpointUri": "http://dog.domain.tld.com/much/doge",
+    "isPublic": false
+  }'
+----
 
 == See Also
 
