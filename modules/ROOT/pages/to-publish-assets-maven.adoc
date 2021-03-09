@@ -22,6 +22,8 @@ operations on your computer or server.
 
 Include the required plugin `org.mule.tools.maven.mule-maven-plugin` in your POM file. Do not include the plugin `org.apache.maven.plugins.maven-deploy-plugin` in your POM file or settings file, because it is not compatible with the required plugin.
 
+Using Anypoint Exchange's Maven Facade API version 3 to publish assets to Exchange requires the Mule Maven plugin version 3.5.0 or later.
+
 Note: You must have a unique artifact name and organization ID to publish your asset.
 
 == View Your Organization ID
