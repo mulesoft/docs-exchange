@@ -35,7 +35,7 @@ To publish assets to Exchange, this file covers these steps:
 . <<find-your-organization-id>>
 . <<obtain-an-access-token>>
 . <<publish-an-asset>>
-.. <<set-asset-properties>>
+.. <<specify-asset-properties>>
 .. <<sync-and-async-publication>>
 . <<describe-your-assets>>
 .. <<add-tags>>
@@ -92,8 +92,8 @@ The API can upload all supported asset types, including REST APIs, SOAP APIs, HT
 
 This example shows how to publish a REST API (RAML specification).
 
-[[set-asset-properties]]
-=== Set Asset Properties
+[[specify-asset-properties]]
+=== Specify Asset Properties
 
 Each API call to create an asset specifies multipart properties.
 
