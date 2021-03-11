@@ -6,9 +6,9 @@ endif::[]
 
 This document contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain.
 
-== Whitelist Your Domain
+== Register Your Domain
 
-Your domain needs to be whitelisted in Exchange for your public portal to work properly. To do so:
+Your domain needs to be registered in Exchange for your public portal to work properly. To do so:
 
 . Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
 +
@@ -17,7 +17,7 @@ Your domain needs to be whitelisted in Exchange for your public portal to work p
 ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
 ----
 +
-. Use the access token to whitelist your custom domain:
+. Use the access token to register your custom domain:
 +
 [source,console]
 ----
@@ -118,6 +118,29 @@ ${ORGANIZATION_DOMAIN}: robo-cop
 NOTE: Your server must run using `https`.
 
 If set up correctly, you can access and navigate to `+https://developers.robocop.com/path/of/justice/+` exactly as if you were at `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`.
+
+== Set up a cookie consent management for your domain
+
+The General Data Protection Regulation (GDPR) stipulates that the owner of a web page must obtain and store the consents to the use of cookies from your visitors with a cookie management. We as information processors must offer a way for you to do the same in your vanity domain.
+
+In order to correctly activate the cookie management feature in your vanity domain, you must contact your customer support and provide them the following information:
+
+* Organization domain (e.g. `robo-cop`)
+* Your registed domain (e.g. `developers.robocop.com`)
+
+This data will be used by the customer support to create a `COOKIE_CONSENT_ID` for the recently registered vanity domain. The value of this variable will be provided by the customer support and cannot be transferred to other vanity domains.
+
+=== Register Your Cookie Consent Id
+
+Obtaining an access token as it was done in a previous step, now we must to register your `COOKIE_CONSENT_ID`:
+
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/cookieConsentId -XPUT -d COOKIE_CONSENT_ID -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
+----
+If the request is resolved successfully, you should already have `Cookie Preferences` button visible in navbar page the next time you enter your vanity domain.
+
+NOTE: The `COOKIE_CONSENT_ID` will be linked to your registered domain, so changing the domain will imply that you must repeat the process again.
 
 == See Also
 
