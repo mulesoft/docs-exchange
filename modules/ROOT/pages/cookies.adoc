@@ -1,0 +1,17 @@
+= Configure Cookies
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Exchange uses cookies to save user settings, enhance user experience, and improve performance.
+
+Exchange requires some cookies to work correctly. These include cookies for session details and authentication information.
+
+Other functional cookies are not required, although certain functionality does not work without them. These include cookies for site analytics.
+
+When a user visits an Exchange public portal for the first time, Exchange notifies the user about the cookies stored in the browser, and the user accepts the default settings or opens the cookie consent manager to configure their cookie settings.
+
+To open the cookie consent manager and review or modify their settings at any time, the user clicks the cookie preferences button.
+
+The cookie consent manager shows settings for required cookies, functional cookies, and advertising cookies, and general information about cookies.
