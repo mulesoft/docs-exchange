@@ -8,7 +8,7 @@ This document contains instructions and the necessary NGINX configuration for se
 
 == Register Your Domain
 
-Your domain needs to be registered in Exchange for your public portal to work properly. To do so:
+Public portal domains must be registered in Exchange. To register your public portal's domain:
 
 . Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
 +
@@ -119,31 +119,29 @@ NOTE: Your server must run using `https`.
 
 If set up correctly, you can access and navigate to `+https://developers.robocop.com/path/of/justice/+` exactly as if you were at `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`.
 
-== Set up Cookie Consent Management for your domain
+== Configure Cookie Consent Management for Your Domain
 
-A cookie consent managment solution is provided out of the box for Exchange public portals that don't use vanity domains.
+Exchange public portals that do not use vanity domains can use the xref:cookies.adoc[cookie consent manager] provided.
 
-In order to correctly activate the cookie consent management feature in your portal with a vanity domain, you must contact your customer support and provide them the following information:
+To activate cookie consent management for an Exchange public portal that uses a vanity domain, contact customer support with this information:
 
-* Organization domain (e.g. `robo-cop`)
-* Your registered domain (e.g. `developers.robocop.com`)
+* Your organization domain (Example: `robo-cop`)
+* Your registered domain (Example: `developers.robocop.com`)
 
-This data will be used by the customer support to create a `COOKIE_CONSENT_ID` for the recently registered vanity domain. The `COOKIE_CONSENT_ID` value will be provided by the customer support and cannot be transferred to other vanity domains.
+Customer support provides you a `COOKIE_CONSENT_ID` for the recently registered vanity domain. This `COOKIE_CONSENT_ID` cannot be transferred to other vanity domains.
 
-=== Register Your Cookie Consent Id
+=== Register Your Cookie Consent ID
 
-You must register your `COOKIE_CONSENT_ID`:
+You must register your `COOKIE_CONSENT_ID`. Use the same token you obtained when you registered your domain.
 
 [source,console]
 ----
 curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/cookieConsentId -XPUT -d COOKIE_CONSENT_ID -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
 ----
 
-NOTE: You must use the same token obtained in step 1 of *Register your domian*.
+After registering your `COOKIE_CONSENT_ID`, enter your portal using your vanity domain. The navigation bar displays the Cookie Preferences button.
 
-You should have the `Cookie Preferences` button visible in the navbar the next time you enter your portal using your vanity domain.
-
-NOTE: The `COOKIE_CONSENT_ID` will be linked to your registered domain, so changing the domain will imply that you must repeat the *Cookie Consent Setup* process again.
+The `COOKIE_CONSENT_ID` is linked to your registered domain. If you change the domain, repeat these steps to configure cookie consent management for your new domain.
 
 == See Also
 
