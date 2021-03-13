@@ -10,20 +10,20 @@ Exchange requires some cookies to work correctly. These include cookies for sess
 
 Other functional cookies are not required, although certain functionality does not work without them. These include cookies for site analytics and advertising.
 
-Exchange provides public portal website visitors with cookie consent management, in compliance with marketing and and privacy regulations throughout the world.
+Exchange provides public portal website visitors with cookie consent management, in compliance with marketing and privacy regulations throughout the world.
 
-Exchange public developer portals do not use any non-essential cookie until after the website visitor has granted explicit consent.
+Some countries require websites not to use any non-essential cookie until after the website visitor has granted explicit consent.
 
-When a user visits an Exchange public portal for the first time, Exchange notifies the user about the cookies stored in the browser, and the user accepts the default settings or opens the cookie consent manager to configure their cookie settings.
+When a user in a country with this requirement visits an Exchange public portal for the first time, Exchange notifies the user about the cookies stored in the browser, and the user accepts the default settings or opens the cookie consent manager to configure their cookie settings. Exchange finds the user's country by IP address.
 
-To open the cookie consent manager and review or modify their settings at any time, the user clicks the cookie preferences button.
+The Exchange cookie preferences button enables users in all countries to open the cookie consent manager and review or modify their settings at any time.
 
 The cookie consent manager shows settings for required cookies, functional cookies, and advertising cookies, and general information about cookies.
 
-Administrators use the cookie consent manager to provide full documentation of all first-party cookies to their users.
+Administrators use the cookie consent manager to provide full documentation of all cookies to their users.
 
 Website visitors use the cookie consent manager to view the cookies the site uses, view descriptions of all individual cookies and understand what these cookies are doing, and enable or disable functional and advertising cookies.
 
-If you enable a vanity domain for your Exchange public portal, enable cookie consent management with the xref:portal-vanity-domain.adoc[public portal vanity domain instructions].
+If a video embedded in an Exchange portal is hosted on a third-party site such as YouTube that uses advertising cookies, then the video is not visible to a website visitor who disables advertising cookies, and the visitor sees a message explaining this.
 
-If a video embedded in an Exchange portal is hosted on a third-party site that uses advertising cookies, then the video is not visible to a website visitor who disables advertising cookies.
+If you enable a vanity domain for your Exchange public portal, enable cookie consent management with the xref:portal-vanity-domain.adoc[public portal vanity domain instructions].
