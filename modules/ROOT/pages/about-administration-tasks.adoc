@@ -20,9 +20,9 @@ Remove access to a version of an asset but keep other versions of the asset avai
 * xref:to-set-permissions.adoc[Set Exchange role permissions]
 +
 Grant Exchange administrator, contributor, or viewer permissions to members of your organization, and optionally provide role access for individual assets.
-* xref:cookies.adoc[Configure cookies]
+* xref:cookies.adoc[About Exchange cookies]
 +
-Enable cookie configuration for website visitors, and if you use a vanity domain, enable cookie configuration for the vanity domain.
+Find information about Exchange cookies, cookie configuration, and cookies for vanity domains.
 * xref:migrate.adoc[Migrate Exchange 1 assets to Exchange 2]
 +
 Move assets from Exchange 1.
