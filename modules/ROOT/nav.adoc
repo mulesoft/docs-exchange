@@ -39,5 +39,5 @@
  ** xref:to-enable-the-request-access-button.adoc[Enable the Request Access Button to Display]
  ** xref:to-deprecate-asset.adoc[Deprecate an Asset]
  ** xref:to-set-permissions.adoc[Set User Access Permissions]
- ** xref:cookies.adoc[Configure Cookies]
+ ** xref:cookies.adoc[About Exchange Cookies]
  ** xref:migrate.adoc[Migrate Assets from Exchange 1]
