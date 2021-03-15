@@ -73,7 +73,7 @@ If you enable a vanity domain for your Exchange public portal, enable cookie con
 |ajs%3Atest
 |365 days
 |Functional
-|This performance cookie counts visits and tracks other website traffic-related metrics.
+|Counts visits and tracks other website traffic-related metrics for performance analytics.
 
 |ajs_anonymous_id
 |365 days
