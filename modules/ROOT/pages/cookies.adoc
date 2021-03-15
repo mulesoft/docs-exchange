@@ -40,7 +40,7 @@ If you enable a vanity domain for your Exchange public portal, enable cookie con
 |Required
 |Helps Cloudflare detect malicious visitors to our customers' websites and minimizes blocking legitimate users.
 
-|__tld__
+|\__tld__
 |Session
 |Functional
 |
