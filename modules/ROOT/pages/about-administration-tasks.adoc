@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Exchange administrators have premissions to perform these tasks:
+Exchange administrators have permissions to perform these tasks:
 
 * xref:to-share-an-asset.adoc[Share an asset]
 +
