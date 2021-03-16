@@ -27,8 +27,6 @@ Maven Facade API must be used through Maven plugins, and not as a REST API.
 
 - Custom assets
 
-_Note: The publication of connectors and extensions will be supported with a similar plugin in an upcoming release._
-
 ## API Prerequisites and Dependencies
 
 - This API requires an Anypoint Platform account.
