@@ -122,6 +122,7 @@ curl -v \
   -F 'name=RAML asset name' \
   -F 'description=Description of the asset' \
   -F 'keywords=this, is, the, best, raml' \
+  -F 'dependencies=68ef9520-24e9-4cf2-b2f5-620025690913:training-american-flight-data-type:1.0.1,68ef9520-24e9-4cf2-b2f5-620025690913:training-american-flights-example:1.0.1' \
   -F 'properties.mainFile=american-flights-api.raml' \
   -F 'properties.apiVersion=v1' \
   -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \  
