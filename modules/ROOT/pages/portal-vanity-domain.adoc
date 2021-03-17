@@ -136,7 +136,7 @@ You must register your `COOKIE_CONSENT_ID`. Use the same token you obtained when
 
 [source,console]
 ----
-curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/cookieConsentId -XPUT -d COOKIE_CONSENT_ID -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
+curl https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/cookieConsentId -XPUT -d COOKIE_CONSENT_ID -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
 ----
 
 After registering your `COOKIE_CONSENT_ID`, enter your portal using your vanity domain. The navigation bar displays the Cookie Preferences button.
