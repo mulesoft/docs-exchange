@@ -15,7 +15,7 @@ Anypoint Exchange search looks for terms in:
 
 In an asset portal, click a tag or category element to create a filtered search showing similar assets.
 
-The original Exchange search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. The new Exchange search experience is available in the US cloud and the EU cloud. The new search includes more options for search ranking, and more options and a better inferface for searching by tags, categories, and organizations.
+The original Exchange search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. The new Exchange search experience is available in the US cloud and the EU cloud. The new search includes more options for search ranking, and more options and a better interface for searching by tags, categories, and organizations.
 
 New Exchange search experience:
 
