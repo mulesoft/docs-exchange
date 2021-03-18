@@ -30,7 +30,7 @@ You must have a unique artifact ID and organization ID to publish your asset. Th
 
 == Tasks Required to Publish an Asset to Exchange
 
-Use these steps to publish an asset to Exchange and add metadata using Exchange APIs:
+Perform these tasks to publish an asset to Exchange and add metadata using Exchange APIs:
 
 . <<find-your-organization-id>>
 . <<obtain-an-access-token>>
