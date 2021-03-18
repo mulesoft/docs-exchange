@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-With Anypoint Exchange's https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Maven Facade], Maven clients can publish and consume Exchange assets, including these asset types:
+With the Anypoint Exchange https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Maven Facade API], Maven clients can publish and consume Exchange assets, including these asset types:
 
 * Connectors
 * Mule applications
@@ -13,7 +13,7 @@ With Anypoint Exchange's https://anypoint.mulesoft.com/exchange/portals/anypoint
 * Policies
 * Custom assets
 
-NOTE: New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
+New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
 
 == Prerequisites
 
@@ -22,27 +22,29 @@ operations on your computer or server.
 
 Include the required plugin `org.mule.tools.maven.mule-maven-plugin` in your POM file. Do not include the plugin `org.apache.maven.plugins.maven-deploy-plugin` in your POM file or settings file, because it is not compatible with the required plugin.
 
-Using Anypoint Exchange's Maven Facade API version 3 to publish assets to Exchange requires the Mule Maven plugin version 3.5.0 or later.
+If you use the Anypoint Exchange Maven Facade API version 3 to publish assets to Exchange, you must have the Mule Maven plugin version 3.5.0 or later.
 
-Note: You must have a unique artifact name and organization ID to publish your asset.
+You must have a unique artifact name and organization ID to publish your asset.
+
+The US cloud and EU cloud use slightly different URLs, as shown in the examples.
 
 == View Your Organization ID
 
 To construct the elements of a Maven POM file, you need to determine your organization ID:
 
-. Log in to Anypoint Platform and click Access Management.
-. Click the organization name for the top level or a business group, and view your organization ID in the organization info screen.
-. Copy the organization ID so you can add it to your project's POM file when you follow the examples.
+. Log in to Anypoint Platform and click *Access Management*.
+. Click the name of the top-level organization or a business group, and view your organization ID in the organization information screen.
+. Copy the organization ID so you can add it to your project's POM file for the following examples.
 
 == Publish an Asset to Exchange Using Maven
 
-This repository shows examples of publishing each asset type with Maven: https://github.com/mulesoft-labs/exchange-documentation-samples
+Refer to examples of publishing each asset type with Maven in the repository located at `https://github.com/mulesoft-labs/exchange-documentation-samples`.
 
 The steps to publish an asset with Maven are slightly different for each asset type, and different assets use different Maven plugins, so check the examples in the repository for an example that matches your asset type. For example, use `exchange-mule-maven-plugin` to publish a custom asset, and use `mule-maven-plugin` to publish an extension.
 
 The following example shows how to publish a Mule 4 asset such as an application, example, or template.
 
-. In your project's POM file, set the groupId of the Maven project to your organization ID:
+. In your project's POM file, set `groupId` to your organization ID:
 +
 [source,xml,linenums]
 ----
@@ -69,11 +71,9 @@ In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/BUSINESS_GROUP_ID/maven+`
 +
-. In your project's POM file, include the `mule-maven-plugin` and set the correct classifier (in this example `mule-application-example`).
+. In your project's POM file, include `mule-maven-plugin` and set the correct classifier (in this example `mule-application-example`).
 +
-In this example, it is not necessary to set the asset type because it is inferred from the classifier.
-+
-For example:
+In this example, it is not necessary to set the asset type because it is inferred from the classifier:
 +
 [source,xml,linenums]
 ----
@@ -96,14 +96,17 @@ For example:
 ...
 ----
 +
-*Notes:*
+You must set the `<classifier>` element to make the asset visible in Exchange.
 +
-** *Important:* The `<classifier>` element must be set to make the asset visible in Exchange.
-** The `name` property is required and represents the visible name of the asset. If you are publishing the first version of a GA (GroupId and AssetId combination), the asset name is taken from the POM file. If there is already at least one version of the GA, the `name` property is ignored. You can change the name in the asset portal as described in xref:to-describe-an-asset.adoc[Describe an Asset].
-** The `description` property is optional and represents the description of the asset. If you are publishing the first version of a GA (GroupId and AssetId combination), the asset description is taken from the POM file. If there is already at least one version of the GA, the `description` property is ignored. You can change the description in the asset portal as described in xref:to-describe-an-asset.adoc[Describe an Asset].
-** Deploy Mule 3 applications by setting the property `<type>` to `app`. The asset is not displayed in the Exchange asset list.
-** Deploy Mule 3 `templates` and `examples` by using Anypoint Studio 6.3 or above.
-** For Mule 4 assets, do not specify the `<type>` element. In the `mule-maven-plugin` configuration, set `<classifier>` as `mule-application` (default), `mule-application-template`, `mule-application-example`, or `mule-policy`.
+The `name` property is required and represents the visible name of the asset. If you are publishing the first version of a GA (GroupId and AssetId combination), the asset name is taken from the POM file. If there is already at least one version of the GA, the `name` property is ignored. You can change the name in the asset portal as described in xref:to-describe-an-asset.adoc[Describe an Asset].
++
+The `description` property is optional and represents the description of the asset. If you are publishing the first version of a GA (GroupId and AssetId combination), the asset description is taken from the POM file. If there is already at least one version of the GA, the `description` property is ignored. You can change the description in the asset portal as described in xref:to-describe-an-asset.adoc[Describe an Asset].
++
+Deploy Mule 3 applications by setting the property `<type>` to `app`. The asset is not displayed in the Exchange asset list.
++
+Deploy Mule 3 `templates` and `examples` by using Anypoint Studio 6.3 or later.
++
+For Mule 4 assets, do not specify the `<type>` element. In the `mule-maven-plugin` configuration, set `<classifier>` as `mule-application` (default), `mule-application-template`, `mule-application-example`, or `mule-policy`.
 +
 . Add the Maven facade as a repository in the distribution management section of your project's POM file:
 +
@@ -137,13 +140,13 @@ In the EU, use:
   ...
 ----
 +
-*Note:* The `<id>` and `<name>` elements are arbitrary names you create to identify the repository and any other organizational identifiers. The `<id>` value must be the same in the pom.xml file as in the `~/.m2/settings.xml` file. The `<id>` connects the pom.xml file with information to log in to the organization's URL.
+The `<id>` and `<name>` elements are arbitrary names that you create to identify the repository and any other organizational identifiers. The `<id>` value must be the same in the `pom.xml` file as in the `~/.m2/settings.xml` file. The `<id>` value connects the `pom.xml` file with information to log in to the organization's URL.
 +
-. Update the settings.xml file in your Maven `.m2` directory.
+. Update the `settings.xml` file in your Maven `.m2` directory.
 +
 After you install Maven, the `mvn clean` command creates the `.m2` directory. The directory is `~/.m2` on macOS or Linux and `<default-drive>\Users\YOUR_USER_NAME\.m2` on Windows. It contains your Anypoint Platform credentials. The Maven client reads the settings file when Maven runs.
 +
-Example settings.xml file:
+Example `settings.xml` file:
 +
 [source,xml,linenums]
 ----
@@ -167,13 +170,13 @@ Example settings.xml file:
 ----
 mvn deploy
 ----
-. Search on Exchange for the asset ID to find the asset.
+. Search Exchange for the asset ID to find the asset.
 
 == Publish a Custom Asset
 
-Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is `0.0.13`.
+Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is 0.0.13.
 
-This example shows the `build` section of `pom.xml`.
+This example shows the `build` section of `pom.xml`:
 
 [source,xml,linenums]
 ----
@@ -206,7 +209,7 @@ This example shows the `build` section of `pom.xml`.
 
 === Troubleshooting
 
-If the build fails during the deploy stage with a status code of 412 (Precondition Failed), then the `<goal>exchange-pre-deploy</goal>` has not been executed. To fix this error, ensure that goal is set inside the executions section of the plugin.
+If the build fails during the deploy stage with a status code of 412 (Precondition Failed), then `<goal>exchange-pre-deploy</goal>` was not executed. To fix this error, ensure that goal is set inside the executions section of the plugin.
 
 The error looks similar to this:
 
@@ -254,17 +257,17 @@ This value tells the platform that you're using a token.
 
 == Dependencies external to Exchange
 
-Java libraries and POM files can be published as Exchange custom assets.
+Publish Java libraries and POM files as Exchange custom assets.
 
 Mule 4 Extensions that declare dependencies that don't exist in Maven Central or the MuleSoft Maven repositories are not currently supported.
 
-== Document your Exchange Assets
+== Document Your Exchange Assets
 
 When you use Maven Facade to publish an asset to Exchange, a documentation portal is automatically created for it in Exchange and you can xref:to-describe-an-asset.adoc[document it normally].
 
 == Consume an Exchange Asset with Maven
 
-With Maven Facade you can consume assets published in Exchange, including connectors, Mule applications, and REST APIs. To consume an Exchange asset, add the asset's groupID, artifactID, and version to the `dependencies` section of your project's pom.xml file,
+With Maven Facade you can consume assets published in Exchange, including connectors, Mule applications, and REST APIs. To consume an Exchange asset, add the asset's group ID, artifact ID, and version to the `dependencies` section of your project's `pom.xml` file,
 and add the Maven facade as a repository in the `repositories` section.
 
 [source,xml,linenums]
@@ -297,9 +300,9 @@ and add the Maven facade as a repository in the `repositories` section.
 </project>
 ----
 
-Replace ORGANIZATION_ID with your organization ID.
+Replace `ORGANIZATION_ID` with your organization ID.
 
-You can use `+https://maven.anypoint.mulesoft.com/api/v3/maven+` as a valid URL for the `+<url>+` value, as this is the default to publish to the master organization. In the EU, use `+https://maven.eu1.anypoint.mulesoft.com/api/v3/maven+` as the URL.
+You can use `+https://maven.anypoint.mulesoft.com/api/v3/maven+` as a valid URL for the `+<url>+` value, because this is the default to publish to the master organization. In the EU, use `+https://maven.eu1.anypoint.mulesoft.com/api/v3/maven+` as the URL.
 
 In the EU, the <repositories> section is:
 
