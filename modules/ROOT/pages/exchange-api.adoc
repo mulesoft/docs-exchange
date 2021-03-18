@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-With the Exchange API, you can publish and consume assets, add documentation pages, add or edit categories, and even manage your public portals. For the full API reference, please see the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[API documentation portal].
+With the Exchange API, you can publish and consume assets, add documentation pages, add or edit categories, and even manage your public portals. This page shows several examples using the Exchange API, and the complete API documentation is at the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[API documentation portal].
 
 The API supports all Exchange asset types:
 
@@ -19,18 +19,18 @@ The API supports all Exchange asset types:
 * Policies
 * Custom assets
 
-NOTE: New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
+New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
 
 == Prerequisites
 
 To benefit from this documentation, you must be familiar with Exchange, programming concepts, and command line
 operations on your computer or server.
 
-NOTE: You must have a unique artifact ID and organization ID to publish your asset. The artifact ID consists of the group ID, asset ID, and version.
+You must have a unique artifact ID and organization ID to publish your asset. The artifact ID consists of the group ID, asset ID, and version.
 
-== Overview
+== Tasks Required to Publish an Asset to Exchange
 
-This topic describes the steps needed to publish an asset to Exchange and add metadata using Exchange APIs:
+Use these steps to publish an asset to Exchange and add metadata using Exchange APIs:
 
 . <<find-your-organization-id>>
 . <<obtain-an-access-token>>
@@ -52,19 +52,19 @@ This topic describes the steps needed to publish an asset to Exchange and add me
 
 To find your organization ID:
 
-. Log in to Anypoint Platform and click Access Management.
-. Click the organization name for the top level or a business group, and view your organization ID in the organization info screen.
-. Copy the organization ID and use it in the following examples.
+. Log in to Anypoint Platform and click *Access Management*.
+. Click the name of the top-level organization or a business group, and view your organization ID in the organization information screen.
+. Copy the organization ID and use it when you try out examples.
 
 [[obtain-an-access-token]]
 == Obtain an Access Token
 
-Invoking any Exchange API requires an access token.
-
-Your organization administrator sets the access token expiration time to a value from 15 to 180 minutes. If you perform a search or other operation that requires more time, you will need a new token.
+Invoking any Exchange API requires an access token. Your organization administrator sets the expiration time for access tokens to a value from 15 to 180 minutes. If you perform a search or other operation that requires more time, you must request an additional token.
 
 . Log in to Anypoint Platform.
-. Obtain an access token with a cURL command such as the following. You can also use Postman or another application for sending HTTP commands.
+. Obtain an access token with a cURL command.
+
+You can also use Postman or another application for sending HTTP commands.
 
 Replace `ANYPOINT_USERNAME` with your Anypoint Platform user account name and replace `ANYPOINT_PASSWORD` with your password.
 
@@ -84,35 +84,35 @@ Use this access token in your API calls.
 [[publish-an-asset]]
 == Publish an Asset
 
-With Exchange API version 2 you can publish assets to Exchange either by submitting multipart form data or by passing a .pom file that contains the data.
+With Exchange API version 2 you can publish assets to Exchange either by submitting multipart form data or by passing a POM file that contains the data.
 
 The API can also upload assets to Exchange either synchronously or asynchronously.
 
 The API can upload all supported asset types, including REST APIs, SOAP APIs, HTTP APIs, API fragments, connectors, Mule applications, examples, templates, policies, and custom assets.
 
-This example shows how to publish a REST API (RAML specification).
+The following example shows how to publish a REST API (RAML specification).
 
 [[specify-asset-properties]]
 === Specify Asset Properties
 
-Each API call to create an asset specifies multipart properties.
+Each API call to create an asset specifies multipart properties:
 
 [cols="1,4,2",options=header,width="100%"]
 |===
 |Property |Description |Required or Optional
 |name |The asset name that is visible on the Exchange portal page. |Required
 |description |The description of the asset. |Optional
-|type |The type of the asset to be created. |Required if the type cannot be inferred from the file extension
-|dependencies |A string of comma-separated dependencies, defined as: `dependencies=GROUP_ID:ASSET_ID:VERSION,GROUP_ID:ASSET_ID:VERSION` |Optional
-|keywords |A string of comma-separated values to be saved as an asset's attributes. Search queries can find assets by keyword. Example: `keywords=api,raml,auth,jwt,token` |Optional
-|properties |Some asset types require additional properties specified with the properties prefix, such as `apiVersion`, `mainFile`, or `assetLink`. Example: `properties.apiVersion = v1` |May be required for some properties and some asset types
+|type |The type of asset to be created. |Required if the type cannot be inferred from the file extension
+|dependencies |A string of comma-separated dependencies, defined as `dependencies=GROUP_ID:ASSET_ID:VERSION,GROUP_ID:ASSET_ID:VERSION`. |Optional
+|keywords |A string of comma-separated values to be saved as an asset's attributes, for example, `keywords=api,raml,auth,jwt,token`. Search queries can find assets by keyword. |Optional
+|properties |Some asset types require additional properties specified with the properties prefix, such as `apiVersion`, `mainFile`, or `assetLink`, for example, `properties.apiVersion = v1`. |Required for some properties and some asset types
 |===
 
-This example uses multipart form data to upload a RAML API spec to Exchange.
+The following example uses multipart form data to upload a RAML API specification to Exchange.
 
 Download the file used in this example from the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/minor/2.0/pages/Asset%20Creation/[asset creation] page on the Exchange API developer portal.
 
-Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with your local file path.
+Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with your local file path:
 
 [source,console]
 ----
@@ -155,13 +155,9 @@ After publishing your assets, enrich their metadata and make them easier to disc
 [[add-tags]]
 === Add Tags
 
-This example shows how to insert or replace tags on an asset.
+The following example shows how to insert or replace tags on an asset. Each asset is uniquely identified by the combination of its group ID, asset ID, and version. To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`.
 
-Each asset is uniquely identified by the combination of its group ID, asset ID, and version.
-
-To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`.
-
-NOTE: This command replaces any existing tags on the asset.
+Note that this command replaces any existing tags on the asset.
 
 [source,console]
 ----
@@ -178,11 +174,7 @@ curl 'https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ve
 
 Categories are managed fields that the organization administrator adds and maintains.
 
-This example uses a previously created category with the name `apiType` and sets that category value to "System API" on the asset.
-
-Each asset is uniquely identified by the combination of its group ID, asset ID, and version.
-
-To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`.
+The following example uses a previously created category with the name `apiType` and sets that category value to `System API` on the asset. Each asset is uniquely identified by the combination of its group ID, asset ID, and version. To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`.
 
 [source,console]
 ----
@@ -198,11 +190,7 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
 [[add-custom-fields]]
 === Add Custom Fields
 
-This example uses a previously created custom field with name `subType` and sets that category value to "OAS" on the asset.
-
-Each asset is uniquely identified by the combination of its group ID, asset ID, and version.
-
-To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`.
+This example uses a previously created custom field with name `subType` and sets that category value to `OAS` on the asset. Each asset is uniquely identified by the combination of its group ID, asset ID, and version. To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`.
 
 [source,console]
 ----
@@ -218,7 +206,7 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
 [[add-update-doc-pages]]
 == Add and Update Documentation Pages
 
-Each Exchange asset has associated documentation to provide an overview and other information about the asset. These APIs require the Exchange administrator or Exchange contributor permissions.
+Each Exchange asset has associated documentation to provide an overview and other information about the asset. Adding or updating documentation with the Exchange API requires the Exchange administrator or Exchange contributor permissions.
 
 To add or update documentation using the Exchange API:
 
@@ -229,7 +217,7 @@ To add or update documentation using the Exchange API:
 [[add-new-page-draft]]
 === Add a New Page in Draft Mode
 
-To add a new documentation page, use this command and replace `:groupId`, `:assetId`, and `:version` with the values for your asset.
+To add a new documentation page, use this command and replace `:groupId`, `:assetId`, and `:version` with the values for your asset:
 
 [source,console]
 ----
@@ -240,16 +228,16 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ver
   -d '{ "pagePath": "Security" }'
 ----
 
-When the command succeeds it returns the `pageId` of the newly created page.
+When the command succeeds, it returns the `pageId` value for the newly created page.
 
-Exchange shows the new draft page on the asset's Exchange portal page under the default Home page. To edit this page and publish the draft, use either the portal user interface or the API steps below.
+Exchange shows the new draft page on the asset's Exchange portal page under the default Home page. To edit this page and publish the draft, use either the portal user interface or the Exchange API.
 
 [[add-content-to-page]]
 === Add Content to the Page
 
 Documentation pages are written in GitHub Markdown, described in detail in the xref:to-describe-an-asset#markdown-notes[Markdown Notes].
 
-To add your Markdown content, use this command and replace `:pageId` with the pageId returned by the previous command.
+To add your Markdown content, use this command and replace `:pageId` with the page ID you obtained earlier.
 
 [source,console]
 ----
@@ -263,7 +251,7 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ver
 [[publish-draft]]
 === Publish the Draft
 
-When the content is ready, change the page's draft status to published by using this command. Publishing the draft publishes all the pages and content associated with the asset and currently in draft status.
+Publishing the draft publishes all the pages and content associated with the asset and currently in draft status. When the content is ready, change the page's draft status to published:
 
 [source,console]
 ----
@@ -275,7 +263,7 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:ver
 [[add-runtime-info]]
 == Add Runtime Information to Your Asset
 
-After the API asset includes all the information necessary for consumers to discover, learn, and understand your API, add the server or instance information so consumers can invoke the API. Replace `:groupId`, `:assetId`, and `:versionGroup` with the group ID, asset ID, and version ID of the API asset.
+After the API asset includes all the information necessary for consumers to discover, learn, and understand your API, add the server or instance information so consumers can invoke the API. Replace `:groupId`, `:assetId`, and `:versionGroup` with the group ID, asset ID, and version ID of the API asset:
 
 [source,console]
 ----
