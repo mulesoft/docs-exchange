@@ -9,7 +9,7 @@ and consuming assets by using the Exchange API, publishing
 and consuming assets by using the Exchange Maven Facade API, and searching
 for assets by using the Exchange Graph API.
 
-The Maven facade also lets you publish federated assets.
+The Maven facade also enables you to publish federated assets.
 
 Exchange APIs:
 
