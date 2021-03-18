@@ -21,6 +21,7 @@
  ** xref:to-request-access.adoc[Request Access]
  ** xref:to-deploy-using-rest-connect.adoc[REST Connect Connector Generator]
 * xref:about-platform-apis.adoc[Exchange Platform APIs]
+ ** xref:exchange-api.adoc[Publish Assets Using the Exchange API]
  ** xref:to-publish-assets-maven.adoc[Publish Assets Using Maven]
  ** xref:to-search-with-graph-api.adoc[Search Using the Graph API]
 * xref:about-documenting-an-api.adoc[Document an API]
