@@ -5,9 +5,15 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: general:getting-started:anypoint-exchange.adoc
 
-Anypoint Exchange provides the benefit of being able to discover, share, and incorporate assets and resources into your applications. Anypoint Exchange helps you create API developer portals, view and test APIs, simulate data to APIs (Mocking Service), create assets, and use API Notebooks to describe and test API functions.
+Anypoint Exchange is your curated catalog of APIs and other assets. Use Exchange to discover, share, and incorporate assets and resources into your applications. Exchange helps you create API developer portals, view and test APIs, simulate data to APIs by using the Mocking Service, create assets, and use API Notebooks to describe and test API functions.
 
-== Get Started
+Exchange assets are accessible in Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API Groups, and policies), and Runtime Manager (APIs), and you can publish APIs from Design Center to Exchange.
+
+MuleSoft certifies its public content and reviews and approves partner connectors. All private content is internal to an organization and not visible outside that organization. Customers are responsible for any private content they publish within their Exchange instance.
+
+Using multiple languages with Unicode is supported fully throughout Exchange and in all metadata fields, including asset names, descriptions, markdown pages, categories, tags, and reviews.
+
+== View Assets
 
 . From the public https://www.anypoint.mulesoft.com/exchange/[Exchange], click an asset and view its description.
 . Click Login to view a private Exchange for your organization.
@@ -22,24 +28,14 @@ After you log into Exchange, you can create assets for APIs, connectors, templat
 navigation area. Exchange lets you view the functions in an API.
 . Click a function and more information appears. At the right side of the screen, you can test the API by entering sample values to send to the API and get responses from the API.
 
-== Need More Information on an Asset?
+== Find More Information on an Asset
 
 Click the Helpful Links item in the left navigation area for links to documentation.
 
-== Exchange Content
+[[asset-types]]
+== Asset Types
 
-Exchange assets are accessible in Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API Groups, and policies), and Runtime Manager (APIs), and you can publish APIs from Design Center to Exchange.
-
-MuleSoft certifies its public content and reviews and approves partner connectors. All private content is internal to an organization and not visible outside that organization. Customers are responsible for any private content they publish within their Exchange instance.
-
-== Language Support
-
-Using multiple languages with Unicode is supported fully throughout Exchange and in all metadata fields, including asset names, descriptions, markdown pages, categories, tags, and reviews.
-
-[[content-types]]
-== Content Types
-
-Both the public and private content in Exchange can consist of the following kinds of elements:
+Exchange supports these asset types:
 
 * Connectors - Packaged connectivity to an endpoint developed and deployed on Anypoint Platform with third-party APIs and standard integration protocols
 +
