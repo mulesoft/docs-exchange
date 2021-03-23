@@ -13,6 +13,8 @@ With the Anypoint Exchange https://anypoint.mulesoft.com/exchange/portals/anypoi
 * Policies
 * Custom assets
 
+The Exchange Maven Facade API does not support deleting assets. To delete an asset, use the Exchange user interface or the Exchange API.
+
 New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
 
 == Prerequisites
