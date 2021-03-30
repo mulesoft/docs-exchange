@@ -38,27 +38,27 @@ If you enable a vanity domain for your Exchange public portal, enable cookie con
 |===
 |Cookie Name |Duration |Cookie type |Description
 |__cfduid |Session |Required |Helps Cloudflare detect malicious visitors to our customers' websites and minimizes blocking legitimate users.
-|+__tld__+ |Session |Functional |Used to track visitors on multiple websites, in order to present relevant advertisement based on the visitor's preferences.
+|+__tld__+ |Session |Functional |Tracks visitors on multiple websites and present advertising relevant to the visitor's preferences.
 |_csrf |Session |Required |Helps prevent Cross-Site Request Forgery attacks for site security.
 |_ga |730 days |Functional |Calculates visitor, session, and campaign data for site analytics.
 |_gat |Session |Functional |Throttles the request rate to limit the collection of data on high traffic sites.
-|_gid |1 day |Functional |Registers a unique ID that is used to generate statistical data on how the visitor uses the website.
+|_gid |1 day |Functional |Registers a unique ID to generate statistical data on how the visitor uses the website.
 |ajs%3Acookies |365 days |Functional |Supports use, service performance, and functionality of websites.
 |ajs%3Atest |365 days |Functional |Counts visits and tracks other website traffic-related metrics for performance analytics.
 |ajs_anonymous_id |365 days |Funuctional |Counts how many people visit the site for site analytics.
 |ajs_group_id |365 days |Functional |Tracks visitor usage and events within the website.
 |ajs_user_id |365 days |Functional |Helps track visitor usage, events, and target marketing, and sometimes also measures application performance and stability.
 |amplitude_cookie_test |Session |Functional |Detects whether partner data synchronization is functioning and currently running.
-|amplitude_id_7856322d613393b800727439f0954eb9mulesoft.com |3650 days |Functional |We use Amplitude to identify unique users visits in order to keep accurate web analytics.
-|amplitude_idundefinedmulesoft.com |Session |Functional |We use Amplitude to identify unique users visits in order to keep accurate web analytics.
-|amplitude_testmulesoft.com |Session |Functional |We use Amplitude to identify unique users visits in order to keep accurate web analytics.
+|amplitude_id_7856322d613393b800727439f0954eb9mulesoft.com |3650 days |Functional |Uses Amplitude to identify unique user visits for accurate web analytics.
+|amplitude_idundefinedmulesoft.com |Session |Functional |Uses Amplitude to identify unique user visits for accurate web analytics.
+|amplitude_testmulesoft.com |Session |Functional |Uses Amplitude to identify unique user visits for accurate web analytics.
 |exchange.sess |Session |Required |Maintains a user session within Exchange. No personal information is stored in the cookie.
 |exchange.sess.sig |Session |Required |Stores the signature used to validate the Exchange session cookie.
-|IDE |729 days |Functional |Supports the Doubleclick platform, a real time bidding advertising exchange.
+|IDE |729 days |Advertising |Supports the Doubleclick platform, a real time bidding advertising exchange.
 |JSESSIONID |Session |Functional |Supports the New Relic platform for monitoring performance of web and mobile applications.
 |mulesoft.sess |Session |Required |Maintains a user session within Anypoint Platform. No personal information is stored in the cookie.
 |mulesoft.sess.sig |Session |Required |Stores the signature used to validate the Anypoint Platform session cookie.
-|test_cookie |Session |Functional |Supports the Doubleclick platform, a real time bidding advertising exchange.
+|test_cookie |Session |Advertising |Supports the Doubleclick platform, a real time bidding advertising exchange.
 |XSRF-TOKEN |Session |Required |Helps prevent Cross-Site Request Forgery attacks for site security.
-|zarget_visitor_info |365 days |Functional |Analytics and customization.
+|zarget_visitor_info |365 days |Functional |Supports analytics and customization.
 |===
