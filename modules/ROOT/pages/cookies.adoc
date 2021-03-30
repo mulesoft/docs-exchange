@@ -38,13 +38,13 @@ If you enable a vanity domain for your Exchange public portal, enable cookie con
 |===
 |Cookie Name |Duration |Cookie type |Description
 |__cfduid |Session |Required |Helps Cloudflare detect malicious visitors to our customers' websites and minimizes blocking legitimate users.
-|+__tld__+ |Session |Functional |Tracks visitors on multiple websites and present advertising relevant to the visitor's preferences.
+|+__tld__+ |Session |Functional |Tracks visitors on multiple websites and presents advertising relevant to the visitor's preferences.
 |_csrf |Session |Required |Helps prevent Cross-Site Request Forgery attacks for site security.
 |_ga |730 days |Functional |Calculates visitor, session, and campaign data for site analytics.
 |_gat |Session |Functional |Throttles the request rate to limit the collection of data on high traffic sites.
 |_gid |1 day |Functional |Registers a unique ID to generate statistical data on how the visitor uses the website.
 |ajs%3Acookies |365 days |Functional |Supports use, service performance, and functionality of websites.
-|ajs%3Atest |365 days |Functional |Counts visits and tracks other website traffic-related metrics for performance analytics.
+|ajs%3Atest |365 days |Functional |Counts visits and tracks other metrics related to website traffic for performance analytics.
 |ajs_anonymous_id |365 days |Funuctional |Counts how many people visit the site for site analytics.
 |ajs_group_id |365 days |Functional |Tracks visitor usage and events within the website.
 |ajs_user_id |365 days |Functional |Helps track visitor usage, events, and target marketing, and sometimes also measures application performance and stability.
