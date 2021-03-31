@@ -4,9 +4,14 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Anypoint Exchange uses cookies to save user settings, enhance user experience, and improve performance.
+Anypoint Exchange uses cookies to save user settings, enhance the user experience, and improve performance.
 
-In general, websites have required cookies necessary for the site to work correctly, functional cookies necessary for certain site functionality, functional cookies that are not necessary for any site functionality, and advertising cookies.
+In general, websites use multiple types of cookie:
+
+* Required cookies necessary for the site to work correctly
+* Functional cookies necessary for certain site functionality
+* Functional cookies that are not necessary for any site functionality
+* Advertising cookies
 
 Exchange requires some cookies to work correctly, including cookies for session details and authentication information.
 
@@ -18,7 +23,7 @@ Content in Exchange documentation often uses advertising cookies. If a video emb
 
 Exchange provides public portal website visitors with cookie consent management and full documentation of all cookies, in compliance with marketing and privacy regulations.
 
-Some countries require websites not to use any non-essential cookie until after the website visitor has granted explicit consent.
+Some countries require that websites use non-essential cookies only after the website visitor has granted explicit consent.
 
 When a user in a country with this requirement visits an Exchange public portal for the first time, Exchange notifies the user about the cookies stored in the browser, and the user accepts the default settings or opens the cookie consent manager to configure their cookie settings. Exchange finds the user's country by IP address.
 
