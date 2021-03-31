@@ -7,6 +7,8 @@ endif::[]
 
 Anypoint Exchange is your curated catalog of APIs and other assets, including API groups, API specification fragments, policies, and more.
 
+image::ex2-ui.png[Exchange interface]
+
 Use Exchange to discover, share, and incorporate assets and resources into your applications. Exchange helps you create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
 
 Exchange assets are accessible in Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), and Runtime Manager (APIs), and you can publish APIs from Design Center to Exchange.
@@ -16,8 +18,6 @@ Using multiple languages with Unicode is supported fully throughout Exchange and
 MuleSoft certifies its public assets and reviews and approves partner connectors. All private assets are internal to an organization and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
 This page applies to the current version, Exchange 2. Documentation on Exchange 1 is at xref:about-exchange1.adoc[About Exchange 1 (Old Version)]. We encourage Exchange 1 users to xref:migrate.adoc[migrate] to Exchange 2. The full version history is available in the xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes].
-
-image::ex2-ui.png[Exchange interface]
 
 == See Also
 
