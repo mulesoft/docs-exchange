@@ -1,0 +1,69 @@
+= About Exchange Cookies
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Anypoint Exchange uses cookies to save user settings, enhance the user experience, and improve performance.
+
+In general, websites use multiple types of cookie:
+
+* Required cookies necessary for the site to work correctly
+* Functional cookies necessary for certain site functionality
+* Functional cookies that are not necessary for any site functionality
+* Advertising cookies
+
+Exchange requires some cookies to work correctly, including cookies for session details and authentication information.
+
+Exchange normally uses some functional cookies, including cookies for site analytics. Exchange does not require any functional cookies for site functionality.
+
+Content in Exchange documentation often uses advertising cookies. If a video embedded in an Exchange portal is hosted on a third-party site such as YouTube that uses advertising cookies, then the video is not visible to a website visitor who disables advertising cookies, and the visitor sees a message explaining this.
+
+== Cookie Consent Management
+
+Exchange provides public portal website visitors with cookie consent management and full documentation of all cookies, in compliance with marketing and privacy regulations.
+
+Some countries require that websites use non-essential cookies only after the website visitor has granted explicit consent.
+
+When a user in a country with this requirement visits an Exchange public portal for the first time, Exchange notifies the user about the cookies stored in the browser, and the user accepts the default settings or opens the cookie consent manager to configure their cookie settings. Exchange finds the user's country by IP address.
+
+The Exchange cookie preferences button enables users in all countries to open the cookie consent manager and review or modify their settings at any time.
+
+The cookie consent manager shows settings for required cookies, functional cookies, and advertising cookies, and general information about cookies.
+
+Website visitors use the cookie consent manager to view the cookies the site uses, view descriptions of all individual cookies and understand what these cookies are doing, and enable or disable functional and advertising cookies.
+
+== Vanity Domains
+
+If you enable a vanity domain for your Exchange public portal, enable cookie consent management with the xref:portal-vanity-domain.adoc[public portal vanity domain instructions].
+
+== Cookies Used by Exchange
+
+[cols="1,1,1,5",options=header,width="100%",frame="topbot"]
+|===
+|Cookie Name |Duration |Cookie type |Description
+|__cfduid |Session |Required |Helps Cloudflare detect malicious visitors to our customers' websites and minimizes blocking legitimate users.
+|+__tld__+ |Session |Functional |Tracks visitors on multiple websites and presents advertising relevant to the visitor's preferences.
+|_csrf |Session |Required |Helps prevent Cross-Site Request Forgery attacks for site security.
+|_ga |730 days |Functional |Calculates visitor, session, and campaign data for site analytics.
+|_gat |Session |Functional |Throttles the request rate to limit the collection of data on high traffic sites.
+|_gid |1 day |Functional |Registers a unique ID to generate statistical data on how the visitor uses the website.
+|ajs%3Acookies |365 days |Functional |Supports use, service performance, and functionality of websites.
+|ajs%3Atest |365 days |Functional |Counts visits and tracks other metrics related to website traffic for performance analytics.
+|ajs_anonymous_id |365 days |Funuctional |Counts how many people visit the site for site analytics.
+|ajs_group_id |365 days |Functional |Tracks visitor usage and events within the website.
+|ajs_user_id |365 days |Functional |Helps track visitor usage, events, and target marketing, and sometimes also measures application performance and stability.
+|amplitude_cookie_test |Session |Functional |Detects whether partner data synchronization is functioning and currently running.
+|amplitude_id_7856322d613393b800727439f0954eb9mulesoft.com |3650 days |Functional |Uses Amplitude to identify unique user visits for accurate web analytics.
+|amplitude_idundefinedmulesoft.com |Session |Functional |Uses Amplitude to identify unique user visits for accurate web analytics.
+|amplitude_testmulesoft.com |Session |Functional |Uses Amplitude to identify unique user visits for accurate web analytics.
+|exchange.sess |Session |Required |Maintains a user session within Exchange. No personal information is stored in the cookie.
+|exchange.sess.sig |Session |Required |Stores the signature used to validate the Exchange session cookie.
+|IDE |729 days |Advertising |Supports the Doubleclick platform, a real time bidding advertising exchange.
+|JSESSIONID |Session |Functional |Supports the New Relic platform for monitoring performance of web and mobile applications.
+|mulesoft.sess |Session |Required |Maintains a user session within Anypoint Platform. No personal information is stored in the cookie.
+|mulesoft.sess.sig |Session |Required |Stores the signature used to validate the Anypoint Platform session cookie.
+|test_cookie |Session |Advertising |Supports the Doubleclick platform, a real time bidding advertising exchange.
+|XSRF-TOKEN |Session |Required |Helps prevent Cross-Site Request Forgery attacks for site security.
+|zarget_visitor_info |365 days |Functional |Supports analytics and customization.
+|===
