@@ -123,7 +123,7 @@ If set up correctly, you can access and navigate to `+https://developers.robocop
 
 Exchange public portals that do not use vanity domains can use the xref:cookies.adoc[cookie consent manager] provided.
 
-When you set up an Exchange public portal with a vanity domain, activate cookie consent management by contacting customer support with this information:
+Once the set up for your vanity domain is done and the site is up and running, you need to activate cookie consent management by contacting customer support with this information:
 
 * Your organization domain (Example: `robo-cop`)
 * Your registered domain (Example: `developers.robocop.com`)
