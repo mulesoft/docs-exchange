@@ -3,26 +3,23 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Exchange administrators have permissions to perform these tasks:
+Exchange administrators can perform the following tasks:
 
-* xref:to-share-an-asset.adoc[Share an asset]
+* xref:to-set-permissions.adoc[Set Exchange role permissions]
 +
-Grant access to an asset to a user in your organization, to everyone in your organization, or to everyone in a chosen external organization, or publish an API asset to a public portal.
+Determine who in your organization should be an Exchange administrator, contributor, or viewer. You can also provide role access for individual assets.
 * xref:to-save-searches.adoc[Save searches]
 +
 Save and maintain searches for assets within a business group.
+* xref:to-share-an-asset.adoc[Share an asset]
++
+Grant access to an asset to a user in your organization, to everyone in your organization, or to everyone in a chosen external organization. You can also use Share to publish an API asset to a public portal.
 * xref:to-enable-the-request-access-button.adoc[Use API Manager to add the Request Access button]
 +
-Specify which API assets can be shared with users.
+This enables you to specify which API assets can be shared with users.
 * xref:to-deprecate-asset.adoc[Deprecate an asset]
 +
-Remove access to a version of an asset but keep other versions of the asset available to users.
-* xref:to-set-permissions.adoc[Set Exchange role permissions]
-+
-Grant Exchange administrator, contributor, or viewer permissions to members of your organization, and optionally provide role access for individual assets.
-* xref:cookies.adoc[About Exchange cookies]
-+
-Find information about Exchange cookies, cookie configuration, and cookies for vanity domains.
+Remove access to a version within an asset but keep the asset available. Users can access other versions within the asset.
 * xref:migrate.adoc[Migrate Exchange 1 assets to Exchange 2]
 +
-Move assets from Exchange 1.
+How to handle assets moved from Exchange 1.
