@@ -15,7 +15,7 @@ In general, websites use multiple types of cookie:
 
 Exchange requires some cookies to work correctly, including cookies for session details and authentication information.
 
-Exchange normally uses some functional cookies, including cookies for site analytics. Exchange does not require any functional cookies for site functionality.
+Exchange normally uses functional cookies, including cookies for site analytics. However, Exchange does not require any functional cookies for site functionality.
 
 Content in Exchange documentation often uses advertising cookies. If a video embedded in an Exchange portal is hosted on a third-party site such as YouTube that uses advertising cookies, then the video is not visible to a website visitor who disables advertising cookies, and the visitor sees a message explaining this.
 
