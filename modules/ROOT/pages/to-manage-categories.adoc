@@ -37,7 +37,7 @@ effect.
 . Click an asset in your organization.
 . In Categories in the right side details menu, click Add Category and choose the category and value from the drop-down menu.
 
-== Search with Categories in Exchange Private Cloud Edition or MuleSoft Government CLoud
+== Search with Categories in Exchange Private Cloud Edition or MuleSoft Government Cloud
 
 In the Exchange search field, specify the `category:` search term and the category value to list the assets.
 
