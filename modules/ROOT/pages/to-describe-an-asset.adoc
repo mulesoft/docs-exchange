@@ -149,12 +149,6 @@ clipboard. Then after you log back in, you can paste the content back into the p
 +
 * Insert a YouTube video: `+![linkname](https://www.youtube.com/embed/YOUR_YOUTUBE_ID_HERE)+` +
 For example: `+![](https://www.youtube.com/embed/K3tuHUZ1J04)+`
-+
-* Insert a Vimeo video: `[linkname](VIMEO_URL)`
-* Add the asset ID to a youtu.be URL: +
-Change: `+https://youtu.be/EhJM1GawQec+` +
-To: `+![](https://www.youtube.com/embed/EhJM1GawQec)+`
-
 
 == See Also
 
