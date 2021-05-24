@@ -13,8 +13,7 @@ image::ex-categories-api-type.png[]
 
 To create a category, you must have the role *Exchange Administrator* of the master organization or *Organization Owner* of the master organization.
 
-You must have one or more categories defined in the Settings page for the Add Category prompt
-to appear on your organization's assets.
+When you have one or more categories defined in the *Settings* page, your organization's assets display the *Add Category* prompt.
 
 == Create a Category
 
