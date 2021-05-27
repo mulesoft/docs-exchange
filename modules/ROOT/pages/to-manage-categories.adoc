@@ -4,16 +4,16 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Exchange Administrators and Organization Owners can create categories to group Exchange access types.
-Categories let users organize assets into different groups to improve asset browsing and discovery.
+Use categories to organize Exchange assets into groups to improve asset browsing and discovery.
 
-For example, a category called API Type with possible values `System API`, `Experience API`,
-and `Integration API` is applied to assets of type REST API, SOAP API, and HTTP API:
+For example, a category called API Type with possible values System API, Experience API,
+and Integration API is applied to assets of type REST API, SOAP API, and HTTP API:
 
 image::ex-categories-api-type.png[]
 
-*Note:* You must have one or more categories defined in the Settings page for the Add Category prompt
-to appear on your organization's assets.
+To create a category, you must be either the master organization's Exchange Administrator or Organization Owner.
+
+When you have one or more categories defined in the *Settings* page, your organization's assets display the *Add Category* prompt.
 
 == Create a Category
 
