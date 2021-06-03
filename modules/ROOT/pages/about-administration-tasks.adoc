@@ -8,6 +8,9 @@ Exchange administrators have permissions to perform these tasks:
 * xref:to-share-an-asset.adoc[Share an asset]
 +
 Share an asset to publish an API asset to a public portal, or to grant access to an asset to specific users in your organization, to everyone in your organization, or to everyone in a chosen external organization.
+* xref:to-share-api-asset-to-portal.adoc[Publish an API to a public portal]
++
+Publish APIs to a public portal for external users.
 * xref:to-save-searches.adoc[Save searches]
 +
 Save and maintain searches for assets within a business group.
@@ -17,9 +20,9 @@ Specify which API assets can be shared with users.
 * xref:to-deprecate-asset.adoc[Deprecate an asset]
 +
 Remove access to a version of an asset but keep other versions of the asset available to users.
-* xref:to-set-permissions.adoc[Set Exchange role permissions]
+* xref:to-set-permissions.adoc[Set User Access Permissions]
 +
-Grant the Exchange Administrator, Contributor, or Viewer roles to members of your organization, and optionally provide role access for individual assets.
+Grant the Exchange Administrator, Contributor, or Viewer permissions to members of your organization, and optionally provide access for individual assets.
 * xref:cookies.adoc[About Exchange cookies]
 +
 Find information about Exchange cookies, cookie configuration, and cookies for vanity domains.

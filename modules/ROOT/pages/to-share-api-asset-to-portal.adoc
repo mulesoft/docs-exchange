@@ -1,20 +1,20 @@
-= Share an API Asset to a Public Portal
+= Publish an API to a Public Portal
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-You can use your organization's public portal to share API assets publicly. Developers inside and outside your organization can access the assets on the public portal.
+Use your organization's public portal to publish API assets for developers inside and outside your organization.
 
 A public portal is visible to anyone who has the URL of the portal. The URL for a public portal starts with `+https://anypoint.mulesoft.com/exchange/portals/Domain_Name/+`.
 
 Replace `Domain_Name` with the domain name shown in Anypoint access management on the xref:access-management::organization.adoc#organization-page[*Organization* page].
 
-== Permissions to Control Asset Sharing
+== Permissions to Control Asset Publishing
 
-An organization's Exchange administrators control whether each API asset created in the organization is shared in the public portal by adding assets to the public portal and removing assets from the public portal.
+An organization's Exchange administrators add assets to the public portal and remove assets from the public portal.
 
-Grant the Exchange administrator role to a user or revoke the role from a user with the *Access Management* -> *Roles* menu.
+Grant the Exchange administrator permission to a user or revoke the permission from a user with Anypoint Access Management.
 
 For more information see xref:to-set-permissions.adoc[Set User Access Permissions].
 
@@ -31,7 +31,7 @@ Adding an asset to a portal does not delete the asset. It is still available int
 . Select the version of the asset you want to publish in the public portal.
 . Select *Share*.
 
-If no action occurs, refresh your browser, log in again, and share the asset again.
+If no action occurs, refresh your browser, log in again, and add the asset again.
 
 == Remove an Asset from a Public Portal
 

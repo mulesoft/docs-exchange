@@ -4,27 +4,19 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Anypoint Exchange lets you configure whether REST, SOAP, and HTTP API services are public or private in a Private Exchange or in an Exchange Portal. Typical services that you would set visibility for are proxies or policies associated with your API that you set using API Manager.
+Use Anypoint Exchange to configure whether REST, SOAP, and HTTP API services are public or private in a private Exchange or in an Exchange portal. For example, configure public or private visibility for proxies or policies associated with your API and set using API Manager.
 
-After you register an API from Exchange in API Manager, the instances for the API appear in Exchange in the API Instances list in the left navigation bar.
+After you register an API from Exchange in API Manager, the instances for the API appear in Exchange in the API instances list in the navigation bar.
 
-You can also create an API instance if your API is managed by another API management program outside of Anypoint Platform.
+Exchange also creates API instances for APIs managed by another API management program outside of Anypoint Platform.
 
-Access differs by Exchange type:
+Access differs by Exchange type. In a private Exchange, the API instances list appears for HTTP, REST, and SOAP APIs. In an Exchange portal, the API instances list appears for SOAP and HTTP APIs. All instances in an Exchange portal are read only.
 
-* In a Private Exchange, API Instances appears for HTTP, REST, and SOAP APIs. If you are an asset administrator, you can change the visibility of API instances and add new instances:
-+
-** If you want an instance public, change the Visibility indicator.
-** You can edit the instance by clicking the pencil icon, or delete the instance by clicking the X icon.
-+
-* In an Exchange Portal, API Instances appears for SOAP and HTTP APIs. All instances in an Exchange Portal are read only.
+Visibility for each instance is either private or public. All users in a business group's Exchange portal can see a public instance. Users can see a private instance if the asset is shared with them or if they have an Anypoint Platform permission that grants access.
 
-*Notes:*
+In a private Exchange, asset administrators have access to change the visibility of API instances and add new instances. Make an instance public with the visibility indicator. Edit the instance with the pencil icon. Delete the instance with the X icon.
 
-* Visibility for each instance is either private or public:
-** Public pertains to any user within a business group's Exchange Portal.
-** Private is only for those who can see the asset via Sharing the asset or per an Anypoint Platform role.
-* If listed, the Mocking Service appears for REST APIs to let you know it's available. The Mocking Service provides data that you can use to test API features. The Mocking Service is always public.
+REST APIs provide a mocking service with data to test API features. The mocking service is always public.
 
 == See Also
 

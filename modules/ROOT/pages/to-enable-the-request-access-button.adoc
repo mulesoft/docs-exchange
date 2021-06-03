@@ -1,18 +1,17 @@
-= Enable the Request Access Button to Display
+= Enable the Request Access Button
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
-
-This topic requires the Exchange Administrator role.
 
 Users specify what applications can have access to an API by clicking the
 Request Access button image:ex2-request-access.png[Button - Request Access].
 
 Exchange Administrators see the Request Access in the More Options menu image:ex2-more-options-icon.png[More Options icon].
 
-However, just creating an API asset does not cause the Request Access button to display.
-You have to configure the asset first:
+Enabling the Request Access button requires the Exchange Administrator permission.
+
+To show the Request Access button, create an API asset and then configure it:
 
 . In API Manager, click Manage API > Manage API from Exchange to open the API.
 . Use the URL of your API asset in Exchange as the Implementation URI in API Manager.
