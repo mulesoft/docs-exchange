@@ -4,31 +4,27 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Exchange provides multiple ways to set up access management to provide collaboration across teams and meet governance requirements. Anypoint Platform comes with predefined permissions and role groups that can be set in Access Management to provide users with different access levels.
+Exchange provides multiple ways to set up access management to provide collaboration across teams and meet governance requirements. Anypoint Platform comes with predefined permissions and roles that can be set in the Access Management section of Anypoint Platform to provide users with different access levels.
 
 == Exchange Permissions
 
-Exchange permissions are the best way to control access to assets in a business group. Before Exchange permissions were introduced, very similar Exchange role groups controlled Exchange access, and role groups are still supported.
+To control access to assets in a business group, add users or teams to Exchange permissions role groups.
 
-These permissions pertain to every Business Group level:
+The following permissions pertain to every business group level:
 
-* Exchange Viewers: This permission enables users to view and download assets within a business group. The users with this permission cannot add new assets, edit asset portal content, or share an asset with another user. Assign this permission to those who consume your assets in a specific business group.
-
-* Exchange Contributors: This permission enables users to view, create, and download assets within a business group. Users with this permission can edit asset portal content in an existing asset version. Use this permission to invite users to edit and maintain your asset portal descriptions.
-
-* Exchange Administrators: This permission enables users to view, create, and download assets within a business group. Users with this permission have all the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. Use this permission to set up Exchange administrators for all the assets within a specific business group.
+Exchange Viewers:: Enables users to view and download assets within a business group. Users with this permission cannot add new assets, edit asset portal content, or share an asset with another user. Assign this permission to those who consume your assets in a specific business group.
+Exchange Contributors:: Enables users to view, create, and download assets within a business group. Users with this permission can edit asset portal content in an existing asset version. Use this permission to invite users to edit and maintain your asset portal descriptions.
+Exchange Administrators:: Enables users to view, create, and download assets within a business group. Users with this permission have all the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. Use this permission to set up Exchange administrators for all the assets within a specific business group.
 
 == Asset Permissions
 
-Asset permissions are the best way to control access to individual assets. Before asset permissions were introduced, very similar asset role groups controlled asset access, and role groups are still supported.
+To control access to individual assets, add users or teams to asset permissions role groups.
 
-These permissions extend access on assets in addition to the permissions that a user has at the business group level:
+The following permissions extend access on assets in addition to the permissions that a user has at the business group level:
 
-* Asset Viewers: This permission enables users to view and download an asset. Users with this permission cannot edit asset portal content or share an asset with another user. Use this permission to invite a user outside your business group to view and download an asset.
-
-* Asset Contributors: This permission enables users to view, add a new version, and download an asset. Use this permission to invite a user outside your business group to view, download, and add edit portal content for an asset.
-
-* Asset Administrators: This permission enables users to view, create, download, deprecate, and delete an asset. Users with this permission have the same access as users with the Exchange Administrators permission, but on only a single asset. This permission is assigned by default to an asset creator. Use this permission to extend administrator permissions on an asset to an additional user.
+Asset Viewers:: Enables users to view and download an asset. Users with this permission cannot edit asset portal content or share an asset with another user. Use this permission to invite a user outside your business group to view and download an asset.
+Asset Contributors:: Enables users to view, add a new version, and download an asset. Use this permission to invite a user outside your business group to view, download, and add edit portal content for an asset.
+Asset Administrators:: Enables users to view, create, download, deprecate, and delete an asset. Users with this permission have the same access as users with the Exchange Administrators permission, but on only a single asset. This permission is assigned by default to an asset creator. Use this permission to extend administrator permissions on an asset to an additional user.
 
 == Summary of Exchange Permissions
 
