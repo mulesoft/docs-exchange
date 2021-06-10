@@ -116,7 +116,7 @@ API Groups are created in Anypoint API Manager and published to Exchange.
 
 API Groups have major versions, such as 1.0.0, 2.0.0, or 3.0.0, but no minor or patch versions. Every version of an API Group has one or more API Group instances. Each API Group instance is a group of API instances that all have the same identity provider and the same environment type, either production or sandbox. An API Group instance can contain API instances from multiple business groups.
 
-Creating an API Group requires having the group administrator permission, and the asset administrator permission for each of the APIs in the group. This ensures that a group creator can change the underlying APIs between private and public visibility levels.
+Creating an API Group requires having the Group Administrator permission, and the Asset Administrator permission for each of the APIs in the group. This ensures that a group creator can change the underlying APIs between private and public visibility levels.
 
 If an API Group has any private APIs, you see a warning when publishing the API Group to your public portal. The public portal never shows private content. To ensure that all content in the API Group is published to the public portal, go to each API's page in Exchange and make the API public, and then publish the API Group.
 
