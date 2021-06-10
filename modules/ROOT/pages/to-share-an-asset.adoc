@@ -9,8 +9,6 @@ Exchange administrators and asset administrators can share an asset with another
 
 Any Exchange user can click the *Shared with me* link in the left navigation menu of Exchange to show all assets shared with their user account and all assets shared with their organization.
 
-To see who has access to an asset, open the asset portal page and click *Share*.
-
 == Share Assets with a User
 
 . If a user that you want to share an asset with is not in your organization, click *Access Management* > *Users* to add them to your organization.
