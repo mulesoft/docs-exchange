@@ -14,7 +14,11 @@ Access differs by Exchange type. In a private Exchange, the API instances list a
 
 Visibility for each instance is either private or public. All users in a business group's Exchange portal can see a public instance. Users can see a private instance if the asset is shared with them or if they have an Anypoint Platform permission that grants access.
 
-In a private Exchange, asset administrators have access to change the visibility of API instances and add new instances. Make an instance public with the visibility indicator. Edit the instance with the pencil icon. Delete the instance with the X icon.
+In a private Exchange, asset administrators have access to change the visibility of API instances and add new instances:
+
+* Make an instance public with the visibility indicator.
+* Edit the instance with the pencil icon.
+* Delete the instance with the X icon.
 
 REST APIs provide a mocking service with data to test API features. The mocking service is always public.
 
