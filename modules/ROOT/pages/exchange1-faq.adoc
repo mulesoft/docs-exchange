@@ -42,7 +42,7 @@ image::ex1-category-objects.png[Object categories settings buttons]
 +
 . Click Save Changes after editing terms, or Discard to quit any changes you made.
 
-Note: When you create a category, you must be in the Master Organization. If you create a category in a business group, the category does not appear.
+Note: When you create a category, you must be in the root organization. If you create a category in a business group, the category does not appear.
 
 
 == Can I publish whitepapers, Word docs, etc. that aren’t Mule projects or Connectors?
@@ -68,7 +68,7 @@ Package Explorer and click Anypoint Platform > Configure > Anypoint Studio > Aut
 
 == How can users view the content of a business group?
 
-Users must be assigned to the Exchange Viewer role. Users can view the master organization without being assigned to the Exchange Viewer role, but not business groups. If users are invited to a business group, they won't see other business groups until assigned Roles access.
+Users must be assigned to the Exchange Viewer role. Users can view the root organization without being assigned to the Exchange Viewer role, but not business groups. If users are invited to a business group, they won't see other business groups until assigned Roles access.
 
 To assign Exchange Viewer access, sign into Anypoint Platform and click Access Management > Roles. Click Exchange Viewers and the blue plus sign to add a user.
 
