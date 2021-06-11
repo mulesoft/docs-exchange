@@ -4,10 +4,10 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Anypoint Exchange provides the ability to publish assets in Exchange private and Exchange portal.
+Anypoint Exchange provides the ability to publish assets in private Exchange instances and Exchange public portals.
 
 . xref:to-create-an-asset.adoc[Create an Asset] - Create new assets in Exchange.
-. xref:to-describe-an-asset.adoc[Describe an Asset] - Add a description, additional pages, terms and conditions, tags, and change versions.
+. xref:to-describe-an-asset.adoc[Describe an Asset] - Add a description, additional pages, terms and conditions, and tags, and change versions.
 . xref:ex2-to-simulate-api-data.adoc[Simulate Data in REST APIs] - Use the Mocking Service to test OAS or RAML REST APIs with simulated data.
 . xref:to-download-an-asset.adoc[Download an Asset] - Copy the asset to your computer.
 . xref:to-manage-categories.adoc[Manage Categories] - Organize assets into categories.
