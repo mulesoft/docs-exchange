@@ -11,7 +11,7 @@ and Integration API is applied to assets of type REST API, SOAP API, and HTTP AP
 
 image::ex-categories-api-type.png[]
 
-To create a category, you must be either the master organization's Exchange Administrator or Organization Owner.
+To create a category, you must be either the root organization's Exchange Administrator or Organization Owner.
 
 When you have one or more categories defined in the *Settings* page, your organization's assets display the *Add Category* prompt.
 

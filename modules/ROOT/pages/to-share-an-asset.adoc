@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-share-an-asset-with-a-user.adoc
 
-Exchange administrators and asset administrators can share an asset with another user in their organization, with the whole organization, or with an external organization.
+Exchange administrators and asset administrators can share an asset with another user or team in their organization, with the whole organization, or with an external organization.
 
 Any Exchange user can click the *Shared with me* link in the left navigation menu of Exchange to show all assets shared with their user account and all assets shared with their organization.
 
@@ -14,13 +14,25 @@ Any Exchange user can click the *Shared with me* link in the left navigation men
 . If a user that you want to share an asset with is not in your organization, click *Access Management* > *Users* to add them to your organization.
 . Click an asset to show its details.
 . Click *Share*.
-. Begin typing the name of the person you want to share this asset with.
+. Begin typing the name of the person you want to have access to this asset.
 . Select that person in the list.
 . Select whether to grant the user viewer, contributor, or administrator rights.
-. Repeat Steps 4, 5, and 6 to share with additional users.
+. Add any additional users.
 . Click *Save*.
 
 You can also click *Share* to change who you are sharing the asset with or to stop sharing with one or more users.
+
+== Share Assets with a Team
+
+. Click an asset to show its details.
+. Click *Share*.
+. Begin typing the name of the team you want to have access to this asset.
+. Select that team in the list.
+. Select whether to grant the team viewer, contributor, or administrator rights.
+. Add any additional teams.
+. Click *Save*.
+
+To add and remove users on a team, or to grant a team viewer, contributor, or administrator access to all assets in a business group, use the xref:access-management::teams.adoc[teams settings in Anypoint Access Management].
 
 == Share Assets with Your Organization
 
@@ -60,7 +72,7 @@ When an asset is shared with an organization, email notification is sent to the 
 
 You can also click *Share* to change who you are sharing the asset with or to stop sharing with one or more organizations.
 
-Only internal users in the granting organization can request access to an API or gain the contributor or administrator roles.
+Only users internal to the granting organization can request access to an API or gain the contributor or administrator permissions.
 
 === Using Assets Shared by a Granting Organization
 

@@ -6,8 +6,7 @@ endif::[]
 Deprecating removes access to a version of an asset. The asset remains accessible for users.
 A deprecated asset can be reverted and returned to use.
 
-You must be an asset administrator, an organization owner or an Exchange administrator to use
-this feature. You can set these roles in the Access Management > Roles menu.
+Asset administrators, Exchange administrators, and organization owners have the authorization to deprecate an asset. Set these permissions in xref:access-management::users.adoc#grant-user-permissions[the Access Management section of Anypoint Platform].
 
 . Click the Settings icon at the upper right:
 +

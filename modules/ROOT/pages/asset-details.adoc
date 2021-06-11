@@ -35,7 +35,7 @@ image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-dow
 
 An Exchange administrator sets the groups this menu shows to each user.
 
-If you cannot find an asset in the current business group scopes, search in other scopes. In the left navigation bar click *All assets* (assets provided by MuleSoft and your own master organization), *Provided by MuleSoft*, or a business group scope.
+If you cannot find an asset in the current business group scopes, search in other scopes. In the left navigation menu click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
 
 == View REST API Elements in an Asset
 

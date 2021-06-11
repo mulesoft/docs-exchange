@@ -10,7 +10,7 @@ This document contains instructions and the necessary NGINX configuration for se
 
 Public portal domains must be registered in Exchange. To register your public portal's domain:
 
-. Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
+. Get an access token from an Anypoint Platform user account that has the Organization Administrator permission in the root organization:
 +
 [source,console]
 ----

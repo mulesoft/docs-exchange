@@ -1,16 +1,15 @@
-= Workflow: Share Assets
+= Workflow: Publish Assets
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Anypoint Exchange provides the ability to share assets in Exchange private and Exchange portal.
+Anypoint Exchange provides the ability to publish assets in private Exchange instances and Exchange public portals.
 
-. xref:to-create-an-asset.adoc[Create an Asset] - To share an asset, you need to create an asset in Exchange.
-. xref:to-describe-an-asset.adoc[Describe an Asset] - How to add a description, additional pages, terms and conditions, tags, and change versions.
+. xref:to-create-an-asset.adoc[Create an Asset] - Create new assets in Exchange.
+. xref:to-describe-an-asset.adoc[Describe an Asset] - Add a description, additional pages, terms and conditions, and tags, and change versions.
 . xref:ex2-to-simulate-api-data.adoc[Simulate Data in REST APIs] - Use the Mocking Service to test OAS or RAML REST APIs with simulated data.
 . xref:to-download-an-asset.adoc[Download an Asset] - Copy the asset to your computer.
-. xref:to-share-api-asset-to-portal.adoc[Share an asset to a public portal] - Lists API assets in a public portal so that external users can access the APIs.
 . xref:to-manage-categories.adoc[Manage Categories] - Organize assets into categories.
 . xref:to-delete-asset.adoc[Delete an Asset] - Remove an asset.
 . xref:to-change-raml-version.adoc[Change a RAML Version] - Update the version of a RAML asset.
@@ -19,4 +18,4 @@ Anypoint Exchange provides the ability to share assets in Exchange private and E
 
 == See Also
 
-*  xref:about-api-use.adoc[API Management] - Share assets programmatically.
+*  xref:about-api-use.adoc[API Management] - Publish assets programmatically.

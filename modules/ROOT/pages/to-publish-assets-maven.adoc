@@ -57,7 +57,7 @@ The following example shows how to publish a Mule 4 asset such as an application
  ...
 ----
 +
-If you are publishing your asset to the master organization, the group ID is the same as the organization ID.
+If you are publishing your asset to the root organization, the group ID is the same as the organization ID.
 The URL format is:
 +
 `+https://maven.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven+`
@@ -306,7 +306,7 @@ and add the Maven facade as a repository in the `repositories` section.
 
 Replace `ORGANIZATION_ID` with your organization ID.
 
-You can use `+https://maven.anypoint.mulesoft.com/api/v3/maven+` as a valid URL for the `+<url>+` value, because this is the default to publish to the master organization. In the EU, use `+https://maven.eu1.anypoint.mulesoft.com/api/v3/maven+` as the URL.
+You can use `+https://maven.anypoint.mulesoft.com/api/v3/maven+` as a valid URL for the `+<url>+` value, because this is the default to publish to the root organization. In the EU, use `+https://maven.eu1.anypoint.mulesoft.com/api/v3/maven+` as the URL.
 
 In the EU, the <repositories> section is:
 
