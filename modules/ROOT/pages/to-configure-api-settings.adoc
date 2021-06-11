@@ -4,15 +4,15 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Use Anypoint Exchange to configure whether API instances are public or private in a private Exchange or in an Exchange portal. For example, configure public or private visibility for proxies or policies associated with your API and set using API Manager.
+Use Anypoint Exchange to configure whether API instances are public or private in a private Exchange instance or in an Exchange public portal. For example, configure public or private visibility for proxies or policies associated with your API and set using API Manager.
 
 After you register an API from Exchange in API Manager, the instances for the API appear in Exchange in the API instances list in the navigation bar.
 
-Exchange also creates API instances for APIs managed by another API management program outside of Anypoint Platform.
+Exchange also creates API instances for APIs managed by another API management program besides Anypoint Platform.
 
-Visibility for each instance is either private or public. Users can see a private instance if the asset is shared with them or if they have an Anypoint Platform permission that grants access. All users accessing an Exchange public portal can see all public API instances. All instances in an Exchange public portal are read only.
+Visibility for each API instance is either private or public. Users can see a private API instance if the asset is shared with them or if they have an Anypoint Platform permission that grants access. All users accessing an Exchange public portal can see all public API instances. All API instances in an Exchange public portal are read only.
 
-In a private Exchange, asset administrators have access to change the visibility of API instances, and to add, edit, and delete instances.
+In a private Exchange instance, asset administrators have access to change the visibility of API instances, and to add, edit, and delete instances.
 
 REST APIs provide a mocking service with data to test API features. The mocking service is always public.
 
