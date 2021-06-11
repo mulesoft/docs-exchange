@@ -8,7 +8,7 @@ Exchange provides multiple ways to set up access management to provide collabora
 
 == Exchange Permissions
 
-To control access to assets in a business group, add users or teams to Exchange permissions role groups.
+To control access to assets in a business group, add users or teams to role groups for Exchange permissions.
 
 The following permissions pertain to every business group level:
 
@@ -18,13 +18,13 @@ Exchange Administrators:: Enables users to view, create, and download assets wit
 
 == Asset Permissions
 
-To control access to individual assets, add users or teams to asset permissions role groups.
+To control access to individual assets, add users or teams to role groups for asset permissions.
 
-The following permissions extend access on assets in addition to the permissions that a user has at the business group level:
+The following permissions extend access to assets in addition to the permissions that a user has at the business group level:
 
 Asset Viewers:: Enables users to view and download an asset. Users with this permission cannot edit asset portal content or share an asset with another user. Use this permission to invite a user outside your business group to view and download an asset.
 Asset Contributors:: Enables users to view, add a new version, and download an asset. Use this permission to invite a user outside your business group to view, download, and add edit portal content for an asset.
-Asset Administrators:: Enables users to view, create, download, deprecate, and delete an asset. Users with this permission have the same access as users with the Exchange Administrators permission, but on only a single asset. This permission is assigned by default to an asset creator. Use this permission to extend administrator permissions on an asset to an additional user.
+Asset Administrators:: Enables users to view, create, download, deprecate, and delete an asset. Users with this permission have the same access as users with the Exchange Administrators permission, but on only a single asset. This permission is assigned by default to an asset creator. Use this permission to extend administrator permissions to an asset to an additional user.
 
 == Summary of Exchange Permissions
 
