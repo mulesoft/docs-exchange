@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Use your organization's public portal to publish API assets for developers inside and outside your organization.
+Use your organization's public portal to publish API assets for viewing and use by developers inside and outside your organization.
 
 A public portal is visible to anyone who has the URL of the portal. The URL for a public portal starts with `+https://anypoint.mulesoft.com/exchange/portals/Domain_Name/+`.
 
