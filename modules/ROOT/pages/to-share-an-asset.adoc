@@ -32,7 +32,7 @@ You can also click *Share* to change who you are sharing the asset with or to st
 . Add any additional teams.
 . Click *Save*.
 
-To add and remove users on a team, or grant a team viewer, contributor, or administrator access to all assets in a business group, use the xref:access-management::teams.adoc[teams settings in Anypoint Access Management].
+To add and remove users on a team, or to grant a team viewer, contributor, or administrator access to all assets in a business group, use the xref:access-management::teams.adoc[teams settings in Anypoint Access Management].
 
 == Share Assets with Your Organization
 
@@ -72,7 +72,7 @@ When an asset is shared with an organization, email notification is sent to the 
 
 You can also click *Share* to change who you are sharing the asset with or to stop sharing with one or more organizations.
 
-Only internal users in the granting organization can request access to an API or gain the contributor or administrator permissions.
+Only users internal to the granting organization can request access to an API or gain the contributor or administrator permissions.
 
 === Using Assets Shared by a Granting Organization
 
