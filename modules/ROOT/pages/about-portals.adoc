@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Exchange public portals are accessible anyone using the internet, enabling developers outside of an organization to access that organization's REST, SOAP, and HTTP APIs. Users who are not logged in can download assets from public portals.
+Exchange public portals are accessible to anyone using the internet, enabling developers outside of an organization to access that organization's REST, SOAP, and HTTP APIs. Users who are not logged in can download assets from public portals.
 
 Exchange public portals replace what used to be known as _developer portals_.
 
