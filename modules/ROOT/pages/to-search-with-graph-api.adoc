@@ -65,6 +65,8 @@ The query field contains the GraphQL query, which allows fetching more asset fie
     description
     name
     type
+    contactName
+    contactEmail
     tags {
       value
       key
@@ -187,6 +189,8 @@ The following filters let you refine query output:
 |dependencies { groupId, assetId, version, name, type } |Returns the assets the listed asset depends on.
 |files { classifier, packaging, externalLink, md5 } |File information.
 |name |Asset name.
+|contactName |Name of a person to contact about the asset.
+|contactEmail |Email address of a person to contact about the asset.
 |numberOfRates |The number of star ratings for an asset.
 |organizationId |Organization ID for an asset.
 |rating |Star rating value for an asset.

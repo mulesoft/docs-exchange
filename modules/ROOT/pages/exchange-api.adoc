@@ -105,6 +105,8 @@ Each API call to create an asset specifies multipart properties:
 |type |The type of asset to be created. |Required if the type cannot be inferred from the file extension
 |dependencies |A string of comma-separated dependencies, defined as `dependencies=GROUP_ID:ASSET_ID:VERSION,GROUP_ID:ASSET_ID:VERSION`. |Optional
 |keywords |A string of comma-separated values to be saved as an asset's attributes, for example, `keywords=api,raml,auth,jwt,token`. Search queries can find assets by keyword. |Optional
+|contactName |Name of a person to contact about the asset. |Optional
+|contactEmail |Email address of a person to contact about the asset. |Optional
 |properties |Some asset types require additional properties specified with the properties prefix, such as `apiVersion`, `mainFile`, or `assetLink`, for example, `properties.apiVersion = v1`. |Required for some properties and some asset types
 |===
 
