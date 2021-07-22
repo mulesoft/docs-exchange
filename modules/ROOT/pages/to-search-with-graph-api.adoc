@@ -37,6 +37,20 @@ curl -X POST \
 
 See also https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/api/v1/pages/Authentication/[Access Management API Authentication].
 
+== Connected App Authentication
+Authorization works using a Connected Application.
+In order to use it a Basic Authorization should be provided where
+* the username should be defined as:  ~~~Client~~~
+* the secret should be defined as: clientId~?~clientSecret
+
+To specify the connected app authentication, define it as an authorization field in the Query Variables
++
+image::ex2-edit-app2.png[Screenshot - Connected App Authentication]
++
+
+To see how to create and configure your Connected Application please visit 
+* xref:connected-app-authentication.adoc[Create a Connected App] - Create Connected Application to use in Exchange
+
 == Graph API Access URL
 
 You can access the Graph API at the `+https://anypoint.mulesoft.com/graph/api/v1/graphql+` URL. To search

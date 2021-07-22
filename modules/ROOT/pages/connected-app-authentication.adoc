@@ -1,0 +1,10 @@
+== Create a Connected Application to use in Exchange
+
+The connected application allows access to Exchange using the client application credentials. It won’t be necessary to send a token to execute the Exchange requests, only using the clientId and clientSecret credentials will be enough.
+
+. Login in Anypoint
+. Go to Access Management, then to Connected Apps and click on Create App
+. Choose App acts on its own behalf (client credentials) and add at least the following Scopes to it
+  * Exchange Administrator or Exchange Contributor
+  * Profile
+. Click on Save and copy the Client Id and Client Secret of the Connected App to use it
