@@ -264,8 +264,8 @@ This value tells the platform that you're using a token.
 
 Authentication works using a Connected Application.
 In order to use it a Basic authentication should be provided where
-* the username should be defined as: `~~~Client~~~`
-* the secret should be defined as: `clientId~?~clientSecret`
+- the username should be defined as: `\~~~Client\~~~`
+- the secret should be defined as: `clientId\~?~clientSecret`
 
 Also, the connected application could be included in your repository into the settings.xml file in a similar way:
 
@@ -287,7 +287,7 @@ http://maven.apache.org/xsd/settings-1.0.0.xsd">
 ```
 
 To see how to create and configure your Connected Application please visit 
-* xref:connected-app-authentication.adoc[Create a Connected App] - Create Connected Application to use in Exchange
+xref:connected-app-authentication.adoc[Create a Connected App]
 
 
 == Dependencies external to Exchange
