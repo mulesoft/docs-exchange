@@ -40,16 +40,16 @@ See also https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97b
 == Connected App Authentication
 Authorization works using a Connected Application.
 In order to use it a Basic Authorization should be provided where
-* the username should be defined as:  ~~~Client~~~
-* the secret should be defined as: clientId~?~clientSecret
+- the username should be defined as: `\~~~Client\~~~`
+- the secret should be defined as: `clientId\~?~clientSecret`
 
 To specify the connected app authentication, define it as an authorization field in the Query Variables
-+
-image::ex2-edit-app2.png[Screenshot - Connected App Authentication]
-+
+
+image::ex2-connect-app-graph.png[Screenshot - Connected App Authentication]
+
 
 To see how to create and configure your Connected Application please visit 
-* xref:connected-app-authentication.adoc[Create a Connected App] - Create Connected Application to use in Exchange
+xref:connected-app-authentication.adoc[Create a Connected App]
 
 == Graph API Access URL
 
