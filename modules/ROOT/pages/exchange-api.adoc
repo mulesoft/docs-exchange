@@ -154,7 +154,7 @@ Authentication works using a Connected Application.
 In order to use it a Basic Authentication should be provided where
 
 - the username should be defined as: `\~~~Client\~~~`
-- the secret should be defined as: `clientId\~?~clientSecret`
+- the password should be defined as: `clientId\~?~clientSecret`
 
 To see how to create and configure your Connected Application please visit 
 xref:connected-app-authentication.adoc[Create a Connected App]

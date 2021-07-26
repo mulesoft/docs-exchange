@@ -265,7 +265,7 @@ This value tells the platform that you're using a token.
 Authentication works using a Connected Application.
 In order to use it a Basic authentication should be provided where
 - the username should be defined as: `\~~~Client\~~~`
-- the secret should be defined as: `clientId\~?~clientSecret`
+- the password should be defined as: `clientId\~?~clientSecret`
 
 Also, the connected application could be included in your repository into the settings.xml file in a similar way:
 
