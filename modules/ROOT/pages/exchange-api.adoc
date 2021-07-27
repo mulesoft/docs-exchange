@@ -33,7 +33,9 @@ You must have a unique artifact ID and organization ID to publish your asset. Th
 Perform these tasks to publish an asset to Exchange and add metadata using Exchange APIs:
 
 . <<find-your-organization-id>>
-. <<obtain-an-access-token>>
+. <<authentication>>
+.. <<obtain-an-access-token>>
+.. <<use-connected-application-authentication>>
 . <<publish-an-asset>>
 .. <<specify-asset-properties>>
 .. <<sync-and-async-publication>>
@@ -56,10 +58,13 @@ To find your organization ID:
 . Click the name of the top-level organization or a business group, and view your organization ID in the organization information screen.
 . Copy the organization ID and use it when you try out examples.
 
+[[authentication]]
+== Authentication
+
+The Exchange API requires authentication with an access token or a connected application.
+
 [[obtain-an-access-token]]
 == Obtain an Access Token
-
-Invoking any Exchange API requires an access token. Your organization administrator sets the expiration time for access tokens to a value from 15 to 180 minutes. If you perform a search or other operation that requires more time, you must request an additional token.
 
 . Log in to Anypoint Platform.
 . Obtain an access token with a cURL command.
@@ -80,6 +85,18 @@ curl --location --request POST 'https://anypoint.mulesoft.com/accounts/login' \
 ----
 
 Use this access token in your API calls.
+
+Your organization administrator sets the expiration time for access tokens to a value from 15 to 180 minutes. If you perform a search or other operation that requires more time, you must request an additional token.
+
+[[use-connected-application-authentication]]
+== Use Connected Application Authentication
+
+To use connected application authentication:
+
+. xref:connected-app-authentication.adoc[Create a connected application].
+. Provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientId\~?~clientSecret`.
+.. Replace `clientId` with the client ID.
+.. Replace `clientSecret` with the client secret.
 
 [[publish-an-asset]]
 == Publish an Asset
@@ -148,16 +165,6 @@ If the asset is published asynchronously, then a response like this is returned:
 ----
 
 The endpoint `publicationStatusLink` provides the asset publication status.
-
-== Connected App Authentication
-Authentication works using a Connected Application.
-In order to use it a Basic Authentication should be provided where
-
-- the username should be defined as: `\~~~Client\~~~`
-- the password should be defined as: `clientId\~?~clientSecret`
-
-To see how to create and configure your Connected Application please visit 
-xref:connected-app-authentication.adoc[Create a Connected App]
 
 [[describe-your-assets]]
 == Describe Your Assets
