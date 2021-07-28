@@ -202,7 +202,7 @@ To set documentation pages, create a documentation directory under `src/main/res
 }
 ----
 
-Add the Maven Assembly Plugin in the `pom.xml` plugin section to package the documentation folder, and create a Maven Assembly Plugin configuration file like this:
+Add the Maven Assembly Plugin in the `pom.xml` plugin section to package the documentation folder, and create a Maven Assembly Plugin configuration file such as this:
 
 [source,xml,linenums]
 ----
