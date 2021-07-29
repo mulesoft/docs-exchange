@@ -158,11 +158,11 @@ The endpoint `publicationStatusLink` provides the asset publication status.
 
 This example shows how to create your asset and set the mutable data describing it in the same request. The mutable data of an asset includes categories, custom fields, tags, and documentation pages.
 
-This example publishes the category and custom field, which have the keys `categoryKey` and `fieldKey`. They must be configured for your organization. Publication fails if they are not configured for your organization or if they are not deleted from the pom.
+This endpoint creates a new asset. If the asset already exists, the request fails with error 409 (conflict). Do not try to change the mutable data of an existing version. Instead, create a new patch version with the updated mutable data. For example, if the current version is 1.2.3, create version 1.2.4.
 
-It is not possible to submit new mutable data to an existing patch version such as 1.2.3. Instead, create a new patch version such as 1.2.4 with updated mutable data such as categories.
+This example publishes the category and custom field, which have the keys `categoryKey` and `fieldKey`. They must be configured for your organization. Publication fails if they are not configured for your organization.
 
-The documentation archive file sent as `files.docs.zip` contains each page as a Markdown file such as `Getting Started.md` in the root directory of the archive. Replace `Getting Started` with the title of the page. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
+The documentation archive file sent as `files.docs.zip` contains each page as a Markdown file such as `Getting Started.md` in the root directory of the archive. Replace `Getting Started` with the title of the page. To include a terms and conditions page, put the content in a file named `terms.md`. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
 
 [source,console]
 ----
