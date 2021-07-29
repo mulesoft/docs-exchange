@@ -53,9 +53,11 @@ To use connected application authentication:
 [source,json]
 ----
 {
-  "authorization": "Basic fn5+Q2xp...jcmV0"
+  "authorization": "Basic ABC123"
 }
 ----
+
+Replace `ABC123` with the base64 encoding of the concatenation of the client ID and client secret: `~~~Client~~~:clientId~?~clientSecret`
 
 == Graph API Access URL
 
