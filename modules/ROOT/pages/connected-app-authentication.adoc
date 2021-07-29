@@ -1,4 +1,4 @@
-== Connected Application Authentication
+= Connected Application Authentication
 
 Connected application authentication allows access to Exchange using the client application credentials of client ID and client secret, so you can execute Exchange requests without sending a token.
 
