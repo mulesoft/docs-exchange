@@ -181,6 +181,8 @@ curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/or
 --form 'tags="1, 2, 3, 4"' \
 --form 'categories.categoryKey="value1, value2"' \
 --form 'fields.fieldKey="value1, value2"' \
+--form 'contactName="Max Mule"' \
+--form 'contactEmail="maxmule@example.com"' \
 --form 'files.docs.zip=@"/file-path/docs.zip"'
 ----
 
