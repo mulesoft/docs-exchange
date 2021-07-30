@@ -178,11 +178,11 @@ mvn deploy
 
 == Publish an Asset with Mutable Data
 
-The Maven Facade API supports creating your asset and setting the mutable data describing it in the same request. The mutable data of an asset includes tags, custom fields, categories, and documentation pages.
+The Maven Facade API enables you to both create your asset and set the mutable data describing it in the same request. The mutable data of an asset includes tags, custom fields, categories, and documentation pages.
 
 The GitHub repository of Exchange documentation examples includes a complete example of creating a https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/mule-app-with-docs-and-tags[Mule application with documentation and tags, role=external, window=blank].
 
-Declare tags, custom fields, and categories in the `pom.xml` file under the properties section, with the XML property `key` set to the key of the custom field or category:
+Declare tags, custom fields, and categories in the `pom.xml` file in the properties section, with the XML property `key` set to the key of the custom field or category:
 
 [source,xml,linenums]
 ----
@@ -195,7 +195,7 @@ Declare tags, custom fields, and categories in the `pom.xml` file under the prop
     ...
 ----
 
-To set documentation pages, create a documentation directory under `src/main/resources`. The documentation directory contains each page as a Markdown file such as `Getting Started.md`. Replace `Getting Started` with the title of the page. To include a terms and conditions page, put the content in a file named `terms.md`. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
+To set documentation pages, create a documentation directory in `src/main/resources`. In the documentation directory, include each page as a Markdown file with a name such as `Getting Started.md`. Replace `Getting Started` with the title of the page. To include a terms and conditions page, put the content in a file named `terms.md`. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
 
 [source,console]
 ----
@@ -232,7 +232,7 @@ Add the Maven Assembly Plugin in the `pom.xml` plugin section to package the doc
 </plugin>
 ----
 
-Create an `assembly.xml` file under `src/main/resources/docs-assembly` such as this:
+Create an `assembly.xml` file in `src/main/resources/docs-assembly`:
 
 [source,xml,linenums]
 ----
