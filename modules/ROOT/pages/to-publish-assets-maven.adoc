@@ -176,6 +176,85 @@ mvn deploy
 ----
 . Search Exchange for the asset ID to find the asset.
 
+== Publish an Asset with Mutable Data
+
+The Maven Facade API enables you to both create your asset and set the mutable data describing it in the same request. The mutable data of an asset includes tags, custom fields, categories, and documentation pages.
+
+The GitHub repository of Exchange documentation examples includes a complete example of creating a https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/template-with-mutable-data[Mule application template with documentation and tags, role=external, window=blank].
+
+Declare tags, custom fields, and categories in the `pom.xml` file in the properties section, with the XML property `key` set to the key of the custom field or category:
+
+[source,xml,linenums]
+----
+    ...
+    <properties>
+        <categories key="categoryKey">someValue</categories>
+        <fields key="fieldKey">someValue</fields>
+        <tags>tag1,tag2,tag3</tags>
+    </properties>
+    ...
+----
+
+To set documentation pages, create a documentation directory in `src/main/resources`. In the documentation directory, include each page as a Markdown file with a name such as `Getting Started.md`. Replace `Getting Started` with the title of the page. To include a terms and conditions page, put the content in a file named `terms.md`. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
+
+[source,console]
+----
+{
+ "pageOrder": ["home", "Getting Started", "Examples"]
+}
+----
+
+Add the Maven Assembly Plugin in the `pom.xml` plugin section to package the documentation folder, and create a Maven Assembly Plugin configuration file such as this:
+
+[source,xml,linenums]
+----
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-assembly-plugin</artifactId>
+    <version>2.6</version>
+    <configuration>
+        <appendAssemblyId>true</appendAssemblyId>
+    </configuration>
+    <executions>
+        <execution>
+            <id>create-distribution</id>
+            <phase>package</phase>
+            <goals>
+                <goal>single</goal>
+            </goals>
+            <configuration>
+                <descriptors>
+                    <descriptor>/src/main/resources/docs-assembly/assembly.xml</descriptor>
+                </descriptors>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+----
+
+Create an `assembly.xml` file in `src/main/resources/docs-assembly`:
+
+[source,xml,linenums]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+   <id>docs</id>
+   <formats>
+       <format>zip</format>
+   </formats>
+   <includeBaseDirectory>false</includeBaseDirectory>
+   <fileSets>
+       <fileSet>
+           <directory>${project.basedir}/src/main/resources/docs</directory>
+           <outputDirectory>/</outputDirectory>
+           <useDefaultExcludes>true</useDefaultExcludes>
+       </fileSet>
+   </fileSets>
+</assembly>
+----
+
 == Publish a Custom Asset
 
 Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is 0.0.13.
