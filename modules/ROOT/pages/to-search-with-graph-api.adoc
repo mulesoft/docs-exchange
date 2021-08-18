@@ -45,19 +45,22 @@ See also https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97b
 To use connected application authentication:
 
 . xref:connected-app-authentication.adoc[Create a connected application].
-. Provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientId\~?~clientSecret`.
+. Choose whether to use basic authentication or query variable authentication.
++
+If both basic authentication and query variable authentication are set, the API uses basic authentication and ignores the query variable authentication.
+. To use basic authentication, provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientId\~?~clientSecret`.
 .. Replace `clientId` with the client ID.
 .. Replace `clientSecret` with the client secret.
-. Define the connected application authentication as an authorization field in the query variables:
-
+. To use query variable authentication, define the connected application authentication as an authorization field in the query variables:
++
 [source,json]
 ----
 {
   "authorization": "Basic ABC123"
 }
 ----
-
-Replace `ABC123` with the base64 encoding of the concatenation of the client ID and client secret: `~~~Client~~~:clientId~?~clientSecret`
++
+Replace `ABC123` with the base64 encoding of the concatenation of the client ID and client secret: `\~~~Client\~~~:clientId\~?~clientSecret`
 
 == Graph API Access URL
 
