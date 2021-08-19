@@ -2,7 +2,7 @@
 
 Create a maven client settings file: `~/.m2/settings.xml`
 
-### Use Anypoint Platform credentials
+### Use Anypoint Platform Credentials
 
 Configure your credentials for the Exchange Maven Facade API:
 
@@ -52,7 +52,7 @@ Replace `ACCESS_TOKEN` with the Core Services access token.
 </settings>
 ```
 
-### Use connected application authentication:
+### Use Connected Application Authentication
 
 - Create a connected application (_App acts on its own behalf (client credentials)_) and set either the scope of _Exchange Administrator_ or the scope of _Exchange Contributor_.
 - Define the username as `~~~Client~~~` and the password as `clientId~?~clientSecret`.
@@ -89,7 +89,7 @@ These examples show how to configure your POM file.
 
 For complete examples, see the section [Examples](../Examples).
 
-### Use mule-maven-plugin to publish Mule 4 assets
+### Use mule-maven-plugin to Publish Mule 4 Assets
 
 The latest version of this plugin is `3.5.0`.
 
@@ -115,7 +115,7 @@ This example packages a `mule-application` asset.
 
 _ Note: _`mule-maven-plugin`_ is integrated with _`exchange-mule-maven-plugin`_._
 
-### Use exchange-mule-maven-plugin to publish Custom assets
+### Use exchange-mule-maven-plugin to Publish Custom Assets
 
 The latest version of this plugin is `0.0.13`.
 
