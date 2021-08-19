@@ -1,35 +1,59 @@
-## Overview
+These examples show how to upload an asset in Exchange using Maven Facade API v3, mule-maven-plugin, and exchange-mule-maven-plugin.
 
-Use the Exchange Maven Facade API to interact with Exchange by using the Maven client to publish and consume Exchange assets as Maven dependencies. Use the Exchange Maven Facade API v3 to publish any type that can be published using [Mule Maven Plugin ](https://docs.mulesoft.com/mule-runtime/4.3/mmp-concept), including Mule 4 applications, templates, examples, and policies. Additionally, you can publish custom assets.
+Each example is boilerplate. For successful publication, you must replace the variables that specify the asset, including at least the organizationId (YOUR\_ORG\_ID). The documentation repository includes [a command to replace them automatically](https://github.com/mulesoft-labs/exchange-documentation-samples#configure-the-groupid-of-the-anypoint-organization-where-you-will-be-publishing-assets).
 
-Using the Exchange Maven Facade API version 3 to publish assets to Exchange requires the Mule Maven plugin version 3.5.0 or later.
+The examples are in this repository: [https://github.com/mulesoft-labs/exchange-documentation-samples](https://github.com/mulesoft-labs/exchange-documentation-samples)
 
-## Differences between versions 1, 2, and 3
+Before running the examples, open a terminal and execute this command to clone the project:
 
-Maven Facade version 1 supports publishing and consuming Exchange assets as Maven dependencies, including apps, templates, examples, connectors, and policies. Maven Facade version 2 supports consuming RAML API specifications.
+`git clone git@github.com:mulesoft-labs/exchange-documentation-samples.git`
 
-Maven Facade API version 3 is powered by our new publication engine and supports all current features, including custom assets and publication feedback.
+## Upload a mule-app
 
-To integrate a Maven client with Maven Facade API version 3, configure a Maven plugin to execute the necessary publication tasks. During the publication process, the API displays its status. If a publication fails, the API displays a list of user friendly errors explaining the problem. After a publication completes successfully, the API provides a link to the published asset.
+This project shows how to publish a simple Mule application to Exchange using the Exchange Maven Facade API version 3.
 
-Maven Facade API must be used through Maven plugins, and not as a REST API.
+1. Execute this command: `cd exchange-documentation-samples/mule-app`
+2. Follow the instructions in this [readme](https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/mule-app).
 
-## Supported types
+## Upload an example
 
-### Use mule-maven-plugin to publish Mule 4 assets, including:
+This project shows how to publish a simple Mule application example to Exchange using the Exchange Maven Facade API version 3. It's similar to the Mule application project, but in this example, the asset type is `Example`. Exchange _Examples_ are applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
 
-- Mule applications
-- Templates
-- Examples
-- Policies
+1. Execute this command: `cd exchange-documentation-samples/example`
+2. Follow the instructions in this [readme](https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/example).
 
-### Use exchange-mule-maven-plugin to publish:
+## Upload a template
 
-- Custom assets
+This application shows how to publish a simple Mule application template to Exchange using the Exchange Maven Facade API version 3. It's similar to the Mule application project, but in this example, the asset type is `Template`. Exchange _Templates_ are packaged integration patterns built on best practices to address common use cases.
 
-## API Prerequisites and Dependencies
+1. Execute this command: `cd exchange-documentation-samples/template`
+2. Follow the instructions in this [readme](https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/template).
 
-- This API requires an Anypoint Platform account.
-- To configure a Maven client, set your Anypoint Platform username and password in this file: `~/.m2/settings.xml`
-- To publish an asset with this API, your Anypoint Platform account must have the role Exchange Contributor or the role Exchange Administrator.
-- This API works with Mavenized projects, including Mule 4 applications, templates, examples, connectors, and policies.
+## Upload a policy
+
+This project shows how to publish a simple Mule policy to Exchange using the Exchange Maven Facade API version 3.
+
+1. Execute this command: `cd exchange-documentation-samples/policy`
+2. Follow the instructions in this [readme](https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/policy).
+
+## Upload Custom assets
+
+The Exchange Maven Facade API version 3 supports the publication of custom assets.
+
+After you configure the Maven plugin correctly, the plugin will sync with the API to notify it when the publishing process should begin, and will also provide updates on the asset publication’s state until the publication is complete.
+
+### Without files (parent pom)
+
+This project shows how to publish a simple custom asset that contains only a single POM file. The main use case for this asset type in the Maven experience is uploading a parent POM file to Exchange. Then the file can be used in any type of Maven projects, such as a connector or a Mule application.
+
+1. Execute this command: `cd exchange-documentation-samples/custom-asset`
+2. Follow the instructions in this [readme](https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/custom-asset).
+
+### With files (Java library)
+
+This project shows how to publish a simple custom asset to Exchange using the Exchange Maven Facade API version 3.
+
+Custom assets can package any Maven reusable component. In this example, the custom asset is a Java library.
+
+1. Execute this command: `cd exchange-documentation-samples/custom-lib`
+2. Follow the instructions in this [readme](https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/custom-asset).
