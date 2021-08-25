@@ -146,6 +146,36 @@ In the EU, use:
 +
 The `<id>` and `<name>` elements are arbitrary names that you create to identify the repository and any other organizational identifiers. The `<id>` value must be the same in the `pom.xml` file as in the `~/.m2/settings.xml` file. The `<id>` value connects the `pom.xml` file with information to log in to the organization's URL.
 +
+. Add the Maven facade as a repository in the `settings.xml` file in your Maven `.m2` directory:
++
+[source,xml,linenums]
+----
+ ...
+  <repository>
+    <id>Repository</id>
+    <name>Corporate Repository</name>
+    <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven</url>
+    <layout>default</layout>
+  </repository>
+  ...
+----
++
+In the EU, use:
++
+[source,xml,linenums]
+----
+ ...
+  <repository>
+    <id>Repository</id>
+    <name>Corporate Repository</name>
+    <url>https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven</url>
+    <layout>default</layout>
+  </repository>
+  ...
+----
++
+The `<id>` and `<name>` elements are arbitrary names that you create to identify the repository and any other organizational identifiers. The `<id>` value must be the same in the `pom.xml` file as in the `~/.m2/settings.xml` file. The `<id>` value connects the `pom.xml` file with information to log in to the organization's URL.
++
 . Update the `settings.xml` file in your Maven `.m2` directory.
 +
 After you install Maven, the `mvn clean` command creates the `.m2` directory. The directory is `~/.m2` on macOS or Linux and `<default-drive>\Users\YOUR_USER_NAME\.m2` on Windows. It contains your Anypoint Platform credentials. The Maven client reads the settings file when Maven runs.
@@ -330,7 +360,7 @@ This value tells the platform that you're using a token.
     <server>
       <id>Repository</id>
       <username>~~~Token~~~</username>
-      <password>ACCESS_TOKEN</password>
+      <password>01234567-89ab-cdef-0123-4567890abcde</password>
     </server>
   </servers>
 </settings>
