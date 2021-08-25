@@ -360,7 +360,7 @@ This value tells the platform that you're using a token.
     <server>
       <id>Repository</id>
       <username>~~~Token~~~</username>
-      <password>01234567-89ab-cdef-0123-4567890abcde</password>
+      <password>01234567-89ab-cdef-0123-456789abcdef</password>
     </server>
   </servers>
 </settings>
