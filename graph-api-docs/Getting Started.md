@@ -44,5 +44,4 @@ curl -X POST \
 }
 ```
 
-
 For more information about the available ways to query the graph, see [Querying the graph](../Querying%20the%20graph/).
