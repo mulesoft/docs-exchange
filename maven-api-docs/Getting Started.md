@@ -54,7 +54,7 @@ Replace `ACCESS_TOKEN` with the Core Services access token.
 
 ### Use Connected Application Authentication
 
-- Create a connected application (_App acts on its own behalf (client credentials)_) and set either the scope of _Exchange Administrator_ or the scope of _Exchange Contributor_.
+- Create a connected application (_App acts on its own behalf (client credentials)_) and either provide read-only access by setting the scope of _Exchange Viewer_, or provide read and write access by setting either the scope of _Exchange Administrator_ or the scope of _Exchange Contributor_.
 - Define the username as `~~~Client~~~` and the password as `clientId~?~clientSecret`.
 - Include the connected application in the file `settings.xml` in your repository:
 
