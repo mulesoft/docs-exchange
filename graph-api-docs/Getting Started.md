@@ -26,5 +26,23 @@ curl -X POST \
   -d '{"query":"{assets(minMuleVersion:\"4.0.0\") {groupId assetId version}}"}'
 ```
 
+### Use Connected Application Authentication
+
+- Create a connected application (_App acts on its own behalf (client credentials)_) and set either the scope of _Exchange Administrator_ or the scope of _Exchange Contributor_.
+- Copy the clientId and clientSecret of the connected application.
+- Use basic authentication, defining the username as `~~~Client~~~` and the password as `clientId~?~clientSecret`.
+    - Replace `clientId` with the client ID.
+    - Replace `clientSecret` with the client secret.
+- send the request specifying the authorization in the variables object like the following example. Replace `ABC123` with the base64 encoding of the concatenation of the client ID and client secret: `~~~Client~~~:clientId~?~clientSecret`
+
+```
+{
+  "query": "{{GRAPH QUERY}}", // This field contains the graph query 
+  "variables": {
+    "authorization":"Basic {{ABC123}}" // Send your Core Service access token (optional)
+  }
+}
+```
+
 
 For more information about the available ways to query the graph, see [Querying the graph](../Querying%20the%20graph/).
