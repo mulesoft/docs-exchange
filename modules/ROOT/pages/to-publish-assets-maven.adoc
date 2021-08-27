@@ -345,8 +345,8 @@ This value tells the platform that you're using a token.
 To use connected application authentication:
 
 . xref:connected-app-authentication.adoc[Create a connected application].
-. Provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientId\~?~clientSecret`.
-.. Replace `clientId` with the client ID.
+. Provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`.
+.. Replace `clientID` with the client ID.
 .. Replace `clientSecret` with the client secret.
 
 Include the connected application in the file `settings.xml` in your repository:
@@ -362,7 +362,7 @@ http://maven.apache.org/xsd/settings-1.0.0.xsd">
     <server>
       <id>Repository</id>
       <username>~~~Client~~~</username>
-      <password>clientId~?~clientSecret</password>
+      <password>clientID~?~clientSecret</password>
     </server>
   </servers>
 </settings>
