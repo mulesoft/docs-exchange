@@ -48,8 +48,8 @@ To use connected application authentication:
 . Choose whether to use basic authentication or query variable authentication.
 +
 If both basic authentication and query variable authentication are set, the API uses basic authentication and ignores the query variable authentication.
-. To use basic authentication, provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientId\~?~clientSecret`.
-.. Replace `clientId` with the client ID.
+. To use basic authentication, provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`.
+.. Replace `clientID` with the client ID.
 .. Replace `clientSecret` with the client secret.
 . To use query variable authentication, define the connected application authentication as an authorization field in the query variables:
 +
@@ -60,7 +60,7 @@ If both basic authentication and query variable authentication are set, the API 
 }
 ----
 +
-Replace `ABC123` with the base64 encoding of the concatenated client ID and client secret: `\~~~Client\~~~:clientId\~?~clientSecret`
+Replace `ABC123` with the base64 encoding of the concatenated client ID and client secret: `\~~~Client\~~~:clientID\~?~clientSecret`
 
 == Graph API Access URL
 
