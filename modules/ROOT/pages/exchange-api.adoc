@@ -95,8 +95,8 @@ Your organization administrator sets the expiration time for access tokens to a 
 To use connected application authentication:
 
 . xref:connected-app-authentication.adoc[Create a connected application].
-. Provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientId\~?~clientSecret`.
-.. Replace `clientId` with the client ID.
+. Provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`.
+.. Replace `clientID` with the client ID.
 .. Replace `clientSecret` with the client secret.
 
 [[publish-an-asset]]
