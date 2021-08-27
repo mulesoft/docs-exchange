@@ -60,7 +60,7 @@ If both basic authentication and query variable authentication are set, the API 
 }
 ----
 +
-Replace `ABC123` with the base64 encoding of the concatenation of the client ID and client secret: `\~~~Client\~~~:clientId\~?~clientSecret`
+Replace `ABC123` with the base64 encoding of the concatenated client ID and client secret: `\~~~Client\~~~:clientId\~?~clientSecret`
 
 == Graph API Access URL
 
