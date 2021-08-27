@@ -1,15 +1,15 @@
 = Connected Application Authentication
 
-Connected application authentication allows access to Exchange using the client application credentials of client ID and client secret, so you can execute Exchange requests without sending a token.
+Connected application authentication enables access to Exchange using the client application credentials of client ID and client secret, so you can execute Exchange requests without sending a token.
 
 To create a new connected application:
 
-. Log in to Anypoint.
-. Go to *Access Management* > *Connected Apps* > *Create App*.
-. Choose "App acts on its own behalf (client credentials)".
+. Log in to the Anypoint Platform.
+. Navigate to *Access Management* > *Connected Apps* > *Create App*.
+. Choose *App acts on its own behalf (client credentials)*.
 . To provide read and write access, ensure the application has either the scope *Exchange Administrator* or the scope *Exchange Contributor*.
 +
 To provide read-only access, ensure the application has the scope *Exchange Viewer*.
 . Click *Save* and copy the client ID and client secret of the connected application.
 
-To use connected application authentication, provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientId\~?~clientSecret`. Replace `clientId` with the client ID. Replace `clientSecret` with the client secret.
+To use connected application authentication, provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`. Replace `clientID` with the client ID. Replace `clientSecret` with the client secret.
