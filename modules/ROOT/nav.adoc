@@ -23,6 +23,7 @@
  ** xref:exchange-api.adoc[Publish Assets Using the Exchange API]
  ** xref:to-publish-assets-maven.adoc[Publish Assets Using Maven]
  ** xref:to-search-with-graph-api.adoc[Search Using the Graph API]
+ ** xref:connected-app-authentication.adoc[Connected Application Authentication]
 * xref:about-documenting-an-api.adoc[Document an API]
  ** xref:to-use-api-notebook.adoc[Document an Asset Using API Notebook]
  ** xref:to-configure-api-settings.adoc[Configure API Instances]

@@ -308,6 +308,10 @@ The error looks similar to this:
 
 == Publish and Consume Federated Assets
 
+Publishing and consuming federated assets requires token authentication or connected application authentication.
+
+To use token authentication:
+
 . xref:access-management::saml-bearer-token.adoc[Get an API bearer token by using a SAML assertion].
 +
 This is your access token.
@@ -337,6 +341,32 @@ This value tells the platform that you're using a token.
 ----
 +
 . Save the `settings.xml` file.
+
+To use connected application authentication:
+
+. xref:connected-app-authentication.adoc[Create a connected application].
+. Provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`.
+.. Replace `clientID` with the client ID.
+.. Replace `clientSecret` with the client secret.
+
+Include the connected application in the file `settings.xml` in your repository:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 
+http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    ...
+    <server>
+      <id>Repository</id>
+      <username>~~~Client~~~</username>
+      <password>clientID~?~clientSecret</password>
+    </server>
+  </servers>
+</settings>
+```
 
 == Dependencies external to Exchange
 
