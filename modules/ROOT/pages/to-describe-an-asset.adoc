@@ -105,6 +105,8 @@ All page names are validated:
 * Page names cannot contain these characters: `@` `*` `+` `/` `_` `\`
 * Page names cannot start with `.`
 
+When you rename a documentation page, Exchange automatically creates a new URL for the page and a redirect from the old URL to the new URL.
+
 
 === Specify Terms and Conditions
 
