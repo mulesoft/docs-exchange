@@ -44,6 +44,7 @@ Perform these tasks to publish an asset to Exchange and add metadata using Excha
 .. <<add-tags>>
 .. <<add-categories>>
 .. <<add-custom-fields>>
+.. <<update-mutable-data>>
 . <<add-update-doc-pages>>
 .. <<add-new-page-draft>>
 .. <<add-content-to-page>>
@@ -258,6 +259,48 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
     "tagValue": ["OAS"]
   }'
 ----
+
+[[update-mutable-data]]
+=== Update Mutable Data
+
+This example shows how to update the mutable data of an existing asset, describing it in the same request. The mutable data of an asset includes categories, custom fields, tags, and documentation pages.
+
+This example publishes the category and custom field, which have the keys `categoryKey` and `fieldKey`. Publication fails if the category or the custom field is not configured for your organization.
+
+In the documentation archive file sent as `files.docs.zip`, include each documentation page as a Markdown file in the root directory of the archive with a name such as `Getting Started.md`. Replace `Getting Started` with the title of the page. To include a terms and conditions page, put the content in a file named `terms.md`. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
+
+[source,console]
+----
+{
+ "pageOrder": ["home", "Getting Started", "Examples"]
+}
+----
+
+[source,console]
+----
+curl --location --request PATCH 'https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata' \
+--header 'Authorization: bearer YOUR_TOKEN' \
+--form 'tags="1, 2, 3, 4"' \
+--form 'categories.categoryKey="value1, value2"' \
+--form 'fields.fieldKey="value1, value2"' \
+--form 'files.docs.zip=@"/file-path/docs.zip"'
+----
+
+Mutable data will be updated is asynchronously. The response of this request will be like this.
+
+[source,console]
+----
+{ "mutableDataStatusLink":"https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata/status/170d1e6f-d567-48e2-a2f4-00b2e3951be6" }
+----
+
+The status of the publishing can be checked executing a call to `mutableDataStatusLink`.
+
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata/status/170d1e6f-d567-48e2-a2f4-00b2e3951be6 \
+--header 'Authorization: bearer YOUR_TOKEN'
+----
+
 
 [[add-update-doc-pages]]
 == Add and Update Documentation Pages
