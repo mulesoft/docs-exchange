@@ -107,9 +107,9 @@ All page names are validated:
 
 The special page *Home* has the URL `pages/home` and the special page *Terms and conditions* has the URL `pages/.terms`.
 
-Exchange sets a URL for other new pages that contains a page ID of three alphanumeric characters, a hyphen, and three more alphanumeric characters, such as `pages/123-abc/Formats`. If you rename the page from *Formats* to *Formatting*, the URL changes to `pages/123-abc/Formatting`, and the old URL automatically redirects to the new URL.
+Exchange sets a URL for other new pages that contains a page ID of three alphanumeric characters, a hyphen, and three more alphanumeric characters, such as `pages/123-abc/Formats`. Changing the page name from *Formats* to *Formatting* changes the URL to `pages/123-abc/Formatting`, and the old URL automatically redirects to the new URL.
 
-Some older asset pages have URLs that use the previous format with no page ID, such as `pages/Messages`. If you rename the page from *Messages* to *Messaging*, the URL changes to a URL with the new format such as `pages/def-456/Messaging`, and the old URL automatically redirects to the new URL.
+Some older asset pages have URLs that use the previous format with no page ID, such as `pages/Messages`. Changing the page name from *Messages* to *Messaging* changes the URL to a URL with the new format such as `pages/def-456/Messaging`, and the old URL automatically redirects to the new URL.
 
 A link to another page contains the link text in square brackets and the URL in parentheses: `[the page about messaging](pages/def-456/Messaging)`
 
