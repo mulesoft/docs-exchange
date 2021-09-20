@@ -111,6 +111,8 @@ Exchange sets a URL for other new pages that contains a page ID of three alphanu
 
 Some older asset pages have URLs that use the previous format with no page ID, such as `pages/Messages`. Changing the page name from *Messages* to *Messaging* changes the URL to a URL with the new format such as `pages/def-456/Messaging`, and the old URL automatically redirects to the new URL.
 
+For backwards compatibility with the Anypoint CLI, each page with a URL with a format such as `pages/789-ghi/Pagename` has an automatic redirect from a URL with the format `pages/Pagename`.
+
 A link to another page contains the link text in square brackets and the URL in parentheses: `[the page about messaging](pages/def-456/Messaging)`
 
 
