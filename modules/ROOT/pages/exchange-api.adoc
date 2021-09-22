@@ -267,7 +267,7 @@ This example shows how to update the mutable data of an existing asset, describi
 
 This example publishes the category and custom field, which have the keys `categoryKey` and `fieldKey`. Publication fails if the category or the custom field is not configured for your organization.
 
-This example updates the asset's documentation by uploading an example of a documentation file as `files.docs.zip`, in case you want to extend this documentation, include each documentation page as a Markdown file in the root directory of the archive with a name such as `Getting Started.md`. Replace `Getting Started` with the title of the page. To include a terms and conditions page, put the content in a file named `terms.md`. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
+This example updates the asset's documentation by uploading a documentation file as `files.docs.zip`. To extend this documentation, include each documentation page as a Markdown file in the root directory of the archive with a name such as `Getting Started.md`. Replace `Getting Started` with the title of the page. To include a terms and conditions page, put the content in a file named `terms.md`. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
 
 [source,console]
 ----
@@ -286,14 +286,14 @@ curl --location --request PATCH 'https://anypoint.mulesoft.com/exchange/api/v2/o
 --form 'files.docs.zip=@"/file-path/docs.zip"'
 ----
 
-Mutable data will be updated is asynchronously. The response of this request will be like this.
+The mutable data updates asynchronously and the request returns a response similar to this:
 
 [source,console]
 ----
 { "mutableDataStatusLink":"https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata/status/170d1e6f-d567-48e2-a2f4-00b2e3951be6" }
 ----
 
-The status of the publishing can be checked executing a call to `mutableDataStatusLink`.
+To check the publication status, execute a call to `mutableDataStatusLink`.
 
 [source,console]
 ----
@@ -301,7 +301,7 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId
 --header 'Authorization: bearer YOUR_TOKEN'
 ----
 
-If the authentication header is not provided, the request will fail with an Unauthorized error.
+If the request provides no authentication header, it fails with the error *Unauthorized*.
 
 
 [[add-update-doc-pages]]
