@@ -109,7 +109,7 @@ The special page *Home* has the URL `pages/home` and the special page *Terms and
 
 Exchange sets a URL for other new pages that contains a page ID of three alphanumeric characters, a hyphen, and three more alphanumeric characters, such as `pages/123-abc/Formats`. Changing the page name from *Formats* to *Formatting* changes the URL to `pages/123-abc/Formatting`, and the old URL automatically redirects to the new URL.
 
-Some older asset pages have URLs that use the previous format with no page ID, such as `pages/Messages`. Changing the page name from *Messages* to *Messaging* changes the URL to a URL with the new format such as `pages/def-456/Messaging`, and the old URL automatically redirects to the new URL.
+Pages created before the September 2021 update have URLs with no page ID, such as `pages/Messages`. Changing the page name from *Messages* to *Messaging* changes the URL to a URL with the new format such as `pages/def-456/Messaging`, and the old URL automatically redirects to the new URL.
 
 For backwards compatibility with the Anypoint CLI, each page with a URL with a format such as `pages/789-ghi/Pagename` has an automatic redirect from a URL with the format `pages/Pagename`.
 
