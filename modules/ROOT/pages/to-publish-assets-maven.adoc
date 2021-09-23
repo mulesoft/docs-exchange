@@ -66,6 +66,10 @@ In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven+`
 +
+In the US Gov Cloud, use:
++
+`+https://maven.gov.anypoint.mulesoft.com/api/v1/organizations/ORGANIZATION_ID/maven+`
++
 If you are publishing your asset to a business group, the group ID is the same as the business group ID.
 The URL format is:
 +
@@ -74,6 +78,10 @@ The URL format is:
 In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/BUSINESS_GROUP_ID/maven+`
++
+In the US Gov Cloud, use:
++
+`+https://maven.gov.anypoint.mulesoft.com/api/v1/organizations/BUSINESS_GROUP_ID/maven+`
 +
 . In your project's POM file, include `mule-maven-plugin` and set the correct classifier (in this example `mule-application-example`).
 +
