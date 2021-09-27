@@ -105,15 +105,15 @@ All page names are validated:
 * Page names cannot contain these characters: `@` `*` `+` `/` `_` `\`
 * Page names cannot start with `.`
 
-The special page *Home* has the URL `pages/home` and the special page *Terms and conditions* has the URL `pages/.terms`.
+The required page *Home* has the URL `pages/home` and the optional page *Terms and conditions* has the URL `pages/.terms`.
 
-Exchange sets a URL for other new pages that contains a page ID of three alphanumeric characters, a hyphen, and three more alphanumeric characters, such as `pages/123-abc/Formats`. Changing the page name from *Formats* to *Formatting* changes the URL to `pages/123-abc/Formatting`, and the old URL automatically redirects to the new URL.
+For other new pages, Exchange sets a URL that contains a page ID of three alphanumeric characters, a hyphen, and three more alphanumeric characters, such as `pages/1a2-b3c/Formats`. Changing the page name from *Formats* to *Formatting* changes the URL to `pages/1a2-b3c/Formatting`, and the old URL automatically redirects to the new URL.
 
-Pages created before the September 2021 update have URLs with no page ID, such as `pages/Messages`. Changing the page name from *Messages* to *Messaging* changes the URL to a URL with the new format such as `pages/def-456/Messaging`, and the old URL automatically redirects to the new URL.
+Pages created before the September 2021 update have URLs with no page ID, such as `pages/Messages`. Changing the page name from *Messages* to *Messaging* changes the URL to the new format, such as `pages/de4-56f/Messaging`, and the old URL automatically redirects to the new URL.
 
-For backwards compatibility with the Anypoint CLI, each page with a URL with a format such as `pages/789-ghi/Pagename` has an automatic redirect from a URL with the format `pages/Pagename`.
+For backward compatibility with the Anypoint CLI, each page with a URL with the new format has an automatic redirect, from a URL with the old format such as `pages/Pagename` to the new URL such as `pages/78g-h9i/Pagename`.
 
-A link to another page contains the link text in square brackets and the URL in parentheses: `[the page about messaging](pages/def-456/Messaging)`
+A link to another page contains the link text in square brackets and the URL in parentheses: `[the page about messaging](pages/de4-56f/Messaging)`
 
 
 === Specify Terms and Conditions
