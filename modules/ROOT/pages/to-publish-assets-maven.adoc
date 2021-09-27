@@ -66,9 +66,9 @@ In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven+`
 +
-In the US Gov Cloud, use:
+When using MuleSoft Government Cloud, use:
 +
-`+https://maven.gov.anypoint.mulesoft.com/api/v1/organizations/ORGANIZATION_ID/maven+`
+`+https://maven.gov.anypoint.mulesoft.com/api/v2/organizations/ORGANIZATION_ID/maven+`
 +
 If you are publishing your asset to a business group, the group ID is the same as the business group ID.
 The URL format is:
@@ -79,9 +79,9 @@ In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/BUSINESS_GROUP_ID/maven+`
 +
-In the US Gov Cloud, use:
+When using MuleSoft Government Cloud, use:
 +
-`+https://maven.gov.anypoint.mulesoft.com/api/v1/organizations/BUSINESS_GROUP_ID/maven+`
+`+https://maven.gov.anypoint.mulesoft.com/api/v2/organizations/BUSINESS_GROUP_ID/maven+`
 +
 . In your project's POM file, include `mule-maven-plugin` and set the correct classifier (in this example `mule-application-example`).
 +
@@ -146,6 +146,22 @@ In the EU, use:
       <id>Repository</id>
       <name>Corporate Repository</name>
       <url>https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven</url>
+      <layout>default</layout>
+    </repository>
+  </distributionManagement>
+  ...
+----
++
+When using MuleSoft Government Cloud, use:
++
+[source,xml,linenums]
+----
+ ...
+  <distributionManagement>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.gov.anypoint.mulesoft.com/api/v2/organizations/ORGANIZATION_ID/maven</url>
       <layout>default</layout>
     </repository>
   </distributionManagement>
@@ -423,9 +439,9 @@ and add the Maven facade as a repository in the `repositories` section.
 
 Replace `ORGANIZATION_ID` with your organization ID.
 
-You can use `+https://maven.anypoint.mulesoft.com/api/v3/maven+` as a valid URL for the `+<url>+` value, because this is the default to publish to the root organization. In the EU, use `+https://maven.eu1.anypoint.mulesoft.com/api/v3/maven+` as the URL.
+You can use `+https://maven.anypoint.mulesoft.com/api/v3/maven+` as a valid URL for the `+<url>+` value, because this is the default to publish to the root organization. In the EU, use `+https://maven.eu1.anypoint.mulesoft.com/api/v3/maven+` as the URL. When using MuleSoft Government Cloud, use `+https://maven.gov.anypoint.mulesoft.com/api/v2/maven+` as the URL.
 
-In the EU, the <repositories> section is:
+In the EU, the `<repositories>` section is:
 
 [source,xml,linenums]
 ----
@@ -434,6 +450,20 @@ In the EU, the <repositories> section is:
       <id>Repository</id>
       <name>Corporate Repository</name>
       <url>https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+----
+
+When using MuleSoft Government Cloud, the `<repositories>` section is:
+
+[source,xml,linenums]
+----
+  <repositories>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.gov.anypoint.mulesoft.com/api/v2/organizations/ORGANIZATION_ID/maven</url>
       <layout>default</layout>
     </repository>
   </repositories>
