@@ -44,7 +44,6 @@ Perform these tasks to publish an asset to Exchange and add metadata using Excha
 .. <<add-tags>>
 .. <<add-categories>>
 .. <<add-custom-fields>>
-.. <<update-asset-metadata>>
 . <<add-update-doc-pages>>
 .. <<add-new-page-draft>>
 .. <<add-content-to-page>>
@@ -259,50 +258,6 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
     "tagValue": ["OAS"]
   }'
 ----
-
-[[update-asset-metadata]]
-=== Update Asset Metadata
-
-This example shows how to update the mutable metadata that describes an existing asset without changing the version number or creating a new version of the asset. This mutable data includes categories, custom fields, tags, and documentation pages.
-
-The key `categoryKey` publishes the category and the key `fieldKey` publishes the custom field. Publication fails if the category or the custom field is not configured for your organization.
-
-Uploading a documentation file named `files.docs.zip` updates the asset's documentation. The root directory of the archive includes each documentation page as a Markdown file with a name such as `Getting Started.md`. Each other page replaces `Getting Started` in the file name with the title of the page. An optional terms and conditions page uses the file name `terms.md`. The optional subdirectory `resources` includes resources such as images. The property `pageOrder` on the root of the main object in the optional file `config.json` specifies the page order:
-
-[source,console]
-----
-{
- "pageOrder": ["home", "Getting Started", "Examples"]
-}
-----
-
-[source,console]
-----
-curl --location --request PATCH 'https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata' \
---header 'Authorization: bearer YOUR_TOKEN' \
---form 'tags="1, 2, 3, 4"' \
---form 'categories.categoryKey="value1, value2"' \
---form 'fields.fieldKey="value1, value2"' \
---form 'files.docs.zip=@"/file-path/docs.zip"'
-----
-
-The mutable data updates asynchronously and the request returns a response similar to this:
-
-[source,console]
-----
-{ "mutableDataStatusLink":"https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata/status/170d1e6f-d567-48e2-a2f4-00b2e3951be6" }
-----
-
-A call to `mutableDataStatusLink` displays the publication status:
-
-[source,console]
-----
-curl https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata/status/170d1e6f-d567-48e2-a2f4-00b2e3951be6 \
---header 'Authorization: bearer YOUR_TOKEN'
-----
-
-If the request provides no authentication header, it fails with the error *Unauthorized*.
-
 
 [[add-update-doc-pages]]
 == Add and Update Documentation Pages
