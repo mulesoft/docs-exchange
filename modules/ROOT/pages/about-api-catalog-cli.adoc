@@ -1,6 +1,6 @@
 //Use the MultiTopic template to document subjects that include a combination of topic types. This template includes all three topic types. Remove topic types that aren’t needed, or add additional topic types when needed. 
 
-= Publish APIs to Exchange Using API Catalog CLI
+= Publish APIs Using API Catalog CLI
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -8,13 +8,13 @@ endif::[]
 
 == API Catalog CLI
 
-API Catalog CLI enables you to automatically publish your API specifications to Anypoint Exchange as they are created and updated as part of your CI/CD processes. 
+API Catalog CLI enables you to publish APIs to Anypoint Exchange as they are created and updated as part of your CI/CD processes. 
 
 == What You Can Do With API Catalog CLI
 
 With API Catalog CLI you can:
 
-* Automatically publish API specifications in Exchange using CLI commands. 
+* Publish API specifications in Exchange using CLI commands 
 * Use descriptor files to explicitly define how you want the specifications to be published
 
 == Install API Catalog CLI 
@@ -25,7 +25,6 @@ System Requirements:
 
 * Anypoint Platform account
 * Anypoint Platform user account
-* Unix or Linux OS terminal support for running CLI commands
 
 == Install the CLI
 
