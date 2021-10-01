@@ -1,0 +1,144 @@
+//Use the MultiTopic template to document subjects that include a combination of topic types. This template includes all three topic types. Remove topic types that aren’t needed, or add additional topic types when needed. 
+
+= Publish APIs to Exchange Using API Catalog CLI
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+== API Catalog CLI
+
+API Catalog CLI enables you to automatically publish your API specifications to Anypoint Exchange as they are created and updated as part of your CI/CD processes. 
+
+== What You Can Do With API Catalog CLI
+
+With API Catalog CLI you can:
+
+* Automatically publish API specifications in Exchange using CLI commands. 
+* Use descriptor files to explicitly define how you want the specifications to be published
+
+== Install API Catalog CLI 
+
+To enable developers in your organization to automatically publish the new API specifications, you must install API Catalog CLI and add it to your CI/CD pipeline. 
+
+System Requirements:
+
+* Anypoint Platform account
+* Anypoint Platform user account
+* Unix or Linux OS terminal support for running CLI commands
+
+== Install the CLI
+
+To install the CLI, run the following commands from your terminal using the link provided to you:
+
+----
+npm install -g <path to tar, such as api-catalog-cli-0.3.7.tgz> 
+----
+
+<more from Readme, POC doc, product>
+
+== Give Access to the CLI from Any Directory
+
+Use npm link to have the CLI available from any directory:
+
+----
+$ npm link
+$ cd ../some-test-directory
+$ anypoint-cataloging-cli publish-asset
+----
+
+== Create a Descriptor File
+
+Before you run the commands to publish your APIs, you must create a descriptor file. <copy in the information on this from the readme and reorganize and edit as needed> 
+
+If you create an empty descriptor file, you will initiate the CLI in Convenience Mode. This mode requires no additional work from your end, but has some limitations. Conversely, you can use the Explicit Mode of the CLI for more control over the implementation of the descriptor file.
+
+=== Convenience Mode
+
+If your repository contains an empty descriptor file in the correct location, the CLI attempts a best-effort approach to determine which API specifications in your repository must be published.
+
+If the API Catalog CLI publishAssets command is run and no descriptor file is found, an empty default file is created with the name <tbd>. 
+
+<more from Readme, POC doc, product>
+
+=== Explicit Mode
+
+For additional control over the publishing process, you can specify which attributes or other details of the API specification must be explicitly published. The descriptor file contains this specification to be consumed by the CLI.
+
+*Syntax*
+
+<...>
+
+Although you can enter authentication credentials explicitly in the commands for testing purposes, you should use secure authentication in your CI/CD environment.
+
+See <<Authentication>>.
+
+*View Command Help*
+
+<...>
+
+*Specify the Version Rules*
+
+<...>  
+
+=== Example Descriptor File
+
+<...>
+
+== Add the Descriptor File to Your Repositories
+
+After you install API Catalog CLI, you must add the descriptor file, with the file name and location specified by your DevOps admin, to the repositories that you want to integrate with the publishing process.
+
+*Prerequisites*
+
+Before you add the descriptor file to the repository, ensure that:
+API Catalog CLI is installed in your CI/CD pipeline 
+For details on how to perform this installation, see <xref>. 
+You have the repository location where you want to add the descriptor file ready.
+
+To add a descriptor file to a repository:
+
+<...>
+
+== Publish APIs Using CLI
+You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To automate the publishing of APIs using CLI, you will typically use build scripts in tools such as Jenkins, but you can run the CLI manually from a terminal for learning and testing purposes. 
+
+=== Syntax 
+
+<...>
+
+=== View Command Help
+
+<...>
+
+=== Specify the Version Rules
+
+<...>  
+
+
+
+== Example API Catalog CLI Command
+
+The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the ./catalog.yaml descriptor file in the master branch of the VCS repository:
+
+api-catalog-cli publishAsset -o c06ba7b-3ce8-425c-878c-b728dd7db60d  -a https://anypoint.mulesoft.com/
+
+
+In the example, an assumption is made that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined.
+
+<...>
+
+== Example Jenkins Script 
+
+An example Jenkins script that runs the commands is as follows:
+
+<Example Jenkins script>
+
+// === Authentication
+
+include::partial$pass-cli-credentials.adoc[]
+
+== See Also
+
+* xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands]
+Anypoint Exchange

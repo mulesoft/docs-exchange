@@ -14,6 +14,7 @@
  ** xref:to-delete-asset.adoc[Delete an Asset]
  ** xref:to-change-raml-version.adoc[Change the Version of an API Asset]
  ** xref:publish-an-http-api.adoc[Publish an HTTP API Asset]
+ ** xref:about-api-catalog-cli.adoc[Publish using API Catalog CLI]
  ** xref:exchange2-faq.adoc[FAQ]
 * xref:about-api-use.adoc[Consume an API]
  ** xref:about-my-applications.adoc[My Applications]
