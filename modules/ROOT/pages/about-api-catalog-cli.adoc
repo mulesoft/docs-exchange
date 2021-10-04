@@ -137,12 +137,12 @@ An example Jenkins script that runs the commands is as follows:
 
 // include::partial$pass-cli-credentials.adoc[]
 
-*Authentication*
+== Authentication
 
 You can configure Anypoint CLI authentication with username and password, client ID and client secret, or a bearer token.
 At least one method is required.
 
-*Username and Password*
+=== Username and Password
 
 If you don't log in using single sign-on (SSO), you can use your username and password to log into the CLI directly.
 
@@ -159,7 +159,7 @@ You can also pass this value using the environment variable `export ANYPOINT_PAS
 
 For information about logging in using SSO, see xref:access-management::external-identity.adoc[About Identity Management].
 
-*Client ID and Client Secret*
+=== Client ID and Client Secret
 
 You can configure a Connected App with the `client_credentials` grant type to use with the CLI.
 
@@ -176,7 +176,7 @@ You can also pass this value using the environment variable `export ANYPOINT_CLI
 
 For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
-*Bearer Token*
+=== Bearer Token
 
 If you have already generated a bearer token, you can pass it to the CLI directly.
 When you provide a bearer token, the CLI ignores any provided user or client credentials.
@@ -192,7 +192,7 @@ Your CLI session expires when the bearer token expires.
 For information about generating a bearer token, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to generate your Authorization Bearer token for Anypoint Platform].
 
 
-*Reference*
+=== Reference
 
 The Anypoint CLI takes the following optional arguments:
 
@@ -217,7 +217,7 @@ You can also pass this value using a dedicated environment variable `ANYPOINT_HO
 
 |===
 
-*Usage*
+=== Usage
 
 Keep the following in mind while using the Anypoint CLI:
 
@@ -231,7 +231,7 @@ If you don't pass a command-line parameter, the default profile properties are u
 You can start typing the name of the command or parameter and press Tab for autocomplete or press Tab+Tab for a list of options.
 
 
-*Credentials File*
+=== Credentials File
 
 The recommended way of passing these options to your Anypoint Platform CLI installation is using the `credentials` file located inside the `~/.anypoint` directory, which is not automatically created during installation. Follow these steps to create your credentials file:
 
@@ -290,7 +290,7 @@ If you choose to pass the credentials when running `anypoint-cli`, pass both par
 > anypoint-cli
 ----
 
-*CLI Options*
+=== CLI Options
 
 If you pass only your username, the Anypoint CLI prompts for your password.
 
@@ -300,7 +300,7 @@ If you pass only your username, the Anypoint CLI prompts for your password.
 Password: ****
 ----
 
-*Pass Commands*
+=== Pass Commands
 
 After setting up a proper way to access Anypoint Platform from the CLI, you can start passing commands. +
 
