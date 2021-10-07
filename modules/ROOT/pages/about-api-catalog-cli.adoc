@@ -17,52 +17,91 @@ With API Catalog CLI you can:
 * Publish API specifications in Exchange using CLI commands 
 * Use descriptor files to explicitly define how you want the specifications to be published
 
+For details, see the following:
+
+* <<Install API Catalog CLI>>
+* <<Create Descriptor Files>>
+* <<Publish APIs Using CLI>>
+
 == Install API Catalog CLI 
 
 To enable developers in your organization to automatically publish the new API specifications, you must install API Catalog CLI and add it to your CI/CD pipeline. 
+
+=== Prerequisites
+
+* Download and install NodeJS and npm (node package manager) on your system.
++
+See the https://nodejs.org/en/download/[NodeJS download page].
+* Download and install the Git version management on your system.
++
+See the https://git-scm.com/downloads[Git download site].
+
+Depending on the configuration of your system, you might need to run these commands using administrator credentials.
+
+[source,text,linenums]
+----
+$ npm install -g anypoint-cli@latest
+----
+
+If the installation command fails with the following error, ensure that the Git client is installed on your computer and the git protocol is not blocked by your firewall or network:
+
+[source,text,linenums]
+----
+fatal: read error: Invalid argument
+----
+
+If the git protocol is blocked, you can configure Git to use `https://` instead of `git://`:
+
+[source,text,linenums]
+----
+git config --global url."https://".insteadOf git://
+----
 
 System Requirements:
 
 * Anypoint Platform account
 * Anypoint Platform user account
 
-== Install the CLI
+=== Install the CLI
 
-To install the CLI, run the following commands from your terminal using the link provided to you:
+To install the CLI:
 
+. Download the API Catalog CLI package from the xref:https://npmjs.com[npm public registry]. 
+. Run the following command from your terminal, where <API-Catalog-CLI-package-name> is the name of the package you downloaded:
 ----
-npm install -g <path to tar, such as api-catalog-cli-0.3.7.tgz> 
+npm install -g <API-Catalog-CLI-package-name>@beta
 ----
 
-<more from Readme, POC doc, product>
-
-== Give Access to the CLI from Any Directory
-
-Use npm link to have the CLI available from any directory:
-
+To give access to the CLI from any directory:
 ----
 $ npm link
-$ cd ../some-test-directory
-$ anypoint-cataloging-cli publish-asset
+$ cd ../<your-directory-name>
+$ api-catalog-cli publish-asset
 ----
 
-== Create a Descriptor File
+== Create Descriptor Files
 
-Before you run the commands to publish your APIs, you must create a descriptor file. <copy in the information on this from the readme and reorganize and edit as needed> 
+Before you run the commands to publish your APIs, you must create a descriptor file in each of the Git repositories you are using for your CI/CD processes. You can use the following approaches:
 
-If you create an empty descriptor file, you will initiate the CLI in Convenience Mode. This mode requires no additional work from your end, but has some limitations. Conversely, you can use the Explicit Mode of the CLI for more control over the implementation of the descriptor file.
+* *Dry Run Mode*: Use this mode to run the publish catalog command with an empty descriptor.yaml file and get a preview in your CI/CD log of the APIs that would be cataloged. 
+* *Explicit Mode*: Use this mode to run the publish catalog command with a complete descriptor file that specifies the APIs that should be cataloged. 
 
-=== Convenience Mode
+=== Dry Run Mode
 
-If your repository contains an empty descriptor file in the correct location, the CLI attempts a best-effort approach to determine which API specifications in your repository must be published.
+Use dry run mode to generate content for a starter descriptor file and discover which APIs are available in a CI/CD repository that are candidates to be cataloged in Exchange. The CI/CD job sends results to standard output. The output has suggested descriptor file content and status messages, such as lists of APIs that would not be cataloged based on this descriptor content.
+No API specifications or documentation are cataloged in Exchange.
 
-If the API Catalog CLI publishAssets command is run and no descriptor file is found, an empty default file is created with the name <tbd>. 
+To use dry run mode:
 
-<more from Readme, POC doc, product>
+. Add an empty +descriptor.yaml+ file to your Git repository. 
+. Modify your CI/CD pipeline to add the following command: 
+. Run the CI/CD pipeline.
+. Check your CI/CD log for the results.
+. Update the +descriptor.yaml+ file in your Git repository with the content from the dry run and modify as needed. 
 
 === Explicit Mode
 
-For additional control over the publishing process, you can specify which attributes or other details of the API specification must be explicitly published. The descriptor file contains this specification to be consumed by the CLI.
+Use explicit mode when you have descriptor file content that identifies the APIs that you want to publish in Exchange. You can use dry run mode to obtain suggested content from your CI/CD repository or you can create the descriptor file by using the following documentation. 
 
 *Syntax*
 
@@ -114,7 +153,7 @@ You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To
 
 <...>  
 
-
+For information on passing credentials, see <<Authentication>>.
 
 == Example API Catalog CLI Command
 
@@ -132,10 +171,6 @@ In the example, an assumption is made that either the username and password cred
 An example Jenkins script that runs the commands is as follows:
 
 <Example Jenkins script>
-
-// === Authentication
-
-// include::partial$pass-cli-credentials.adoc[]
 
 == Authentication
 
@@ -176,25 +211,9 @@ You can also pass this value using the environment variable `export ANYPOINT_CLI
 
 For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
-=== Bearer Token
-
-If you have already generated a bearer token, you can pass it to the CLI directly.
-When you provide a bearer token, the CLI ignores any provided user or client credentials.
-
-[%header%autowidth.spread,cols="a,a"]
-|===
-| Parameter | Description
-| `bearer` | A bearer token for the Anypoint Platform
-
-Your CLI session expires when the bearer token expires.
-|===
-
-For information about generating a bearer token, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to generate your Authorization Bearer token for Anypoint Platform].
-
-
 === Reference
 
-The Anypoint CLI takes the following optional arguments:
+API Catalog CLI takes the following optional arguments:
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -219,134 +238,13 @@ You can also pass this value using a dedicated environment variable `ANYPOINT_HO
 
 === Usage
 
-Keep the following in mind while using the Anypoint CLI:
+Keep the following in mind while using API Catalog CLI:
 
-. Environment variables override credentials file parameters and command-line parameters override environment variables. +
+. Command-line parameters override environment variables. +
 If you don't pass a command-line parameter, the default profile properties are used.
 . If not specified, the default environment is production.
 +
 . Your Anypoint session expires based on the *Default session timeout* configured in your Master Organization settings.
-. The Anypoint CLI works with autocomplete.
-+
-You can start typing the name of the command or parameter and press Tab for autocomplete or press Tab+Tab for a list of options.
-
-
-=== Credentials File
-
-The recommended way of passing these options to your Anypoint Platform CLI installation is using the `credentials` file located inside the `~/.anypoint` directory, which is not automatically created during installation. Follow these steps to create your credentials file:
-
-. Create a directory called `.anypoint` in the `~/` directory for Linux and OSx, or `C:\Users\USERNAME \` in Windows.
-. Navigate to your `.anypoint` directory and create a blank file named `credentials` with the following structure:
-+
-[source,text,linenums]
-----
-{
- "default": {
-  "username": "yourAnypointUserName",
-  "password": "yourAnypointPassword",
-  "organization": "",
-  "environment": "",
-  "host": ""
- },
- "otherProfile": {
-  "username": "",
-  "password": "",
-  "organization": "",
-  "environment": "",
-  "host": ""
- },
- "connAppProfile": {
-  "client_id": "",
-  "client_secret": "",
-  "organization": "",
-  "environment": "",
-  "host": ""
- }
-}
-----
-Note that the `default` profile is used unless the `ANYPOINT_PROFILE` environment variable is set:
-+
-[source,text,linenums]
-----
-> export ANYPOINT_PROFILE="otherProfile"
-> anypoint-cli
-----
-
-Then run the `anypoint-cli` command without any options:
-
-[source,text,linenums]
-----
-> anypoint-cli
-----
-
-*Dedicated Environment Variables*
-
-If you choose to pass the credentials when running `anypoint-cli`, pass both parameters as environment variables: `ANYPOINT_USERNAME` and `ANYPOINT_PASSWORD`.
-
-[source,text,linenums]
-----
-> export ANYPOINT_USERNAME="username"
-> export ANYPOINT_PASSWORD="password"
-> anypoint-cli
-----
-
-=== CLI Options
-
-If you pass only your username, the Anypoint CLI prompts for your password.
-
-[source,text,linenums]
-----
-> anypoint-cli --username="user"
-Password: ****
-----
-
-=== Pass Commands
-
-After setting up a proper way to access Anypoint Platform from the CLI, you can start passing commands. +
-
-*Use Anypoint CLI Through a Network Proxy*
-
-To use the Anypoint CLI through a proxy server, configure the `HTTP_PROXY` and `HTTPS_PROXY` environment variables with the hostname or IP addresses of your proxy servers.
-
-Depending on your operating system, use the following commands:
-
-* Linux, macOS, or Unix
-+
---
-`$ export HTTP_PROXY=http://__proxy-server__:80`
-
-`$ export HTTPS_PROXY=https://__proxy-server__:443`
---
-
-* Windows
-+
---
-`> set HTTP_PROXY=http://__proxy-server__:80`
-
-`> set HTTPS_PROXY=https//__proxy-server__:443`
---
-
-If the proxy server requires authentication, use these commands:
-
-* Linux, macOS, or Unix
-+
---
-`$ export HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
-
-`$ export HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
---
-
-* Windows
-+
---
-`> set HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
-
-`> set HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
---
-
-*Notes*
-
-* To improve the Anypoint CLI experience, we gather anonymized usage data. You can opt out by setting `collectMetrics` to false in the `credentials` file.
 
 // Authentication end 
 
