@@ -1,5 +1,3 @@
-//Use the MultiTopic template to document subjects that include a combination of topic types. This template includes all three topic types. Remove topic types that aren’t needed, or add additional topic types when needed. 
-
 = Publish APIs Using API Catalog CLI
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
