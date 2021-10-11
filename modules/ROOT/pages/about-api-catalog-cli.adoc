@@ -10,8 +10,6 @@ endif::[]
 
 API Catalog CLI enables you to publish APIs to Anypoint Exchange as they are created and updated as part of your CI/CD processes. 
 
-== What You Can Do With API Catalog CLI
-
 With API Catalog CLI you can:
 
 * Publish API specifications in Exchange using CLI commands 
@@ -79,12 +77,24 @@ $ cd ../<your-directory-name>
 $ api-catalog-cli publish-asset
 ----
 
-== Create Descriptor Files
+=== View Command Help* ===
+<...>
+
+== Descriptor Files
 
 Before you run the commands to publish your APIs, you must create a descriptor file in each of the Git repositories you are using for your CI/CD processes. You can use the following approaches:
 
 * *Dry Run Mode*: Use this mode to run the publish catalog command with an empty descriptor.yaml file and get a preview in your CI/CD log of the APIs that would be cataloged. 
 * *Explicit Mode*: Use this mode to run the publish catalog command with a complete descriptor file that specifies the APIs that should be cataloged. 
+
+=== Prerequisites
+
+Before you add the descriptor file to the repository, ensure that:
+
+* The API Catalog CLI is installed on a computer in your CI/CD pipeline. 
++
+See <<Install the CLI>>. 
+* You have the repository location where you want to add the descriptor file ready.
 
 === Dry Run Mode
 
@@ -103,17 +113,48 @@ To use dry run mode:
 
 Use explicit mode when you have descriptor file content that identifies the APIs that you want to publish in Exchange. You can use dry run mode to obtain suggested content from your CI/CD repository or you can create the descriptor file by using the following documentation. 
 
-*Syntax*
+=== Create a Descriptor File
 
-<...>
+==== api-catalog create-descriptor
+
+----
+> api-catalog create-descriptor [options] 
+----
+
+This command describes the APIs to catalog. This file is used by the api-catalog publish-asssets command to publish identified APIs to Exchange. See <<Publish APIs Using CLI>>.
+
+
+[%header,cols="40a,30a,30a"]
+|===
+| Parameter | Description |  Default
+
+| branches | Specifies the branches from which to pull API information to be cataloged.  |
+master
+
+| apis | A list of the APIs to be cataloged. |  N/A
+
+| spec | The location of the specification file that describes the API. | N/A  
+
+| asset-id | Specifies the ID of the asset to be published in Exchange. | By default this ID is generated from the API specification *Title* field.  
+
+| docs   | A list of key and value pairs that specify the name of the documentation page and file location for the API.
+These pairs define the order of the documentation pages in Anypoint Platform. +
+Example: <Name of the Doc Page>:<File Location> | NULL. If not specified, no Doc pages will be imported. 
+
+| tags  | A list of comma separated xxx text strings to describe the API. These sppear in the asset's page in Exchange. xxx  +
+Example: xxx, xxx, xxx | NULL. If not specified, no tags will be added.
+
+| categories | A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization. +
+Example: <Category Name>: <Value(s)> | NULL. If not specified, no categories will be added.
+
+| custom-fields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization. +
+Example: <Field>: <Value> | NULL. If not specified, no categories will be added.
+
+|===
 
 Although you can enter authentication credentials explicitly in the commands for testing purposes, you should use secure authentication in your CI/CD environment.
 
 See <<Authentication>>.
-
-*View Command Help*
-
-<...>
 
 *Specify the Version Rules*
 
@@ -141,9 +182,52 @@ To add a descriptor file to a repository:
 == Publish APIs Using CLI
 You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To automate the publishing of APIs using CLI, you will typically use build scripts in tools such as Jenkins, but you can run the CLI manually from a terminal for learning and testing purposes. 
 
-=== Syntax 
+// copied from Anypoint CLI for formatting help
 
-<...>
+=== api-catalog publish-asset
+
+----
+> api-catalog publish-asset [options] 
+----
+
+This command publishes APIs to Exchange using the descriptor information passed in the YAML file passed in the catalog-file option.
+
+
+[%header,cols="40a,30a,30a"]
+|===
+| Parameter | Description |  Example
+
+| -a, --anypoint-uri=anypoint-uri  | (required) [default: https://anypoint.mulesoft.com] The Anypoint Platform Base URL.  |
+For the US Anypoint Platform, this will be 
+'https://anypoint.mulesoft.com/'. Alternatively you can define this in the ANYPOINT_BASE_URL environment variable.
+
+| -d, --dry-run=dry-run  | Indicates that the command should be run to identify the APIs that are eligible to be published, but no APIs will be published. The descriptor file will define the scope. |   
+
+| -t, --trigger=branch:master --trigger=tag:bla  | Filters that will be applied to the descriptor file in order to decide if an asset should be published or not. |     
+
+|  -c, --catalog-file=catalog-file  | [default: ./catalog.yaml] The name and location of the catalog descriptor file. Alternatively you can define this in the ANYPOINT_CATALOG_FILE environment variable. |     
+
+| -o, --organization=organization   | (required) The ID of the Anypoint Organization where the APIs will be cataloged. Alternatively you can define this in the ANYPOINT_TARGET_ORGANIZATION environment variable. | 
+
+| -p, --password  | Prompt Anypoint password for username. To avoid the need for a prompt, you can define this in the ANYPOINT_PASSWORD environment variable. |
+
+| -u, --username=username | Anypoint username. Alternatively you can define this in the ANYPOINT_USERNAME environment variable. | 
+
+| -v, --verbose | Turn on verbose logging. |
+
+| -s, --silent | Turn on silent logging.|
+
+| -r, --result  | Turn on result mode. |
+
+| --client-id=client-id | Connected App client id. Alternatively you can define this in the ANYPOINT_CLIENT_ID environment variable. |
+
+| --client-secret  | Prompt Connected App secret for clientId. To avoid the need for a prompt, you can define this in the ANYPOINT_CLIENT_SECRET environment variable. |
+
+
+|===
+
+
+// end of copied section 
 
 === View Command Help
 
@@ -165,6 +249,24 @@ api-catalog-cli publishAsset -o c06ba7b-3ce8-425c-878c-b728dd7db60d  -a https://
 In the example, an assumption is made that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined.
 
 <...>
+
+// Triggering and Filtering Text
+
+Triggering and Filtering conditions work as part of publishing from the CLI (--trigger parameter). This gives you full control over when you want to publish as part of your CI/CD pipeline.
+
+// More info can be found here:
+// https://docs.google.com/document/d/1j31ANa7hQpJ9X2PCLDxZXUrFK42qPjng9jGstNBBSX4/edit
+
+// end of Triggering and Filtering text
+
+// Force Publish Text
+
+If the same version of an API exists and you want to overlay it, you will need to use the force publish command.
+
+//publish errors/skip cases for our clients to be able to solve them.
+//For example, understanding the case in which the CLI skips the publication since the API content is exactly the same as the latest published version in Exchange. We may also want to document the "force-publish" parameter to be able to bypass this CLI restriction in case clients still want to publish a new identical version.//
+
+// end Force Publish Text
 
 == Example Jenkins Script 
 
