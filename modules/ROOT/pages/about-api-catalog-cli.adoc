@@ -16,7 +16,7 @@ With API Catalog CLI you can:
 For details, see the following:
 
 * <<Install API Catalog CLI>>
-* <<Create Descriptor Files>>
+* <<Descriptor Files>>
 * <<Publish APIs Using CLI>>
 
 == Install API Catalog CLI 
