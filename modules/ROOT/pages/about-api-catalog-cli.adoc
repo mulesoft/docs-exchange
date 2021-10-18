@@ -62,21 +62,28 @@ System Requirements:
 
 To install the CLI:
 
-. Download the API Catalog CLI package from the xref:https://npmjs.com[npm public registry]. 
+. Download the API Catalog CLI package from the https://npmjs.com[npm public registry]. 
 . Run the following command from your terminal, where <API-Catalog-CLI-package-name> is the name of the package you downloaded:
 ----
 npm install -g <API-Catalog-CLI-package-name>@beta
 ----
 
-To give access to the CLI from any directory:
+=== Make the CLI Available From Any Directory
+
+Use the following command to make the API Catalog CLI command available from any directory:
+
 ----
 $ npm link
 $ cd ../<your-directory-name>
 $ api-catalog-cli publish-asset
 ----
 
-=== View Command Help* ===
-<...>
+=== View Command Help
+
+Use the following command to get help for the API Catalog CLI command:
+
++api-catalog help+
+
 
 == Descriptor Files
 
@@ -146,7 +153,7 @@ Example: xxx, xxx, xxx | NULL. If not specified, no tags will be added.
 Example: <Category Name>: <Value(s)> | NULL. If not specified, no categories will be added.
 
 | custom-fields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization. +
-Example: <Field>: <Value> | NULL. If not specified, no categories will be added.
+Example: <Field>: <Value> | NULL. If not specified, no custom fields will be added.
 
 |===
 
@@ -158,21 +165,25 @@ See <<Authentication>>.
 
 Following are some examples of typical descriptor files.
 
-==== Example 1: xxx
+==== Example 1: Generate a descriptor file after autodiscovering API candidates
 
-- create-descriptor command in order to generate a catalog.yaml file after autodiscovering all API candidates
+- create-descriptor command to generate a catalog.yaml file after autodiscovering all API candidates
 
-==== Example 2: xxx
+==== Example 2: Section that defines the documentation, contacts, and other API metadata 
 
-- Catalog Descriptor section clarifying how to set up documentation, contact and other API metadata
+- Catalog Descriptor section clarifying how to set up documentation, contacts, and other API metadata
 
-==== Example 3: xxx
+==== Example 3: Section that defines the version strategy 
 
 - Specific section on how to define the versioning strategy in the Descriptor (strategy + version selection)
 
 *Specify the Version Rules*
 
 <...>  
+// text relevant to versioning
+
+Cataloging an asset includes not only the API specification itself, but also documentation (portal pages) and asset metadata (contact, categories, tags, etc.). An important thing to note is that all this metadata is associated with the GA + Minor version of the asset (not the GAV). That means that all assets for the same minor version in Exchange will share the same metadata. In other words, the metadata cannot be considered immutable for a given GAV, as there could be a newer asset for the same minor version that will overwrite it. Hence, metadata must be considered mutable for a given GAV.
+//
 
 
 == Add the Descriptor File to Your Repositories
@@ -206,21 +217,73 @@ This command publishes APIs to Exchange using the descriptor information passed 
 |===
 | Parameter | Description |  Example
 
-| -a, --anypoint-uri=anypoint-uri  | (required) [default: https://anypoint.mulesoft.com] The Anypoint Platform Base URL.  |
-For the US Anypoint Platform, this will be 
-'https://anypoint.mulesoft.com/'. Alternatively, you can define this in the ANYPOINT_BASE_URL environment variable.
+| -a, --anypoint-uri=anypoint-uri 
 
-| -d, --dry-run=dry-run  | Indicates that the command should be run to identify the APIs that are eligible to be published, but no APIs will be published. The descriptor file will define the scope. |   
+or
 
-| -t, --trigger=branch:master --trigger=tag:bla  | Filters that will be applied to the descriptor file in order to decide if an asset should be published or not. |     
+ANYPOINT_BASE_URL environment variable
 
-|  -c, --catalog-file=catalog-file  | [default: ./catalog.yaml] The name and location of the catalog descriptor file. Alternatively, you can define this in the ANYPOINT_CATALOG_FILE environment variable. |     
+ | (Required) 
 
-| -o, --organization=organization   | (required) The ID of the Anypoint Organization where the APIs will be cataloged. Alternatively, you can define this in the ANYPOINT_TARGET_ORGANIZATION environment variable. | 
+Default: https://anypoint.mulesoft.com
 
-| -p, --password  | Prompt Anypoint password for username. To avoid the need for a prompt, you can define this in the ANYPOINT_PASSWORD environment variable. |
+The Anypoint Platform base 
+URL.  |
+For the US Anypoint Platform, use  
++https://anypoint.mulesoft.com/+. 
 
-| -u, --username=username | Anypoint username. Alternatively, you can define this in the ANYPOINT_USERNAME environment variable. | 
+| -d, --dry-run=dry-run  | Runs the command only to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file parameter defines the scope. |   
+
+| -t, --trigger=branch:master --trigger=tag:bla  | User-defined filters that are applied to the descriptor file to determine whether an asset should be published. |  
+
+---
+
+ triggerConditions:
+ branch:
+   - master
+   - test/(.*)
+ tag:
+   - release
+   - hotfix
+
+---
+  
+
+|  -c, --catalog-file=catalog-file 
+
+or
+
+ANYPOINT_CATALOG_FILE environment variable
+
+ | Default:  ./catalog.yaml 
+ 
+The name and location of the catalog descriptor file.  |     
+
+| -o, --organization=organization 
+
+or
+
+ANYPOINT_TARGET_ORGANIZATION environment variable
+
+  | (Required) 
+  
+The ID of the Anypoint Organization where the APIs will be cataloged.  | 
+
+| -p, --password 
+
+or
+
+ANYPOINT_PASSWORD environment variable
+
+ | Prompt Anypoint password for username. Set the environment variable to avoid the prompt for the password.   | See <<Authentication.>>
+
+| -u, --username=username 
+
+or
+
+ANYPOINT_USERNAME environment variable
+
+| Anypoint username.  | See <<Authentication.>>
 
 | -v, --verbose | Turn on verbose logging. |
 
@@ -228,16 +291,24 @@ For the US Anypoint Platform, this will be
 
 | -r, --result  | Turn on result mode. |
 
-| --client-id=client-id | Connected App client id. Alternatively, you can define this in the ANYPOINT_CLIENT_ID environment variable. |
+| --client-id=client-id 
 
-| --client-secret  | Prompt Connected App secret for clientId. To avoid the need for a prompt, you can define this in the ANYPOINT_CLIENT_SECRET environment variable. |
+or
+
+ANYPOINT_CLIENT_ID environment variable
+
+| Connected App client ID.  |
+
+| --client-secret 
+
+or
+
+ANYPOINT_CLIENT_SECRET environment variable
+
+ | Prompt for the Connected App secret for client-id. Set the environment variable to avoid the prompt for the client secret.  |
 
 
 |===
-
-=== View Command Help
-
-<...>
 
 === Specify the Version Rules
 
@@ -249,7 +320,7 @@ For information on passing credentials, see <<Authentication>>.
 
 Following are examples that show some typical use cases for publishing assets.
 
-==== Example 1: Publish an Asset With Default Settings
+==== Example 1: Publish an asset with default settings
 
 The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the ./catalog.yaml descriptor file in the master branch of the VCS repository:
 
@@ -261,7 +332,11 @@ In the example, an assumption is made that either the username and password cred
 
 // Triggering and Filtering Text
 
-Triggering and Filtering conditions work as part of publishing from the CLI (--trigger parameter). This gives you full control over when you want to publish as part of your CI/CD pipeline.
+Custom trigger and filter conditions enable you to further control what is published when the API Catalog CLI command runs. 
+
+To use trigger conditions:
+
+ (--trigger parameter)
 
 // More info can be found here:
 // https://docs.google.com/document/d/1j31ANa7hQpJ9X2PCLDxZXUrFK42qPjng9jGstNBBSX4/edit
@@ -270,9 +345,17 @@ Triggering and Filtering conditions work as part of publishing from the CLI (--t
 
 ==== Example 3: Publish an asset using the force-publish parameter
 // Force Publish Text
+Forcing (Diffing Bypass)
 
+When attempting to catalog an API spec, we should do our best effort to determine whether or not the asset in Exchange corresponds to the same content of the developer environment and avoid duplicating assets when not necessary. 
 
-If the same version of an API exists and you want to overlay it, you will need to use the force publish command.
+There might be cases when the user wants to publish a new asset, even when API spec content has not changed. For those cases, the CLI will provide a --force-publish flag parameter that will indicate the tool to bypass the comparison and always create a new version in Exchange, regardless of the content.
+
+If the same version of an API exists but you still want to create another asset, you will need to use the force publish command.
+
+Forcing (Metadata Update)
+There might be cases when the user wants to update the metadata, even when API spec content has not changed. For those cases, the CLI will provide a --force-metadata-update flag parameter that will indicate the tool to update the asset metadata, regardless of the API spec content. 
+
 
 //publish errors/skip cases for our clients to be able to solve them.
 //For example, understanding the case in which the CLI skips the publication since the API content is exactly the same as the latest published version in Exchange. We may also want to document the "force-publish" parameter to be able to bypass this CLI restriction in case clients still want to publish a new identical version.//
@@ -335,46 +418,23 @@ You can also pass this value using the environment variable `export ANYPOINT_CLI
 You can also pass this value using the environment variable `export ANYPOINT_CLIENT_SECRET=<client_secret>`.
 |===
 
-For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
+// For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
-=== Reference
-
-API Catalog CLI takes the following optional arguments:
-
-[%header%autowidth.spread,cols="a,a"]
-|===
-|Parameter |Description
-| `organization` | Your organization within Anypoint Platform
-
-You can also pass this value using the environment variable `export ANYPOINT_ORG=<name>`.
-
-| `environment` | Your Anypoint Platform environment
-
-You can also pass this value using the environment variable `export ANYPOINT_ENV=<name>`.
-
-| `host` | The host of your Anypoint Platform Installation +
-By default, this value points to `\https://anypoint.mulesoft.com`. +
-
-* If you are using Anypoint Platform PCE, pass the address where you are hosting the platform.
-* If you are using Anypoint Platform EU Cloud, pass your EU control plane URL.
-
-You can also pass this value using a dedicated environment variable `ANYPOINT_HOST=<name>`.
-
-|===
-
-=== Usage
+=== Environment Variable Usage
 
 Keep the following in mind while using API Catalog CLI:
 
-. Command-line parameters override environment variables. +
+* Command-line parameters override environment variables. +
 If you don't pass a command-line parameter, the default profile properties are used.
-. If not specified, the default environment is production.
-+
-. Your Anypoint session expires based on the *Default session timeout* configured in your Master Organization settings.
+* If not specified, the default environment is production.
+
+=== Timeout
+
+Your Anypoint session expires based on the *Default session timeout* configured in your Master Organization settings.
 
 // Authentication end 
 
-== See Also
+// == See Also
 
-* xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands]
-Anypoint Exchange
+// * xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands]
+// Anypoint Exchange
