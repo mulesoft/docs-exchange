@@ -80,10 +80,12 @@ $ api-catalog-cli publish-asset
 
 === View Command Help
 
-Use the following command to get help for the API Catalog CLI command:
+Use the help option with the commands to list the commands or command options and their descriptions:
 
-+api-catalog help+
-
+* +api-catalog --help+
+* +api-catalog autocomplete --help+
+* +api-catalog create-descriptor --help+
+* +api-catalog publish-asset --help+
 
 == Descriptor Files
 
@@ -155,6 +157,10 @@ Example: <Category Name>: <Value(s)> | NULL. If not specified, no categories wil
 | custom-fields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization. +
 Example: <Field>: <Value> | NULL. If not specified, no custom fields will be added.
 
+| versioning | xxx | xxx
+
+| apiVersion | xxx | xxx
+
 |===
 
 Although you can enter authentication credentials explicitly in the commands for testing purposes, you should use secure authentication in your CI/CD environment.
@@ -165,15 +171,87 @@ See <<Authentication>>.
 
 Following are some examples of typical descriptor files.
 
-==== Example 1: Generate a descriptor file after autodiscovering API candidates
+==== Example 1: Descriptor file that describes two APIs
 
-- create-descriptor command to generate a catalog.yaml file after autodiscovering all API candidates
+The following descriptor file results in the following:
 
-==== Example 2: Section that defines the documentation, contacts, and other API metadata 
+* xxx branches are
+* xxx tags are
+* xxx user is
+* codat API is published as follows:
+** xxx
+** xxx
+* billing API is published as follows:
+** xxx
+** xxx
+
+---
+#%Catalog Descriptor 0.5
+triggerConditions:
+  branches:
+    - master
+    - release/(.*)
+  tags:
+    - support
+    - release/(.*)
+  user:
+    - admin
+
+contact:
+  name: 'John Doe'
+  email: 'john.doe@org.com'
+
+apis:
+  - spec: api-spec/codat.json
+    assetId: codat-api
+    docs:
+      add: api-spec/add.md
+      home: home.md
+    customFields:
+      custom: value
+      another: field
+    tags:
+      - codat
+      - gcp
+    healthCheck:
+      url: https://dev.codat.io/api/ping
+      method: GET
+      expectedStatus: 204
+    versioning: 2.0.x
+    apiVersion: v3
+
+  - spec: api-spec/billing-api.json
+    assetId: my-awesome-api
+    tags:
+      - finance
+      - aws
+    categories:
+      API Type:
+        - System API
+        - Experience API
+      Organization:
+        - Finance
+        - Billing
+    healthCheck:
+      url: https://billing.io/api/health
+    versioning: ~1.x.x
+    apiVersion: v1
+
+---
+
+*After publication in Exchange*
+
+xxx include a screenshot of this example after publication in exchange xxx
+
+==== Example 2: Generate a descriptor file after autodiscovering API candidates
+
+Use the dry-run parameter with the publish-assets command to generate a catalog.yaml file after autodiscovering all API candidates. xxx 
+
+==== Example 3: Section that defines the documentation, contacts, and other API metadata 
 
 - Catalog Descriptor section clarifying how to set up documentation, contacts, and other API metadata
 
-==== Example 3: Section that defines the version strategy 
+==== Example 4: Section that defines the version strategy 
 
 - Specific section on how to define the versioning strategy in the Descriptor (strategy + version selection)
 
@@ -182,7 +260,7 @@ Following are some examples of typical descriptor files.
 <...>  
 // text relevant to versioning
 
-Cataloging an asset includes not only the API specification itself, but also documentation (portal pages) and asset metadata (contact, categories, tags, etc.). An important thing to note is that all this metadata is associated with the GA + Minor version of the asset (not the GAV). That means that all assets for the same minor version in Exchange will share the same metadata. In other words, the metadata cannot be considered immutable for a given GAV, as there could be a newer asset for the same minor version that will overwrite it. Hence, metadata must be considered mutable for a given GAV.
+Metadata is mutable for a given major version. The process of cataloging an asset includes not only the API specification itself, but also documentation (portal pages) and asset metadata (contact, categories, tags, and so on). The metadata is associated with the current major + minor version of the asset. Therefore, all assets for the same minor version in Exchange will share the same metadata. The metadata cannot be considered immutable for a given major version, as metadata for a newer asset for the same minor version will overwrite it. 
 //
 
 
@@ -228,26 +306,9 @@ ANYPOINT_BASE_URL environment variable
 Default: https://anypoint.mulesoft.com
 
 The Anypoint Platform base 
-URL.  |
+URL. It must be specified using HTTPS protocol. |
 For the US Anypoint Platform, use  
 +https://anypoint.mulesoft.com/+. 
-
-| -d, --dry-run=dry-run  | Runs the command only to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file parameter defines the scope. |   
-
-| -t, --trigger=branch:master --trigger=tag:bla  | User-defined filters that are applied to the descriptor file to determine whether an asset should be published. |  
-
----
-
- triggerConditions:
- branch:
-   - master
-   - test/(.*)
- tag:
-   - release
-   - hotfix
-
----
-  
 
 |  -c, --catalog-file=catalog-file 
 
@@ -257,7 +318,13 @@ ANYPOINT_CATALOG_FILE environment variable
 
  | Default:  ./catalog.yaml 
  
-The name and location of the catalog descriptor file.  |     
+The name and location of the catalog descriptor file.  
+
+  * If the file does not exist, no cataloging will be performed.
+  * If the file exists, but is empty, the command will scaffold and print the catalog descriptor based on all specifications in the full directory tree relative to the current working directory.
+  * For additional control, you can declare what to catalog and how. | See <<Descriptor Files>>
+
+| -d, --dry-run=dry-run  | Runs the command only to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file parameter defines the scope. |   
 
 | -o, --organization=organization 
 
@@ -277,6 +344,29 @@ ANYPOINT_PASSWORD environment variable
 
  | Prompt Anypoint password for username. Set the environment variable to avoid the prompt for the password.   | See <<Authentication.>>
 
+| -s, --silent | Turn on silent logging.|
+
+| -t, --trigger=branch:master --trigger=tag:bla  | User-defined filters that are applied to the descriptor file to determine whether an asset should be published. |  
+
+---
+
+ triggerConditions:
+ branch:
+   - master
+   - test/(.*)
+ tag:
+   - release
+   - hotfix
+
+---
+  
+
+    
+
+
+
+
+
 | -u, --username=username 
 
 or
@@ -287,9 +377,9 @@ ANYPOINT_USERNAME environment variable
 
 | -v, --verbose | Turn on verbose logging. |
 
-| -s, --silent | Turn on silent logging.|
 
-| -r, --result  | Turn on result mode. |
+
+| --async |  Run the publish job asynchronously. |
 
 | --client-id=client-id 
 
@@ -307,12 +397,22 @@ ANYPOINT_CLIENT_SECRET environment variable
 
  | Prompt for the Connected App secret for client-id. Set the environment variable to avoid the prompt for the client secret.  |
 
+ | --force-publish |  Bypasses the comparison and 
+ creates a new version of the asset in Exchange regardless of the content.|
+
+| --force-update-metadata | Forces update of the asset's metadata (such as tags) in the latest version in Exchange regardless of the content. |
+
+| --json | Prints the execution result in json format. |
 
 |===
 
 === Specify the Version Rules
 
-<...>  
+When you publish an API to exchange, the patch version is incremented by default. However, you can set the version using a combination of the API and asset version parameters as follows:
+
+xxx table with the settings and examples from the video xxx 
+
+For more information on API and asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
 
 For information on passing credentials, see <<Authentication>>.
 
