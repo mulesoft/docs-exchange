@@ -80,7 +80,7 @@ $ api-catalog-cli publish-asset
 
 === View Command Help
 
-Use the help option with the commands to list the commands or command options and their descriptions:
+Use the help argument with the commands to list the commands or command arguments and their descriptions:
 
 * +api-catalog --help+
 * +api-catalog autocomplete --help+
@@ -110,14 +110,14 @@ To add autocomplete to a Z shell profile:
 After you have added the command to your shell profile, you can run it with options to control the results.  
 
 ----
-> api-catalog autocomplete [options] 
+> api-catalog autocomplete [arguments] 
 ----
 
 This command enables you to use the tab key to autocomplete a partially-typed api-catalog command. 
 
 [%header,cols="30a,30a"]
 |===
-| Parameter | Description 
+| Argument | Description 
 
 | bash | Use the bash shell.  
 
@@ -160,6 +160,10 @@ To use dry run mode:
 
 . Add an empty +descriptor.yaml+ file to your Git repository. 
 . Modify your CI/CD pipeline to add the following command: 
++
++api-catalog publish-asset --dry-run=dry-run+
++
+See <<Publish APIs Using CLI>> for command details.
 . Run the CI/CD pipeline.
 . Check your CI/CD log for the results.
 . Update the +descriptor.yaml+ file in your Git repository with the content from the dry run and modify as needed. 
@@ -170,7 +174,7 @@ Use explicit mode when you have descriptor file content that identifies the APIs
 
 === Create a Descriptor File
 
-Use the +api-catalog create-descriptor+ command to generate a descriptor file by discovering APIs in the designated folder structure.   
+Use the +api-catalog create-descriptor+ command to generate a descriptor file by discovering APIs in the designated API project's folder structure.   
 
 ==== api-catalog create-descriptor
 
@@ -178,11 +182,11 @@ Use the +api-catalog create-descriptor+ command to generate a descriptor file by
 > api-catalog create-descriptor [options] 
 ----
 
-This command describes the APIs to catalog. This file is used by the api-catalog publish-assets command to publish identified APIs to Exchange. See <<Publish APIs Using CLI>>.
+This command parses the YAML schema that describes the APIs to catalog. The results are stored in a descriptor file that is then used by the +api-catalog publish-assets+ command to publish identified APIs to Exchange. See <<Publish APIs Using CLI>>.
 
 [%header,cols="40a,30a,30a"]
 |===
-| Parameter | Description |  Default
+| Tag | Description |  Default
 
 | branches | Specifies the branches from which to pull API information to be cataloged.  |
 master
@@ -235,22 +239,23 @@ The following descriptor file results in the following:
 ** xxx
 
 ---
-#%Catalog Descriptor 0.5
-triggerConditions:
-  branches:
-    - master
-    - release/(.*)
-  tags:
-    - support
-    - release/(.*)
-  user:
-    - admin
 
-contact:
+ #%Catalog Descriptor 0.5
+ triggerConditions:
+   branches:
+     - master
+     - release/(.*)
+   tags:
+     - support
+     - release/(.*)
+   user:
+     - admin
+
+ contact:
   name: 'John Doe'
   email: 'john.doe@org.com'
 
-apis:
+ apis:
   - spec: api-spec/codat.json
     assetId: codat-api
     docs:
@@ -267,24 +272,23 @@ apis:
       method: GET
       expectedStatus: 204
     versioning: 2.0.x
-    apiVersion: v3
-
-  - spec: api-spec/billing-api.json
-    assetId: my-awesome-api
-    tags:
-      - finance
-      - aws
-    categories:
-      API Type:
+    apiVersion: v3 
+    - spec: api-spec/billing-api.json
+      assetId: my-awesome-api
+      tags:
+       - finance
+       - aws
+     categories:
+       API Type:
         - System API
         - Experience API
       Organization:
         - Finance
         - Billing
-    healthCheck:
-      url: https://billing.io/api/health
-    versioning: ~1.x.x
-    apiVersion: v1
+     healthCheck:
+       url: https://billing.io/api/health
+     versioning: ~1.x.x
+     apiVersion: v1
 
 ---
 
@@ -294,7 +298,7 @@ xxx include a screenshot of this example after publication in exchange xxx
 
 ==== Example 2: Generate a descriptor file after autodiscovering API candidates
 
-Use the dry-run parameter with the publish-assets command to generate a catalog.yaml file after autodiscovering all API candidates. xxx 
+Use the dry-run Argument with the publish-assets command to generate a catalog.yaml file after autodiscovering all API candidates. xxx 
 
 ==== Example 3: Section that defines the documentation, contacts, and other API metadata 
 
@@ -313,20 +317,21 @@ Metadata is mutable for a given major version. The process of cataloging an asse
 //
 
 
-== Add the Descriptor File to Your Repositories
+== Add the Descriptor File to Your API Project Location
 
-After you install API Catalog CLI, you must add the descriptor file, with the file name and location specified by your DevOps admin, to the repositories that you want to integrate with the publishing process.
+After you install API Catalog CLI, you must add the descriptor file, with the file name and location specified by your DevOps admin, to the location of the API project that you want to integrate with the publishing process.
 
 *Prerequisites*
 
-Before you add the descriptor file to the repository, ensure that:
-API Catalog CLI is installed in your CI/CD pipeline 
-For details on how to perform this installation, see <xref>. 
-You have the repository location where you want to add the descriptor file ready.
+Before you add the descriptor file to the API project, ensure that:
 
-To add a descriptor file to a repository:
+* API Catalog CLI is installed in a location accessible by your CI/CD pipeline. For details on how to perform this installation, see <<Install the CLI>>. 
+* The API project location is accessible by your CI/CD pipeline.
+* The API project contains APIs supported by Anypoint. 
 
-<...>
+To add a descriptor file to an API project:
+
+* Copy the descriptor file, such as +catalog.yaml+, to the file path or repository where your API projects are stored. 
 
 == Publish APIs Using CLI
 You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To automate the publishing of APIs using CLI, you will typically use build scripts in tools such as Jenkins, but you can run the CLI manually from a terminal for learning and testing purposes. 
@@ -339,10 +344,10 @@ You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To
 
 This command publishes APIs to Exchange using the descriptor information passed in the YAML file passed in the catalog-file option.
 
-
+ƒ
 [%header,cols="40a,30a,30a"]
 |===
-| Parameter | Description |  Example
+| Argument | Description |  Example
 
 | -a, --anypoint-uri=anypoint-uri 
 
@@ -373,7 +378,7 @@ The name and location of the catalog descriptor file.
   * If the file exists, but is empty, the command will scaffold and print the catalog descriptor based on all specifications in the full directory tree relative to the current working directory.
   * For additional control, you can declare what to catalog and how. | See <<Descriptor Files>>.
 
-| -d, --dry-run=dry-run  | Runs the command to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file parameter defines the scope. |   
+| -d, --dry-run=dry-run  | Runs the command to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file Argument defines the scope. |   
 
 | -o, --organization=organization 
 
@@ -457,7 +462,7 @@ ANYPOINT_CLIENT_SECRET environment variable
 
 === Specify the Version Rules
 
-When you publish an API to exchange, the patch version is incremented by default. However, you can set the version using a combination of the API and asset version parameters as follows:
+When you publish an API to exchange, the patch version is incremented by default. However, you can set the version using a combination of the API and asset version Arguments as follows:
 
 xxx table with the settings and examples from the video xxx 
 
@@ -485,29 +490,29 @@ Custom trigger and filter conditions enable you to further control what is publi
 
 To use trigger conditions:
 
- (--trigger parameter)
+ (--trigger Argument)
 
 // More info can be found here:
 // https://docs.google.com/document/d/1j31ANa7hQpJ9X2PCLDxZXUrFK42qPjng9jGstNBBSX4/edit
 
 // end of Triggering and Filtering text
 
-==== Example 3: Publish an asset using the force-publish parameter
+==== Example 3: Publish an asset using the force-publish Argument
 // Force Publish Text
 Forcing (Diffing Bypass)
 
 When attempting to catalog an API spec, we should do our best effort to determine whether or not the asset in Exchange corresponds to the same content of the developer environment and avoid duplicating assets when not necessary. 
 
-There might be cases when the user wants to publish a new asset, even when API spec content has not changed. For those cases, the CLI will provide a --force-publish flag parameter that will indicate the tool to bypass the comparison and always create a new version in Exchange, regardless of the content.
+There might be cases when the user wants to publish a new asset, even when API spec content has not changed. For those cases, the CLI will provide a --force-publish flag Argument that will indicate the tool to bypass the comparison and always create a new version in Exchange, regardless of the content.
 
 If the same version of an API exists but you still want to create another asset, you will need to use the force publish command.
 
 Forcing (Metadata Update)
-There might be cases when the user wants to update the metadata, even when API spec content has not changed. For those cases, the CLI will provide a --force-metadata-update flag parameter that will indicate the tool to update the asset metadata, regardless of the API spec content. 
+There might be cases when the user wants to update the metadata, even when API spec content has not changed. For those cases, the CLI will provide a --force-metadata-update flag Argument that will indicate the tool to update the asset metadata, regardless of the API spec content. 
 
 
 //publish errors/skip cases for our clients to be able to solve them.
-//For example, understanding the case in which the CLI skips the publication since the API content is exactly the same as the latest published version in Exchange. We may also want to document the "force-publish" parameter to be able to bypass this CLI restriction in case clients still want to publish a new identical version.//
+//For example, understanding the case in which the CLI skips the publication since the API content is exactly the same as the latest published version in Exchange. We may also want to document the "force-publish" Argument to be able to bypass this CLI restriction in case clients still want to publish a new identical version.//
 
 // end Force Publish Text
 
@@ -516,9 +521,9 @@ There might be cases when the user wants to update the metadata, even when API s
 // Other example cases text
 
 This example shows a publish-asset command with the following:
-* "dry-run" parameter: Identifies the eligible APIs to publish but does not actually publish them
-* "result" parameter: Captures the results
-* "verbose" parameter: Shows the maximum information in the results
+* "dry-run" Argument: Identifies the eligible APIs to publish but does not actually publish them
+* "result" Argument: Captures the results
+* "verbose" Argument: Shows the maximum information in the results
 
 xxx example code goes here xxx
 
@@ -541,7 +546,7 @@ If you don't log in using single sign-on (SSO), you can use your username and pa
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-| Parameter | Description
+| Argument | Description
 | `username` | Your Anypoint Platform username
 
 You can also pass this value using the environment variable `export ANYPOINT_USERNAME=<name>`.
@@ -558,7 +563,7 @@ You can configure a Connected App with the `client_credentials` grant type to us
 
 [%header%autowidth.spread,cols="a,a"]
 |===
-| Parameter | Description
+| Argument | Description
 | `client_id` | The ID of the Connected App
 
 You can also pass this value using the environment variable `export ANYPOINT_CLIENT_ID=<client_id>`.
@@ -573,8 +578,8 @@ You can also pass this value using the environment variable `export ANYPOINT_CLI
 
 Keep the following in mind while using API Catalog CLI:
 
-* Command-line parameters override environment variables. +
-If you don't pass a command-line parameter, the default profile properties are used.
+* Command-line Arguments override environment variables. +
+If you don't pass a command-line Argument, the default profile properties are used.
 * If not specified, the default environment is production.
 
 === Timeout
