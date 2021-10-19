@@ -87,6 +87,54 @@ Use the help option with the commands to list the commands or command options an
 * +api-catalog create-descriptor --help+
 * +api-catalog publish-asset --help+
 
+=== Configure and Use Autocomplete
+
+Before you can use the autocomplete command, you must add it into your shell profile.
+
+To add autocomplete to a bash shell profile:
+
+* If your terminal does not start as a login shell, enter the following command:
++
++$ printf "eval $(api-catalog autocomplete:script bash)" >> ~/.bashrc; source ~/.bashrc: value+
+
+* If your terminal starts as a login shell, enter the following command:
++
++$ printf "eval $(api-catalog autocomplete:script bash)" >> ~/.bashrc; source ~/.bashrc: value+
+
+To add autocomplete to a Z shell profile:
+
+* +xxx+
+
+==== api-catalog autocomplete
+
+After you have added the command to your shell profile, you can run it with options to control the results.  
+
+----
+> api-catalog autocomplete [options] 
+----
+
+This command enables you to use the tab key to autocomplete a partially-typed api-catalog command. 
+
+[%header,cols="30a,30a"]
+|===
+| Parameter | Description 
+
+| bash | Use the bash shell.  
+
+| zsh | Use the Z shell.    
+
+| --refresh-cache | Clear the cache.  
+
+|===
+
+==== Using Autocompletion for api-catalog Commands 
+
+After you have installed the plug-in into your shell, use the command as follows: 
+
++$ api-catalog <TAB><TAB>                 # Command completion+
+
++$ api-catalog command --<TAB><TAB>       # Flag completion+
+
 == Descriptor Files
 
 Before you run the commands to publish your APIs, you must create a descriptor file in each of the Git repositories you are using for your CI/CD processes. You can use the following approaches:
@@ -118,9 +166,11 @@ To use dry run mode:
 
 === Explicit Mode
 
-Use explicit mode when you have descriptor file content that identifies the APIs that you want to publish in Exchange. You can use dry run mode to obtain suggested content from your CI/CD repository or you can create the descriptor file by using the following documentation. 
+Use explicit mode when you have descriptor file content that identifies the APIs that you want to publish in Exchange. You can use dry-run mode to obtain suggested content from your CI/CD repository or you can create the descriptor file by using the following documentation. 
 
 === Create a Descriptor File
+
+Use the +api-catalog create-descriptor+ command to generate a descriptor file by discovering APIs in the designated folder structure.   
 
 ==== api-catalog create-descriptor
 
@@ -129,7 +179,6 @@ Use explicit mode when you have descriptor file content that identifies the APIs
 ----
 
 This command describes the APIs to catalog. This file is used by the api-catalog publish-assets command to publish identified APIs to Exchange. See <<Publish APIs Using CLI>>.
-
 
 [%header,cols="40a,30a,30a"]
 |===
@@ -322,9 +371,9 @@ The name and location of the catalog descriptor file.
 
   * If the file does not exist, no cataloging will be performed.
   * If the file exists, but is empty, the command will scaffold and print the catalog descriptor based on all specifications in the full directory tree relative to the current working directory.
-  * For additional control, you can declare what to catalog and how. | See <<Descriptor Files>>
+  * For additional control, you can declare what to catalog and how. | See <<Descriptor Files>>.
 
-| -d, --dry-run=dry-run  | Runs the command only to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file parameter defines the scope. |   
+| -d, --dry-run=dry-run  | Runs the command to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file parameter defines the scope. |   
 
 | -o, --organization=organization 
 
@@ -342,7 +391,7 @@ or
 
 ANYPOINT_PASSWORD environment variable
 
- | Prompt Anypoint password for username. Set the environment variable to avoid the prompt for the password.   | See <<Authentication.>>
+ | Prompt Anypoint password for username. Set the environment variable to avoid the prompt for the password.   | See <<Authentication>>.
 
 | -s, --silent | Turn on silent logging.|
 
@@ -373,7 +422,7 @@ or
 
 ANYPOINT_USERNAME environment variable
 
-| Anypoint username.  | See <<Authentication.>>
+| Anypoint username.  | See <<Authentication>>.
 
 | -v, --verbose | Turn on verbose logging. |
 
