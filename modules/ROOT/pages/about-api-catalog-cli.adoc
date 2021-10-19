@@ -99,7 +99,7 @@ To add autocomplete to a bash shell profile:
 
 * If your terminal starts as a login shell, enter the following command:
 +
-+$ printf "eval $(api-catalog autocomplete:script bash)" >> ~/.bashrc; source ~/.bashrc: value+
++xxx+
 
 To add autocomplete to a Z shell profile:
 
@@ -107,7 +107,7 @@ To add autocomplete to a Z shell profile:
 
 ==== api-catalog autocomplete
 
-After you have added the command to your shell profile, you can run it with options to control the results.  
+After you have added the command to your shell profile, you can run it with arguments to control the results.  
 
 ----
 > api-catalog autocomplete [arguments] 
@@ -174,15 +174,24 @@ Use explicit mode when you have descriptor file content that identifies the APIs
 
 === Create a Descriptor File
 
-Use the +api-catalog create-descriptor+ command to generate a descriptor file by discovering APIs in the designated API project's folder structure.   
+The +api-catalog create-descriptor+ command parses the YAML schema that describes the APIs to catalog. The results are stored in a descriptor file that is then used by the +api-catalog publish-assets+ command to publish identified APIs to Exchange. See <<Publish APIs Using CLI>>.
 
 ==== api-catalog create-descriptor
 
 ----
-> api-catalog create-descriptor [options] 
+> api-catalog create-descriptor [arguments] 
 ----
 
-This command parses the YAML schema that describes the APIs to catalog. The results are stored in a descriptor file that is then used by the +api-catalog publish-assets+ command to publish identified APIs to Exchange. See <<Publish APIs Using CLI>>.
+*Arguments*
+
++-f, --file=file+
+  +
+  [default: +catalog.yaml+] 
+  + The name and location in which to save the generated catalog descriptor file.
+
+== Descriptor YAML Schema
+
+Following are the YAML tags used to describe the APIs you want to catalog. 
 
 [%header,cols="40a,30a,30a"]
 |===
@@ -226,17 +235,19 @@ Following are some examples of typical descriptor files.
 
 ==== Example 1: Descriptor file that describes two APIs
 
-The following descriptor file results in the following:
+Following is a descriptor file that describes two APIs to catalog. The cataloging will be done by a subsequent run of the related +api-catalog publish-asset+ command. 
 
-* xxx branches are
-* xxx tags are
-* xxx user is
-* codat API is published as follows:
-** xxx
-** xxx
-* billing API is published as follows:
-** xxx
-** xxx
+//The following descriptor file results in the following:
+
+//* xxx branches are
+//* xxx tags are
+//* xxx user is
+//* codat API is published as follows:
+//** xxx
+//** xxx
+//* billing API is published as follows:
+//** xxx
+//** xxx
 
 ---
 
