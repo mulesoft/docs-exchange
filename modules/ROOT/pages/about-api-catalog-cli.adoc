@@ -25,33 +25,7 @@ To enable developers in your organization to automatically publish the new API s
 
 === Prerequisites
 
-* Download and install NodeJS and npm (node package manager) on your system.
-+
-See the https://nodejs.org/en/download/[NodeJS download page].
-* Download and install the Git version management on your system.
-+
-See the https://git-scm.com/downloads[Git download site].
-
-Depending on the configuration of your system, you might need to run these commands using administrator credentials.
-
-[source,text,linenums]
-----
-$ npm install -g anypoint-cli@latest
-----
-
-If the installation command fails with the following error, ensure that the Git client is installed on your computer and the git protocol is not blocked by your firewall or network:
-
-[source,text,linenums]
-----
-fatal: read error: Invalid argument
-----
-
-If the git protocol is blocked, you can configure Git to use `https://` instead of `git://`:
-
-[source,text,linenums]
-----
-git config --global url."https://".insteadOf git://
-----
+Download and install NodeJS and npm (node package manager) on your system. See the https://nodejs.org/en/download/[NodeJS download page].
 
 System Requirements:
 
@@ -63,9 +37,9 @@ System Requirements:
 To install the CLI:
 
 . Download the API Catalog CLI package from the https://npmjs.com[npm public registry]. 
-. Run the following command from your terminal, where <API-Catalog-CLI-package-name> is the name of the package you downloaded:
+. Run the following command from your terminal:
 ----
-npm install -g <API-Catalog-CLI-package-name>@beta
+npm install -g api-catalog-api@beta
 ----
 
 === Make the CLI Available From Any Directory
@@ -233,6 +207,14 @@ Although you can enter authentication credentials explicitly in the commands for
 
 See <<Authentication>>.
 
+=== Versioning Overview
+
+<...>  
+// text relevant to versioning
+
+//Metadata is mutable for a given major version. The process of cataloging an asset includes not only the API specification itself, but also documentation (portal pages) and asset metadata (contact, categories, tags, and so on). The metadata is associated with the current major + minor version of the asset. Therefore, all assets for the same minor version in Exchange will share the same metadata. The metadata cannot be considered immutable for a given major version, as metadata for a newer asset for the same minor version will overwrite it. 
+//
+
 === Example Descriptor Files 
 
 Following are some examples of typical descriptor files.
@@ -307,49 +289,40 @@ Following is a descriptor file that describes two APIs to catalog. The catalogin
 
 ---
 
-*After publication in Exchange*
+//*After publication in Exchange*
 
-xxx include a screenshot of this example after publication in exchange xxx
+//xxx include a screenshot of this example after publication in exchange xxx
 
-==== Example 2: Generate a descriptor file after autodiscovering API candidates
+==== Example 2: Generate a descriptor file by autodiscovering API candidates 
 
-Use the dry-run Argument with the publish-assets command to generate a catalog.yaml file after autodiscovering all API candidates. xxx 
+xxx
 
-==== Example 3: Section that defines the documentation, contacts, and other API metadata 
+==== Example 3: Autodiscover API candidates and send the results to standard output
 
-- Catalog Descriptor section clarifying how to set up documentation, contacts, and other API metadata
+xxx
 
-==== Example 4: Section that defines the version strategy 
+//== Add the Descriptor File to Your API Project Location
 
-- Specific section on how to define the versioning strategy in the Descriptor (strategy + version selection)
+//After you install API Catalog CLI, you must add the descriptor file, with the file name and location specified by your DevOps admin, to the location of the API project that you want to integrate with the publishing process.
 
-*Specify the Version Rules*
+//*Prerequisites*
 
-<...>  
-// text relevant to versioning
+//Before you add the descriptor file to the API project, ensure that:
 
-Metadata is mutable for a given major version. The process of cataloging an asset includes not only the API specification itself, but also documentation (portal pages) and asset metadata (contact, categories, tags, and so on). The metadata is associated with the current major + minor version of the asset. Therefore, all assets for the same minor version in Exchange will share the same metadata. The metadata cannot be considered immutable for a given major version, as metadata for a newer asset for the same minor version will overwrite it. 
-//
+//* API Catalog CLI is installed in a location accessible by your CI/CD pipeline. For details on how to perform this installation, see <<Install the CLI>>. 
+//* The API project location is accessible by your CI/CD pipeline.
+//* The API project contains APIs supported by Anypoint. 
 
+//To add a descriptor file to an API project:
 
-== Add the Descriptor File to Your API Project Location
-
-After you install API Catalog CLI, you must add the descriptor file, with the file name and location specified by your DevOps admin, to the location of the API project that you want to integrate with the publishing process.
-
-*Prerequisites*
-
-Before you add the descriptor file to the API project, ensure that:
-
-* API Catalog CLI is installed in a location accessible by your CI/CD pipeline. For details on how to perform this installation, see <<Install the CLI>>. 
-* The API project location is accessible by your CI/CD pipeline.
-* The API project contains APIs supported by Anypoint. 
-
-To add a descriptor file to an API project:
-
-* Copy the descriptor file, such as +catalog.yaml+, to the file path or repository where your API projects are stored. 
+//* Copy the descriptor file, such as +catalog.yaml+, to the file path or repository where your API projects are stored. 
 
 == Publish APIs Using CLI
 You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To automate the publishing of APIs using CLI, you will typically use build scripts in tools such as Jenkins, but you can run the CLI manually from a terminal for learning and testing purposes. 
+
+*Prerequisites*
+
+Create a descriptor file and copy it to the file path where your API projects are stored. See <<Descriptor Files>>.
 
 === api-catalog publish-asset
 
@@ -392,7 +365,7 @@ The name and location of the catalog descriptor file.
   * If the file exists but is empty, the command will create and print the catalog descriptor YAML results. It will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
   * If a valid YAML file exists, the command will catalog the assets as specified. | See <<Descriptor Files>>.
 
-| -d, --dry-run=dry-run  | Runs the command to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file argument defines the scope. |   
+| -d, --dry-run=dry-run  | Runs the command to verify that the descriptor file is valid. No APIs will be published. |   
 
 | -o, --organization=organization 
 
@@ -482,21 +455,25 @@ Following are examples that show some typical use cases for publishing assets.
 
 ==== Example 1: Publish an asset with default settings
 
-The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the ./descriptor.yaml descriptor file in the master branch of the VCS repository:
+The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the +./catalog.yaml+ descriptor file in the master branch of the VCS repository:
 
-api-catalog-cli publishAsset -o c06ba7b-3ce8-425c-878c-b728dd7db60d  -a https://anypoint.mulesoft.com/
+---
+ api-catalog-cli publishAsset -o c06ba7b-3ce8-425c-878c-b728dd7db60d  -a https://anypoint.mulesoft.com/
+---
 
 In the example, an assumption is made that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined.
 
 ==== Example 2: Publish an asset using the trigger filters 
 
+xxx example code goes here xxx
+
 // Triggering and Filtering Text
 
-Custom trigger and filter conditions enable you to further control what is published when the API Catalog CLI command runs. 
+//Custom trigger and filter conditions enable you to further control what is published when the API Catalog CLI command runs. 
 
-To use trigger conditions:
+//To use trigger conditions:
 
- (--trigger Argument)
+// (--trigger Argument)
 
 // More info can be found here:
 // https://docs.google.com/document/d/1j31ANa7hQpJ9X2PCLDxZXUrFK42qPjng9jGstNBBSX4/edit
@@ -504,17 +481,21 @@ To use trigger conditions:
 // end of Triggering and Filtering text
 
 ==== Example 3: Publish an asset using the force-publish Argument
+
+xxx example code goes here xxx
+
 // Force Publish Text
-Forcing (Diffing Bypass)
 
-When attempting to catalog an API spec, we should do our best effort to determine whether or not the asset in Exchange corresponds to the same content of the developer environment and avoid duplicating assets when not necessary. 
+//Forcing (Diffing Bypass)
 
-There might be cases when the user wants to publish a new asset, even when API spec content has not changed. For those cases, the CLI will provide a --force-publish flag Argument that will indicate the tool to bypass the comparison and always create a new version in Exchange, regardless of the content.
+//When attempting to catalog an API spec, we should do our best effort to determine whether or not the asset in Exchange corresponds to the same content of the developer environment and avoid duplicating assets when not necessary. 
 
-If the same version of an API exists but you still want to create another asset, you will need to use the force publish command.
+//There might be cases when the user wants to publish a new asset, even when API spec content has not changed. For those cases, the CLI will provide a --force-publish flag Argument that will indicate the tool to bypass the comparison and always create a new version in Exchange, regardless of the content.
 
-Forcing (Metadata Update)
-There might be cases when the user wants to update the metadata, even when API spec content has not changed. For those cases, the CLI will provide a --force-metadata-update flag Argument that will indicate the tool to update the asset metadata, regardless of the API spec content. 
+//If the same version of an API exists but you still want to create another asset, you will need to use the force publish command.
+
+//Forcing (Metadata Update)
+//There might be cases when the user wants to update the metadata, even when API spec content has not changed. For those cases, the CLI will provide a --force-metadata-update flag Argument that will indicate the tool to update the asset metadata, regardless of the API spec content. 
 
 
 //publish errors/skip cases for our clients to be able to solve them.
@@ -522,14 +503,14 @@ There might be cases when the user wants to update the metadata, even when API s
 
 // end Force Publish Text
 
-==== Example 4: Do a dry run to see assets that are eligible to publish
+==== Example 4: Do a dry run to ensure the descriptor file is valid
 
 // Other example cases text
 
-This example shows a publish-asset command with the following:
-* "dry-run" Argument: Identifies the eligible APIs to publish but does not actually publish them
-* "result" Argument: Captures the results
-* "verbose" Argument: Shows the maximum information in the results
+//This example shows a publish-asset command with the following:
+//* "dry-run" Argument: Identifies the eligible APIs to publish but does not actually publish them
+//* "result" Argument: Captures the results
+//* "verbose" Argument: Shows the maximum information in the results
 
 xxx example code goes here xxx
 
