@@ -137,40 +137,44 @@ After you have installed the plug-in into your shell, use the command as follows
 
 == Descriptor Files
 
-Before you run the commands to publish your APIs, you must create a descriptor file in each of the Git repositories you are using for your CI/CD processes. You can use the following approaches:
+Before you run the commands to publish your APIs, you must create a descriptor file in each of the locations where you store your API projects. 
 
-* *Dry Run Mode*: Use this mode to run the publish catalog command with an empty descriptor.yaml file and get a preview in your CI/CD log of the APIs that would be cataloged. 
-* *Explicit Mode*: Use this mode to run the publish catalog command with a complete descriptor file that specifies the APIs that should be cataloged. 
+NOTE: To have the APIs autodiscovered and YAML results generated to help you populate the descriptor file, use the +api-catalog publish-asset+ command with the dry-run parameter. See <<Publish APIs Using CLI>>.
 
-=== Prerequisites
+//You can use the following approaches:
 
-Before you add the descriptor file to the repository, ensure that:
+//* *Dry Run Mode*: Use this mode to run the publish catalog command with an empty descriptor.yaml file and get a preview in your CI/CD log of the APIs that would be cataloged. 
+//* *Explicit Mode*: Use this mode to run the publish catalog command with a complete descriptor file that specifies the APIs that should be cataloged. 
 
-* The API Catalog CLI is installed on a computer in your CI/CD pipeline. 
-+
-See <<Install the CLI>>. 
-* You have the repository location where you want to add the descriptor file ready.
+// === Prerequisites
 
-=== Dry Run Mode
+// Before you add the descriptor file to the repository, ensure that:
 
-Use dry run mode to generate content for a starter descriptor file and discover which APIs are available in a CI/CD repository that are candidates to be cataloged in Exchange. The CI/CD job sends results to standard output. The output has suggested descriptor file content and status messages, such as lists of APIs that would not be cataloged based on this descriptor content.
-No API specifications or documentation are cataloged in Exchange.
+// * The API Catalog CLI is installed on a computer in your CI/CD pipeline. 
+//+
+//See <<Install the CLI>>. 
+//* You have the repository location where you want to add the descriptor file ready.
 
-To use dry run mode:
+// === Dry Run Mode
 
-. Add an empty +descriptor.yaml+ file to your Git repository. 
-. Modify your CI/CD pipeline to add the following command: 
-+
-+api-catalog publish-asset --dry-run=dry-run+
-+
-See <<Publish APIs Using CLI>> for command details.
-. Run the CI/CD pipeline.
-. Check your CI/CD log for the results.
-. Update the +descriptor.yaml+ file in your Git repository with the content from the dry run and modify as needed. 
+//Use dry run mode to generate content for a starter descriptor file and discover which APIs are available in a CI/CD repository that are candidates to be cataloged in Exchange. The CI/CD job sends results to standard output. The output has suggested descriptor file content and status messages, such as lists of APIs that would not be cataloged based on this descriptor content.
+//No API specifications or documentation are cataloged in Exchange.
 
-=== Explicit Mode
+//To use dry run mode:
 
-Use explicit mode when you have descriptor file content that identifies the APIs that you want to publish in Exchange. You can use dry-run mode to obtain suggested content from your CI/CD repository or you can create the descriptor file by using the following documentation. 
+//. Add an empty +descriptor.yaml+ file to your Git repository. 
+//. Modify your CI/CD pipeline to add the following command: 
+//+
+//+api-catalog publish-asset --dry-run=dry-run+
+//+
+//See <<Publish APIs Using CLI>> for command details.
+//. Run the CI/CD pipeline.
+//. Check your CI/CD log for the results.
+//. Update the +descriptor.yaml+ file in your Git repository with the content from the dry //run and modify as needed. 
+
+//=== Explicit Mode
+
+//Use explicit mode when you have descriptor file content that identifies the APIs that you want to publish in Exchange. You can use dry-run mode to obtain suggested content from your CI/CD repository or you can create the descriptor file by using the following documentation. 
 
 === Create a Descriptor File
 
@@ -189,7 +193,7 @@ The +api-catalog create-descriptor+ command parses the YAML schema that describe
   [default: +catalog.yaml+] 
   + The name and location in which to save the generated catalog descriptor file.
 
-== Descriptor YAML Schema
+=== Descriptor YAML Schema
 
 Following are the YAML tags used to describe the APIs you want to catalog. 
 
@@ -355,7 +359,6 @@ You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To
 
 This command publishes APIs to Exchange using the descriptor information passed in the YAML file passed in the catalog-file option.
 
-ƒ
 [%header,cols="40a,30a,30a"]
 |===
 | Argument | Description |  Example
@@ -375,21 +378,21 @@ URL. It must be specified using HTTPS protocol. |
 For the US Anypoint Platform, use  
 +https://anypoint.mulesoft.com/+. 
 
-|  -c, --catalog-file=catalog-file 
+|  -c, --descriptor-file=descriptor-file 
 
 or
 
-ANYPOINT_CATALOG_FILE environment variable
+ANYPOINT_DESCRIPTOR_FILE environment variable
 
- | Default:  ./catalog.yaml 
+ | Default:  ./descriptor.yaml 
  
 The name and location of the catalog descriptor file.  
 
-  * If the file does not exist, no cataloging will be performed.
-  * If the file exists, but is empty, the command will scaffold and print the catalog descriptor based on all specifications in the full directory tree relative to the current working directory.
-  * For additional control, you can declare what to catalog and how. | See <<Descriptor Files>>.
+  * If the file does not exist, no assets will be cataloged.
+  * If the file exists but is empty, the command will create and print the catalog descriptor YAML results. It will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
+  * If a valid YAML file exists, the command will catalog the assets as specified. | See <<Descriptor Files>>.
 
-| -d, --dry-run=dry-run  | Runs the command to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file Argument defines the scope. |   
+| -d, --dry-run=dry-run  | Runs the command to identify the APIs that are eligible to be published. No APIs will be published. The descriptor file specified in the catalog-file argument defines the scope. |   
 
 | -o, --organization=organization 
 
@@ -407,11 +410,11 @@ or
 
 ANYPOINT_PASSWORD environment variable
 
- | Prompt Anypoint password for username. Set the environment variable to avoid the prompt for the password.   | See <<Authentication>>.
+ | Anypoint user password. Set the environment variable to avoid a prompt for the password.   | See <<Authentication>>.
 
-| -s, --silent | Turn on silent logging.|
+| -s, --silent | Enable silent logging.|
 
-| -t, --trigger=branch:master --trigger=tag:bla  | User-defined filters that are applied to the descriptor file to determine whether an asset should be published. |  
+| -t, --trigger=branch:master --trigger=tag:bla  | Filters that are applied to the descriptor file to determine whether an asset should be published. |  
 
 ---
 
@@ -424,14 +427,6 @@ ANYPOINT_PASSWORD environment variable
    - hotfix
 
 ---
-  
-
-    
-
-
-
-
-
 | -u, --username=username 
 
 or
@@ -440,7 +435,7 @@ ANYPOINT_USERNAME environment variable
 
 | Anypoint username.  | See <<Authentication>>.
 
-| -v, --verbose | Turn on verbose logging. |
+| -v, --verbose | Enable verbose logging. |
 
 
 
@@ -452,7 +447,7 @@ or
 
 ANYPOINT_CLIENT_ID environment variable
 
-| Connected App client ID.  |
+| Connected app client ID.  |
 
 | --client-secret 
 
@@ -460,14 +455,14 @@ or
 
 ANYPOINT_CLIENT_SECRET environment variable
 
- | Prompt for the Connected App secret for client-id. Set the environment variable to avoid the prompt for the client secret.  |
+ | Prompt for the Connected App secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  |
 
  | --force-publish |  Bypasses the comparison and 
  creates a new version of the asset in Exchange regardless of the content.|
 
-| --force-update-metadata | Forces update of the asset's metadata (such as tags) in the latest version in Exchange regardless of the content. |
+| --force-update-metadata | Updates the asset's metadata (such as tags) in the latest version in Exchange regardless of the content. |
 
-| --json | Prints the execution result in json format. |
+| --json | Prints the execution result in JSON format. |
 
 |===
 
@@ -487,7 +482,7 @@ Following are examples that show some typical use cases for publishing assets.
 
 ==== Example 1: Publish an asset with default settings
 
-The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the ./catalog.yaml descriptor file in the master branch of the VCS repository:
+The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the ./descriptor.yaml descriptor file in the master branch of the VCS repository:
 
 api-catalog-cli publishAsset -o c06ba7b-3ce8-425c-878c-b728dd7db60d  -a https://anypoint.mulesoft.com/
 
@@ -544,7 +539,49 @@ xxx example code goes here xxx
 
 An example Jenkins script that runs the commands is as follows:
 
-<Example Jenkins script>
+---
+
+ pipeline {
+    agent any
+    environment {
+        ANYPOINT_ORG_ID = '8bbff579-da62-4458-baea-bb00387126da'
+        CATALOG_DESCRIPTOR = './descriptor.yaml'
+     }   
+     stages {
+        stage('git checkout') {
+            steps {
+                git url: 'git@github.com:mulesoft-labs/api-cataloging-demo.git'
+                sh 'ls'
+                echo "Branch " + env.GIT_BRANCH
+            }
+        }
+        stage('Build Artifacts') {    
+            steps {
+                 // building
+                  sh 'ls'
+            }
+        }
+        stage('API Cataloging') {    
+            steps {
+                 withCredentials([
+                    usernamePassword(credentialsId: 'anypoint-demo-org-creds',
+                    usernameVariable: 'ANYPOINT_USERNAME',
+                    passwordVariable: 'ANYPOINT_PASSWORD')
+                ]) { 
+                    sh 'api-catalog-cli publish-asset -c $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com/ -b master'
+                }
+            }
+        }
+         stage('Deploy') {    
+            steps {
+                // Lots of deploying 
+                 echo "Branch " + env.GIT_BRANCH
+                 sh 'ls'
+            }
+        }
+    }
+
+---
 
 == Authentication
 
