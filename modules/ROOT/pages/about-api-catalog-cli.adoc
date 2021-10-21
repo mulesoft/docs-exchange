@@ -94,7 +94,7 @@ To enable the API Catalog Contributor permission:
 
 == Descriptor Files
 
-Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. 
+Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. To do this you can use the +api-catalog create-descriptor+ command, which autodiscovers APIs in a designated directory path and creates a descriptor file. You can then specify the descriptor file in the +api-catalog publish-assets+ command to publish the APIs. See <<Publish APIs Using CLI>>.
 
 ==== api-catalog create-descriptor
 
@@ -107,7 +107,8 @@ Before you run the commands to publish your APIs, you must create a descriptor f
 +-f, --file=file+
   +
   [default: +catalog.yaml+] 
-  + The name and location in which to save the generated catalog descriptor file.
+  + 
+  The name and location in which to save the generated catalog descriptor file.
 
 The result of the command depends on the presence and content of the designated descriptor file as follows:
 
@@ -115,19 +116,16 @@ The result of the command depends on the presence and content of the designated 
 
 * Existing file with content: The command will fail and show an error message that says the descriptor file already exists.
 
-TIP: If this is a test run, copy one or more APIs to local directory path.
-
 //Limitations:
 //* Each API specification must have a single API.  
+//* You cannot log in through the CLI if you system uses multi-factor authentication. Your system must use SSO and you must log in using the client ID and client secret of the Connected App.
 
 === Create a Descriptor File Using the CLI
 
 To create a descriptor file:
 
-Identify the directory path that contains the APIs you want to catalog. 
-Run the +api-catalog create-descriptor+ command to identify APIs in a designated directory path and create a descriptor file with the information needed to publish these to Exchange. 
-
-You can then specify the descriptor file in the +api-catalog publish-assets+ command to publish the APIs to Exchange. See <<Publish APIs Using CLI>>.
+. Navigate to the directory path that contains the APIs you want to catalog. 
+. Run the +api-catalog create-descriptor+ command.  
 
 NOTE: You can optionally create a descriptor file manually instead of using the +api-catalog create-descriptor+ command to generate the file. See <<Create a Descriptor File Manually>>.
 
