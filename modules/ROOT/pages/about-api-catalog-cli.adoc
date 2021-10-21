@@ -16,7 +16,7 @@ With API Catalog CLI you can:
 You should install and test the process end-to-end locally before integrating it into your CI/CD pipeline. To verify locally: 
 
 . Ensure API Catalog CLI is properly installed.
-. Set required entitlements within the Anypoint Platform organization.
+. Ensure MuleSoft has enabled the API Catalog entitlement for your Anypoint Platform organization.
 . Configure catalog permissions in the Anypoint Access Management web UI.
 . Create a descriptor file using the API Catalog CLI.
 . Catalog a test asset and view it in Anypoint Exchange.
@@ -24,6 +24,7 @@ You should install and test the process end-to-end locally before integrating it
 For details, see the following:
 
 * <<Install API Catalog CLI>>
+* <<Configure Catalog Permissions in Anypoint Access Management>>
 * <<Descriptor Files>>
 * <<Publish APIs Using CLI>>
 
@@ -117,26 +118,15 @@ After you have installed the plug-in into your shell, use the command as follows
 
 +$ api-catalog command --<TAB><TAB>       # Flag completion+
 
-== Set Entitlements in Anypoint Platform
-
-You must enable the API Catalog entitlement for the Anypoint Platform organization user. 
-
-NOTE: This must be done by an Anypoint Platform user with administrative permission.
-
-To enable the API Catalog entitlement:
-
-. In Anypoint Platform, navigate to *Management Center > Admin*.
-. Select *Home* in the left navigation.
-. Search for and select the Anypoint organization for which you plan to use API Catalog CLI.
-. In the organization's page, select *Settings* in the left navigation. 
-. In the *API Manager and Others* section, select *API Catalog*.
-. Click *Apply Changes*. 
-
 == Configure Catalog Permissions in Anypoint Access Management
 
 You must enable the API Catalog Contributor permission for the Anypoint Platform organization user. 
 
-NOTE: This must be done by an Anypoint Platform user with administrative permission.
+*Prerequisite*
+
+The API Catalog entitlement must be set by MuleSoft for your organization. 
+
+NOTE: Permissions must be set by an Anypoint Platform user with administrative permission. 
 
 To enable the API Catalog Contributor permission:
 
@@ -152,7 +142,7 @@ Before you run the commands to publish your APIs, you must create a descriptor f
 
 === Create a Descriptor File
 
-The +api-catalog create-descriptor+ command parses the YAML schema that describes the APIs to catalog. The results are stored in a descriptor file that is then used by the +api-catalog publish-assets+ command to publish identified APIs to Exchange. See <<Publish APIs Using CLI>>.
+Run the +api-catalog create-descriptor+ command to identify APIs in a designated directory path and create a descriptor file with the information needed to publish these to Exchange. You can then specify the descriptor file in the +api-catalog publish-assets+ command to publish the APIs to Exchange. See <<Publish APIs Using CLI>>.
 
 ==== api-catalog create-descriptor
 
