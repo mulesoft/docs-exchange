@@ -28,6 +28,8 @@ For details, see the following:
 * <<Descriptor Files>>
 * <<Publish APIs Using CLI>>
 
+After you have finished testing locally, you will be ready to add the +api-catalog publish asset+ command to your CI/CD scripts and autocatalog APIs as part of your CI/CD processes. 
+
 == Install API Catalog CLI 
 
 To enable developers in your organization to automatically publish the new API specifications, you must install API Catalog CLI and add it to your CI/CD pipeline. 
@@ -92,11 +94,7 @@ To enable the API Catalog Contributor permission:
 
 == Descriptor Files
 
-Before you run the commands to publish your APIs, you must create a descriptor file in each of the locations where you store your API projects. 
-
-=== Create a Descriptor File
-
-Run the +api-catalog create-descriptor+ command to identify APIs in a designated directory path and create a descriptor file with the information needed to publish these to Exchange. You can then specify the descriptor file in the +api-catalog publish-assets+ command to publish the APIs to Exchange. See <<Publish APIs Using CLI>>.
+Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. 
 
 ==== api-catalog create-descriptor
 
@@ -111,9 +109,30 @@ Run the +api-catalog create-descriptor+ command to identify APIs in a designated
   [default: +catalog.yaml+] 
   + The name and location in which to save the generated catalog descriptor file.
 
+The result of the command depends on the presence and content of the designated descriptor file as follows:
+
+* No file or empty file: The command will discover the APIs and write the results to standard output and to a file named +catalog.yaml+.
+
+* Existing file with content: The command will fail and show an error message that says the descriptor file already exists.
+
+TIP: If this is a test run, copy one or more APIs to local directory path.
+
+//Limitations:
+//* Each API specification must have a single API.  
+
+=== Create a Descriptor File Using the CLI
+
+To create a descriptor file:
+
+Identify the directory path that contains the APIs you want to catalog. 
+Run the +api-catalog create-descriptor+ command to identify APIs in a designated directory path and create a descriptor file with the information needed to publish these to Exchange. 
+
+You can then specify the descriptor file in the +api-catalog publish-assets+ command to publish the APIs to Exchange. See <<Publish APIs Using CLI>>.
+
 NOTE: You can optionally create a descriptor file manually instead of using the +api-catalog create-descriptor+ command to generate the file. See <<Create a Descriptor File Manually>>.
 
 == Publish APIs Using CLI
+
 You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To automate the publishing of APIs using CLI, you will typically use build scripts in tools such as Jenkins, but you can run the CLI manually from a terminal for learning and testing purposes. 
 
 *Prerequisites*
@@ -161,7 +180,7 @@ The name and location of the catalog descriptor file.
   * If the file exists but is empty, the command will create and print the catalog descriptor YAML results. It will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
   * If a valid YAML file exists, the command will catalog the assets as specified. | See <<Descriptor Files>>.
 
-| -d, --dry-run=dry-run  | Runs the command to verify that the descriptor file is valid. No APIs will be published. |   
+| -d, --dry-run=dry-run  | Runs the command to verify that the descriptor file is valid. No APIs will be published. |   --dry-run=descriptor
 
 | -o, --organization=organization 
 
@@ -246,12 +265,28 @@ Following are examples that show some typical use cases for publishing assets.
 The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the +./catalog.yaml+ descriptor file in the master branch of the VCS repository:
 
 ---
- api-catalog-cli publishAsset -o c06ba7b-3ce8-425c-878c-b728dd7db60d  -a https://anypoint.mulesoft.com/
+ api-catalog-cli publishAsset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
+
 ---
 
-In the example, an assumption is made that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined.
+In the example, an assumption is made that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined in ANYPOINT_CLIENT_ID and ANYPOINT_CLIENT_SECRET environment variables. 
 
-//==== Example 2: Publish an asset using the trigger filters 
+==== Example 2: Do a dry run to ensure the descriptor file is valid
+
+This example shows the +api-catalog publish-asset+ command with the following options:
+
+* --dry-run: Identifies the eligible APIs to publish but does not actually publish them
+* --verbose: Shows the maximum information in the results
+
+It sends the standard output to +mycatdryrun.log+. 
+
+--- 
+ api-catalog publish-asset -a https://qax.anypoint.mulesoft.com -c catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --verbose >> mycatdryrun.log
+
+---
+
+
+//==== Example 4: Publish an asset using the trigger filters 
 
 //xxx example code goes here xxx
 
@@ -268,7 +303,7 @@ In the example, an assumption is made that either the username and password cred
 
 // end of Triggering and Filtering text
 
-//==== Example 3: Publish an asset using the force-publish Argument
+//==== Example 4: Publish an asset using the force-publish Argument
 
 //xxx example code goes here xxx
 
@@ -291,16 +326,6 @@ In the example, an assumption is made that either the username and password cred
 
 // end Force Publish Text
 
-//==== Example 4: Do a dry run to ensure the descriptor file is valid
-
-// Other example cases text
-
-//This example shows a publish-asset command with the following:
-//* "dry-run" Argument: Identifies the eligible APIs to publish but does not actually publish them
-//* "result" Argument: Captures the results
-//* "verbose" Argument: Shows the maximum information in the results
-
-//xxx example code goes here xxx
 
 // 
 
@@ -413,7 +438,11 @@ After you create the descriptor file, copy it to the file path or repository whe
 
 The descriptor file must start with the following:
 
-#%Catalog Descriptor 0.6
+---
+
+ #%Catalog Descriptor 0.6
+
+---
 
 TIP: Run the +api-catalog publish-asset+ command using the +--dry-run+ option to ensure your manually-created descriptor file is valid. 
 
@@ -425,25 +454,31 @@ Following are the YAML tags used to describe the APIs you want to catalog.
 |===
 | Tag | Description |  Default
 
+| triggerConditions | Section for information that will appear on the assets' pages in Exchange. This section includes branches, tags, and user. |
+
 | branches | Specifies the branches from which to pull API information to be cataloged.  |
 master
+
+| tags  | A list of comma-separated text strings to describe the APIs to be published. These appear on the assets' pages in Exchange.| NULL. If not specified, no tags will be added.
+
+| user | The user name. |  
+
+| contact | The contact name. |  
 
 | apis | A list of the APIs to be cataloged. |  N/A
 
 | spec | The location of the specification file that describes the API. | N/A  
 
-| asset-id | Specifies the ID of the asset to be published in Exchange. | By default, this ID is generated from the API specification *Title* field.  
+| assetId | Specifies the ID of the asset to be published in Exchange. | By default, this ID is generated from the API specification *Title* field.  
 
 | docs   | A list of key and value pairs that specify the name of the documentation page and file location for the API.
 These pairs define the order of the documentation pages in Anypoint Platform. +
 Format: <Name of the Doc Page>:<File Location> | NULL. If not specified, no Doc pages will be imported. 
 
-| tags  | A list of comma-separated text strings to describe the API. These appear on the asset's page in Exchange.| NULL. If not specified, no tags will be added.
-
 | categories | A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization. +
 Format: <Category Name>: <Value(s)> | NULL. If not specified, no categories will be added.
 
-| custom-fields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization. +
+| customFields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization. +
 Format: <Field>: <Value> | NULL. If not specified, no custom fields will be added.
 
 | versioning | The asset version. By default the patch version is incremented by one. Example: ~1.x.x |  
@@ -456,24 +491,66 @@ Format: <Field>: <Value> | NULL. If not specified, no custom fields will be adde
 
 When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using a combination of the API and asset version options.
 
+==== Examples of Versioning
+
+The following tables show how versioning (asset version) and API version in the descriptor file correlate with the values in Exchange during the cataloging process. 
+
+*Descriptor File Definitions*
+
+[%header,cols="40a,30a,30a"]
+|===
+| Versioning | API Version | Explanation
+
+| ^X.X.X (Default) | two | Search for the latest version and increment the patch
+
+| ^1.X.X | v1 | Search for the latest version of major 1 and increment the patch
+
+| ~1.X.X | v1 | Search for the latest version of major 1 and increment the minor
+
+| ^1.0.X | v1 | Search for the latest version of major 1, minor 0 and increment the patch
+
+| ^1.0.X | v5 | Search for the latest version of major 1, minor 0 and increment the patch
+
+| ^3.X.X | v1 | Search for the latest version of major 3 and increment the patch
+
+| ^3.X.X | v3 | Search for the latest version of major 3 and increment the patch
+
+|===
+
+*Versions in Exchange*
+
+[%header,cols="40a,30a,30a"]
+|===
+| Asset Version | Minor Portal |  API Version
+
+| 1.0.0 | 1.0.X | v1
+
+| 1.0.1 | 1.0.X | v1
+
+| 1.1.0 | 1.1.X | v1
+
+| 2.0.0 | 2.0.X | two
+
+|===
+
 For more information on API and asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
 
 === Example Descriptor File
 
-Following is a descriptor file that describes the cataloging information for two APIs. 
+Following is an example descriptor file that describes the cataloging information for two APIs. 
 
 ---
 
  #%Catalog Descriptor 0.6
  triggerConditions:
-   branches:
-     - master
-     - release/(.*)
-   tags:
-     - support
-     - release/(.*)
-   user:
-     - admin
+  branches:
+    - master
+    - release/(.*)
+  tags:
+    - support
+    - release/(.*)
+  user:
+    - admin
 
  contact:
   name: 'John Doe'
@@ -491,28 +568,22 @@ Following is a descriptor file that describes the cataloging information for two
     tags:
       - codat
       - gcp
-    healthCheck:
-      url: https://dev.codat.io/api/ping
-      method: GET
-      expectedStatus: 204
     versioning: 2.0.x
-    apiVersion: v3 
-    - spec: api-spec/billing-api.json
-      assetId: my-awesome-api
-      tags:
-       - finance
-       - aws
-     categories:
-       API Type:
+    apiVersion: v3
+  - spec: api-spec/billing-api.json
+     ssetId: my-awesome-api
+     tags:
+      - finance
+      - aws
+    categories:
+      API Type:
         - System API
         - Experience API
       Organization:
         - Finance
         - Billing
-     healthCheck:
-       url: https://billing.io/api/health
-     versioning: ~1.x.x
-     apiVersion: v1
+    versioning: ~1.x.x
+    apiVersion: v1
 
 ---
 
