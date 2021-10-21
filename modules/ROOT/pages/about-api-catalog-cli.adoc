@@ -11,7 +11,7 @@ API Catalog CLI enables you to publish APIs to Anypoint Exchange as they are cre
 With API Catalog CLI you can:
 
 * Publish API specifications in Exchange using CLI commands 
-* Use descriptor files to explicitly define how you want the specifications to be published
+* Use descriptor files to identify the APIs to publish 
 
 You should install and test the process end-to-end locally before integrating it into your CI/CD pipeline. To verify locally: 
 
@@ -70,59 +70,13 @@ Use the help argument with the commands to list the commands or command argument
 * +api-catalog create-descriptor --help+
 * +api-catalog publish-asset --help+
 
-=== Configure and Use Autocomplete
-
-Before you can use the autocomplete command, you must add it into your shell profile.
-
-To add autocomplete to a bash shell profile:
-
-* If your terminal does not start as a login shell, enter the following command:
-+
-+$ printf "eval $(api-catalog autocomplete:script bash)" >> ~/.bashrc; source ~/.bashrc: value+
-
-* If your terminal starts as a login shell, enter the following command:
-+
-+xxx+
-
-To add autocomplete to a Z shell profile:
-
-* +xxx+
-
-==== api-catalog autocomplete
-
-After you have added the command to your shell profile, you can run it with arguments to control the results.  
-
-----
-> api-catalog autocomplete [arguments] 
-----
-
-This command enables you to use the tab key to autocomplete a partially-typed api-catalog command. 
-
-[%header,cols="30a,30a"]
-|===
-| Argument | Description 
-
-| bash | Use the bash shell.  
-
-| zsh | Use the Z shell.    
-
-| --refresh-cache | Clear the cache.  
-
-|===
-
-==== Using Autocompletion for api-catalog Commands 
-
-After you have installed the plug-in into your shell, use the command as follows: 
-
-+$ api-catalog <TAB><TAB>                 # Command completion+
-
-+$ api-catalog command --<TAB><TAB>       # Flag completion+
+NOTE: Optionally use the +api-catalog autocomplete+ command by following the instructions in the command help. 
 
 == Configure Catalog Permissions in Anypoint Access Management
 
 You must enable the API Catalog Contributor permission for the Anypoint Platform organization user. 
 
-*Prerequisite*
+*Prerequisites*
 
 The API Catalog entitlement must be set by MuleSoft for your organization. 
 
@@ -147,165 +101,17 @@ Run the +api-catalog create-descriptor+ command to identify APIs in a designated
 ==== api-catalog create-descriptor
 
 ----
-> api-catalog create-descriptor [arguments] 
+> api-catalog create-descriptor [options] 
 ----
 
-*Arguments*
+*Options*
 
 +-f, --file=file+
   +
   [default: +catalog.yaml+] 
   + The name and location in which to save the generated catalog descriptor file.
 
-=== Descriptor YAML Schema
-
-Following are the YAML tags used to describe the APIs you want to catalog. 
-
-[%header,cols="40a,30a,30a"]
-|===
-| Tag | Description |  Default
-
-| branches | Specifies the branches from which to pull API information to be cataloged.  |
-master
-
-| apis | A list of the APIs to be cataloged. |  N/A
-
-| spec | The location of the specification file that describes the API. | N/A  
-
-| asset-id | Specifies the ID of the asset to be published in Exchange. | By default, this ID is generated from the API specification *Title* field.  
-
-| docs   | A list of key and value pairs that specify the name of the documentation page and file location for the API.
-These pairs define the order of the documentation pages in Anypoint Platform. +
-Example: <Name of the Doc Page>:<File Location> | NULL. If not specified, no Doc pages will be imported. 
-
-| tags  | A list of comma-separated xxx text strings to describe the API. These appear on the asset's page in Exchange. xxx  +
-Example: xxx, xxx, xxx | NULL. If not specified, no tags will be added.
-
-| categories | A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization. +
-Example: <Category Name>: <Value(s)> | NULL. If not specified, no categories will be added.
-
-| custom-fields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization. +
-Example: <Field>: <Value> | NULL. If not specified, no custom fields will be added.
-
-| versioning | xxx | xxx
-
-| apiVersion | xxx | xxx
-
-|===
-
-Although you can enter authentication credentials explicitly in the commands for testing purposes, you should use secure authentication in your CI/CD environment.
-
-See <<Authentication>>.
-
-=== Versioning Overview
-
-<...>  
-// text relevant to versioning
-
-//Metadata is mutable for a given major version. The process of cataloging an asset includes not only the API specification itself, but also documentation (portal pages) and asset metadata (contact, categories, tags, and so on). The metadata is associated with the current major + minor version of the asset. Therefore, all assets for the same minor version in Exchange will share the same metadata. The metadata cannot be considered immutable for a given major version, as metadata for a newer asset for the same minor version will overwrite it. 
-//
-
-=== Example Descriptor Files 
-
-Following are some examples of typical descriptor files.
-
-==== Example 1: Descriptor file that describes two APIs
-
-Following is a descriptor file that describes two APIs to catalog. The cataloging will be done by a subsequent run of the related +api-catalog publish-asset+ command. 
-
-//The following descriptor file results in the following:
-
-//* xxx branches are
-//* xxx tags are
-//* xxx user is
-//* codat API is published as follows:
-//** xxx
-//** xxx
-//* billing API is published as follows:
-//** xxx
-//** xxx
-
----
-
- #%Catalog Descriptor 0.5
- triggerConditions:
-   branches:
-     - master
-     - release/(.*)
-   tags:
-     - support
-     - release/(.*)
-   user:
-     - admin
-
- contact:
-  name: 'John Doe'
-  email: 'john.doe@org.com'
-
- apis:
-  - spec: api-spec/codat.json
-    assetId: codat-api
-    docs:
-      add: api-spec/add.md
-      home: home.md
-    customFields:
-      custom: value
-      another: field
-    tags:
-      - codat
-      - gcp
-    healthCheck:
-      url: https://dev.codat.io/api/ping
-      method: GET
-      expectedStatus: 204
-    versioning: 2.0.x
-    apiVersion: v3 
-    - spec: api-spec/billing-api.json
-      assetId: my-awesome-api
-      tags:
-       - finance
-       - aws
-     categories:
-       API Type:
-        - System API
-        - Experience API
-      Organization:
-        - Finance
-        - Billing
-     healthCheck:
-       url: https://billing.io/api/health
-     versioning: ~1.x.x
-     apiVersion: v1
-
----
-
-//*After publication in Exchange*
-
-//xxx include a screenshot of this example after publication in exchange xxx
-
-==== Example 2: Generate a descriptor file by autodiscovering API candidates 
-
-xxx
-
-==== Example 3: Autodiscover API candidates and send the results to standard output
-
-xxx
-
-//== Add the Descriptor File to Your API Project Location
-
-//After you install API Catalog CLI, you must add the descriptor file, with the file name and location specified by your DevOps admin, to the location of the API project that you want to integrate with the publishing process.
-
-//*Prerequisites*
-
-//Before you add the descriptor file to the API project, ensure that:
-
-//* API Catalog CLI is installed in a location accessible by your CI/CD pipeline. For details on how to perform this installation, see <<Install the CLI>>. 
-//* The API project location is accessible by your CI/CD pipeline.
-//* The API project contains APIs supported by Anypoint. 
-
-//To add a descriptor file to an API project:
-
-//* Copy the descriptor file, such as +catalog.yaml+, to the file path or repository where your API projects are stored. 
+NOTE: You can optionally create a descriptor file manually instead of using the +api-catalog create-descriptor+ command to generate the file. See <<Create a Descriptor File Manually>>.
 
 == Publish APIs Using CLI
 You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To automate the publishing of APIs using CLI, you will typically use build scripts in tools such as Jenkins, but you can run the CLI manually from a terminal for learning and testing purposes. 
@@ -324,7 +130,7 @@ This command publishes APIs to Exchange using the descriptor information passed 
 
 [%header,cols="40a,30a,30a"]
 |===
-| Argument | Description |  Example
+| Option | Description |  Example
 
 | -a, --anypoint-uri=anypoint-uri 
 
@@ -429,14 +235,6 @@ ANYPOINT_CLIENT_SECRET environment variable
 
 |===
 
-=== Specify the Version Rules
-
-When you publish an API to exchange, the patch version is incremented by default. However, you can set the version using a combination of the API and asset version Arguments as follows:
-
-xxx table with the settings and examples from the video xxx 
-
-For more information on API and asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
-
 For information on passing credentials, see <<Authentication>>.
 
 === Example Publish Asset Commands
@@ -453,9 +251,9 @@ The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd
 
 In the example, an assumption is made that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined.
 
-==== Example 2: Publish an asset using the trigger filters 
+//==== Example 2: Publish an asset using the trigger filters 
 
-xxx example code goes here xxx
+//xxx example code goes here xxx
 
 // Triggering and Filtering Text
 
@@ -470,9 +268,9 @@ xxx example code goes here xxx
 
 // end of Triggering and Filtering text
 
-==== Example 3: Publish an asset using the force-publish Argument
+//==== Example 3: Publish an asset using the force-publish Argument
 
-xxx example code goes here xxx
+//xxx example code goes here xxx
 
 // Force Publish Text
 
@@ -493,7 +291,7 @@ xxx example code goes here xxx
 
 // end Force Publish Text
 
-==== Example 4: Do a dry run to ensure the descriptor file is valid
+//==== Example 4: Do a dry run to ensure the descriptor file is valid
 
 // Other example cases text
 
@@ -502,7 +300,7 @@ xxx example code goes here xxx
 //* "result" Argument: Captures the results
 //* "verbose" Argument: Shows the maximum information in the results
 
-xxx example code goes here xxx
+//xxx example code goes here xxx
 
 // 
 
@@ -606,6 +404,117 @@ If you don't pass a command-line Argument, the default profile properties are us
 Your Anypoint session expires based on the *Default session timeout* configured in your Master Organization settings.
 
 // Authentication end 
+
+== Create a Descriptor File Manually
+
+You can optionally create a descriptor file manually rather than using the +api-catalog create-descriptor+ command to create it. 
+
+After you create the descriptor file, copy it to the file path or repository where your API projects are stored. 
+
+The descriptor file must start with the following:
+
+#%Catalog Descriptor 0.6
+
+TIP: Run the +api-catalog publish-asset+ command using the +--dry-run+ option to ensure your manually-created descriptor file is valid. 
+
+=== Descriptor YAML Schema
+
+Following are the YAML tags used to describe the APIs you want to catalog. 
+
+[%header,cols="40a,30a,30a"]
+|===
+| Tag | Description |  Default
+
+| branches | Specifies the branches from which to pull API information to be cataloged.  |
+master
+
+| apis | A list of the APIs to be cataloged. |  N/A
+
+| spec | The location of the specification file that describes the API. | N/A  
+
+| asset-id | Specifies the ID of the asset to be published in Exchange. | By default, this ID is generated from the API specification *Title* field.  
+
+| docs   | A list of key and value pairs that specify the name of the documentation page and file location for the API.
+These pairs define the order of the documentation pages in Anypoint Platform. +
+Format: <Name of the Doc Page>:<File Location> | NULL. If not specified, no Doc pages will be imported. 
+
+| tags  | A list of comma-separated text strings to describe the API. These appear on the asset's page in Exchange.| NULL. If not specified, no tags will be added.
+
+| categories | A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization. +
+Format: <Category Name>: <Value(s)> | NULL. If not specified, no categories will be added.
+
+| custom-fields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization. +
+Format: <Field>: <Value> | NULL. If not specified, no custom fields will be added.
+
+| versioning | The asset version. By default the patch version is incremented by one. Example: ~1.x.x |  
+
+| apiVersion | The API version. This is defined in the API specification. Example: v1 | 
+
+|===
+
+=== Specify API and Asset Version
+
+When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using a combination of the API and asset version options.
+
+For more information on API and asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
+
+=== Example Descriptor File
+
+Following is a descriptor file that describes the cataloging information for two APIs. 
+
+---
+
+ #%Catalog Descriptor 0.6
+ triggerConditions:
+   branches:
+     - master
+     - release/(.*)
+   tags:
+     - support
+     - release/(.*)
+   user:
+     - admin
+
+ contact:
+  name: 'John Doe'
+  email: 'john.doe@org.com'
+
+ apis:
+  - spec: api-spec/codat.json
+    assetId: codat-api
+    docs:
+      add: api-spec/add.md
+      home: home.md
+    customFields:
+      custom: value
+      another: field
+    tags:
+      - codat
+      - gcp
+    healthCheck:
+      url: https://dev.codat.io/api/ping
+      method: GET
+      expectedStatus: 204
+    versioning: 2.0.x
+    apiVersion: v3 
+    - spec: api-spec/billing-api.json
+      assetId: my-awesome-api
+      tags:
+       - finance
+       - aws
+     categories:
+       API Type:
+        - System API
+        - Experience API
+      Organization:
+        - Finance
+        - Billing
+     healthCheck:
+       url: https://billing.io/api/health
+     versioning: ~1.x.x
+     apiVersion: v1
+
+---
 
 // == See Also
 
