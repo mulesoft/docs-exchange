@@ -13,6 +13,14 @@ With API Catalog CLI you can:
 * Publish API specifications in Exchange using CLI commands 
 * Use descriptor files to explicitly define how you want the specifications to be published
 
+You should install and test the process end-to-end locally before integrating it into your CI/CD pipeline. To verify locally: 
+
+. Ensure API Catalog CLI is properly installed.
+. Set required entitlements within the Anypoint Platform organization.
+. Configure catalog permissions in the Anypoint Access Management web UI.
+. Create a descriptor file using the API Catalog CLI.
+. Catalog a test asset and view it in Anypoint Exchange.
+
 For details, see the following:
 
 * <<Install API Catalog CLI>>
@@ -109,46 +117,38 @@ After you have installed the plug-in into your shell, use the command as follows
 
 +$ api-catalog command --<TAB><TAB>       # Flag completion+
 
+== Set Entitlements in Anypoint Platform
+
+You must enable the API Catalog entitlement for the Anypoint Platform organization user. 
+
+NOTE: This must be done by an Anypoint Platform user with administrative permission.
+
+To enable the API Catalog entitlement:
+
+. In Anypoint Platform, navigate to *Management Center > Admin*.
+. Select *Home* in the left navigation.
+. Search for and select the Anypoint organization for which you plan to use API Catalog CLI.
+. In the organization's page, select *Settings* in the left navigation. 
+. In the *API Manager and Others* section, select *API Catalog*.
+. Click *Apply Changes*. 
+
+== Configure Catalog Permissions in Anypoint Access Management
+
+You must enable the API Catalog Contributor permission for the Anypoint Platform organization user. 
+
+NOTE: This must be done by an Anypoint Platform user with administrative permission.
+
+To enable the API Catalog Contributor permission:
+
+. In Anypoint Platform, navigate to *Access Management*.
+. Select *Users* in the left navigation.
+. Select the user for which you want to enable the permission. 
+. In the *Permissions* tab, select the *API Catalog* subtab.
+. Select *API Catalog Contributor*. 
+
 == Descriptor Files
 
 Before you run the commands to publish your APIs, you must create a descriptor file in each of the locations where you store your API projects. 
-
-NOTE: To have the APIs autodiscovered and YAML results generated to help you populate the descriptor file, use the +api-catalog publish-asset+ command with the dry-run parameter. See <<Publish APIs Using CLI>>.
-
-//You can use the following approaches:
-
-//* *Dry Run Mode*: Use this mode to run the publish catalog command with an empty descriptor.yaml file and get a preview in your CI/CD log of the APIs that would be cataloged. 
-//* *Explicit Mode*: Use this mode to run the publish catalog command with a complete descriptor file that specifies the APIs that should be cataloged. 
-
-// === Prerequisites
-
-// Before you add the descriptor file to the repository, ensure that:
-
-// * The API Catalog CLI is installed on a computer in your CI/CD pipeline. 
-//+
-//See <<Install the CLI>>. 
-//* You have the repository location where you want to add the descriptor file ready.
-
-// === Dry Run Mode
-
-//Use dry run mode to generate content for a starter descriptor file and discover which APIs are available in a CI/CD repository that are candidates to be cataloged in Exchange. The CI/CD job sends results to standard output. The output has suggested descriptor file content and status messages, such as lists of APIs that would not be cataloged based on this descriptor content.
-//No API specifications or documentation are cataloged in Exchange.
-
-//To use dry run mode:
-
-//. Add an empty +descriptor.yaml+ file to your Git repository. 
-//. Modify your CI/CD pipeline to add the following command: 
-//+
-//+api-catalog publish-asset --dry-run=dry-run+
-//+
-//See <<Publish APIs Using CLI>> for command details.
-//. Run the CI/CD pipeline.
-//. Check your CI/CD log for the results.
-//. Update the +descriptor.yaml+ file in your Git repository with the content from the dry //run and modify as needed. 
-
-//=== Explicit Mode
-
-//Use explicit mode when you have descriptor file content that identifies the APIs that you want to publish in Exchange. You can use dry-run mode to obtain suggested content from your CI/CD repository or you can create the descriptor file by using the following documentation. 
 
 === Create a Descriptor File
 
