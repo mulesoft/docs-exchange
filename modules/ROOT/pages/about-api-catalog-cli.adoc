@@ -28,7 +28,7 @@ For details, see the following:
 * <<Descriptor Files>>
 * <<Publish APIs Using CLI>>
 
-After you have finished testing locally, you will be ready to add the +api-catalog publish-asset+ command to your CI/CD scripts and autocatalog APIs as part of your CI/CD processes. 
+After you have finished testing locally, you will be ready to add the `api-catalog publish-asset` command to your CI/CD scripts and autocatalog APIs as part of your CI/CD processes. 
 
 == Install API Catalog CLI 
 
@@ -67,12 +67,12 @@ $ api-catalog-cli publish-asset
 
 Use the help argument with the commands to list the commands or command arguments and their descriptions:
 
-* +api-catalog --help+
-* +api-catalog autocomplete --help+
-* +api-catalog create-descriptor --help+
-* +api-catalog publish-asset --help+
+* `api-catalog --help`
+* `api-catalog autocomplete --help`
+* `api-catalog create-descriptor --help`
+* `api-catalog publish-asset --help`
 
-NOTE: Optionally use the +api-catalog autocomplete+ command by following the instructions in the command help. 
+NOTE: Optionally use the `api-catalog autocomplete` command by following the instructions in the command help. 
 
 == Configure Catalog Permissions in Anypoint Access Management
 
@@ -94,7 +94,7 @@ To enable the API Catalog Contributor permission:
 
 == Descriptor Files
 
-Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. To do this you can use the +api-catalog create-descriptor+ command, which autodiscovers APIs in a designated directory path and creates a descriptor file. You can then specify the descriptor file in the +api-catalog publish-assets+ command to publish the APIs. See <<Publish APIs Using CLI>>.
+Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. To do this you can use the `api-catalog create-descriptor` command, which autodiscovers APIs in a designated directory path and creates a descriptor file. You can then specify the descriptor file in the `api-catalog publish-assets` command to publish the APIs. See <<Publish APIs Using CLI>>.
 
 ==== api-catalog create-descriptor
 
@@ -104,15 +104,15 @@ Before you run the commands to publish your APIs, you must create a descriptor f
 
 *Options*
 
-+-f, --file=file+
+`-f, --file=file`
   +
-  [default: +catalog.yaml+] 
+  [default: `catalog.yaml`] 
   + 
   The name and location in which to save the generated catalog descriptor file.
 
 The result of the command depends on the presence and content of the designated descriptor file as follows:
 
-* No file or empty file: The command will discover the APIs and write the results to standard output and to a file named +catalog.yaml+.
+* No file or empty file: The command will discover the APIs and write the results to standard output and to a file named `catalog.yaml`.
 
 * Existing file with content: The command will fail and show an error message that says the descriptor file already exists.
 
@@ -125,9 +125,9 @@ The result of the command depends on the presence and content of the designated 
 To create a descriptor file:
 
 . Navigate to the directory path that contains the APIs you want to catalog. 
-. Run the +api-catalog create-descriptor+ command.  
+. Run the `api-catalog create-descriptor` command.  
 
-NOTE: You can optionally create a descriptor file manually instead of using the +api-catalog create-descriptor+ command to generate the file. See <<Create a Descriptor File Manually>>.
+NOTE: You can optionally create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create a Descriptor File Manually>>.
 
 == Publish APIs Using CLI
 
@@ -163,15 +163,15 @@ The Anypoint Platform base
 URL. It must be specified using HTTPS protocol. 
 
 For the US Anypoint Platform, use  
-+https://anypoint.mulesoft.com/+. 
+`https://anypoint.mulesoft.com/`. 
 
-|  -c, --descriptor-file=descriptor-file 
+|  -d, --descriptor-file=descriptor-file 
 
 or
 
 ANYPOINT_DESCRIPTOR_FILE environment variable
 
- | Default:  ./descriptor.yaml 
+ | Default:  ./catalog.yaml 
  
 The name and location of the catalog descriptor file.  
 
@@ -217,7 +217,7 @@ Example:
 
 ---
 
-The +--trigger+ options work in conjunction with the +triggerConditions+ section in the descriptor file. See <<Descriptor YAML Schema>>  
+The `--trigger` options work in conjunction with the `triggerConditions` section in the descriptor file. See <<Descriptor YAML Schema>>  
 
 | -u, --username=username 
 
@@ -272,7 +272,7 @@ Following are examples that show some typical use cases for publishing assets.
 
 ==== Example 1: Publish an asset with default settings
 
-The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the +./catalog.yaml+ descriptor file in the main branch of the VCS repository:
+The following example publishes the API to the organization `4c06ba7b-3ce8-425c-878c-b728dd7db60d` in the US Anypoint Platform control plane using the `./catalog.yaml` descriptor file in the main branch of the VCS repository:
 
 ---
  api-catalog-cli publishAsset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
@@ -283,72 +283,68 @@ In the example, an assumption is made that either the username and password cred
 
 ==== Example 2: Do a dry run to ensure the descriptor file is valid
 
-This example shows the +api-catalog publish-asset+ command with the following options:
+This example shows the `api-catalog publish-asset` command with the following options:
 
 * --dry-run: Identifies the eligible APIs to publish but does not actually publish them
 * --verbose: Shows the maximum information in the results
 
-It sends the standard output to +mycatdryrun.log+. 
+It sends the standard output to `mycatdryrun.log`. 
 
 --- 
- api-catalog publish-asset -a https://qax.anypoint.mulesoft.com -c catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --verbose >> mycatdryrun.log
+ api-catalog publish-asset -a https://qax.anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --verbose >> mycatdryrun.log
 
 ---
 
+==== Example 3: Publish an asset regardless of the content or metadata
 
-//==== Example 4: Publish an asset using the trigger filters 
+If you want to publish a new version of the asset in Exchange regardless of the content, you should use the `--force-publish` option. If you want to publish a new version of the asset in Exchange regardless of the metadata content, you should use the `--force-update-metadata` option. 
 
-//xxx example code goes here xxx
+This example shows the `api-catalog publish-asset` command with both of these options. This example assumes that authentication credentials are set in environment variables. 
 
-// Triggering and Filtering Text
+---
+ api-catalog publish-asset -a https://qax.anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish --force-update-metadata
 
-//Custom trigger and filter conditions enable you to further control what is published when the API Catalog CLI command runs. 
+---
 
-//To use trigger conditions:
+==== Example 4: Publish an asset using trigger conditions 
 
-// (--trigger Argument)
+Custom trigger conditions enable you to further control what is published when the API Catalog CLI command runs. 
 
-// More info can be found here:
-// https://docs.google.com/document/d/1j31ANa7hQpJ9X2PCLDxZXUrFK42qPjng9jGstNBBSX4/edit
+This example shows `api-catalog publish-asset` command options that will publish only the APIs that are identified in the `triggerConditions` section of a descriptor file called `mydescriptor.yaml`.  
 
-// end of Triggering and Filtering text
+*Command to publish:*
 
-//==== Example 4: Publish an asset using the force-publish Argument
+---
+ api-catalog publish-asset -a https://qax.anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tag:migrate --trigger=status:complete
 
-//xxx example code goes here xxx
+---
 
-// Force Publish Text
+*Section in the specified descriptor file:*
 
-//Forcing (Diffing Bypass)
+---
+ 
+ triggerConditions:
+  ref:
+   - main
+  tags:
+   - migrate
+   - republish
+  status:
+   - complete
+   - ready
 
-//When attempting to catalog an API spec, we should do our best effort to determine whether or not the asset in Exchange corresponds to the same content of the developer environment and avoid duplicating assets when not necessary. 
+---
 
-//There might be cases when the user wants to publish a new asset, even when API spec content has not changed. For those cases, the CLI will provide a --force-publish flag Argument that will indicate the tool to bypass the comparison and always create a new version in Exchange, regardless of the content.
+==== Example 5: Publish Using a Jenkins Script 
 
-//If the same version of an API exists but you still want to create another asset, you will need to use the force publish command.
-
-//Forcing (Metadata Update)
-//There might be cases when the user wants to update the metadata, even when API spec content has not changed. For those cases, the CLI will provide a --force-metadata-update flag Argument that will indicate the tool to update the asset metadata, regardless of the API spec content. 
-
-
-//publish errors/skip cases for our clients to be able to solve them.
-//For example, understanding the case in which the CLI skips the publication since the API content is exactly the same as the latest published version in Exchange. We may also want to document the "force-publish" Argument to be able to bypass this CLI restriction in case clients still want to publish a new identical version.//
-
-// end Force Publish Text
-
-
-// 
-
-== Example Jenkins Script 
-
-An example Jenkins script that runs the commands is as follows:
+This example shows a Jenkins script that runs the `api-catalog publish-assset` command.
 
 ---
 
  pipeline {
     agent any
     environment {
-        ANYPOINT_ORG_ID = '8bbff579-da62-4458-baea-bb00387126da'
+        ANYPOINT_ORG_ID = '1234abc-b34a-7cd3-4s32-12345abc2345'
         CATALOG_DESCRIPTOR = './descriptor.yaml'
      }   
      stages {
@@ -372,7 +368,7 @@ An example Jenkins script that runs the commands is as follows:
                     usernameVariable: 'ANYPOINT_USERNAME',
                     passwordVariable: 'ANYPOINT_PASSWORD')
                 ]) { 
-                    sh 'api-catalog-cli publish-asset -c $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com/ -b main'
+                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com/ --trigger=branch:main'
                 }
             }
         }
@@ -442,7 +438,7 @@ Your Anypoint session expires based on the *Default session timeout* configured 
 
 == Create a Descriptor File Manually
 
-You can optionally create a descriptor file manually rather than using the +api-catalog create-descriptor+ command to create it. 
+You can optionally create a descriptor file manually rather than using the `api-catalog create-descriptor` command to create it. 
 
 After you create the descriptor file, copy it to the file path or repository where your API projects are stored. 
 
@@ -454,7 +450,7 @@ The descriptor file must start with the following:
 
 ---
 
-TIP: Run the +api-catalog publish-asset+ command using the +--dry-run+ option to ensure your manually-created descriptor file is valid. 
+TIP: Run the `api-catalog publish-asset` command using the `--dry-run` option to ensure your manually-created descriptor file is valid. 
 
 === Descriptor YAML Schema
 
@@ -464,9 +460,9 @@ Following are the YAML tags used to describe the APIs you want to catalog.
 |===
 | Tag | Description 
 
-| triggerConditions | This section enables you to set conditions to restrict the APIs that are included when the +api-catalog publish-asset+ command is run.   
+| triggerConditions | This section enables you to set conditions to restrict the APIs that are included when the `api-catalog publish-asset` command is run.   
 
-This example sets triggerConditions to enable the +api-catalog publish-asset+ command to set conditions to publish APIs for just a designated branch or reference, tagged in a certain way, and authored by a specific user. 
+This example sets triggerConditions to enable the `api-catalog publish-asset` command to set conditions to publish APIs for just a designated branch or reference, tagged in a certain way, and authored by a specific user. 
 
 ---
  branches:
@@ -511,7 +507,7 @@ If this option is not specified, no custom fields will be added.
 
 | versioning | The asset version. 
 
-If +versioning+ is not specified, the patch version is incremented by one.
+If `versioning` is not specified, the patch version is incremented by one.
 
 Example: ~1.x.x  
 
