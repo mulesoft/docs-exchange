@@ -28,7 +28,7 @@ For details, see the following:
 * <<Descriptor Files>>
 * <<Publish APIs Using CLI>>
 
-After you have finished testing locally, you will be ready to add the +api-catalog publish asset+ command to your CI/CD scripts and autocatalog APIs as part of your CI/CD processes. 
+After you have finished testing locally, you will be ready to add the +api-catalog publish-asset+ command to your CI/CD scripts and autocatalog APIs as part of your CI/CD processes. 
 
 == Install API Catalog CLI 
 
@@ -145,9 +145,9 @@ Create a descriptor file and copy it to the file path where your API projects ar
 
 This command publishes APIs to Exchange using the descriptor information passed in the YAML file passed in the catalog-file option.
 
-[%header,cols="40a,30a,30a"]
+[%header,cols="20a,80a"]
 |===
-| Option | Description |  Example
+| Option | Description 
 
 | -a, --anypoint-uri=anypoint-uri 
 
@@ -160,7 +160,8 @@ ANYPOINT_BASE_URL environment variable
 Default: https://anypoint.mulesoft.com
 
 The Anypoint Platform base 
-URL. It must be specified using HTTPS protocol. |
+URL. It must be specified using HTTPS protocol. 
+
 For the US Anypoint Platform, use  
 +https://anypoint.mulesoft.com/+. 
 
@@ -176,9 +177,13 @@ The name and location of the catalog descriptor file.
 
   * If the file does not exist, no assets will be cataloged.
   * If the file exists but is empty, the command will create and print the catalog descriptor YAML results. It will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
-  * If a valid YAML file exists, the command will catalog the assets as specified. | See <<Descriptor Files>>.
+  * If a valid YAML file exists, the command will catalog the assets as specified. 
+  
+See <<Descriptor Files>>. 
 
-| -d, --dry-run=dry-run  | Runs the command to verify that the descriptor file is valid. No APIs will be published. |   --dry-run=descriptor
+| -d, --dry-run=dry-run  | Runs the command to verify that the descriptor file is valid. No APIs will be published. 
+
+Example: --dry-run=descriptor  
 
 | -o, --organization=organization 
 
@@ -188,7 +193,7 @@ ANYPOINT_TARGET_ORGANIZATION environment variable
 
   | (Required) 
   
-The ID of the Anypoint Organization where the APIs will be cataloged.  | 
+The ID of the Anypoint Organization where the APIs will be cataloged.  
 
 | -p, --password 
 
@@ -196,36 +201,39 @@ or
 
 ANYPOINT_PASSWORD environment variable
 
- | Anypoint user password. Set the environment variable to avoid a prompt for the password.   | See <<Authentication>>.
+ | Anypoint user password. Set the environment variable to avoid a prompt for the password.  
+ 
+See <<Authentication>>. 
 
-| -s, --silent | Enable silent logging.|
+| -s, --silent | Enable silent logging.
 
-| -t, --trigger=branch:master --trigger=tag:bla  | Filters that are applied to the descriptor file to determine whether an asset should be published. |  
+| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | Conditions that are applied to the descriptor file to determine whether an asset should be published. To set multiple conditions, specify separate --trigger options for each condition.
+
+Example:
+
+---
+
+ --trigger=branch:main --trigger=tag:hotfix -- trigger=user:admin
 
 ---
 
- triggerConditions:
- branch:
-   - master
-   - test/(.*)
- tag:
-   - release
-   - hotfix
+The +--trigger+ options work in conjunction with the +triggerConditions+ section in the descriptor file. See <<Descriptor YAML Schema>>  
 
----
 | -u, --username=username 
 
 or
 
 ANYPOINT_USERNAME environment variable
 
-| Anypoint username.  | See <<Authentication>>.
+| Anypoint username. 
 
-| -v, --verbose | Enable verbose logging. |
+See <<Authentication>>. 
+
+| -v, --verbose | Enable verbose logging. 
 
 
 
-| --async |  Run the publish job asynchronously. |
+| --async |  Run the publish job asynchronously. 
 
 | --client-id=client-id 
 
@@ -233,7 +241,9 @@ or
 
 ANYPOINT_CLIENT_ID environment variable
 
-| Connected app client ID.  |
+| Connected app client ID.  
+
+See <<Authentication>>.
 
 | --client-secret 
 
@@ -241,14 +251,16 @@ or
 
 ANYPOINT_CLIENT_SECRET environment variable
 
- | Prompt for the Connected App secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  |
-
+ | Prompt for the Connected App secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  
+ 
+See <<Authentication>>.
+ 
  | --force-publish |  Bypasses the comparison and 
- creates a new version of the asset in Exchange regardless of the content.|
+ creates a new version of the asset in Exchange regardless of the content.
 
-| --force-update-metadata | Updates the asset's metadata (such as tags) in the latest version in Exchange regardless of the content. |
+| --force-update-metadata | Updates the asset's metadata (such as tags) in the latest version in Exchange regardless of the content. 
 
-| --json | Prints the execution result in JSON format. |
+| --json | Prints the execution result in JSON format. 
 
 |===
 
@@ -260,7 +272,7 @@ Following are examples that show some typical use cases for publishing assets.
 
 ==== Example 1: Publish an asset with default settings
 
-The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the +./catalog.yaml+ descriptor file in the master branch of the VCS repository:
+The following example publishes the API to the ‘4c06ba7b-3ce8-425c-878c-b728dd7db60d’ organization in the US control plane using the +./catalog.yaml+ descriptor file in the main branch of the VCS repository:
 
 ---
  api-catalog-cli publishAsset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
@@ -360,7 +372,7 @@ An example Jenkins script that runs the commands is as follows:
                     usernameVariable: 'ANYPOINT_USERNAME',
                     passwordVariable: 'ANYPOINT_PASSWORD')
                 ]) { 
-                    sh 'api-catalog-cli publish-asset -c $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com/ -b master'
+                    sh 'api-catalog-cli publish-asset -c $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com/ -b main'
                 }
             }
         }
@@ -424,7 +436,7 @@ If you don't pass a command-line Argument, the default profile properties are us
 
 === Timeout
 
-Your Anypoint session expires based on the *Default session timeout* configured in your Master Organization settings.
+Your Anypoint session expires based on the *Default session timeout* configured in your Organization settings.
 
 // Authentication end 
 
@@ -448,40 +460,64 @@ TIP: Run the +api-catalog publish-asset+ command using the +--dry-run+ option to
 
 Following are the YAML tags used to describe the APIs you want to catalog. 
 
-[%header,cols="40a,30a,30a"]
+[%header,cols="20a,80a"]
 |===
-| Tag | Description |  Default
+| Tag | Description 
 
-| triggerConditions | Section for information that will appear on the assets' pages in Exchange. This section includes branches, tags, and user. |
+| triggerConditions | This section enables you to set conditions to restrict the APIs that are included when the +api-catalog publish-asset+ command is run.   
 
-| branches | Specifies the branches from which to pull API information to be cataloged.  |
-master
+This example sets triggerConditions to enable the +api-catalog publish-asset+ command to set conditions to publish APIs for just a designated branch or reference, tagged in a certain way, and authored by a specific user. 
 
-| tags  | A list of comma-separated text strings to describe the APIs to be published. These appear on the assets' pages in Exchange.| NULL. If not specified, no tags will be added.
+---
+ branches:
+   - main
+   - release/(.*)
+ tags:
+   - support
+   - release/(.*)
+ user:
+   - admin
 
-| user | The user name. |  
+---
 
-| contact | The contact name. |  
+| contact | The contact name.  
 
-| apis | A list of the APIs to be cataloged. |  N/A
+| apis | A list of the APIs to be cataloged. 
 
-| spec | The location of the specification file that describes the API. | N/A  
+| spec | The location of the specification file that describes the API. 
 
-| assetId | Specifies the ID of the asset to be published in Exchange. | By default, this ID is generated from the API specification *Title* field.  
+| assetId | Specifies the ID of the asset to be published in Exchange.
+
+This ID defaults to the API specification *Title* field.  
 
 | docs   | A list of key and value pairs that specify the name of the documentation page and file location for the API.
-These pairs define the order of the documentation pages in Anypoint Platform. +
-Format: <Name of the Doc Page>:<File Location> | NULL. If not specified, no Doc pages will be imported. 
+These pairs define the order of the documentation pages in Anypoint Platform.
 
-| categories | A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization. +
-Format: <Category Name>: <Value(s)> | NULL. If not specified, no categories will be added.
+Format: <Name of the Doc Page>:<File Location>
 
-| customFields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization. +
-Format: <Field>: <Value> | NULL. If not specified, no custom fields will be added.
+If this option is not specified, no Doc pages will be imported. 
 
-| versioning | The asset version. By default the patch version is incremented by one. Example: ~1.x.x |  
+| categories | A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization.
 
-| apiVersion | The API version. This is defined in the API specification. Example: v1 | 
+Format: <Category Name>: <Value(s)>
+
+If this option is not specified, no categories will be added.
+
+| customFields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization.
+
+Format: <Field>: <Value> 
+
+If this option is not specified, no custom fields will be added.
+
+| versioning | The asset version. 
+
+If +versioning+ is not specified, the patch version is incremented by one.
+
+Example: ~1.x.x  
+
+| apiVersion | The API version. This is defined in the API specification. 
+
+Example: v1  
 
 |===
 
@@ -542,7 +578,7 @@ Following is an example descriptor file that describes the cataloging informatio
  #%Catalog Descriptor 0.6
  triggerConditions:
   branches:
-    - master
+    - main
     - release/(.*)
   tags:
     - support
