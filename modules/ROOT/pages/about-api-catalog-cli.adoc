@@ -462,7 +462,7 @@ Following are the YAML tags used to describe the APIs you want to catalog.
 
 | triggerConditions | This section enables you to set conditions to restrict the APIs that are included when the `api-catalog publish-asset` command is run.   
 
-This example sets triggerConditions to enable the `api-catalog publish-asset` command to set conditions to publish APIs for just a designated branch or reference, tagged in a certain way, and authored by a specific user. 
+This example sets `triggerConditions` to enable the `api-catalog publish-asset` command to set conditions to publish APIs for just a designated branch or reference, tagged in a certain way, and authored by a specific user. 
 
 ---
  branches:
@@ -525,7 +525,7 @@ Example: v1
 
 When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using semantic versioning notation `x.x.x` for major, minor, and patch versions respectively. 
 
-Use the following symbols before the version nodes to control the incrementation of an asset version:
+Use the following symbols before the version nodes to control how an asset version is incremented:
 
 * ^ patch
 
