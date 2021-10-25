@@ -53,16 +53,6 @@ To install the CLI:
 npm install -g api-catalog-api@beta
 ----
 
-=== Make the CLI Available From Any Directory
-
-Use the following command to make the API Catalog CLI command available from any directory:
-
-----
-$ npm link
-$ cd ../<your-directory-name>
-$ api-catalog-cli publish-asset
-----
-
 === View Command Help
 
 Use the help argument with the commands to list the commands or command arguments and their descriptions:
