@@ -36,12 +36,7 @@ To enable developers in your organization to automatically publish the new API s
 
 === Prerequisites
 
-Download and install NodeJS and npm (node package manager) on your system. See the https://nodejs.org/en/download/[NodeJS download page].
-
-System Requirements:
-
-* Anypoint Platform account
-* Anypoint Platform user account
+* Download and install NodeJS and npm (node package manager) on your system. See the https://nodejs.org/en/download/[NodeJS download page].
 
 === Install the CLI
 
@@ -50,7 +45,7 @@ To install the CLI:
 . Download the API Catalog CLI package from the https://npmjs.com[npm public registry]. 
 . Run the following command from your terminal:
 ----
-npm install -g api-catalog-api@beta
+npm install -g api-catalog-cli@beta
 ----
 
 === View Command Help
@@ -70,7 +65,7 @@ You must enable the API Catalog Contributor permission for the Anypoint Platform
 
 *Prerequisites*
 
-The API Catalog entitlement must be set by MuleSoft for your organization. 
+* The API Catalog entitlement must be set by MuleSoft for your Anypoint Platform organization. 
 
 NOTE: Permissions must be set by an Anypoint Platform user with administrative permission. 
 
@@ -125,7 +120,7 @@ You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To
 
 *Prerequisites*
 
-Create a descriptor file and copy it to the file path where your API projects are stored. See <<Create a Descriptor File>>.
+* Create a descriptor file and copy it to the file path where your API projects are stored. See <<Create a Descriptor File>>.
 
 === api-catalog publish-asset
 
@@ -248,7 +243,7 @@ See <<Authentication>>.
  | --force-publish |  Bypasses the comparison and 
  creates a new version of the asset in Exchange regardless of the content.
 
-| --force-update-metadata | Updates the asset's metadata (such as tags) in the latest version in Exchange regardless of the content. 
+| --force-update-metadata | Updates the asset's metadata (such as tags) in the latest version in Exchange regardless of the content. This does not republish the asset. 
 
 | --json | Prints the execution result in JSON format. 
 
@@ -285,14 +280,14 @@ It sends the standard output to `mycatdryrun.log`.
 
 ---
 
-==== Example 3: Publish an asset regardless of the content or metadata
+==== Example 3: Publish an asset regardless of the content
 
-If you want to publish a new version of the asset in Exchange regardless of the content, you should use the `--force-publish` option. If you want to publish a new version of the asset in Exchange regardless of the metadata content, you should use the `--force-update-metadata` option. 
+If you want to publish a new version of the asset in Exchange regardless of the content, you should use the `--force-publish` option. 
 
 This example shows the `api-catalog publish-asset` command with both of these options. This example assumes that authentication credentials are set in environment variables. 
 
 ---
- api-catalog publish-asset -a https://qax.anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish --force-update-metadata
+ api-catalog publish-asset -a https://qax.anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish 
 
 ---
 
@@ -570,11 +565,9 @@ Following is an example descriptor file that describes the cataloging informatio
     - release/(.*)
   user:
     - admin
-
  contact:
   name: 'John Doe'
   email: 'john.doe@org.com'
-
  apis:
   - spec: api-spec/codat.json
     assetId: codat-api
@@ -590,7 +583,7 @@ Following is an example descriptor file that describes the cataloging informatio
     versioning: 2.0.x
     apiVersion: v3
   - spec: api-spec/billing-api.json
-     ssetId: my-awesome-api
+     assetId: my-awesome-api
      tags:
       - finance
       - aws
