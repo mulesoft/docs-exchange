@@ -25,7 +25,7 @@ For details, see the following:
 
 * <<Install API Catalog CLI>>
 * <<Configure Catalog Permissions in Anypoint Access Management>>
-* <<Descriptor Files>>
+* <<Create a Descriptor File>>
 * <<Publish APIs Using CLI>>
 
 After you have finished testing locally, you will be ready to add the `api-catalog publish-asset` command to your CI/CD scripts and autocatalog APIs as part of your CI/CD processes. 
@@ -92,7 +92,7 @@ To enable the API Catalog Contributor permission:
 . In the *Permissions* tab, select the *API Catalog* subtab.
 . Select *API Catalog Contributor*. 
 
-== Descriptor Files
+== Create a Descriptor File
 
 Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. To do this you can use the `api-catalog create-descriptor` command, which autodiscovers APIs in a designated directory path and creates a descriptor file. You can then specify the descriptor file in the `api-catalog publish-assets` command to publish the APIs. See <<Publish APIs Using CLI>>.
 
@@ -135,7 +135,7 @@ You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To
 
 *Prerequisites*
 
-Create a descriptor file and copy it to the file path where your API projects are stored. See <<Descriptor Files>>.
+Create a descriptor file and copy it to the file path where your API projects are stored. See <<Create a Descriptor File>>.
 
 === api-catalog publish-asset
 
@@ -179,7 +179,7 @@ The name and location of the catalog descriptor file.
   * If the file exists but is empty, the command will create and print the catalog descriptor YAML results. It will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
   * If a valid YAML file exists, the command will catalog the assets as specified. 
   
-See <<Descriptor Files>>. 
+See <<Create a Descriptor File>>. 
 
 | -d, --dry-run=dry-run  | Runs the command to verify that the descriptor file is valid. No APIs will be published. 
 
@@ -337,7 +337,7 @@ This example shows `api-catalog publish-asset` command options that will publish
 
 ==== Example 5: Publish Using a Jenkins Script 
 
-This example shows a Jenkins script that runs the `api-catalog publish-assset` command.
+This example shows a Jenkins script that runs the `api-catalog publish-asset` command.
 
 ---
 
@@ -511,33 +511,34 @@ If this is not specified, the patch version is incremented by one.
 
 Example: ~1.x.x  
 
-| apiVersion | The API version. 
+See <<Asset Versioning>>.
 
-This is defined in the API specification. 
+| apiVersion | The API version for the asset. 
+
+If the API version is not specified in the descriptor file, the version from the specification file is used. If the API version is specified in both files, the value in the descriptor file is used. The value must be specified in one of the files. 
 
 Example: v1  
 
 |===
 
-=== Specify API and Asset Version
+=== Asset Versioning
 
-When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using a combination of the API and asset version options.
+When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using semantic versioning notation `x.x.x` for major, minor, and patch versions respectively. 
 
-Use the following notations to increase the asset version using the 
+Use the following symbols before the version nodes to control the incrementation of an asset version:
 
-^: patch increase
+* ^ patch
 
-~: minor_increase
+* ~ minor
 
-'&': major_increase
+* & major  +
+ Because '&' is a reserved character in YAML, a semantic versioning string using this character must be enclosed in a single quote. For example: '&x.x.x'
 
-==== Examples of Versioning
+==== Examples of Asset Versioning
 
-The following tables show how versioning (asset version) and API version in the descriptor file correlate with the values in Exchange during the cataloging process. 
+The following table shows how the asset version is incremented for example semantic versioning strings. Because the API version must be explicitly specified in either the API specification or the descriptor file, it is not incremented or correlated to the asset version. 
 
-*Descriptor File Definitions*
-
-[%header,cols="40a,30a,30a"]
+[%header,cols="15a,15a,70a"]
 |===
 | Asset Version (versioning) 
 
@@ -545,41 +546,19 @@ The following tables show how versioning (asset version) and API version in the 
 
 | Explanation
 
-| ^X.X.X (Default) | two | Search for the latest version and increment the patch
+| ^x.x.x (Default) | two | Search for the latest version and increment the patch
 
-| ^1.X.X | v1 | Search for the latest version of major 1 and increment the patch
+| ^1.x.x | v1 | Search for the latest version of major 1 and increment the patch
 
-| ~1.X.X | v1 | Search for the latest version of major 1 and increment the minor
+| ~1.x.x| v1 | Search for the latest version of major 1 and increment the minor
 
-| ^1.0.X | v1 | Search for the latest version of major 1, minor 0 and increment the patch
+| ^1.0.x | v1 | Search for the latest version of major 1, minor 0 and increment the patch
 
-| ^1.0.X | v5 | Search for the latest version of major 1, minor 0 and increment the patch
+| ^3.x.x | v1 | Search for the latest version of major 3 and increment the patch
 
-| ^3.X.X | v1 | Search for the latest version of major 3 and increment the patch
+| ^3.x.x | v3 | Search for the latest version of major 3 and increment the patch
 
-| ^3.X.X | v3 | Search for the latest version of major 3 and increment the patch
-
-| '&'X.X.X | v4 | Increment to the next the major version. Because '&' is a reserved characater in YAML, it must be enclosed in a single quote. 
-
-|===
-
-*Versions in Exchange*
-
-[%header,cols="40a,30a,30a"]
-|===
-| Asset Version | Minor Portal |  API Version
-
-| 1.0.0 | 1.0.X | v1
-
-| 1.0.1 | 1.0.X | v1
-
-| 1.1.0 | 1.1.X | v1
-
-| 2.0.0 | 2.0.X | two
-
-| 3.0.0 | 3.0.X | v3
-
-| 4.0.0 | 4.0.X | v4
+| '&x.x.x' | v4 | Increment to the next the major version. 
 
 |===
 
