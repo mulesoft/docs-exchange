@@ -272,7 +272,7 @@ Following are examples that show some typical use cases for publishing assets.
 
 ==== Example 1: Publish an asset with default settings
 
-The following example publishes the API to the organization `4c06ba7b-3ce8-425c-878c-b728dd7db60d` in the US Anypoint Platform control plane using the `./catalog.yaml` descriptor file in the main branch of the VCS repository:
+The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings will be used for the unspecified options. 
 
 ---
  api-catalog-cli publishAsset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
