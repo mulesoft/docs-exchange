@@ -489,9 +489,9 @@ This ID defaults to the API specification *Title* field.
 | docs   | A list of key and value pairs that specify the name of the documentation page and file location for the API.
 These pairs define the order of the documentation pages in Anypoint Platform.
 
-Format: <Name of the Doc Page>:<File Location>
+Format: <Name of the documentation page>:<File Location>
 
-If this option is not specified, no Doc pages will be imported. 
+If this option is not specified, no documentation pages will be imported. 
 
 | categories | A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization.
 
@@ -507,11 +507,13 @@ If this option is not specified, no custom fields will be added.
 
 | versioning | The asset version. 
 
-If `versioning` is not specified, the patch version is incremented by one.
+If this is not specified, the patch version is incremented by one.
 
 Example: ~1.x.x  
 
-| apiVersion | The API version. This is defined in the API specification. 
+| apiVersion | The API version. 
+
+This is defined in the API specification. 
 
 Example: v1  
 
@@ -521,6 +523,14 @@ Example: v1
 
 When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using a combination of the API and asset version options.
 
+Use the following notations to increase the asset version using the 
+
+^: patch increase
+
+~: minor_increase
+
+'&': major_increase
+
 ==== Examples of Versioning
 
 The following tables show how versioning (asset version) and API version in the descriptor file correlate with the values in Exchange during the cataloging process. 
@@ -529,7 +539,11 @@ The following tables show how versioning (asset version) and API version in the 
 
 [%header,cols="40a,30a,30a"]
 |===
-| Versioning | API Version | Explanation
+| Asset Version (versioning) 
+
+| API Version (apiVersion) 
+
+| Explanation
 
 | ^X.X.X (Default) | two | Search for the latest version and increment the patch
 
@@ -544,6 +558,8 @@ The following tables show how versioning (asset version) and API version in the 
 | ^3.X.X | v1 | Search for the latest version of major 3 and increment the patch
 
 | ^3.X.X | v3 | Search for the latest version of major 3 and increment the patch
+
+| '&'X.X.X | v4 | Increment to the next the major version. Because '&' is a reserved characater in YAML, it must be enclosed in a single quote. 
 
 |===
 
@@ -560,6 +576,10 @@ The following tables show how versioning (asset version) and API version in the 
 | 1.1.0 | 1.1.X | v1
 
 | 2.0.0 | 2.0.X | two
+
+| 3.0.0 | 3.0.X | v3
+
+| 4.0.0 | 4.0.X | v4
 
 |===
 
