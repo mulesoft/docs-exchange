@@ -79,7 +79,7 @@ To enable the API Catalog Contributor permission:
 
 == Create a Descriptor File
 
-Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. To do this you can use the `api-catalog create-descriptor` command, which autodiscovers APIs in a designated directory path and creates a descriptor file. You can then specify the descriptor file in the `api-catalog publish-assets` command to publish the APIs. See <<Publish APIs Using CLI>>.
+Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. Use the following command to autodiscover APIs and generate the descriptor information. 
 
 ==== api-catalog create-descriptor
 
@@ -106,6 +106,8 @@ The result of the command depends on the presence and content of the designated 
 //* You cannot log in through the CLI if you system uses multi-factor authentication. Your system must use SSO and you must log in using the client ID and client secret of the Connected App.
 
 === Create a Descriptor File Using the CLI
+
+You can run the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
 
 To create a descriptor file:
 
