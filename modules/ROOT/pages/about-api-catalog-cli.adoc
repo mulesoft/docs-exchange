@@ -405,7 +405,7 @@ You can also pass this value using the environment variable `export ANYPOINT_CLI
 You can also pass this value using the environment variable `export ANYPOINT_CLIENT_SECRET=<client_secret>`.
 |===
 
-For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps^].
+For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
 
 === Environment Variable Usage
 
@@ -601,4 +601,4 @@ Following is an example descriptor file that describes the cataloging informatio
 
 == See Also
 
-* xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands^]
+* xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands]
