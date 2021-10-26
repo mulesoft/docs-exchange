@@ -168,9 +168,7 @@ The name and location of the catalog descriptor file.
   
 See <<Create a Descriptor File>>. 
 
-| -d, --dry-run=dry-run  | Runs the command to verify that the descriptor file is valid. No APIs will be published. 
-
-Example: --dry-run=descriptor  
+| -d, --dry-run | Runs the command to verify that the descriptor file is valid. No APIs will be published. 
 
 | -o, --organization=organization 
 
@@ -278,7 +276,7 @@ This example shows the `api-catalog publish-asset` command with the following op
 It sends the standard output to `mycatdryrun.log`. 
 
 --- 
- api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --verbose >> mycatdryrun.log
+ api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --dry-run --verbose >> mycatdryrun.log
 
 ---
 
