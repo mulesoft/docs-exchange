@@ -36,13 +36,13 @@ To enable developers in your organization to automatically publish the new API s
 
 === Prerequisites
 
-* Download and install NodeJS and npm (node package manager) on your system. See the https://nodejs.org/en/download/[NodeJS download page].
+* Download and install NodeJS and npm (node package manager) on your system. See the https://nodejs.org/en/download/[NodeJS download page^].
 
 === Install the CLI
 
 To install the CLI:
 
-. Download the API Catalog CLI package from the https://npmjs.com[npm public registry]. 
+. Download the API Catalog CLI package from the https://npmjs.com[npm public registry^]. 
 . Run the following command from your terminal:
 ----
 npm install -g api-catalog-cli@beta
@@ -278,7 +278,7 @@ This example shows the `api-catalog publish-asset` command with the following op
 It sends the standard output to `mycatdryrun.log`. 
 
 --- 
- api-catalog publish-asset -a https://qax.anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --verbose >> mycatdryrun.log
+ api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --verbose >> mycatdryrun.log
 
 ---
 
@@ -289,7 +289,7 @@ If you want to publish a new version of the asset in Exchange regardless of the 
 This example shows the `api-catalog publish-asset` command with both of these options. This example assumes that authentication credentials are set in environment variables. 
 
 ---
- api-catalog publish-asset -a https://qax.anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish 
+ api-catalog publish-asset -a https://anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish 
 
 ---
 
@@ -302,7 +302,7 @@ This example shows `api-catalog publish-asset` command options that will publish
 *Command to publish:*
 
 ---
- api-catalog publish-asset -a https://qax.anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tag:migrate --trigger=status:complete
+ api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tag:migrate --trigger=status:complete
 
 ---
 
