@@ -168,7 +168,7 @@ The name and location of the catalog descriptor file.
   
 See <<Create a Descriptor File>>. 
 
-| -d, --dry-run | Runs the command to verify that the descriptor file is valid. No APIs will be published. 
+| --dry-run | Runs the command to verify that the descriptor file is valid. No APIs will be published. 
 
 | -o, --organization=organization 
 
