@@ -599,7 +599,6 @@ Following is an example descriptor file that describes the cataloging informatio
 
 ---
 
-// == See Also
+== See Also
 
-// * xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands]
-// Anypoint Exchange
+* xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands^]
