@@ -130,7 +130,7 @@ You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To
 > api-catalog publish-asset [options] 
 ----
 
-This command publishes APIs to Exchange using the descriptor information passed in the YAML file passed in the catalog-file option.
+This command publishes APIs to Exchange using the descriptor information passed in the YAML file passed in the `--descriptor-file` option.
 
 [%header,cols="20a,80a"]
 |===
@@ -151,6 +151,10 @@ URL. It must be specified using HTTPS protocol.
 
 For the US Anypoint Platform, use  
 `https://anypoint.mulesoft.com/`. 
+
+For the European Anypoint Platform, use  
+`https://eu1.anypoint.mulesoft.com/`. 
+
 
 |  -d, --descriptor-file=descriptor-file 
 
@@ -270,7 +274,7 @@ In the example, an assumption is made that either the username and password cred
 
 This example shows the `api-catalog publish-asset` command with the following options:
 
-* --dry-run: Identifies the eligible APIs to publish but does not actually publish them
+* --dry-run: Runs the command to verify that the descriptor file is valid but doesn't publish the APIs
 * --verbose: Shows the maximum information in the results
 
 It sends the standard output to `mycatdryrun.log`. 
@@ -461,15 +465,13 @@ This example sets `triggerConditions` to enable the `api-catalog publish-asset` 
 
 ---
 
-| contact | The contact name.  
+| contact | The contact name and email ID.   
 
 | apis | A list of the APIs to be cataloged. 
 
 | spec | The location of the specification file that describes the API. 
 
-| assetId | Specifies the ID of the asset to be published in Exchange.
-
-This ID defaults to the API specification *Title* field.  
+| assetId | Specifies the ID of the asset to be published in Exchange. 
 
 | docs   | A list of key and value pairs that specify the name of the documentation page and file location for the API.
 These pairs define the order of the documentation pages in Anypoint Platform.
@@ -486,7 +488,7 @@ If this option is not specified, no categories will be added.
 
 | customFields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization.
 
-Format: <Field>: <Value> 
+Format: <Field>: <Value(s)> 
 
 If this option is not specified, no custom fields will be added.
 
@@ -521,33 +523,31 @@ Use the following symbols before the version nodes to control how an asset versi
 
 ==== Examples of Asset Versioning
 
-The following table shows how the asset version is incremented for example semantic versioning strings. Because the API version must be explicitly specified in either the API specification or the descriptor file, it is not incremented or correlated to the asset version. 
+The following table shows how the asset version is incremented for example semantic versioning strings. 
 
-[%header,cols="15a,15a,70a"]
+[%header,cols="15a, 70a"]
 |===
 | Asset Version (versioning) 
 
-| API Version (apiVersion) 
-
 | Explanation
 
-| ^x.x.x (Default) | two | Search for the latest version and increment the patch
+| ^x.x.x (Default) | Search for the latest version and increment the patch
 
-| ^1.x.x | v1 | Search for the latest version of major 1 and increment the patch
+| ^1.x.x | Search for the latest version of major 1 and increment the patch
 
-| ~1.x.x| v1 | Search for the latest version of major 1 and increment the minor
+| ~1.x.x| Search for the latest version of major 1 and increment the minor
 
-| ^1.0.x | v1 | Search for the latest version of major 1, minor 0 and increment the patch
+| ^1.0.x | Search for the latest version of major 1, minor 0 and increment the patch
 
-| ^3.x.x | v1 | Search for the latest version of major 3 and increment the patch
+| ^3.x.x | Search for the latest version of major 3 and increment the patch
 
-| ^3.x.x | v3 | Search for the latest version of major 3 and increment the patch
+| ^3.x.x | Search for the latest version of major 3 and increment the patch
 
-| '&x.x.x' | v4 | Increment to the next the major version. 
+| '&x.x.x' | Increment to the next the major version. 
 
 |===
 
-For more information on API and asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
+For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
 
 === Example Descriptor File
 
@@ -583,8 +583,8 @@ Following is an example descriptor file that describes the cataloging informatio
     versioning: 2.0.x
     apiVersion: v3
   - spec: api-spec/billing-api.json
-     assetId: my-awesome-api
-     tags:
+    assetId: my-awesome-api
+    tags:
       - finance
       - aws
     categories:
