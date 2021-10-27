@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-== API Catalog CLI
+== Get Started With API Catalog CLI
 
 API Catalog CLI enables you to publish APIs to Anypoint Exchange as they are created and updated as part of your CI/CD processes. 
 
@@ -15,18 +15,11 @@ With API Catalog CLI you can:
 
 You should install and test the process end-to-end locally before integrating it into your CI/CD pipeline. To verify locally: 
 
-. Ensure API Catalog CLI is properly installed.
+. <<Install API Catalog CLI,Install>> the API Catalog CLI.
 . Ensure MuleSoft has enabled the API Catalog entitlement for your Anypoint Platform organization.
-. Configure catalog permissions in the Anypoint Access Management web UI.
-. Create a descriptor file using the API Catalog CLI.
-. Catalog a test asset and view it in Anypoint Exchange.
-
-For details, see the following:
-
-* <<Install API Catalog CLI>>
-* <<Configure Catalog Permissions in Anypoint Access Management>>
-* <<Create a Descriptor File>>
-* <<Publish APIs Using CLI>>
+. <<Configure Catalog Permissions in Anypoint Access Management, Configure>> required catalog permissions.
+. <<Create a Descriptor File>> using the API Catalog CLI.
+. <<Publish APIs Using CLI,Catalog a test asset>> using the API Catalog CLI and view it in Anypoint Exchange.
 
 After you have finished testing locally, you will be ready to add the `api-catalog publish-asset` command to your CI/CD scripts and autocatalog APIs as part of your CI/CD processes. 
 
@@ -72,7 +65,7 @@ NOTE: Permissions must be set by an Anypoint Platform user with administrative p
 To enable the API Catalog Contributor permission:
 
 . In Anypoint Platform, navigate to *Access Management*.
-. Select *Users* in the left navigation.
+. Select *Users*.
 . Select the user for which you want to enable the permission. 
 . In the *Permissions* tab, select the *API Catalog* subtab.
 . Select *API Catalog Contributor*. 
@@ -130,7 +123,7 @@ You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To
 > api-catalog publish-asset [options] 
 ----
 
-This command publishes APIs to Exchange using the descriptor information passed in the YAML file passed in the `--descriptor-file` option.
+This command publishes APIs to Exchange using the YAML descriptor information specified in the `--descriptor-file` option.
 
 [%header,cols="20a,80a"]
 |===
@@ -469,41 +462,41 @@ This example sets `triggerConditions` to enable the `api-catalog publish-asset` 
 
 | apis | A list of the APIs to be cataloged. 
 
-| spec | The location of the specification file that describes the API. 
+spec:: The location of the specification file that describes the API. 
 
-| assetId | Specifies the ID of the asset to be published in Exchange. 
+assetId:: Specifies the ID of the asset to be published in Exchange. 
 
-| docs   | A list of key and value pairs that specify the name of the documentation page and file location for the API.
+docs:: A list of key and value pairs that specify the name of the documentation page and file location for the API.
 These pairs define the order of the documentation pages in Anypoint Platform.
-
++
 Format: <Name of the documentation page>:<File Location>
-
++
 If this option is not specified, no documentation pages will be imported. 
 
-| categories | A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization.
-
+categories:: A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization.
++
 Format: <Category Name>: <Value(s)>
-
++
 If this option is not specified, no categories will be added.
 
-| customFields| A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization.
-
+customFields:: A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization.
++
 Format: <Field>: <Value(s)> 
-
++
 If this option is not specified, no custom fields will be added.
 
-| versioning | The asset version. 
-
+versioning:: The asset version. 
++
 If this is not specified, the patch version is incremented by one.
-
++
 Example: ~1.x.x  
-
++
 See <<Asset Versioning>>.
 
-| apiVersion | The API version for the asset. 
-
+apiVersion:: The API version for the asset. 
++
 If the API version is not specified in the descriptor file, the version from the specification file is used. If the API version is specified in both files, the value in the descriptor file is used. The value must be specified in one of the files. 
-
++
 Example: v1  
 
 |===
@@ -553,10 +546,10 @@ For more information on asset versioning in Exchange, see xref:to-change-raml-ve
 
 Following is an example descriptor file that describes the cataloging information for two APIs. 
 
+[source,yaml]
 ---
-
- #%Catalog Descriptor 0.6
- triggerConditions:
+ #%Catalog Descriptor 0.6 # <1>
+ triggerConditions: # <2>
   branches:
     - main
     - release/(.*)
@@ -565,10 +558,10 @@ Following is an example descriptor file that describes the cataloging informatio
     - release/(.*)
   user:
     - admin
- contact:
+ contact: # <3>
   name: 'John Doe'
   email: 'john.doe@org.com'
- apis:
+ apis: # <4>
   - spec: api-spec/codat.json
     assetId: codat-api
     docs:
@@ -596,8 +589,11 @@ Following is an example descriptor file that describes the cataloging informatio
         - Billing
     versioning: ~1.x.x
     apiVersion: v1
-
 ---
+<1> Provides the start line for the descriptor file
+<2> Sets trigger conditions
+<3> Provides the contact name and email ID 
+<4> Specifies the API information to be published
 
 == See Also
 
