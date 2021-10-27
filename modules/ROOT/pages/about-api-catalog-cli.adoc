@@ -43,7 +43,7 @@ npm install -g api-catalog-cli@beta
 
 === View Command Help
 
-Use the help argument with the commands to list the commands or command arguments and their descriptions:
+Use the help argument with the commands to list the commands or command options and their descriptions:
 
 * `api-catalog --help`
 * `api-catalog autocomplete --help`
@@ -108,7 +108,7 @@ To create a descriptor file:
 . Run the `api-catalog create-descriptor` command. For example:
 +
 ----
-api-catalog create-descriptor -f mydescriptor.yaml
+> api-catalog create-descriptor -f mydescriptor.yaml
 ----
 
 NOTE: You can optionally create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create a Descriptor File Manually>>.
@@ -284,12 +284,12 @@ It sends the standard output to `mycatdryrun.log`.
 
 If you want to publish a new version of the asset in Exchange regardless of the content, you should use the `--force-publish` option. 
 
-This example shows the `api-catalog publish-asset` command with both of these options. This example assumes that authentication credentials are set in environment variables. 
+This example shows the `api-catalog publish-asset` command with both of these options. This example assumes that authentication credentials are set in environment variables.
 
----
- api-catalog publish-asset -a https://anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish 
+----
+> api-catalog publish-asset -a https://anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish 
 
----
+----
 
 ==== Example 4: Publish an asset using trigger conditions 
 
@@ -299,10 +299,10 @@ This example shows `api-catalog publish-asset` command options that will publish
 
 *Command to publish:*
 
----
- api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tag:migrate --trigger=status:complete
+----
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tag:migrate --trigger=status:complete
 
----
+----
 
 *Section in the specified descriptor file:*
 
@@ -411,7 +411,7 @@ For more information about Connected Apps, see xref:access-management::connected
 
 Keep the following in mind while using API Catalog CLI:
 
-* Command-line Arguments override environment variables. +
+* Command-line options override environment variables. +
 If you don't pass a command-line Argument, the default profile properties are used.
 * If not specified, the default environment is production.
 
