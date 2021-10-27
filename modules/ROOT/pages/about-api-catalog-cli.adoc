@@ -13,7 +13,7 @@ With API Catalog CLI you can:
 * Publish API specifications in Exchange using CLI commands 
 * Use descriptor files to identify the APIs to publish 
 
-You should install and test the process end-to-end locally before integrating it into your CI/CD pipeline. To verify locally: 
+To get started with API Catalog CLI: 
 
 . <<Install API Catalog CLI,Install>> the API Catalog CLI.
 . Ensure MuleSoft has enabled the API Catalog entitlement for your Anypoint Platform organization.
@@ -21,11 +21,11 @@ You should install and test the process end-to-end locally before integrating it
 . <<Create a Descriptor File>> using the API Catalog CLI.
 . <<Publish APIs Using CLI,Catalog a test asset>> using the API Catalog CLI and view it in Anypoint Exchange.
 
-After you have finished testing locally, you will be ready to add the `api-catalog publish-asset` command to your CI/CD scripts and autocatalog APIs as part of your CI/CD processes. 
+TIP: Consider testing the process end-to-end locally before integrating it into your CI/CD pipeline. 
 
 == Install API Catalog CLI 
 
-To enable developers in your organization to automatically publish the new API specifications, you must install API Catalog CLI and add it to your CI/CD pipeline. 
+To enable developers in your organization to automatically publish the new API specifications, you must install API Catalog CLI. 
 
 === Prerequisites
 
@@ -253,7 +253,7 @@ See <<Authentication>>.
 
 === Example Publish Asset Commands
 
-Following are examples that show some typical use cases for publishing assets.
+Following are example commands that show how several catalog options are used.
 
 ==== Example 1: Publish an asset with default settings
 
