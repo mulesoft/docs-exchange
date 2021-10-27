@@ -105,9 +105,14 @@ You can run the `api-catalog create-descriptor` command to create and print the 
 To create a descriptor file:
 
 . Navigate to the directory path that contains the APIs you want to catalog. 
-. Run the `api-catalog create-descriptor` command.  
+. Run the `api-catalog create-descriptor` command. For example:
++
+----
+api-catalog create-descriptor -f mydescriptor.yaml
+----
 
 NOTE: You can optionally create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create a Descriptor File Manually>>.
+
 
 == Publish APIs Using CLI
 
@@ -245,8 +250,6 @@ See <<Authentication>>.
 | --json | Prints the execution result in JSON format. 
 
 |===
-
-For information on passing credentials, see <<Authentication>>.
 
 === Example Publish Asset Commands
 
