@@ -550,7 +550,8 @@ For more information on asset versioning in Exchange, see xref:to-change-raml-ve
 Following is an example descriptor file that describes the cataloging information for two APIs. 
 
 [source,yaml]
----
+----
+
  #%Catalog Descriptor 0.6 # <1>
  triggerConditions: # <2>
   branches:
@@ -592,7 +593,7 @@ Following is an example descriptor file that describes the cataloging informatio
         - Billing
     versioning: ~1.x.x
     apiVersion: v1
----
+----
 <1> Provides the start line for the descriptor file
 <2> Sets trigger conditions
 <3> Provides the contact name and email ID 
