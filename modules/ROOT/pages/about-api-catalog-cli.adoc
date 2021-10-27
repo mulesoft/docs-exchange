@@ -553,7 +553,7 @@ Following is an example descriptor file that describes the cataloging informatio
 ----
 
  #%Catalog Descriptor 0.6 # <1>
- triggerConditions: # <2>
+triggerConditions: # <2>
   branches:
     - main
     - release/(.*)
@@ -562,10 +562,10 @@ Following is an example descriptor file that describes the cataloging informatio
     - release/(.*)
   user:
     - admin
- contact: # <3>
+contact: # <3>
   name: 'John Doe'
   email: 'john.doe@org.com'
- apis: # <4>
+apis: # <4>
   - spec: api-spec/codat.json
     assetId: codat-api
     docs:
