@@ -142,15 +142,15 @@ ANYPOINT_BASE_URL environment variable
 
  | (Required) 
 
-Default: https://anypoint.mulesoft.com
+Default: `https://anypoint.mulesoft.com`
 
 The Anypoint Platform base 
 URL. It must be specified using HTTPS protocol. 
 
-For the US Anypoint Platform, use  
+For the US Anypoint Platform, use:  
 `https://anypoint.mulesoft.com/`. 
 
-For the European Anypoint Platform, use  
+For the European Anypoint Platform, use: 
 `https://eu1.anypoint.mulesoft.com/`. 
 
 
@@ -259,10 +259,10 @@ Following are examples that show some typical use cases for publishing assets.
 
 The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings will be used for the unspecified options. 
 
----
- api-catalog-cli publishAsset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
+----
+> api-catalog-cli publishAsset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
 
----
+----
 
 In the example, an assumption is made that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined in ANYPOINT_CLIENT_ID and ANYPOINT_CLIENT_SECRET environment variables. 
 
@@ -275,10 +275,10 @@ This example shows the `api-catalog publish-asset` command with the following op
 
 It sends the standard output to `mycatdryrun.log`. 
 
---- 
- api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --dry-run --verbose >> mycatdryrun.log
+----
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --dry-run --verbose >> mycatdryrun.log
 
----
+----
 
 ==== Example 3: Publish an asset regardless of the content
 
@@ -324,9 +324,9 @@ This example shows `api-catalog publish-asset` command options that will publish
 
 This example shows a Jenkins script that runs the `api-catalog publish-asset` command.
 
----
+----
 
- pipeline {
+pipeline {
     agent any
     environment {
         ANYPOINT_ORG_ID = '1234abc-b34a-7cd3-4s32-12345abc2345'
@@ -366,7 +366,7 @@ This example shows a Jenkins script that runs the `api-catalog publish-asset` co
         }
     }
 
----
+----
 
 == Authentication
 
