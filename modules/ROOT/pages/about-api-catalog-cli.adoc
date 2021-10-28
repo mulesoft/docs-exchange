@@ -607,7 +607,7 @@ apis: # <4>
 <3> Provides the contact name and email ID 
 <4> Specifies the API information to be published
 
-=== Configure the Autocomplete Command
+== Configure Command Autocompletion
 
 The autocomplete command enables you to configure completion for API Catalog CLI commands. To configure it, run `api-catalog autocomplete` and follow the instructions.
 
