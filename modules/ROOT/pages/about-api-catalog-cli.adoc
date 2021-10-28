@@ -4,22 +4,17 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
+API Catalog CLI enables you to catalog your API specifications, documentation files, and associated metadata as part of an automated process. You can embed the command to publish assets in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. API Catalog CLI is agnostic of CI/CD tools and runtime environments.
+
 == Get Started With API Catalog CLI
-
-API Catalog CLI enables you to publish APIs to Anypoint Exchange as they are created and updated as part of your CI/CD processes. 
-
-With API Catalog CLI you can:
-
-* Publish API specifications in Exchange using CLI commands 
-* Use descriptor files to identify the APIs to publish 
 
 To get started with API Catalog CLI: 
 
 . <<Install API Catalog CLI,Install>> the API Catalog CLI.
 . Ensure MuleSoft has enabled the API Catalog entitlement for your Anypoint Platform organization.
 . <<Configure Catalog Permissions in Anypoint Access Management, Configure>> required catalog permissions.
-. <<Create a Descriptor File>> using the API Catalog CLI.
-. <<Publish APIs Using CLI,Catalog a test asset>> using the API Catalog CLI and view it in Anypoint Exchange.
+. <<Create a Descriptor File,Create a descriptor file>> to identify the APIs to publish.
+. <<Publish APIs Using CLI,Catalog an asset>> using the API Catalog CLI and view it in Anypoint Exchange.
 
 TIP: Consider testing the process end-to-end locally before integrating it into your CI/CD pipeline. 
 
@@ -50,7 +45,7 @@ Use the help argument with the commands to list the commands or command options 
 * `api-catalog create-descriptor --help`
 * `api-catalog publish-asset --help`
 
-NOTE: Optionally use the `api-catalog autocomplete` command by following the instructions in the command help. 
+NOTE: You can optionally configure the `api-catalog autocomplete` command so that you can use the tab key with a partially-typed command to autocomplete it. See <<Configure the Autocomplete Command>> for more details.
 
 == Configure Catalog Permissions in Anypoint Access Management
 
@@ -74,30 +69,6 @@ To enable the API Catalog Contributor permission:
 
 Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. Use the following command to autodiscover APIs and generate the descriptor information. 
 
-==== api-catalog create-descriptor
-
-----
-> api-catalog create-descriptor [options] 
-----
-
-*Options*
-
-`-f, --file=file`
-  +
-  [default: `catalog.yaml`] 
-  + 
-  The name and location in which to save the generated catalog descriptor file.
-
-The result of the command depends on the presence and content of the designated descriptor file as follows:
-
-* No file or empty file: The command will discover the APIs and write the results to standard output and to a file named `catalog.yaml`.
-
-* Existing file with content: The command will fail and show an error message that says the descriptor file already exists.
-
-//Limitations:
-//* Each API specification must have a single API.  
-//* You cannot log in through the CLI if you system uses multi-factor authentication. Your system must use SSO and you must log in using the client ID and client secret of the Connected App.
-
 === Create a Descriptor File Using the CLI
 
 You can run the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
@@ -111,8 +82,31 @@ To create a descriptor file:
 > api-catalog create-descriptor -f mydescriptor.yaml
 ----
 
+The result of the command depends on the presence and content of the designated descriptor file as follows:
+
+* No file or empty file: The command will discover the APIs and write the results to standard output and to a file named `catalog.yaml`.
+
+* Existing file with content: The command will fail and show an error message that says the descriptor file already exists.
+
 NOTE: You can optionally create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create a Descriptor File Manually>>.
 
+//Limitations:
+//* Each API specification must have a single API.  
+//* You cannot log in through the CLI if you system uses multi-factor authentication. Your system must use SSO and you must log in using the client ID and client secret of the Connected App.
+
+*Usage*
+
+----
+> api-catalog create-descriptor [options] 
+----
+
+*Options*
+
+`-f, --file=file`
+  +
+  [default: `catalog.yaml`] 
+  + 
+  The name and location in which to save the generated catalog descriptor file.
 
 == Publish APIs Using CLI
 
@@ -121,6 +115,14 @@ You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To
 *Prerequisites*
 
 * Create a descriptor file and copy it to the file path where your API projects are stored. See <<Create a Descriptor File>>.
+
+To publish an API using the CLI:
+
+* Run the `api-catalog publish-asset` command. For example:
++
+----
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct 
+----
 
 === api-catalog publish-asset
 
@@ -598,6 +600,43 @@ apis: # <4>
 <2> Sets trigger conditions
 <3> Provides the contact name and email ID 
 <4> Specifies the API information to be published
+
+=== Configure the Autocomplete Command
+
+The autocomplete command enables you to configure completion for API Catalog CLI commands. To configure it, run `api-catalog autocomplete` and follow the instructions.
+
+To display the autocomplete configuration instructions, run:
+
+----
+> api-catalog autocomplete --help
+----
+
+USAGE
+
+----
+$ api-catalog autocomplete [SHELL]
+----
+
+ARGUMENTS
+
+----
+SHELL shell type
+----
+
+OPTIONS
+
+----
+-r, --refresh-cache Refresh cache (ignores displaying instructions)
+----
+
+EXAMPLES
+
+----
+$ api-catalog autocomplete
+$ api-catalog autocomplete bash
+$ api-catalog autocomplete zsh
+$ api-catalog autocomplete --refresh-cache
+----
 
 == See Also
 
