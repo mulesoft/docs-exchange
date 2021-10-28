@@ -16,7 +16,7 @@ To get started with API Catalog CLI:
 . <<Create a Descriptor File,Create a descriptor file>> to identify the APIs to publish.
 . <<Publish APIs Using CLI,Catalog an asset>> using the API Catalog CLI and view it in Anypoint Exchange.
 
-TIP: Consider testing the process end-to-end locally before integrating it into your CI/CD pipeline. 
+TIP: Consider testing the process end-to-end locally before integrating it into your CI/CD pipeline or custom scripts. 
 
 == Install API Catalog CLI 
 
