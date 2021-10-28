@@ -38,12 +38,14 @@ npm install -g api-catalog-cli@beta
 
 === View Command Help
 
-Use the help argument with the commands to list the commands or command options and their descriptions:
+Use the help argument with the commands to list the commands or command options and their descriptions. For example:
 
-* `api-catalog --help`
-* `api-catalog autocomplete --help`
-* `api-catalog create-descriptor --help`
-* `api-catalog publish-asset --help`
+----
+api-catalog --help
+api-catalog autocomplete --help
+api-catalog create-descriptor --help
+api-catalog publish-asset --help
+----
 
 NOTE: You can optionally configure the `api-catalog autocomplete` command so that you can use the tab key with a partially-typed command to autocomplete it. See <<Configure the Autocomplete Command>> for more details.
 
@@ -67,13 +69,13 @@ To enable the API Catalog Contributor permission:
 
 == Create a Descriptor File
 
-Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. Use the following command to autodiscover APIs and generate the descriptor information. 
+Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs.  
 
 === Create a Descriptor File Using the CLI
 
 You can run the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
 
-To create a descriptor file:
+To create a descriptor file using the CLI:
 
 . Navigate to the directory path that contains the APIs you want to catalog. 
 . Run the `api-catalog create-descriptor` command. For example:
@@ -124,13 +126,17 @@ To publish an API using the CLI:
 > api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct 
 ----
 
-=== api-catalog publish-asset
+*Usage*
 
 ----
 > api-catalog publish-asset [options] 
 ----
 
 This command publishes APIs to Exchange using the YAML descriptor information specified in the `--descriptor-file` option.
+
+*Options*
+
+The `api-catalog publish-asset` options are described in the following table.
 
 [%header,cols="20a,80a"]
 |===
