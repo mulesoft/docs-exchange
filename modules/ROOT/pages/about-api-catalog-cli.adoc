@@ -617,25 +617,25 @@ To display the autocomplete configuration instructions, run:
 > api-catalog autocomplete --help
 ----
 
-USAGE
+*Usage*
 
 ----
 $ api-catalog autocomplete [SHELL]
 ----
 
-ARGUMENTS
+*Arguments*
 
 ----
 SHELL shell type
 ----
 
-OPTIONS
+*Options*
 
 ----
 -r, --refresh-cache Refresh cache (ignores displaying instructions)
 ----
 
-EXAMPLES
+*Examples*
 
 ----
 $ api-catalog autocomplete
