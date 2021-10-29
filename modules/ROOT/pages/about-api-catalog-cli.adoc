@@ -332,13 +332,13 @@ This example shows `api-catalog publish-asset` command options that will publish
 
 This example shows a Jenkins script that runs the `api-catalog publish-asset` command.
 
+[source,java]
 ----
-
 pipeline {
     agent any
     environment {
         ANYPOINT_ORG_ID = '1234abc-b34a-7cd3-4s32-12345abc2345'
-        CATALOG_DESCRIPTOR = './descriptor.yaml'
+        CATALOG_DESCRIPTOR = './descriptor.yaml' <1>
      }   
      stages {
         stage('git checkout') {
@@ -361,7 +361,7 @@ pipeline {
                     usernameVariable: 'ANYPOINT_USERNAME',
                     passwordVariable: 'ANYPOINT_PASSWORD')
                 ]) { 
-                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com/ --trigger=branch:main'
+                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com/ --trigger=branch:main' <2>
                 }
             }
         }
@@ -373,8 +373,9 @@ pipeline {
             }
         }
     }
-
 ----
+<1> Defines the authentication values
+<2> Runs the api-catalog publish-asset command with the defined values
 
 == Authentication
 
