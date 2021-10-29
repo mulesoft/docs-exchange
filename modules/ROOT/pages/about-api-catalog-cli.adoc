@@ -515,12 +515,21 @@ When you publish a version of an asset that already exists in Exchange, the patc
 
 Use the following symbols before the version nodes to control how an asset version is incremented:
 
-* ^ patch
+[%header,cols="15a, 70a"]
+|===
+| Symbol
 
-* ~ minor
+| Version Node
 
-* & major  +
- Because '&' is a reserved character in YAML, a semantic versioning string using this character must be enclosed in a single quote. For example: '&x.x.x'
+| ^ | patch
+
+| ~ | minor
+
+| & | major 
+
+Because '&' is a reserved character in YAML, a semantic versioning string using this character must be enclosed in a single quote. For example: '&x.x.x'
+
+|===
 
 ==== Examples of Asset Versioning
 
