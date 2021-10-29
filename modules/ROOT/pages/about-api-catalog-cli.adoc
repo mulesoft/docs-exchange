@@ -609,12 +609,23 @@ apis: # <4>
 
 == Configure Command Autocompletion
 
-The autocomplete command enables you to configure completion for API Catalog CLI commands. To configure it, run `api-catalog autocomplete` and follow the instructions.
-
-To display the autocomplete configuration instructions, run:
+The autocomplete command enables you to configure completion for API Catalog CLI commands. To configure it, run `api-catalog autocomplete` and follow the instructions:
 
 ----
-> api-catalog autocomplete --help
+1) Add the autocomplete env var to your bash profile and source it
+$ printf "eval $(api-catalog autocomplete:script bash)" >> ~/.bashrc; source ~/.bashrc
+
+NOTE: If your terminal starts as a login shell you may need to print the init script into ~/.bash_profile or ~/.profile.
+
+2) Test it out, e.g.:
+$ api-catalog <TAB><TAB>                 # Command completion
+$ api-catalog command --<TAB><TAB>       # Flag completion
+----
+
+If you are using a Z shell (zsh), use the following command to add the autocomplete environment variable to your zsh script:
+
+----
+printf "eval $(api-catalog autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrc
 ----
 
 *Usage*
