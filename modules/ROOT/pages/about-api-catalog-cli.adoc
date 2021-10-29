@@ -47,7 +47,7 @@ api-catalog create-descriptor --help
 api-catalog publish-asset --help
 ----
 
-NOTE: You can optionally configure the `api-catalog autocomplete` command so that you can use the tab key with a partially-typed command to autocomplete it. See <<Configure the Autocomplete Command>> for more details.
+NOTE: You can optionally configure the `api-catalog autocomplete` command so that you can use the tab key with a partially-typed command to autocomplete it. See <<Configure Command Autocompletion>> for more details.
 
 == Configure Catalog Permissions in Anypoint Access Management
 
