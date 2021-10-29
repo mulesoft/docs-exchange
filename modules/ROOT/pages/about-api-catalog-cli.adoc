@@ -343,7 +343,7 @@ pipeline {
      stages {
         stage('git checkout') {
             steps {
-                git url: 'git@github.com:mulesoft-labs/api-cataloging-demo.git'
+                git url: 'git@github.com:mygitlocation/api-catalog-cli.git'
                 sh 'ls'
                 echo "Branch " + env.GIT_BRANCH
             }
@@ -357,7 +357,7 @@ pipeline {
         stage('API Cataloging') {    
             steps {
                  withCredentials([
-                    usernamePassword(credentialsId: 'anypoint-demo-org-creds',
+                    usernamePassword(credentialsId: 'my-anypoint-creds',
                     usernameVariable: 'ANYPOINT_USERNAME',
                     passwordVariable: 'ANYPOINT_PASSWORD')
                 ]) { 
@@ -367,7 +367,7 @@ pipeline {
         }
          stage('Deploy') {    
             steps {
-                // Lots of deploying 
+                // Deploying 
                  echo "Branch " + env.GIT_BRANCH
                  sh 'ls'
             }
