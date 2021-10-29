@@ -344,14 +344,12 @@ pipeline {
         stage('git checkout') {
             steps {
                 git url: 'git@github.com:mygitlocation/api-catalog-cli.git'
-                sh 'ls'
-                echo "Branch " + env.GIT_BRANCH
+                // additional checkout tasks
             }
         }
         stage('Build Artifacts') {    
             steps {
                  // building
-                  sh 'ls'
             }
         }
         stage('API Cataloging') {    
@@ -367,9 +365,7 @@ pipeline {
         }
          stage('Deploy') {    
             steps {
-                // Deploying 
-                 echo "Branch " + env.GIT_BRANCH
-                 sh 'ls'
+                // Any deployment tasks to be performed, here.
             }
         }
     }
