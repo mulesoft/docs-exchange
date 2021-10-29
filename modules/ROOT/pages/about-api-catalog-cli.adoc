@@ -370,8 +370,8 @@ pipeline {
         }
     }
 ----
-<1> Defines the authentication values
-<2> Runs the api-catalog publish-asset command with the defined values
+<1> Defines the organization and descriptor file values
+<2> Runs the `api-catalog publish-asset` command to publish APIs found in the `main` Github branch
 
 == Authentication
 
