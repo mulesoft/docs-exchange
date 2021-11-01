@@ -53,7 +53,7 @@ NOTE: You can optionally configure the `api-catalog autocomplete` command so tha
 
 You must enable the API Catalog Contributor permission for the Anypoint Platform organization user. 
 
-*Prerequisites*
+=== Prerequisites
 
 * The API Catalog entitlement must be set by MuleSoft for your Anypoint Platform organization. 
 
@@ -96,6 +96,10 @@ NOTE: You can optionally create a descriptor file manually instead of using the 
 //* Each API specification must have a single API.  
 //* You cannot log in through the CLI if you system uses multi-factor authentication. Your system must use SSO and you must log in using the client ID and client secret of the Connected App.
 
+==== api-catalog create-descriptor
+
+Following is a reference for the `api-catalog create-descriptor` command. 
+
 *Usage*
 
 ----
@@ -112,9 +116,9 @@ NOTE: You can optionally create a descriptor file manually instead of using the 
 
 == Publish APIs Using CLI
 
-You can publish your APIs to Anypoint Exchange with API Catalog CLI commands. To automate the publishing of APIs using CLI, you will typically use build scripts in tools such as Jenkins, but you can run the CLI manually from a terminal for learning and testing purposes. 
+You can use the `api-catalog publish-asset` command to publish your APIs to Exchange. You will typically embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your APIs using the information specified in the `--descriptor-file` option.   
 
-*Prerequisites*
+=== Prerequisites
 
 * Create a descriptor file and copy it to the file path where your API projects are stored. See <<Create a Descriptor File>>.
 
@@ -126,13 +130,15 @@ To publish an API using the CLI:
 > api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct 
 ----
 
+=== api-catalog publish-asset
+
+Following is a reference for the `api-catalog publish asset` command. 
+
 *Usage*
 
 ----
 > api-catalog publish-asset [options] 
 ----
-
-This command publishes APIs to Exchange using the YAML descriptor information specified in the `--descriptor-file` option.
 
 *Options*
 
@@ -615,7 +621,11 @@ apis: # <4>
 
 == Configure Command Autocompletion
 
-The autocomplete command enables you to configure completion for API Catalog CLI commands. To configure it, run `api-catalog autocomplete` and follow the instructions:
+The `api-catalog-cli autocomplete` command enables you to configure completion for API Catalog CLI commands. 
+
+=== Configure Autocompletion in a Bash shell
+
+To configure command autocompletion in a Bash shell, run `api-catalog autocomplete bash` and follow the instructions:
 
 ----
 1) Add the autocomplete env var to your bash profile and source it
@@ -628,11 +638,24 @@ $ api-catalog <TAB><TAB>                 # Command completion
 $ api-catalog command --<TAB><TAB>       # Flag completion
 ----
 
-If you are using a Z shell (zsh), use the following command to add the autocomplete environment variable to your zsh script:
+=== Configure Autocompletion in a Z Shell
+
+To configure command autocompletion in a Z shell, run `api-catalog autocomplete zsh` and follow the instructions:
 
 ----
-printf "eval $(api-catalog autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrc
+1) Add the autocomplete env var to your zsh profile and source it
+$ printf "eval $(api-catalog autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrc
+
+NOTE: After sourcing, you can run `$ compaudit -D` to ensure no permissions conflicts are present
+
+2) Test it out, e.g.:
+$ api-catalog <TAB>                 # Command completion
+$ api-catalog command --<TAB>       # Flag completion
 ----
+
+=== api-catalog-cli autocomplete
+
+Following is a reference for the `api-catalog-cli autocomplete` command. 
 
 *Usage*
 
