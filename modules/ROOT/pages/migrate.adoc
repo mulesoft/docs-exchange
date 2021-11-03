@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
+NOTE: The end of life for Exchange 1 was July 18, 2021.
+
 Anypoint Exchange 2 introduces a new way of working with your assets. Where Exchange 1 is a listing service that only provides links to where assets are stored, Exchange 2 is a package management system that stores assets.
 
 Migration to Exchange 2 differs by asset type:
