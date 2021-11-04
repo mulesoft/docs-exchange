@@ -64,8 +64,7 @@ To enable the API Catalog Contributor permission:
 . In Anypoint Platform, navigate to *Access Management*.
 . Select *Users*.
 . Select the user for which you want to enable the permission. 
-. In the *Permissions* tab, select *API Catalog*.
-. Select *API Catalog Contributor*. 
+. Select the *API Catalog Contributor* permission. 
 
 == Create a Descriptor File Using the CLI
 
@@ -619,7 +618,7 @@ apis: # <4>
 
 The `api-catalog-cli autocomplete` command enables you to configure completion for API Catalog CLI commands. 
 
-=== Configure Autocompletion in a Bash shell
+=== Configure Autocompletion in a Bash Shell
 
 To configure command autocompletion in a Bash shell, run `api-catalog autocomplete bash` and follow the instructions:
 
