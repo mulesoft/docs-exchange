@@ -18,8 +18,8 @@ Another way to publish these type of assets is using the https://anypoint.muleso
 * RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
 +
 For example: `exchange asset upload --classifier raml --apiVersion v1 --name HelloWorld --mainFile helloworld.raml helloword/1.0.0 /Users/nmouso/Downloads/helloworld.raml.zip`
-* API Groups are published to Exchange from Anypoint API Manager.
-* Mule Applications are published to Exchange from Anypoint Runtime Fabric and managed in Runtime Fabric, and are not visible in the Exchange user interface.
+* API groups are published to Exchange from Anypoint API Manager.
+* Mule applications are published to Exchange from Anypoint Runtime Fabric and managed in Runtime Fabric, and are not visible in the Exchange user interface.
 * External libraries are published to Exchange from the xref:to-publish-assets-maven.adoc[Exchange Maven Facade API] and managed with this API, and are not visible in the Exchange user interface.
 
 Each asset in Exchange is versioned. You can manage which versions are visible by deprecating a version to hide it, and you can delete versions if needed. All versions of an asset always have the same type.
