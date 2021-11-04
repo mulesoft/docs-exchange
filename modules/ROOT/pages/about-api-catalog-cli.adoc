@@ -6,7 +6,7 @@ endif::[]
 
 API Catalog CLI enables you to catalog your API specifications, documentation files, and associated metadata as part of an automated process. You can embed the command to publish assets in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. API Catalog CLI is agnostic of CI/CD tools and runtime environments.
 
-== Get Started With API Catalog CLI
+== Get Started with API Catalog CLI
 
 To get started with API Catalog CLI: 
 
