@@ -87,7 +87,7 @@ The result of the command depends on the presence and content of the designated 
 
 * Existing file with content: The command will fail and show an error message that says the descriptor file already exists.
 
-NOTE: You can optionally create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create a Descriptor File Manually>>.
+NOTE: You can alternatively create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create a Descriptor File Manually>>.
 
 ==== api-catalog create-descriptor
 
