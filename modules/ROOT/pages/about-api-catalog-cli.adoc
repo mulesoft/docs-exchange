@@ -62,9 +62,11 @@ NOTE: Permissions must be set by an Anypoint Platform user with administrative p
 To enable the API Catalog Contributor permission:
 
 . In Anypoint Platform, navigate to *Access Management*.
+. If you are managing user access using teams, click `Hide New Features`.
 . Select *Users*.
-. Select the user for which you want to enable the permission. 
+. Select the user for which you want to enable the permission.  
 . Select the *API Catalog Contributor* permission. 
+. To continue managing user access using teams, click `Try New Features`.
 
 == Create a Descriptor File Using the CLI
 
@@ -177,7 +179,7 @@ The name and location of the catalog descriptor file.
   
 See <<Create a Descriptor File Using the CLI>>. 
 
-| --dry-run | Runs the command to verify that the descriptor file is valid. No APIs will be published. 
+| --dry-run | Runs the command to verify that the descriptor file is valid. No APIs are published. 
 
 | -o, --organization=organization 
 
@@ -252,7 +254,7 @@ See <<Authentication>>.
  | --force-publish |  Bypasses the comparison and 
  creates a new version of the asset in Exchange regardless of the content.
 
-| --force-update-metadata | Updates the asset's metadata (such as tags) in the latest version in Exchange regardless of the content. This does not republish the asset. 
+| --force-update-metadata | Updates the asset's metadata, such as tags, in the latest version in Exchange regardless of the content. This does not republish the asset. 
 
 | --json | Prints the execution result in JSON format. 
 
@@ -264,7 +266,7 @@ Following are example commands that show how several catalog options are used.
 
 ==== Example 1: Publish an asset with default settings
 
-The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings will be used for the unspecified options. 
+The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings are used for the unspecified options. 
 
 ----
 > api-catalog-cli publishAsset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
@@ -478,19 +480,23 @@ These pairs define the order of the documentation pages in Anypoint Platform.
 +
 Format: <Name of the documentation page>:<File Location>
 +
-If this option is not specified, no documentation pages will be imported. 
+If this option is not specified, no documentation pages are imported. 
 
 categories:: A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization.
 +
 Format: <Category Name>: <Value(s)>
 +
-If this option is not specified, no categories will be added.
+If this option is not specified, no categories are added.
 
 customFields:: A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization.
 +
 Format: <Field>: <Value(s)> 
 +
-If this option is not specified, no custom fields will be added.
+If this option is not specified, no custom fields are added.
+
+tags:: A list of free text strings. 
++
+If this option is not specified, no tags are added.
 
 versioning:: The asset version. 
 +
