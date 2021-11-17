@@ -461,7 +461,7 @@ Following are the YAML tags used to describe the APIs you want to catalog.
 |===
 | Tag | Description 
 
-| triggerConditions | This section enables you to set conditions to restrict the APIs that are included when the `api-catalog publish-asset` command is run with the `--trigger` option.   
+| triggerConditions | This section enables you to set conditions to restrict the APIs that are published when the `api-catalog publish-asset` command is run with the `--trigger` option.   
 
 ---
  branches:
