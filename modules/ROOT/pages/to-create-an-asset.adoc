@@ -40,6 +40,8 @@ image::ex2-exchange-assets.png[]
 
 == Asset Limits
 
+An asset's version format must use semantic versioning. The maximum length of an asset's name, description, `assetId`, and `versionGroup` is 256 characters. The minimum length of an asset's name, `assetId`, and `versionGroup` is 1 character, and the minimum length of an asset's description is 0 characters. The maximum combined length of an asset's `groupId`, `assetId`, and `version` is 215 characters.
+
 Exchange prevents resource exhaustion attacks by limiting the number of asset versions that can be published.
 
 The limit is 500 assets for root organizations with trial accounts, and 100,000 (one hundred thousand) assets for other root organizations.
