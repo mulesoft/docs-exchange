@@ -36,6 +36,8 @@ To install the CLI:
 npm install -g api-catalog-cli@beta
 ----
 
+NOTE: The install command might give warning messages about the version of npm because the API Catalog CLI installation package is built using npm version 14. You can ignore these messages. 
+
 === View Command Help
 
 Use the help option with the commands to list the commands or command options and their descriptions. The following examples show how the help option is used with each of the commands:
@@ -115,7 +117,7 @@ You can use the `api-catalog publish-asset` command to publish your APIs to Exch
 
 === Prerequisites
 
-* Create a descriptor file and copy it to the file path where your API projects are stored. See <<Create a Descriptor File Using the CLI>>.
+* Create a descriptor file that describes the APIs to publish and copy it to the file path where your API projects are stored. See <<Create a Descriptor File Using the CLI>>.
 
 To publish an API using the CLI:
 
