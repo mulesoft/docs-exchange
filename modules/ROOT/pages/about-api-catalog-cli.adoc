@@ -10,8 +10,8 @@ API Catalog CLI enables you to catalog your API specifications, documentation fi
 
 To get started with API Catalog CLI: 
 
-. <<Install API Catalog CLI,Install>> the API Catalog CLI.
 . Ensure MuleSoft has enabled the API Catalog entitlement for your Anypoint Platform organization.
+. <<Install API Catalog CLI,Install>> the API Catalog CLI.
 . <<Configure Catalog Permissions in Anypoint Access Management, Configure>> required catalog permissions.
 . <<Create a Descriptor File Using the CLI,Create a descriptor file>> to identify the APIs to publish.
 . <<Publish APIs Using the CLI,Catalog an asset>> using the API Catalog CLI and view it in Anypoint Exchange.
