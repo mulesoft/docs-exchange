@@ -89,7 +89,7 @@ The result of the command depends on the presence and content of the designated 
 
 * Existing file with content: The command will fail and show an error message that says the descriptor file already exists.
 
-NOTE: You can alternatively create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create a Descriptor File Manually>>.
+NOTE: You can alternatively create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create or Update a Descriptor File Manually>>.
 
 ==== api-catalog create-descriptor
 
@@ -260,11 +260,19 @@ See <<Authentication>>.
 
 |===
 
-=== Example Publish Asset Commands
+The following sections give example commands that show how several catalog options are used:
 
-Following are example commands that show how several catalog options are used.
+* <<Publish an Asset with Default Settings>>
 
-==== Example 1: Publish an asset with default settings
+* <<Perform a Dry Run to Validate the Descriptor File>>
+
+* <<Publish an Asset Regardless of the Content>>
+
+* <<Publish an Asset Using Trigger Conditions>>
+
+* <<Publish Using a Jenkins Script>> 
+
+=== Publish an Asset with Default Settings
 
 The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings are used for the unspecified options. 
 
@@ -275,7 +283,7 @@ The following example publishes the API to an organization in the US Anypoint Pl
 
 This example assumes that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined in ANYPOINT_CLIENT_ID and ANYPOINT_CLIENT_SECRET environment variables. 
 
-==== Example 2: Perform a dry run to ensure that the descriptor file is valid
+=== Perform a Dry Run to Validate the Descriptor File
 
 This example shows the `api-catalog publish-asset` command with the following options:
 
@@ -289,7 +297,7 @@ The example command sends the standard output to `mycatdryrun.log`.
 
 ----
 
-==== Example 3: Publish an asset regardless of the content
+=== Publish an Asset Regardless of the Content
 
 To publish a new version of the asset in Exchange regardless of the content, use the `--force-publish` option. 
 
@@ -300,7 +308,7 @@ This example shows the `api-catalog publish-asset` command with both of these op
 
 ----
 
-==== Example 4: Publish an asset using trigger conditions 
+=== Publish an Asset Using Trigger Conditions 
 
 Custom trigger conditions enable you to further control what is published when the API Catalog CLI command runs. 
 
@@ -329,7 +337,7 @@ Section in the specified descriptor file:
 
 ---
 
-==== Example 5: Publish Using a Jenkins Script 
+=== Publish Using a Jenkins Script 
 
 This example shows a Jenkins script that runs the `api-catalog publish-asset` command.
 
@@ -451,9 +459,7 @@ Following are the YAML tags used to describe the APIs you want to catalog.
 |===
 | Tag | Description 
 
-| triggerConditions | This section enables you to set conditions to restrict the APIs that are included when the `api-catalog publish-asset` command is run.   
-
-This example sets `triggerConditions` to enable the `api-catalog publish-asset` command to set conditions to publish APIs for just a designated branch or reference, tagged in a certain way, and authored by a specific user. 
+| triggerConditions | This section enables you to set conditions to restrict the APIs that are included when the `api-catalog publish-asset` command is run with the `--trigger` option.   
 
 ---
  branches:
@@ -466,6 +472,14 @@ This example sets `triggerConditions` to enable the `api-catalog publish-asset` 
    - admin
 
 ---
+
+The preceding example sets `triggerConditions` to enable the `api-catalog publish-asset` command with one or more `--trigger` options to publish APIs that: 
+
+* Are in the branch `main` or any branches that have `release` in the name.
+* Have tags that match `support` or that have `release` in the text.
+* Are authored by the user `admin`. 
+
+If none of the APIs in the descriptor file meet the conditions specified by the `--trigger` option, no APIs will be published. For more information, see the `--trigger` option for the <<api-catalog publish-asset, `api-catalog publish-asset` command>> and <<Publish an Asset Using Trigger Conditions>>.
 
 | contact | The contact name and email ID.   
 
