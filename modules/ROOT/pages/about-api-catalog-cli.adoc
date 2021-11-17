@@ -319,7 +319,7 @@ This example shows `api-catalog publish-asset` command options that will publish
 Command to publish:
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tag:migrate --trigger=status:complete
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tags:migrate --trigger=status:complete
 
 ----
 
