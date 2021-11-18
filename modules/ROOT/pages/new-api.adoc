@@ -1,0 +1,37 @@
+= Use the New API
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Explanation of what the new API does.
+
+== H2 Section
+
+=== First H3 Section
+
+Bullet list:
+
+* abc
+* def
+* ghi
+
+=== Second H3 Section
+
+Text content.
+
+=== Third H3 Section
+
+Numbered list:
+
+. Instruction
+. Another instruction
+. Numbered list
+
+== Second H2 Section
+
+ghijlk
+
+== Third H2 Section
+
+abcdef
