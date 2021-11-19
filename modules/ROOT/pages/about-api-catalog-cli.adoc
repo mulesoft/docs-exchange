@@ -205,17 +205,17 @@ See <<Authentication>>.
 
 | -s, --silent | Enable silent logging.
 
-| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | Conditions that are applied to the descriptor file to determine whether an asset should be published. To set multiple conditions, specify separate --trigger options for each condition.
+| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | Conditions that are applied to the descriptor file to determine whether the APIs described in the descriptor file should be published. To set multiple conditions, specify separate --trigger options for each condition.
 
 Example:
 
 ---
 
- --trigger=branch:main --trigger=tag:hotfix -- trigger=user:admin
+ --trigger=branch:main --trigger=anytag:release/ -- trigger=user:admin
 
 ---
 
-The `--trigger` options work in conjunction with the `triggerConditions` section in the descriptor file. See <<Descriptor YAML Schema>>  
+The `--trigger` options work in conjunction with the `triggerConditions` section in the descriptor file, and all trigger conditions must be met for the APIs to be published. See <<Descriptor YAML Schema>>.  
 
 | -u, --username=username 
 
@@ -461,13 +461,13 @@ Following are the YAML tags used to describe the APIs you want to catalog.
 |===
 | Tag | Description 
 
-| triggerConditions | This section enables you to set conditions to restrict the APIs that are published when the `api-catalog publish-asset` command is run with the `--trigger` option.   
+| triggerConditions | This optional section enables you to set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs will be published only when the `api-catalog publish-asset` command is run with `--trigger` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
 
 ---
- branches:
+ branch:
    - main
    - release/(.*)
- tags:
+ anytag:
    - support
    - release/(.*)
  user:
@@ -591,10 +591,10 @@ Following is an example descriptor file that describes the cataloging informatio
 
  #%Catalog Descriptor 0.6 # <1>
 triggerConditions: # <2>
-  branches:
+  branch:
     - main
     - release/(.*)
-  tags:
+  anytag:
     - support
     - release/(.*)
   user:
