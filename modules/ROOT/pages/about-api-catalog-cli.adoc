@@ -475,7 +475,7 @@ Following are the YAML tags used to describe the APIs you want to catalog.
 
 ---
 
-The preceding example sets `triggerConditions` to enable the `api-catalog publish-asset` command with one or more `--trigger` options to publish APIs that: 
+The preceding example sets `triggerConditions` to enable the `api-catalog publish-asset` command with three `--trigger` options to publish APIs that: 
 
 * Are in the branch `main` or any branches that have `release` in the name.
 * Have tags that match `support` or that have `release` in the text.
