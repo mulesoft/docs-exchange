@@ -205,7 +205,7 @@ See <<Authentication>>.
 
 | -s, --silent | Enable silent logging.
 
-| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | Conditions that are applied to the descriptor file to determine whether the APIs described in the descriptor file should be published. To set multiple conditions, specify separate --trigger options for each condition.
+| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | Conditions that are applied to the descriptor file to determine whether the APIs described in the descriptor file are published. To set multiple conditions, specify separate `--trigger` options for each condition. The `--trigger` options work in conjunction with the `triggerConditions` section in the descriptor file. All trigger conditions set in the descriptor file must be met for the APIs to be published.
 
 Example:
 
@@ -215,7 +215,7 @@ Example:
 
 ---
 
-The `--trigger` options work in conjunction with the `triggerConditions` section in the descriptor file, and all trigger conditions must be met for the APIs to be published. See <<Descriptor YAML Schema>>.  
+See <<Descriptor YAML Schema>>. 
 
 | -u, --username=username 
 
