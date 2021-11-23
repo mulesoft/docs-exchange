@@ -124,7 +124,7 @@ Create a descriptor file that describes the APIs to publish and copy it to the f
 This version of API Catalog CLI has the following limitations:
 
 * Documentation must be in Markdown format.
-* Images in documentation are resolved only if the reference is a full URL that points to an externally hosted image. 
+* Images in documentation are resolved only if the references are full URLs that point to externally hosted images. 
 * Links between documentation pages must use `../<key>` to refer to another Markdown file name `<key>.md` in the same directory. This doesn't resolve locally, but does in Exchange.
 * The main documentation page must be called `home.md`.
 
