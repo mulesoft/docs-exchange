@@ -125,7 +125,7 @@ This version of API Catalog CLI has the following limitations:
 
 * Documentation must be in Markdown format.
 * Images in documentation are resolved only if the references are full URLs that point to externally hosted images. 
-* Links between documentation pages must use `../<key>` to refer to another Markdown file name `<key>.md` in the same directory. This doesn't resolve locally, but does in Exchange.
+* Links between documentation pages are resolved only if the references are full URLs that point to externally hosted documentation.
 * The main documentation page must be called `home.md`.
 
 To publish an API using the CLI:
