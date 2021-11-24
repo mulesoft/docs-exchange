@@ -125,7 +125,7 @@ This version of API Catalog CLI has the following limitations:
 
 * Documentation must be in Markdown format.
 * Images in documentation are resolved only if the references are full URLs that point to externally hosted images. 
-* Links between documentation pages are resolved only if the references are full URLs that point to externally hosted documentation.
+* Links to external resources are resolved only if the references are full URLs that point to externally hosted resources.
 * The main documentation page must be called `home.md`.
 
 To publish an API using the CLI:
@@ -214,7 +214,7 @@ See <<Authentication>>.
 
 | -s, --silent | Enable silent logging.
 
-| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | Conditions that are applied to the descriptor file to determine whether the APIs described in the descriptor file are published. To set multiple conditions, specify separate `--trigger` options for each condition. The `--trigger` options work in conjunction with the `triggerConditions` section in the descriptor file. All trigger conditions set in the descriptor file must be met for the APIs to be published.
+| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | Conditions that are applied to the descriptor file to determine whether the APIs described in the descriptor file are published. To set multiple conditions, specify separate `--trigger` options for each condition. The `--trigger` options work in conjunction with the `triggerConditions` section in the descriptor file.  For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger` option values.
 
 Example:
 
@@ -321,18 +321,11 @@ This example shows the `api-catalog publish-asset` command with both of these op
 
 === Publish an Asset Using Trigger Conditions 
 
-Custom trigger conditions enable you to further control what is published when the API Catalog CLI command runs. 
+Custom trigger conditions enable you to control whether APIs are published when the API Catalog CLI command runs. This example shows how `--trigger` options correlate with descriptor file trigger conditions to control whether or not to publish the described APIs.   
 
-This example shows `api-catalog publish-asset` command options that will publish only the APIs that are identified in the `triggerConditions` section of a descriptor file called `mydescriptor.yaml`.  
+*Example Trigger Conditions in a Descriptor file*
 
-Command to publish:
-
-----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tags:migrate --trigger=status:complete
-
-----
-
-Section in the specified descriptor file:
+Following is an example `triggerConditions` section section in the `mydescriptor.yaml` descriptor file:
 
 ---
  
@@ -347,6 +340,24 @@ Section in the specified descriptor file:
    - ready
 
 ---
+
+*Example That Triggers the Publish*
+
+The following command triggers the API publish because the trigger option values match all of the trigger conditions in the `mydescriptor.yaml` descriptor file. 
+
+----
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tags:migrate --trigger=status:complete
+
+----
+
+*Example That Does Not Trigger the Publish*
+
+The following command does not trigger the API publish because the trigger option value for `ref` is `test`, not `main`. Because not all trigger values match the corresponding trigger conditions, no APIs are published. 
+
+----
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:test --trigger=tags:migrate --trigger=status:complete
+
+----
 
 === Publish Using a Jenkins Script 
 
@@ -490,7 +501,7 @@ The preceding example sets `triggerConditions` to enable the `api-catalog publis
 * `anytag` is `support` or has `release/` in the text
 * `user` is `admin` 
 
-If none of the APIs in the descriptor file meet the conditions specified by the `--trigger` option, no APIs will be published. For more information, see the `--trigger` option for the <<api-catalog publish-asset, `api-catalog publish-asset` command>> and <<Publish an Asset Using Trigger Conditions>>.
+No APIS are published unless all trigger conditions set in the descriptor file are matched by `--trigger` option values. For more information, see the `--trigger` option for the <<api-catalog publish-asset, `api-catalog publish-asset` command>> and <<Publish an Asset Using Trigger Conditions>>.
 
 | contact | The contact name and email ID.   
 
