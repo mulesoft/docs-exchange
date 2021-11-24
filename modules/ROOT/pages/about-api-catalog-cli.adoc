@@ -325,7 +325,7 @@ Custom trigger conditions enable you to control whether APIs are published when 
 
 *Example Trigger Conditions in a Descriptor file*
 
-Following is an example `triggerConditions` section section in the `mydescriptor.yaml` descriptor file:
+Following is an example `triggerConditions` section in the `mydescriptor.yaml` descriptor file:
 
 ---
  
