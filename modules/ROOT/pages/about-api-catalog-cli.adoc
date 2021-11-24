@@ -484,18 +484,19 @@ Following are the YAML tags used to describe the APIs you want to catalog.
 | triggerConditions | This optional section enables you to set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs will be published only when the `api-catalog publish-asset` command is run with `--trigger` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
 
 ---
- branch:
-   - main
-   - release/(.*)
- anytag:
-   - support
-   - release/(.*)
- user:
-   - admin
+ triggerConditions
+  branch:
+    - main
+    - release/(.*)
+  anytag:
+    - support
+    - release/(.*)
+  user:
+    - admin
 
 ---
 
-The preceding example sets `triggerConditions` to enable the `api-catalog publish-asset` command to publish the APIs described by the descriptor file if the command has three `--trigger` options with values that match the following: 
+The preceding example enables a run of the `api-catalog publish-asset` command to publish the APIs described by the descriptor file only if the command has all of the following three `--trigger` option values: 
 
 * `branch` is `main` or has `release/` in the text
 * `anytag` is `support` or has `release/` in the text
