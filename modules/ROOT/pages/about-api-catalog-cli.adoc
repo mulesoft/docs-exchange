@@ -502,7 +502,7 @@ The preceding example enables a run of the `api-catalog publish-asset` command t
 * `anytag` is `support` or has `release/` in the text
 * `user` is `admin` 
 
-No APIS are published unless all trigger conditions set in the descriptor file are matched by `--trigger` option values. For more information, see the `--trigger` option for the <<api-catalog publish-asset, `api-catalog publish-asset` command>> and <<Publish an Asset Using Trigger Conditions>>.
+If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger` option values. For more information, see the `--trigger` option for the <<api-catalog publish-asset, `api-catalog publish-asset` command>> and <<Publish an Asset Using Trigger Conditions>>.
 
 | contact | The contact name and email ID.   
 
