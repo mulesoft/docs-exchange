@@ -113,7 +113,7 @@ Following is a reference for the `api-catalog create-descriptor` command.
 
 == Publish APIs Using the CLI
 
-You can use the `api-catalog publish-asset` command to publish your APIs to Exchange. You will typically embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your APIs using the information specified in the `--descriptor-file` option.   
+You can use the `api-catalog publish-asset` command to publish your APIs to Exchange. You will typically embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your APIs using the information in the file specified in the `--descriptor-file` option.   
 
 === Prerequisites
 
