@@ -72,7 +72,7 @@ To enable the API Catalog Contributor permission:
 
 == Create a Descriptor File Using the CLI
 
-Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. You can create the descriptor file using the CLI or you can create it manually. Typically you should create the file using the CLI and if you need to set more options to control which APIs are published, you can update the file manually. 
+Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. You can create the descriptor file using the CLI or you can create it manually. Typically you should create the file using the CLI and if you need to set more options to control how the assets are published, you can update the file manually. 
 
 You can run the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
 
@@ -459,7 +459,7 @@ Your Anypoint session expires based on the *Default session timeout* configured 
 
 == Create or Update a Descriptor File Manually
 
-You can create a descriptor file manually rather than using the `api-catalog create-descriptor` command to create it. You can also update a descriptor file that you have already generated to ensure that it identifies the exact set of APIs that you want to publish.  
+You can create a descriptor file manually rather than using the `api-catalog create-descriptor` command to create it. You can also update a descriptor file that you have already generated to add conditions required to trigger the publish, add tags to APIs, control asset versioning, and so on.   
 
 After you create the descriptor file, copy it to the file path or repository where your API projects are stored. 
 
