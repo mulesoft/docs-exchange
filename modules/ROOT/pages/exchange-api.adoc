@@ -206,7 +206,7 @@ curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/or
 --form 'files.docs.zip=@"/file-path/docs.zip"'
 ----
 
-==== Set Categories and Fields as JSON Collections
+=== Set Categories and Fields as JSON Collections
 
 To set or change categories and custom fields in JSON format within the multipart form, send an array of objects that contain the properties key and value.
 
@@ -235,6 +235,7 @@ curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/or
 --form 'fields="[{"key":"fieldKey", "value":"value1, value2"}]"' \
 --form 'fields.fieldKey2="value3"' \
 --form 'files.docs.zip=@"/file-path/docs.zip"'
+```
 
 [[describe-your-assets]]
 == Describe Your Assets
