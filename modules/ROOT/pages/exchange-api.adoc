@@ -219,6 +219,7 @@ To delete all categories or custom fields, send an empty array:
 --form 'fields="[]"'
 ```
 
+
 In the multipart form, data in JSON format has priority, so this example does not set `categoryKey2` or `fieldKey2`.
 
 Example:
