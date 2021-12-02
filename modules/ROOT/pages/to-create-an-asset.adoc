@@ -46,7 +46,6 @@ An asset's version format must use semantic versioning. Asset fields have these 
 |===
 |Field |Maximum Length |Minimum Length
 |Name |256 |1
-|`assetId` |256 |1
 |Description |256 |0
 |`versionGroup` |256 |1
 |Combined `groupId`, `assetId`, and `version` |215 |NA
