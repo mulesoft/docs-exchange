@@ -1,0 +1,17 @@
+= Asset Lifecycle States
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Exchange introduces lifecycle states feature adding the possibility of moving an asset from different states, starting from "development," then "stable" and eventually "deprecated."
+
+For every example during this documentation, these common fields should be replaced:
+
+* ANYPOINT_TOKEN
+* organizationId
+* groupId
+* assetId
+* version
+ 
+Note: Consider that the stable state is represented by the published name in the backend responses.
