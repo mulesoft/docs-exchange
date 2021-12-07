@@ -8,7 +8,7 @@ Search Exchange assets for a string value by using the Exchange Graph API. You c
 
 The Exchange Graph API accesses Anypoint Exchange and Anypoint Platform, and a search requires authentication to access assets in a private Exchange. If you only search for MuleSoft public assets, you don't need authentication.
 
-The Exchange Graph API can be used without an Anypoint Platform account to find assets made publicly available by MuleSoft. Accessing private content through the API requires an Anypoint Platform account.
+Use the Exchange Graph API without an Anypoint Platform account to find assets made publicly available by MuleSoft. Accessing private content through the API requires an Anypoint Platform account.
 
 == Authentication
 

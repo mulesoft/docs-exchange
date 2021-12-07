@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-This document contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain.
+Set up your organization's public portal using a vanity domain with these steps and this example NGINX configuration.
 
 == Register Your Domain
 
