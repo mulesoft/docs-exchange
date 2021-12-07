@@ -8,6 +8,8 @@ Anypoint Exchange lets you create API Notebooks which let you describe each func
 
 my fine new edit
 
+the other line of my edit
+
 After creating your API Notebook you can optionally create an API instance to control whether the notebook is private or public. By setting the notebook's instance to private, others in your organization can review it. When you are ready, you can set the API instance to make the API Notebook public.
 
 Note: API Notebooks are independent of the use of an API instance.
