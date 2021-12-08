@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Anypoint Exchange provides significant features for API providers to easily publish and share APIs with developers inside and outside of an organization.
+Anypoint Exchange provides features for API providers to easily publish and share APIs with developers inside and outside of an organization.
 
 Exchange helps API consumers understand API functionality and test features with:
 
