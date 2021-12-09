@@ -298,7 +298,7 @@ This example assumes that either the username and password credentials are defin
 
 This example shows the `api-catalog publish-asset` command with the following options:
 
-* --dry-run: Runs the command to verify that the descriptor file is valid but doesn't publish the APIs
+* --dry-run: Runs the command to verify that the descriptor file is valid but does not publish the APIs
 * --verbose: Shows the maximum information in the results
 
 The example command sends the standard output to `mycatdryrun.log`. 
@@ -411,7 +411,7 @@ At least one method is required.
 
 === Username and Password
 
-If you don't log in using single sign-on (SSO), you can use your username and password to log in to the CLI directly.
+If you do not log in using single sign-on (SSO), you can use your username and password to log in to the CLI directly.
 
 [%header%autowidth.spread,cols="a,a"]
 |===
@@ -448,7 +448,7 @@ For more information about Connected Apps, see xref:access-management::connected
 Keep the following in mind while using API Catalog CLI:
 
 * Command line options override environment variables. +
-If you don't pass a command line option, the default profile properties are used.
+If you do not pass a command line option, the default profile properties are used.
 * If not specified, the default environment is production.
 
 === Session Timeout
