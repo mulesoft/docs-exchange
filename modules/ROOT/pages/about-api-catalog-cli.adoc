@@ -319,7 +319,7 @@ This example shows the `api-catalog publish-asset` command with both of these op
 
 ----
 
-=== Publish an Asset Using Trigger Conditions 
+=== Trigger the Publish Using Conditions 
 
 Custom trigger conditions enable you to control whether APIs are published when the API Catalog CLI command runs. This example shows how `--trigger` options correlate with descriptor file trigger conditions to control whether or not to publish the described APIs.   
 
@@ -451,7 +451,7 @@ Keep the following in mind while using API Catalog CLI:
 If you don't pass a command line option, the default profile properties are used.
 * If not specified, the default environment is production.
 
-=== Timeout
+=== Session Timeout
 
 Your Anypoint session expires based on the *Default session timeout* configured in your Organization settings.
 
