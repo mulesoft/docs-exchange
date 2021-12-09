@@ -24,9 +24,9 @@ If you re-publish an asset version in the `development` state with the same grou
 * dependencies
 * keywords
 
-Overwriting an asset version also updates the search index.
-
 Changing this information for an asset version in any other state requires creating a new version, which prevents re-publishing or overwriting the asset version.
+
+Overwriting an asset version also updates the search index.
 
 The Exchange user interface and APIs change some asset version information for asset versions in any state. This information is not changed by overwriting an asset version in the `development` state. This information includes:
 
@@ -43,7 +43,7 @@ Anypoint Platform products other than Exchange, such as Anypoint API Designer, A
 
 == Stable State
 
-An asset version in the `stable` state is ready to use. Re-publishing and overwriting it are not possible.
+An asset version in the `stable` state is ready to use. It is not possible to re-publish or overwrite it.
 
 Deleting an asset version in the `stable` state in the first seven days is a hard delete, enabling you to reuse the asset's name, groupId, assetId, and version. Deleting an asset version in the `stable` state after the first seven days is a soft delete, preventing you from reusing the asset's name, groupId, assetId, and version. After a hard delete or a soft delete, an asset cannot be recovered or undeleted.
 
@@ -155,7 +155,7 @@ curl -X POST \
 
 == Possible Future Lifecycle State Features
 
-The general availability (GA) release of lifecycle states will possibly contain additional features not present in the beta release:
+The general availability (GA) release of lifecycle states will possibly include additional features that are not included in the beta release:
 
 * Audit log integration to track asset state promotions
 * Preventing invalid lifecycle state transitions in the user interface
