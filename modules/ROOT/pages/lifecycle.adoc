@@ -4,14 +4,45 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Exchange introduces lifecycle states feature adding the possibility of moving an asset from different states, starting from "development," then "stable" and eventually "deprecated."
+In the software development lifecycle, assets are developed, released, and eventually deprecated, and each Exchange asset version moves through the lifecycle states of `development`, `stable`, and `deprecated`.
 
-For every example during this documentation, these common fields should be replaced:
+The Exchange backend and some API responses use the term `published` to mean `stable`.
+
+In all examples, replace these fields:
 
 * ANYPOINT_TOKEN
 * organizationId
 * groupId
 * assetId
 * version
- 
-Note: Consider that the stable state is represented by the published name in the backend responses.
+
+== Development State
+
+In the `development` state, an asset version is in an iterative process of design and development.
+
+If you re-publish an asset version in the `development` state with the same groupId, assetId, and version (GAV) and new metadata, the asset version is overwritten, including this asset version metadata:
+
+* files
+* dependencies
+* keywords
+
+Overwriting an asset version also updates the search index.
+
+Changing this information for an asset version in any other state requires creating a new version, which prevents re-publishing or overwriting the asset version.
+
+The Exchange user interface and APIs change some asset version information for asset versions in any state. This information is not changed by overwriting an asset version in the `development` state. This information includes:
+
+* tags
+* categories
+* custom fields
+* documentation pages
+
+Deleting an asset version in the `development` state is always a hard delete, enabling you to reuse the asset's name, groupId, assetId, and version.
+
+The public portal does not show asset versions in the `development` state.
+
+Anypoint Platform products other than Exchange, such as Anypoint API Designer, Anypoint Flow Designer, or Anypoint Studio, do not consume asset versions in the `development` state.
+
+== See Also
+
+* xref:to-delete-asset.adoc[Delete an Asset]
