@@ -74,7 +74,7 @@ To enable the API Catalog Contributor permission:
 
 Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. You can create the descriptor file using the CLI or you can create it manually. Typically you should create the file using the CLI and if you need to set more options to control how the assets are published, you can update the file manually. 
 
-You can run the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
+You can run the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
 
 To create a descriptor file using the CLI:
 
@@ -87,9 +87,9 @@ To create a descriptor file using the CLI:
 
 The result of the command depends on the presence and content of the designated descriptor file as follows:
 
-* No file or empty file: The command will discover the APIs and write the results to standard output and to a file named `catalog.yaml`.
+* No file or empty file: The command discovers the APIs and writes the results to standard output and to a file named `catalog.yaml`.
 
-* Existing file with content: The command will fail and show an error message that says the descriptor file already exists.
+* Existing file with content: The command fails and shows an error message that says the descriptor file already exists.
 
 NOTE: You can alternatively create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create or Update a Descriptor File Manually>>.
 
@@ -113,7 +113,7 @@ Following is a reference for the `api-catalog create-descriptor` command.
 
 == Publish APIs Using the CLI
 
-You can use the `api-catalog publish-asset` command to publish your APIs to Exchange. You will typically embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your APIs using the information in the file specified in the `--descriptor-file` option.   
+You can use the `api-catalog publish-asset` command to publish your APIs to Exchange. Embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your APIs using the information in the file specified in the `--descriptor-file` option.   
 
 === Prerequisites
 
@@ -184,9 +184,9 @@ ANYPOINT_DESCRIPTOR_FILE environment variable
  
 The name and location of the catalog descriptor file.  
 
-  * If the file does not exist, no assets will be cataloged.
-  * If the file exists but is empty, the command will create and print the catalog descriptor YAML results. It will output cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
-  * If a valid YAML file exists, the command will catalog the assets as specified. 
+  * If the file does not exist, no assets are cataloged.
+  * If the file exists but is empty, the command creates and prints the catalog descriptor YAML results. It outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
+  * If a valid YAML file exists, the command catalogs the assets as specified. 
   
 See <<Create a Descriptor File Using the CLI>>. 
 
