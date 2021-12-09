@@ -53,7 +53,7 @@ The Exchange backend and some API responses use the term `published` to mean `st
 
 An asset version in the `deprecated` state is similar to an asset version in the `stable` state. The only difference is that the `status` property shows the asset version is deprecated.
 
-== State Promotions
+== State Promotion
 
 These are the three possible state promotions:
 
@@ -72,17 +72,101 @@ curl -X https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:
     -d '{"status": ":status"}'
 ----
 
-== Create an Asset by Using the Exchange API
+== Create an Asset Using the Exchange API
 
 A new asset version is in the `development` state or the default `stable` state. The `stable` state is also known as `published`. An asset version must be in the `stable` state before it is in the `deprecated` state.
 
-To use the Exchange API to create an asset and set its lifecycle state, add the property `status` to the multipart request when you follow the steps in xref:exchange-api.adoc[Publish Assets Using the Exchange API]. If the state is not specified, the asset is created with the default `stable` state.
+To use the Exchange API version 2 to create an asset and set its lifecycle state, add the property `status` to the multipart request when you follow the steps in xref:exchange-api.adoc[Publish Assets Using the Exchange API]. If the state is not specified, the asset is created with the default `stable` state.
 
 REST API asset example:
 
+. Log in to Anypoint Platform and download the https://anypoint.mulesoft.com/exchange/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/assets/68ef9520-24e9-4cf2-b2f5-620025690913/training-american-flights-api/1.0.0/files/fat-raml/zip[example file].
+. Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with the local path of the downloaded file.
+. Set the property `status` to `development` or `published`.
+. Execute:
 
+[source,console]
+----
+curl -v \
+    -H 'Authorization: bearer ANYPOINT_TOKEN' \
+    -H 'x-sync-publication: true' \
+    -F 'name=RAML asset name' \
+    -F 'description=Description of the asset' \
+    -F 'keywords=best, raml' \
+    -F 'status=development' \
+    -F 'properties.mainFile=american-flights-api.raml' \
+    -F 'properties.apiVersion=v1' \
+    -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
+----
+
+To use the Exchange API version 1 to create an asset and set its lifecycle state, send the status property as a field.
+
+== Create an Asset Using Maven
+
+A new asset version is in the `development` state or the default `stable` state.
+
+To create an asset version in the `stable` state, follow the steps in xref:to-publish-assets-maven.adoc[Publish Assets Using Maven].
+
+To create an asset version in the `development` state, use the Anypoint Exchange Maven Facade API version 3 and set the version of the asset to `SNAPSHOT`.
+
+A `SNAPSHOT` asset is permanently in the `development` state and cannot be promoted to any other state.
+
+An asset with the version `SNAPSHOT` published with the Anypoint Exchange Maven Facade API version 1 or version 2 has the state `stable`.
+
+Uploading a `SNAPSHOT` template asset in the `development` state example:
+
+In a terminal:
+
+. Execute: `git clone https://github.com/mulesoft-labs/exchange-documentation-samples.git`
+. Execute: `cd exchange-documentation-samples/template-snapshot`
+. Edit the file `pom.xml` and replace the values `YOUR_ORG_ID`, `YOUR_GROUP_ID`, and `YOUR_ASSET_ID` with your asset's organizationId, groupId, and assetId.
+. Execute: `mvn clean deploy`
+. Open your Exchange home page and view the template in the `development` state.
+
+If you execute `mvn clean deploy` multiple times, the asset is overwritten without any errors.
+
+== Create an Asset in the Exchange User Interface
+
+When you create an asset in the Exchange user interface, select the `development` state or the default `stable` state.
+
+== Search Using the Graph API by Lifecycle State
+
+To consume an asset and its lifecycle state, execute this command:
+
+[source,console]
+----
+curl -X POST \
+  https://anypoint.mulesoft.com/graph/api/v2/graphql \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -H 'content-type: application/json' \
+  -d '{"query":"{asset(groupId: \":groupId\",assetId: \":assetId\",version: \":version\"){groupId assetId version status}}"}'
+----
+
+To search for an asset by lifecycle state, replace `[development, published, deprecated]` with your list of desired lifecycle states and execute this command:
+
+[source,console]
+----
+curl -X POST \
+  https://anypoint.mulesoft.com/graph/api/v2/graphql \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -H 'content-type: application/json' \
+  -d '{"query":"{assets(status:[development, published, deprecated]){groupId assetId version status}}"}'
+----
+
+== Possible Future Lifecycle State Features
+
+The general availability (GA) release of lifecycle states will possibly contain additional features not present in the beta release:
+
+* Audit log integration to track asset state promotions
+* Preventing invalid lifecycle state transitions in the user interface
+* Filtering assets in the home page search by lifecycle state
+* Showing asset lifecycle state in search results
+* Changing version-specific state in the versions table
 
 == See Also
 
 * xref:to-delete-asset.adoc[Delete an Asset]
 * xref:exchange-api.adoc[Publish Assets Using the Exchange API]
+* xref:to-publish-assets-maven.adoc[Publish Assets Using Maven]
+* xref:to-search-with-graph-api.adoc[Search Using the Graph API]
+* https://anypoint.mulesoft.com/graph/api/v2/graphql[Graph API Web Interface]
