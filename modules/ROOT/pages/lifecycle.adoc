@@ -9,10 +9,10 @@ In the software development lifecycle, assets are developed, released, and event
 In all examples, replace these fields:
 
 * `ANYPOINT_TOKEN`
-* `organizationId`
-* `groupId`
-* `assetId`
-* `version`
+* `:organizationId`
+* `:groupId`
+* `:assetId`
+* `:version`
 
 == Development State
 
@@ -63,7 +63,7 @@ These are the three possible state promotions:
 
 Promote an asset version's state either in the asset's Exchange portal or by using the Exchange API.
 
-In this Exchange API example, replace `status` with `development`, `published`, or `deprecated`.
+In this Exchange API example, replace `:status` with `development`, `published`, or `deprecated`.
 
 [source,console]
 ----
