@@ -59,6 +59,7 @@ If you enable a vanity domain for your Exchange public portal, enable cookie con
 |amplitude_testmulesoft.com |Session |Functional |Uses Amplitude to identify unique user visits for accurate web analytics.
 |exchange.sess |Session |Required |Maintains a user session within Exchange. No personal information is stored in the cookie.
 |exchange.sess.sig |Session |Required |Stores the signature used to validate the Exchange session cookie.
+|exchange.loginCSRFToken |Session |Required |Helps prevent login Cross-Site Request Forgery attacks for site security.
 |IDE |729 days |Advertising |Supports the Doubleclick platform, a real time bidding advertising exchange.
 |JSESSIONID |Session |Functional |Supports the New Relic platform for monitoring performance of web and mobile applications.
 |mulesoft.sess |Session |Required |Maintains a user session within Anypoint Platform. No personal information is stored in the cookie.
