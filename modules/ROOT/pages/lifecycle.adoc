@@ -53,6 +53,13 @@ The Exchange backend and some API responses use the term `published` to mean `st
 
 An asset version in the `deprecated` state is similar to an asset version in the `stable` state. The only difference is that the `status` property shows the asset version is deprecated.
 
+== Create an Asset in the Exchange User Interface
+
+. Click *Publish new asset*.
+. Set *Lifecycle state* to the *Development* state or the default *Stable* state.
+. Set other asset information.
+. Click *Publish*.
+
 == State Promotion
 
 These are the three possible state promotions:
@@ -62,6 +69,8 @@ These are the three possible state promotions:
 . `deprecated` to `stable`
 
 Promote an asset version's state either in the asset's Exchange portal or by using the Exchange API.
+
+In the asset's portal, click the lifecycle state button that displays the current state, and select the new state of *Development*, *Stable*, or *Deprecated*.
 
 In this Exchange API example, replace `:status` with `development`, `published`, or `deprecated`.
 
@@ -125,10 +134,6 @@ In a terminal:
 
 If you execute `mvn clean deploy` multiple times, the asset is overwritten without any errors.
 
-== Create an Asset in the Exchange User Interface
-
-When you create an asset in the Exchange user interface, select the `development` state or the default `stable` state.
-
 == Search Using the Graph API by Lifecycle State
 
 To consume an asset and its lifecycle state, execute this command:
@@ -152,16 +157,6 @@ curl -X POST \
   -H 'content-type: application/json' \
   -d '{"query":"{assets(status:[development, published, deprecated]){groupId assetId version status}}"}'
 ----
-
-== Possible Future Lifecycle State Features
-
-The general availability (GA) release of lifecycle states will possibly include additional features that are not included in the beta release:
-
-* Audit log integration to track asset state promotions
-* Preventing invalid lifecycle state transitions in the user interface
-* Filtering assets in the home page search by lifecycle state
-* Showing asset lifecycle state in search results
-* Changing version-specific state in the versions table
 
 == See Also
 
