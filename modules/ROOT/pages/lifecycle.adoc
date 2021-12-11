@@ -72,27 +72,7 @@ To create an asset using the Exchange API, follow the xref:exchange-api.adoc#set
 
 == Create an Asset Using Maven
 
-A new asset version is in the `development` state or the default `stable` state.
-
-To create an asset version in the `stable` state, follow the steps in xref:to-publish-assets-maven.adoc[Publish Assets Using Maven].
-
-To create an asset version in the `development` state, use the Anypoint Exchange Maven Facade API version 3 and set the version of the asset to `SNAPSHOT`.
-
-A `SNAPSHOT` asset is permanently in the `development` state and cannot be promoted to any other state.
-
-An asset with the version `SNAPSHOT` published with the Anypoint Exchange Maven Facade API version 1 or version 2 has the state `stable`.
-
-Uploading a `SNAPSHOT` template asset in the `development` state example:
-
-In a terminal:
-
-. Execute: `git clone https://github.com/mulesoft-labs/exchange-documentation-samples.git`
-. Execute: `cd exchange-documentation-samples/template-snapshot`
-. Edit the file `pom.xml` and replace the values `YOUR_ORG_ID`, `YOUR_GROUP_ID`, and `YOUR_ASSET_ID` with your asset's organizationId, groupId, and assetId.
-. Execute: `mvn clean deploy`
-. Open your Exchange home page and view the template in the `development` state.
-
-If you execute `mvn clean deploy` multiple times, the asset is overwritten without any errors.
+To create an asset using the Exchange Maven Facade API, follow the xref:to-publish-assets-maven.adoc#asset-lifecycle-state[Asset Lifecycle State] example.
 
 == Search Using the Graph API by Lifecycle State
 
