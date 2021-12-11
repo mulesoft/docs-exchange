@@ -6,14 +6,6 @@ endif::[]
 
 In the software development lifecycle, assets are developed, released, and eventually deprecated, and each Exchange asset version moves through the lifecycle states of `development`, `stable`, and `deprecated`.
 
-In all examples, replace these fields:
-
-* `ANYPOINT_TOKEN`
-* `:organizationId`
-* `:groupId`
-* `:assetId`
-* `:version`
-
 == Development State
 
 An asset version in the `development` state is in an iterative process of design and development.
@@ -72,7 +64,7 @@ Promote an asset version's state either in the asset's Exchange portal or by usi
 
 In the asset's portal, click the lifecycle state button that displays the current state, and select the new state of *Development*, *Stable*, or *Deprecated*.
 
-In this Exchange API example, replace `:status` with `development`, `published`, or `deprecated`.
+In this Exchange API example, replace `ANYPOINT_TOKEN`, `:groupId`, `:assetId`, and `:version` with your information, and replace `:status` with `development`, `published`, or `deprecated`.
 
 [source,console]
 ----
@@ -91,6 +83,7 @@ REST API asset example:
 
 . Log in to Anypoint Platform and download the https://anypoint.mulesoft.com/exchange/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/assets/68ef9520-24e9-4cf2-b2f5-620025690913/training-american-flights-api/1.0.0/files/fat-raml/zip[example file].
 . Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with the local path of the downloaded file.
+. Replace `ANYPOINT_TOKEN`, `:organizationId`, `:groupId`, `:assetId`, and `:version` with your information.
 . Set the property `status` to `development` or `published`.
 . Execute:
 
@@ -136,7 +129,7 @@ If you execute `mvn clean deploy` multiple times, the asset is overwritten witho
 
 == Search Using the Graph API by Lifecycle State
 
-To consume an asset and its lifecycle state, execute this command:
+To consume an asset and its lifecycle state, replace `ANYPOINT_TOKEN`, `:groupId`, `:assetId`, and `:version` with your information, and execute this command:
 
 [source,console]
 ----
@@ -147,7 +140,7 @@ curl -X POST \
   -d '{"query":"{asset(groupId: \":groupId\",assetId: \":assetId\",version: \":version\"){groupId assetId version status}}"}'
 ----
 
-To search for an asset by lifecycle state, replace `[development, published, deprecated]` with your list of desired lifecycle states and execute this command:
+To search for an asset by lifecycle state, replace `ANYPOINT_TOKEN` with your information, replace `[development, published, deprecated]` with your list of desired lifecycle states, and execute this command:
 
 [source,console]
 ----
