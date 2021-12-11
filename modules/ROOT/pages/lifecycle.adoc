@@ -64,44 +64,11 @@ Promote an asset version's state either in the asset's Exchange portal or by usi
 
 In the asset's portal, click the lifecycle state button that displays the current state, and select the new state of *Development*, *Stable*, or *Deprecated*.
 
-In this Exchange API example, replace `ANYPOINT_TOKEN`, `:groupId`, `:assetId`, and `:version` with your information, and replace `:status` with `development`, `published`, or `deprecated`.
-
-[source,console]
-----
-curl -X https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/status \
-    -H 'Authorization: bearer ANYPOINT_TOKEN' \
-    -d '{"status": ":status"}'
-----
+To use the Exchange API, follow the xref:exchange-api.adoc#promote-lifecycle-state[Promote Lifecycle State] example.
 
 == Create an Asset Using the Exchange API
 
-A new asset version is in the `development` state or the default `stable` state. The `stable` state is also known as `published`. An asset version must be in the `stable` state before it is in the `deprecated` state.
-
-To use the Exchange API version 2 to create an asset and set its lifecycle state, add the property `status` to the multipart request when you follow the steps in xref:exchange-api.adoc[Publish Assets Using the Exchange API]. If the state is not specified, the asset is created with the default `stable` state.
-
-REST API asset example:
-
-. Log in to Anypoint Platform and download the https://anypoint.mulesoft.com/exchange/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/assets/68ef9520-24e9-4cf2-b2f5-620025690913/training-american-flights-api/1.0.0/files/fat-raml/zip[example file].
-. Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with the local path of the downloaded file.
-. Replace `ANYPOINT_TOKEN`, `:organizationId`, `:groupId`, `:assetId`, and `:version` with your information.
-. Set the property `status` to `development` or `published`.
-. Execute:
-
-[source,console]
-----
-curl -v \
-    -H 'Authorization: bearer ANYPOINT_TOKEN' \
-    -H 'x-sync-publication: true' \
-    -F 'name=RAML asset name' \
-    -F 'description=Description of the asset' \
-    -F 'keywords=best, raml' \
-    -F 'status=development' \
-    -F 'properties.mainFile=american-flights-api.raml' \
-    -F 'properties.apiVersion=v1' \
-    -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
-----
-
-To use the Exchange API version 1 to create an asset and set its lifecycle state, send the status property as a field.
+To create an asset using the Exchange API, follow the xref:exchange-api.adoc#set-lifecycle-state[Set Lifecycle State] example.
 
 == Create an Asset Using Maven
 
