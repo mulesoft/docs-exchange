@@ -22,6 +22,7 @@ Overwriting an asset version also updates the search index.
 
 The Exchange user interface and APIs change some asset version information for asset versions in any state. This information is not changed by overwriting an asset version in the `development` state. This information includes:
 
+* asset type
 * tags
 * categories
 * custom fields
