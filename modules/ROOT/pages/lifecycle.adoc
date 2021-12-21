@@ -67,6 +67,12 @@ In the asset's portal, click the lifecycle state button that displays the curren
 
 To use the Exchange API, follow the xref:exchange-api.adoc#promote-lifecycle-state[Promote Lifecycle State] example.
 
+== Dependencies
+
+An asset in the `stable` state cannot add an asset in the `development` state as a dependency.
+
+If an asset in the `development` state depends on one or more other assets in the `development` state, Exchange does not prevent promoting that asset to the `stable` state. However, if a dependency in the `development` state is overwritten, the packages of the asset that was promoted to the `stable` state are not regenerated.
+
 == Create an Asset Using the Exchange API
 
 To create an asset using the Exchange API, follow the xref:exchange-api.adoc#set-lifecycle-state[Set Lifecycle State] example.
