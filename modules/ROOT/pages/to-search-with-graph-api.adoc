@@ -4,38 +4,63 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The Exchange Graph API lets you search Exchange assets for a string value. You can specify what values
-to receive in each search.
+Search Exchange assets for a string value by using the Exchange Graph API. You can specify what values to receive in each search.
 
-Because the Graph API accesses Anypoint Exchange and Anypoint Platform, inquiries should
-have an access token if you want to access assets in private exchange. If you only search for MuleSoft public assets, you don't need an access token.
+The Exchange Graph API accesses Anypoint Exchange and Anypoint Platform, and a search requires authentication to access assets in a private Exchange. If you only search for MuleSoft public assets, you don't need authentication.
 
-*Notes:*
+The Exchange Graph API can be used without an Anypoint Platform account to find assets made publicly available by MuleSoft. Accessing private content through the API requires an Anypoint Platform account.
 
-* The Exchange Graph API can be used without an Anypoint Platform account. In that case, only assets made publicly available by MuleSoft are returned.
-* To utilize this API to access private content, you must be provisioned with an Anypoint Platform account.
+== Authentication
 
-== Obtain an Access Token
+Use either an access token or a connected application for authentication.
 
-You only need an access token if you are searching for assets that are not created by MuleSoft.
+You only need authentication if you are searching for assets that are not created by MuleSoft.
 
-Access tokens expire sometime between 15 to 180 minutes (ask your organization administrator), so you may need to get a new token while doing searches.
+To use token authentication:
 
-. Log into Anypoint Platform.
-. Obtain an access token with a curl command such as the following. You can also use Postman or another application for sending HTTP commands.
-+
-[source,json,linenums]
+. Log in to Anypoint Platform.
+. Obtain an access token with a cURL command.
+
+You can also use Postman or another application for sending HTTP commands.
+
+Replace `ANYPOINT_USERNAME` with your Anypoint Platform user account name and replace `ANYPOINT_PASSWORD` with your password.
+
+[source,console]
 ----
-curl -X POST \
-  https://anypoint.mulesoft.com/accounts/login \
-  -H 'content-type: application/json' \
-  -d '{
-  "username": "YOUR_ANYPOINT_PLATFORM_USER_NAME",
-  "password": "YOUR_ANYPOINT_PLATFORM_PASSWORD"
-}'
+curl --location --request POST 'https://anypoint.mulesoft.com/accounts/login' \
+     --header 'Content-Type: application/json' \
+     --header 'Accept: application/json' \
+     --data-raw '{
+        "username":"ANYPOINT_USERNAME",
+        "password":"ANYPOINT_PASSWORD"
+     }' | jq -r ".access_token"
 ----
+
+Use this access token in your API calls.
+
+Your organization administrator sets the expiration time for access tokens to a value from 15 to 180 minutes. If you perform a search or other operation that requires more time, you must request an additional token.
 
 See also https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/api/v1/pages/Authentication/[Access Management API Authentication].
+
+To use connected application authentication:
+
+. xref:connected-app-authentication.adoc[Create a connected application].
+. Choose whether to use basic authentication or query variable authentication.
++
+If both basic authentication and query variable authentication are set, the API uses basic authentication and ignores the query variable authentication.
+. To use basic authentication, provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`.
+.. Replace `clientID` with the client ID.
+.. Replace `clientSecret` with the client secret.
+. To use query variable authentication, define the connected application authentication as an authorization field in the query variables:
++
+[source,json]
+----
+{
+  "authorization": "Basic ABC123"
+}
+----
++
+Replace `ABC123` with the base64 encoding of the concatenated client ID and client secret: `\~~~Client\~~~:clientID\~?~clientSecret`
 
 == Graph API Access URL
 
@@ -65,6 +90,8 @@ The query field contains the GraphQL query, which allows fetching more asset fie
     description
     name
     type
+    contactName
+    contactEmail
     tags {
       value
       key
@@ -187,6 +214,8 @@ The following filters let you refine query output:
 |dependencies { groupId, assetId, version, name, type } |Returns the assets the listed asset depends on.
 |files { classifier, packaging, externalLink, md5 } |File information.
 |name |Asset name.
+|contactName |Name of a person to contact about the asset.
+|contactEmail |Email address of a person to contact about the asset.
 |numberOfRates |The number of star ratings for an asset.
 |organizationId |Organization ID for an asset.
 |rating |Star rating value for an asset.

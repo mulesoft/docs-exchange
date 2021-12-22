@@ -136,7 +136,7 @@ clipboard. Then after you log back in, you can paste the content back into the p
 
 === Markdown Notes
 
-* Anypoint Exchange uses GitHub Markdown. Everything works in GitHub Markdown except for syntax highlighting, which is not supported in Exchange.
+* Anypoint Exchange uses GitHub Markdown.
 * Basic HTML 5 code elements are supported in Markdown, such as div, button, a, ul, ol, table, p, span, pre, and code.
 * Insert a link: `+[MuleSoft.com](http://www.mulesoft.com)+` or:
 +
@@ -149,6 +149,16 @@ clipboard. Then after you log back in, you can paste the content back into the p
 +
 * Insert a YouTube video: `+![linkname](https://www.youtube.com/embed/YOUR_YOUTUBE_ID_HERE)+` +
 For example: `+![](https://www.youtube.com/embed/K3tuHUZ1J04)+`
+* Use syntax highlighting:
++
+[source,text,linenums]
+----
+```javascript
+const myBool = true;
+const myNumber = 5;
+const myString = "abc";
+```
+----
 
 == See Also
 

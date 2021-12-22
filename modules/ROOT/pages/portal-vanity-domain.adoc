@@ -6,22 +6,22 @@ endif::[]
 
 This document contains instructions and the necessary NGINX configuration for setting up an organization's public portal using a vanity domain.
 
-== Whitelist Your Domain
+== Register Your Domain
 
-Your domain needs to be whitelisted in Exchange for your public portal to work properly. To do so:
+Public portal domains must be registered in Exchange. To register your public portal's domain:
 
-. Get an access token from an Anypoint Platform user account that has the Organization Administrator role in the master organization:
+. Get an access token from an Anypoint Platform user account that has the Organization Administrator permission in the root organization:
 +
 [source,console]
 ----
 ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
 ----
 +
-. Use the access token to whitelist your custom domain:
+. Use the access token to register your custom domain:
 +
 [source,console]
 ----
-curl https://anypoint.mulesoft.com/exchange/api/v1/organizations/YOUR_ORGANIZATION_DOMAIN/portal/domain -XPUT -d your.custom.domain -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
+curl https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/domain -XPUT -d your.custom.domain -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
 ----
 +
 IMPORTANT: If this step is not followed, you won't be able to log in to the portal or perform any actions that need authentication.
@@ -118,6 +118,30 @@ ${ORGANIZATION_DOMAIN}: robo-cop
 NOTE: Your server must run using `https`.
 
 If set up correctly, you can access and navigate to `+https://developers.robocop.com/path/of/justice/+` exactly as if you were at `+https://anypoint.mulesoft.com/exchange/portals/robo-cop/+`.
+
+== Configure Cookie Consent Management for Your Domain
+
+Exchange public portals that do not use vanity domains can use the provided xref:cookies.adoc[cookie consent manager].
+
+After your vanity domain is configured and your site is working, activate cookie consent management by contacting customer support with this information:
+
+* Your organization domain (Example: `robo-cop`)
+* Your registered domain (Example: `developers.robocop.com`)
+
+Customer support provides you a `COOKIE_CONSENT_ID` for the recently registered vanity domain. You cannot transfer this `COOKIE_CONSENT_ID` to other vanity domains.
+
+=== Register Your Cookie Consent ID
+
+You must register your `COOKIE_CONSENT_ID` by using the same token you obtained when you registered your domain.
+
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/cookieConsentId -XPUT -d COOKIE_CONSENT_ID -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
+----
+
+After registering your `COOKIE_CONSENT_ID`, enter your portal using your vanity domain. The navigation bar displays the Cookie Preferences button.
+
+The `COOKIE_CONSENT_ID` is linked to your registered domain. If you change the domain, repeat these steps to configure cookie consent management for your new domain.
 
 == See Also
 

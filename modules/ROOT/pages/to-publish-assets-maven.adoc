@@ -57,7 +57,7 @@ The following example shows how to publish a Mule 4 asset such as an application
  ...
 ----
 +
-If you are publishing your asset to the master organization, the group ID is the same as the organization ID.
+If you are publishing your asset to the root organization, the group ID is the same as the organization ID.
 The URL format is:
 +
 `+https://maven.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven+`
@@ -65,6 +65,10 @@ The URL format is:
 In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven+`
++
+When using MuleSoft Government Cloud, use:
++
+`+https://maven.gov.anypoint.mulesoft.com/api/v2/organizations/ORGANIZATION_ID/maven+`
 +
 If you are publishing your asset to a business group, the group ID is the same as the business group ID.
 The URL format is:
@@ -74,6 +78,10 @@ The URL format is:
 In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/BUSINESS_GROUP_ID/maven+`
++
+When using MuleSoft Government Cloud, use:
++
+`+https://maven.gov.anypoint.mulesoft.com/api/v2/organizations/BUSINESS_GROUP_ID/maven+`
 +
 . In your project's POM file, include `mule-maven-plugin` and set the correct classifier (in this example `mule-application-example`).
 +
@@ -144,6 +152,22 @@ In the EU, use:
   ...
 ----
 +
+When using MuleSoft Government Cloud, use:
++
+[source,xml,linenums]
+----
+ ...
+  <distributionManagement>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.gov.anypoint.mulesoft.com/api/v2/organizations/ORGANIZATION_ID/maven</url>
+      <layout>default</layout>
+    </repository>
+  </distributionManagement>
+  ...
+----
++
 The `<id>` and `<name>` elements are arbitrary names that you create to identify the repository and any other organizational identifiers. The `<id>` value must be the same in the `pom.xml` file as in the `~/.m2/settings.xml` file. The `<id>` value connects the `pom.xml` file with information to log in to the organization's URL.
 +
 . Update the `settings.xml` file in your Maven `.m2` directory.
@@ -175,6 +199,85 @@ Example `settings.xml` file:
 mvn deploy
 ----
 . Search Exchange for the asset ID to find the asset.
+
+== Publish an Asset with Mutable Data
+
+The Maven Facade API enables you to both create your asset and set the mutable data describing it in the same request. The mutable data of an asset includes tags, custom fields, categories, and documentation pages.
+
+The GitHub repository of Exchange documentation examples includes a complete example of creating a https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/template-with-mutable-data[Mule application template with documentation and tags, role=external, window=blank].
+
+Declare tags, custom fields, and categories in the `pom.xml` file in the properties section, with the XML property `key` set to the key of the custom field or category:
+
+[source,xml,linenums]
+----
+    ...
+    <properties>
+        <categories key="categoryKey">someValue</categories>
+        <fields key="fieldKey">someValue</fields>
+        <tags>tag1,tag2,tag3</tags>
+    </properties>
+    ...
+----
+
+To set documentation pages, create a documentation directory in `src/main/resources`. In the documentation directory, include each page as a Markdown file with a name such as `Getting Started.md`. Replace `Getting Started` with the title of the page. To include a terms and conditions page, put the content in a file named `terms.md`. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
+
+[source,console]
+----
+{
+ "pageOrder": ["home", "Getting Started", "Examples"]
+}
+----
+
+Add the Maven Assembly Plugin in the `pom.xml` plugin section to package the documentation folder, and create a Maven Assembly Plugin configuration file such as this:
+
+[source,xml,linenums]
+----
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-assembly-plugin</artifactId>
+    <version>2.6</version>
+    <configuration>
+        <appendAssemblyId>true</appendAssemblyId>
+    </configuration>
+    <executions>
+        <execution>
+            <id>create-distribution</id>
+            <phase>package</phase>
+            <goals>
+                <goal>single</goal>
+            </goals>
+            <configuration>
+                <descriptors>
+                    <descriptor>/src/main/resources/docs-assembly/assembly.xml</descriptor>
+                </descriptors>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+----
+
+Create an `assembly.xml` file in `src/main/resources/docs-assembly`:
+
+[source,xml,linenums]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+   <id>docs</id>
+   <formats>
+       <format>zip</format>
+   </formats>
+   <includeBaseDirectory>false</includeBaseDirectory>
+   <fileSets>
+       <fileSet>
+           <directory>${project.basedir}/src/main/resources/docs</directory>
+           <outputDirectory>/</outputDirectory>
+           <useDefaultExcludes>true</useDefaultExcludes>
+       </fileSet>
+   </fileSets>
+</assembly>
+----
 
 == Publish a Custom Asset
 
@@ -229,6 +332,10 @@ The error looks similar to this:
 
 == Publish and Consume Federated Assets
 
+Publishing and consuming federated assets requires token authentication or connected application authentication.
+
+To use token authentication:
+
 . xref:access-management::saml-bearer-token.adoc[Get an API bearer token by using a SAML assertion].
 +
 This is your access token.
@@ -251,13 +358,39 @@ This value tells the platform that you're using a token.
     <server>
       <id>Repository</id>
       <username>~~~Token~~~</username>
-      <password>ACCESS_TOKEN</password>
+      <password>01234567-89ab-cdef-0123-456789abcdef</password>
     </server>
   </servers>
 </settings>
 ----
 +
 . Save the `settings.xml` file.
+
+To use connected application authentication:
+
+. xref:connected-app-authentication.adoc[Create a connected application].
+. Provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`.
+.. Replace `clientID` with the client ID.
+.. Replace `clientSecret` with the client secret.
+
+Include the connected application in the file `settings.xml` in your repository:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 
+http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    ...
+    <server>
+      <id>Repository</id>
+      <username>~~~Client~~~</username>
+      <password>clientID~?~clientSecret</password>
+    </server>
+  </servers>
+</settings>
+```
 
 == Dependencies external to Exchange
 
@@ -306,9 +439,9 @@ and add the Maven facade as a repository in the `repositories` section.
 
 Replace `ORGANIZATION_ID` with your organization ID.
 
-You can use `+https://maven.anypoint.mulesoft.com/api/v3/maven+` as a valid URL for the `+<url>+` value, because this is the default to publish to the master organization. In the EU, use `+https://maven.eu1.anypoint.mulesoft.com/api/v3/maven+` as the URL.
+You can use `+https://maven.anypoint.mulesoft.com/api/v3/maven+` as a valid URL for the `+<url>+` value, because this is the default to publish to the root organization. In the EU, use `+https://maven.eu1.anypoint.mulesoft.com/api/v3/maven+` as the URL. When using MuleSoft Government Cloud, use `+https://maven.gov.anypoint.mulesoft.com/api/v2/maven+` as the URL.
 
-In the EU, the <repositories> section is:
+In the EU, the `<repositories>` section is:
 
 [source,xml,linenums]
 ----
@@ -317,6 +450,20 @@ In the EU, the <repositories> section is:
       <id>Repository</id>
       <name>Corporate Repository</name>
       <url>https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+----
+
+When using MuleSoft Government Cloud, the `<repositories>` section is:
+
+[source,xml,linenums]
+----
+  <repositories>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.gov.anypoint.mulesoft.com/api/v2/organizations/ORGANIZATION_ID/maven</url>
       <layout>default</layout>
     </repository>
   </repositories>

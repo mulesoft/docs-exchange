@@ -5,7 +5,7 @@ endif::[]
 :keywords: faq, exchange
 
 [NOTE]
-This page describes Exchange 1, which is a legacy product. We recommend that all users xref:migrate.adoc[migrate] to the current version, xref:index.adoc[Exchange 2].
+This page describes Exchange 1, which is a legacy product. The end of life date for Exchange 1 is July 18, 2021. We recommend that all users xref:migrate.adoc[migrate] to the current version, xref:index.adoc[Exchange 2].
 
 == How do I create a Private Exchange?
 
@@ -42,10 +42,10 @@ image::ex1-category-objects.png[Object categories settings buttons]
 +
 . Click Save Changes after editing terms, or Discard to quit any changes you made.
 
-Note: When you create a category, you must be in the Master Organization. If you create a category in a business group, the category does not appear.
+When you create a category, you must be in the root organization. If you create a category in a business group, the category does not appear.
 
 
-== Can I publish whitepapers, Word docs, etc. that aren’t Mule projects or Connectors?
+== Can I publish white papers, Word docs, and so on that aren’t Mule projects or connectors?
 
 If each document is not shared, you can use an API portal for each and provide the portal's URL in your Exchange item. If each document is shared on your network, you can create a new Others item in Exchange and provide links to the shared items.
 
@@ -68,7 +68,7 @@ Package Explorer and click Anypoint Platform > Configure > Anypoint Studio > Aut
 
 == How can users view the content of a business group?
 
-Users must be assigned to the Exchange Viewer role. Users can view the master organization without being assigned to the Exchange Viewer role, but not business groups. If users are invited to a business group, they won't see other business groups until assigned Roles access.
+Users must be assigned to the Exchange Viewer role to view business groups. If users are invited to a business group, they won't see other business groups until they are granted access.
 
 To assign Exchange Viewer access, sign into Anypoint Platform and click Access Management > Roles. Click Exchange Viewers and the blue plus sign to add a user.
 

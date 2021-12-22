@@ -1,30 +1,29 @@
-= Enable the Request Access Button to Display
+= Enable the Request Access Button
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-This topic requires the Exchange Administrator role.
-
 Users specify what applications can have access to an API by clicking the
-Request Access button image:ex2-request-access.png[Button - Request Access].
+*Request Access* button image:ex2-request-access.png[Button - Request Access].
 
-Exchange Administrators see the Request Access in the More Options menu image:ex2-more-options-icon.png[More Options icon].
+Exchange Administrators see *Request Access* in the *More Options* menu image:ex2-more-options-icon.png[More Options icon].
 
-However, just creating an API asset does not cause the Request Access button to display.
-You have to configure the asset first:
+Enabling the *Request Access* button requires the Exchange Administrator permission.
 
-. In API Manager, click Manage API > Manage API from Exchange to open the API.
+To show the *Request Access* button, create an API asset and then configure it:
+
+. In API Manager, click *Manage API* > *Manage API from Exchange* to open the API.
 . Use the URL of your API asset in Exchange as the Implementation URI in API Manager.
 . After opening your API in API Manager, you can view the API Instance ID value as well as other useful information.
-. To return to Exchange, click View API in Exchange.
-. In Exchange, the Request Access button appears in the three dot menu.
+. To return to Exchange, click *View API* in Exchange.
+. In Exchange, the *Request Access* button appears in the three dot menu.
 
-Note: in API Manager, the API's Status is marked as Unregistered. To register the API, deploy the API to Runtime Manager; however, changing the API Status to Registered is not required for the API to be usable in Exchange.
+In API Manager, the API's Status is marked as unregistered. To register the API, deploy the API to Anypoint Runtime Manager. Changing the API Status to registered is not required to make the API usable in Exchange.
 
 == Request Access Display Criteria
 
-A public portal displays the *Request Access* button only after these steps:
+To display the *Request Access* button on an Exchange public portal:
 
 * Publish a REST, SOAP, or HTTP API in Exchange.
 +

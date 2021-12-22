@@ -33,14 +33,18 @@ You must have a unique artifact ID and organization ID to publish your asset. Th
 Perform these tasks to publish an asset to Exchange and add metadata using Exchange APIs:
 
 . <<find-your-organization-id>>
-. <<obtain-an-access-token>>
+. <<authentication>>
+.. <<obtain-an-access-token>>
+.. <<use-connected-application-authentication>>
 . <<publish-an-asset>>
 .. <<specify-asset-properties>>
 .. <<sync-and-async-publication>>
+.. <<set-mutable-data>>
 . <<describe-your-assets>>
 .. <<add-tags>>
 .. <<add-categories>>
 .. <<add-custom-fields>>
+.. <<update-asset-metadata>>
 . <<add-update-doc-pages>>
 .. <<add-new-page-draft>>
 .. <<add-content-to-page>>
@@ -56,10 +60,13 @@ To find your organization ID:
 . Click the name of the top-level organization or a business group, and view your organization ID in the organization information screen.
 . Copy the organization ID and use it when you try out examples.
 
+[[authentication]]
+== Authentication
+
+The Exchange API requires authentication with an access token or a connected application.
+
 [[obtain-an-access-token]]
 == Obtain an Access Token
-
-Invoking any Exchange API requires an access token. Your organization administrator sets the expiration time for access tokens to a value from 15 to 180 minutes. If you perform a search or other operation that requires more time, you must request an additional token.
 
 . Log in to Anypoint Platform.
 . Obtain an access token with a cURL command.
@@ -80,6 +87,18 @@ curl --location --request POST 'https://anypoint.mulesoft.com/accounts/login' \
 ----
 
 Use this access token in your API calls.
+
+Your organization administrator sets the expiration time for access tokens to a value from 15 to 180 minutes. If you perform a search or other operation that requires more time, you must request an additional token.
+
+[[use-connected-application-authentication]]
+== Use Connected Application Authentication
+
+To use connected application authentication:
+
+. xref:connected-app-authentication.adoc[Create a connected application].
+. Provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`.
+.. Replace `clientID` with the client ID.
+.. Replace `clientSecret` with the client secret.
 
 [[publish-an-asset]]
 == Publish an Asset
@@ -105,6 +124,13 @@ Each API call to create an asset specifies multipart properties:
 |type |The type of asset to be created. |Required if the type cannot be inferred from the file extension
 |dependencies |A string of comma-separated dependencies, defined as `dependencies=GROUP_ID:ASSET_ID:VERSION,GROUP_ID:ASSET_ID:VERSION`. |Optional
 |keywords |A string of comma-separated values to be saved as an asset's attributes, for example, `keywords=api,raml,auth,jwt,token`. Search queries can find assets by keyword. |Optional
+|tags |A string of comma-separated values to post as the asset's tags, for example, `tags=tag1,tag2`. If the tags field is not present in the request or is empty, the asset's tags remain unchanged. The string is the final version, so to delete one tag from an asset with two tags, send only the tag that you want to remain. |Optional
+|fields |A JSON array whose items are objects with properties key and value, which represent custom fields. The custom field must be configured in your organization. The example of uploading a custom asset includes custom fields. |Optional
+|fields.key |A string of comma-separated values to post as the asset's custom fields. Replace `key` with the key of the custom fields that you want to add or replace. The custom field must be configured in your organization. If the fields element is not present in the request or is empty, the asset's fields remain unchanged. The string is the final version, so to delete one custom field from an asset with two custom fields, send only the field that you want to remain. |Optional
+|categories |A JSON array whose items are objects with properties key and value, which represent custom fields. The custom field must be configured in your organization. The example of uploading a custom asset includes custom fields. |Optional
+|categories.key |A string of comma-separated values to post as the asset's categories. Replace `key` with the key of the category that you want to add or replace. The category must be configured in your organization. If the categories field is not present in the request or is empty, the asset's categories remain unchanged. The string is the final version, so to delete one category from an asset with two categories, send only the category that you want to remain. |Optional
+|contactName |Name of a person to contact about the asset. |Optional
+|contactEmail |Email address of a person to contact about the asset. |Optional
 |properties |Some asset types require additional properties specified with the properties prefix, such as `apiVersion`, `mainFile`, or `assetLink`, for example, `properties.apiVersion = v1`. |Required for some properties and some asset types
 |===
 
@@ -125,7 +151,7 @@ curl -v \
   -F 'dependencies=68ef9520-24e9-4cf2-b2f5-620025690913:training-american-flight-data-type:1.0.1,68ef9520-24e9-4cf2-b2f5-620025690913:training-american-flights-example:1.0.1' \
   -F 'properties.mainFile=american-flights-api.raml' \
   -F 'properties.apiVersion=v1' \
-  -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \  
+  -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \
 https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
 ----
 
@@ -146,6 +172,71 @@ If the asset is published asynchronously, then a response like this is returned:
 ----
 
 The endpoint `publicationStatusLink` provides the asset publication status.
+
+[[set-mutable-data]]
+=== Set Mutable Data
+
+This example shows how to create your asset and set the mutable data describing it in the same request. The mutable data of an asset includes categories, custom fields, tags, and documentation pages.
+
+The asset publication endpoint creates a new asset. If the asset already exists, the request fails with error 409 (conflict). Do not try to change the mutable data of an existing version. Instead, create a new patch version with the updated mutable data. For example, if the current version is 1.2.3, create version 1.2.4.
+
+This example publishes the category and custom field, which have the keys `categoryKey` and `fieldKey`. Publication fails if the category or the custom field is not configured for your organization.
+
+In the documentation archive file sent as `files.docs.zip`, include each documentation page as a Markdown file in the root directory of the archive with a name such as `Getting Started.md`. Replace `Getting Started` with the title of the page. To include a terms and conditions page, put the content in a file named `terms.md`. Include resources such as images in the optional subdirectory `resources`. Specify the page order with the property `pageOrder` on the root of the main object in the optional file `config.json`:
+
+[source,console]
+----
+{
+ "pageOrder": ["home", "Getting Started", "Examples"]
+}
+----
+
+[source,console]
+----
+curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version' \
+--header 'Authorization: bearer YOUR_TOKEN' \
+--header 'x-sync-publication: true' \
+--form 'type="custom"' \
+--form 'name="Comprehensive Test"' \
+--form 'tags="1, 2, 3, 4"' \
+--form 'categories.categoryKey="value1, value2"' \
+--form 'fields.fieldKey="value1, value2"' \
+--form 'contactName="Max Mule"' \
+--form 'contactEmail="maxmule@example.com"' \
+--form 'files.docs.zip=@"/file-path/docs.zip"'
+----
+
+=== Set Categories and Fields as JSON Collections
+
+To set or change categories and custom fields in JSON format within the multipart form, send an array of objects that contain the properties key and value.
+
+If the categories and custom fields are not configured for your organization, the request fails.
+
+To delete all categories or custom fields, send an empty array:
+
+```
+--form 'categories="[]"'
+--form 'fields="[]"'
+```
+
+
+In the multipart form, data in JSON format has priority, so this example does not set `categoryKey2` or `fieldKey2`.
+
+Example:
+
+```
+curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version' \
+--header 'Authorization: bearer YOUR_TOKEN' \
+--header 'x-sync-publication: true' \
+--form 'type="custom"' \
+--form 'name="Comprehensive Test"' \
+--form 'tags="1, 2, 3, 4"' \
+--form 'categories="[{"key":"categoryKey", "value":"value1, value2"}]"' \
+--form 'categories.categoryKey2="value3"' \
+--form 'fields="[{"key":"fieldKey", "value":"value1, value2"}]"' \
+--form 'fields.fieldKey2="value3"' \
+--form 'files.docs.zip=@"/file-path/docs.zip"'
+```
 
 [[describe-your-assets]]
 == Describe Your Assets
@@ -178,7 +269,7 @@ The following example uses a previously created category with the name `apiType`
 
 [source,console]
 ----
-curl -X PUT \ 
+curl -X PUT \
 https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/managed/apiType \
   -H 'Authorization: bearer ANYPOINT_TOKEN' \
   -H 'Content-Type: application/json' \
@@ -194,7 +285,7 @@ This example uses a previously created custom field with name `subType` and sets
 
 [source,console]
 ----
-curl -X PUT \ 
+curl -X PUT \
 https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/subType \
   -H 'Authorization: bearer ANYPOINT_TOKEN' \
   -H 'Content-Type: application/json' \
@@ -202,6 +293,50 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
     "tagValue": ["OAS"]
   }'
 ----
+
+[[update-asset-metadata]]
+=== Update Asset Metadata
+
+This example shows how to update the mutable metadata that describes an existing asset without changing the version number or creating a new version of the asset. This mutable data includes categories, custom fields, tags, and documentation pages.
+
+The key `categoryKey` publishes the category and the key `fieldKey` publishes the custom field. Publication fails if the category or the custom field is not configured for your organization.
+
+Uploading a documentation file named `files.docs.zip` updates the asset's documentation. The root directory of the archive includes each documentation page as a Markdown file with a name such as `Getting Started.md`. Each other page replaces `Getting Started` in the file name with the title of the page. An optional terms and conditions page uses the file name `terms.md`. The optional subdirectory `resources` includes resources such as images. The property `pageOrder` on the root of the main object in the optional file `config.json` specifies the page order:
+
+[source,console]
+----
+{
+ "pageOrder": ["home", "Getting Started", "Examples"]
+}
+----
+
+[source,console]
+----
+curl --location --request PATCH 'https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata' \
+--header 'Authorization: bearer YOUR_TOKEN' \
+--form 'tags="1, 2, 3, 4"' \
+--form 'categories.categoryKey="value1, value2"' \
+--form 'fields.fieldKey="value1, value2"' \
+--form 'files.docs.zip=@"/file-path/docs.zip"'
+----
+
+The mutable data updates asynchronously and the request returns a response similar to this:
+
+[source,console]
+----
+{ "mutableDataStatusLink":"https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata/status/170d1e6f-d567-48e2-a2f4-00b2e3951be6" }
+----
+
+A call to `mutableDataStatusLink` displays the publication status:
+
+[source,console]
+----
+curl https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/mutabledata/status/170d1e6f-d567-48e2-a2f4-00b2e3951be6 \
+--header 'Authorization: bearer YOUR_TOKEN'
+----
+
+If the request provides no authentication header, it fails with the error *Unauthorized*.
+
 
 [[add-update-doc-pages]]
 == Add and Update Documentation Pages
