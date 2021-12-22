@@ -64,11 +64,9 @@ NOTE: Permissions must be set by an Anypoint Platform user with administrative p
 To enable the API Catalog Contributor permission:
 
 . In Anypoint Platform, navigate to *Access Management*.
-. If you are managing user access using teams, click `Hide New Features`.
 . Select *Users*.
 . Select the user for which you want to enable the permission.  
 . Select the *API Catalog Contributor* permission. 
-. If you hid new features in a preceding step, to continue managing user access using teams, click `Try New Features`.
 
 == Create a Descriptor File Using the CLI
 
