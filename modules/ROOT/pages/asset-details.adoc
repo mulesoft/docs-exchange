@@ -39,7 +39,7 @@ If you cannot find an asset in the current business group scopes, search in othe
 
 == View REST API Elements in an Asset
 
-View RAML or OAS API specification information, including resources and the methods in each resource, in the left navigation area.
+View RAML, OAS, or AsyncAPI API specification information, including resources and the methods in each resource, in the left navigation area.
 
 . Click a method button:
 +

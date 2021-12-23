@@ -9,7 +9,7 @@ To share an API, API Group, policy, example, template, or connector in either an
 
 The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 
-* For OAS, RAML, RAML fragments, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *Publish new asset* menu.
+* For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *Publish new asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
 * You can also publish a RAML, or OAS or RAML fragments, using Design Center, and publish the API to Exchange.
@@ -39,6 +39,17 @@ This illustration summarizes how each asset type (in green) appears in Exchange:
 image::ex2-exchange-assets.png[]
 
 == Asset Limits
+
+An asset's version format must use semantic versioning. Asset fields have these length limits:
+
+[%header,cols="2a,1a,1a"]
+|===
+|Field |Maximum Length |Minimum Length
+|Name |256 |1
+|Description |256 |0
+|`versionGroup` |256 |1
+|Combined `groupId`, `assetId`, and `version` |215 |NA
+|===
 
 Exchange prevents resource exhaustion attacks by limiting the number of asset versions that can be published.
 
