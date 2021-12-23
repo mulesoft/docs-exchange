@@ -52,6 +52,7 @@ You can add your information such as user credentials to complete the template's
 * REST APIs - A RAML file or OAS file that specifies an API
 +
 These APIs can be referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
+* AsyncAPI specifications - An AsyncAPI specification file that specifies an event-driven API
 * SOAP APIs - A WSDL file that specifies an API
 * HTTP APIs - A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager
 * API Groups - A set of APIs bundled into a single asset
