@@ -126,7 +126,9 @@ Each API call to create an asset specifies multipart properties:
 |dependencies |A string of comma-separated dependencies, defined as `dependencies=GROUP_ID:ASSET_ID:VERSION,GROUP_ID:ASSET_ID:VERSION`. |Optional
 |keywords |A string of comma-separated values to be saved as an asset's attributes, for example, `keywords=api,raml,auth,jwt,token`. Search queries can find assets by keyword. |Optional
 |tags |A string of comma-separated values to post as the asset's tags, for example, `tags=tag1,tag2`. If the tags field is not present in the request or is empty, the asset's tags remain unchanged. The string is the final version, so to delete one tag from an asset with two tags, send only the tag that you want to remain. |Optional
+|fields |A JSON array whose items are objects with properties key and value, which represent custom fields. The custom field must be configured in your organization. The example of uploading a custom asset includes custom fields. |Optional
 |fields.key |A string of comma-separated values to post as the asset's custom fields. Replace `key` with the key of the custom fields that you want to add or replace. The custom field must be configured in your organization. If the fields element is not present in the request or is empty, the asset's fields remain unchanged. The string is the final version, so to delete one custom field from an asset with two custom fields, send only the field that you want to remain. |Optional
+|categories |A JSON array whose items are objects with properties key and value, which represent custom fields. The custom field must be configured in your organization. The example of uploading a custom asset includes custom fields. |Optional
 |categories.key |A string of comma-separated values to post as the asset's categories. Replace `key` with the key of the category that you want to add or replace. The category must be configured in your organization. If the categories field is not present in the request or is empty, the asset's categories remain unchanged. The string is the final version, so to delete one category from an asset with two categories, send only the category that you want to remain. |Optional
 |contactName |Name of a person to contact about the asset. |Optional
 |contactEmail |Email address of a person to contact about the asset. |Optional
@@ -150,7 +152,7 @@ curl -v \
   -F 'dependencies=68ef9520-24e9-4cf2-b2f5-620025690913:training-american-flight-data-type:1.0.1,68ef9520-24e9-4cf2-b2f5-620025690913:training-american-flights-example:1.0.1' \
   -F 'properties.mainFile=american-flights-api.raml' \
   -F 'properties.apiVersion=v1' \
-  -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \  
+  -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \
 https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
 ----
 
@@ -205,6 +207,38 @@ curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/or
 --form 'files.docs.zip=@"/file-path/docs.zip"'
 ----
 
+=== Set Categories and Fields as JSON Collections
+
+To set or change categories and custom fields in JSON format within the multipart form, send an array of objects that contain the properties key and value.
+
+If the categories and custom fields are not configured for your organization, the request fails.
+
+To delete all categories or custom fields, send an empty array:
+
+```
+--form 'categories="[]"'
+--form 'fields="[]"'
+```
+
+
+In the multipart form, data in JSON format has priority, so this example does not set `categoryKey2` or `fieldKey2`.
+
+Example:
+
+```
+curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version' \
+--header 'Authorization: bearer YOUR_TOKEN' \
+--header 'x-sync-publication: true' \
+--form 'type="custom"' \
+--form 'name="Comprehensive Test"' \
+--form 'tags="1, 2, 3, 4"' \
+--form 'categories="[{"key":"categoryKey", "value":"value1, value2"}]"' \
+--form 'categories.categoryKey2="value3"' \
+--form 'fields="[{"key":"fieldKey", "value":"value1, value2"}]"' \
+--form 'fields.fieldKey2="value3"' \
+--form 'files.docs.zip=@"/file-path/docs.zip"'
+```
+
 [[describe-your-assets]]
 == Describe Your Assets
 
@@ -236,7 +270,7 @@ The following example uses a previously created category with the name `apiType`
 
 [source,console]
 ----
-curl -X PUT \ 
+curl -X PUT \
 https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/managed/apiType \
   -H 'Authorization: bearer ANYPOINT_TOKEN' \
   -H 'Content-Type: application/json' \
@@ -252,7 +286,7 @@ This example uses a previously created custom field with name `subType` and sets
 
 [source,console]
 ----
-curl -X PUT \ 
+curl -X PUT \
 https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/subType \
   -H 'Authorization: bearer ANYPOINT_TOKEN' \
   -H 'Content-Type: application/json' \
