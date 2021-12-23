@@ -11,6 +11,7 @@ The API supports all Exchange asset types:
 * REST APIs
 * SOAP APIs
 * HTTP APIs
+* AsyncAPI specifications
 * API fragments
 * Connectors
 * Mule applications
@@ -110,7 +111,7 @@ With Exchange API version 2 you can publish assets to Exchange either by submitt
 
 The API can also upload assets to Exchange either synchronously or asynchronously.
 
-The API can upload all supported asset types, including REST APIs, SOAP APIs, HTTP APIs, API fragments, connectors, Mule applications, examples, templates, policies, and custom assets.
+The API can upload all supported asset types, including REST APIs, SOAP APIs, HTTP APIs, AsyncAPI specifications, API fragments, connectors, Mule applications, examples, templates, policies, and custom assets.
 
 The following example shows how to publish a REST API (RAML specification).
 

@@ -36,7 +36,7 @@ The URL for your portal is in the form `+https://anypoint.mulesoft.com/exchange/
 [[whynoinpp]]
 == Why don't my assets appear in my Public Portal?
 
-You can add SOAP API, HTTP API, and OAS or RAML REST API assets to the Public Portal by clicking the Share button and clicking Add to the public portal. When you share an asset to the Public Portal, the asset is then public and visible by anyone on the internet at the URL of your Public Portal.
+You can add SOAP API, HTTP API, AsyncAPI, and OAS or RAML REST API assets to the Public Portal by clicking the Share button and clicking Add to the public portal. When you share an asset to the Public Portal, the asset is then public and visible by anyone on the internet at the URL of your Public Portal.
 
 == How do I remove an asset from a Public Portal?
 
