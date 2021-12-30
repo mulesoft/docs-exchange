@@ -32,8 +32,7 @@ To enable developers in your organization to automatically publish the new API s
 
 To install the CLI:
 
-. Download the API Catalog CLI package from the https://npmjs.com[npm public registry^]. 
-. Run the following command from your terminal:
+* Run the following command from your terminal:
 ----
 npm install -g api-catalog-cli@beta
 ----
