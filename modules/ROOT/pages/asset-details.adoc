@@ -8,7 +8,7 @@ endif::[]
 
 To view assets:
 
-. From the public https://www.anypoint.mulesoft.com/exchange/[Exchange], click an asset and view its description.
+. From the public https://www.anypoint.mulesoft.com/exchange/[Exchange], click an asset and view its description. See the Explore Asset Information section for more information about viewing an asset's detail.
 . View the documentation and metadata to learn more about the asset.
 . Click *Login* to view assets published into Exchange by your organization.
 . After you log in, click *Public Portal* in your organization to view public APIs available to anyone.
