@@ -22,7 +22,7 @@ applications.
 API providers can view, manage, and revoke these contracts by following the steps in
 xref:api-manager::manage-client-apps-latest-task.adoc[Managing API Instance Contracts on API Manager].
 
-A client application's owners and an API instance owner have permission to request access for that client application.
+Both API instance owners and the owners of a specific client application can request access to that client application. All other users must request access from either of these owners.
 For access to a client application created by another user, request access from either the client application owner or the API instance owner.
 to add your user account to the application owners list in Anypoint API Manager.
 
