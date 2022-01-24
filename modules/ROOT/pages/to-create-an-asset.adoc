@@ -87,41 +87,9 @@ Replace `ROOT_ORGANIZATION_ID` with your root organization ID, and replace `ANYP
 
 See xref:to-search-with-graph-api.adoc[Search Using the Graph API] for more information about searching for assets.
 
-== Create an API Asset
+// Create an Asset
 
-An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
-
-Creating an asset sets the asset type, which cannot be changed. All versions of an asset always have the same type.
-
-To create an API asset:
-
-. In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
-. Select the asset type from the drop-down list:
-+
-* REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
-* REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
-* SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
-* API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
-* HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
-+
-. For RAML, API Spec Fragment, OAS, and WSDL assets:
-+
-.. Select *Choose File* to locate the API specification file.
-.. Select the main file of the API.
-+
-If the file is a ZIP, the selected main file must be in the root directory of the ZIP file. If the file is not a ZIP or if the file is a ZIP file with only one main file, then the main file is selected automatically.
-+
-. (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
-. Select *Publish*.
-
-To create a ZIP file and put the items in a folder into the root directory of the ZIP file, use a command like this. Replace `myfolder` with the name of your folder and `name.zip` with the name for the new ZIP file.
-
-```
-cd myfolder; zip -r name.zip .
-```
-
-Do not use a command such as `zip -r name.zip myfolder`, which puts the folder into the root directory of the ZIP file. This causes an error message such as `The zip file does not contain a .raml file in the root directory`.
+include::partial$task-add-asset.adoc[leveloffset=+1,tags=description;procedure]
 
 == Create an API Group Asset
 
