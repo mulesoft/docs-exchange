@@ -89,7 +89,7 @@ See xref:to-search-with-graph-api.adoc[Search Using the Graph API] for more info
 
 // Create an Asset
 
-include::partial$task-add-asset.adoc[leveloffset=+1,tags=description;procedure]
+include::partial$task-create-asset.adoc[leveloffset=+1,tags=description;procedure]
 
 == Create an API Group Asset
 
