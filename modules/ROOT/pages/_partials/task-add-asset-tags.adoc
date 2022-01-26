@@ -1,0 +1,14 @@
+// tag::description[]
+= Add Asset Tags
+
+You can search by tag name for assets in Exchange.
+
+Tags can only be lower case, and upper case tags are converted to lowercase. Special characters are permitted. An asset can have any number of tags.
+// end::description[]
+// tag::steps[]
+
+. In the sidebar *Tags* list select *Add a tag*.
+. Enter the new tag.
+. Press the enter or return key on your keyboard.
+
+// end::steps[]

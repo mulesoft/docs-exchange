@@ -9,23 +9,32 @@ Creating an asset sets the asset type, which cannot be changed. All versions of 
 To create an API asset:
 
 . In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
+. Enter the asset name.
 . Select the asset type from the drop-down list:
 +
-* REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
-* REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
-* SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
-* API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
-* HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
+* *Custom:* Create custom asset, which provides a way to share a component with your organization.
+* *AsyncAPI:* Add an AsyncAPI definition that exposes an evented process to consumers and producer applications.
+* *HTTP API:*  Add a URL that describes the structure of an HTTP API. This asset does not require a file.
+  This type of asset provides an API endpoint that is defined by API Manager.
+* *API Spec Fragment:* Provide an API Fragment that can be composed to create an API definition.
+* *REST API:* Provide a RAML or OAS API definition file. RAML definitions must be a RAML file (.raml).
+  OAS definitions can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
+* *Ruleset:* Add a zip file with multiple YAML files that describe the new ruleset.
+* *SOAP API:* Provide a WSDL API definition file. SOAP definition files can be either a WSDL (.wsdl) or XML (.xml) file.
+
 +
-. For RAML, API Spec Fragment, OAS, and WSDL assets:
+. For Custom, AsyncAPI, API Spec Fragment, REST API, Ruleset, and SOAP API assets:
 +
-.. Select *Choose File* to locate the API specification file.
-.. Select the main file of the API.
+.. Click *Choose File* to locate the appropriate asset file.
+.. Select the main file from your file system.
 +
 If the file is a ZIP, the selected main file must be in the root directory of the ZIP file. If the file is not a ZIP or if the file is a ZIP file with only one main file, then the main file is selected automatically.
 +
 . (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
+. Select the *Lifecycle State*.
++
+NOTE: Ruleset assets must be *Stable*.
+
 . Select *Publish*.
 
 To create a ZIP file and put the items in a folder into the root directory of the ZIP file, use a command like this. Replace `myfolder` with the name of your folder and `name.zip` with the name for the new ZIP file.

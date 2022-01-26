@@ -41,15 +41,7 @@ NOTE: Before the August 2019 release, the versions of an asset could have differ
 NOTE: The asset description applies to all versions of the asset.
 
 
-== Add Asset Tags
-
-You can search by tag name for assets in Exchange.
-
-Tags can only be lower case, and upper case tags are converted to lowercase. Special characters are permitted. An asset can have any number of tags.
-
-. In the sidebar *Tags* list select *Add a tag*.
-. Enter the new tag.
-. Press the enter or return key on your keyboard.
+include::partial$task-add-asset-tags.adoc[leveloffset=+1,tags=description;steps]
 
 
 == Remove Asset Tags
