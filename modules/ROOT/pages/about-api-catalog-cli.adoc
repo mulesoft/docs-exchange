@@ -52,12 +52,6 @@ api-catalog publish-asset --help
 
 NOTE: You can optionally configure the `api-catalog autocomplete` command so that you can use the tab key with a partially typed command to autocomplete it. See <<Configure Command Autocompletion>> for more details.
 
-View the following video to see this in action.
-
-++++
-include::_partials/api-catalog-cli-video.html[]
-++++
-
 [config-permissions]
 == Configure Catalog Permissions in Anypoint Access Management
 
