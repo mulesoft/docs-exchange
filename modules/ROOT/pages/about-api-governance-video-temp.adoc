@@ -1,0 +1,10 @@
+= API Governance Video for pre-Beta
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+View the following video to see an overview of API Governance and how it is used with API Designer. 
+
+++++
+include::_partials/api-gov-for-api-video-temp.html[]
+++++
