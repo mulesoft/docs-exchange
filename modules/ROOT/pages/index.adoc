@@ -15,7 +15,7 @@ Exchange assets are accessible in Anypoint Studio (connectors, templates, and ex
 
 Using multiple languages with Unicode is supported fully throughout Exchange and in all metadata fields, including asset names, descriptions, markdown pages, categories, tags, and reviews.
 
-MuleSoft certifies its public assets and reviews and approves partner connectors. All private assets are internal to an organization and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
+Assets under the *Provided by MuleSoft* organization are created by MuleSoft and its partners, and are certified by Mulesoft. These assets are publicly available to all customers as well. However, all assets that are created by an organization and published into the organization's instance of Exchange, are private and not visible outside that organizationCustomers are responsible for any private assets they publish within their Exchange instance.
 
 This page applies to the current version, Exchange 2. Documentation on Exchange 1 is at xref:about-exchange1.adoc[About Exchange 1 (Old Version)]. We encourage Exchange 1 users to xref:migrate.adoc[migrate] to Exchange 2. The full version history is available in the xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes].
 
