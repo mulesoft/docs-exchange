@@ -20,7 +20,7 @@ After you log in to Exchange, you can create assets.
 To use the API mocking service for an asset:
 
 . Click *Any Types* > *REST APIs* and choose any API.
-. Click the asset and view the API functions in the left navigation area.
+. Click the asset and view the list of API functions in the left navigation area.
 . Click a function to show more information about that function.
 . At the right side of the screen, test the API by entering sample values to send to the API and get responses from the API.
 
