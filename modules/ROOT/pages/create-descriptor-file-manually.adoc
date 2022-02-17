@@ -1,0 +1,204 @@
+[manual-descriptor]
+= Create or Update a Descriptor File Manually
+
+You can create a descriptor file manually rather than using the `api-catalog create-descriptor` command to create it. You can also update a descriptor file that you have already generated to add conditions required to trigger the publish, add tags to APIs, control asset versioning, and so on.   
+
+After you create the descriptor file, copy it to the file path or repository where your API projects are stored. 
+
+The descriptor file must start with the following:
+
+---
+
+ #%Catalog Descriptor 0.6
+
+---
+
+TIP: Run the `api-catalog publish-asset` command using the `--dry-run` option to ensure that your manually-created descriptor file is valid. 
+
+[descriptor-yaml]
+== Descriptor YAML Schema
+
+Following are the YAML tags used to describe the APIs you want to catalog. 
+
+[%header,cols="20a,80a"]
+|===
+| Tag | Description 
+
+| triggerConditions | This optional section enables you to set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs will be published only when the `api-catalog publish-asset` command is run with `--trigger` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
+
+---
+ triggerConditions
+  branch:
+    - main
+    - release/(.*)
+  anytag:
+    - support
+    - release/(.*)
+  user:
+    - admin
+
+---
+
+The preceding example enables a run of the `api-catalog publish-asset` command to publish the APIs described by the descriptor file only if the command has all of the following three `--trigger` option values: 
+
+* `branch` is `main` or has `release/` in the text
+* `anytag` is `support` or has `release/` in the text
+* `user` is `admin` 
+
+If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger` option values. For more information, see the `--trigger` option for the <<api-catalog publish-asset, `api-catalog publish-asset` command>> and <<Trigger the Publish Using Conditions>>.
+
+| contact | The contact name and email ID.   
+
+| apis | A list of the APIs to be cataloged. 
+
+spec:: The location of the specification file that describes the API. 
+
+assetId:: Specifies the ID of the asset to be published in Exchange. 
+
+docs:: A list of key and value pairs that specify the name of the documentation page and file location for the API.
+These pairs define the order of the documentation pages in Anypoint Platform.
++
+Format: <Name of the documentation page>:<File Location>
++
+If this option is not specified, no documentation pages are imported. 
+
+categories:: A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization.
++
+Format: <Category Name>: <Value(s)>
++
+If this option is not specified, no categories are added.
+
+customFields:: A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization.
++
+Format: <Field>: <Value(s)> 
++
+If this option is not specified, no custom fields are added.
+
+tags:: A list of free text strings. 
++
+If this option is not specified, no tags are added.
+
+versioning:: The asset version. 
++
+If this is not specified, the patch version is incremented by one.
++
+Example: ~1.x.x  
++
+See <<Asset Versioning>>.
+
+apiVersion:: The API version for the asset. 
++
+If the API version is not specified in the descriptor file, the version from the specification file is used. If the API version is specified in both files, the value in the descriptor file is used. The value must be specified in one of the files. 
++
+Example: v1  
+
+|===
+
+[asset-versioning]
+== Asset Versioning
+
+When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using semantic versioning notation `x.x.x` for major, minor, and patch versions respectively. 
+
+Use the following symbols before the version nodes to control how an asset version is incremented:
+
+[%header,cols="15a, 70a"]
+|===
+| Symbol
+
+| Version Node
+
+| ^ | patch
+
+| ~ | minor
+
+| & | major 
+
+Because '&' is a reserved character in YAML, a semantic versioning string using this character must be enclosed in a single quote as follows: 
+
+`'&x.x.x'`
+
+|===
+
+[example-asset-versioning]
+== Examples of Asset Versioning
+
+The following table shows how the asset version is incremented for example semantic versioning strings. 
+
+[%header,cols="15a, 70a"]
+|===
+| Asset Version (versioning) 
+
+| Explanation
+
+| ^x.x.x (Default) | Search for the latest version and increment the patch
+
+| ^1.x.x | Search for the latest version of major 1 and increment the patch
+
+| ~1.x.x| Search for the latest version of major 1 and increment the minor
+
+| ^1.0.x | Search for the latest version of major 1, minor 0 and increment the patch
+
+| ^3.x.x | Search for the latest version of major 3 and increment the patch
+
+| ^3.x.x | Search for the latest version of major 3 and increment the patch
+
+| '&x.x.x' | Increment to the next the major version 
+
+|===
+
+For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
+
+[example-descriptor-file]
+== Example Descriptor File
+
+Following is an example descriptor file that describes the cataloging information for two APIs. 
+
+[source,yaml]
+----
+
+ #%Catalog Descriptor 0.6 # <1>
+triggerConditions: # <2>
+  branch:
+    - main
+    - release/(.*)
+  anytag:
+    - support
+    - release/(.*)
+  user:
+    - admin
+contact: # <3>
+  name: 'John Doe'
+  email: 'john.doe@org.com'
+apis: # <4>
+  - spec: api-spec/codat.json
+    assetId: codat-api
+    docs:
+      add: api-spec/add.md
+      home: home.md
+    customFields:
+      custom: value
+      another: field
+    tags:
+      - codat
+      - gcp
+    versioning: 2.0.x
+    apiVersion: v3
+  - spec: api-spec/billing-api.json
+    assetId: my-awesome-api
+    tags:
+      - finance
+      - aws
+    categories:
+      API Type:
+        - System API
+        - Experience API
+      Organization:
+        - Finance
+        - Billing
+    versioning: ~1.x.x
+    apiVersion: v1
+----
+<1> Provides the start line for the descriptor file
+<2> Sets trigger conditions
+<3> Provides the contact name and email ID 
+<4> Specifies the API information to be published
