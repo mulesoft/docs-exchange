@@ -49,7 +49,9 @@ Tags can only be lower case, and upper case tags are converted to lowercase. Spe
 . To remove a tag, click the *X* next to the tag text.
 
 
-== Edit Asset Portal
+== Edit Asset Portal Documentation
+
+The documentation for an asset can be changed.
 
 . Select *Edit documentation*.
 . Enter the new portal content.
@@ -80,6 +82,7 @@ Images uploaded before May 2019 can be accessed without authentication, and imag
 
 
 === Add Secondary Pages
+YOu can add more pages to the asset portal.
 
 . Select *Edit documentation*.
 . In the left navigation bar, click *Add New Page*. 
