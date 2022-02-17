@@ -21,8 +21,8 @@ You can change the asset icon, name, description, contact name, and contact emai
 . To change the asset portal name, enter the new asset portal name.
 . To change the description, enter a new asset description in the *Description* field.
 . To change the contact name or email, enter a new contact name and email in the corresponding field.
-. To cancel the changes, click the X icon.
-. To save the changes, click the check icon.
+. To cancel the changes, click the *X* icon.
+. To save the changes, click the *check* icon.
 
 NOTE: Before the August 2019 release, the versions of an asset could have different names or icons. After the August 2019 release, a updated asset information applies to all versions of the asset.
 
@@ -34,7 +34,7 @@ When searching for assets, categories can be used to filter the search results.
 . Select from the list of categories. 
 . Click *Add value*.
 . Select from the list of values. 
-. To remove a category, click the trash can icon.
+. To remove a category, click the *trash can* icon.
 . To remove a value from a category, click the *X* from the value text.
 
 == Add and Remove Asset Tags
@@ -45,7 +45,7 @@ Tags can only be lower case, and upper case tags are converted to lowercase. Spe
 
 . In the asset detail pane, click *Add tags*.
 . Enter the new tag.
-. Press the enter or return key on your keyboard. You can enter X amount of tags.
+. Press the enter or return key on your keyboard. 
 . To remove a tag, click the *X* next to the tag text.
 
 
@@ -59,7 +59,7 @@ The documentation for an asset can be changed.
 . Add images and videos as described below.
 . After you write the main page, click *Save* to save as a draft or *Publish*. You can edit and save a draft any number of times before publishing. Drafts are not visible to other users until they are published. 
 . Add secondary pages and terms and conditions as described below.
-. After you edit and save all your pages, publish the portal by selecting *Publish*.
+. After you edit and save all your pages, click *Publish* to publish the portal.
 . Your asset portal is now visible to everyone in the organization.
 
 === Add an Image
