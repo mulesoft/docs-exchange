@@ -31,11 +31,11 @@ NOTE: Before the August 2019 release, the versions of an asset could have differ
 When searching for assets, categories can be used to filter the search results. 
 
 . In the asset details pane, click *Add categories*. 
-. Select from the list of categories. You can add up to X categories.
+. Select from the list of categories. 
 . Click *Add value*.
-. Select from the list of values. You can add up to X values to add more categories and values.
+. Select from the list of values. 
 . To remove a category, click the trash can icon.
-. To remove a value from a category, click the *x* from the value text.
+. To remove a value from a category, click the *X* from the value text.
 
 == Add and Remove Asset Tags
 
@@ -46,16 +46,16 @@ Tags can only be lower case, and upper case tags are converted to lowercase. Spe
 . In the asset detail pane, click *Add tags*.
 . Enter the new tag.
 . Press the enter or return key on your keyboard. You can enter X amount of tags.
-. To remove a tag, select the *X* next to the tag text.
+. To remove a tag, click the *X* next to the tag text.
 
 
 == Edit Asset Portal
 
 . Select *Edit documentation*.
 . Enter the new portal content.
-. In the editor you can change the appearance of text and insert code samples, block quotes, and horizontal lines.
+. In the editor, you can change the appearance of text and insert code samples, block quotes, and horizontal lines.
 . Add images and videos as described below.
-. After you write the main page, select either *Discard changes* or *Save as draft*. You can edit and save a draft any number of times before publishing. Drafts are not visible to other users until they are published. When an asset has an unpublished draft, Exchange displays a *Go to draft* button to edit it.
+. After you write the main page, click *Save* to save as a draft or *Publish*. You can edit and save a draft any number of times before publishing. Drafts are not visible to other users until they are published. 
 . Add secondary pages and terms and conditions as described below.
 . After you edit and save all your pages, publish the portal by selecting *Publish*.
 . Your asset portal is now visible to everyone in the organization.
@@ -64,7 +64,7 @@ Tags can only be lower case, and upper case tags are converted to lowercase. Spe
 
 You can copy and paste an image directly into the Exchange page:
 
-. Select *Edit documentation*.
+. Click *Edit documentation*.
 . Select *Visual* tab.
 . If your image is on your computer, drag the image to the Exchange page, or copy and paste to the Exchange page.
 +
@@ -82,15 +82,15 @@ Images uploaded before May 2019 can be accessed without authentication, and imag
 === Add Secondary Pages
 
 . Select *Edit documentation*.
-. In the left navigation pane, click *Add New Page*. 
+. In the left navigation bar, click *Add New Page*. 
 . Press the enter or return key on your keyboard to create the page. You can create as many pages as needed.  
-.  To delete a page, click *Delete Page*
+.  To delete a page, click *Delete Page*.
 . In Exchange Portals, click *Add Content Pages*.
 . Add a description to the page. Secondary pages support the same options as the main page.
-. To save a draft of a new page, select *Save*. Secondary pages are listed in the left navigation bar.
-. To edit a draft, select the name of the page from the list in the right navigation pane and click *Edit*
+. To save a draft of a new page, click *Save*. Secondary pages are listed in the left navigation bar.
+. To edit a draft, select the name of the page from the list in the left navigation bar and click *Edit*
 . To cancel your edits, click *Cancel*.
-. After you edit and save all your pages, select *Publish* for each page that you want to publish.
+. After you edit and save all your pages, click *Publish* for each page that you want to publish.
 
 In *Editing draft* mode, you can reorder pages by clicking the page name and dragging the page up or down in the left navigation bar.
 
@@ -105,13 +105,14 @@ All page names are validated:
 
 === Specify Terms and Conditions
 
-. Select an asset and select *Edit*.
-. Select *Add Terms and Conditions*: image:ex2-terms.png[Terms and Conditions button]
-. Use the editor to specify the terms and conditions for this asset.
-. Select *Save As Draft*.
-. Select *Publish*.
+Terms and conditions can be added for API assets only. Users are prompted to accept the terms and conditions when requesting API access.
 
-NOTE: Terms and conditions are only available for API assets. Users are prompted to accept the terms and conditions when requesting API access.
+. Select an asset and click *Edit documentation*.
+. In the left navigation bar, click *Add Terms and Conditions*.
+. Use the editor to specify the terms and conditions for this asset.
+. To save the terms and conditions page as a draft, click *Save*.
+. To delete the terms and conditions page, click *Delete Page*.
+. To publish the terms and conditions page, click *Publish*.
 
 
 === API Groups
