@@ -88,7 +88,7 @@ Replace `ROOT_ORGANIZATION_ID` with your root organization ID, and replace `ANYP
 See xref:to-search-with-graph-api.adoc[Search Using the Graph API] for more information about searching for assets.
 
 
-== Create Assets
+== Create an API Asset
 
 An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
 
@@ -100,8 +100,7 @@ To create an API asset:
 . Enter the asset portal name.
 . Select the asset type from the drop-down list:
 +
-* AsyncAPI - (Optional) To share a file with users, choose the file.
-* Custom - (Optional) To share a file with users, choose the file.
+
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
 * REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
@@ -196,7 +195,15 @@ If you have contributor or admin access to an asset, you can add a new version f
 
 . In Exchange, open the asset list and select the asset.
 . CLick *Add version*. 
-. For APIs, select a method option or 
+. For API assets, follow the steps for the corresponding API asst type:
+* REST API - RAML: Provide a RAML API specification file. * RAML specifications must be a RAML file (.raml).
+* REST API - OAS: Provide an OAS API specification file. *OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
+* SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
+* API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
+* HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
+. For RAML, API Spec Fragment, OAS, and WSDL assets:
+* Select Choose File to locate the API specification file.
+* Select the main file of the API.
 . (Optional) Choose a file to upload.
 . Enter the *Version* (asset version).
 . Select on option for *Lifecycle state*.

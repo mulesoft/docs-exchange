@@ -12,54 +12,46 @@ Each minor version of an asset has its own tags, categories, custom fields, and 
 
 In Exchange, open the asset list and select the asset. Exchange shows the asset portal.
 
-== Edit Asset Portal Name
+== Edit Asset Portal Information
 
-. Select the asset portal name or the pen icon after the name.
-. Enter the new name.
-. (Optional) To cancel the changes, select the cancel icon.
-. To save the new name, press the enter or return key on your keyboard, or select the check icon.
+You can change the asset icon, name, description, contact name, and contact email. 
 
-NOTE: Before the August 2019 release, the versions of an asset could have different names. After the August 2019 release, a new name applies to all versions of the asset.
+. Click the edit pen icon in the asset portal.
+. To change the icon, click the edit pen icon, select an image file, then click *Open*.
+. To change the asset portal name, enter the new asset portal name.
+. To change the description, enter a new asset description in the *Description* field.
+. To change the contact name or email, enter a new contact name and email in the corresponding field.
+. To cancel the changes, click the X icon.
+. To save the changes, click the check icon.
 
+NOTE: Before the August 2019 release, the versions of an asset could have different names or icons. After the August 2019 release, a updated asset information applies to all versions of the asset.
 
-== Edit Asset Icon
+== Add and Remove Categories
 
-. Select the pen icon beside the asset icon.
-. Select an image.
-. (Optional) To remove an asset icon, select the cancel icon beside the asset icon.
+When searching for assets, categories can be used to filter the search results. 
 
-NOTE: Before the August 2019 release, the versions of an asset could have different icons. After the August 2019 release, a new asset icon applies to all versions of the asset.
+. In the asset details pane, click *Add categories*. 
+. Select from the list of categories. You can add up to X categories.
+. Click *Add value*.
+. Select from the list of values. You can add up to X values to add more categories and values.
+. To remove a category, click the trash can icon.
+. To remove a value from a category, click the *x* from the value text.
 
+== Add and Remove Asset Tags
 
-== Edit Asset Description
-
-. Select the pen icon after the asset description.
-. Enter the new asset description.
-. (Optional) To cancel the changes, select the cancel icon.
-. To save the new name, select the check icon.
-
-NOTE: The asset description applies to all versions of the asset.
-
-
-== Add Asset Tags
-
-You can search by tag name for assets in Exchange.
+When searching for assets, tags can be used to filter the search results 
 
 Tags can only be lower case, and upper case tags are converted to lowercase. Special characters are permitted. An asset can have any number of tags.
 
-. In the sidebar *Tags* list select *Add a tag*.
+. In the asset detail pane, click *Add tags*.
 . Enter the new tag.
-. Press the enter or return key on your keyboard.
-
-
-== Remove Asset Tags
-
-To remove a tag, in the sidebar *Tags* list, select the *X* next to the tag text.
+. Press the enter or return key on your keyboard. You can enter X amount of tags.
+. To remove a tag, select the *X* next to the tag text.
 
 
 == Edit Asset Portal
 
-. Select *Edit*.
+. Select *Edit documentation*.
 . Enter the new portal content.
 . In the editor you can change the appearance of text and insert code samples, block quotes, and horizontal lines.
 . Add images and videos as described below.
@@ -72,15 +64,15 @@ To remove a tag, in the sidebar *Tags* list, select the *X* next to the tag text
 
 You can copy and paste an image directly into the Exchange page:
 
-. Select *Edit*.
-. Select *Visual mode*.
+. Select *Edit documentation*.
+. Select *Visual* tab.
 . If your image is on your computer, drag the image to the Exchange page, or copy and paste to the Exchange page.
 +
 If the image is on a web server, copy the image and paste it into the Exchange page.
 
 Alternatively, select the image icon in the editor and provide a URL to an illustration available on the web.
 
-In Markdown, use this syntax to reference a web served image:
+In the *Markdown* tab, use this syntax to reference a web served image:
 
 `+![some alt text](http://www.example.com/image/png.png)+`
 
@@ -89,13 +81,18 @@ Images uploaded before May 2019 can be accessed without authentication, and imag
 
 === Add Secondary Pages
 
-. Select *Edit*.
-. In the left navigation area, select *Add New Page* and press the enter or return key on your keyboard to create the page. You can create as many pages as needed. In Exchange Portals, click *Add Content Pages*.
+. Select *Edit documentation*.
+. In the left navigation pane, click *Add New Page*. 
+. Press the enter or return key on your keyboard to create the page. You can create as many pages as needed.  
+.  To delete a page, click *Delete Page*
+. In Exchange Portals, click *Add Content Pages*.
 . Add a description to the page. Secondary pages support the same options as the main page.
-. After creating a page, select *Save As Draft*.
-. After you edit and save all your pages, select *Publish*.
+. To save a draft of a new page, select *Save*. Secondary pages are listed in the left navigation bar.
+. To edit a draft, select the name of the page from the list in the right navigation pane and click *Edit*
+. To cancel your edits, click *Cancel*.
+. After you edit and save all your pages, select *Publish* for each page that you want to publish.
 
-In Edit mode, you can reorder pages by clicking the page name and dragging the page up or down in the left nav bar.
+In *Editing draft* mode, you can reorder pages by clicking the page name and dragging the page up or down in the left navigation bar.
 
 All page names are validated:
 
