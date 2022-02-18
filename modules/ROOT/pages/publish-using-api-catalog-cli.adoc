@@ -5,7 +5,7 @@ You can use the `api-catalog publish-asset` command to publish your APIs to Exch
 
 === Prerequisites
 
-Create a descriptor file that describes the APIs to publish and copy the file to the file path where your API projects are stored. See <<Create a Descriptor File Using the CLI>>.
+Create a descriptor file that describes the APIs to publish and copy the file to the file path where your API projects are stored. See xref:create-descriptor-file-cli:create-desc-file-cli[Create a Descriptor File Using the CLI].
 
 === Limitations
 
@@ -77,7 +77,7 @@ The name and location of the catalog descriptor file.
   * If the file exists but is empty, the command creates and prints the catalog descriptor YAML results. It outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
   * If a valid YAML file exists, the command catalogs the assets as specified. 
   
-See <<Create a Descriptor File Using the CLI>>. 
+See xref:create-descriptor-file-cli:create-desc-file-cli[Create a Descriptor File Using the CLI]. 
 
 | --dry-run | Runs the command to verify that the descriptor file is valid. No APIs are published. 
 
@@ -99,7 +99,7 @@ ANYPOINT_PASSWORD environment variable
 
  | Anypoint user password. Set the environment variable to avoid a prompt for the password.  
  
-See <<Authentication>>. 
+See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
 
 | -s, --silent | Enable silent logging.
 
@@ -123,7 +123,7 @@ ANYPOINT_USERNAME environment variable
 
 | Anypoint username. 
 
-See <<Authentication>>. 
+See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
 
 | -v, --verbose | Enable verbose logging. 
 
@@ -139,7 +139,7 @@ ANYPOINT_CLIENT_ID environment variable
 
 | Connected app client ID.  
 
-See <<Authentication>>.
+See xref:use-api-catalog-cli.adoc#authentication[Authentication].
 
 | --client-secret 
 
@@ -149,7 +149,7 @@ ANYPOINT_CLIENT_SECRET environment variable
 
  | Prompt for the Connected App secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  
  
-See <<Authentication>>.
+See xref:use-api-catalog-cli.adoc#authentication[Authentication].
  
  | --force-publish |  Bypasses the comparison and 
  creates a new version of the asset in Exchange regardless of the content.
@@ -162,15 +162,15 @@ See <<Authentication>>.
 
 The following sections give example commands that show how several catalog options are used:
 
-* <<Publish an Asset with Default Settings>>
+* <<example-default-settings>>
 
-* <<Perform a Dry Run to Validate the Descriptor File>>
+* <<example-dry-run>>
 
-* <<Publish an Asset Regardless of the Content>>
+* <<example-force-publish>>
 
-* <<Trigger the Publish Using Conditions>>
+* <<example-trigger>>
 
-* <<Publish Using a Jenkins Script>> 
+* <<example-jenkins-script>> 
 
 [example-default-settings]
 === Publish an Asset with Default Settings

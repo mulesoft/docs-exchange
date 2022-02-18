@@ -12,13 +12,13 @@ API Catalog CLI enables you to catalog your API specifications, documentation fi
 To get started with API Catalog CLI: 
 
 . Ensure MuleSoft has enabled the API Catalog entitlement for your Anypoint Platform organization.
-. xref:install-api-catalog-cli:install-api-cat[Install] the API Catalog CLI.
-. xref:configure-api-catalog-cli:install-api-cat[Configure] required catalog permissions.
-. xref:create-descriptor-file-cli:create-desc-file-cli[Create a descriptor file] to identify the APIs to publish.
-. xref:publish-using-api-catalog-cli:publish-apis[Catalog an asset] using the API Catalog CLI and view it in Anypoint Exchange.
+. xref:install-api-catalog-cli.adoc#install-api-cat[Install] the API Catalog CLI.
+. xref:configure-api-catalog-cli.adoc#install-api-cat[Configure] required catalog permissions.
+. xref:create-descriptor-file-cli.adoc#create-desc-file-cli[Create a descriptor file] to identify the APIs to publish.
+. xref:publish-using-api-catalog-cli.adoc#publish-apis[Catalog an asset] using the API Catalog CLI and view it in Anypoint Exchange.
 
 TIP: Consider testing the process end-to-end locally before integrating it into your CI/CD pipeline or custom scripts. 
 
-// == See Also
+== See Also
 
-// * xref:anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands]
+* xref:4.x@anypoint-cli::anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands]
