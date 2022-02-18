@@ -1,0 +1,17 @@
+[config-permissions]
+== Configure Catalog Permissions in Anypoint Access Management
+
+You must enable the API Catalog Contributor permission for the Anypoint Platform organization user. 
+
+== Prerequisites
+
+* The API Catalog entitlement must be set by MuleSoft for your Anypoint Platform organization. 
+
+NOTE: Permissions must be set by an Anypoint Platform user with administrative permission. 
+
+To enable the API Catalog Contributor permission:
+
+. In Anypoint Platform, navigate to *Access Management*.
+. Select *Users*.
+. Select the user for which you want to enable the permission.  
+. Select the *API Catalog Contributor* permission. 

@@ -1,0 +1,42 @@
+[create-desc-file-cli]
+== Create a Descriptor File Using the CLI
+
+Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. You can create the descriptor file using the CLI or you can create it manually. Typically you should create the file using the CLI and if you need to set more options to control how the assets are published, you can update the file manually. 
+
+You can run the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
+
+To create a descriptor file using the CLI:
+
+. Navigate to the directory path that contains the APIs you want to catalog. 
+. Run the `api-catalog create-descriptor` command. The following example creates a descriptor file called `mydescriptor.yaml` in the current path:
++
+----
+> api-catalog create-descriptor -f mydescriptor.yaml
+----
+
+The result of the command depends on the presence and content of the designated descriptor file as follows:
+
+* No file or empty file: The command discovers the APIs and writes the results to standard output and to a file named `catalog.yaml`.
+
+* Existing file with content: The command fails and shows an error message that says the descriptor file already exists.
+
+NOTE: You can alternatively create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create or Update a Descriptor File Manually>>.
+
+[create-descriptor-command]
+== api-catalog create-descriptor
+
+Following is a reference for the `api-catalog create-descriptor` command. 
+
+*Usage*
+
+----
+> api-catalog create-descriptor [options] 
+----
+
+*Options*
+
+`-f, --file=file`
+  +
+  [default: `catalog.yaml`] 
+  + 
+  The name and location in which to save the generated catalog descriptor file.
