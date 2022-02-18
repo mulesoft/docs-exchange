@@ -12,27 +12,21 @@ When you change the asset name, description, labels, or categories of the REST a
 
 RAML versions have been automatically generated for all OAS assets published since xref:release-notes::exchange/anypoint-exchange-release-notes.adoc#january-2019[January 12, 2019], and OAS 2.0 versions have been automatically generated for all RAML assets published since that date. If you find an older asset that does not include one of these versions, you can generate all versions by downloading the asset and uploading it again.
 
-Click the Download button in the task bar. image:ex2-icon-download.png[]
+Click *Download* from the asset details pane.
 
 The results vary by file type:
 
-* RAML
+* REST API RAML
 +
-Click the down arrow.
-+
-image::ex2-download-from-raml.png[]
-+
+
 If you choose As RAML, the original RAML file downloads as a zip file. If you choose As OAS, Exchange downloads the API specification as a zip file containing a JSON file for the specification in OAS 2.0 format. If you choose As Mule 4 connector, it downloads as a jar file you can add to a Studio 7 Mule project. If you choose As Mule 3 connector, it downloads as a zip file you can add to a Studio 6 Mule project.
 +
-* OAS
+* REST API OAS
 +
-Click the down arrow.
-+
-image::ex2-download-from-oas.png[]
-+
+
 If you choose As RAML, Exchange downloads the API specification as a zip file containing a RAML file for the specification. If you choose As OAS, it downloads as a zip file containing a file in the original format of either JSON or YAML. If you choose As Mule 4 connector, it downloads as a jar file you can add to a Studio 7 Mule project. If you choose As Mule 3 connector, it downloads as a zip file you can add to a Studio 6 Mule project.
 +
-* WSDL
+* SOAP API WSDL
 +
 Downloads as a WSDL file.
 +
@@ -49,8 +43,6 @@ Downloads as a jar or zip file.
 Downloads as a zip file.
 +
 * Policy
-+
-Click the down arrow.
 +
 If you choose *As Mule policy*, Exchange downloads the policy as a JAR file. If you choose *As Policy definition*, Exchange downloads the definition YAML file.
 +
