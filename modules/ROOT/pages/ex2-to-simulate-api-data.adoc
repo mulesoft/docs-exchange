@@ -6,17 +6,18 @@ endif::[]
 
 Exchange lets you provide simulated data for testing OAS or RAML REST APIs. The simulated data is provided in the Mocking Service feature.
 
-The Mocking Service appears in Exchange:
+The following example shows how the Mocking Service simulates the data for a REST API:
 
 * In the API console that appears on the right side of an asset detail screen. The Mocking Service lets you add simulated data to an API function and test the API with the data.
 +
-image::ex2-api-console.png[Mocking in API Console]
+image::exchange-rest-api-mocking-service.png[Mocking  in API Console]
+
 +
 This page shows two URLs. The URL on the left is also used in Design Center and is public. The URL on the right is used only in Exchange and requires authentication.
 +
 * Listed as an instance with each version of an API.
 +
-image::ex2-mock-in-versions.png[Mocking instance in versions]
+image::exchange-patch-version-mocking.png[Mocking instance in versions]
 +
 * Listed on the *API instances* page that also lists the Mocking Service URL.
 +
@@ -30,10 +31,10 @@ image::ex2-api-instances.png[API Instances Mocking Service URL]
 == Test a REST API With Simulated Data
 
 . In Exchange, click a REST API.
-. Click a function such as GET.
-. In the API console on the right of the screen, click Send to send simulated data to the API.
+. Click a function such as *GET*.
+. In the API console on the right of the screen, click *Send* to send simulated data to the API.
 +
-image::ex2-send-sim-data-to-api.png[Send simulated data to a REST function]
+
 +
 Exchange sends the data and lists the response, which in this example returns
 the HTTP 200 OK status to indicate success, and lists the data that is sent from the API using the simulated data.
