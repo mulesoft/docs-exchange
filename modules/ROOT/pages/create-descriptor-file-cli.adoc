@@ -20,7 +20,7 @@ The result of the command depends on the presence and content of the designated 
 
 * Existing file with content: The command fails and shows an error message that says the descriptor file already exists.
 
-NOTE: You can alternatively create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See <<Create or Update a Descriptor File Manually>>.
+NOTE: You can alternatively create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See xref:create-descriptor-file-manually.adoc#manual-descriptor[Create or Update a Descriptor File Manually].
 
 [create-descriptor-command]
 == api-catalog create-descriptor
