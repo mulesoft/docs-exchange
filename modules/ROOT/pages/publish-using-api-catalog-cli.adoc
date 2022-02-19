@@ -1,4 +1,3 @@
-[publish-apis]
 = Publish APIs Using the CLI
 
 You can use the `api-catalog publish-asset` command to publish your APIs to Exchange. Embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your APIs using the information in the file specified in the `--descriptor-file` option.   
@@ -24,7 +23,7 @@ To publish an API using the CLI:
 > api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct 
 ----
 
-[publish-asset-command]
+[[publish-asset-command]]
 == api-catalog publish-asset
 
 Following is a reference for the `api-catalog publish asset` command. 
@@ -162,17 +161,17 @@ See xref:use-api-catalog-cli.adoc#authentication[Authentication].
 
 The following sections give example commands that show how several catalog options are used:
 
-* <<example-default-settings,Publish an Asset with Default Settings>>
+* <<default-settings,Publish an Asset with Default Settings>>
 
-* <<example-dry-run,Perform a Dry Run to Validate the Descriptor File>>
+* <<dry-run,Perform a Dry Run to Validate the Descriptor File>>
 
-* <<example-force-publish,Publish an Asset Regardless of the Content>>
+* <<force-publish,Publish an Asset Regardless of the Content>>
 
-* <<example-trigger,Trigger the Publish Using Conditions>>
+* <<trigger-conditions,Trigger the Publish Using Conditions>>
 
-* <<example-jenkins-script,Publish Using a Jenkins Script>> 
+* <<jenkins-script,Publish Using a Jenkins Script>> 
 
-[example-default-settings]
+[[default-settings]]
 == Publish an Asset with Default Settings
 
 The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings are used for the unspecified options. 
@@ -184,7 +183,7 @@ The following example publishes the API to an organization in the US Anypoint Pl
 
 This example assumes that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined in ANYPOINT_CLIENT_ID and ANYPOINT_CLIENT_SECRET environment variables. 
 
-[example-dry-run]
+[[dry-run]]
 == Perform a Dry Run to Validate the Descriptor File
 
 This example shows the `api-catalog publish-asset` command with the following options:
@@ -199,7 +198,7 @@ The example command sends the standard output to `mycatdryrun.log`.
 
 ----
 
-[example-force-publish]
+[[force-publish]]
 == Publish an Asset Regardless of the Content
 
 To publish a new version of the asset in Exchange regardless of the content, use the `--force-publish` option. 
@@ -211,7 +210,7 @@ This example shows the `api-catalog publish-asset` command with both of these op
 
 ----
 
-[example-trigger]
+[[trigger-conditions]]
 == Trigger the Publish Using Conditions 
 
 Custom trigger conditions enable you to control whether APIs are published when the API Catalog CLI command runs. This example shows how `--trigger` options correlate with descriptor file trigger conditions to control whether or not to publish the described APIs.   
@@ -252,7 +251,7 @@ The following command does not trigger the API publish because the trigger optio
 
 ----
 
-[example-jenkins-script]
+[[jenkins-script]]
 == Publish Using a Jenkins Script 
 
 This example shows a Jenkins script that runs the `api-catalog publish-asset` command.
