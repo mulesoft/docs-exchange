@@ -1,5 +1,5 @@
 [config-permissions]
-== Configure Catalog Permissions in Anypoint Access Management
+= Configure Catalog Permissions in Anypoint Access Management
 
 You must enable the API Catalog Contributor permission for the Anypoint Platform organization user. 
 

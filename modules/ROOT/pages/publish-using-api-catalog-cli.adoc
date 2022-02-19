@@ -1,13 +1,13 @@
 [publish-apis]
-== Publish APIs Using the CLI
+= Publish APIs Using the CLI
 
 You can use the `api-catalog publish-asset` command to publish your APIs to Exchange. Embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your APIs using the information in the file specified in the `--descriptor-file` option.   
 
-=== Prerequisites
+== Prerequisites
 
 Create a descriptor file that describes the APIs to publish and copy the file to the file path where your API projects are stored. See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI].
 
-=== Limitations
+== Limitations
 
 This version of API Catalog CLI has the following limitations:
 
@@ -25,7 +25,7 @@ To publish an API using the CLI:
 ----
 
 [publish-asset-command]
-=== api-catalog publish-asset
+== api-catalog publish-asset
 
 Following is a reference for the `api-catalog publish asset` command. 
 
@@ -173,7 +173,7 @@ The following sections give example commands that show how several catalog optio
 * <<example-jenkins-script,Publish Using a Jenkins Script>> 
 
 [example-default-settings]
-=== Publish an Asset with Default Settings
+== Publish an Asset with Default Settings
 
 The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings are used for the unspecified options. 
 
@@ -185,7 +185,7 @@ The following example publishes the API to an organization in the US Anypoint Pl
 This example assumes that either the username and password credentials are defined in the ANYPOINT_USERNAME and ANYPOINT_PASSWORD environment variables or that the client ID and client secret credentials are already defined in ANYPOINT_CLIENT_ID and ANYPOINT_CLIENT_SECRET environment variables. 
 
 [example-dry-run]
-=== Perform a Dry Run to Validate the Descriptor File
+== Perform a Dry Run to Validate the Descriptor File
 
 This example shows the `api-catalog publish-asset` command with the following options:
 
@@ -200,7 +200,7 @@ The example command sends the standard output to `mycatdryrun.log`.
 ----
 
 [example-force-publish]
-=== Publish an Asset Regardless of the Content
+== Publish an Asset Regardless of the Content
 
 To publish a new version of the asset in Exchange regardless of the content, use the `--force-publish` option. 
 
@@ -212,7 +212,7 @@ This example shows the `api-catalog publish-asset` command with both of these op
 ----
 
 [example-trigger]
-=== Trigger the Publish Using Conditions 
+== Trigger the Publish Using Conditions 
 
 Custom trigger conditions enable you to control whether APIs are published when the API Catalog CLI command runs. This example shows how `--trigger` options correlate with descriptor file trigger conditions to control whether or not to publish the described APIs.   
 
@@ -253,7 +253,7 @@ The following command does not trigger the API publish because the trigger optio
 ----
 
 [example-jenkins-script]
-=== Publish Using a Jenkins Script 
+== Publish Using a Jenkins Script 
 
 This example shows a Jenkins script that runs the `api-catalog publish-asset` command.
 

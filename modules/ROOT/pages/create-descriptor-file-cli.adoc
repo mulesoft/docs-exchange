@@ -1,5 +1,5 @@
 [create-desc-file-cli]
-== Create a Descriptor File Using the CLI
+= Create a Descriptor File Using the CLI
 
 Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. You can create the descriptor file using the CLI or you can create it manually. Typically you should create the file using the CLI and if you need to set more options to control how the assets are published, you can update the file manually. 
 
