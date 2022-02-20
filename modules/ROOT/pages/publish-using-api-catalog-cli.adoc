@@ -1,4 +1,4 @@
-= Publish APIs Using the CLI
+= Publish APIs Using API Catalog CLI
 
 You can use the `api-catalog publish-asset` command to publish your APIs to Exchange. Embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your APIs using the information in the file specified in the `--descriptor-file` option.   
 

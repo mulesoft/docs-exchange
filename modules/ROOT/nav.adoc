@@ -38,7 +38,7 @@
   ** xref:use-api-catalog-cli.adoc[Use API Catalog CLI]
   ** xref:create-descriptor-file-cli.adoc[Create or Update a Descriptor File Using the CLI] 
   ** xref:create-descriptor-file-manually.adoc[Create or Update a Descriptor File Manually]
-  ** xref:publish-using-api-catalog-cli.adoc[Catalog an Asset]
+  ** xref:publish-using-api-catalog-cli.adoc[Publish Assets Using API Catalog CLI]
 * xref:about-exchange1.adoc[About Exchange 1 (Old Version)]
  ** xref:exchange1.adoc[Using Exchange 1 (Old Version)]
  ** xref:exchange1-faq.adoc[FAQ: Exchange 1 (Old Version)]
