@@ -9,11 +9,11 @@ Anypoint Exchange provides the benefit of being able to discover, share, and inc
 
 == Get Started
 
-. From the public https://www.anypoint.mulesoft.com/exchange/[Exchange], click an asset and view its description.
-. Click Login to view a private Exchange for your organization.
-. After you log in, click Public Portal in your organization to view public APIs available to anyone.
+. From the https://www.anypoint.mulesoft.com/exchange/[Exchange], search for assets using the search filters. If you know the name of the asset, enter the name in the *Search* field. 
+. Select an asset from the search results view.
+. Review the description of the API.
 
-After you log into Exchange, you can create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets.
+After you log into Exchange, you can create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets. See xref:workflow-sharing-assets[Workflow: Publish APIs] for more information.
 
 == Try APIs
 

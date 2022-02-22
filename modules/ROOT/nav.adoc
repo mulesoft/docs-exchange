@@ -1,7 +1,7 @@
 .xref:index.adoc[Anypoint Exchange]
 * xref:index.adoc[About Exchange]
-* xref:asset-details.adoc[Asset Details]
 * xref:to-find-info.adoc[Search for Assets]
+* xref:asset-details.adoc[Asset Details]
 * xref:about-sharing-assets.adoc[Publish Assets]
  ** xref:workflow-sharing-assets.adoc[Workflow: Publish Assets]
  ** xref:to-create-an-asset.adoc[Create an Asset]

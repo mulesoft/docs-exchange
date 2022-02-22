@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Manage the versions of assets by viewing version detail, adding a new version, deleting a version, and changing the lifecycle state.
+Manage the versions of an asset by viewing version detail, adding a new version, deleting a version, and changing the lifecycle state.
 
 == View Version Detail
 You can view the following information about a version of an asset:
@@ -26,14 +26,14 @@ You can add major, minor, and patch versions for an asset.
 
 . Click *Manage versions* in the expanded asset details pane.
 . Click *Add new version*.
-. (Required) For APISelect a *Method* for the API specification.
-. (Required) From *File upload* click *Choose file*. For OAS, choose an OAS file with the .yaml or .json file types. For RAML, choose a RAML file with the .raml file type. Zip files are also accepted with the file to upload residing in the zip file’s root directory.
+. (Required for APIs) Select a *Method* for the API specification.
+. (Required for APIs) From *File upload* click *Choose file*. For OAS, choose an OAS file with the .yaml or .json file types. For RAML, choose a RAML file with the .raml file type. Zip files are also accepted with the file to upload residing in the zip file’s root directory.
 . Specify the *Main file* if the uploaded file is a zip. Otherwise, Exchange uses the same file name as the file you upload. 
 . (Required) In *Version* , enter a new version for the asset.
 . (Required) In *the *API version*, enter the version of the API specification.
 The Version and API version values must agree. You can only choose minor version updates for a given API version. To set a major Version number, also increase the API version. If you choose minor or patch version updates, the API versions should not changed.
 
-. (Optional) Select a *Lifecycle state*. Default is *Stable*.
+. (Optional) Select a *Lifecycle state*. The default is *Stable*.
 . Click *Publish*
 
 
