@@ -1,8 +1,10 @@
-= Create a Descriptor File Using the CLI
+= Create or Update a Descriptor File Using the CLI
 
 Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. You can create the descriptor file using the CLI or you can create it manually. Typically you should create the file using the CLI and if you need to set more options to control how the assets are published, you can update the file manually. 
 
 You can run the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
+
+== Create a Descriptor File
 
 To create a descriptor file using the CLI:
 
@@ -21,21 +23,25 @@ The result of the command depends on the presence and content of the designated 
 
 NOTE: You can alternatively create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See xref:create-descriptor-file-manually.adoc#manual-descriptor[Create or Update a Descriptor File Manually].
 
-[[create-descriptor-command]]
-== api-catalog create-descriptor
+include::anypoint-cli::partial$api-catalog.adoc[tag=create-descriptor-command]
 
-Following is a reference for the `api-catalog create-descriptor` command. 
+== Update a Descriptor File
 
-*Usage*
+To update a descriptor file using the CLI:
 
+. Navigate to the directory path that contains the APIs you want to catalog. 
+. Run the `api-catalog update-descriptor` command. The following example creates a descriptor file called `mydescriptor.yaml` in the current path:
++
 ----
-> api-catalog create-descriptor [options] 
+> api-catalog update-descriptor -f mydescriptor.yaml
 ----
 
-*Options*
+The result of the command depends on the presence and content of the designated descriptor file as follows:
 
-`-f, --file=file`
-  +
-  [default: `catalog.yaml`] 
-  + 
-  The name and location in which to save the generated catalog descriptor file.
+* No file or empty file: Error message xxx
+
+* Existing file with content: The command compares the APIs in the directory path to the list of APIs in the descriptor file and updates the descriptor file with new and updated API information.
+
+NOTE: You can alternatively update a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See xref:create-descriptor-file-manually.adoc#manual-descriptor[Create or Update a Descriptor File Manually].
+
+include::anypoint-cli::partial$api-catalog.adoc[tag=update-descriptor-command]
