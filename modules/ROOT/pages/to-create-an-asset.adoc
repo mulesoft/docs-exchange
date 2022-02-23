@@ -115,7 +115,7 @@ To create an API asset:
 If the file is a ZIP, the selected main file must be in the root directory of the ZIP file. If the file is not a ZIP or if the file is a ZIP file with only one main file, then the main file is selected automatically.
 +
 . (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
-. Select an option for *Lifecycle state*.
+. (Optional) Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
 To create a ZIP file and put the items in a folder into the root directory of the ZIP file, use a command like this. Replace `myfolder` with the name of your folder and `name.zip` with the name for the new ZIP file.
@@ -164,7 +164,7 @@ To create a custom asset:
 . Select the asset type *Custom* from the drop-down list.
 . (Optional) To share a file with users, choose the file.
 . (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, and *Version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. The advanced settings are most often used to change the asset version.
-. Select an option for *Lifecycle state*.
+. (Optional) Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
 
@@ -191,10 +191,10 @@ The name, icon, and description properties can only be changed in the Exchange a
 
 == Create a New Version of an Existing Asset
 
-If you have contributor or admin access to an asset, you can add a new version from the asset portal:
+If you have contributor or admin access to an asset, you can add a new version for an existing asset:
 
 . In Exchange, open the asset list and select the asset.
-. CLick *Add version*. 
+. Click *Add version*. 
 . For API assets, follow the steps for the corresponding API asst type:
 * REST API - RAML: Provide a RAML API specification file. * RAML specifications must be a RAML file (.raml).
 * REST API - OAS: Provide an OAS API specification file. *OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
@@ -206,7 +206,7 @@ If you have contributor or admin access to an asset, you can add a new version f
 * Select the main file of the API.
 . (Optional) Choose a file to upload.
 . Enter the *Version* (asset version).
-. Select on option for *Lifecycle state*.
+. (Optional) Select on option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
 The new version of the asset has the same name, icon, and description as the previous version. Any changes to these properties apply to all versions of the asset.

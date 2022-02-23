@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Manage the versions of an asset by viewing version detail, adding a new version, deleting a version, and changing the lifecycle state.
+Manage the versions of an asset by viewing version detail, adding a new version, deleting a version, and changing the lifecycle state for a version.
 
 == View Version Detail
 You can view the following information about a version of an asset:
@@ -22,7 +22,7 @@ To view the details of a version:
 
 == Add New Version of an Asset
 
-You can add major, minor, and patch versions for an asset. 
+If you have contributor or admin access to an asset, you can add a new version for an asset. The new version of the asset has the same name, icon, and description as the previous version. Any changes to these properties apply to all versions of the asset.
 
 . Click *Manage versions* in the expanded asset details pane.
 . Click *Add new version*.
