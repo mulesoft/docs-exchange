@@ -71,7 +71,7 @@ To use the Exchange API, follow the xref:exchange-api.adoc#promote-lifecycle-sta
 
 An asset in the `stable` state cannot add an asset in the `development` state as a dependency.
 
-If an asset in the `development` state depends on one or more other assets in the `development` state, Exchange does not prevent promoting that asset to the `stable` state. However, if a dependency in the `development` state is overwritten, the packages of the asset that was promoted to the `stable` state are not regenerated.
+If an asset in the `development` state depends on one or more other assets in the `development` state, Exchange does not allow promoting that asset to the `stable` state. All dependencies of the asset should be promoted to stable first. If an asset in the `development` state has dependencies in `development` state and the dependent is modified, the dependent asset is also not regenerated. It is the asset owner's responsibility to republish the dependent asset once it's dependencies are updated.
 
 == Create an Asset Using the Exchange API
 
