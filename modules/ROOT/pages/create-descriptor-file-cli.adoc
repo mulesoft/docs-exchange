@@ -30,7 +30,7 @@ include::anypoint-cli::partial$api-catalog.adoc[tag=create-descriptor-command]
 To update a descriptor file using the CLI:
 
 . Navigate to the directory path that contains the APIs you want to catalog. 
-. Run the `api-catalog update-descriptor` command. The following example creates a descriptor file called `mydescriptor.yaml` in the current path:
+. Run the `api-catalog update-descriptor` command. The following example updates a descriptor file called `mydescriptor.yaml` in the current path:
 +
 ----
 > api-catalog update-descriptor -f mydescriptor.yaml
@@ -38,10 +38,10 @@ To update a descriptor file using the CLI:
 
 The result of the command depends on the presence and content of the designated descriptor file as follows:
 
-* No file or empty file: Error message xxx
+* No file or empty file: An error message is shown because the update requires that a valid descriptor file exists. 
 
 * Existing file with content: The command compares the APIs in the directory path to the list of APIs in the descriptor file and updates the descriptor file with new and updated API information.
 
-NOTE: You can alternatively update a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See xref:create-descriptor-file-manually.adoc#manual-descriptor[Create or Update a Descriptor File Manually].
+NOTE: You can alternatively update a descriptor file manually instead of using the `api-catalog create-descriptor` command to update the file. See xref:create-descriptor-file-manually.adoc#manual-descriptor[Create or Update a Descriptor File Manually].
 
 include::anypoint-cli::partial$api-catalog.adoc[tag=update-descriptor-command]
