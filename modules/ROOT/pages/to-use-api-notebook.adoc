@@ -8,13 +8,13 @@ API Notebook lets you document an API's functionality with explanations that acc
 change the code and execute it by clicking the Play button in each code block. You can create a new API Notebook
 from the Exchange editor and use JavaScript code in the code blocks.
 
-image::ex2-api-notebook.png[Screenshot - Exchange API Notebook showing text above an interactive code block]
 
-. Use API Designer in Anypoint Platform to improve and test your RAML, OAS, or AsyncAPI API specification, and to publish the API specification to Anypoint Exchange.
-+
-Note: An OAS specification is converted into RAML so you can follow the RAML conventions in API Notebook.
+Use API Designer in Anypoint Platform to improve and test your RAML, OAS, or AsyncAPI API specification, and to publish the API specification to Anypoint Exchange.
+
+NOTE: An OAS specification is converted into RAML so you can follow the RAML conventions in API Notebook.
+
 . Click the asset to view details.
-. Click Edit and click the API Notebook icon image:ex2-api-notebook-icon.png[Icon - API Notebook in the Editor] in the editor.
+. Click *Edit documentation* and click the API Notebook icon image:ex2-api-notebook-icon.png[Icon - API Notebook in the Editor] in the editor.
 . Add a description for the asset.
 . In the Visual editor, the API Notebook icon creates a panel where you can add JavaScript code items. Enter the first letter of the function you want to add and Notebook lists the available functions starting with that letter.
 +

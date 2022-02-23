@@ -20,9 +20,7 @@ You cannot delete a policy asset that is applied to any managed API instances. O
 To delete a patch version of an asset:
 
 . In the asset details pane, click *Manage versions*.
-. Click the 3 dots icon and select *Delete version*.
-
-image::ex2-delete-version.png[Delete a version of an asset]
+. Click the three dots menu and select *Delete version*.
 
 To delete an entire asset, delete all of its patch versions.
 

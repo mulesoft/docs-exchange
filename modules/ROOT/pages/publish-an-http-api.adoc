@@ -5,14 +5,15 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-share-an-http-api.adoc
 
-The HTTP API lets Anypoint Exchange users with Private Exchange specify a placeholder for an endpoint. After you create the HTTP API endpoint, you can optionally manage the endpoint with API Manager.
+The HTTP API lets Anypoint Exchange users specify a placeholder for an endpoint. After you create the HTTP API endpoint, you can optionally manage the endpoint with API Manager.
 
 The HTTP API asset describes what the API endpoint does and how users can connect the API to their programs.
 
 In API Manager, users import the API from Exchange and can then associate proxies and manage policies and SLAs for the API.
 
-. In a Private Exchange, click *New*.
-. Give the API a name and in Asset Type, click *API - HTTP*.
+. In a Exchange, click *Publish new asset*.
+. Enter a name for the API
+. Choose an *HTTP API* from the *Asset types* drop-down menu.
 . Click *Publish*.
-. In the asset view, click *Edit* to provide a description.
-. Click *Save As Draft* and *Publish*.
+. In the asset view, click *Edit documentation* to provide a description.
+. Click *Save* and *Publish*.

@@ -12,9 +12,8 @@ REST Connect does not currently support custom TLS configurations.
 
 == Access Generated Connectors
 
-In Exchange, you can download the Mule 3 or Mule 4 connector from the Download menu:
+In Exchange, you can download the Mule 3 or Mule 4 connector from the *Download* menu:
 
-image::ex-downloads.png[]
 
 NOTE: After deploying a REST asset to Exchange, refresh your screen to ensure that all download options are available.
 

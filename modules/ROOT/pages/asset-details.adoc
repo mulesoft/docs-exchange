@@ -4,9 +4,11 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-When you click an asset, Anypoint Exchange provides detailed information.
+Select an asset in Exchange to view it's information:
 
-The left navigation area lists:
+image::exchange-asset-detail-view.png[Asset details]
+
+The left navigation bar lists:
 
 * Additional pages
 * Saved search terms
@@ -15,31 +17,46 @@ The left navigation area lists:
 * The HTTP functions in the REST specification (for a REST API)
 * Terms and conditions and APIs using this policy (for a policy)
 
-The right detail panel lists:
+The top asset detail pane provides the following information:
 
-* The asset type
-* When the asset was created and by which organization
+* Asset name 
+* Description
+* Asset type
+* Organization
+* Owner name
+* Owner email
+* When the asset was created 
 * When the asset was last published
-* A list of asset patch versions
-* The tags and categories of the asset
+* Version 
+* Categories  and tags of the asset
+* Lifecycle state
+* Share by inviting users to have access
+* For APIs, download specifications and view code
+* Add a new version
+* Create categories and tags
 
-For REST APIs, use the right panel to test the API by creating example calls and test data (mocking), so you can send data to the API and view the results.
 
-In the table of asset patch versions in the detail panel, each version has a drop-down menu with a *Version detail* option that shows information about that version, including who created it, when it was published, and any dependent assets.
+For REST APIs, use the right pane to test the API by creating example calls and test data (mocking), so you can send data to the API and view the results.
+
+Expand the asset details pane to view minor and patch versions of the asset. Use the *Manage versions* button to view a table of the asset patch versions. The table lists the version, instances, and the lifecycle state of dependent assets. You can add a new version of the asset, view version details, and delete a version. See xref:manage-versions.adoc[Manage Versions] Manage Versions for more information.
+
+The documentation pane displays the asset documentation. The documentation can be edited by an administrator or the asset owner by clicking *Edit documentation*. 
 
 == View Assets by Business Group
 
-A system administrator groups individuals within an organization into business groups. Each group has its own Exchange assets. To view the business groups, log in to Anypoint Platform and click a group name from the taskbar:
+A system administrator groups individuals within an organization into business groups. Each group has its own Exchange assets. 
+
+To view the business groups, log in to Anypoint Platform and click a group name from the taskbar:
 
 image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-down menu]
 
-An Exchange administrator sets the groups this menu shows to each user.
+An Exchange administrator sets the groups that this menu shows to each user.
 
 If you cannot find an asset in the current business group scopes, search in other scopes. In the left navigation menu click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
 
 == View REST API Elements in an Asset
 
-View RAML, OAS, or AsyncAPI API specification information, including resources and the methods in each resource, in the left navigation area.
+View RAML, OAS, or AsyncAPI API specification information, including resources and the methods in each resource, in the left navigation bar.
 
 . Click a method button:
 +
@@ -48,7 +65,7 @@ image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
 . Experiment with the API in the right side of a method view.
 +
 This is similar to using a program such as Postman to specify custom HTTP headers and test each API's method using the API's endpoint.
-. To connect the API you're viewing to one of your applications and use the API to send and receive data, click *Request Access*.
+. To connect the API to one of your applications and use the API to send and receive data, click *Request access*.
 
 == Test an API with API Notebook
 

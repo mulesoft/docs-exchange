@@ -17,7 +17,7 @@ You can view the following information about a version of an asset:
 To view the details of a version:
 
 . Click *Manage versions* in the expanded asset details pane.
-. Click the 3 dots icon and choose *Version detail* from the menu.
+. Click the three dots menu and choose *Version detail* from the menu.
 . Click *Close*.
 
 == Add New Version of an Asset
@@ -42,7 +42,7 @@ The Version and API version values must agree. You can only choose minor version
 You can delete versions of an asset. If you try to delete an asset version with dependent assets, Exchange shows a warning. Remove the dependencies and then delete the asset version.
 
 . Click *Manage versions* in the expanded asset details pane.
-. Click the 3 dots icon and choose *Delete version* from the menu.
+. Click the three dots menu and choose *Delete version* from the menu.
 . Click *Close*.
 
 

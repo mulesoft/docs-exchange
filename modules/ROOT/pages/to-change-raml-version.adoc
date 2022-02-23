@@ -24,14 +24,14 @@ NOTE: New asset versions count toward your organization's xref:to-create-an-asse
 
 == Deploy a New API Asset
 
-You can deploy an API asset directly into Exchange using the *New asset* button. In the *Publish a new asset* window, the Advanced section enables you to specify the version of the asset in the *Version* field, and the version of the API specification in the *API version* field.
+You can deploy an API asset directly into Exchange using the *Publish new asset* button. In the *Publish a new asset* window, the Advanced section enables you to specify the version of the asset in the *Version* field, and the version of the API specification in the *API version* field.
 
 
 Only change the API version when an updated API specification has changes that are not backward compatible from the new version to the old version.
 
 == Change RAML or OAS Version
 
-For RAML and OAS API specifications within Exchange, change the version number from within Exchange using the *Add version* button. You can also change the version using the *Manage versions* button. See "Manage Versions" for more information.
+For RAML and OAS API specifications within Exchange, change the version number from within Exchange using the *Add version* button. 
 
 . From the asset details pane, click *Add version*. 
 . (Required) Select a *Method* for the API specification.
@@ -44,7 +44,9 @@ The Version and API version values must agree. You can only choose minor version
 . (Optional) Select a *Lifecycle state*. Default is *Stable*.
 . Click *Publish*
 
-You can also change the version number for RAMLs as described in the next sections.
+You can also change the version using the *Manage versions* button. See xref:manage-versions.adoc[Manage Versions] for more information.
+
+Change the version number for RAMLs as described in the next sections.
 
 === Change a RAML Version from Its Specification
 
@@ -174,6 +176,5 @@ Use these rules to define an API version:
 Exchange provides documentation pages with information about an asset for API consumers. 
 You can create different documentation pages for each minor asset version.
 
-Select a minor asset version to edit with the menu next to the API name.
+Select a minor asset version to edit with the menu next to the version.
 
-image::ex-title-version-setting.png[The minor version selection menu]

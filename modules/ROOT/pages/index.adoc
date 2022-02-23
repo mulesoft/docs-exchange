@@ -19,7 +19,7 @@ Assets under the *Provided by MuleSoft* organization are created by MuleSoft and
 
 . From the https://www.anypoint.mulesoft.com/exchange/[Exchange], search for assets using filters. If you know the name of the asset, enter the name in the *Search* field. 
 . Select an asset from the search results view.
-. Review the description of the API.
+. Review the description of the asset.
 
 To create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets, log into Exchange. See xref:workflow-sharing-assets[Workflow: Publish APIs] for more information.
 

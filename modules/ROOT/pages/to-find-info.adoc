@@ -19,9 +19,7 @@ Find assets and refine search results in Exchange using the following filters:
 
 image:exchange-new-search.png[Exchange search experience]
 
-== Tags, Categories, and Ranking in the New Exchange Search Experience
-
-To filter search results by tags and categories in the new Exchange search experience, use the drop-down menus on the search page.
+Filter search results by entering keywords in the *Search all assets* field or selecting options from the filters. 
 
 == Save a Search
 
@@ -221,13 +219,11 @@ the reason is provided.
 |===
 
 
-== Search by Types, Tags, Categories, and Custom Fields in the Original Exchange Search Experience
+== Search by Types, Tags, Categories, and Custom Fields 
 
-In the original Exchange search experience, you can enter search text to search for assets, click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the type menu.
+You can enter search text to search for assets, click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the type menu.
 
-<<index.adoc#content-types,Content Types>> lists the different types of asset.
-
-The original Exchange search experience uses query language to search assets by tags, categories, and custom fields.
+Search uses query language to search assets by tags, categories, and custom fields.
 
 === Search by Tags
 
