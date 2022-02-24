@@ -30,24 +30,20 @@ NOTE: Before the August 2019 release, the versions of an asset could have differ
 
 When searching for assets, categories can be used to filter the search results. 
 
-. In the asset details pane, click *Add categories*. 
-. Select from the list of categories. 
-. Click *Add value*.
-. Select from the list of values. 
-. To remove a category, click the *trash can* icon.
+. In the asset details pane, click *Add categories*. If there are already categories added for the asset, click *Categories*.
+. Click *Add category* and select from the list of categories. 
+. Click *Add value* and select from the list of values. 
+. To remove a category, click the trash can icon.
 . To remove a value from a category, click the *X* from the value text.
 
 == Add and Remove Asset Tags
 
-When searching for assets, tags can be used to filter the search results 
+When searching for assets, tags can be used to filter the search results. Tags can only be lower case, and upper case tags are converted to lowercase. Special characters are permitted. 
 
-Tags can only be lower case, and upper case tags are converted to lowercase. Special characters are permitted. An asset can have any number of tags.
-
-. In the asset detail pane, click *Add tags*.
-. Enter the new tag.
-. Press the enter or return key on your keyboard. 
-. To remove a tag, click the *X* next to the tag text.
-
+. In the asset details pane, click *Add tags*. If there are already categories added for the asset, click *Tags*.
+. Click *Add a tag* and select from the list of tags. 
+. Press the enter or return key on your keyboard.
+. To remove tags, click *Tags*, then click the *X* next to the tag text.
 
 == Edit Asset Portal Documentation
 
@@ -82,7 +78,7 @@ Images uploaded before May 2019 can be accessed without authentication, and imag
 
 
 === Add Secondary Pages
-YOu can add more pages to the asset portal.
+You can add more pages to the asset portal.
 
 . Select *Edit documentation*.
 . In the left navigation bar, click *Add New Page*. 
