@@ -219,7 +219,7 @@ the reason is provided.
 |===
 
 
-== Search by Types, Tags, Categories, and Custom Fields 
+== Search by Types, Tags, Categories, Custom Fields, and Lifecycle States
 
 You can enter search text to search for assets, click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the type menu.
 
@@ -321,3 +321,6 @@ Examples:
 |field:this.* = value |this.is.my.key:some-value |No
 |field:this.* = some-* |this.is.my.key:some-value |No
 |===
+
+=== Search By Lifecycle States
+
