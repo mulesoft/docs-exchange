@@ -19,7 +19,7 @@ To view the details of a version:
 . Click *Manage versions* in the expanded asset details pane.
 . Click the three dots menu and choose *Version detail* from the menu.
 . Click *Close*.
-
+-- 
 == Add New Version of an Asset
 
 If you have contributor or admin access to an asset, you can add a new version for an asset. The new version of the asset has the same name, icon, and description as the previous version. Any changes to these properties apply to all versions of the asset.
