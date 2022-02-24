@@ -15,12 +15,12 @@ Find assets and refine search results in Exchange using the following filters:
 
 image:exchange-new-search.png[Exchange search experience]
 
-Filter search results by entering keywords in the *Search all assets* field or selecting options from the filters. 
 
 Search uses query language to search assets by tags, categories, custom fields, and lifecycle states.
 
 == Search by Custom Attributes
 
+Filter search results using custom attributes. Enter keywords in the *Search all assets* field or selecting options from the filters. 
 Search by fields using `field:"some key" = "some value"`.
 
 If the custom field has no spaces in the key or value, then double quotes are optional.
@@ -150,11 +150,11 @@ Exchange supports the following asset types:
 * SOAP APIs
 * Templates
 
-Search by asset type:
+To search by asset type:
 
 . Click *Any type*.
 . Select from the list. You can select more than one type.
-. Click *Apply*. Custom assets display in the search results.
+. Click *Apply*. The corresponding assets display in the search results.
 
 === Search API Specifications
 
@@ -252,7 +252,7 @@ Note that the last two searches are the same, because special characters are rem
 
 == Search by Organizations
 
-You can select which of the organizations visible to you to include in each search. By default, no organization is selected in the menu, and Exchange searches MuleSoft public assets and the assets of the root organization and its business groups.
+You can select which organizations to include in each search. By default, no organization is selected in the menu, and Exchange searches MuleSoft public assets and the assets of the root organization and its business groups.
 
 == Search by Categories
 
