@@ -21,24 +21,6 @@ image:exchange-new-search.png[Exchange search experience]
 
 Filter search results by entering keywords in the *Search all assets* field or selecting options from the filters. 
 
-== Save a Search
-
-To quickly find assets, save shortcuts to filters that you have applied. 
-
-. Enter a search term and click *Save this search*.
-. Enter the name for the search.
-. Select an option to save as *My search* or an organization search.
-. Click *Save search*.
-+
-Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
-. Save the search.
-. Confirm that your search appears in the saved searches in the left navigation bar.
-+
-Exchange lists search terms specific to your business group. Below those terms are saved searches you created:
-+
-image::ex2-saved-searches-groups.png[Saved Search Groups]
-
-
 == Searching in Organizations
 
 You can select which of the organizations visible to you to include in each search. By default, no organization is selected in the menu, and Exchange searches MuleSoft public assets and the assets of the root organization and its business groups.
@@ -223,7 +205,7 @@ the reason is provided.
 
 You can enter search text to search for assets, click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the type menu.
 
-Search uses query language to search assets by tags, categories, and custom fields.
+Search uses query language to search assets by tags, categories, custom fields, and lifecycle states.
 
 === Search by Tags
 
@@ -332,4 +314,34 @@ Find asset versions that are ready for consumption, in development, or have been
 . Select an option from the list and click *Apply*.
 . Assets in that state display in the search results.
 . (Optional) Click *Save this search* to create a shortcut for this search. Saved searches display in the left navigation bar.
+
+=== Save a Search
+
+To quickly find assets, save shortcuts to filters that you have applied. 
+
+. Enter a search term and click *Save this search*.
+. Enter the name for the search.
+. Select an option to save as *My search* or an organization search.
+. Click *Save search*.
++
+Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
+. Confirm that your search appears in the saved searches in the left navigation bar.
++
+Exchange lists search terms specific to your business group. Below those terms are saved searches you created:
++
+image::ex2-saved-searches-groups.png[Saved Search Groups]
+
+=== Rename or Delete a Saved Search
+
+Saved searches can be renamed or deleted.
+
+To rename a saved search: 
+
+. In the left navigation bar, click the three dots icon next to the name of the search that you want to rename.
+. Select *Rename*.
+. Enter a new name for the search.
+. Press Enter or Return on your keyboard.
+
+To delete a saved search, click the three dots icon and select *Delete*.
+
 
