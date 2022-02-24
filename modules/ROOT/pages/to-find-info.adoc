@@ -317,7 +317,7 @@ Find asset versions that are ready for consumption, in development, or have been
 
 === Save a Search
 
-To quickly find assets, save shortcuts to filters that you have applied. 
+To quickly find assets, save shortcuts to filters that you have applied. Saved searches are arranged in alphabetical order in the left navigation bar.
 
 . Enter a search term and click *Save this search*.
 . Enter the name for the search.
@@ -343,5 +343,4 @@ To rename a saved search:
 . Press Enter or Return on your keyboard.
 
 To delete a saved search, click the three dots icon and select *Delete*.
-
 
