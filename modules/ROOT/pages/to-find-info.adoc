@@ -322,7 +322,7 @@ Examples:
 |field:this.* = some-* |this.is.my.key:some-value |No
 |===
 
-=== Search By Lifecycle States
+=== Search by Lifecycle States
 
 In the software development lifecycle, assets are developed, released, and eventually deprecated. Each Exchange asset version moves through the lifecycle states of `development`, `stable`, and `deprecated`.
 
