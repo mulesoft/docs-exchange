@@ -40,7 +40,7 @@ When searching for assets, categories can be used to filter the search results.
 
 When searching for assets, tags can be used to filter the search results. Tags can only be lower case, and upper case tags are converted to lowercase. Special characters are permitted. 
 
-. In the asset details pane, click *Add tags*. If there are already categories added for the asset, click *Tags*.
+. In the asset details pane, click *Add tags*. If there are already tags added for the asset, click *Tags*.
 . Click *Add a tag* and select from the list of tags. 
 . Press the enter or return key on your keyboard.
 . To remove tags, click *Tags*, then click the *X* next to the tag text.
