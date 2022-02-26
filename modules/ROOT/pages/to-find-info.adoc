@@ -21,9 +21,9 @@ New Exchange search experience:
 
 image:exchange-new-search.png[Exchange search experience]
 
-== Tags, Categories,Lifecycle States and Ranking in the New Exchange Search Experience
+== Types, Categories, Tags, Lifecycle States and Ranking in the New Exchange Search Experience
 
-To filter search results by tags and categories in the new Exchange search experience, use the drop-down menus on the search page.
+To filter search results by type, categories, tags,and lifecycle states in the new Exchange search experience, use the drop-down menus on the search page.
 
 To select the ranking of search results in the new Exchange search experience, use the Sort by drop-down menu to choose Relevance (default), Name, Last modified, or Rating. Relevance sorts the matching results by where a match is found in the asset metadata, such as name, title, pages, and API specification metadata. API specification metadata includes endpoints and types.
 
