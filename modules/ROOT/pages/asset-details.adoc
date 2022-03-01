@@ -31,8 +31,8 @@ The top asset detail pane provides the following information:
 * Organization
 * Owner name
 * Owner email
-* When the asset was created 
-* When the asset was last published
+* When the asset was updated last 
+* When the asset was published
 * Version 
 * Categories  and tags of the asset
 * Lifecycle state
