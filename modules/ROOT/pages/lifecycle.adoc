@@ -10,7 +10,7 @@ In the software development lifecycle, assets are developed, released, and event
 
 An asset version in the `development` state is in an iterative process of design and development.
 
-If you re-publish an asset version in the `development` state with the same groupId, assetId, and version (GAV) and new metadata, the asset version is overwritten, including this asset version metadata:
+If you re-publish an asset version in the `development` state with the same groupId, assetId, and version (GAV) and new metadata, the asset version is overwritten, including the following pieces of asset version metadata:
 
 * files
 * dependencies
