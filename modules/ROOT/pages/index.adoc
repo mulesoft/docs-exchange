@@ -5,8 +5,6 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: general:getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc
 
-NOTE: The current content for the Exchange asset portal documents the new UI and search experience for the Exchange asset portal. The behavior for the previous UI and search experience will vary.
-
 Anypoint Exchange is a curated catalog of reusable assets such as APIs, policies, API spec fragments, API groups, templates, examples, custom assets, and integration assets such as connectors. You can catalog (publish), share, discover, learn about, and reuse assets within your organization to facilitate collaboration, boost productivity, and promote standards.
 
 image:ex2-old-search-landing.png[Exchange landing page]
