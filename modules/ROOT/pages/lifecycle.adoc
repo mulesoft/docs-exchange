@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-In the software development lifecycle, assets are developed, released, and eventually deprecated, and each Exchange asset version moves through the lifecycle states of `development`, `stable`, and `deprecated`.
+As an asset moves through the software development lifecycle (SDLC), it moves through various stages indicating its status. The lifecycle states feature allows each Exchange asset version to be more attuned to the stages of the SDLC, moving through the following states: `development`, `stable`, and `deprecated`. 
 
 == Development State
 
@@ -36,9 +36,9 @@ Anypoint Platform products other than Exchange, such as Anypoint API Designer, A
 
 == Stable State
 
-An asset version in the `stable` state is ready to use. It is not possible to re-publish or overwrite it.
+An asset version in the `stable` state is ready to be consumed. It is not possible to re-publish or overwrite a stable-state asset.
 
-Deleting an asset version in the `stable` state in the first seven days is a hard delete, enabling you to reuse the asset's name, groupId, assetId, and version. Deleting an asset version in the `stable` state after the first seven days is a soft delete, preventing you from reusing the asset's name, groupId, assetId, and version. After a hard delete or a soft delete, an asset cannot be recovered or undeleted.
+Deleting an asset version in the `stable` state in the first seven days is a hard delete, enabling you to reuse the asset's name, groupId, assetId, and version. Deleting an asset version in the `stable` state after the first seven days is a soft delete, preventing you from reusing the asset's name, groupId, assetId, and version. In both instances, once deleted the asset cannot be recovered.
 
 The Exchange backend and some API responses use the term `published` to mean `stable`.
 
@@ -63,7 +63,7 @@ These are the three possible state promotions:
 
 Promote an asset version's state either in the asset's Exchange portal or by using the Exchange API.
 
-In the asset's portal, click the lifecycle state button that displays the current state, and select the new state of *Development*, *Stable*, or *Deprecated*.
+In the asset's portal, click the lifecycle state button that displays the current state. Then, select the new state of *Development*, *Stable*, or *Deprecated*.
 
 To use the Exchange API, follow the xref:exchange-api.adoc#promote-lifecycle-state[Promote Lifecycle State] example.
 
@@ -71,7 +71,7 @@ To use the Exchange API, follow the xref:exchange-api.adoc#promote-lifecycle-sta
 
 An asset in the `stable` state cannot add an asset in the `development` state as a dependency.
 
-If an asset in the `development` state depends on one or more other assets in the `development` state, Exchange does not allow promoting that asset to the `stable` state. All dependencies of the asset should be promoted to stable first. If an asset in the `development` state has dependencies in `development` state and the dependent is modified, the dependent asset is also not regenerated. It is the asset owner's responsibility to republish the dependent asset once it's dependencies are updated.
+If an asset in the `development` state depends on one or more other assets in the `development` state, Exchange does not allow promoting that asset to the `stable` state. All dependencies of the asset should be promoted to stable first. If an asset in the `development` state has dependencies in `development` state and the dependent is modified, the dependent asset is also not regenerated. It is the asset owner's responsibility to republish the dependent asset once its dependencies are updated.
 
 == Create an Asset Using the Exchange API
 
