@@ -34,9 +34,6 @@
  ** xref:to-customize-portal.adoc[Customize an Exchange Public Portal]
  ** xref:portal-vanity-domain.adoc[Public Portal Vanity Domain]
  ** xref:to-manage-public-portal-resources.adoc[Manage Public Portal Resources]
-* xref:about-exchange1.adoc[About Exchange 1 (Old Version)]
- ** xref:exchange1.adoc[Using Exchange 1 (Old Version)]
- ** xref:exchange1-faq.adoc[FAQ: Exchange 1 (Old Version)]
 * xref:about-administration-tasks.adoc[Administrator Tasks]
  ** xref:to-share-an-asset.adoc[Share an Asset]
  ** xref:to-share-api-asset-to-portal.adoc[Publish an API to a Public Portal]
@@ -44,4 +41,4 @@
  ** xref:to-enable-the-request-access-button.adoc[Enable the Request Access Button to Display]
  ** xref:to-set-permissions.adoc[Set User Access Permissions]
  ** xref:cookies.adoc[About Exchange Cookies]
- ** xref:migrate.adoc[Migrate Assets from Exchange 1]
+

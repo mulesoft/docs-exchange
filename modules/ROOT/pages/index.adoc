@@ -9,21 +9,21 @@ NOTE: The current content for the Exchange asset portal documents the new UI and
 
 Anypoint Exchange is a curated catalog of reusable assets such as APIs, policies, API spec fragments, API groups, templates, examples, custom assets, and integration assets such as connectors. You can catalog (publish), share, discover, learn about, and reuse assets within your organization to facilitate collaboration, boost productivity, and promote standards.
 
-image:exchange-landing-page.png[Exchange landing page]
+image:ex2-old-search-landing.png[Exchange landing page]
 
 Use Exchange to discover, share, and incorporate assets and resources into your applications. Exchange helps you create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
 
-Exchange assets are accessible in Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), and Runtime Manager (APIs), and you can publish APIs from Design Center to Exchange.
+Exchange assets are accessible in Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), and Runtime Manager (applications), and you can publish APIs from Design Center to Exchange.
 
 Assets under the *Provided by MuleSoft* organization are created by MuleSoft and its partners, and are certified by Mulesoft. These assets are publicly available to all customers as well. However, all assets that are created by an organization and published into the organization's instance of Exchange, are private and not visible outside that organizationCustomers are responsible for any private assets they publish within their Exchange instance.
 
 == Get Started
 
-. From the https://www.anypoint.mulesoft.com/exchange/[Exchange], search for assets using filters. If you know the name of the asset, enter the name in the *Search* field. 
+. From the https://www.anypoint.mulesoft.com/exchange/[Exchange], search for assets. If you know the name of the asset, enter the name in the *Search* field. 
 . Select an asset from the search results view.
 . Review the description of the asset.
 
-To create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets, log into Exchange. See xref:workflow-sharing-assets[Workflow: Publish APIs] for more information.
+To create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets, log into Exchange. See xref:workflow-sharing-assets.adoc[Workflow: Publish APIs] for more information.
 
 == Try APIs
 
@@ -45,13 +45,10 @@ Using multiple languages with Unicode is supported fully throughout Exchange and
 
 This page applies to the current version, Exchange 2.
 
-Documentation on Exchange 1 is at xref:about-exchange1.adoc[About Exchange 1 (Old Version)]. We encourage Exchange 1 users to xref:migrate.adoc[migrate] to Exchange 2.
-
 The full version history is available in the xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes].
 
 == See Also
 
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
-* xref:migrate.adoc[Migrate Assets from Exchange 1]
 * https://forums.mulesoft.com[MuleSoft Forum]
 * https://help.mulesoft.com[MuleSoft Help Center]
