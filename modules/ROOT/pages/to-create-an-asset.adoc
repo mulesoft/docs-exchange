@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-publish-an-asset.adoc
 
-To share an API, API Group, policy, example, template, or connector in either an Anypoint Exchange private instance or an Exchange public portal, create an asset of that asset type.
+To share an API, API Group, policy, example, template, or connector in either an Anypoint Exchange private instance or an Exchange public portal, create an asset of that type.
 
 The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 

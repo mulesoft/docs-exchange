@@ -6,7 +6,7 @@ endif::[]
 
 NOTE: The current documentation provides information about the new UI for the asset details page, which includes the lifecycle states feature. The previous UI does not include lifecycle states. 
 
-The asset details page provides comprehensive information about an asset. You can view version agnostic information, share and download, view code, view and manage versions and lifecycle states, add categories and tags, edit the documentation, and test API endpoints. 
+The asset details page provides comprehensive information about an asset. You can view version agnostic information, share and download, view code, manage versions and lifecycle states, add categories and tags, edit the documentation, and test API endpoints. 
 
 See xref:workflow-sharing-assets.adoc[Workflow: Publish Assets] for more information about performing these functions.
 
@@ -31,8 +31,8 @@ The top asset detail pane provides the following information:
 * Organization
 * Owner name
 * Owner email
-* When the asset was updated last 
-* When the asset was published
+* Asset creation date 
+* Last updated date
 * Version 
 * Categories  and tags of the asset
 * Lifecycle state

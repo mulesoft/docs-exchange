@@ -10,13 +10,13 @@ In the software development lifecycle, assets are developed, released, and event
 
 An asset version in the `development` state is in an iterative process of design and development.
 
-If you re-publish an asset version in the `development` state with the same groupId, assetId, and version (GAV) and new metadata, the asset version is overwritten, including this asset version metadata:
+If you republish an asset version in the `development` state with the same groupId, assetId, and version (GAV) and new metadata, the asset version is overwritten, including the following version metadata:
 
 * files
 * dependencies
 * keywords
 
-Changing this information for an asset version in any other state requires creating a new version, which prevents re-publishing or overwriting the asset version.
+Changing this information for an asset version in any other state requires creating a new version, which prevents republishing or overwriting the asset version.
 
 Overwriting an asset version also updates the search index.
 
@@ -36,9 +36,9 @@ Anypoint Platform products other than Exchange, such as Anypoint API Designer, A
 
 == Stable State
 
-An asset version in the `stable` state is ready to use. It is not possible to re-publish or overwrite it.
+An asset version in the `stable` state is ready to be consumed. The asset cannot be republish or overwritten.
 
-Deleting an asset version in the `stable` state in the first seven days is a hard delete, enabling you to reuse the asset's name, groupId, assetId, and version. Deleting an asset version in the `stable` state after the first seven days is a soft delete, preventing you from reusing the asset's name, groupId, assetId, and version. After a hard delete or a soft delete, an asset cannot be recovered or undeleted.
+Deleting an asset version in the `stable` state in the first seven days is a hard delete, enabling you to reuse the asset's name, groupId, assetId, and version. Deleting an asset version in the `stable` state after the first seven days is a soft delete, preventing you from reusing the asset's name, groupId, assetId, and version. After a hard delete or a soft delete, an asset cannot be recovered.
 
 The Exchange backend and some API responses use the term `published` to mean `stable`.
 
@@ -71,7 +71,7 @@ To use the Exchange API, follow the xref:exchange-api.adoc#promote-lifecycle-sta
 
 An asset in the `stable` state cannot add an asset in the `development` state as a dependency.
 
-If an asset in the `development` state depends on one or more other assets in the `development` state, Exchange does not allow promoting that asset to the `stable` state. All dependencies of the asset should be promoted to stable first. If an asset in the `development` state has dependencies in `development` state and the dependent is modified, the dependent asset is also not regenerated. It is the asset owner's responsibility to republish the dependent asset once it's dependencies are updated.
+If an asset in the `development` state depends on one or more other assets in the `development` state, Exchange does not allow promoting that asset to the `stable` state. All dependencies of the asset should be promoted to stable first. If an asset in the `development` state has dependencies in `development` state and the dependent is modified, the dependent asset is also not regenerated. It is the asset owner's responsibility to republish the dependent asset once its dependencies are updated.
 
 == Create an Asset Using the Exchange API
 
