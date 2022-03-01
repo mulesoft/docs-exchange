@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-NOTE: The current documentation provides information about the new UI for the asset details page, which includes the lifecycle states feature. The previous UI does not include lifecycle states. Click the *Back to previous UI* button to switch back to the previous UI.
+NOTE: The current documentation provides information about the new UI for the asset details page, which includes the lifecycle states feature. The previous UI does not include lifecycle states. 
 
 The asset details page provides comprehensive information about an asset. You can view version agnostic information, share and download, view code, view and manage versions and lifecycle states, add categories and tags, edit the documentation, and test API endpoints. 
 
