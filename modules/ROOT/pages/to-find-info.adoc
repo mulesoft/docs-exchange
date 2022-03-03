@@ -231,7 +231,7 @@ the reason is provided.
 |Optimized API |optimized-api |sales:/connect |Yes
 |===
 
-== Search by Types, Tags, Categories, and Custom Fields in the Orginal  Exchange Search Experience
+== Search by Types, Tags, Categories, and Custom Fields in the Orginal Exchange Search Experience
 
 In the original Exchange search experience, you can enter search text to search for assets. Click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the type menu.
 

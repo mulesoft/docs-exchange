@@ -15,5 +15,6 @@ In API Manager, users import the API from Exchange and can then associate proxie
 . Enter a name for the API
 . Choose an *HTTP API* from the *Asset types* drop-down menu.
 . Click *Publish*.
-. In the asset view, click *Edit documentation* to provide a description.
-. Click *Save* and *Publish*.
+. In the asset view, click the pencil icon to provide a description and click the check icon.
+. To add documentation for the API, click *Edit documentation*.
+. Click *Publish*.

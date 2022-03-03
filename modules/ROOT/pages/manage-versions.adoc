@@ -18,7 +18,6 @@ To view the details of a version:
 
 . Click *Manage versions* in the expanded asset details pane.
 . Click the three dots menu and choose *Version detail* from the menu.
-. Click *Close*.
 -- 
 == Add New Version of an Asset
 
@@ -43,7 +42,7 @@ You can delete versions of an asset. If you try to delete an asset version with 
 
 . Click *Manage versions* in the expanded asset details pane.
 . Click the three dots menu and choose *Delete version* from the menu.
-. Click *Close*.
+. Click *Delete version* from the confirmation dialog.
 
 
 == Change Lifecycle State for a Version of an Asset
