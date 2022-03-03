@@ -285,7 +285,7 @@ A new asset version is in the `development` state or the default `stable` state.
 
 To create an asset version in the `stable` state, use Maven normally.
 
-To create an asset version in the `development` state, use the Anypoint Exchange Maven Facade API version 3 and set the version of the asset to `SNAPSHOT`.
+To create an asset version in the `development` state, use the Anypoint Exchange Maven Facade API version 3 and set the version of the asset to `SNAPSHOT`. This behavior allows for backward compatibility with legacy APIs.
 
 A `SNAPSHOT` asset is permanently in the `development` state and cannot be promoted to any other state.
 

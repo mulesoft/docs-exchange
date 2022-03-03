@@ -20,7 +20,7 @@ Changing this information for an asset version in any other state requires creat
 
 Overwriting an asset version also updates the search index.
 
-The Exchange user interface and APIs change some asset version information for asset versions in any state. This information is not changed by overwriting an asset version in the `development` state. This information includes:
+The following information is not overwritten when republishing an asset in the development state:
 
 * Asset type
 * Tags
@@ -32,7 +32,7 @@ Deleting an asset version in the `development` state is always a hard delete, en
 
 The public portal does not show asset versions in the `development` state.
 
-Anypoint Platform products other than Exchange, such as Anypoint API Designer, Anypoint Flow Designer, or Anypoint Studio, do not consume asset versions in the `development` state.
+Anypoint Platform products other than Exchange, such as Anypoint Flow Designer or Anypoint Studio, do not consume asset versions in the `development` state.
 
 == Stable State
 
