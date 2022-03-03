@@ -12,9 +12,9 @@ An asset version in the `development` state is in an iterative process of design
 
 If you republish an asset version in the `development` state with the same groupId, assetId, and version (GAV) and new metadata, the asset version is overwritten, including the following version metadata:
 
-* files
-* dependencies
-* keywords
+* Files
+* Dependencies
+* Keywords
 
 Changing this information for an asset version in any other state requires creating a new version, which prevents republishing or overwriting the asset version.
 
@@ -22,11 +22,11 @@ Overwriting an asset version also updates the search index.
 
 The Exchange user interface and APIs change some asset version information for asset versions in any state. This information is not changed by overwriting an asset version in the `development` state. This information includes:
 
-* asset type
-* tags
-* categories
-* custom fields
-* documentation pages
+* Asset type
+* Tags
+* Categories
+* Custom fields
+* Documentation pages
 
 Deleting an asset version in the `development` state is always a hard delete, enabling you to reuse the asset's name, groupId, assetId, and version.
 
@@ -36,7 +36,7 @@ Anypoint Platform products other than Exchange, such as Anypoint API Designer, A
 
 == Stable State
 
-An asset version in the `stable` state is ready to be consumed. The asset cannot be republish or overwritten.
+An asset version in the `stable` state is ready to be consumed. The asset cannot be republished or overwritten.
 
 Deleting an asset version in the `stable` state in the first seven days is a hard delete, enabling you to reuse the asset's name, groupId, assetId, and version. Deleting an asset version in the `stable` state after the first seven days is a soft delete, preventing you from reusing the asset's name, groupId, assetId, and version. After a hard delete or a soft delete, an asset cannot be recovered.
 
@@ -60,6 +60,8 @@ These are the three possible state promotions:
 . `development` to `stable`
 . `stable` to `deprecated`
 . `deprecated` to `stable`
+
+Only Administrators can promote an asset to development, stable, and deprecated states. Contributors can only promote an asset to development and stable. 
 
 Promote an asset version's state either in the asset's Exchange portal or by using the Exchange API.
 
