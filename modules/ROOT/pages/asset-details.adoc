@@ -30,8 +30,8 @@ The top asset detail pane provides the following information:
 * Description
 * Asset type
 * Organization
-* Owner name
-* Owner email
+* Contact name
+* Contact email
 * Asset creation date 
 * Last updated date
 * Version 
