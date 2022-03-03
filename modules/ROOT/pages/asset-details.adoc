@@ -43,7 +43,7 @@ The top asset detail pane provides the following information:
 
 For REST APIs, use the right pane to create example calls and mock data to test the API.
 
-From the asset details pane, you can collapse and expand metadata such as major and minor versions, last published, and categories and tags. Use the *Manage versions* button to view a table of the asset patch versions. The table lists the version, instances, and the lifecycle state of dependent assets. You can add a new version of the asset, view version details, and delete a version. See xref:manage-versions.adoc[Manage Versions] for more information.
+From the asset details pane, you can collapse and expand metadata such as version, last published, and categories and tags. See version information by clicking *View versions*. Administrators can use *Manage versions* to add a new version of the asset, view version details, and delete a version. See xref:manage-versions.adoc[Manage Versions] for more information.
 
 The documentation page displays the asset documentation. The documentation can be edited by an administrator or the asset owner by clicking *Edit documentation*. 
 
