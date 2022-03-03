@@ -303,6 +303,8 @@ In a terminal:
 
 If you execute `mvn clean deploy` multiple times, the asset is overwritten without any errors.
 
+Note: An asset that is in development state and is not an SNAPSHOT version cannot be consumed through Maven.
+
 == Publish a Custom Asset
 
 Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is 0.0.13.
