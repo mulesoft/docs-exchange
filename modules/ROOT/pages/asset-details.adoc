@@ -4,9 +4,10 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-NOTE: The current documentation provides information about the new UI for the asset details page, which includes the lifecycle states feature. The previous UI does not include lifecycle states. 
 
-The asset details page provides comprehensive information about an asset. You can view version agnostic information, share and download, view code, manage versions and lifecycle states, add categories and tags, edit the documentation, and test API endpoints. 
+The asset details page provides comprehensive information about an asset. You can view version agnostic information, share the asset with others or publish it on the public portal, download a copy of the asset, view code, manage versions and lifecycle states, add categories and tags, edit the documentation, and test API endpoints. 
+
+The current documentation provides information about the new UI for the asset details page, which includes the lifecycle states feature. The previous UI does not include lifecycle states. 
 
 See xref:workflow-sharing-assets.adoc[Workflow: Publish Assets] for more information about performing these functions.
 
@@ -34,13 +35,13 @@ The top asset detail pane provides the following information:
 * Asset creation date 
 * Last updated date
 * Version 
-* Categories  and tags of the asset
+* Categories and tags of the asset
 * Lifecycle state
 * Share by inviting users to have access
 * For APIs, download specifications and view code
 * Add a new version
 
-For REST APIs, use the right pane to test the API by creating example calls and test data (mocking), so you can send data to the API and view the results.
+For REST APIs, use the right pane to create example calls and mock data to test the API.
 
 From the asset details pane, you can collapse and expand metadata such as major and minor versions, last published, and categories and tags. Use the *Manage versions* button to view a table of the asset patch versions. The table lists the version, instances, and the lifecycle state of dependent assets. You can add a new version of the asset, view version details, and delete a version. See xref:manage-versions.adoc[Manage Versions] for more information.
 

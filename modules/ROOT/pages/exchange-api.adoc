@@ -246,15 +246,15 @@ curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/or
 [[set-lifecycle-state]]
 === Set Lifecycle State
 
-A new asset version is in the `development` state or the default `stable` state. The `stable` state is also known as `published`. An asset version must be in the `stable` state before it is in the `deprecated` state.
+A new asset version is in either the `development` state or the default `stable` state (also known as `published`). An asset version must be stable before being deprecated.
 
-To use the Exchange API version 2 to create an asset and set its lifecycle state, add the property `status` to the multipart request. If the state is not specified, the asset is created with the default `stable` state.
+To use Exchange API version 2 to create an asset and set its lifecycle state, add the property `status` to the multipart request. If the state is not specified, the asset is created with the default `stable` state.
 
-REST API asset example:
+The following REST API asset example shows how to create an asset and set its lifecycle state:
 
 . Log in to Anypoint Platform and download the https://anypoint.mulesoft.com/exchange/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/assets/68ef9520-24e9-4cf2-b2f5-620025690913/training-american-flights-api/1.0.0/files/fat-raml/zip[example file].
 . Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with the local path of the downloaded file.
-. Replace `ANYPOINT_TOKEN`, `:organizationId`, `:groupId`, `:assetId`, and `:version` with your information.
+. Replace `ANYPOINT_TOKEN`, `:organizationId`, `:groupId`, `:assetId`, and `:version` with values specific to your implementation.
 . Set the property `status` to `development` or `published`.
 . Execute:
 
@@ -341,7 +341,7 @@ xref:lifecycle.adoc[Asset lifecycle states] have three possible promotions:
 
 The `stable` state is also known as `published`.
 
-In this example, replace `ANYPOINT_TOKEN`, `:groupId`, `:assetId`, and `:version` with your information, and replace `:status` with `development`, `published`, or `deprecated`.
+In this example, replace `ANYPOINT_TOKEN`, `:groupId`, `:assetId`, and `:version` with values specific to your implementation, and replace `:status` with one of `development`, `published`, or `deprecated`.
 
 [source,console]
 ----

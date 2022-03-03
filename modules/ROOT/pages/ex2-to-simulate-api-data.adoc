@@ -4,11 +4,11 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Exchange lets you provide simulated data for testing OAS or RAML REST APIs. The simulated data is provided in the Mocking Service feature.
+Exchange lets you provide simulated data for testing OAS or RAML REST APIs. The simulated data is provided in the mocking service feature.
 
-The following example shows how the Mocking Service simulates the data for a REST API:
+The following example shows how the mocking service simulates the data for a REST API:
 
-* In the API console that appears on the right side of an asset detail screen. The Mocking Service lets you add simulated data to an API function and test the API with the data.
+* In the API console that appears on the right side of an asset detail screen. The mocking service lets you add simulated data to an API function and test the API with the data.
 +
 image::exchange-rest-api-mocking-service.png[Mocking in API Console]
 
@@ -19,7 +19,7 @@ This page shows two URLs. The URL on the left is also used in Design Center and 
 +
 image::exchange-patch-version-mocking.png[Mocking instance in versions]
 +
-* Listed on the *API instances* page that also lists the Mocking Service URL.
+* Listed on the *API instances* page that also lists the mocking service URL.
 +
 image::ex2-api-instances.png[API Instances Mocking Service URL]
 

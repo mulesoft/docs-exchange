@@ -67,7 +67,7 @@ In the asset's documentation page, click the lifecycle state button that display
 
 To use the Exchange API, follow the xref:exchange-api.adoc#promote-lifecycle-state[Promote Lifecycle State] example.
 
-== Dependencies
+== State Dependencies
 
 An asset in the `stable` state cannot add an asset in the `development` state as a dependency.
 
