@@ -63,7 +63,7 @@ These are the three possible state promotions:
 
 Promote an asset version's state either in the asset's Exchange portal or by using the Exchange API.
 
-In the asset's portal, click the lifecycle state button that displays the current state, and select the new state of *Development*, *Stable*, or *Deprecated*.
+In the asset's documentation page, click the lifecycle state button that displays the current state, and select the new state of *Development*, *Stable*, or *Deprecated*.
 
 To use the Exchange API, follow the xref:exchange-api.adoc#promote-lifecycle-state[Promote Lifecycle State] example.
 
