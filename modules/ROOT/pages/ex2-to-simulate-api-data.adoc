@@ -10,7 +10,7 @@ The following example shows how the Mocking Service simulates the data for a RES
 
 * In the API console that appears on the right side of an asset detail screen. The Mocking Service lets you add simulated data to an API function and test the API with the data.
 +
-image::exchange-rest-api-mocking-service.png[Mocking  in API Console]
+image::exchange-rest-api-mocking-service.png[Mocking in API Console]
 
 +
 This page shows two URLs. The URL on the left is also used in Design Center and is public. The URL on the right is used only in Exchange and requires authentication.
