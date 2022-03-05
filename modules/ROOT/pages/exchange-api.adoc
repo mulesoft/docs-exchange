@@ -41,10 +41,13 @@ Perform these tasks to publish an asset to Exchange and add metadata using Excha
 .. <<specify-asset-properties>>
 .. <<sync-and-async-publication>>
 .. <<set-mutable-data>>
+.. <<set-with-json>>
+.. <<set-lifecycle-state>>
 . <<describe-your-assets>>
 .. <<add-tags>>
 .. <<add-categories>>
 .. <<add-custom-fields>>
+.. <<promote-lifecycle-state>>
 .. <<update-asset-metadata>>
 . <<add-update-doc-pages>>
 .. <<add-new-page-draft>>
@@ -207,6 +210,7 @@ curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/or
 --form 'files.docs.zip=@"/file-path/docs.zip"'
 ----
 
+[[set-with-json]]
 === Set Categories and Fields as JSON Collections
 
 To set or change categories and custom fields in JSON format within the multipart form, send an array of objects that contain the properties key and value.
@@ -238,6 +242,37 @@ curl --location --request POST 'https://anypoint.mulesoft.com/exchange/api/v2/or
 --form 'fields.fieldKey2="value3"' \
 --form 'files.docs.zip=@"/file-path/docs.zip"'
 ```
+
+[[set-lifecycle-state]]
+=== Set Lifecycle State
+
+A new asset version is in either the `development` state or the default `stable` state (also known as `published`). An asset version must be stable before being deprecated.
+
+To use Exchange API version 2 to create an asset and set its lifecycle state, add the property `status` to the multipart request. If the state is not specified, the asset is created with the default `stable` state.
+
+The following REST API asset example shows how to create an asset and set its lifecycle state:
+
+. Log in to Anypoint Platform and download the https://anypoint.mulesoft.com/exchange/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/assets/68ef9520-24e9-4cf2-b2f5-620025690913/training-american-flights-api/1.0.0/files/fat-raml/zip[example file].
+. Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with the local path of the downloaded file.
+. Replace `ANYPOINT_TOKEN`, `:organizationId`, `:groupId`, `:assetId`, and `:version` with values specific to your implementation.
+. Set the property `status` to `development` or `published`.
+. Execute:
+
+[source,console]
+----
+curl -v \
+    -H 'Authorization: bearer ANYPOINT_TOKEN' \
+    -H 'x-sync-publication: true' \
+    -F 'name=RAML asset name' \
+    -F 'description=Description of the asset' \
+    -F 'keywords=best, raml' \
+    -F 'status=development' \
+    -F 'properties.mainFile=american-flights-api.raml' \
+    -F 'properties.apiVersion=v1' \
+    -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
+----
+
+To use the Exchange API version 1 to create an asset and set its lifecycle state, send the status property as a field.
 
 [[describe-your-assets]]
 == Describe Your Assets
@@ -293,6 +328,26 @@ https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/
   -d '{
     "tagValue": ["OAS"]
   }'
+----
+
+[[promote-lifecycle-state]]
+=== Promote Lifecycle State
+
+xref:lifecycle.adoc[Asset lifecycle states] have three possible promotions:
+
+. `development` to `stable`
+. `stable` to `deprecated`
+. `deprecated` to `stable`
+
+The `stable` state is also known as `published`.
+
+In this example, replace `ANYPOINT_TOKEN`, `:groupId`, `:assetId`, and `:version` with values specific to your implementation, and replace `:status` with one of `development`, `published`, or `deprecated`.
+
+[source,console]
+----
+curl -X https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/status \
+    -H 'Authorization: bearer ANYPOINT_TOKEN' \
+    -d '{"status": ":status"}'
 ----
 
 [[update-asset-metadata]]

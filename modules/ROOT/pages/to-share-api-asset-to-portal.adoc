@@ -25,11 +25,9 @@ Follow these steps to add an asset to a portal and make the asset public.
 Adding an asset to a portal does not delete the asset. It is still available internally.
 
 . Select an API asset to show its details.
-. Select *Share* -> *Add to the public portal*.
-. (Optional) If you decide not to put the asset in the public portal, select *Share Internally* to return to the previous *Share* menu.
-. (Optional) If you wish to manage instance visibility before proceeding, select *API Instances*. After following this link, you are returned to the previous *Share* menu.
+. Select *Share* and choose *Public Publish it on the public portal*.
 . Select the version of the asset you want to publish in the public portal.
-. Select *Share*.
+. Select *Save*.
 
 If no action occurs, refresh your browser, log in again, and add the asset again.
 
@@ -41,7 +39,7 @@ Removing an asset from a portal does not delete the asset. It is still available
 
 . Select the asset in Exchange and select *Share* -> *Add to the Public Portal*.
 . Uncheck the version field checkbox.
-. Select *Share*.
+. Select *Save*.
 . In Exchange, refresh the browser screen.
 . In the asset's *Overview* the *Visibility* setting is now *Private*.
 

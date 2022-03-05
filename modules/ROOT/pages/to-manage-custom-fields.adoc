@@ -10,9 +10,8 @@ A custom field is a key-value pair that can be added to an asset version.
 
 Custom fields are managed, which means each asset type has a specific schema defined by an administrator. This enables Exchange to validate the values. For example, an asset can have a custom field configuration named "SupportEndDate," and Exchange can ensure that the value set for this field is a valid date.
 
-Exchange shows custom fields in an asset's overview section. In this example *SubType* is an enum, *Rating* is a number, *DueDate* is a date, *Email* is a text field, *SupportCases* is a list of numbers, and *Maintainers* is a list of strings.
+Exchange displays custom fields in the asset detail pane. 
 
-image::custom-fields.png[]
 
 == Get an Access Token
 

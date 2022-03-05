@@ -5,75 +5,46 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: general:getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc
 
-Anypoint Exchange provides the benefit of being able to discover, share, and incorporate assets and resources into your applications. Anypoint Exchange helps you create API developer portals, view and test APIs, simulate data to APIs (Mocking Service), create assets, and use API Notebooks to describe and test API functions.
+Anypoint Exchange is a curated catalog of reusable assets such as APIs, policies, API spec fragments, API groups, templates, examples, custom assets, and integration assets such as connectors. You can catalog (publish), share, discover, learn about, and reuse assets within your organization to facilitate collaboration, boost productivity, and promote standards.
+
+image:ex2-old-search-landing.png[Exchange landing page]
+
+Use Exchange to discover, share, and incorporate assets and resources into your applications. Exchange helps you create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
+
+Exchange assets are accessible from many places like Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). APIs can be published from Design Center to Exchange.
+
+Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by Mulesoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
 == Get Started
 
-. From the public https://www.anypoint.mulesoft.com/exchange/[Exchange], click an asset and view its description.
-. Click Login to view a private Exchange for your organization.
-. After you log in, click Public Portal in your organization to view public APIs available to anyone.
+You can get started either by searching for an existing asset or creating a new one.
 
-After you log into Exchange, you can create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets.
+. From https://www.anypoint.mulesoft.com/exchange/[Exchange], either search by type of assets or enter the name of a known asset in the *Search* field.
+. Select an asset from the search results view.
+. Review the description of the asset.
 
-== Try APIs
+To create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets, log into Exchange. See xref:workflow-sharing-assets.adoc[Workflow: Publish APIs] for more information.
 
-. Click All Types > REST APIs and choose any API.
+== Test APIs
+
+You can test APIs using the mocking service.
+
+. Click the *All Types* filter, select the REST APIs option, and click *Apply*.
 . Click the asset and notice how the API functions appear in the left
-navigation area. Exchange lets you view the functions in an API.
+navigation bar. 
 . Click a function and more information appears. At the right side of the screen, you can test the API by entering sample values to send to the API and get responses from the API.
 
-== Need More Information on an Asset?
+== More Information 
 
 Click the Helpful Links item in the left navigation area for links to documentation.
-
-== Exchange Content
-
-Exchange assets are accessible in Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API Groups, and policies), and Runtime Manager (APIs), and you can publish APIs from Design Center to Exchange.
-
-MuleSoft certifies its public content and reviews and approves partner connectors. All private content is internal to an organization and not visible outside that organization. Customers are responsible for any private content they publish within their Exchange instance.
 
 == Language Support
 
 Using multiple languages with Unicode is supported fully throughout Exchange and in all metadata fields, including asset names, descriptions, markdown pages, categories, tags, and reviews.
 
-[[content-types]]
-== Content Types
-
-Both the public and private content in Exchange can consist of the following kinds of elements:
-
-* Connectors - Packaged connectivity to an endpoint developed and deployed on Anypoint Platform with third-party APIs and standard integration protocols
-+
-Use connectors within your application's flows to send and receive data using a protocol or specific API. Anypoint Studio comes with many bundled connectors, and Exchange has many more.
-* Templates - Packaged integration patterns built on best practices to address common use cases
-+
-You can add your information such as user credentials to complete the template's use case or solution, and you can customize or extend templates as needed.
-* Examples - Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution
-* Policies - Configuration modules to extend the functionality of an API and enforce capabilities such as security
-* REST APIs - A RAML file or OAS file that specifies an API
-+
-These APIs can be referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
-* AsyncAPI specifications - An AsyncAPI specification file that specifies an event-driven API
-* SOAP APIs - A WSDL file that specifies an API
-* HTTP APIs - A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager
-* API Groups - A set of APIs bundled into a single asset
-+
-Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
-* API Spec Fragments - A RAML document that has a version and an identifier, but is not in itself a complete RAML specification
-+
-API spec fragments are also known as RAML fragments.
-* Custom - A description and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation
-
-== Versions
-
-This page applies to the current version, Exchange 2.
-
-Documentation on Exchange 1 is at xref:about-exchange1.adoc[About Exchange 1 (Old Version)]. We encourage Exchange 1 users to xref:migrate.adoc[migrate] to Exchange 2.
-
-The full version history is available in the xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes].
 
 == See Also
 
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
-* xref:migrate.adoc[Migrate Assets from Exchange 1]
 * https://forums.mulesoft.com[MuleSoft Forum]
 * https://help.mulesoft.com[MuleSoft Help Center]

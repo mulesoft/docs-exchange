@@ -199,6 +199,30 @@ The output for this example is:
 }
 ----
 
+== Asset Lifecycle State
+
+To consume an asset and its lifecycle state, replace `ANYPOINT_TOKEN`, `:groupId`, `:assetId`, and `:version` with your information, and execute this command:
+
+[source,console]
+----
+curl -X POST \
+  https://anypoint.mulesoft.com/graph/api/v2/graphql \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -H 'content-type: application/json' \
+  -d '{"query":"{asset(groupId: \":groupId\",assetId: \":assetId\",version: \":version\"){groupId assetId version status}}"}'
+----
+
+To search for an asset by lifecycle state, replace `ANYPOINT_TOKEN` with your information, replace `[development, published, deprecated]` with your list of desired lifecycle states, and execute this command:
+
+[source,console]
+----
+curl -X POST \
+  https://anypoint.mulesoft.com/graph/api/v2/graphql \
+  -H 'Authorization: bearer ANYPOINT_TOKEN' \
+  -H 'content-type: application/json' \
+  -d '{"query":"{assets(status:[development, published, deprecated]){groupId assetId version status}}"}'
+----
+
 == Reference: Query Filter Parameters
 
 You can specify filters to display additional information about each asset.
