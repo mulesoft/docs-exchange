@@ -12,12 +12,30 @@ API Catalog CLI enables you to catalog your API specifications, documentation fi
 To get started with API Catalog CLI: 
 
 . Ensure MuleSoft has enabled the API Catalog entitlement for your Anypoint Platform organization.
-. <<Install API Catalog CLI,Install>> the API Catalog CLI.
 . <<Configure Catalog Permissions in Anypoint Access Management, Configure>> required catalog permissions.
+. <<Install API Catalog CLI,Install>> the API Catalog CLI.
 . <<Create a Descriptor File Using the CLI,Create a descriptor file>> to identify the APIs to publish.
 . <<Publish APIs Using the CLI,Catalog an asset>> using the API Catalog CLI and view it in Anypoint Exchange.
 
 TIP: Consider testing the process end-to-end locally before integrating it into your CI/CD pipeline or custom scripts. 
+
+[config-permissions]
+== Configure Catalog Permissions in Anypoint Access Management
+
+You must enable the API Catalog Contributor permission for the Anypoint Platform organization user. 
+
+=== Prerequisites
+
+* The API Catalog entitlement must be set by MuleSoft for your Anypoint Platform organization. 
+
+NOTE: Permissions must be set by an Anypoint Platform user with administrative permission. 
+
+To enable the API Catalog Contributor permission:
+
+. In Anypoint Platform, navigate to *Access Management*.
+. Select *Users*.
+. Select the user for which you want to enable the permission.  
+. Select the *API Catalog Contributor* permission. 
 
 [install-cat-cli]
 == Install API Catalog CLI 
@@ -51,24 +69,6 @@ api-catalog publish-asset --help
 ----
 
 NOTE: You can optionally configure the `api-catalog autocomplete` command so that you can use the tab key with a partially typed command to autocomplete it. See <<Configure Command Autocompletion>> for more details.
-
-[config-permissions]
-== Configure Catalog Permissions in Anypoint Access Management
-
-You must enable the API Catalog Contributor permission for the Anypoint Platform organization user. 
-
-=== Prerequisites
-
-* The API Catalog entitlement must be set by MuleSoft for your Anypoint Platform organization. 
-
-NOTE: Permissions must be set by an Anypoint Platform user with administrative permission. 
-
-To enable the API Catalog Contributor permission:
-
-. In Anypoint Platform, navigate to *Access Management*.
-. Select *Users*.
-. Select the user for which you want to enable the permission.  
-. Select the *API Catalog Contributor* permission. 
 
 [create-desc-file-cli]
 == Create a Descriptor File Using the CLI
