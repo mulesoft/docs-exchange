@@ -43,6 +43,7 @@ Perform these tasks to publish an asset to Exchange and add metadata using Excha
 .. <<set-mutable-data>>
 .. <<set-with-json>>
 .. <<set-lifecycle-state>>
+.. <<uploading-asset-icons>>
 . <<describe-your-assets>>
 .. <<add-tags>>
 .. <<add-categories>>
@@ -273,6 +274,23 @@ curl -v \
 ----
 
 To use the Exchange API version 1 to create an asset and set its lifecycle state, send the status property as a field.
+
+[[uploading-asset-icons]]
+=== Uploading Asset Icons
+
+If any of the files uploaded have their classifier set to `icon`, then that file will be used as the asset's icon in the Exchange UI. Make sure the packaging matches the correct file format (set it to png if the image is of png format). The first icon found will by used as the asset icon, any additional icons will be uploaded as regular asset files.
+
+[source,console]
+----
+curl -v \
+    -H 'Authorization: bearer ANYPOINT_TOKEN' \
+    -H 'x-sync-publication: true' \
+    -F 'name=My asset name' \
+    -F 'description=Asset with an uploaded icon' \
+    -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \
+    -F 'files.icon.png=@/file-path/my-asset-icon.png' \
+https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
+----
 
 [[describe-your-assets]]
 == Describe Your Assets
