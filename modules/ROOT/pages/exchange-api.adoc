@@ -275,10 +275,19 @@ curl -v \
 
 To use the Exchange API version 1 to create an asset and set its lifecycle state, send the status property as a field.
 
-[[uploading-asset-icons]]
-=== Uploading Asset Icons
+[[upload-asset-icons]]
+=== Upload Asset Icons
 
-If any of the files uploaded have their classifier set to `icon`, then that file will be used as the asset's icon in the Exchange UI. Make sure the packaging matches the correct file format (set it to png if the image is of png format). The first icon found will by used as the asset icon, any additional icons will be uploaded as regular asset files.
+You can upload an image to use as an asset icon through the publish endpoint. The following file types are supported:
+
+* GIF
+* JPG
+* JPEG
+* PGN
+* SVG
+
+Asset icons are version agnostic. If an icon exists for a previous version of an asset, uploading a new icon for a subsequent asset version is ignored. The following example shows how to upload an asset icon. To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`. Ensure that the package format `files.icon.png` has the same file type as the icon file `my-asset-icon.png`.
+
 
 [source,console]
 ----
