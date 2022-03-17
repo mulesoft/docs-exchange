@@ -286,7 +286,9 @@ Upload an image to use as an asset icon by using the publish endpoint. The follo
 * PNG
 * SVG
 
-Asset icons are version agnostic. If an icon exists for a previous version of an asset, you cannot use another icon for a subsequent asset version. The following example shows how to upload an asset icon. To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`. Ensure that the package icon format `files.icon.png` has the same file type as the icon file `my-asset-icon.png`. PNG is the file type in this example.
+Asset icons are version agnostic. They are not replaced by new icons when assets are versioned. 
++
+The following example shows how to upload a .png file image to use as an asset icon. To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version` with values specific to your implementation. Ensure that `files.icon.png` has the same file type as `my-asset-icon.png`.
 
 
 [source,console]
