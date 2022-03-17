@@ -283,7 +283,7 @@ You can upload an image to use as an asset icon through the publish endpoint. Th
 * GIF
 * JPG
 * JPEG
-* PGN
+* PNG
 * SVG
 
 Asset icons are version agnostic. If an icon exists for a previous version of an asset, you cannot use another icon for a subsequent asset version. The following example shows how to upload an asset icon. To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version`. Ensure that the package icon format `files.icon.png` has the same file type as the icon file `my-asset-icon.png`. PNG is the file type in this example.
