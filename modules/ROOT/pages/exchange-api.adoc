@@ -278,7 +278,7 @@ To use the Exchange API version 1 to create an asset and set its lifecycle state
 [[upload-asset-icons]]
 === Upload Asset Icons
 
-You can upload an image to use as an asset icon through the publish endpoint. The following file types are supported:
+Upload an image to use as an asset icon by using the publish endpoint. The following file types are supported:
 
 * GIF
 * JPG
