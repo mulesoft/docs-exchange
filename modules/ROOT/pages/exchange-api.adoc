@@ -276,7 +276,7 @@ curl -v \
 To use the Exchange API version 1 to create an asset and set its lifecycle state, send the status property as a field.
 
 [[upload-asset-icons]]
-=== Upload Asset Icons
+=== Uploading Images to be Used as Asset Icons
 
 Upload an image to use as an asset icon by using the publish endpoint. The following file types are supported:
 
