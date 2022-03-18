@@ -43,6 +43,7 @@ Perform these tasks to publish an asset to Exchange and add metadata using Excha
 .. <<set-mutable-data>>
 .. <<set-with-json>>
 .. <<set-lifecycle-state>>
+.. <<uploading-asset-icons>>
 . <<describe-your-assets>>
 .. <<add-tags>>
 .. <<add-categories>>
@@ -273,6 +274,34 @@ curl -v \
 ----
 
 To use the Exchange API version 1 to create an asset and set its lifecycle state, send the status property as a field.
+
+[[upload-asset-icons]]
+=== Uploading Images to be Used as Asset Icons
+
+Upload an image to use as an asset icon by using the publish endpoint. Icons that display in the Exchange portal can help users find your asset. Icons can be company logos or any other images. The following file types are supported:
+
+* GIF
+* JPG
+* JPEG
+* PNG
+* SVG
+
+Asset icons are version agnostic. They are not replaced by new icons when assets are versioned. 
++
+The following example shows how to upload a .png file image to use as an asset icon. To specify the asset, replace the identifiers `:groupId`, `:assetId`, and `:version` with values specific to your implementation. Ensure that `files.icon.png` has the same file type as `my-asset-icon.png`.
+
+
+[source,console]
+----
+curl -v \
+    -H 'Authorization: bearer ANYPOINT_TOKEN' \
+    -H 'x-sync-publication: true' \
+    -F 'name=My asset name' \
+    -F 'description=Asset with an uploaded icon' \
+    -F 'files.raml.zip=@/file-path/training-american-flights-api-1.0.0-raml.zip' \
+    -F 'files.icon.png=@/file-path/my-asset-icon.png' \
+https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
+----
 
 [[describe-your-assets]]
 == Describe Your Assets
