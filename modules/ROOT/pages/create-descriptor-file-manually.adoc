@@ -4,6 +4,15 @@ You can create a descriptor file manually rather than using the `api-catalog cre
 
 After you create the descriptor file, copy it to the file path or repository where your API projects are stored. 
 
+TIP: Run the `api-catalog publish-asset` command using the `--dry-run` option to ensure that your manually-created descriptor file is valid. 
+
+[[descriptor-yaml]]
+== Descriptor YAML Schema
+
+Following are the YAML tags used to describe the APIs you want to catalog. 
+
+== Catalog Descriptor Line
+
 The descriptor file must start with the following:
 
 ---
@@ -12,18 +21,13 @@ The descriptor file must start with the following:
 
 ---
 
-TIP: Run the `api-catalog publish-asset` command using the `--dry-run` option to ensure that your manually-created descriptor file is valid. 
+== triggerConditions
 
-[[descriptor-yaml]]
-== Descriptor YAML Schema
+The `triggerConditions` section of the YAML file enables you to optionally set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs will be published only when the `api-catalog publish-asset` command is run with `--trigger` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
 
-Following are the YAML tags used to describe the APIs you want to catalog. 
+Trigger conditions can be set for all APIs or for specific APIs. If both types of conditions are used, the specific override the global. 
 
-[%header,cols="20a,80a"]
-|===
-| Tag | Description 
-
-| triggerConditions | This optional section enables you to set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs will be published only when the `api-catalog publish-asset` command is run with `--trigger` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
+Following is an example `triggerConditions` section. 
 
 ---
  triggerConditions
@@ -46,9 +50,71 @@ The preceding example enables a run of the `api-catalog publish-asset` command t
 
 If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger` option values. For more information, see the `--trigger` option for the xref:publish-using-api-catalog-cli.adoc#publish-asset-command[`api-catalog publish-asset` command] and xref:publish-using-api-catalog-cli.adoc#example-trigger[Trigger the Publish Using Conditions].
 
-| contact | The contact name and email ID.   
+== versionStrategy
 
-| apis | A list of the APIs to be cataloged. 
+You can set the versioning strategy for the assets at the global or API project level. If a version strategy is not specified, the patch version is incremented by one.
+
+Example: `~1.x.x`
+
+When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using semantic versioning notation `x.x.x` for major, minor, and patch versions respectively. 
+
+Use the following symbols before the version nodes to control how an asset version is incremented:
+
+[%header,cols="15a, 70a"]
+|===
+| Symbol
+
+| Version Node
+
+| ^ | patch
+
+| ~ | minor
+
+| & | major 
+
+Because '&' is a reserved character in YAML, a semantic versioning string using this character must be enclosed in a single quote as follows: 
+
+`'&x.x.x'`
+
+|===
++
+The following table shows how the asset version is incremented for example semantic versioning strings. 
++
+[%header,cols="15a, 70a"]
+|===
+| Asset Version (versioning) 
+
+| Explanation
+
+| ^x.x.x (Default) | Search for the latest version and increment the patch
+
+| ^1.x.x | Search for the latest version of major 1 and increment the patch
+
+| ~1.x.x| Search for the latest version of major 1 and increment the minor
+
+| ^1.0.x | Search for the latest version of major 1, minor 0 and increment the patch
+
+| ^3.x.x | Search for the latest version of major 3 and increment the patch
+
+| ^3.x.x | Search for the latest version of major 3 and increment the patch
+
+| '&x.x.x' | Increment to the next the major version 
+
+|===
++
+For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
+
+== versionStrategyConditions
+
+xxx
+
+== contact
+
+The `contact` section of the schema includes the name and email ID for main contact for the autocataloging. If none are included, these default to `unknown`.   
+
+== apis 
+
+The `apis` section of the schema lists the APIs to be cataloged along with the details needed to catalog them. 
 
 spec:: The location of the specification file that describes the API. 
 
@@ -76,76 +142,12 @@ If this option is not specified, no custom fields are added.
 tags:: A list of free text strings. 
 +
 If this option is not specified, no tags are added.
-
-versioning:: The asset version. 
 +
-If this is not specified, the patch version is incremented by one.
-+
-Example: ~1.x.x  
-+
-See <<Asset Versioning>>.
-
 apiVersion:: The API version for the asset. 
 +
 If the API version is not specified in the descriptor file, the version from the specification file is used. If the API version is specified in both files, the value in the descriptor file is used. The value must be specified in one of the files. 
 +
 Example: v1  
-
-|===
-
-[[asset-versioning]]
-== Asset Versioning
-
-When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using semantic versioning notation `x.x.x` for major, minor, and patch versions respectively. 
-
-Use the following symbols before the version nodes to control how an asset version is incremented:
-
-[%header,cols="15a, 70a"]
-|===
-| Symbol
-
-| Version Node
-
-| ^ | patch
-
-| ~ | minor
-
-| & | major 
-
-Because '&' is a reserved character in YAML, a semantic versioning string using this character must be enclosed in a single quote as follows: 
-
-`'&x.x.x'`
-
-|===
-
-[[example-asset-versioning]]
-== Examples of Asset Versioning
-
-The following table shows how the asset version is incremented for example semantic versioning strings. 
-
-[%header,cols="15a, 70a"]
-|===
-| Asset Version (versioning) 
-
-| Explanation
-
-| ^x.x.x (Default) | Search for the latest version and increment the patch
-
-| ^1.x.x | Search for the latest version of major 1 and increment the patch
-
-| ~1.x.x| Search for the latest version of major 1 and increment the minor
-
-| ^1.0.x | Search for the latest version of major 1, minor 0 and increment the patch
-
-| ^3.x.x | Search for the latest version of major 3 and increment the patch
-
-| ^3.x.x | Search for the latest version of major 3 and increment the patch
-
-| '&x.x.x' | Increment to the next the major version 
-
-|===
-
-For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
 
 [[example-descriptor-file]]
 == Example Descriptor File

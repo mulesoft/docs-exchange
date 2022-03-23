@@ -2,9 +2,9 @@
 
 Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. You can create the descriptor file using the CLI or you can create it manually. Typically you should create the file using the CLI and if you need to set more options to control how the assets are published, you can update the file manually. 
 
-You can run the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
-
 == Create a Descriptor File
+
+Use the `api-catalog create-descriptor` command to create and print the catalog descriptor YAML results to a designated file. The command outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
 
 To create a descriptor file using the CLI:
 
@@ -26,6 +26,8 @@ NOTE: You can alternatively create a descriptor file manually instead of using t
 //include::anypoint-cli::partial$api-catalog.adoc[tag=create-descriptor-command]
 
 == Update a Descriptor File
+
+Use the `api-catalog update-descriptor` command to update the  catalog descriptor YAML results in a designated file. The command adds and updates cataloging information for all new and updated API specifications it finds in the full directory tree relative to the current working directory.
 
 To update a descriptor file using the CLI:
 

@@ -6,15 +6,6 @@ You can use the `api-catalog publish-asset` command to publish your APIs to Exch
 
 Create a descriptor file that describes the APIs to publish and copy the file to the file path where your API projects are stored. See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI].
 
-== Limitations
-
-This version of API Catalog CLI has the following limitations:
-
-* Documentation must be in Markdown format.
-* Images in documentation are resolved only if the references are full URLs that point to externally hosted images. 
-* External resources in documentation are resolved only if the references are full URLs that point to externally hosted resources.
-* The main documentation page must be called `home.md`.
-
 To publish an API using the CLI:
 
 * Run the `api-catalog publish-asset` command. The following example publishes APIs described in the `catalog.yaml` file:
