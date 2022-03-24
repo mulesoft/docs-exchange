@@ -52,56 +52,20 @@ If the `triggerConditions` section is included in the descriptor file, no APIS a
 
 == versionStrategy
 
-You can set the versioning strategy for the assets at the global or API project level. If a version strategy is not specified, the patch version is incremented by one.
+You can set the versioning strategy for the assets at the global or API project level. If a version strategy is not specified, the patch version is incremented by one. 
 
-Example: `~1.x.x`
+Following are the possible values:
 
-When you publish a version of an asset that already exists in Exchange, the patch version is incremented by default. However, you can set the version using semantic versioning notation `x.x.x` for major, minor, and patch versions respectively. 
+majorIncrease:: Searches for the latest version matching the `version` field in the descriptor and increases the major version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
 
-Use the following symbols before the version nodes to control how an asset version is incremented:
+minorIncrease::  Searches for the latest version matching the `version` field in the descriptor and increases the minor version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
 
-[%header,cols="15a, 70a"]
-|===
-| Symbol
+patchIncrease (Default):: Searches for the latest version matching the `version` field in the descriptor and increases a patch version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
 
-| Version Node
+Snapshot:: Publishes a development asset with the version specified in the descriptor file. If the asset does not exist, it will create it with the state `development`. If the asset exists, it will republish it and keep it in `development`.
 
-| ^ | patch
+Fixed:: Publishes a stable asset with the version specified in the descriptor file. If the asset does not exist, it will create it. If the asset exists, and is in development, it will promote it to `stable`. If the asset is in `stable` state and this version is already published, it will fail.
 
-| ~ | minor
-
-| & | major 
-
-Because '&' is a reserved character in YAML, a semantic versioning string using this character must be enclosed in a single quote as follows: 
-
-`'&x.x.x'`
-
-|===
-+
-The following table shows how the asset version is incremented for example semantic versioning strings. 
-+
-[%header,cols="15a, 70a"]
-|===
-| Asset Version (versioning) 
-
-| Explanation
-
-| ^x.x.x (Default) | Search for the latest version and increment the patch
-
-| ^1.x.x | Search for the latest version of major 1 and increment the patch
-
-| ~1.x.x| Search for the latest version of major 1 and increment the minor
-
-| ^1.0.x | Search for the latest version of major 1, minor 0 and increment the patch
-
-| ^3.x.x | Search for the latest version of major 3 and increment the patch
-
-| ^3.x.x | Search for the latest version of major 3 and increment the patch
-
-| '&x.x.x' | Increment to the next the major version 
-
-|===
-+
 For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
 
 == versionStrategyConditions

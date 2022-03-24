@@ -3,22 +3,11 @@
 
 To enable developers in your organization to automatically publish the new API specifications, you must install API Catalog CLI. API Catalog is included in Anypoint CLI 4.0 and later. You can install just the API Catalog plugin if you do not already have Anypoint CLI installed and do not have an immediate need for other Anypoint CLI commands.
 
-== Prerequisites
+== Before You Begin
 
 * Download and install the latest LTS version of NodeJS and npm (node package manager) on your system. See the https://nodejs.org/en/download/[NodeJS download page^]. 
 
-== Full Anypoint CLI Installation
-
 To install the CLI:
-
-* Run the following command from your terminal:
-----
-npm install -g anypoint-cli@latest
-----
-
-== API Catalog CLI Installation Only
-
-To install the API Catalog CLI plugin:
 
 * Run the following command from your terminal:
 ----
@@ -26,3 +15,5 @@ npm install -g api-catalog-cli@latest
 ----
 
 NOTE: The install command might give warning messages about the version of npm because the API Catalog CLI installation package is built using npm version 14. You can ignore these messages. 
+
+CAUTION: Some VPN connections may cause the installation from npm to appear to be running for a very long time and it will eventually time out. If this happens, work with your security administrator to ensure that your connection can successfully install from npm.   
