@@ -227,7 +227,7 @@ uses:
 
 REST Connect generates metadata for each operation based on your schema definition in the request and response for each method in your RAML. REST Connect cannot generate metadata based on examples in the RAML.
 
-Since only one input/output type is supported for each operation, REST Connect selects the first one that was declared. You can change this behavior by using the 'default' property from the REST Connect library. 
+Because only one input/output type is supported for each operation, REST Connect selects the first one that was declared. You can change this behavior by using the 'default' property from the REST Connect library. 
 
 Example with REST Connect library:
 
