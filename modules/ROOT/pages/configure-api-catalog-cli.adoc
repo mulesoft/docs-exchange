@@ -1,16 +1,10 @@
-= Configure Catalog Permissions in Anypoint Access Management
+= Configure API Catalog CLI Permissions
 
-You must enable the API Catalog Contributor permission for the Anypoint Platform organization user. 
+You must set the following permissions to use the API Catalog CLI features:
 
-== Prerequisites
+* Enable *API Catalog Contributor*
+* Set the *View Environment* scope to the main environment for your organization
 
-* The API Catalog entitlement must be set by MuleSoft for your Anypoint Platform organization. 
+NOTE: Permissions must be set in *Access Management* by an Anypoint Platform user with administrative permission. 
 
-NOTE: Permissions must be set by an Anypoint Platform user with administrative permission. 
-
-To enable the API Catalog Contributor permission:
-
-. In Anypoint Platform, navigate to *Access Management*.
-. Select *Users*.
-. Select the user for which you want to enable the permission.  
-. Select the *API Catalog Contributor* permission. 
+See the Access Management documentation for details on   xref:access-management::managing-permissions.adoc[managing permissions].
