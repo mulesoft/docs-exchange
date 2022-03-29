@@ -9,10 +9,10 @@ To share an API, API Group, policy, example, template, or connector in either an
 
 The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 
-* For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *Publish new asset* menu.
+* For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, Rulesets, and Custom assets, create the asset directly using the Exchange *Publish new asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
-* You can also publish a RAML, or OAS or RAML fragments, using Design Center, and publish the API to Exchange.
+* You can also publish a RAML, or OAS or RAML fragments using Design Center and publish the API to Exchange.
 +
 Another way to publish these type of assets is using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
 * RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
@@ -104,10 +104,13 @@ To create an API asset:
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
 * REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
+* AsyncAPI - Provide an AsyncAPI specification file in a YAML (.yaml) file.
+* Ruleset - Add a ZIP file with multiple YAML files that describe the new ruleset.
 * API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
 * HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
+
 +
-. For RAML, API Spec Fragment, OAS, and WSDL assets:
+. For assets that require a file:
 +
 .. Select *Choose File* to locate the API specification file.
 .. Select the main file of the API.
