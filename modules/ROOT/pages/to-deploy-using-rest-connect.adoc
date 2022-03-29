@@ -227,6 +227,39 @@ uses:
 
 REST Connect generates metadata for each operation based on your schema definition in the request and response for each method in your RAML. REST Connect cannot generate metadata based on examples in the RAML.
 
+Because only one input/output type is supported for each operation, REST Connect selects the first one that was declared. You can change this behavior by using the 'default' property from the REST Connect library. 
+
+Example with REST Connect library:
+
+[source,text,linenums]
+----
+#%RAML 1.0
+title: Sample API
+baseUri: https://jsonplaceholder.typicode.com
+version: 0.1
+mediaType: application/json
+
+uses:
+  rest-connect: exchange_modules/org.mule.connectivity/rest-connect-library/1.0.0/rest-connect-library.raml
+
+  ...
+  /{postId}:
+    uriParameters:
+      postId: integer
+
+    get:
+      displayName: Get a post by ID.
+      responses:
+        200:
+          body:
+            application/json:
+             type: string
+            application/xml:
+             (rest-connect.default): //this sets application/xml response by default
+             type: string
+----
+
+
 == OAuth2 in Design Center for REST Connect
 
 . Define an API with OAuth2 - Authorization Code and one operation in Design Center. You can use the following GitHub API example:
