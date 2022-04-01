@@ -1,0 +1,155 @@
+= Creating a Custom Policy
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, allotted consumption, and service level access (SLA). You can create custom policies based on your specific business requirements. Develop custom policies and apply them to APIs to extend existing functionality or define new ones.
+
+The workflow to create custom policies for Mule 3.9 and Mule 4 in Anypoint API Manager has not changed. Continue to use the process of developing the policy, packaging the custom policy, uploading it to Exchange, and applying the policy to an API through Anypoint API Manager as described in the Anypoint API Manager documentation. Creating custom policies for Anypoint Flex Gateway and Mule 4 runtime is supported in Exchange.
+
+The following information describes the workflow for publishing custom policies for Anypoint Flex Gateway and Mule 4:
+
+. Create the policy definition files
+. Create the implementation files
+. Create a custom policy to publish to Exchange
+. Add implementation files
+. Apply the policy to an API from Anypoint API Manager
+
+== Before You Begin
+
+Before you can publish a custom policy for Flex Gateway or Mule 4, ensure you have:
+
+. Administrator or contributor permission
+. Created policy definition files 
+. Created implementation files
+
+== Create Policy Definition Files
+Policy definition files must be created before you can upload the policy implementation. The definition files that are required to, a JSON and a YAML configuration file must be created. You can use any text editor tool. (This section must describe how to create the JSON file and the YAML file with examples).
+
+A JSON file contains the implementation of the policy using JSON schema language.
+
+The following code snippet is a basic authentication JSON file:
+[source,text,linenums]
+----
+{
+  "title": "Basic authentication - Simple",
+  "type": "object",
+  "description": "Enforces HTTP Basic authentication according to the details configured in the policy.",
+  "properties": {
+    "username": {
+      "title": "User Name",
+      "type": "string"
+    },
+    "password": {
+      "title": "User Password",
+      "type": "string",
+      "@context": {
+        "@characteristics": [
+          "security:sensitive"
+        ]
+      }
+    }
+  },
+  "required": [
+    "username",
+    "password"
+  ],
+  "unevaluatedProperties": false,
+  "@context": {
+    "@vocab": "anypoint://vocabulary/policy.yaml#",
+    "security": "anypoint://vocabulary/policy.yaml#"
+  },
+  "$id": "basic-authentication-simple",
+  "$schema": "https://json-schema.org/draft/2019-09/schema"
+}
+----
+
+A YAML file defines the configurable parameters of the policy. Anypoint API Manager uses this file to render the UI to display user inputs for the policy.
+
+
+The following code snippet is a basic authentication YAML file:
+
+[source,text,linenums]
+----
+#%Policy Definition 0.1
+name: Basic authentication - Simple
+description: Enforces HTTP Basic authentication according to the details configured in the policy.
+category: Security
+providedCharacteristics:
+  - Requires authentication
+requiredCharacteristics: []
+interfaceScope: ["api", "resource"]
+interfaceTransformation: []
+----
+
+[%header,cols="2a,1a,1a"]
+|===
+|Parameter |Description |Required
+|name |User friendly name that is used for displaying the policy name in API Manager’s UI.  |Yes
+|category |Category to which the policy belongs. Used to group and filter policies in API Manager’s UI, any String value is valid. |Yes
+|providedCharacteristics|  | 
+|requiredCharacteristics|  | 
+|interfaceScope |  |
+|interfaceTransformation | |
+|===
+The following code snippet is a client ID enforcement YAML file:
+
+[source,text,linenums]
+----
+name: Client ID enforcement
+description:  |
+  All calls to the API must include a client ID and client secret for an application that is registered to use the API.
+
+  This policy will require updates to the RAML/OAS definition in order to function.
+  You can obtain the RAML/OAS snippet and learn more [here](https://docs.mulesoft.com/anypoint-platform-for-apis/client-id-based-policies).
+category: Compliance
+providedCharacteristics:
+  - Client ID required
+requiredCharacteristics: []
+interfaceScope: ["api", "resource"]
+interfaceTransformation: []
+----
+
+(TO DO add guidelines of how to write the JSON and YAML files and include examples. Get examples from Mariano and Philip)
+
+=== Create Implementation Files
+The policy implementation files that are required to make the policy available in a runtime are a binary file and a metadata file. The binary file contains the policy logic and manages the runtime execution. The file can be a WebAssembly (WASM) for Anypoint Flex Gateway or a JAR file for Mule 4 runtime. The metadata file describes what technology the binary file applies to and from which version.
+(TO DO get info from Mariano and Philip about how to create these files and include examples. Dev will be able to provide this after April 15)
+
+=== Create a Custom Policy Asset
+After creating the policy definition configuration files (JSON and YAML), create the policy asset in Exchange.
+
+. In Exchange, select Publish new asset.
+. Enter the asset name.
+. Select the Policy asset type from the drop-down list.
+. Click Choose File to select a JSON schema file.
+. Click Choose File to select a YAML file.
+. (Optional) Select Advanced and edit the advanced settings: GroupId, AssetId, Version, and API version. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset’s version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
+. From Lifecycle state, select Stable. The policy must be in the Stable state to upload the implementation file in a later step.
+. Select Publish. Pending status appears next to Implementations in the left navigation bar.
+. Implement the policy by following the steps in the Implement the Policy section.
+
+Before adding the implementation files, ensure that the policy asset is in the Stable state.
+
+. Click Implementations in the left navigation bar.
+. Click Add implementation.
+. Enter the name for the implementation.
+. Click Choose file to select the JAR or WebAssembly file.
+. Click Choose file to select the YAML file.
+. (Optional) Select Advanced and edit the advanced settings: GroupId, AssetId, Version, and API version. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset’s version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
+. Click Add implementation.
+
+== Add Implementation Files
+For the policy to be available in runtime, add the implementation files.The required implementation files are a binary file such as a WebAssembly file for Flex Gateway or JAR for Mule 4 runtime and a YAML metadata file. 
+
+== Apply the Policy to an API from Anypoint API Manager
+After the implementation files are uploaded, apply the custom policy in API Manager. See (link to Flex Gate custom policy documentation) for information about applying the policy.
+
+== Manage Implementation Version
+
+A version of an implementation can be added or removed. 
+
+. To add a new implementation version, click the three vertical dots icon and select Add new version.
+. Enter the new version (need to see steps)?
+. To delete a version, a new implementation version, click the three vertical dots icon and select Delete Version. 
+. Click Close.
