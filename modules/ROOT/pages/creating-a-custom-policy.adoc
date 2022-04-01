@@ -5,9 +5,15 @@ endif::[]
 
 Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, allotted consumption, and service level access (SLA). You can create custom policies based on your specific business requirements. Develop custom policies and apply them to APIs to extend existing functionality or define new ones.
 
+<<<<<<< Updated upstream
 The workflow to create custom policies for Mule 3.9 and Mule 4 in Anypoint API Manager has not changed. Continue to use the process of developing the policy, packaging the custom policy, uploading it to Exchange, and applying the policy to an API through Anypoint API Manager as described in the Anypoint API Manager documentation. Creating custom policies for Anypoint Flex Gateway and Mule 4 runtime is supported in Exchange.
 
 The following information describes the workflow for publishing custom policies for Anypoint Flex Gateway and Mule 4:
+=======
+The current workflow to create custom policies for Mule 4.0 (or is it for 3.9 and earlier) has not changed. Continue to use the process of developing the policy, packaging the custom policy, uploading it to Exchange, and applying the policy to an API through Anypoint API Manager as described in the Anypoint API Manager documentation.
+
+The following information describes the workflow for publishing custom policies for Anypoint Flex Gateway:
+>>>>>>> Stashed changes
 
 . Create the policy definition files
 . Create the implementation files
@@ -23,6 +29,7 @@ Before you can publish a custom policy for Flex Gateway or Mule 4, ensure you ha
 . Created policy definition files 
 . Created implementation files
 
+<<<<<<< Updated upstream
 == Create Policy Definition Files
 Policy definition files must be created before you can upload the policy implementation. The definition files that are required to, a JSON and a YAML configuration file must be created. You can use any text editor tool. (This section must describe how to create the JSON file and the YAML file with examples).
 
@@ -109,6 +116,12 @@ requiredCharacteristics: []
 interfaceScope: ["api", "resource"]
 interfaceTransformation: []
 ----
+=======
+Create Policy Definition Files
+Policy definition files must be created before you can upload the policy implementation. The definition files that are required to, a JSON and a YAML configuration file must be created. You can use any text editor tool. (This section must describe how to create the JSON file and the YAML file with examples).
+A JSON file contains …
+A YAML file defines the configurable parameters of the policy. Anypoint API Manager uses this file to render the UI to display inputs for the policy.
+>>>>>>> Stashed changes
 
 (TO DO add guidelines of how to write the JSON and YAML files and include examples. Get examples from Mariano and Philip)
 
@@ -117,7 +130,11 @@ The policy implementation files that are required to make the policy available i
 (TO DO get info from Mariano and Philip about how to create these files and include examples. Dev will be able to provide this after April 15)
 
 === Create a Custom Policy Asset
+<<<<<<< Updated upstream
 After creating the policy definition configuration files (JSON and YAML), create the policy asset in Exchange.
+=======
+After creating the policy configuration files (JSON and YAML), create the policy asset in Exchange.
+>>>>>>> Stashed changes
 
 . In Exchange, select Publish new asset.
 . Enter the asset name.
@@ -140,12 +157,17 @@ Before adding the implementation files, ensure that the policy asset is in the S
 . Click Add implementation.
 
 == Add Implementation Files
+<<<<<<< Updated upstream
 For the policy to be available in runtime, add the implementation files.The required implementation files are a binary file such as a WebAssembly file for Flex Gateway or JAR for Mule 4 runtime and a YAML metadata file. 
+=======
+Add the implementation files for the policy to be available in runtime. The required implementation files are a binary file such as a WebAssembly file for Flex Gateway or JAR for Mule 4 runtime and a YAML metadata file. 
+>>>>>>> Stashed changes
 
 == Apply the Policy to an API from Anypoint API Manager
 After the implementation files are uploaded, apply the custom policy in API Manager. See (link to Flex Gate custom policy documentation) for information about applying the policy.
 
 == Manage Implementation Version
+<<<<<<< Updated upstream
 
 A version of an implementation can be added or removed. 
 
@@ -153,3 +175,10 @@ A version of an implementation can be added or removed.
 . Enter the new version (need to see steps)?
 . To delete a version, a new implementation version, click the three vertical dots icon and select Delete Version. 
 . Click Close.
+=======
+You can add and remove a version for the implementation from the (name of page) page.
+. To add a new implementation version, click the three vertical dots icon and select Add new version.
+. Enter the new version (need to see steps)?
+. To delete a version, a new implementation version, click the three vertical dots icon and select Delete Version. 
+Click Close.
+>>>>>>> Stashed changes
