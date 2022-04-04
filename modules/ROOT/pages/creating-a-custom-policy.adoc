@@ -5,7 +5,7 @@ endif::[]
 
 Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, allotted consumption, and service level access (SLA). You can create custom policies based on your specific business requirements. Develop custom policies and apply them to APIs to extend existing functionality or define new ones.
 
-The workflow to create custom policies for Mule 3.9 and Mule 4 in Anypoint API Manager has not changed. Continue to use the process of developing the policy, packaging the custom policy, uploading it to Exchange, and applying the policy to an API through Anypoint API Manager as described in the Anypoint API Manager documentation. Creating custom policies for Anypoint Flex Gateway and Mule 4 runtime is supported in Exchange.
+The workflow to create custom policies for Mule 3.9 and earlier in Anypoint API Manager has not changed. Continue to use the process of developing the policy, packaging the custom policy, uploading it to Exchange, and applying the policy to an API through Anypoint API Manager as described in the Anypoint API Manager documentation. Creating custom policies for Anypoint Flex Gateway and Mule 4 runtime is supported in Exchange.
 
 The following information describes the workflow for publishing custom policies for Anypoint Flex Gateway and Mule 4:
 
@@ -17,16 +17,20 @@ The following information describes the workflow for publishing custom policies 
 
 == Before You Begin
 
-Before you can publish a custom policy for Flex Gateway or Mule 4, ensure you have:
+Before you can publish a custom policy for Flex Gateway or Mule 4, ensure you have administrator or contributor permission for the Anypoint Platform.
 
-. Administrator or contributor permission
-. Created policy definition files 
-. Created implementation files
 
+[[create-policy-definition_files]]
 == Create Policy Definition Files
-Policy definition files must be created before you can upload the policy implementation. The definition files that are required to, a JSON and a YAML configuration file must be created. You can use any text editor tool. (This section must describe how to create the JSON file and the YAML file with examples).
 
-A JSON file contains the implementation of the policy using JSON schema language.
+Policy definition files must be created before you can upload the policy implementation. The required files are JSON and YAML. The JSON file contains the implementation of the policy using JSON schema language. Use the JSON example to construct the custom policy configuration. The YAML file defines the configurable parameters of the policy. Anypoint API Manager uses this file to render the UI to display user inputs for the policy.
+
+Use the examples to construct the custom policy definition files.
+
+Follow these steps to create the JSON file:
+
+. Open a text file and define the required properties for a policy in Anypoint Platform.
+. Save the file using a `.json` extension.
 
 The following code snippet is a basic authentication JSON file:
 [source,text,linenums]
@@ -63,8 +67,6 @@ The following code snippet is a basic authentication JSON file:
   "$schema": "https://json-schema.org/draft/2019-09/schema"
 }
 ----
-
-A YAML file defines the configurable parameters of the policy. Anypoint API Manager uses this file to render the UI to display user inputs for the policy.
 
 
 The following code snippet is a basic authentication YAML file:
@@ -110,13 +112,12 @@ interfaceScope: ["api", "resource"]
 interfaceTransformation: []
 ----
 
-(TO DO add guidelines of how to write the JSON and YAML files and include examples. Get examples from Mariano and Philip)
-
-=== Create Implementation Files
+[[create-implementation-files]]
+== Create Implementation Files
 The policy implementation files that are required to make the policy available in a runtime are a binary file and a metadata file. The binary file contains the policy logic and manages the runtime execution. The file can be a WebAssembly (WASM) for Anypoint Flex Gateway or a JAR file for Mule 4 runtime. The metadata file describes what technology the binary file applies to and from which version.
 (TO DO get info from Mariano and Philip about how to create these files and include examples. Dev will be able to provide this after April 15)
 
-=== Create a Custom Policy Asset
+== Create a Custom Policy Asset
 After creating the policy definition configuration files (JSON and YAML), create the policy asset in Exchange.
 
 . In Exchange, select Publish new asset.
