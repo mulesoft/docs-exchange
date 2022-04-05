@@ -56,11 +56,11 @@ You can set the versioning strategy for the assets at the global or API project 
 
 Following are the possible values:
 
-majorIncrease:: Searches for the latest version matching the `version` field in the descriptor and increases the major version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
+majorIncrease:: Searches for the latest version that matches the `version` field in the descriptor and increases the major version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
 
-minorIncrease::  Searches for the latest version matching the `version` field in the descriptor and increases the minor version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
+minorIncrease::  Searches for the latest version that matches the `version` field in the descriptor and increases the minor version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
 
-patchIncrease (Default):: Searches for the latest version matching the `version` field in the descriptor and increases a patch version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
+patchIncrease (Default):: Searches for the latest version that matches the `version` field in the descriptor and increases a patch version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
 
 Snapshot:: Publishes a development asset with the version specified in the descriptor file. If the asset does not exist, it will create it with the state `development`. If the asset exists, it will republish it and keep it in `development`.
 
