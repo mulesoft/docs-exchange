@@ -17,9 +17,10 @@ If you try to delete an API or policy asset version with dependent API instances
 
 You cannot delete a policy asset that is applied to any managed API instances. On the policy asset's page, the *APIs using this policy* tab shows which API instances have that policy applied. Use API Manager to remove the policy from the instances, and then delete the policy.
 
-To delete a patch version of an asset, open the version menu and click *Delete version*:
+To delete a patch version of an asset:
 
-image::ex2-delete-version.png[Delete a version of an asset]
+. In the asset details pane, click *Manage versions*.
+. Click the three dots menu and select *Delete version*.
 
 To delete an entire asset, delete all of its patch versions.
 
