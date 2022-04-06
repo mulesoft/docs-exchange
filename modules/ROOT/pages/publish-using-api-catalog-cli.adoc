@@ -1,14 +1,14 @@
-= Publish APIs Using API Catalog CLI
+= Publishing Assets Using API Catalog CLI
 
-You can use the `api-catalog publish-asset` command to publish your APIs to Exchange. Embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your APIs using the information in the file specified in the `--descriptor-file` option.   
+You can use the `api-catalog publish-asset` command to publish your API definitions to Exchange. Embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your API definitions using the information in the file specified in the `--descriptor-file` option.   
 
-== Prerequisites
+== Before You Begin
 
-Create a descriptor file that describes the APIs to publish and copy the file to the file path where your API projects are stored. See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI].
+Create a descriptor file that describes the API definitions to publish and copy the file to the file path where your API projects are stored. See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI].
 
-To publish an API using the CLI:
+To publish an API definition using the CLI:
 
-* Run the `api-catalog publish-asset` command. The following example publishes APIs described in the `catalog.yaml` file:
+* Run the `api-catalog publish-asset` command. The following example publishes API definitions described in the `catalog.yaml` file:
 +
 ----
 > api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct 

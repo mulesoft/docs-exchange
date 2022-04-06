@@ -1,4 +1,4 @@
-= Use API Catalog CLI
+= Using API Catalog CLI
 
 After you have installed the API Catalog CLI and configured permissions, you can use the API Catalog CLI commands to autocatalog your APIs.
 
@@ -42,15 +42,15 @@ For information about logging in using SSO, see xref:access-management::external
 [[client-id-and-secret]]
 === Client ID and Client Secret
 
-You can configure a Connected App with the `client_credentials` grant type to use with the CLI.
+You can configure a connected app with the `client_credentials` grant type to use with the CLI.
 
 [%header%autowidth.spread,cols="a,a"]
 |===
 | Argument | Description
-| `client_id` | The ID of the Connected App
+| `client_id` | The ID of the connected app
 
 You can also pass this value using the environment variable `export ANYPOINT_CLIENT_ID=<client_id>`.
-| `client_secret` | The client secret of the Connected App
+| `client_secret` | The client secret of the connected app
 
 You can also pass this value using the environment variable `export ANYPOINT_CLIENT_SECRET=<client_secret>`.
 |===

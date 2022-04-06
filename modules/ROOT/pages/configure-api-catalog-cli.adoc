@@ -1,4 +1,4 @@
-= Configure API Catalog CLI Permissions
+= Configuring API Catalog CLI Permissions
 
 You must set the following permissions to use the API Catalog CLI features:
 

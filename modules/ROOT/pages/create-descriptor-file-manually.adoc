@@ -1,4 +1,4 @@
-= Create or Update a Descriptor File Manually
+= Creating or Updating a Descriptor File Manually
 
 You can create a descriptor file manually rather than using the `api-catalog create-descriptor` command to create it. You can also update a descriptor file that you have already generated to add conditions required to trigger the publish, add tags to APIs, control asset versioning, and so on.   
 

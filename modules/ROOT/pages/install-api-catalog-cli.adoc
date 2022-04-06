@@ -1,4 +1,3 @@
-[install-cat-cli]
 = Installing API Catalog CLI 
 
 You must install API Catalog CLI before running the commands. 
