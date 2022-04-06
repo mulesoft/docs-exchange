@@ -1,4 +1,4 @@
-= Create an Asset
+= Creating Assets
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -34,7 +34,7 @@ RAML versions have been automatically generated for all OAS assets published sin
 
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
-This illustration summarizes how each asset type (in green) appears in Exchange:
+This illustration summarizes how several of the asset types (in green) appear in Exchange:
 
 image::ex2-exchange-assets.png[]
 
@@ -88,13 +88,13 @@ Replace `ROOT_ORGANIZATION_ID` with your root organization ID, and replace `ANYP
 See xref:to-search-with-graph-api.adoc[Search Using the Graph API] for more information about searching for assets.
 
 
-== Create an API Asset
+== Create an Asset
 
 An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
 
 Creating an asset sets the asset type, which cannot be changed. All versions of an asset always have the same type.
 
-To create an API asset:
+To create an asset:
 
 . In Exchange, select *Publish new asset*.
 . Enter the asset portal name.
@@ -105,9 +105,9 @@ To create an API asset:
 * REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
 * AsyncAPI - Provide an AsyncAPI specification file in a YAML (.yaml) file.
-* Ruleset - Add a ZIP file with multiple YAML files that describe the new ruleset.
 * API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
 * HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
+* Ruleset - Add a ZIP file with multiple YAML files that describe the new ruleset.
 
 +
 . For assets that require a file:
