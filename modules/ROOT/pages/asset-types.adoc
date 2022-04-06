@@ -21,7 +21,7 @@ Complete the template's use case or solution by supplying your own information, 
 * API Groups: A set of APIs bundled into a single asset
 +
 Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
-* API Spec Fragments:A RAML document that has a version and an identifier but is not in itself a complete RAML specification
+* API Spec Fragments: A RAML document that has a version and an identifier but is not in itself a complete RAML specification
 +
 API spec fragments are also known as _RAML fragments_.
 * Custom: A description and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation
