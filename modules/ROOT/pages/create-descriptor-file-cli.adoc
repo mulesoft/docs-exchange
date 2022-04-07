@@ -51,3 +51,7 @@ NOTE: You can alternatively update a descriptor file manually instead of using t
 //include::anypoint-cli::partial$api-catalog.adoc[tag=update-descriptor-command]
 
 include::partial$api-catalog.adoc[tag=update-descriptor-command]
+
+== See Also
+
+* xref:use-api-catalog-cli.adoc[Using API Catalog CLI]

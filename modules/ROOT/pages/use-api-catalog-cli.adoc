@@ -15,6 +15,10 @@ api-catalog publish-asset --help
 
 NOTE: You can optionally configure the `api-catalog autocomplete` command so that you can use the tab key with a partially typed command to autocomplete it. See xref:configure-cli-autocomplete.adoc[Configure Command Autocompletion] for more details.
 
+//Common Options
+
+include::partial$api-catalog.adoc[tag=common-options]
+
 [[authentication]]
 == Authentication
 
