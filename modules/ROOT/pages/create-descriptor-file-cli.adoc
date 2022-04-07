@@ -23,7 +23,9 @@ The result of the command depends on the presence and content of the designated 
 
 NOTE: You can alternatively create a descriptor file manually instead of using the `api-catalog create-descriptor` command to generate the file. See xref:create-descriptor-file-manually.adoc#manual-descriptor[Create or Update a Descriptor File Manually].
 
-//include::partial$api-catalog.adoc[tag=create-descriptor-command]
+//include::anypoint-cli::partial$api-catalog.adoc[tag=create-descriptor-command]
+
+include::partial$api-catalog.adoc[tag=create-descriptor-command]
 
 == Update a Descriptor File
 
@@ -47,3 +49,5 @@ The result of the command depends on the presence and content of the designated 
 NOTE: You can alternatively update a descriptor file manually instead of using the `api-catalog create-descriptor` command to update the file. See xref:create-descriptor-file-manually.adoc#manual-descriptor[Create or Update a Descriptor File Manually].
 
 //include::anypoint-cli::partial$api-catalog.adoc[tag=update-descriptor-command]
+
+include::partial$api-catalog.adoc[tag=update-descriptor-command]

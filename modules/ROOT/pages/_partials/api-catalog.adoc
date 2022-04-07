@@ -1,0 +1,230 @@
+= API Catalog
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:api-catalog.adoc#create-descriptor-file[api-catalog create-descriptor]  | Creates a descriptor file
+|xref:api-catalog.adoc#update-descriptor-file[api-catalog update-descriptor]  | Updates a descriptor file
+|xref:api-catalog.adoc#publish-asset[api-catalog publish-asset]  | Publishes assets to Exchange
+|===
+
+// end::summary[]
+
+// tag::create-descriptor-command[]
+
+[[create-descriptor-command]]
+== api-catalog create-descriptor
+
+Following is a reference for the `api-catalog create-descriptor` command. 
+
+*Usage*
+
+----
+> api-catalog create-descriptor [options] 
+----
+
+*Options*
+
+`-f, --file=file`
+  +
+  [default: `catalog.yaml`] 
+  + 
+  The name and location in which to save the generated catalog descriptor file.
+
+// end::create-descriptor-command[]
+
+// tag::update-descriptor-command[]
+
+[[update-descriptor-command]]
+== api-catalog update-descriptor
+
+Following is a reference for the `api-catalog update-descriptor` command. 
+
+*Usage*
+
+----
+> api-catalog update-descriptor [options] 
+----
+
+*Options*
+
+`-f, --file=file`
+  +
+  [default: `catalog.yaml`] 
+  + 
+  The name and location in which to save the generated catalog descriptor file.
+
+// end::update-descriptor-command[]
+
+// tag::publish-asset-command[]
+
+[[publish-asset-command]]
+== api-catalog publish-asset
+
+Following is a reference for the `api-catalog publish asset` command. 
+
+*Usage*
+
+----
+> api-catalog publish-asset [options] 
+----
+
+*Options*
+
+The `api-catalog publish-asset` options are described in the following table.
+
+[%header,cols="20a,80a"]
+|===
+| Option | Description 
+
+| --async |  Run the publish job asynchronously. 
+
+| --client-id=client-id 
+
+or
+
+ANYPOINT_CLIENT_ID environment variable
+
+| Connected app client ID.  
+
+See xref:use-api-catalog-cli.adoc#authentication[Authentication].
+
+| --client-secret 
+
+or
+
+ANYPOINT_CLIENT_SECRET environment variable
+
+| Prompt for the Connected App secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  
+ 
+See xref:use-api-catalog-cli.adoc#authentication[Authentication].
+
+| --collectMetrics
+
+| Collect metrics.  
+
+|  -d, --descriptor-file=descriptor-file 
+
+or
+
+ANYPOINT_DESCRIPTOR_FILE environment variable
+
+ | Default:  ./catalog.yaml 
+ 
+The name and location of the catalog descriptor file.  
+
+  * If the file does not exist, no assets are cataloged.
+  * If the file exists but is empty, the command creates and prints the catalog descriptor YAML results. It outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
+  * If a valid YAML file exists, the command catalogs the assets as specified. 
+  
+See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI]. 
+
+| --dry-run | Runs the command to verify that the descriptor file is valid. No APIs are published. 
+
+| --environment=environment 
+
+or
+
+ANYPOINT_ENV environment variable
+
+  | (Required) 
+  
+The ID of the Anypoint Platform environment where the APIs will be cataloged.  
+ 
+| --force-publish |  Bypasses the comparison and 
+ creates a new version of the asset in Exchange regardless of the content.
+
+| --force-update-metadata | Updates the asset's metadata, such as tags, in the latest version in Exchange regardless of the content. This does not republish the asset. 
+
+|   --host=host
+
+or
+
+ANYPOINT_HOST environment variable
+
+ | (Required) 
+
+Default: `anypoint.mulesoft.com`
+
+The Anypoint Platform base 
+URL. It must be specified using HTTPS protocol. 
+
+For the US Anypoint Platform, use:  
+`anypoint.mulesoft.com`. 
+
+For the European Anypoint Platform, use: 
+`eu1.anypoint.mulesoft.com`. 
+
+| --json | Prints the execution result in JSON format. 
+
+| --organization=organization 
+
+or
+
+ANYPOINT_ORG environment variable
+
+  | (Required) 
+  
+The ID of the Anypoint Platform organization where the APIs will be cataloged.  
+
+|   -o, --output=output  
+
+| Default: UI 
+  
+Format for the command output.  
+
+| -p, --password 
+
+or
+
+ANYPOINT_PASSWORD environment variable
+
+ | Anypoint user password. Set the environment variable to avoid a prompt for the password.  
+ 
+See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
+
+| --profile=profile
+
+| Default: default
+
+Select the profile from the credentials configuration file.
+ 
+See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
+| -s, --silent | Enable silent logging.
+
+| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | This option works in conjunction with the custom `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger` options for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger` option values.
+
+Example:
+
+---
+
+ --trigger=branch:main --trigger=anytag:release/ -- trigger=user:admin
+
+---
+
+See xref:create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
+
+| -u, --username=username 
+
+or
+
+ANYPOINT_USERNAME environment variable
+
+| Anypoint username. 
+
+See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
+
+| -v, --verbose | Enable verbose logging. 
+
+| --versionStrategy=versionStrategy | Default: xxx
+
+Filters that are applied to the descriptor file to determine the version strategy of the asset.
+
+Format: <name>:<regular expression>
+Example: branch:latest
+
+|===
+
+// end::publish-asset-command[]
