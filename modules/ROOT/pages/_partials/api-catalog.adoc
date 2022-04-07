@@ -228,3 +228,115 @@ Example: branch:latest
 |===
 
 // end::publish-asset-command[]
+
+// tag::common-options[]
+
+[[common-options]]
+Common Options
+
+Following are options that are common to all API Catalog commands.
+
+[%header,cols="20a,80a"]
+|===
+| Option | Description 
+
+| --client-id=client-id 
+
+or
+
+ANYPOINT_CLIENT_ID environment variable
+
+| Connected app client ID.  
+
+See xref:use-api-catalog-cli.adoc#authentication[Authentication].
+
+| --client-secret 
+
+or
+
+ANYPOINT_CLIENT_SECRET environment variable
+
+| Prompt for the Connected App secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  
+ 
+See xref:use-api-catalog-cli.adoc#authentication[Authentication].
+
+| --collectMetrics
+
+| Collect metrics.  
+
+| --environment=environment 
+
+or
+
+ANYPOINT_ENV environment variable
+
+  | (Required) 
+  
+The ID of the Anypoint Platform environment where the APIs will be cataloged.  
+ 
+|   --host=host
+
+or
+
+ANYPOINT_HOST environment variable
+
+ | (Required) 
+
+Default: `anypoint.mulesoft.com`
+
+The Anypoint Platform base 
+URL. It must be specified using HTTPS protocol. 
+
+For the US Anypoint Platform, use:  
+`anypoint.mulesoft.com`. 
+
+For the European Anypoint Platform, use: 
+`eu1.anypoint.mulesoft.com`. 
+
+| --organization=organization 
+
+or
+
+ANYPOINT_ORG environment variable
+
+  | (Required) 
+  
+The ID of the Anypoint Platform organization where the APIs will be cataloged.  
+
+|   -o, --output=output  
+
+| Default: UI 
+  
+Format for the command output.  
+
+| -p, --password 
+
+or
+
+ANYPOINT_PASSWORD environment variable
+
+ | Anypoint user password. Set the environment variable to avoid a prompt for the password.  
+ 
+See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
+
+| --profile=profile
+
+| Default: default
+
+Select the profile from the credentials configuration file.
+ 
+See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
+
+| -u, --username=username 
+
+or
+
+ANYPOINT_USERNAME environment variable
+
+| Anypoint username. 
+
+See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
+
+|===
+
+// end::common-options[]
