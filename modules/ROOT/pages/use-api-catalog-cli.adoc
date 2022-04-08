@@ -26,14 +26,14 @@ include::partial$api-catalog.adoc[tag=common-options]
 
 // Authentication start
 
-include::partial$auth.adoc[tag=summary]
+include::partial$cli-auth.adoc[tag=summary]
 
-include::partial$auth.adoc[tag=sso]
+include::partialcli-auth.adoc[tag=sso]
 
-include::partial$auth.adoc[tag=conffile]
+include::partial$cli-auth.adoc[tag=conffile]
 
-include::partial$auth.adoc[tag=cmdline]
+include::partial$cli-auth.adoc[tag=cmdline]
 
-include::partial$auth.adoc[tag=envvars]
+include::partial$cli-auth.adoc[tag=envvars]
 
 // Authentication end 
