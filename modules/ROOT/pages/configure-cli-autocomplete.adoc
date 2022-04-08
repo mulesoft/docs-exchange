@@ -38,31 +38,10 @@ $ api-catalog command --<TAB>       # Flag completion
 [autocomplete-command]
 == api-catalog-cli autocomplete
 
-Following is a reference for the `api-catalog-cli autocomplete` command. 
+// autocomplete command start
 
-*Usage*
+//include::anypoint-cli::partial$api-catalog.adoc[tag=autocomplete-command]
 
-----
-$ api-catalog autocomplete [SHELL]
-----
+include::partial$api-catalog.adoc[tag=autocomplete-command]
 
-*Arguments*
-
-----
-SHELL shell type
-----
-
-*Options*
-
-----
--r, --refresh-cache Refresh cache (ignores displaying instructions)
-----
-
-*Examples*
-
-----
-$ api-catalog autocomplete
-$ api-catalog autocomplete bash
-$ api-catalog autocomplete zsh
-$ api-catalog autocomplete --refresh-cache
-----
+// autocomplete command end

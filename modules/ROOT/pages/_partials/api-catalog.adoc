@@ -28,7 +28,7 @@ This command accepts the xref:use-api-catalog-cli.adoc[common options] in additi
 [%header,cols="20a,80a"]
 |===
 | Option | Description 
-| blank | Install autocompletion using the default shell settings
+| blank | Display instructions for configuring autocompletion 
 | bash | Install autocompletion using bash shell settings
 | zsh | Install autocompletion using zsh shell settings
 | -r, --refresh cache | Remove the current autocompletion configuration. Use this before running the command with a different shell type.
