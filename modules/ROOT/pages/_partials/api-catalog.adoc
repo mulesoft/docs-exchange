@@ -12,6 +12,39 @@
 
 // end::summary[]
 
+// tag::conf-command[]
+
+[[conf-command]]
+== api-catalog conf
+
+Following is a reference for the `api-catalog conf` command. 
+
+*Usage*
+
+----
+> api-catalog conf [options] 
+----
+
+This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options. 
+
+[%header,cols="20a,80a"]
+|===
+| Option | Description 
+
+| c, --cwd=cwd |  Configuration file location. 
+
+| -d, --delete | Delete the configuration file. 
+
+| -k, --key=key | Authentication key for the configuration file. 
+
+| -n, --name=name | Project name.
+
+| -v, --value=value | Authentication value for the key.
+
+|===
+
+// end::conf-command[]
+
 // tag::create-descriptor-command[]
 
 [[create-descriptor-command]]
@@ -25,7 +58,7 @@ Following is a reference for the `api-catalog create-descriptor` command.
 > api-catalog create-descriptor [options] 
 ----
 
-This command accepts the common options in addition to the following options. 
+This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options. 
 
 *Options*
 
@@ -50,11 +83,11 @@ Following is a reference for the `api-catalog update-descriptor` command.
 > api-catalog update-descriptor [options] 
 ----
 
-This command accepts the common options in addition to the following options.
+This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options. 
 
 *Options*
 
-`-f, --file=file`
+`-d, --descriptor-file=descriptor-file`
   +
   [default: `catalog.yaml`] 
   + 
@@ -75,7 +108,7 @@ Following is a reference for the `api-catalog publish asset` command.
 > api-catalog publish-asset [options] 
 ----
 
-This command accepts the common options in addition to the following options.
+This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options. 
 
 *Options*
 
@@ -142,7 +175,7 @@ Example: branch:latest
 // tag::common-options[]
 
 [[common-options]]
-Common Options
+== Common Options
 
 Following are options that are common to all API Catalog commands.
 

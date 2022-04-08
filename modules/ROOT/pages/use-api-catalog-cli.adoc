@@ -15,64 +15,25 @@ api-catalog publish-asset --help
 
 NOTE: You can optionally configure the `api-catalog autocomplete` command so that you can use the tab key with a partially typed command to autocomplete it. See xref:configure-cli-autocomplete.adoc[Configure Command Autocompletion] for more details.
 
-//Common Options
+//Common Options start
 
 include::partial$api-catalog.adoc[tag=common-options]
+
+//Common Options end
 
 [[authentication]]
 == Authentication
 
-You can configure Anypoint CLI authentication with username and password, client ID and client secret, or a bearer token.
-At least one method is required.
+// Authentication start
 
-[[username-password]]
-=== Username and Password
+include::partial$auth.adoc[tag=summary]
 
-If you do not log in using single sign-on (SSO), you can use your username and password to log in to the CLI directly.
+include::partial$auth.adoc[tag=sso]
 
-[%header%autowidth.spread,cols="a,a"]
-|===
-| Argument | Description
-| `username` | Your Anypoint Platform username
+include::partial$auth.adoc[tag=conffile]
 
-You can also pass this value using the environment variable `export ANYPOINT_USERNAME=<name>`.
-| `password` | Your Anypoint Platform password
+include::partial$auth.adoc[tag=cmdline]
 
-You can also pass this value using the environment variable `export ANYPOINT_PASSWORD=<pwd>`.
-|===
-
-For information about logging in using SSO, see xref:access-management::external-identity.adoc[About Identity Management].
-
-[[client-id-and-secret]]
-=== Client ID and Client Secret
-
-You can configure a connected app with the `client_credentials` grant type to use with the CLI.
-
-[%header%autowidth.spread,cols="a,a"]
-|===
-| Argument | Description
-| `client_id` | The ID of the connected app
-
-You can also pass this value using the environment variable `export ANYPOINT_CLIENT_ID=<client_id>`.
-| `client_secret` | The client secret of the connected app
-
-You can also pass this value using the environment variable `export ANYPOINT_CLIENT_SECRET=<client_secret>`.
-|===
-
-For more information about Connected Apps, see xref:access-management::connected-apps-overview.adoc[Connected Apps].
-
-[[env-vars]]
-=== Environment Variable Usage
-
-Keep the following in mind while using API Catalog CLI:
-
-* Command line options override environment variables. +
-If you do not pass a command line option, the default profile properties are used.
-* If not specified, the default environment is production.
-
-[[timeout]]
-=== Session Timeout
-
-Your Anypoint session expires based on the *Default session timeout* configured in your Organization settings.
+include::partial$auth.adoc[tag=envvars]
 
 // Authentication end 
