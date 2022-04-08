@@ -57,7 +57,7 @@ session.selectedOrganization.id
 
 To create your configuration file:
 
-* Run the "anypoint-cli-v4 conf" command with the parameters you want to use to set the authentication method. For example, the following command sets the username and password.
+* Run the `anypoint-cli-v4 conf` command with the parameters you want to use to set the authentication method. For example, the following command sets the username and password.
 +
 ----
 $ anypoint-cli-v4 conf username <username>
