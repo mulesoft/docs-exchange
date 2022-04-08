@@ -5,12 +5,45 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
+|xref:api-catalog.adoc#autocomplete-command[api-catalog autocomplete]  | Configures autocompletion for API Catalog commands
+|xref:api-catalog.adoc#conf-command[api-catalog conf]  | Creates or deletes a credentials configuration file
 |xref:api-catalog.adoc#create-descriptor-file[api-catalog create-descriptor]  | Creates a descriptor file
 |xref:api-catalog.adoc#update-descriptor-file[api-catalog update-descriptor]  | Updates a descriptor file
 |xref:api-catalog.adoc#publish-asset[api-catalog publish-asset]  | Publishes assets to Exchange
 |===
 
 // end::summary[]
+
+// tag::autocomplete-command[]
+
+Following is a reference for the `api-catalog-cli autocomplete` command. 
+
+*Usage*
+
+----
+$ api-catalog autocomplete [SHELL]
+----
+This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options:
+
+[%header,cols="20a,80a"]
+|===
+| Option | Description 
+| blank | Install autocompletion using the default shell settings
+| bash | Install autocompletion using bash shell settings
+| zsh | Install autocompletion using zsh shell settings
+| -r, --refresh cache | Remove the current autocompletion configuration. Use this before running the command with a different shell type.
+|===
+
+*Examples*
+
+----
+$ api-catalog autocomplete
+$ api-catalog autocomplete bash
+$ api-catalog autocomplete zsh
+$ api-catalog autocomplete --refresh-cache
+----
+
+// end::autocomplete-command[]
 
 // tag::conf-command[]
 
@@ -25,7 +58,7 @@ Following is a reference for the `api-catalog conf` command.
 > api-catalog conf [options] 
 ----
 
-This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options. 
+This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options: 
 
 [%header,cols="20a,80a"]
 |===
@@ -58,15 +91,17 @@ Following is a reference for the `api-catalog create-descriptor` command.
 > api-catalog create-descriptor [options] 
 ----
 
-This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options. 
+This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options: 
 
-*Options*
+[%header,cols="20a,80a"]
+|===
+| Option | Description 
+| -f, --file=file |
+Default: `catalog.yaml`
 
-`-f, --file=file`
-  +
-  [default: `catalog.yaml`] 
-  + 
-  The name and location in which to save the generated catalog descriptor file.
+The name and location in which to save the generated catalog descriptor file.
+|  --external | Generates an exchange.json file for each API described in the descriptor file.
+|===
 
 // end::create-descriptor-command[]
 
@@ -83,15 +118,16 @@ Following is a reference for the `api-catalog update-descriptor` command.
 > api-catalog update-descriptor [options] 
 ----
 
-This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options. 
+This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following option: 
 
-*Options*
+[%header,cols="20a,80a"]
+|===
+| Option | Description 
+| -d, --descriptor-file=descriptor-file |
+Default: `catalog.yaml`
 
-`-d, --descriptor-file=descriptor-file`
-  +
-  [default: `catalog.yaml`] 
-  + 
-  The name and location in which to save the generated catalog descriptor file.
+The name and location in which to save the updated catalog descriptor file information.
+|===
 
 // end::update-descriptor-command[]
 
@@ -108,11 +144,7 @@ Following is a reference for the `api-catalog publish asset` command.
 > api-catalog publish-asset [options] 
 ----
 
-This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options. 
-
-*Options*
-
-The `api-catalog publish-asset` options are described in the following table.
+This command accepts the xref:use-api-catalog-cli.adoc[common options] in addition to the following options: 
 
 [%header,cols="20a,80a"]
 |===
