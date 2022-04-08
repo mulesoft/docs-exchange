@@ -43,6 +43,8 @@ include::partial$cli-auth.adoc[tag=sso]
 
 include::partial$cli-auth.adoc[tag=conffile]
 
+include::partial$cli-api-catalog.adoc[tag=conf-command]
+
 include::partial$cli-auth.adoc[tag=cmdline]
 
 include::partial$cli-auth.adoc[tag=envvars]

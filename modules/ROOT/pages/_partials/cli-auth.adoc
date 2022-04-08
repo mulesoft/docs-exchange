@@ -14,16 +14,16 @@ You can pass Anypoint CLI credentials using the following methods:
 
 * <<single-signon,Using single signon (SSO)>>
 * <<credentials-file,Using a credentials configuration file>>
-* <<command-line-parameters,Using command line parameters>>
+* <<command-line-options,Using command line options>>
 * <<env-variables,Using environment variables>>
 
 Configuration settings are overridden as follows:
 
-* Command line parameters override all other methods. 
+* Command line options override all other methods. 
 
-* Environment variables are used if command line parameters are not specified and override any credentials configuration file settings.
+* Environment variables are used if command line options are not specified and override any credentials configuration file settings.
 
-* Credentials configuration file parameters are used if no command line parameters or environment variables are set.
+* Credentials configuration file options are used if no command line options or environment variables are set.
 
 // end::summary[]
 
@@ -32,7 +32,7 @@ Configuration settings are overridden as follows:
 [[single-signon]]
 == SSO
 
-If you have configured Anypoint Platform to use SSO with the system on which you are running Anypoint CLI, run the Anypoint CLI command with no credential parameters and it will log in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
+If you have configured Anypoint Platform to use SSO with the system on which you are running Anypoint CLI, run the Anypoint CLI command with no credential options and it will log in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
 
 // end::sso[]
 
@@ -43,7 +43,9 @@ If you have configured Anypoint Platform to use SSO with the system on which you
 
 If you are not using SSO, MuleSoft recommends that you pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
 
-You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` option to add your credentials to a configuration file and then running the `anypoint-cli-v4` commands you want to use. You can set authentication values in the configuration file using a combination of the following parameters:
+You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` option to add your credentials to a configuration file. After you have created the configuration file with valid credentials, you can run the `anypoint-cli-v4` commands without specifying any credentials options and the authentication is done using the configuration file values. 
+
+You can set authentication values in the configuration file using a combination of the following options:
 
 ----
 username
@@ -57,7 +59,7 @@ session.selectedOrganization.id
 
 To create your configuration file:
 
-* Run the `anypoint-cli-v4 conf` command with the parameters you want to use to set the authentication method. For example, the following command sets the username and password.
+* Run the `anypoint-cli-v4 conf` command with the options you want to use to set the authentication method. For example, the following command sets the username and password.
 +
 ----
 $ anypoint-cli-v4 conf username <username>
@@ -76,7 +78,7 @@ The commands store the credential information in the `config.json` file in the f
 
 * Set configuration file authentication using username and password 
 +
-** Add authentication values to the configuration file using the following commands:
+Add authentication values to the configuration file using the following commands:
 +
 ----
 $ anypoint-cli-v4 conf username myUserName
@@ -84,35 +86,24 @@ $ anypoint-cli-v4 conf password myPassword
 $ anypoint-cli-v4 conf organization myOrgId
 ----
 +
-** Run a command and the authentication will be done using the configuration file values.
-+
-----
-$ anypoint-cli-v4 account:environment:list
-----
-+
 * Set configuration file authentication using client ID and client secret
 +
-** Add authentication values to the configuration file using the following commands:
+Add authentication values to the configuration file using the following commands:
 +
 ----
 $ anypoint-cli-v4 conf client_id myClientID
 $ anypoint-cli-v4 conf client_secret myCLientSecret
 $ anypoint-cli-v4 conf organization myOrgId
 ----
-** Run a command and the authentication will be done using the configuration file values.
-+
-----
-$ anypoint-cli-v4 account:environment:list
-----
 
 // end::conffile[]
 
 // tag::cmdline[]
 
-[[command-line-parameters]]
-== Command Line Parameters
+[[command-line-options]]
+== Command Line Options
 
-You can authenticate to Anypoint Platform through command line by running the `anypoint-cli-v4` command with a combination of the following parameters:
+You can authenticate to Anypoint Platform through command line by running the `anypoint-cli-v4` command with a combination of the following options:
 
 ----
 --username
@@ -157,7 +148,7 @@ For information about generating a bearer token, see https://help.mulesoft.com/s
 [[env-variables]]
 == Environment Variables
 
-You can authenticate to Anypoint Platform by setting a combination of the following environment variables before running the `anypoint-cli-v4` command:
+You can authenticate to Anypoint Platform by setting a combination of the following environment variables before running an `anypoint-cli-v4` command:
 
 ----
 ANYPOINT_USERNAME
@@ -177,7 +168,6 @@ ANYPOINT_HOST
 $ export ANYPOINT_USERNAME=myUserName
 $ export ANYPOINT_PASSWORD=myPassword
 $ export ANYPOINT_ORG=myOrgId
-$ anypoint-cli-v4 account:environment:list
 ----
 
 * Authenticate by setting the environment variables for client ID and client secret
@@ -186,7 +176,6 @@ $ anypoint-cli-v4 account:environment:list
 $ export ANYPOINT_CLIENT_ID=myClientID
 $ export ANYPOINT_CLIENT_SECRET=myCLientSecret
 $ export ANYPOINT_ORG=myOrgId
-$ anypoint-cli-v4 account:environment:list
 ----
 
 // end::envvars[]
