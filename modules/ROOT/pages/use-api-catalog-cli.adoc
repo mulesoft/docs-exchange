@@ -2,6 +2,17 @@
 
 After you have installed the API Catalog CLI and configured permissions, you can use the API Catalog CLI commands to autocatalog your APIs.
 
+//Command summary start
+
+[[api-catalog-commands]]
+== API Catalog Commands
+
+API Catalog CLI includes the following commands:
+
+include::partial$api-catalog.adoc[tag=summary]
+
+//Command summary end
+
 == View Command Help
 
 Use the help option to list the commands or command options and their descriptions. The following examples show how the help option is used with each of the commands:
