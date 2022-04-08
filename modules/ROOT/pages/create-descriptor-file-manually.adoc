@@ -68,9 +68,9 @@ Fixed:: Publishes a stable asset with the version specified in the descriptor fi
 
 For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
 
-== versionStrategyConditions
+//== versionStrategyConditions
 
-xxx
+//xxx
 
 == contact
 

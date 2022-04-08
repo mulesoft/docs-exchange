@@ -28,7 +28,7 @@ include::partial$api-catalog.adoc[tag=common-options]
 
 include::partial$cli-auth.adoc[tag=summary]
 
-include::partialcli-auth.adoc[tag=sso]
+include::partial$cli-auth.adoc[tag=sso]
 
 include::partial$cli-auth.adoc[tag=conffile]
 
