@@ -58,7 +58,7 @@ Following is a reference for the `api-catalog conf` command.
 > api-catalog conf [options] 
 ----
 
-This command accepts the xref:use-api-catalog-cli.adoc#common-options[common options] in addition to the following options: 
+This command accepts the following options: 
 
 [%header,cols="20a,80a"]
 |===
@@ -209,7 +209,7 @@ Example: branch:latest
 [[common-options]]
 == Common Options
 
-Following are options that are common to all API Catalog commands.
+Following are options that are common to most of the API Catalog commands.
 
 [%header,cols="20a,80a"]
 |===
