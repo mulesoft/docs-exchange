@@ -14,6 +14,7 @@ Use connectors within your application's flows to send and receive data using a 
 Complete the template's use case or solution by supplying your own information, customizing or extending the templates as needed.
 * Examples: Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution
 * Policies: Configuration modules to extend the functionality of an API and enforce capabilities such as security
+* Ruleset:  YAML files that describe a ruleset.
 * REST APIs: RAML or OAS files that specify APIs referenced by an HTTP Request connector to expose metadata to Anypoint Studio
 * AsyncAPI specifications - An AsyncAPI specification file that specifies an event-driven API
 * SOAP APIs: A WSDL file that specifies an API
