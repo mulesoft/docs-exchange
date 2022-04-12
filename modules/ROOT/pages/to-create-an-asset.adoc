@@ -173,7 +173,7 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select *Publish*.
 
 == Create a Ruleset Asset
-Package a set of rules that define an application by adding a zip file with multiple YAML files that describe the new ruleset.
+Rulesets are a group of rules or guidelines that define an application, for example best practices or industry-specific standards. Add a zip file with multiple YAML files that describe the new ruleset.
 
 In Exchange, select *Publish new asset*.
 . Enter the asset portal name.
