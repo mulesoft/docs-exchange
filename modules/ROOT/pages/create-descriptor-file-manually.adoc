@@ -121,35 +121,65 @@ Following is an example descriptor file that describes the cataloging informatio
 [source,yaml]
 ----
 
- #%Catalog Descriptor 0.6 # <1>
+#%Catalog Descriptor 0.7 # <1>
 triggerConditions: # <2>
-  branch:
+  branches:
     - main
     - release/(.*)
-  anytag:
+  tags:
     - support
     - release/(.*)
-  user:
-    - admin
+
 contact: # <3>
   name: 'John Doe'
   email: 'john.doe@org.com'
-apis: # <4>
-  - spec: api-spec/codat.json
-    assetId: codat-api
-    docs:
-      add: api-spec/add.md
-      home: home.md
+
+versionStrategyConditions:
+  majorIncrease:
+    branches:
+      - master
+    tags:
+      - support
+  fixed:
+    branches:
+      - develop
+
+projects: # <4>
+  - main: api-spec/codat.json
+    assetId: my-awesome-api
+    contact:
+      name: 'Jane Doe'
+      email: 'jane.doe@org.com'
+    documentation:
+      add: documentation/add.md
     customFields:
       custom: value
       another: field
     tags:
       - codat
       - gcp
-    versioning: 2.0.x
+#    healthCheck:
+#      url: https://dev.codat.io/api/ping
+#      method: GET
+#      expectedStatus: 204
+    version: 2.0.0
+    versionStrategy: majorIncrease
+    versionStrategyConditions:
+      minorIncrease:
+        branches:
+          - master
+        tags:
+          - support
+      snapshot:
+        branches:
+          - develop
     apiVersion: v3
-  - spec: api-spec/billing-api.json
-    assetId: my-awesome-api
+
+  - main: api-spec/billing-api.json
+    assetId: my-awesome-billing-api
+    triggerConditions:
+      user:
+        - admin
     tags:
       - finance
       - aws
@@ -160,7 +190,10 @@ apis: # <4>
       Organization:
         - Finance
         - Billing
-    versioning: ~1.x.x
+#    healthCheck:
+#      url: https://billing.io/api/health
+    version: 1.0.0
+    versionStrategy: minorIncrease
     apiVersion: v1
 ----
 <1> Provides the start line for the descriptor file
