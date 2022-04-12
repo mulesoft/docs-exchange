@@ -399,7 +399,7 @@ pipeline {
                     usernameVariable: 'ANYPOINT_USERNAME',
                     passwordVariable: 'ANYPOINT_PASSWORD')
                 ]) { 
-                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com/ --trigger=branch:main' <2>
+                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR --organization $ANYPOINT_ORG_ID --host=anypoint.mulesoft.com/ --trigger=branch:main' <2>
                 }
             }
         }
