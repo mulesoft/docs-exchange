@@ -37,7 +37,7 @@ To update a descriptor file using the CLI:
 . Run the `api-catalog update-descriptor` command. The following example updates a descriptor file called `mydescriptor.yaml` in the current path:
 +
 ----
-> api-catalog update-descriptor -f mydescriptor.yaml
+> api-catalog update-descriptor -d mydescriptor.yaml
 ----
 
 The result of the command depends on the presence and content of the designated descriptor file as follows:
