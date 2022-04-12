@@ -7,14 +7,17 @@
 |Command |Description
 |xref:api-catalog.adoc#autocomplete-command[api-catalog autocomplete]  | Configures autocompletion for API Catalog commands
 |xref:api-catalog.adoc#conf-command[api-catalog conf]  | Creates or deletes a credentials configuration file
-|xref:api-catalog.adoc#create-descriptor-file[api-catalog create-descriptor]  | Creates a descriptor file
-|xref:api-catalog.adoc#update-descriptor-file[api-catalog update-descriptor]  | Updates a descriptor file
-|xref:api-catalog.adoc#publish-asset[api-catalog publish-asset]  | Publishes assets to Exchange
+|xref:api-catalog.adoc#create-descriptor-command[api-catalog create-descriptor]  | Creates a descriptor file
+|xref:api-catalog.adoc#update-descriptor-command[api-catalog update-descriptor]  | Updates a descriptor file
+|xref:api-catalog.adoc#publish-asset-command[api-catalog publish-asset]  | Publishes assets to Exchange
 |===
 
 // end::summary[]
 
 // tag::autocomplete-command[]
+
+[[autocomplete-command]]
+== api-catalog autocomplete
 
 Following is a reference for the `api-catalog-cli autocomplete` command. 
 
@@ -23,7 +26,7 @@ Following is a reference for the `api-catalog-cli autocomplete` command.
 ----
 $ api-catalog autocomplete [options] 
 ----
-This command accepts the xref:use-api-catalog-cli.adoc#common-options[common options] in addition to the following options:
+This command accepts the following options:
 
 [%header,cols="20a,80a"]
 |===
