@@ -196,12 +196,17 @@ See xref:create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Sc
 
 | -v, --verbose | Enable verbose logging. 
 
-| --versionStrategy=versionStrategy | Default: xxx
+| --versionStrategy=<descriptor-tag>:<value> --versionStrategy=<descriptor-tag>:<value>  | This option works in conjunction with the custom `versionStrategyConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the version strategy values are compared to version strategy condition values in the descriptor file to determine the version strategy to use to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--versionStrategy` options for each condition. 
 
-Filters that are applied to the descriptor file to determine the version strategy of the asset.
+Example:
 
-Format: <name>:<regular expression>
-Example: branch:latest
+---
+
+ --versionStrategy=branch:main --versionStrategy=anytag:release/ -- versionStrategy=user:admin
+
+---
+
+See xref:create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
 
 |===
 
