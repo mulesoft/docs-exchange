@@ -21,24 +21,23 @@ The descriptor file must start with the following:
 
 ---
 
+[[trigger-conditions]]
 == triggerConditions
 
 The `triggerConditions` section of the YAML file enables you to optionally set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs will be published only when the `api-catalog publish-asset` command is run with `--trigger` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
 
 Trigger conditions can be set for all APIs or for specific APIs. If both types of conditions are used, the specific override the global. 
 
-Following is an example `triggerConditions` section. 
+Following is an example `triggerConditions` section:
 
 ---
- triggerConditions
-  branch:
-    - main
-    - release/(.*)
-  anytag:
-    - support
-    - release/(.*)
-  user:
-    - admin
+ triggerConditions: 
+   branches:
+     - main
+     - release/(.*)
+   tags:
+     - support
+     - release/(.*)
 
 ---
 
@@ -50,41 +49,40 @@ The preceding example enables a run of the `api-catalog publish-asset` command t
 
 If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger` option values. For more information, see the `--trigger` option for the xref:publish-using-api-catalog-cli.adoc#publish-asset-command[`api-catalog publish-asset` command] and xref:publish-using-api-catalog-cli.adoc#example-trigger[Trigger the Publish Using Conditions].
 
-== versionStrategy
+[[version-strategy-conditions]]
+== versionStrategyConditions
 
-You can set the versioning strategy for the assets at the global or API project level. If a version strategy is not specified, the patch version is incremented by one. 
+The `versionStrategyConditions` section of the YAML file enables you to optionally set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs will be set when the `api-catalog publish-asset` command is run with `--versionStrategy` option. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
 
-Following are the possible values:
+Version strategy conditions can be set for all APIs or for specific APIs. If both types of conditions are used, the specific override the global. 
 
-majorIncrease:: Searches for the latest version that matches the `version` field in the descriptor and increases the major version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
+Following is an example `versionStrategyConditions` section:
 
-minorIncrease::  Searches for the latest version that matches the `version` field in the descriptor and increases the minor version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
-
-patchIncrease (Default):: Searches for the latest version that matches the `version` field in the descriptor and increases a patch version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
-
-Snapshot:: Publishes a development asset with the version specified in the descriptor file. If the asset does not exist, it will create it with the state `development`. If the asset exists, it will republish it and keep it in `development`.
-
-Fixed:: Publishes a stable asset with the version specified in the descriptor file. If the asset does not exist, it will create it. If the asset exists, and is in development, it will promote it to `stable`. If the asset is in `stable` state and this version is already published, it will fail.
-
-For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
-
-//== versionStrategyConditions
-
-//xxx
+----
+    versionStrategyConditions:
+      minorIncrease:
+        branches:
+          - main
+        tags:
+          - support
+      snapshot:
+        branches:
+          - develop
+----
 
 == contact
 
 The `contact` section of the schema includes the name and email ID for main contact for the autocataloging. If none are included, these default to `unknown`.   
 
-== apis 
+== projects 
 
-The `apis` section of the schema lists the APIs to be cataloged along with the details needed to catalog them. 
+The `projects` section of the schema lists the API projects to be cataloged along with the details needed to catalog them. 
 
 spec:: The location of the specification file that describes the API. 
 
 assetId:: Specifies the ID of the asset to be published in Exchange. 
 
-docs:: A list of key and value pairs that specify the name of the documentation page and file location for the API.
+documentation:: A list of key and value pairs that specify the name of the documentation page and file location for the API.
 These pairs define the order of the documentation pages in Anypoint Platform.
 +
 Format: <Name of the documentation page>:<File Location>
@@ -107,6 +105,28 @@ tags:: A list of free text strings.
 +
 If this option is not specified, no tags are added.
 +
+version:: The version of the API.
++
+If this is not specified, the version is set by the version strategy.
++
+versionStrategy::
++
+You can set the versioning strategy for the assets at the global or API project level. If a version strategy is not specified, the patch version is incremented by one. 
++
+Following are the possible values:
++
+* *majorIncrease:* Searches for the latest version that matches the `version` field in the descriptor and increases the major version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
++
+* *minorIncrease:*  Searches for the latest version that matches the `version` field in the descriptor and increases the minor version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
++
+* *patchIncrease (Default):* Searches for the latest version that matches the `version` field in the descriptor and increases a patch version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
+
+* *Snapshot*: Publishes a development asset with the version specified in the descriptor file. If the asset does not exist, it will create it with the state `development`. If the asset exists, it will republish it and keep it in `development`.
+
+* *Fixed*: Publishes a stable asset with the version specified in the descriptor file. If the asset does not exist, it will create it. If the asset exists, and is in development, it will promote it to `stable`. If the asset is in `stable` state and this version is already published, it will fail.
+
+For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
+
 apiVersion:: The API version for the asset. 
 +
 If the API version is not specified in the descriptor file, the version from the specification file is used. If the API version is specified in both files, the value in the descriptor file is used. The value must be specified in one of the files. 
@@ -167,7 +187,7 @@ projects: # <4>
     versionStrategyConditions:
       minorIncrease:
         branches:
-          - master
+          - main
         tags:
           - support
       snapshot:

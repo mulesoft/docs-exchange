@@ -115,8 +115,6 @@ The following command does not trigger the API publish because the trigger optio
 
 Version strategy conditions enable you to set the version of assets when the API Catalog CLI publish command runs as part of your CI/CD pipeline or scripts. This example shows how `--versionStrategyConditions` options correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If this is set, it overrides values set at any other level. 
 
-See xxx xref to override order xxx
-
 When you run the `publish-asset` command with the options `–version-strategy branch:main –version-strategy author:admin`, API Catalog would use the version strategy `patchIncrease` regardless of the value in the descriptor. If the provided value for a given condition matches more than one `versionStrategy`, an error is displayed.
 
 *Example Version Strategy Conditions in a Descriptor file*
@@ -149,9 +147,8 @@ The following command sets multiple version strategies during the publish becaus
 
 The resulting version strategies are:
 
-xxx
-xxx
-xxx
+* Patch increase for APIs in the `main` branch with an author of `admin` and any APIs that don't match any other conditions. 
+* Snapshot for APIs in the `test` and `Develop`branches. 
 
 *Example That Does Not Set the Version Strategy During the Publish*
 
@@ -160,6 +157,8 @@ The following command does not set the version strategy during the publish becau
 ----
 > api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --versionStrategyConditions=branch:abc --versionStrategyConditions=author:dev --versionStrategyConditions=branch:xyz --versionStrategyConditions=branch:pop
 ----
+
+For more information on version strategies and version strategy conditions, see xref:create-descriptor-file-manually.adoc[Descriptor YAML Schema].
 
 [[jenkins-script]]
 == Publish Using a Jenkins Script 
