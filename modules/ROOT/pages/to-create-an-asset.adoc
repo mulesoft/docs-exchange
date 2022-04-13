@@ -9,7 +9,7 @@ To share an API, API Group, policy, ruleset, example, template, or connector in 
 
 The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 
-* For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, and rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* menu.
+* For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
 * You can also publish a RAML, or OAS or RAML fragments using Design Center and publish the API to Exchange.
@@ -104,9 +104,9 @@ To create an API asset:
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
 * REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
-* AsyncAP - Provide an AsyncAPI specification file in a YAML (.yaml) file.
-* API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
-* HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
+* AsyncAPI: Provide an AsyncAPI specification file in a YAML (.yaml) file.
+* API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
+* HTTP API: This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
 +
 . For assets that require a file:
 +
