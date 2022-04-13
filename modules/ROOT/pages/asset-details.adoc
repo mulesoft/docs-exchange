@@ -37,6 +37,7 @@ The top asset detail pane provides the following information:
 * Version 
 * Categories and tags of the asset
 * Lifecycle state
+* Conformance state
 * Share by inviting users to have access
 * For APIs, download specifications and view code
 * Add a new version
