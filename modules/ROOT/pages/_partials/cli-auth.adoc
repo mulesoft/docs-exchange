@@ -68,7 +68,7 @@ $ anypoint-cli-v4 conf password <password>
 
 The commands store the credential information in the `config.json` file in the following locations:
 
-* MacOS: `~/Library/Preferences/@mulesoft/anypoint-cli-v4-nodejs/config.json`
+* MacOS: `~/Library/Preferences/@mulesoft/api-catalog-cli-nodejs/config.json`
 
 * Windows: `%LOCALAPPDATA%\mycli`
 
