@@ -5,11 +5,11 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|<<autocomplete-command,api-catalog autocomplete>>  | Configures autocompletion for API Catalog commands
+|xref:configure-cli-autocomplete.adoc#autocomplete-command[api-catalog autocomplete]  | Configures autocompletion for API Catalog commands
 |<<conf-command,api-catalog conf>>  | Creates or deletes a credentials configuration file
-|<<create-descriptor-command,api-catalog create-descriptor>>  | Creates a descriptor file
-|<<update-descriptor-command,api-catalog update-descriptor>> | Updates a descriptor file
-|<<publish-asset-command,api-catalog publish-asset>>  | Publishes assets to Exchange
+|xref:create-descriptor-file-cli.adoc#create-descriptor-command[api-catalog create-descriptor]  | Creates a descriptor file
+|xref:create-descriptor-file-cli.adoc#update-descriptor-command[api-catalog update-descriptor]  | Updates a descriptor file
+|xref:publish-using-api-catalog-cli.adoc#publish-asset-command[api-catalog publish-asset]  | Publishes assets to Exchange
 |===
 
 // end::summary[]
