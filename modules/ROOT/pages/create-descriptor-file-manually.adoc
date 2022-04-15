@@ -1,6 +1,6 @@
 = Creating or Updating a Descriptor File Manually
 
-You can create a descriptor file manually rather than using the `api-catalog create-descriptor` command to create it. You can also update a descriptor file that you have already generated to add conditions required to trigger the publish, add tags to APIs, control asset versioning, and so on.   
+If you want to add more information about the APIs you want to autocatalog than what is generated automatically using the CLI, the most efficient approach is to create or update the basic descriptor file using the CLI to identify and generate the initial descriptor information for each API and then manually update the file with additional information. Typical information you might want to add includes tags, information from existing `exchange.json` files, and conditions that control when to trigger the publish.
 
 After you create the descriptor file, copy it to the file path or repository where your API projects are stored. 
 
