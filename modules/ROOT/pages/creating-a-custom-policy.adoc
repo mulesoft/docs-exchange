@@ -5,13 +5,15 @@ endif::[]
 
 Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, allotted consumption, and service level access (SLA). You can create custom policies based on your specific business requirements. Develop custom policies and apply them to APIs to extend existing functionality or define new ones.
 
-The workflow to create custom policies for Mule 3.9 and earlier in Anypoint API Manager has not changed. Continue to use the process of developing the policy, packaging the custom policy, uploading it to Exchange, and applying the policy to an API through Anypoint API Manager as described in the Anypoint API Manager documentation. Creating custom policies for Anypoint Flex Gateway and Mule 4 runtime is supported in Exchange.
+The workflow to create custom policies for Mule 3.9 and earlier in Anypoint API Manager has not changed. Continue to use the process of developing the policy, packaging the custom policy, uploading it to Exchange, and applying the policy to an API through Anypoint API Manager as described in the Anypoint API Manager documentation. 
 
-The following information describes the workflow for publishing custom policies for Anypoint Flex Gateway and Mule 4:
+The workflow for creating custom policies for Anypoint Flex Gateway and Mule 4 runtime is done in Exchange. The policy is then applied to an API in Anypoint Manager.
 
-. Create the policy definition files
-. Create the implementation files
-. Create a custom policy to publish to Exchange
+The following steps are the high-level workflow for publishing custom policies for Anypoint Flex Gateway and Mule 4:
+
+. Create policy definition files
+. Create implementation files
+. Publish custom policy asset to Exchange
 . Add implementation files
 . Apply the policy to an API from Anypoint API Manager
 
@@ -25,17 +27,48 @@ Before you can publish a custom policy for Flex Gateway or Mule 4, ensure you ha
 
 Policy definition files must be created before you can upload the policy implementation. The required files are JSON and YAML. The JSON file contains the implementation of the policy using JSON schema language. Use the JSON example to construct the custom policy configuration. The YAML file defines the configurable parameters of the policy. Anypoint API Manager uses this file to render the UI to display user inputs for the policy.
 
-Use the examples to construct the custom policy definition files.
+Copy the custom policy definition examples or create the files on you local system.
 
-Follow these steps to create the JSON file:
+=== Create the JSON Schema File
 
-. Open a text file and define the required properties for a policy in Anypoint Platform.
-. Save the file using a `.json` extension.
+The JSON schema file specifies the interface for the policy by identifying which properties are required or supported to configure the policy. The file also includes more annotations to refine the type for each property that enables some fields to perform a special behavior in the Anypoint platform. For example, Dataweave validations or secure handling of secrets.
 
-The following code snippet is a basic authentication JSON file:
-[source,text,linenums]
+The JSON file must include the following fields:
+
+* Top-level @context
++
+References the vocabulary used for the extra type annotations. The aliases used for namespacing the vocabulary are a optional, but common names could be `security` or `config`.
+* Top-level title
+* $schema with a link to the JSON Schema spec (see example)
+* Root type of `object`
+* Top-level description
+* Each property must also include:
++
+** Title
++
+The title is used by API Manager UI to render the field name.
+** Description
++
+The description is used by API Manager UI to describe the field.
+** Type 
++
+Only primitive types are supported, for example `number`, `string`, `object`, `boolean`, `array`, `null`.
+
+Each property can include the following:
+
+* Validations 
++ 
+Such as patterns for strings and ranges for numbers.
+* @context with a @characteristics array
++
+Further refines the type with more annotations, such as `dataweaveExpression` or `sensitive`. These must be prefixed with namespace chosen for the vocabulary in the top-level @context.
+
+
+The following code is a example of a basic authentication JSON schema:
+
 ----
-{
+
+ {
   "title": "Basic authentication - Simple",
   "type": "object",
   "description": "Enforces HTTP Basic authentication according to the details configured in the policy.",
@@ -68,89 +101,192 @@ The following code snippet is a basic authentication JSON file:
 }
 ----
 
+=== Create the Definition Metadata YAML File
 
-The following code snippet is a basic authentication YAML file:
+The YAML file provides information about the policy and its requirements. The YAML file is not tied to any specific runtime or binary. 
 
-[source,text,linenums]
+The file must have these fields configured:
+
+* Header
++
+Header must be #%Policy Definition 0.1.
+* Name
++
+User friendly name that is used for displaying the policy name in API Manager UI. Must be a string value.
+* Description
++
+Must be a string value.
+
+* Category
++
+Category of which the policy belongs. Used to group and filter policies in API Manager UI, any string value is valid. For example, security, quality of service, compliance, troubleshooting, and transformation.
+
+You can view this xref:https://github.com/mulesoft/ang-containers/blob/master/data/management/dialects/policy-definition.yaml[policy definition file] in GitHub with more information about all the supported fields. Some of the fields are auto-completed by the platform during the publication process, so not every field is read or is necessary in the file.
+
+The following code is an example of a basic authentication definition YAML file:
 ----
-#%Policy Definition 0.1
+##%Policy Definition 0.1
 name: Basic authentication - Simple
 description: Enforces HTTP Basic authentication according to the details configured in the policy.
 category: Security
 providedCharacteristics:
   - Requires authentication
 requiredCharacteristics: []
-interfaceScope: ["api", "resource"]
-interfaceTransformation: []
-----
-
-[%header,cols="2a,1a,1a"]
-|===
-|Parameter |Description |Required
-|name |User friendly name that is used for displaying the policy name in API Manager’s UI.  |Yes
-|category |Category to which the policy belongs. Used to group and filter policies in API Manager’s UI, any String value is valid. |Yes
-|providedCharacteristics|  | 
-|requiredCharacteristics|  | 
-|interfaceScope |  |
-|interfaceTransformation | |
-|===
-The following code snippet is a client ID enforcement YAML file:
-
-[source,text,linenums]
-----
-name: Client ID enforcement
-description:  |
-  All calls to the API must include a client ID and client secret for an application that is registered to use the API.
-
-  This policy will require updates to the RAML/OAS definition in order to function.
-  You can obtain the RAML/OAS snippet and learn more [here](https://docs.mulesoft.com/anypoint-platform-for-apis/client-id-based-policies).
-category: Compliance
-providedCharacteristics:
-  - Client ID required
-requiredCharacteristics: []
-interfaceScope: ["api", "resource"]
-interfaceTransformation: []
+interfaceScope: ["api",
 ----
 
 [[create-implementation-files]]
 == Create Implementation Files
 The policy implementation files that are required to make the policy available in a runtime are a binary file and a metadata file. The binary file contains the policy logic and manages the runtime execution. The file can be a WebAssembly (WASM) for Anypoint Flex Gateway or a JAR file for Mule 4 runtime. The metadata file describes what technology the binary file applies to and from which version.
-(TO DO get info from Mariano and Philip about how to create these files and include examples. Dev will be able to provide this after April 15)
 
-== Create a Custom Policy Asset
-After creating the policy definition configuration files (JSON and YAML), create the policy asset in Exchange.
+=== Create Metadata YAML File
+The metadata YAML file provides details about the specific implementation of the policy definition. A single policy definition may several implementations, each an independent asset in Exchange or different versions of the same Exchange asset. 
 
-. In Exchange, select Publish new asset.
+The metada YAML file must include the following fields:
+
+* Header
++
+#%Policy Implementation 1.0
+* Technology
++
+Either `mule4`` or `flexGateway`.
+* Name
+* minRuntimeVersion
++
+A semver version representing the first runtime version that the implementation binary is compatible with. For example, a mule binary might only be compatible from 4.3.0 onwards.
+
+The YAML file can also include:
+
+* Release notes
+* maxRuntimeVersion
++
+A semver version or range (only supporting missing patch/minor or using the `x` or `*` wildcards). For example, 1.2.3, 2.x, and 1.x.x.
+
+The following code is an example of a implementation metadata YAML file:
+
+----
+#%Policy Implementation 1.0
+minRuntimeVersion: 4.1.1
+maxRuntimeVersion: 4.4.0
+technology: mule4
+name: Simple Auth Mule Implementation
+releaseNotes: "<some notes here>"
+
+----
+
+=== Create the Implementation Binary Files
+The implementation binary file is a JAR file for Mule 4 policies or a WebAssembly WASM file for Anypoint Flex Gateway. These files support all of the configuration fields specified in the definition schema and function the way the definition metadata describes. Exchange validates the files to ensure that they are authentic and not a random file with a .wasm extension.
+
+(need the requirements for these files and examples)
+
+== Publish Custom Policy Asset to Exchange
+After creating the required policy definition files (JSON and YAML), publish the policy asset to Exchange. 
+
+You can publish the policy asset to Exchange using one of these methods:
+
+* Publish the policy asset in Exchange 
+* Upload a policy asset to Exchange using Exchange API or Anypoint ClI
+
+
+=== Publish the Policy Asset in Exchange
+Use the Exchange UI to publish the policy asset.
+
+To publish the policy asset:
+
+. In Exchange, click *Publish new asset*.
 . Enter the asset name.
-. Select the Policy asset type from the drop-down list.
-. Click Choose File to select a JSON schema file.
-. Click Choose File to select a YAML file.
-. (Optional) Select Advanced and edit the advanced settings: GroupId, AssetId, Version, and API version. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset’s version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
-. From Lifecycle state, select Stable. The policy must be in the Stable state to upload the implementation file in a later step.
-. Select Publish. Pending status appears next to Implementations in the left navigation bar.
-. Implement the policy by following the steps in the Implement the Policy section.
+. Select the *Policy* asset type from the drop-down list.
+. Click *Choose File* to select a JSON schema file.
+. Click *Choose File* to select a YAML file.
+. To edit the GroupId, AssetId, Version, and API version, click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version. You can change these values. You can also change an API asset’s version and API version separately. The advanced settings are most often used to change the asset version.
+. From Lifecycle state, select *Stable*. 
++
+The policy must be in the Stable state to upload the implementation file in a later step.
+. Select *Publish*. 
++
+*Pending* status appears next to *Implementations* in the left navigation bar.
+. To implement the policy, follow the steps in *Add Implement Files* section.
+
+=== Upload the Policy Asset to Exchange Using Exchange API or Anypoint CLI
+
+You can upload a policy asset in the Exchange API or Anypoint CLI using the following requirements:
+
+* Asset type is named `policy`
+* Use the `x-sync-publication: true` header to avoid polling Exchange for the publication status
++
+Using this header, Exchange forces the call to behave synchronously, causing the call to take a long time to respond. When the call responds, you can determine if the publication worked and if an error occurred.
+* The JSON Schema file has a classifier of `schema` and is packaged as a JSON file
+* The metadata file has a classifier of `metadata` and is packaged as a  YAML file
+
+Use the following cURL example for uploading the policy asset in the Exchange API or Anypoint CLI. Ensure that you replace all of the requirements of the request.
+
+----
+
+curl -L -X POST 'https://<devx.|qax.|...>anypoint.mulesoft.com/exchange/api/v2/organizations/<orgId>/assets/<groupId>/<assetId>/<assetVersion>' \
+-H 'Authorization: Basic <Basic Auth Header>' \
+-H 'x-sync-publication: true' \
+-F 'name="<assetName>"' \
+-F 'description="<assetDescription>"' \
+-F 'type="policy"' \
+-F 'files.schema.json=@"<absolutePathToSchema>"' \
+-F 'files.metadata.yaml=@"<absolutePathToMetadata>"'
+----
+
+
+== Add Implementation Files 
+After the policy asset is published to Exchange, the next step is to publish the policy implementation files to Exchange. This step enables the policy to be available in runtime. The required implementation files are a binary file such as a WebAssembly (WASM) file for Flex Gateway or JAR for Mule 4 runtime and a YAML metadata file. 
 
 Before adding the implementation files, ensure that the policy asset is in the Stable state.
 
-. Click Implementations in the left navigation bar.
-. Click Add implementation.
-. Enter the name for the implementation.
-. Click Choose file to select the JAR or WebAssembly file.
-. Click Choose file to select the YAML file.
-. (Optional) Select Advanced and edit the advanced settings: GroupId, AssetId, Version, and API version. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset’s version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
-. Click Add implementation.
+Use one of these methods:
 
-== Add Implementation Files
-For the policy to be available in runtime, add the implementation files.The required implementation files are a binary file such as a WebAssembly file for Flex Gateway or JAR for Mule 4 runtime and a YAML metadata file. 
+* Add policy implementation using Exchange
+* Add policy implementation using Exchange API or Anypoint CLI
+
+=== Add Policy Implementation Using Exchange
+After you publish a policy asset in Exchange UI, the asset details page displays a *Pending* flag next to *Implementations* in the left navigation bar. The flag indicates that the policy implementation is not been added.
+
+To add the policy implementation files:
+
+. In Exchange, click *Implementations* in the left navigation bar.
+. Click *Add implementation*.
+. Enter the name for the implementation.
+. Click *Choose file* to select the JAR or WebAssembly file.
+. Click *Choose file* to select the YAML file.
+. To edit the GroupId, AssetId, Version, and API version, click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version. You can change these values. You can also change an API asset’s version and API version separately. The advanced settings are most often used to change the asset version.
+. Click *Add implementation*.
++
+The implementation displays in the *Manage implementations* table. From this table, manage the implementation versions of a policy asset. See xref:manage-versions.adoc[Manage Versions] for more information.
+
+=== Add Policy Implementation Using Exchange API or Anypoint CLI
+You can publish policy implementation to Exchange using the Exchange API or Anypoint CLI.
+
+The following are required:
+
+* Asset type is named `policy-implementation`
+* Binary file has a classifier of `binary` and is packaged as a .jar file for Mule or a .wasm file for Anypoint Flex Gateway
+* Must specify a dependency to the definition asset that the implementation is executing
+
+Use the following cURL example to publish the policy implementation to Exchange using the Exchange API or Anypoint CLI. Ensure that you replace all of the requirements of the request.
+
+----
+curl -L -X POST 'https://<devx.|qax.|...>anypoint.mulesoft.com/exchange/api/v2/organizations/<orgId>/assets/<groupId>/<assetId>/<assetVersion>' \
+-H 'Authorization: Basic <Basic Auth Header>' \
+-H 'x-sync-publication: true' \
+-F 'name="<assetName>"' \
+-F 'description="<assetDescription>"' \
+-F 'type="policy-implementation"' \
+-F 'dependencies="<groupId>:<assetId>:<version>"' \
+-F 'files.binary.<packaging>=@"<absolutePathToBinary>"' \
+-F 'files.metadata.yaml=@"<absolutePathToMetadata>"'
+----
 
 == Apply the Policy to an API from Anypoint API Manager
-After the implementation files are uploaded, apply the custom policy in API Manager. See (link to Flex Gate custom policy documentation) for information about applying the policy.
+After the implementation files are published, apply the custom policy in API Manager. See (link to Flex Gate custom policy documentation) for information about applying the policy.
 
-== Manage Implementation Version
 
-A version of an implementation can be added or removed. 
 
-. To add a new implementation version, click the three vertical dots icon and select Add new version.
-. Enter the new version (need to see steps)?
-. To delete a version, a new implementation version, click the three vertical dots icon and select Delete Version. 
-. Click Close.

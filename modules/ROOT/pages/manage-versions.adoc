@@ -32,7 +32,7 @@ If you have contributor or admin access to an asset, you can add a new version f
 . (Required) In *the *API version*, enter the version of the API specification.
 The Version and API version values must agree. You can only choose minor version updates for a given API version. To set a major Version number, also increase the API version. If you choose minor or patch version updates, the API versions should not changed.
 
-. (Optional) Select a *Lifecycle state*. The default is *Stable*.
+. Select a *Lifecycle state*. The default is *Stable*.
 . Click *Publish*
 
 
@@ -58,5 +58,17 @@ If an asset in the development state depends on one or more other assets in the 
 . Click *Manage versions* in the expanded asset details pane.
 . From the drop-down menu next to the lifecycle state that you want to change, choose a state following the correct promotion path.
 . Click *Close*.
+
+== Manage Implementation Version
+
+From the asset details page in Exchange, manage the implementation versions of a policy asset from the *Manage implementations* table. The table displays the latest version. You can view, add, and delete versions. 
+
+. Click *Implementations* from the left navigation bar.
+. To manage the versions of an implementation, click the three vertical dots and select an option:
+.. To view the versions, select *Implementation versions*.
+.. To add a new version, select *Add new version* and enter the version.
+.. To delete a version, select *Delete version*. 
+. Click *Close*.
+
 
 
