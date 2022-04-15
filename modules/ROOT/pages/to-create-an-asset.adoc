@@ -25,7 +25,7 @@ For example: `exchange asset upload --classifier raml --apiVersion v1 --name Hel
 
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
-This illustration summarizes how each asset type (in green) appears in Exchange:
+This illustration summarizes how some asset type (in green) appears in Exchange:
 
 image::ex2-exchange-assets.png[]
 
