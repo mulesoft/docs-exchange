@@ -24,9 +24,9 @@ The descriptor file must start with the following:
 [[trigger-conditions]]
 == triggerConditions
 
-The `triggerConditions` section of the YAML file enables you to optionally set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs will be published only when the `api-catalog publish-asset` command is run with `--trigger` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
+The `triggerConditions` section of the YAML file enables you to optionally set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs are published only when the `api-catalog publish-asset` command is run with `--trigger` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
 
-Trigger conditions can be set for all APIs or for specific APIs. If both types of conditions are used, the specific override the global. 
+You can set trigger conditions for specific APIs or for all APIs described in the descriptor file (global). If both types of conditions are used, the specific override the global. 
 
 Following is an example `triggerConditions` section:
 
@@ -52,9 +52,9 @@ If the `triggerConditions` section is included in the descriptor file, no APIS a
 [[version-strategy-conditions]]
 == versionStrategyConditions
 
-The `versionStrategyConditions` section of the YAML file enables you to optionally set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs will be set when the `api-catalog publish-asset` command is run with `--versionStrategy` option. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
+The `versionStrategyConditions` section of the YAML file enables you to optionally set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs are set when the `api-catalog publish-asset` command is run with `--versionStrategy` option. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
 
-Version strategy conditions can be set for all APIs or for specific APIs. If both types of conditions are used, the specific override the global. 
+You can set version strategy conditions for specific APIs or for all APIs described in the descriptor file (global). If both types of conditions are used, the specific override the global. 
 
 Following is an example `versionStrategyConditions` section:
 
@@ -121,9 +121,9 @@ Following are the possible values:
 +
 * *patchIncrease (Default):* Searches for the latest version that matches the `version` field in the descriptor and increases a patch version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
 
-* *Snapshot*: Publishes a development asset with the version specified in the descriptor file. If the asset does not exist, it will create it with the state `development`. If the asset exists, it will republish it and keep it in `development`.
+* *Snapshot*: Publishes a development asset with the version specified in the descriptor file. If the asset does not exist, it creates it with the state `development`. If the asset exists, it republishes it and keeps it in `development`.
 
-* *Fixed*: Publishes a stable asset with the version specified in the descriptor file. If the asset does not exist, it will create it. If the asset exists, and is in development, it will promote it to `stable`. If the asset is in `stable` state and this version is already published, it will fail.
+* *Fixed*: Publishes a stable asset with the version specified in the descriptor file. If the asset does not exist, it creates it. If the asset exists, and is in development, it promotes it to `stable`. If the asset is in `stable` state and this version is already published, it fails.
 
 For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
 

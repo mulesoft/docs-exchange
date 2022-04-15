@@ -182,7 +182,7 @@ See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor Fil
 
 | -s, --silent | Enable silent logging.
 
-| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | This option works in conjunction with the custom `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger` options for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger` option values.
+| -t, --trigger=<descriptor-tag>:<value> --trigger=<descriptor-tag>:value  | This option works in conjunction with the `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger` options for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger` option values.
 
 Example:
 
@@ -196,7 +196,7 @@ See xref:create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Sc
 
 | -v, --verbose | Enable verbose logging. 
 
-| --versionStrategy=<descriptor-tag>:<value> --versionStrategy=<descriptor-tag>:<value>  | This option works in conjunction with the custom `versionStrategyConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the version strategy values are compared to version strategy condition values in the descriptor file to determine the version strategy to use to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--versionStrategy` options for each condition. 
+| --versionStrategy=<descriptor-tag>:<value> --versionStrategy=<descriptor-tag>:<value>  | This option works in conjunction with the `versionStrategyConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the version strategy values are compared to version strategy condition values in the descriptor file to determine the version strategy to use to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--versionStrategy` options for each condition. 
 
 Example:
 
@@ -255,7 +255,7 @@ ANYPOINT_ENV environment variable
 
   | (Required) 
   
-The ID of the Anypoint Platform environment where the APIs will be cataloged.  
+The ID of the Anypoint Platform environment where the APIs are cataloged.  
  
 |   --host=host
 
@@ -284,7 +284,7 @@ ANYPOINT_ORG environment variable
 
   | (Required) 
   
-The ID of the Anypoint Platform organization where the APIs will be cataloged.  
+The ID of the Anypoint Platform organization where the APIs are cataloged.  
 
 |   -o, --output=output  
 

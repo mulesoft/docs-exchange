@@ -15,13 +15,11 @@ include::partial$api-catalog.adoc[tag=summary]
 
 == View Command Help
 
-Use the help option to list the commands or command options and their descriptions. The following examples show how the help option is used with each of the commands:
+Use the help option to list the commands or command options and their descriptions. The following examples show how the help option is used:
 
 ----
 api-catalog --help
-api-catalog autocomplete --help
 api-catalog create-descriptor --help
-api-catalog publish-asset --help
 ----
 
 NOTE: You can optionally configure the `api-catalog autocomplete` command so that you can use the tab key with a partially typed command to autocomplete it. See xref:configure-cli-autocomplete.adoc[Configure Command Autocompletion] for more details.
