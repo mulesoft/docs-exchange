@@ -1,6 +1,6 @@
 = Creating or Updating Descriptor Files Manually
 
-The 'create-descriptor` and `update-descriptor` commands identify the APIs to catalog and output the essential information needed to catalog them. If you want to add more descriptor information, the most efficient approach is to first create or update the descriptor file using the CLI, and then manually update the file with information that cannot be automatically generated, such as custom tags, information from existing `exchange.json` files, and conditions that control when to trigger the publish.
+The 'create-descriptor` and `update-descriptor` commands identify the APIs to catalog and output the essential information needed to catalog them. If you want to add more descriptor information, the most efficient approach is to first create or update the descriptor file using the CLI, and then manually update the file with information that cannot be automatically. Use the following information about the descriptor YAML schema to decide what to add.  
 
 [[descriptor-yaml]]
 == Descriptor YAML Schema
@@ -37,13 +37,13 @@ Following is an example `triggerConditions` section:
 
 ---
 
-The preceding example enables a run of the `api-catalog publish-asset` command to publish the APIs described by the descriptor file only if the command has all of the following three `--trigger` option values: 
+The preceding example enables a run of the `api-catalog publish-asset` command to publish the APIs described by the descriptor file only if the command has all of the following `--trigger` option values: 
 
-* `branch` is `main` or has `release/` in the text
-* `anytag` is `support` or has `release/` in the text
-* `user` is `admin` 
+* `branches` are `main` or have `release/` in the text
+* `tags` are `support` or have `release/` in the text
 
-If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger` option values. For more information, see the `--trigger` option for the xref:publish-using-api-catalog-cli.adoc#publish-asset-command[`api-catalog publish-asset` command] and xref:publish-using-api-catalog-cli.adoc#example-trigger[Trigger the Publish Using Conditions].
+If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger` option values. For an example publish command using the `--trigger` option, see 
+xref:publish-using-api-catalog-cli.adoc#example-trigger[Trigger the Publish Using Conditions].
 
 [[version-strategy-conditions]]
 == versionStrategyConditions
