@@ -1,6 +1,6 @@
-= Creating or Updating a Descriptor File Using the CLI
+= Creating or Updating Descriptor Files Using the CLI
 
-Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. Typically you create the file using the CLI and update the file manually to set more options to control how the assets are published. 
+Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. Typically you create the file using the CLI and then update the file manually to set more options to control how the assets are published. 
 
 The output descriptor information includes the following for each API:
 
@@ -22,7 +22,7 @@ To create a descriptor file using the CLI:
 > api-catalog create-descriptor -f mydescriptor.yaml
 ----
 +
-Following is example descriptor output that is written to the descriptor file:
+Example output that is written to the descriptor file:
 +
 ----
 #%Catalog Descriptor 0.7
@@ -77,4 +77,5 @@ include::partial$api-catalog.adoc[tag=update-descriptor-command]
 == See Also
 
 * xref:use-api-catalog-cli.adoc[Using API Catalog CLI]
-* xref:create-descriptor-file-manually.adoc#manual-descriptor[Create or Update a Descriptor File Manually]
+* xref:publish-using-api-catalog-cli.adoc[Publishing Assets Using API Catalog CLI]
+* xref:create-descriptor-file-manually.adoc#manual-descriptor[Creating or Updating Descriptor Files Manually]

@@ -1,10 +1,6 @@
-= Creating or Updating a Descriptor File Manually
+= Creating or Updating Descriptor Files Manually
 
-If you want to add more information about the APIs you want to autocatalog than what is generated automatically using the CLI, the most efficient approach is to create or update the basic descriptor file using the CLI to identify and generate the initial descriptor information for each API and then manually update the file with additional information. Typical information you might want to add includes tags, information from existing `exchange.json` files, and conditions that control when to trigger the publish.
-
-After you create the descriptor file, copy it to the file path or repository where your API projects are stored. 
-
-TIP: Run the `api-catalog publish-asset` command using the `--dry-run` option to ensure that your manually-created descriptor file is valid. 
+The 'create-descriptor` and `update-descriptor` commands identify the APIs to catalog and output the essential information needed to catalog them. If you want to add more descriptor information, the most efficient approach is to first create or update the descriptor file using the CLI, and then manually update the file with information that cannot be automatically generated, such as custom tags, information from existing `exchange.json` files, and conditions that control when to trigger the publish.
 
 [[descriptor-yaml]]
 == Descriptor YAML Schema
@@ -17,7 +13,7 @@ The descriptor file must start with the following:
 
 ---
 
- #%Catalog Descriptor 0.6
+ #%Catalog Descriptor 0.7
 
 ---
 
@@ -134,9 +130,9 @@ If the API version is not specified in the descriptor file, the version from the
 Example: v1  
 
 [[example-descriptor-file]]
-== Example Descriptor File
+== Example Descriptor File With Manual Updates
 
-Following is an example descriptor file that describes the cataloging information for two APIs. 
+Following is an example descriptor file with manual updates that describes the cataloging information for two APIs. 
 
 [source,yaml]
 ----
@@ -220,3 +216,9 @@ projects: # <4>
 <2> Sets trigger conditions
 <3> Provides the contact name and email ID 
 <4> Specifies the API information to be published
+
+== See Also
+
+* xref:use-api-catalog-cli.adoc[Using API Catalog CLI]
+* xref:publish-using-api-catalog-cli.adoc[Publishing Assets Using API Catalog CLI]
+* xref:create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]
