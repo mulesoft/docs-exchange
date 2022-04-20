@@ -111,7 +111,7 @@ The following command does not trigger the API publish because the trigger optio
 ----
 
 [[version-strategy-conditions]]
-== Set Version Based Using Conditions 
+== Set Version Strategy Using Conditions 
 
 Version strategy conditions enable you to set the version of assets when the API Catalog CLI publish command runs as part of your CI/CD pipeline or scripts. This example shows how `--versionStrategyConditions` options correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If this is set, it overrides values set at any other level. 
 
