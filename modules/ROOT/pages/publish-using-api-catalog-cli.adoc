@@ -110,10 +110,10 @@ The following command does not trigger the API publish because the trigger optio
 
 ----
 
-[[version-strategy-conditions]]
+[[versionStrategy-conditions]]
 == Set Version Strategy Using Conditions 
 
-Version strategy conditions enable you to set the version of assets when the API Catalog CLI publish command runs as part of your CI/CD pipeline or scripts. This example shows how `--version-strategy` options correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If the version strategy is set at the global level, it overrides values set at any other level. If the value for a condition matches more than one version strategy, the command gives an error.
+Version strategy conditions enable you to set the version of assets when the API Catalog CLI publish command runs as part of your CI/CD pipeline or scripts. This example shows how `--versionStrategy` options correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If the version strategy is set at the global level, it overrides values set at any other level. If the value for a condition matches more than one version strategy, the command gives an error.
 
 *Example Version Strategy Conditions in a Descriptor file*
 
@@ -140,7 +140,7 @@ branch:
 The following command sets multiple version strategies during the publish because the option values match multiple conditions in the `mydescriptor.yaml` descriptor file. 
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --version-strategy=branch:main --version-strategy=author:admin --version-strategy=branch:test --version-strategy=branch:Develop
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --versionStrategy=branch:main --versionStrategy=author:admin --versionStrategy=branch:test --versionStrategy=branch:Develop
 ----
 
 The resulting version strategies are:
@@ -153,7 +153,7 @@ The resulting version strategies are:
 The following command does not set the version strategy during the publish because none of the values match the corresponding conditions. The version strategy defaults to `patchIncrease`.
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --version-strategy=branch:abc --version-strategy=author:dev --version-strategy=branch:xyz --version-strategy=branch:pop
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --versionStrategy=branch:abc --versionStrategy=author:dev --versionStrategy=branch:xyz --versionStrategy=branch:pop
 ----
 
 For more information on version strategies and version strategy conditions, see xref:create-descriptor-file-manually.adoc[Descriptor YAML Schema].
