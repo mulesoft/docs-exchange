@@ -163,13 +163,13 @@ See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor Fil
 
 | -s, --silent | Enable silent logging.
 
-| -t, --trigger-criteria=<descriptor-tag>:<value> --trigger-criteria=<descriptor-tag>:value  | This option works in conjunction with the `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger-criteria` options for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger-criteria` option values.
+| -t, --trigger-criteria-criteria=<descriptor-tag>:<value> --trigger-criteria-criteria=<descriptor-tag>:value  | This option works in conjunction with the `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger-criteria-criteria` options for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger-criteria-criteria` option values.
 
 Example:
 
 ---
 
- --trigger-criteria=branch:main --trigger-criteria=anytag:release/ -- trigger=user:admin
+ --trigger-criteria-criteria=branch:main --trigger-criteria-criteria=anytag:release/ -- trigger=user:admin
 
 ---
 

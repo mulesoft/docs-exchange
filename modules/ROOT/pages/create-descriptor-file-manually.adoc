@@ -22,7 +22,7 @@ The descriptor file must start with the following:
 [[trigger-conditions]]
 == triggerConditions
 
-The `triggerConditions` section of the YAML file enables you to optionally set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs are published only when the `api-catalog publish-asset` command is run with `--trigger` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
+The `triggerConditions` section of the YAML file enables you to optionally set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs are published only when the `api-catalog publish-asset` command is run with `--trigger-criteria` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
 
 You can set trigger conditions for specific APIs or for all APIs described in the descriptor file (global). If both types of conditions are used, the specific override the global. 
 
@@ -39,18 +39,18 @@ Following is an example `triggerConditions` section:
 
 ---
 
-The preceding example enables a run of the `api-catalog publish-asset` command to publish the APIs described by the descriptor file only if the command has all of the following `--trigger` option values: 
+The preceding example enables a run of the `api-catalog publish-asset` command to publish the APIs described by the descriptor file only if the command has all of the following `--trigger-criteria` option values: 
 
 * `branches` are `main` or have `release/` in the text
 * `tags` are `support` or have `release/` in the text
 
-If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger` option values. For an example publish command using the `--trigger` option, see 
+If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger-criteria` option values. For an example publish command using the `--trigger-criteria` option, see 
 xref:publish-using-api-catalog-cli.adoc#example-trigger[Trigger the Publish Using Conditions].
 
 [[version-strategy-conditions]]
 == versionStrategyConditions
 
-The `versionStrategyConditions` section of the YAML file enables you to optionally set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs are set when the `api-catalog publish-asset` command is run with `--versionStrategy` option. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
+The `versionStrategyConditions` section of the YAML file enables you to optionally set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs are set when the `api-catalog publish-asset` command is run with `--version-strategy-criteria` option. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
 
 You can set version strategy conditions for specific APIs or for all APIs described in the descriptor file (global). If both types of conditions are used, the specific override the global. 
 

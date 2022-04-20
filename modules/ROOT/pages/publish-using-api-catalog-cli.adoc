@@ -36,7 +36,7 @@ The following sections give example commands that show how several catalog optio
 The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings are used for the unspecified options. 
 
 ----
-> api-catalog-cli publishAsset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
+> api-catalog publish-asset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
 
 ----
 
@@ -72,7 +72,7 @@ This example shows the `api-catalog publish-asset` command with both of these op
 [[trigger-conditions]]
 == Trigger the Publish Using Conditions 
 
-Custom trigger conditions enable you to control whether APIs are published when the API Catalog CLI command runs. This example shows how `--trigger` options correlate with descriptor file trigger conditions to control whether or not to publish the described APIs.   
+Custom trigger conditions enable you to control whether APIs are published when the API Catalog CLI command runs. This example shows how `--trigger-criteria` options correlate with descriptor file trigger conditions to control whether or not to publish the described APIs.   
 
 *Example Trigger Conditions in a Descriptor file*
 
@@ -97,7 +97,7 @@ Following is an example `triggerConditions` section in the `mydescriptor.yaml` d
 The following command triggers the API publish because the trigger option values match all of the trigger conditions in the `mydescriptor.yaml` descriptor file. 
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:main --trigger=tags:migrate --trigger=status:complete
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger-criteria=ref:main --trigger-criteria=tags:migrate --trigger-criteria=status:complete
 
 ----
 
@@ -106,7 +106,7 @@ The following command triggers the API publish because the trigger option values
 The following command does not trigger the API publish because the trigger option value for `ref` is `test`, not `main`. Because not all trigger values match the corresponding trigger conditions, no APIs are published. 
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger=ref:test --trigger=tags:migrate --trigger=status:complete
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger-criteria=ref:test --trigger-criteria=tags:migrate --trigger-criteria=status:complete
 
 ----
 
@@ -190,7 +190,7 @@ pipeline {
                     usernameVariable: 'ANYPOINT_USERNAME',
                     passwordVariable: 'ANYPOINT_PASSWORD')
                 ]) { 
-                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR --organization $ANYPOINT_ORG_ID --host=anypoint.mulesoft.com/ --trigger=branch:main' <2>
+                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR --organization $ANYPOINT_ORG_ID --host=anypoint.mulesoft.com/ --trigger-criteria=branch:main' <2>
                 }
             }
         }
