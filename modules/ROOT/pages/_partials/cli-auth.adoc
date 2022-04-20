@@ -43,7 +43,7 @@ If you have configured Anypoint Platform to use SSO with the system on which you
 
 If you are not using SSO, MuleSoft recommends that you pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
 
-You can authenticate to Anypoint Platform by running the `anypoint-cli-v4` command with the `conf` option to add your credentials to a configuration file. After you have created the configuration file with valid credentials, you can run the `anypoint-cli-v4` commands without specifying any credentials options and the authentication is done using the configuration file values. 
+You can authenticate to Anypoint Platform by running the `api-catalog` command with the `conf` option to add your credentials to a configuration file. After you have created the configuration file with valid credentials, you can run the `api-catalog` commands without specifying any credentials options and the authentication is done using the configuration file values. 
 
 You can set authentication values in the configuration file using a combination of the following options:
 
@@ -59,11 +59,11 @@ session.selectedOrganization.id
 
 To create your configuration file:
 
-* Run the `anypoint-cli-v4 conf` command with the options you want to use to set the authentication method. For example, the following command sets the username and password.
+* Run the `api-catalog conf` command with the options you want to use to set the authentication method. For example, the following command sets the username and password.
 +
 ----
-$ anypoint-cli-v4 conf username <username>
-$ anypoint-cli-v4 conf password <password>
+$ api-catalog conf username <username>
+$ api-catalog conf password <password>
 ----
 
 The commands store the credential information in the `config.json` file in the following locations:
@@ -81,9 +81,9 @@ The commands store the credential information in the `config.json` file in the f
 Add authentication values to the configuration file using the following commands:
 +
 ----
-$ anypoint-cli-v4 conf username myUserName
-$ anypoint-cli-v4 conf password myPassword
-$ anypoint-cli-v4 conf organization myOrgId
+$ api-catalog conf username myUserName
+$ api-catalog conf password myPassword
+$ api-catalog conf organization myOrgId
 ----
 +
 * Set configuration file authentication using client ID and client secret
@@ -91,9 +91,9 @@ $ anypoint-cli-v4 conf organization myOrgId
 Add authentication values to the configuration file using the following commands:
 +
 ----
-$ anypoint-cli-v4 conf client_id myClientID
-$ anypoint-cli-v4 conf client_secret myCLientSecret
-$ anypoint-cli-v4 conf organization myOrgId
+$ api-catalog conf client_id myClientID
+$ api-catalog conf client_secret myCLientSecret
+$ api-catalog conf organization myOrgId
 ----
 
 // end::conffile[]
@@ -103,7 +103,7 @@ $ anypoint-cli-v4 conf organization myOrgId
 [[command-line-options]]
 == Command Line Options
 
-You can authenticate to Anypoint Platform through command line by running the `anypoint-cli-v4` command with a combination of the following options:
+You can authenticate to Anypoint Platform through command line by running the `api-catalog` command with a combination of the following options:
 
 ----
 --username
@@ -120,13 +120,13 @@ You can authenticate to Anypoint Platform through command line by running the `a
 * Authenticate on the command line using username and password
 +
 ----
-$ anypoint-cli-v4 --username myUserName --password myPassword --organization myOrgId account:environment:list
+$ api-catalog --username myUserName --password myPassword --organization myOrgId account:environment:list
 ----
 
 * Authenticate on the command line  using client ID and client secret
 +
 ----
-$ anypoint-cli-v4 --client_id myClientID myClientSecret --organization myOrgId account:environment:list
+$ api-catalog --client_id myClientID myClientSecret --organization myOrgId account:environment:list
 ----
 
 * Authenticate on the command line  using a bearer token
@@ -134,7 +134,7 @@ $ anypoint-cli-v4 --client_id myClientID myClientSecret --organization myOrgId a
 You can generate a bearer token in Anypoint Platform and pass it to Anypoint CLI directly. When you provide a bearer token, Anypoint CLI ignores any provided user or client credentials.
 +
 ----
-$ anypoint-cli-v4 --bearer myBearerToken --organization myOrgId account:environment:list
+$ api-catalog --bearer myBearerToken --organization myOrgId account:environment:list
 ----
 +
 Your Anypoint Platform session expires when the bearer token expires.
@@ -148,7 +148,7 @@ For information about generating a bearer token, see https://help.mulesoft.com/s
 [[env-variables]]
 == Environment Variables
 
-You can authenticate to Anypoint Platform by setting a combination of the following environment variables before running an `anypoint-cli-v4` command:
+You can authenticate to Anypoint Platform by setting a combination of the following environment variables before running an `api-catalog` command:
 
 ----
 ANYPOINT_USERNAME
