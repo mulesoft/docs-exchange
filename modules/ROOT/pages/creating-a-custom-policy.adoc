@@ -3,19 +3,18 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, allotted consumption, and service level access (SLA). You can create custom policies based on your specific business requirements. Develop custom policies and apply them to APIs to extend existing functionality or define new ones.
+Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, and service level agreement (SLA). You can create custom policies based on your specific business requirements. Develop custom policies and apply them to APIs to extend existing functionality or define new ones.
 
-The workflow to create custom policies for Mule 3.9 and earlier in Anypoint API Manager has not changed. Continue to use the process of developing the policy, packaging the custom policy, uploading it to Exchange, and applying the policy to an API through Anypoint API Manager as described in the Anypoint API Manager documentation. 
+The workflow to create custom policies for Mule 4 and earlier in Anypoint API Manager has not changed. Continue to use the process of developing the policy, packaging the custom policy, uploading it to Exchange, and applying the policy to an API through Anypoint API Manager as described in the Anypoint API Manager documentation. 
 
-The workflow for creating custom policies for Anypoint Flex Gateway and Mule 4 runtime is done in Exchange. The policy is then applied to an API in Anypoint Manager.
+The workflow for creating custom policies for Anypoint Flex Gateway is done in Exchange. Creating custom policies for Mule 4 is also supported in Exchange. The policy is then available to be applied to an API in Anypoint Manager.
 
 The following steps are the high-level workflow for publishing custom policies for Anypoint Flex Gateway and Mule 4:
 
 . Create policy definition files
-. Create implementation files
 . Publish custom policy asset to Exchange
-. Add implementation files
-. Apply the policy to an API from Anypoint API Manager
+. Create implementation files
+. Add policy implementation to the published policy definition
 
 == Before You Begin
 
@@ -25,7 +24,7 @@ Before you can publish a custom policy for Flex Gateway or Mule 4, ensure you ha
 [[create-policy-definition_files]]
 == Create Policy Definition Files
 
-Policy definition files must be created before you can upload the policy implementation. The required files are JSON and YAML. The JSON file contains the implementation of the policy using JSON schema language. Use the JSON example to construct the custom policy configuration. The YAML file defines the configurable parameters of the policy. Anypoint API Manager uses this file to render the UI to display user inputs for the policy.
+Policy definition files must be created before you can upload the policy implementation. The required files are JSON and YAML. The JSON file specifies the interface for the policy using JSON schema language. The JSON file is used by API Manager to render the UI. The YAML file provides metadata regarding the policy, for example the policy category, interface scope, required characteristics, and RAML/OAS snippets.
 
 Copy the custom policy definition examples or create the files on you local system.
 
@@ -38,6 +37,11 @@ The JSON file must include the following fields:
 * Top-level @context
 +
 References the vocabulary used for the extra type annotations. The aliases used for namespacing the vocabulary are a optional, but common names could be `security` or `config`.
++
+Values for the security and config aliases are:
+
+** Security: `anypoint://vocabulary/policy.yaml#`
+** Config: `anypoint://vocabulary/policyConfigurationsForUI.yaml#``
 * Top-level title
 * $schema with a link to the JSON Schema spec (see example)
 * Root type of `object`
@@ -52,16 +56,25 @@ The title is used by API Manager UI to render the field name.
 The description is used by API Manager UI to describe the field.
 ** Type 
 +
-Only primitive types are supported, for example `number`, `string`, `object`, `boolean`, `array`, `null`.
+Only primitive types are supported, for example `integer`, `string`, `object`, `boolean`, and `array`.
 
 Each property can include the following:
 
-* Validations 
+* Format 
 + 
-Such as patterns for strings and ranges for numbers.
+Options are `dataweaveExpression` and `ipRange``.
+* Default
++
+Allows the user to enter a default value which is rendered in the UI.
 * @context with a @characteristics array
 +
-Further refines the type with more annotations, such as `dataweaveExpression` or `sensitive`. These must be prefixed with namespace chosen for the vocabulary in the top-level @context.
+Further refines the type with more annotations with the following options:
+
+** `config:commaSeparatedValues` 
++
+The value of this field results in an array
+** `security:sensitive`
+Determines whether the property is masked when entering the property in the API Manager UI.
 
 
 The following code is a example of a basic authentication JSON schema:
@@ -121,8 +134,6 @@ Must be a string value.
 +
 Category of which the policy belongs. Used to group and filter policies in API Manager UI, any string value is valid. For example, security, quality of service, compliance, troubleshooting, and transformation.
 
-You can view this xref:https://github.com/mulesoft/ang-containers/blob/master/data/management/dialects/policy-definition.yaml[policy definition file] in GitHub with more information about all the supported fields. Some of the fields are auto-completed by the platform during the publication process, so not every field is read or is necessary in the file.
-
 The following code is an example of a basic authentication definition YAML file:
 ----
 ##%Policy Definition 0.1
@@ -132,12 +143,15 @@ category: Security
 providedCharacteristics:
   - Requires authentication
 requiredCharacteristics: []
-interfaceScope: ["api",
+interfaceScope: ["api", "resource"]
+interfaceTransformation: []
+encryptionSupported: true
+violationCategory: authentication
 ----
 
 [[create-implementation-files]]
 == Create Implementation Files
-The policy implementation files that are required to make the policy available in a runtime are a binary file and a metadata file. The binary file contains the policy logic and manages the runtime execution. The file can be a WebAssembly (WASM) for Anypoint Flex Gateway or a JAR file for Mule 4 runtime. The metadata file describes what technology the binary file applies to and from which version.
+The policy implementation files that are required to make the policy available in a runtime are a binary file and a metadata file. The binary file contains the policy logic and manages the runtime execution. The file can be a WebAssembly (WASM) for Anypoint Flex Gateway or a JAR file for Mule 4 runtime. The metadata file describes what technology the binary file applies to and from which runtime version.
 
 === Create Metadata YAML File
 The metadata YAML file provides details about the specific implementation of the policy definition. A single policy definition may several implementations, each an independent asset in Exchange or different versions of the same Exchange asset. 
@@ -151,16 +165,14 @@ The metada YAML file must include the following fields:
 +
 Either `mule4`` or `flexGateway`.
 * Name
++ 
+Name of the implementation.
 * minRuntimeVersion
 +
 A semver version representing the first runtime version that the implementation binary is compatible with. For example, a mule binary might only be compatible from 4.3.0 onwards.
 
-The YAML file can also include:
+The YAML file can also include `Release notes`.
 
-* Release notes
-* maxRuntimeVersion
-+
-A semver version or range (only supporting missing patch/minor or using the `x` or `*` wildcards). For example, 1.2.3, 2.x, and 1.x.x.
 
 The following code is an example of a implementation metadata YAML file:
 
@@ -175,9 +187,8 @@ releaseNotes: "<some notes here>"
 ----
 
 === Create the Implementation Binary Files
-The implementation binary file is a JAR file for Mule 4 policies or a WebAssembly WASM file for Anypoint Flex Gateway. These files support all of the configuration fields specified in the definition schema and function the way the definition metadata describes. Exchange validates the files to ensure that they are authentic and not a random file with a .wasm extension.
+The implementation binary file is a JAR file for Mule 4 policies or a WebAssembly WASM file for Anypoint Flex Gateway. These files should support all of the configuration fields and function the way the definition metadata describes. 
 
-(need the requirements for these files and examples)
 
 == Publish Custom Policy Asset to Exchange
 After creating the required policy definition files (JSON and YAML), publish the policy asset to Exchange. 
