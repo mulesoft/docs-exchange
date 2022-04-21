@@ -51,8 +51,16 @@ $ api-catalog autocomplete --refresh-cache
 == api-catalog conf
 
 ----
-> api-catalog conf [options] 
+> api-catalog conf <authkey> <authkeyvalue> [options] 
 ----
+
+<authkey>
+
+The authentication key you want to use, such as an authentication environment variable or command option. 
+
+<authkeyvalue>
+
+The value for the authentication key.
 
 This command accepts the following options: 
 
@@ -60,13 +68,11 @@ This command accepts the following options:
 |===
 | Option | Description 
 
-| c, --cwd=cwd |  Configuration file location. 
-
 | -d, --delete | Delete the configuration file. 
 
-| -k, --key=key | Authentication key for the configuration file. 
+| -h, --help | Show the command help. 
 
-| -n, --name=name | Project name.
+| -k, --key=key | Authentication key for the configuration file. This is the value from the file that you want to operate on. 
 
 | -v, --value=value | Authentication value for the key.
 

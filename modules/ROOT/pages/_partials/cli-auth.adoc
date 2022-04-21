@@ -45,7 +45,7 @@ If you are not using SSO, MuleSoft recommends that you pass credentials to your 
 
 You can authenticate to Anypoint Platform by running the `api-catalog` command with the `conf` option to add your credentials to a configuration file. After you have created the configuration file with valid credentials, you can run the `api-catalog` commands without specifying any credentials options and the authentication is done using the configuration file values. 
 
-You can set authentication values in the configuration file using a combination of the following options:
+You can set authentication values in the configuration file using a combination of the following keys:
 
 ----
 username
@@ -59,7 +59,7 @@ session.selectedOrganization.id
 
 To create your configuration file:
 
-* Run the `api-catalog conf` command with the options you want to use to set the authentication method. For example, the following command sets the username and password.
+* Run the `api-catalog conf` command with the key value pair you want to use to set the authentication method. For example, the following command sets the username and password.
 +
 ----
 $ api-catalog conf username <username>
@@ -83,7 +83,6 @@ Add authentication values to the configuration file using the following commands
 ----
 $ api-catalog conf username myUserName
 $ api-catalog conf password myPassword
-$ api-catalog conf organization myOrgId
 ----
 +
 * Set configuration file authentication using client ID and client secret
@@ -93,7 +92,6 @@ Add authentication values to the configuration file using the following commands
 ----
 $ api-catalog conf client_id myClientID
 $ api-catalog conf client_secret myCLientSecret
-$ api-catalog conf organization myOrgId
 ----
 
 // end::conffile[]
