@@ -111,6 +111,27 @@ To create a custom asset:
 . (Optional) Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
+== Create Custom Policy Definition Asset in Exchange
+Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, and service level agreement (SLA). You can create a policy definition based on your specific business requirements. Develop custom policy definitions and apply them to APIs to extend existing functionality or define new ones.
+
+To publish a custom policy definition:
+
+. In Exchange, click *Publish new asset*.
+. Enter the asset name.
+. Select the *Policy* asset type from the drop-down list.
+. Click *Choose File* to select a JSON schema file.
+. Click *Choose File* to select a YAML file.
+. To edit the GroupId, AssetId, Version, and API version, click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version. You can change these values. You can also change an API asset’s version and API version separately. The advanced settings are most often used to change the asset version.
+. From Lifecycle state, select *Stable*. 
++
+The policy must be in the Stable state to upload the implementation file in a later step.
+. Select *Publish*. 
++
+*Pending* status appears next to *Implementations* in the left navigation bar.
+
+To implement the policy so that it is available at runtime, follow the steps in xref:add-policy-implementation-files-to-published-policy-definition.adoc[Add Policy Implementation Files to Published Policy Definition].
 
 == Asset Name, Icon, and Description Properties
 
@@ -159,5 +180,5 @@ The new version of the asset has the same name, icon, and description as the pre
 == See Also
 
 * Next: xref:to-describe-an-asset.adoc[Describe an Asset]
-* xref:design-center::upload-raml-task.adoc[Create a RAML file in API Designer and import to Exchange]
+* xref:design-center::upload-raml-task.adoc[Create a RAML file in API Designer and Import to Exchange]
 * xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]

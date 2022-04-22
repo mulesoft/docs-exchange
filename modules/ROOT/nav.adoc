@@ -18,6 +18,7 @@
  ** xref:to-delete-asset.adoc[Delete an Asset]
  ** xref:to-change-raml-version.adoc[Change the Version of an API Asset]
  ** xref:publish-an-http-api.adoc[Publish an HTTP API Asset]
+ ** xref:add-policy-implementation-files-to-published-policy-definition.adoc[Add Policy Implementation Files to Published Custom Policy]
  ** xref:exchange2-faq.adoc[FAQ]
 * xref:about-api-use.adoc[Consume an API]
  ** xref:about-my-applications.adoc[My Applications]
