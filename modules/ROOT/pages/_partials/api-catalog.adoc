@@ -173,11 +173,7 @@ See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor Fil
 
 Example:
 
----
-
- --trigger-criteria=branch:main --trigger-criteria=anytag:release/ -- trigger=user:admin
-
----
+`--trigger-criteria=branch:main --trigger-criteria=anytag:release/ -- trigger=user:admin`
 
 See xref:create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
 
@@ -187,11 +183,7 @@ See xref:create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Sc
 
 Example:
 
----
-
- --version-strategy-criteria=branch:main --version-strategy-criteria=anytag:release/ -- version-strategy-criteria=user:admin
-
----
+`--version-strategy-criteria=branch:main --version-strategy-criteria=anytag:release/ -- version-strategy-criteria=user:admin`
 
 See xref:create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
 
