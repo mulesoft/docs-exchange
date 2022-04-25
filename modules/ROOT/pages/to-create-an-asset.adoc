@@ -117,7 +117,7 @@ If the file is a ZIP, the selected main file must be in the root directory of th
 +
 . To edit *GroupId*, *AssetId*, *Version*, and *API version*, click *Advanced*.
 +
- Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
+ Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. You can change an API's asset version and version separately. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
