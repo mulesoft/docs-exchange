@@ -179,7 +179,7 @@ Rulesets are a group of rules or guidelines that define an application, for exam
 . Enter the asset portal name.
 . Select the asset type *Ruleset* from the drop-down list.
 . Click *Choose the file* to select the file to upload.
-. To edit the advanced settings: *GroupId*, *AssetId*, and *Version*, click *Advanced*. 
+. To edit the advanced settings, *GroupId*, *AssetId*, and *Version*, click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
