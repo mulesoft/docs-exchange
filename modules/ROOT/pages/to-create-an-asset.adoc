@@ -177,7 +177,7 @@ Rulesets are a group of rules or guidelines that define an application, for exam
 
 . In Exchange, select *Publish new asset*.
 . Enter the asset portal name.
-. Select the asset type *Ruleset* from the drop-down list.
+. From the drop-down list, select the asset type *Ruleset* .
 . To select the file to upload, click *Choose the file* .
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version*, click *Advanced*. 
 +
