@@ -59,7 +59,7 @@ If an asset in the development state depends on one or more other assets in the 
 . From the drop-down menu next to the lifecycle state that you want to change, choose a state following the correct promotion path.
 . Click *Close*.
 
-== Manage Implementation Version
+== Manage Policy Implementation Version
 
 From the asset details page in Exchange, manage the implementation versions of a policy asset from the *Manage implementations* table. The table displays the latest version. You can view, add, and delete versions. 
 
