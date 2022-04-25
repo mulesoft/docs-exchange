@@ -168,7 +168,7 @@ To create a custom asset:
 . Click *Choose the file* to select the file to upload.
 . To edit the *GroupId*, *AssetId*, and *Version*, click *Advanced*. 
 +
-Exchange generates the group ID, asset ID, and version for you, and you can change these values here. The advanced settings are most often used to change the asset version.
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
