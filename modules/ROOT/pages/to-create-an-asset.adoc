@@ -106,7 +106,7 @@ To create an API asset:
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
 * AsyncAPI: Provide an AsyncAPI specification file in a YAML (.yaml) file.
 * API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
-* HTTP API: This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
+* HTTP API: This asset does not require a file. This asset type provides an API endpoint that is defined by API Manager.
 +
 . For assets that require a file:
 +
