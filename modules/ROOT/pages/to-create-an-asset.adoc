@@ -147,7 +147,7 @@ Warnings are also shown when publishing an API Group to your public portal if al
 
 A custom asset lets you share information about any aspect of your organization such as announcements, documentation, videos, and sharing files. You can add an optional file to your Custom asset that users can download. The file is stored in Exchange.
 
-Exchange only permits the following file types as the optional file in a Custom asset:
+Exchange only permits the following file types as the optional file in a custom asset:
 
 Images: `.jpg, .jpeg, .png, .gif, .svg` +
 Documents: `.docx, .pdf, .pptx, .rtf, .vsdx, .vssx` +
