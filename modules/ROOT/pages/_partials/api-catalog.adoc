@@ -5,11 +5,11 @@
 [%header,cols="35a,65a"]
 |===
 |Command |Description
-|xref:configure-cli-autocomplete.adoc#autocomplete-command[api-catalog autocomplete]  | Configures autocompletion for API Catalog commands
+|xref:apicat-configure-cli-autocomplete.adoc#autocomplete-command[api-catalog autocomplete]  | Configures autocompletion for API Catalog commands
 |<<conf-command,api-catalog conf>>  | Creates or deletes a credentials configuration file
-|xref:create-descriptor-file-cli.adoc#create-descriptor-command[api-catalog create-descriptor]  | Creates a descriptor file
-|xref:create-descriptor-file-cli.adoc#update-descriptor-command[api-catalog update-descriptor]  | Updates a descriptor file
-|xref:publish-using-api-catalog-cli.adoc#publish-asset-command[api-catalog publish-asset]  | Publishes assets to Exchange
+|xref:apicat-create-descriptor-file-cli.adoc#create-descriptor-command[api-catalog create-descriptor]  | Creates a descriptor file
+|xref:apicat-create-descriptor-file-cli.adoc#update-descriptor-command[api-catalog update-descriptor]  | Updates a descriptor file
+|xref:apicat-publish-using-api-catalog-cli.adoc#publish-asset-command[api-catalog publish-asset]  | Publishes assets to Exchange
 |===
 
 // end::summary[]
@@ -89,7 +89,7 @@ This command accepts the following options:
 > api-catalog create-descriptor [options] 
 ----
 
-This command accepts the xref:use-api-catalog-cli.adoc#common-options[common options] in addition to the following options: 
+This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[common options] in addition to the following options: 
 
 [%header,cols="20a,80a"]
 |===
@@ -112,7 +112,7 @@ The name and location in which to save the generated catalog descriptor file.
 > api-catalog update-descriptor [options] 
 ----
 
-This command accepts the xref:use-api-catalog-cli.adoc#common-options[common options] in addition to the following option: 
+This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[common options] in addition to the following option: 
 
 [%header,cols="20a,80a"]
 |===
@@ -134,7 +134,7 @@ The name and location in which to save the updated catalog descriptor file infor
 > api-catalog publish-asset [options] 
 ----
 
-This command accepts the xref:use-api-catalog-cli.adoc#common-options[common options] in addition to the following options: 
+This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[common options] in addition to the following options: 
 
 [%header,cols="20a,80a"]
 |===
@@ -156,7 +156,7 @@ The name and location of the catalog descriptor file.
   * If the file exists but is empty, the command creates and prints the catalog descriptor YAML results. It outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
   * If a valid YAML file exists, the command catalogs the assets as specified. 
   
-See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI]. 
+See xref:apicat-create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI]. 
 
 | --dry-run | Runs the command to verify that the descriptor file is valid. No APIs are published. 
 
@@ -175,7 +175,7 @@ Example:
 
 `--trigger-criteria=branch:main --trigger-criteria=anytag:release/ -- trigger=user:admin`
 
-See xref:create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
+See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
 
 | -v, --verbose | Enable verbose logging. 
 
@@ -185,7 +185,7 @@ Example:
 
 `--version-strategy-criteria=branch:main --version-strategy-criteria=anytag:release/ -- version-strategy-criteria=user:admin`
 
-See xref:create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
+See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
 
 |===
 
@@ -210,7 +210,7 @@ ANYPOINT_CLIENT_ID environment variable
 
 | Connected app client ID.  
 
-See xref:use-api-catalog-cli.adoc#authentication[Authentication].
+See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
 | --client-secret 
 
@@ -220,7 +220,7 @@ ANYPOINT_CLIENT_SECRET environment variable
 
 | Prompt for the Connected App secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  
  
-See xref:use-api-catalog-cli.adoc#authentication[Authentication].
+See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
 | --collectMetrics
 
@@ -279,7 +279,7 @@ ANYPOINT_PASSWORD environment variable
 
  | Anypoint user password. Set the environment variable to avoid a prompt for the password.  
  
-See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
+See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
 
 | --profile=profile
 
@@ -287,7 +287,7 @@ See xref:use-api-catalog-cli.adoc#authentication[Authentication].
 
 Select the profile from the credentials configuration file.
  
-See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
+See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
 
 | -u, --username=username 
 
@@ -297,7 +297,7 @@ ANYPOINT_USERNAME environment variable
 
 | Anypoint username. 
 
-See xref:use-api-catalog-cli.adoc#authentication[Authentication]. 
+See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
 
 |===
 
