@@ -76,6 +76,6 @@ include::partial$api-catalog.adoc[tag=update-descriptor-command]
 
 == See Also
 
-* xref:use-api-catalog-cli.adoc[Using API Catalog CLI]
-* xref:publish-using-api-catalog-cli.adoc[Publishing Assets Using API Catalog CLI]
-* xref:create-descriptor-file-manually.adoc#manual-descriptor[Creating or Updating Descriptor Files Manually]
+* xref:apicat-use-api-catalog-cli.adoc[Using API Catalog CLI]
+* xref:apicat-publish-using-api-catalog-cli.adoc[Publishing Assets Using API Catalog CLI]
+* xref:apicat-create-descriptor-file-manually.adoc#manual-descriptor[Creating or Updating Descriptor Files Manually]

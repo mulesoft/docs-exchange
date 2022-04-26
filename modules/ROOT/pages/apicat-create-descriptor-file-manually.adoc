@@ -45,7 +45,7 @@ The preceding example enables a run of the `api-catalog publish-asset` command t
 * `tags` are `support` or have `release/` in the text
 
 If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger-criteria` option values. For an example publish command using the `--trigger-criteria` option, see 
-xref:publish-using-api-catalog-cli.adoc#example-trigger[Trigger the Publish Using Conditions].
+xref:apicat-publish-using-api-catalog-cli.adoc#example-trigger[Trigger the Publish Using Conditions].
 
 [[version-strategy-conditions]]
 == versionStrategyConditions
@@ -221,6 +221,6 @@ projects: # <4>
 
 == See Also
 
-* xref:use-api-catalog-cli.adoc[Using API Catalog CLI]
-* xref:publish-using-api-catalog-cli.adoc[Publishing Assets Using API Catalog CLI]
-* xref:create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]
+* xref:apicat-use-api-catalog-cli.adoc[Using API Catalog CLI]
+* xref:apicat-publish-using-api-catalog-cli.adoc[Publishing Assets Using API Catalog CLI]
+* xref:apicat-create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]

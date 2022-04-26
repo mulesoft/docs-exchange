@@ -7,4 +7,4 @@ You must set the following permissions to use the API Catalog CLI features:
 
 NOTE: Permissions must be set in *Access Management* by an Anypoint Platform user with administrative permission. 
 
-See the Access Management documentation for details on   xref:access-management::managing-permissions.adoc[managing permissions].
+See the Access Management documentation for details on xref:access-management::managing-permissions.adoc[managing permissions].

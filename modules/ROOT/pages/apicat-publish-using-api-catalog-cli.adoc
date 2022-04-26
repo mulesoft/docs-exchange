@@ -4,7 +4,7 @@ You can use the `api-catalog publish-asset` command to publish your API definiti
 
 == Before You Begin
 
-Create a descriptor file that describes the API definitions to publish and copy the file to the file path where your API projects are stored. See xref:create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI].
+Create a descriptor file that describes the API definitions to publish and copy the file to the file path where your API projects are stored. See xref:apicat-create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI].
 
 To publish an API definition using the CLI:
 
@@ -156,7 +156,7 @@ The following command does not set the version strategy during the publish becau
 > api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --versionStrategy=branch:abc --versionStrategy=author:dev --versionStrategy=branch:xyz --versionStrategy=branch:pop
 ----
 
-For more information on version strategies and version strategy conditions, see xref:create-descriptor-file-manually.adoc[Descriptor YAML Schema].
+For more information on version strategies and version strategy conditions, see xref:apicat-create-descriptor-file-manually.adoc[Descriptor YAML Schema].
 
 [[jenkins-script]]
 == Publish Using a Jenkins Script 
@@ -206,4 +206,4 @@ pipeline {
 
 == See Also
 
-* xref:use-api-catalog-cli.adoc[Using API Catalog CLI]
+* xref:apicat-use-api-catalog-cli.adoc[Using API Catalog CLI]
