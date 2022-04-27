@@ -1,11 +1,11 @@
-= Using API Catalog CLI
+= General Use of Commands and Options
 
-After you have installed the API Catalog CLI and configured permissions, you can use the API Catalog CLI commands to autocatalog your APIs.
+After you have installed the API Catalog CLI and configured permissions, you can use the API Catalog CLI commands to autocatalog your APIs. Several options are available to enable you to <<authentication,authenticate>> to Anypoint Platform as you run the commands. 
 
 //Command summary start
 
 [[api-catalog-commands]]
-== API Catalog Commands
+== List of API Catalog Commands
 
 API Catalog CLI includes the following commands:
 
@@ -15,10 +15,10 @@ include::partial$api-catalog.adoc[tag=summary]
 
 == View Command Help
 
-Use the help option to list the commands or command options and their descriptions. The following examples show how the help option is used:
+Use the help option to list the commands or command options and their descriptions. The following examples show how to use the help option:
 
 ----
-api-catalog --help
+api-catalog help
 api-catalog create-descriptor --help
 ----
 
@@ -33,16 +33,16 @@ include::partial$api-catalog.adoc[tag=common-options]
 
 // Authentication start
 
-include::partial$cli-auth.adoc[tag=summary]
+include::partial$cli-auth.adoc[tag=summary,leveloffset=+1]
 
-include::partial$cli-auth.adoc[tag=sso]
+include::partial$cli-auth.adoc[tag=sso,leveloffset=+1]
 
-include::partial$cli-auth.adoc[tag=conffile]
+include::partial$cli-auth.adoc[tag=conffile,leveloffset=+1]
 
-include::partial$api-catalog.adoc[tag=conf-command]
+include::partial$api-catalog.adoc[tag=conf-command,leveloffset=+1]
 
-include::partial$cli-auth.adoc[tag=cmdline]
+include::partial$cli-auth.adoc[tag=cmdline,leveloffset=+1]
 
-include::partial$cli-auth.adoc[tag=envvars]
+include::partial$cli-auth.adoc[tag=envvars,leveloffset=+1]
 
 // Authentication end 
