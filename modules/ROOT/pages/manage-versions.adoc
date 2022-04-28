@@ -61,7 +61,7 @@ If an asset in the development state depends on one or more other assets in the 
 
 == Manage Policy Implementation Version
 
-From the asset details page in Exchange, manage the implementation versions of a policy asset from the *Manage implementations* table. The table displays the latest version. You can view, add, and delete versions. 
+From the asset details page in Exchange, manage the implementation versions of a policy asset from the *Manage implementations* table, which displays the latest version. You can view, add, and delete versions: 
 
 . Click *Implementations* from the left navigation bar.
 . To manage the versions of an implementation, click the three vertical dots and select an option:
