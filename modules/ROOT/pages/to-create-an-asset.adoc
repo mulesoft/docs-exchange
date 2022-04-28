@@ -123,6 +123,7 @@ Rulesets are a group of rules or guidelines that define an application, for exam
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
+
 == Create Custom Policy Definition Asset 
 Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, and service level agreement (SLA). You can create a policy definition based on your specific business requirements. Develop custom policy definitions and apply them to APIs to extend existing functionality or define new ones.
 
