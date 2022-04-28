@@ -5,14 +5,14 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-publish-an-asset.adoc
 
-To share an API, API Group, policy, example, template, or connector in either an Anypoint Exchange private instance or an Exchange public portal, create an asset of that type.
+To share an API, API Group, policy, ruleset, example, template, or connector in either an Anypoint Exchange private instance or an Exchange public portal, create an asset of that type.
 
 The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 
-* For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, and Custom assets, create the asset directly using the Exchange *Publish new asset* menu.
+* For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
-* You can also publish a RAML, or OAS or RAML fragments, using Design Center, and publish the API to Exchange.
+* You can also publish a RAML, or OAS or RAML fragments using Design Center and publish the API to Exchange.
 +
 Another way to publish these type of assets is using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
 * RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
@@ -25,7 +25,9 @@ For example: `exchange asset upload --classifier raml --apiVersion v1 --name Hel
 
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
-This illustration summarizes how some asset types (in green) appear in Exchange:
+
+This illustration summarizes how some of the asset types (in green) appear in Exchange:
+
 
 image::ex2-exchange-assets.png[]
 
@@ -48,18 +50,21 @@ To create an API asset:
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
 * REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
-* API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
-* HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
+* AsyncAPI: Provide an AsyncAPI specification file in a YAML (.yaml) file.
+* API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
+* HTTP API: This asset does not require a file. This asset type provides an API endpoint that is defined by API Manager.
 +
-. For RAML, API Spec Fragment, OAS, and WSDL assets:
+. For assets that require a file:
 +
 .. Select *Choose File* to locate the API specification file.
 .. Select the main file of the API.
 +
 If the file is a ZIP, the selected main file must be in the root directory of the ZIP file. If the file is not a ZIP or if the file is a ZIP file with only one main file, then the main file is selected automatically.
 +
-. (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, *Version*, and *API version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. You can change an API asset's version (asset version) and API version separately. The advanced settings are most often used to change the asset version.
-. (Optional) Select an option for *Lifecycle state*. The default is *Stable*.
+. To edit *GroupId*, *AssetId*, *Version*, and *API version*, click *Advanced*.
++
+ Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. You can change an API's asset version and version separately. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
 To create a ZIP file and put the items in a folder into the root directory of the ZIP file, use a command like this. Replace `myfolder` with the name of your folder and `name.zip` with the name for the new ZIP file.
@@ -88,7 +93,7 @@ Warnings are also shown when publishing an API Group to your public portal if al
 
 A custom asset lets you share information about any aspect of your organization such as announcements, documentation, videos, and sharing files. You can add an optional file to your Custom asset that users can download. The file is stored in Exchange.
 
-*Note:* Exchange only permits the following file types as the optional file in a Custom asset:
+Exchange only permits the following file types as the optional file in a custom asset:
 
 Images: `.jpg, .jpeg, .png, .gif, .svg` +
 Documents: `.docx, .pdf, .pptx, .rtf, .vsdx, .vssx` +
@@ -106,9 +111,11 @@ To create a custom asset:
 . In Exchange, select *Publish new asset*.
 . Enter the asset portal name.
 . Select the asset type *Custom* from the drop-down list.
-. (Optional) To share a file with users, choose the file.
-. (Optional) Select *Advanced* and edit the advanced settings: *GroupId*, *AssetId*, and *Version*. Exchange generates the group ID, asset ID, and version for you, and you can change these values here. The advanced settings are most often used to change the asset version.
-. (Optional) Select an option for *Lifecycle state*. The default is *Stable*.
+. To select the file to upload, click *Choose the file*.
+. To edit the *GroupId*, *AssetId*, and *Version*, click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
 == Create a Ruleset Asset
@@ -123,6 +130,7 @@ Rulesets are a group of rules or guidelines that define an application, for exam
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
+
 == Create Custom Policy Definition Asset 
 Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, and service level agreement (SLA). You can create a policy definition based on your specific business requirements. Develop custom policy definitions and apply them to APIs to extend existing functionality or define new ones.
 
@@ -145,6 +153,8 @@ The policy must be in the Stable state to upload the implementation file in a la
 *Pending* status appears next to *Implementations* in the left navigation bar.
 
 To implement the policy so that it is available at runtime, follow the steps in xref:add-policy-implementation-files-to-published-policy-definition.adoc[Add Policy Implementation Files to Published Policy Definition].
+=======
+
 
 == Asset Name, Icon, and Description Properties
 
