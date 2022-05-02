@@ -18,6 +18,7 @@ Anypoint Exchange provides the ability to publish assets in private Exchange ins
 . xref:to-delete-asset.adoc[Delete an Asset] - Remove an asset.
 . xref:to-change-raml-version.adoc[Change a RAML Version] - Update the version of a RAML asset.
 . xref:publish-an-http-api.adoc[Publish an HTTP API Asset] - If you use Private Exchange, you can use the HTTP API to specify a placeholder for an endpoint.
+. xref:add-policy-implementation-files-to-published-policy-definition.adoc[Add Policy Implementation Files to Published Policy Definition] - If you published a policy definition, add the implementation files to make policy available at runtime.
 . xref:exchange2-faq.adoc[FAQ] - Frequently Asked Questions.
 
 == See Also
