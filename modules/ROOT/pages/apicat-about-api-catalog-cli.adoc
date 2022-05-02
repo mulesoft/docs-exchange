@@ -10,20 +10,40 @@ With API Catalog CLI you can:
 * Conditionally set the asset version strategy based on criteria such as branches and tags.
 * Publish APIs described in the descriptor file locally or as part of your automation tools.
 
-[[get-started]]
-== Get Started with API Catalog CLI
+== API Catalog CLI Concepts
 
-To get started with API Catalog CLI: 
+Following are the concepts you need to know to use API Catalog CLI.
 
-. Ensure MuleSoft has enabled the API Catalog entitlement for your Anypoint Platform organization.
-. xref:apicat-install-api-catalog-cli.adoc[Install] the API Catalog CLI.
-. xref:apicat-configure-api-catalog-cli.adoc[Configure] required catalog permissions.
-. xref:apicat-use-api-catalog-cli.adoc[Get familiar with the general use of API Catalog], such as how to pass authentication information and how to use the common command options.
-. xref:apicat-create-descriptor-file-cli.adoc[Create a descriptor file] to identify the APIs to publish.
-. xref:apicat-publish-using-api-catalog-cli.adoc[Catalog an asset] using the API Catalog CLI and view it in Anypoint Exchange.
+[[apicat-autocatalog]]
+=== Autocatalog
 
-TIP: Consider testing the process end-to-end locally before integrating it into your CI/CD pipeline or custom scripts. 
+xxx
 
-// == See Also
+[[apicat-descriptor]]
+=== Descriptor
 
-// * xref:4.x@anypoint-cli::anypoint-platform-cli-commands.adoc[Anypoint Platform CLI List of Commands]
+xxx
+
+[[apicat-exchange-json]]
+=== exchange.json
+
+xxx
+
+[[apicat-publish]]
+=== Publish
+
+xxx
+
+[[apicat-trigger]]
+=== Trigger
+
+xxx
+
+[[apicat-trigger]]
+=== Version Strategy
+
+xxx
+
+== See Also
+
+* xref:apicat-get-started.adoc[Getting Started with API Catalog CLI]
