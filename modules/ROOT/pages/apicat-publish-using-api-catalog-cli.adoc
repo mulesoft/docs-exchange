@@ -76,7 +76,7 @@ Custom trigger conditions enable you to control whether APIs are published when 
 
 *Example Trigger Conditions in a Descriptor file*
 
-Following is an example `triggerConditions` section in the `mydescriptor.yaml` descriptor file:
+Following is an example `triggerConditions` section in the `mydescriptor.yaml` descriptor file at the global level:
 
 ---
  
@@ -94,7 +94,7 @@ Following is an example `triggerConditions` section in the `mydescriptor.yaml` d
 
 *Example That Triggers the Publish*
 
-The following command triggers the API publish because the trigger option values match all of the trigger conditions in the `mydescriptor.yaml` descriptor file. 
+The following command triggers the API publish because the trigger option values match all of the global trigger conditions in the `mydescriptor.yaml` descriptor file. 
 
 ----
 > api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger-criteria=ref:main --trigger-criteria=tags:migrate --trigger-criteria=status:complete
@@ -103,25 +103,24 @@ The following command triggers the API publish because the trigger option values
 
 *Example That Does Not Trigger the Publish*
 
-The following command does not trigger the API publish because the trigger option value for `ref` is `test`, not `main`. Because not all trigger values match the corresponding trigger conditions, no APIs are published. 
+The following command does not trigger the API publish because the trigger option value for `ref` is `test`, not `main`. Because not all trigger values match the corresponding global trigger conditions, no APIs are published. 
 
 ----
 > api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger-criteria=ref:test --trigger-criteria=tags:migrate --trigger-criteria=status:complete
 
 ----
 
-[[versionStrategy-conditions]]
+[[versionStrategyConditions]]
 == Set Version Strategy Using Conditions 
 
-Version strategy conditions enable you to set the version of assets when the API Catalog CLI publish command runs as part of your CI/CD pipeline or scripts. This example shows how `--versionStrategy` options correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If the version strategy is set at the global level, it overrides values set at any other level. If the value for a condition matches more than one version strategy, the command gives an error.
+Version strategy conditions enable you to set the version of assets when the API Catalog CLI publish command runs as part of your CI/CD pipeline or scripts. This example shows how `--version-strategy-criteria` options correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If the version strategy is set at the global level, it overrides values set at any other level. If the value for a condition matches more than one version strategy, the command gives an error.
 
 *Example Version Strategy Conditions in a Descriptor file*
 
-Following is an example `versionStrategyConditions` section in the `mydescriptor.yaml` descriptor file:
+Following is an example `versionStrategyConditions` section in the `mydescriptor.yaml` descriptor file. 
 
 ----
  
-versionStrategy: snapshot
 versionStrategyConditions:
 patchIncrease:
 branch:
@@ -140,20 +139,20 @@ branch:
 The following command sets multiple version strategies during the publish because the option values match multiple conditions in the `mydescriptor.yaml` descriptor file. 
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --versionStrategy=branch:main --versionStrategy=author:admin --versionStrategy=branch:test --versionStrategy=branch:Develop
+> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct ----version-strategy-criteria=branch:main ----version-strategy-criteria=author:admin ----version-strategy-criteria=branch:test ----version-strategy-criteria=branch:Develop
 ----
 
 The resulting version strategies are:
 
-* Patch increase for APIs in the `main` branch with an author of `admin` and any APIs that don't match any other conditions. 
+* Patch increase for APIs in the `main` branch with an author of `admin`. 
 * Snapshot for APIs in the `test` and `Develop`branches. 
 
 *Example That Does Not Set the Version Strategy During the Publish*
 
-The following command does not set the version strategy during the publish because none of the values match the corresponding conditions. The version strategy defaults to `patchIncrease`.
+The following command does not set the version strategy during the publish because none of the values match the corresponding conditions. The version strategy defaults to `patchIncrease` if no `versionStrategy` tags set other values in the descriptor file.
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --versionStrategy=branch:abc --versionStrategy=author:dev --versionStrategy=branch:xyz --versionStrategy=branch:pop
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct ----version-strategy-criteria=branch:abc ----version-strategy-criteria=author:dev ----version-strategy-criteria=branch:xyz ----version-strategy-criteria=branch:pop
 ----
 
 For more information on version strategies and version strategy conditions, see xref:apicat-create-descriptor-file-manually.adoc[Descriptor YAML Schema].
