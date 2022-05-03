@@ -4,46 +4,39 @@ API Catalog CLI enables you to discover and catalog your API specifications, doc
 
 With API Catalog CLI you can:
 
-* Identify all APIs in a project directory structure and create a descriptor file to use to publish the APIs to Exchange.
+* Identify all APIs in a project directory structure and create a <<apicat-descriptor-file,descriptor file>> to use to publish the APIs to Exchange.
 * Identify all new and changed APIs and update the descriptor file on an ongoing basis. 
-* Conditionally trigger the publish based on criteria such as branches and tags.
-* Conditionally set the asset version strategy based on criteria such as branches and tags.
-* Publish APIs described in the descriptor file locally or as part of your automation tools.
+* <<apicat-trigger-cond,Conditionally trigger>> the publish based on criteria such as branches and tags.
+* <<apicat-version-strategy-cond,Conditionally set the asset version strategy>> based on criteria such as branches and tags.
+* Leverage API metadata in `exchange.json` files as part of the descriptor information if you already have those for your projects. 
+* Publish APIs described in the descriptor file by running commands in a command prompt console or in a CI/CD pipeline or custom scripts.
 
 == API Catalog CLI Concepts
 
 Following are the concepts you need to know to use API Catalog CLI.
 
-[[apicat-autocatalog]]
-=== Autocatalog
+[[apicat-descriptor-file]]
+=== Descriptor File
 
-xxx
-
-[[apicat-descriptor]]
-=== Descriptor
-
-xxx
+A descriptor file has the information Exchange needs to catalog a set of APIs within a directory and its subdirectory structure. This file is specific to API Catalog CLI.
 
 [[apicat-exchange-json]]
 === exchange.json
 
-xxx
+The `exchange.json` file contains metadata required by Anypoint Exchange to describe published API assets. You can use this file to supplement the descriptor information provided in the API Catalog CLI descriptor file, either in-line or as an external reference.
 
-[[apicat-publish]]
-=== Publish
+[[apicat-trigger-cond]]
+=== Trigger Conditions
 
-xxx
+Trigger conditions are set in descriptor files to enable the automated publication process to determine which APIs to publish during a run of the API Catalog CLI `publish-assets` command using the trigger criteria option.
 
-[[apicat-trigger]]
-=== Trigger
+[[apicat-version-strategy-cond]]
+=== Version Strategy Conditions
 
-xxx
-
-[[apicat-trigger]]
-=== Version Strategy
-
-xxx
+Version strategy conditions are set in descriptor files to enable the automated publication process to determine the version strategy to set for APIs during a run of the API Catalog CLI `publish-assets` command using the version strategy criteria option.
 
 == See Also
 
 * xref:apicat-get-started.adoc[Getting Started with API Catalog CLI]
+* xref:api-cat-create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]
+* xref:about-sharing-assets.adoc[Publish Assets]

@@ -2,7 +2,7 @@
 
 // tag::summary[]
 
-To authenticate to Anypoint CLI, you must use one of the authentication option combinations:
+To authenticate to Anypoint Platform while running the API Catalog CLI, you must use one of the authentication option combinations:
 
 * Username and password
 * Client ID and client secret
@@ -10,7 +10,7 @@ To authenticate to Anypoint CLI, you must use one of the authentication option c
 
 The default host, environment, and organization are used if you do not specify them.
 
-You can pass Anypoint CLI credentials using the following methods:
+You can pass Anypoint Platform credentials using the following methods:
 
 * <<single-signon,Using single signon (SSO)>>
 * <<credentials-file,Using a credentials configuration file>>
@@ -32,7 +32,7 @@ Configuration settings are overridden as follows:
 [[single-signon]]
 == SSO
 
-If you have configured Anypoint Platform to use SSO with the system on which you are running Anypoint CLI, run the Anypoint CLI command with no credential options and it logs in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
+If you have configured Anypoint Platform to use SSO with the system on which you are running API Catalog CLI, run the API Catalog CLI command with no credential options and it logs in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
 
 // end::sso[]
 
@@ -129,7 +129,7 @@ $ api-catalog --client_id myClientID myClientSecret --organization myOrgId accou
 
 * Authenticate on the command line  using a bearer token
 +
-You can generate a bearer token in Anypoint Platform and pass it to Anypoint CLI directly. When you provide a bearer token, Anypoint CLI ignores any provided user or client credentials.
+You can generate a bearer token in Anypoint Platform and pass it to API Catalog CLI directly. When you provide a bearer token, API Catalog CLI ignores any provided user or client credentials.
 +
 ----
 $ api-catalog --bearer myBearerToken --organization myOrgId account:environment:list
