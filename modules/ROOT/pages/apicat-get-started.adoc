@@ -25,7 +25,7 @@ To get started with API Catalog CLI:
 . xref:apicat-create-descriptor-file-cli.adoc[Create a descriptor file] to identify the APIs to publish.
 . xref:apicat-publish-using-api-catalog-cli.adoc[Catalog an asset] using the API Catalog CLI and view it in Anypoint Exchange.
 
-TIP: Consider testing the process end-to-end locally by running the commands at a command prompt before integrating the commands into your CI/CD pipeline or custom scripts. 
+TIP: Consider testing the process end-to-end locally by running the commands at a command prompt before adding the commands to your CI/CD pipeline or custom scripts. 
 
 == See Also
 
