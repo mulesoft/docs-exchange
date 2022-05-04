@@ -11,7 +11,7 @@ The output descriptor information includes the following for each API:
 
 == Create a Descriptor File
 
-Use the `api-catalog create-descriptor` command to identify and output the API catalog descriptor YAML results to a designated file. The command outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
+Use the `api-catalog create-descriptor` command to identify and output the API catalog descriptor YAML results to a designated file. The command outputs cataloging information for all API definitions it finds in the full directory tree relative to the current working directory.
 
 To create a descriptor file using the CLI:
 
@@ -53,7 +53,7 @@ include::partial$api-catalog.adoc[tag=create-descriptor-command]
 
 == Update a Descriptor File
 
-Use the `api-catalog update-descriptor` command to update the API catalog descriptor YAML results in a designated file. The command adds and updates cataloging information for all new and updated API specifications it finds in the full directory tree relative to the current working directory.
+Use the `api-catalog update-descriptor` command to update the API catalog descriptor YAML results in a designated file. The command adds and updates cataloging information for all new and updated API definitions it finds in the full directory tree relative to the current working directory.
 
 To update a descriptor file using the CLI:
 

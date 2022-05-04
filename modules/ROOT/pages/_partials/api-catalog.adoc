@@ -159,7 +159,7 @@ ANYPOINT_DESCRIPTOR_FILE environment variable
 The name and location of the catalog descriptor file.  
 
   * If the file does not exist, no assets are cataloged.
-  * If the file exists but is empty, the command creates and prints the catalog descriptor YAML results. It outputs cataloging information for all API specifications it finds in the full directory tree relative to the current working directory.
+  * If the file exists but is empty, the command creates and prints the catalog descriptor YAML results. It outputs cataloging information for all API definitions it finds in the full directory tree relative to the current working directory.
   * If a valid YAML file exists, the command catalogs the assets as specified. 
   
 See xref:apicat-create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI]. 
