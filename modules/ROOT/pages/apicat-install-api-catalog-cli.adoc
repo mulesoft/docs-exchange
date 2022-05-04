@@ -17,4 +17,4 @@ npm install -g api-catalog-cli@latest
 
 NOTE: The install command might give warning messages about the version of npm because the API Catalog CLI installation package is built using npm version 14. You can ignore these messages. 
 
-CAUTION: If your installation from npm to runs for a long time and does not complete successfully, work with your security administrator to ensure that your system allows you to successfully install from npm.   
+CAUTION: If your installation from npm runs for a long time and does not complete successfully, work with your security administrator to ensure that your system allows you to successfully install from npm.   

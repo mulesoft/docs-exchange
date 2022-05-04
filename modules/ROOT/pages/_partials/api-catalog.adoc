@@ -28,7 +28,7 @@ This command accepts the following options:
 [%header,cols="20a,80a"]
 |===
 | Option | Description 
-| blank | Display instructions for configuring autocompletion 
+| blank | Display instructions for configuring autocompletion
 | bash | Install autocompletion using Bash shell settings
 | zsh | Install autocompletion using Z shell settings
 | -r, --refresh cache | Remove the current autocompletion configuration. Use this before running the command with a different shell type.
@@ -70,13 +70,13 @@ This command accepts the following options:
 |===
 | Option | Description 
 
-| -d, --delete | Delete the configuration file. 
+| -d, --delete | Deletes the config file entry for the given key.
 
-| -h, --help | Show the command help. 
+| -h, --help | Shows the help for this command.
 
-| -k, --key=key | Authentication key for the configuration file. This is the value from the file that you want to operate on. 
+| -k, --key=key | Shows the value that corresponds with the given key.
 
-| -v, --value=value | Authentication value for the key.
+| -v, --value=value | Shows the key that corresponds with the given value.
 
 |===
 
@@ -100,7 +100,11 @@ This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[com
 Default: `catalog.yaml`
 
 The name and location in which to save the generated catalog descriptor file.
+<<<<<<< Updated upstream
 |  --external | Generates an `exchange.json` file for each API described in the descriptor file.
+=======
+|  --external | Generates an `exchange.json` file for each API described in the descriptor file
+>>>>>>> Stashed changes
 |===
 
 // end::create-descriptor-command[]
