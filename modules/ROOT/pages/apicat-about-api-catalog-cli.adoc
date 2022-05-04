@@ -8,7 +8,7 @@ With API Catalog CLI you can:
 * Identify all new and changed APIs and update the descriptor file on an ongoing basis. 
 * <<apicat-trigger-cond,Conditionally trigger>> the publish based on criteria such as branches and tags.
 * <<apicat-version-strategy-cond,Conditionally set the asset version strategy>> based on criteria such as branches and tags.
-* Leverage API metadata in `exchange.json` files as part of the descriptor information if you already have those for your projects. 
+* Use API metadata in `exchange.json` files as part of the descriptor information if you already have those for your projects. 
 * Publish APIs described in the descriptor file by running commands at a command prompt or in a CI/CD pipeline or custom scripts.
 
 == API Catalog CLI Concepts
