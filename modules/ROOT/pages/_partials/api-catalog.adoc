@@ -100,7 +100,7 @@ This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[com
 Default: `catalog.yaml`
 
 The name and location in which to save the generated catalog descriptor file.
-|  --external | Generates an exchange.json file for each API described in the descriptor file.
+|  --external | Generates an `exchange.json` file for each API described in the descriptor file.
 |===
 
 // end::create-descriptor-command[]
