@@ -1,6 +1,6 @@
 = General Use of Commands and Options
 
-After you have installed the API Catalog CLI and configured permissions, you can use the API Catalog CLI commands to autocatalog your APIs. Several options are available to enable you to <<authentication,authenticate>> to Anypoint Platform as you run the commands. 
+After you have installed the API Catalog CLI and configured permissions, you can use the API Catalog CLI commands to autocatalog your APIs. Several options are available to <<authentication,authenticate>> to Anypoint Platform as you run the commands. 
 
 //Command summary start
 

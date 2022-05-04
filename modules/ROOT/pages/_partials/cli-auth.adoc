@@ -8,7 +8,7 @@ To authenticate to Anypoint Platform while running the API Catalog CLI, you must
 * Client ID and client secret
 * Bearer token (command line only)
 
-The default host, environment, and organization are used if you do not specify them.
+You must also specify host, environment, and organization unless you are logging in to the defaults.
 
 You can pass Anypoint Platform credentials using the following methods:
 
@@ -41,11 +41,11 @@ If you have configured Anypoint Platform to use SSO with the system on which you
 [[credentials-file]]
 == Credentials Configuration File
 
-If you are not using SSO, MuleSoft recommends that you pass credentials to your Anypoint Platform CLI installation using the credentials configuration file.  
+If you are not using SSO, the most secure way to pass credentials to your Anypoint Platform CLI installation is through the credentials configuration file.  
 
 You can authenticate to Anypoint Platform by running the `api-catalog` command with the `conf` option to add your credentials to a configuration file. After you have created the configuration file with valid credentials, you can run the `api-catalog` commands without specifying any credentials options and the authentication is done using the configuration file values. 
 
-You can set authentication values in the configuration file using a combination of the following keys:
+You can set authentication values in the configuration file using a combination of the following authentication keys:
 
 ----
 username
@@ -59,11 +59,11 @@ session.selectedOrganization.id
 
 To create your configuration file:
 
-* Run the `api-catalog conf` command with the key value pair you want to use to set the authentication method. For example, the following command sets the username and password.
+* Run the `api-catalog conf` command with the key value pair you want to use. For example, the following command sets the username and password:
 +
 ----
-$ api-catalog conf username <username>
-$ api-catalog conf password <password>
+$ api-catalog conf username myuser
+$ api-catalog conf password mypwd
 ----
 
 The commands store the credential information in the `config.json` file in the following locations:
@@ -76,22 +76,53 @@ The commands store the credential information in the `config.json` file in the f
 
 *Examples:*
 
-* Set configuration file authentication using username and password 
-+
-Add authentication values to the configuration file using the following commands:
+* Set a value for a bearer token: 
 +
 ----
-$ api-catalog conf username myUserName
-$ api-catalog conf password myPassword
+$ api-catalog conf bearer b71cab22-e5cc-43c4-90ed-5a1124b6ae1f
 ----
 +
-* Set configuration file authentication using client ID and client secret
+* Set values for username and password: 
 +
-Add authentication values to the configuration file using the following commands:
+----
+$ api-catalog conf username myuser
+$ api-catalog conf password mypwd
+----
++
+* Set values for a specific host, organization, and environment:
++
+----
+$ api-catalog conf host myco.anypoint.mulesoft.com
+$ api-catalog conf session.selectedEnvironment.id ec7d16cb-43fd-4796-8b4f-5cff7294fcf9
+$ api-catalog conf session.selectedOrganization.id 8a840abc-e63a-4f8d-87ad-24052eda3018
+----
++
+* Set values for client ID and client secret:
 +
 ----
 $ api-catalog conf client_id myClientID
 $ api-catalog conf client_secret myCLientSecret
+----
+
+Example `config.json` contents after running the above commands:
+
+----
+ {
+	"bearer": "b71cab22-e5cc-43c4-90ed-5a1124b6ae1f",
+    "username": "myuser",
+	"password": "mypwd",
+    "host": "myco.anypoint.mulesoft.com",
+	"session": {
+		"selectedEnvironment": {
+			"id": "ec7d16cb-43fd-4796-8b4f-5cff7294fcf9"
+		},
+		"selectedOrganization": {
+			"id": "8a840abc-e63a-4f8d-87ad-24052eda3018"
+		}
+	},
+	"client_id": "1787c36ab544466698e380131040faad",
+	"client_secret": "2dA616efca1E4181A2A77BBF046868BE"
+ }
 ----
 
 // end::conffile[]
