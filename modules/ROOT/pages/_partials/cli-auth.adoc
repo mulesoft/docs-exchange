@@ -126,7 +126,7 @@ Example `config.json` contents after running the above commands:
 [[command-line-options]]
 == Command Line Options
 
-You can authenticate to Anypoint Platform through command line by running the `api-catalog` command with a combination of the following options:
+You can authenticate to Anypoint Platform through the command line by running the `api-catalog` command with a combination of the following options:
 
 ----
 --username
