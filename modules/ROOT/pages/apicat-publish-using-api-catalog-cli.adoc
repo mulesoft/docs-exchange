@@ -11,7 +11,7 @@ To publish an API definition using the CLI:
 * Run the `api-catalog publish-asset` command. The following example publishes API definitions described in the `catalog.yaml` file:
 +
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct 
+> api-catalog publish-asset -d catalog.yaml --host=anypoint.mulesoft.com --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --username=myAnyPtAccount --password=myPwd@4!myacct 
 ----
 
 //include::anypoint-cli::partial$api-catalog.adoc[tag=publish-asset-command]
@@ -36,7 +36,7 @@ The following sections give example commands that show how several catalog optio
 The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings are used for the unspecified options. 
 
 ----
-> api-catalog publish-asset -o 1234abc-b34a-7cd3-4s32-12345abc2345  -a https://anypoint.mulesoft.com/
+> api-catalog publish-asset --organization 1234abc-b34a-7cd3-4s32-12345abc2345 
 
 ----
 
@@ -53,7 +53,7 @@ This example shows the `api-catalog publish-asset` command with the following op
 The example command sends the standard output to `mycatdryrun.log`. 
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d catalog.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1234567abcd2345gabc987656abc --client-secret --dry-run --verbose >> mycatdryrun.log
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d catalog.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1787c36ab544466698e380131040faad --client-secret=2dA616efca1E4181A2A77BBF046868BE --dry-run --verbose >> mycatdryrun.log
 
 ----
 
@@ -65,7 +65,7 @@ To publish a new version of the asset in Exchange regardless of the content, use
 This example shows the `api-catalog publish-asset` command with both of these options. This example assumes that authentication credentials are set in environment variables.
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish 
+> api-catalog publish-asset --host=anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish 
 
 ----
 
@@ -97,7 +97,7 @@ Following is an example `triggerConditions` section in the `mydescriptor.yaml` d
 The following command triggers the API publish because the trigger option values match all of the global trigger conditions in the `mydescriptor.yaml` descriptor file. 
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger-criteria=ref:main --trigger-criteria=tags:migrate --trigger-criteria=status:complete
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --username=myAnyPtAccount --password=myPwd@4!myacct --trigger-criteria=ref:main --trigger-criteria=tags:migrate --trigger-criteria=status:complete
 
 ----
 
@@ -106,7 +106,7 @@ The following command triggers the API publish because the trigger option values
 The following command does not trigger the API publish because the trigger option value for `ref` is `test`, not `main`. Because not all trigger values match the corresponding global trigger conditions, no APIs are published. 
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct --trigger-criteria=ref:test --trigger-criteria=tags:migrate --trigger-criteria=status:complete
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --username=myAnyPtAccount --password=myPwd@4!myacct --trigger-criteria=ref:test --trigger-criteria=tags:migrate --trigger-criteria=status:complete
 
 ----
 
@@ -139,7 +139,7 @@ branch:
 The following command sets multiple version strategies during the publish because the option values match multiple conditions in the `mydescriptor.yaml` descriptor file. 
 
 ----
-> api-catalog publish-asset -a https://anypoint.mulesoft.com -d mydescriptor.yaml -o 1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct ----version-strategy-criteria=branch:main ----version-strategy-criteria=author:admin ----version-strategy-criteria=branch:test ----version-strategy-criteria=branch:Develop
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --username=myAnyPtAccount --password=myPwd@4!myacct --version-strategy-criteria=branch:main --version-strategy-criteria=author:admin --version-strategy-criteria=branch:test --version-strategy-criteria=branch:Develop
 ----
 
 The resulting version strategies are:
@@ -189,7 +189,7 @@ pipeline {
                     usernameVariable: 'ANYPOINT_USERNAME',
                     passwordVariable: 'ANYPOINT_PASSWORD')
                 ]) { 
-                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR --organization $ANYPOINT_ORG_ID --host=anypoint.mulesoft.com/ --trigger-criteria=branch:main' <2>
+                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR --organization=$ANYPOINT_ORG_ID --host=anypoint.mulesoft.com/ --trigger-criteria=branch:main' <2>
                 }
             }
         }

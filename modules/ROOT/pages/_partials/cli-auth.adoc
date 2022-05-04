@@ -53,8 +53,8 @@ password
 client_id
 client_secret
 host
-session.selectedEnvironment.id
-session.selectedOrganization.id
+environment
+organization
 ----
 
 To create your configuration file:
@@ -93,8 +93,8 @@ $ api-catalog conf password mypwd
 +
 ----
 $ api-catalog conf host myco.anypoint.mulesoft.com
-$ api-catalog conf session.selectedEnvironment.id ec7d16cb-43fd-4796-8b4f-5cff7294fcf9
-$ api-catalog conf session.selectedOrganization.id 8a840abc-e63a-4f8d-87ad-24052eda3018
+$ api-catalog conf environment ec7d16cb-43fd-4796-8b4f-5cff7294fcf9
+$ api-catalog conf organization 8a840abc-e63a-4f8d-87ad-24052eda3018
 ----
 +
 * Set values for client ID and client secret:
@@ -112,14 +112,8 @@ Example `config.json` contents after running the above commands:
     "username": "myuser",
 	"password": "mypwd",
     "host": "myco.anypoint.mulesoft.com",
-	"session": {
-		"selectedEnvironment": {
-			"id": "ec7d16cb-43fd-4796-8b4f-5cff7294fcf9"
-		},
-		"selectedOrganization": {
-			"id": "8a840abc-e63a-4f8d-87ad-24052eda3018"
-		}
-	},
+	"environment": "ec7d16cb-43fd-4796-8b4f-5cff7294fcf9",
+	"organization": "8a840abc-e63a-4f8d-87ad-24052eda3018",
 	"client_id": "1787c36ab544466698e380131040faad",
 	"client_secret": "2dA616efca1E4181A2A77BBF046868BE"
  }
@@ -149,13 +143,13 @@ You can authenticate to Anypoint Platform through command line by running the `a
 * Authenticate on the command line using username and password
 +
 ----
-$ api-catalog --username myUserName --password myPassword --organization myOrgId account:environment:list
+$ api-catalog --username myUserName --password myPassword --organization=myOrgId account:environment:list
 ----
 
 * Authenticate on the command line  using client ID and client secret
 +
 ----
-$ api-catalog --client_id myClientID myClientSecret --organization myOrgId account:environment:list
+$ api-catalog --client_id myClientID myClientSecret --organization=myOrgId account:environment:list
 ----
 
 * Authenticate on the command line  using a bearer token
@@ -163,7 +157,7 @@ $ api-catalog --client_id myClientID myClientSecret --organization myOrgId accou
 You can generate a bearer token in Anypoint Platform and pass it to API Catalog CLI directly. When you provide a bearer token, API Catalog CLI ignores any provided user or client credentials.
 +
 ----
-$ api-catalog --bearer myBearerToken --organization myOrgId account:environment:list
+$ api-catalog --bearer myBearerToken --organization=myOrgId account:environment:list
 ----
 +
 Your Anypoint Platform session expires when the bearer token expires.

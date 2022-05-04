@@ -50,6 +50,8 @@ $ api-catalog autocomplete --refresh-cache
 [[conf-command]]
 == api-catalog conf
 
+Manage authentication credentials in a configuration file (config.json) by adding and removing key value pairs. Set one key value pair per command execution.
+
 ----
 > api-catalog conf <authkey> <authkeyvalue> [options] 
 ----
