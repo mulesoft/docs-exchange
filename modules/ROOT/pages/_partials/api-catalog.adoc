@@ -58,11 +58,18 @@ Manage authentication credentials in a configuration file (config.json) by addin
 
 <authkey>
 
-The authentication key you want to use, such as an authentication environment variable or command option. 
+The authentication key name. Possible key names are:
+           username
+           password
+           client_id
+           client_secret
+           host
+           environment
+           organization
 
 <authkeyvalue>
 
-The value for the authentication key.
+The value for the specified authentication key.
 
 This command accepts the following options: 
 
