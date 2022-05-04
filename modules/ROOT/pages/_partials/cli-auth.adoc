@@ -146,7 +146,7 @@ You can authenticate to Anypoint Platform through the command line by running th
 $ api-catalog --username myUserName --password myPassword --organization=myOrgId account:environment:list
 ----
 
-* Authenticate on the command line  using client ID and client secret
+* Authenticate on the command line using client ID and client secret
 +
 ----
 $ api-catalog --client_id myClientID myClientSecret --organization=myOrgId account:environment:list
