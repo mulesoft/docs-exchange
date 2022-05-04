@@ -162,7 +162,7 @@ $ api-catalog --bearer myBearerToken --organization=myOrgId account:environment:
 +
 Your Anypoint Platform session expires when the bearer token expires.
 +
-For information about generating a bearer token, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to Generate Your Authorization Bearer Token for Anypoint Platform].
+For information about generating a bearer token, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to Generate Your Authorization Bearer Token for Anypoint Platform^].
 
 // end::cmdline[]
 
