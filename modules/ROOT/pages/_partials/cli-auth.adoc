@@ -2,7 +2,7 @@
 
 // tag::summary[]
 
-To authenticate to Anypoint Platform while running the API Catalog CLI, you must use one of the authentication option combinations:
+To authenticate to Anypoint Platform while running the API Catalog CLI, you must use one of the following authentication combinations:
 
 * Username and password
 * Client ID and client secret
