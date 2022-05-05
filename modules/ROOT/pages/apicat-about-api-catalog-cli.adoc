@@ -38,5 +38,5 @@ Version strategy conditions are set in descriptor files to enable the automated 
 == See Also
 
 * xref:apicat-get-started.adoc[Getting Started with API Catalog CLI]
-* xref:api-cat-create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]
+* xref:apicat-create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]
 * xref:about-sharing-assets.adoc[Publish Assets]
