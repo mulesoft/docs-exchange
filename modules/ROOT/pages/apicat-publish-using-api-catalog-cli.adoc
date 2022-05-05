@@ -33,7 +33,7 @@ The following sections give example commands that show how several catalog optio
 [[default-settings]]
 == Publish an Asset with Default Settings
 
-The following example publishes the API to an organization in the US Anypoint Platform control plane. Defaults or environment variable settings are used for the unspecified options. 
+The following example publishes the API to an organization in the US control plane for Anypoint Platform. Defaults or environment variable settings are used for the unspecified options. 
 
 ----
 > api-catalog publish-asset --organization 1234abc-b34a-7cd3-4s32-12345abc2345 
