@@ -19,7 +19,7 @@ To create a descriptor file using the CLI:
 . Run the `api-catalog create-descriptor` command. The following example creates a descriptor file called `mydescriptor.yaml` in the current path:
 +
 ----
-> api-catalog create-descriptor -f mydescriptor.yaml
+> api-catalog create-descriptor -d mydescriptor.yaml
 ----
 +
 Example output that is written to the descriptor file:

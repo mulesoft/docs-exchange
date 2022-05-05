@@ -103,7 +103,7 @@ This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[com
 [%header,cols="20a,80a"]
 |===
 | Option | Description 
-| -f, --file=file |
+| -d, --file=file |
 Default: `catalog.yaml`
 
 The name and location in which to save the generated catalog descriptor file.
