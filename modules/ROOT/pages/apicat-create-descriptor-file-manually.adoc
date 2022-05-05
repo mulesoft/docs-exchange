@@ -15,7 +15,7 @@ The descriptor file must start with the following:
 
 ---
 
- #%Catalog Descriptor 0.7
+ #%Catalog Descriptor 1.0
 
 ---
 

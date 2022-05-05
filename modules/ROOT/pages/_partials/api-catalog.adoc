@@ -107,11 +107,7 @@ This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[com
 Default: `catalog.yaml`
 
 The name and location in which to save the generated catalog descriptor file.
-<<<<<<< Updated upstream
 |  --external | Generates an `exchange.json` file for each API described in the descriptor file.
-=======
-|  --external | Generates an `exchange.json` file for each API described in the descriptor file
->>>>>>> Stashed changes
 |===
 
 // end::create-descriptor-command[]
@@ -249,7 +245,7 @@ ANYPOINT_ENV environment variable
   
 The ID of the Anypoint Platform environment where the APIs are cataloged.  
  
-|   --host=host
+|   --host=https://host
 
 or
 
@@ -257,16 +253,16 @@ ANYPOINT_HOST environment variable
 
  | (Required) 
 
-Default: `anypoint.mulesoft.com`
+Default: `https://anypoint.mulesoft.com`
 
 The Anypoint Platform base 
 URL. It must be specified using HTTPS protocol. 
 
 For the US Anypoint Platform, use:  
-`anypoint.mulesoft.com`. 
+`https://anypoint.mulesoft.com`. 
 
 For the European Anypoint Platform, use: 
-`eu1.anypoint.mulesoft.com`. 
+`https://eu1.anypoint.mulesoft.com`. 
 
 | --organization=organization 
 
