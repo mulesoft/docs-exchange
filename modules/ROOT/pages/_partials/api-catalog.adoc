@@ -256,7 +256,7 @@ ANYPOINT_HOST environment variable
 Default: `https://anypoint.mulesoft.com`
 
 The Anypoint Platform base 
-URL. It must be specified using HTTPS protocol. 
+URL. You must specify it using HTTPS protocol. 
 
 For the US Anypoint Platform, use:  
 `https://anypoint.mulesoft.com`. 
