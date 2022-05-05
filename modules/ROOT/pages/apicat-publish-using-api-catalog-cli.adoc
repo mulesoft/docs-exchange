@@ -72,7 +72,7 @@ This example shows the `api-catalog publish-asset` command with both of these op
 [[trigger-conditions]]
 == Trigger the Publish Using Conditions 
 
-Custom trigger conditions enable you to control whether APIs are published when the API Catalog CLI command runs. This example shows how `--trigger-criteria` options correlate with descriptor file trigger conditions to control whether or not to publish the described APIs.   
+Custom trigger conditions enable you to control whether APIs are published when the API Catalog `publish-assets` command runs. This example shows how `--trigger-criteria` options correlate with descriptor file trigger conditions to control whether or not to publish the described APIs.   
 
 *Example Trigger Conditions in a Descriptor file*
 
@@ -113,7 +113,7 @@ The following command does not trigger the API publish because the trigger optio
 [[versionStrategyConditions]]
 == Set Version Strategy Using Conditions 
 
-Version strategy conditions enable you to set the version of assets when the API Catalog CLI publish command runs as part of your CI/CD pipeline or scripts. This example shows how `--version-strategy-criteria` options correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If the version strategy is set at the global level, it overrides values set at any other level. If the value for a condition matches more than one version strategy, the command gives an error.
+Version strategy conditions enable you to set the version of assets when the API Catalog `publish-asset` command runs as part of your CI/CD pipeline or scripts. This example shows how `--version-strategy-criteria` options correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If the version strategy is set at the global level, it overrides values set at any other level. If the value for a condition matches more than one version strategy, the command gives an error.
 
 *Example Version Strategy Conditions in a Descriptor file*
 

@@ -32,7 +32,7 @@ Configuration settings are overridden as follows:
 [[single-signon]]
 == SSO
 
-If you have configured Anypoint Platform to use SSO with the system on which you are running API Catalog CLI, run the API Catalog CLI command with no credential options and it logs in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
+If you have configured Anypoint Platform to use SSO with the system on which you are running API Catalog CLI, when you run an API Catalog CLI command with no authentication options, the command logs in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
 
 // end::sso[]
 

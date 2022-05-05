@@ -205,7 +205,7 @@ See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor 
 [[common-options]]
 == Common Options
 
-Following are options that are common to most of the API Catalog commands.
+Following are options that are common to most of the API Catalog CLI commands.
 
 [%header,cols="20a,80a"]
 |===
