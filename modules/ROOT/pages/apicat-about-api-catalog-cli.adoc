@@ -13,7 +13,7 @@ With API Catalog CLI you can:
 
 == API Catalog CLI Concepts
 
-Following are the concepts you need to know to use API Catalog CLI.
+Review the following concepts before using API Catalog CLI.
 
 [[apicat-descriptor-file]]
 === Descriptor File
