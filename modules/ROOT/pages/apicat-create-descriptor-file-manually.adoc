@@ -11,7 +11,7 @@ Following are the YAML tags used to describe the APIs you want to catalog.
 
 == Catalog Descriptor Line
 
-The descriptor file must start with the following:
+The descriptor file must start with the the following line. The descriptor version corresponds with the version of API Catalog CLI that you are running. The following example shows the required starting line for API Catalog CLI 1.0.0. 
 
 ---
 
@@ -139,7 +139,7 @@ Following is an example descriptor file with manual updates that describes the c
 [source,yaml]
 ----
 
-#%Catalog Descriptor 0.7 # <1>
+#%Catalog Descriptor 1.0 # <1>
 triggerConditions: # <2>
   branches:
     - main
@@ -214,7 +214,7 @@ projects: # <4>
     versionStrategy: minorIncrease
     apiVersion: v1
 ----
-<1> Provides the start line for the descriptor file
+<1> Provides the starting line for the descriptor file
 <2> Sets trigger conditions
 <3> Provides the contact name and email ID 
 <4> Specifies the API information to be published
