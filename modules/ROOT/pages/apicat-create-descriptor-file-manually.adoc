@@ -176,10 +176,6 @@ projects: # <4>
     tags:
       - codat
       - gcp
-#    healthCheck:
-#      url: https://dev.codat.io/api/ping
-#      method: GET
-#      expectedStatus: 204
     version: 2.0.0
     versionStrategy: majorIncrease
     versionStrategyConditions:
@@ -208,8 +204,6 @@ projects: # <4>
       Organization:
         - Finance
         - Billing
-#    healthCheck:
-#      url: https://billing.io/api/health
     version: 1.0.0
     versionStrategy: minorIncrease
     apiVersion: v1
