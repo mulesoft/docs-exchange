@@ -290,14 +290,6 @@ ANYPOINT_PASSWORD environment variable
  
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
 
-| --profile=profile
-
-| Default: default
-
-Select the profile from the credentials configuration file.
- 
-See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
-
 | -u, --username=username 
 
 or
