@@ -44,7 +44,15 @@ The preceding example enables a run of the `api-catalog publish-asset` command t
 * `branches` are `main` or have `release/` in the text
 * `tags` are `support` or have `release/` in the text
 
-If the `triggerConditions` section is included in the descriptor file, no APIS are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger-criteria` option values. For an example publish command using the `--trigger-criteria` option, see 
+The `triggerConditions` sections are matched to `trigger-criteria` options as follows:
+
+* If only the global `triggerConditions` section is included in the descriptor file, no APIs are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger-criteria` option values. 
+
+* If `triggerConditions` sections are included for specific APIs, the specific APIs are published only if their trigger conditions are matched by `--trigger-criteria` option values. 
+
+* If both global and API level trigger conditions are included, the API level override the global level. 
+
+For an example publish command using the `--trigger-criteria` option, see 
 xref:apicat-publish-using-api-catalog-cli.adoc#example-trigger[Trigger the Publish Using Conditions].
 
 [[version-strategy-conditions]]
@@ -67,6 +75,20 @@ Following is an example `versionStrategyConditions` section:
         branches:
           - develop
 ----
+
+The `versionStrategyConditions` sections are matched to `version-strategy-criteria` options as follows:
+
+* If a `version-criteria` option set in the publish command 
+matches a `versionStrategyConditions` setting, that version strategy is used. 
+
+* If there are `versionStrategyConditions` matches at both global and API level, the API level overrides the global.
+
+* If there are no conditions matched and there is a `versionStrategy` option set in the descriptor file, that version strategy is used.
+
+* If there is no `versionStrategy` defined and no `versionStrategyConditions` matches, the default version strategy, `patchIncrease`, is used.
+
+For an example publish command using the `--version-strategy-criteria` option, see 
+xref:apicat-publish-using-api-catalog-cli.adoc#versionStrategyConditions[Set Version Strategy Using Conditions].
 
 == contact
 
