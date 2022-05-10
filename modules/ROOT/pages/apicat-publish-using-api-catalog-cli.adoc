@@ -20,15 +20,17 @@ include::partial$api-catalog.adoc[tag=publish-asset-command]
 
 The following sections give example commands that show how several catalog options are used:
 
-* <<default-settings,Publish an Asset with Default Settings>>
+* <<default-settings>>
 
-* <<dry-run,Perform a Dry Run to Validate the Descriptor File>>
+* <<dry-run>>
 
-* <<force-publish,Publish an Asset Regardless of the Content>>
+* <<force-publish>>
 
-* <<trigger-conditions,Trigger the Publish Using Conditions>>
+* <<trigger-conditions>>
 
-* <<jenkins-script,Publish Using a Jenkins Script>> 
+* <<versionStrategyConditions>>
+
+* <<jenkins-script>> 
 
 [[default-settings]]
 == Publish an Asset with Default Settings
@@ -205,4 +207,6 @@ pipeline {
 
 == See Also
 
-* xref:apicat-use-api-catalog-cli.adoc[Using API Catalog CLI]
+* xref:apicat-use-api-catalog-cli.adoc[General Use of Commands and Flags]
+* xref:apicat-create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]
+* xref:apicat-create-descriptor-file-manually.adoc[Creating or Updating Descriptor Files Manually]

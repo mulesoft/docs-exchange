@@ -53,7 +53,7 @@ The `triggerConditions` sections are matched to `trigger-criteria` options as fo
 * If both global and API level trigger conditions are included, the API level override the global level. 
 
 For an example publish command using the `--trigger-criteria` option, see 
-xref:apicat-publish-using-api-catalog-cli.adoc#example-trigger[Trigger the Publish Using Conditions].
+xref:apicat-publish-using-api-catalog-cli.adoc#trigger-conditions[Trigger the Publish Using Conditions].
 
 [[version-strategy-conditions]]
 == versionStrategyConditions
