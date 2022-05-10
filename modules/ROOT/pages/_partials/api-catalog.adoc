@@ -20,14 +20,14 @@
 == api-catalog autocomplete
 
 ----
-$ api-catalog autocomplete [options] 
+$ api-catalog autocomplete [flags] 
 ----
 
-This command accepts the following options:
+This command accepts the following flags:
 
 [%header,cols="20a,80a"]
 |===
-| Option | Description 
+| Flag | Description 
 | blank | Display instructions for configuring autocompletion
 | bash | Install autocompletion using Bash shell settings
 | zsh | Install autocompletion using Z shell settings
@@ -53,7 +53,7 @@ $ api-catalog autocomplete --refresh-cache
 Manage authentication credentials in a configuration file (config.json) by adding and removing key value pairs. Set one key value pair per command execution.
 
 ----
-> api-catalog conf <authkey> <authkeyvalue> [options] 
+> api-catalog conf <authkey> <authkeyvalue> [flags] 
 ----
 
 `<authkey>` +
@@ -69,11 +69,11 @@ The authentication key name. Possible key names are:
 `<authkeyvalue>` +
 The value for the specified authentication key.
 
-This command accepts the following options: 
+This command accepts the following flags: 
 
 [%header,cols="20a,80a"]
 |===
-| Option | Description 
+| Flag | Description 
 
 | -d, --delete | Deletes the config file entry for the given key.
 
@@ -93,14 +93,14 @@ This command accepts the following options:
 == api-catalog create-descriptor
 
 ----
-> api-catalog create-descriptor [options] 
+> api-catalog create-descriptor [flags] 
 ----
 
-This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[common options] in addition to the following options: 
+This command accepts the following flags: 
 
 [%header,cols="20a,80a"]
 |===
-| Option | Description 
+| Flag | Description 
 | -d, --file=file |
 Default: `catalog.yaml`
 
@@ -116,14 +116,14 @@ The name and location in which to save the generated catalog descriptor file.
 == api-catalog update-descriptor
 
 ----
-> api-catalog update-descriptor [options] 
+> api-catalog update-descriptor [flags] 
 ----
 
-This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[common options] in addition to the following option: 
+This command accepts the following flag: 
 
 [%header,cols="20a,80a"]
 |===
-| Option | Description 
+| Flag | Description 
 | -d, --descriptor-file=descriptor-file |
 Default: `catalog.yaml`
 
@@ -138,14 +138,14 @@ The name and location in which to save the updated catalog descriptor file infor
 == api-catalog publish-asset
 
 ----
-> api-catalog publish-asset [options] 
+> api-catalog publish-asset [flags] 
 ----
 
-This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[common options] in addition to the following options: 
+This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-flags[general and authentication flags] in addition to the following flags: 
 
 [%header,cols="20a,80a"]
 |===
-| Option | Description 
+| Flag | Description 
 
 | --async |  Run the publish job asynchronously. 
 
@@ -176,21 +176,21 @@ See xref:apicat-create-descriptor-file-cli#create-desc-file-cli[Create a Descrip
 
 | -s, --silent | Enables silent logging.
 
-| -t, --trigger-criteria=<descriptor-tag>:<value> --trigger-criteria=<descriptor-tag>:value  | This option works in conjunction with the `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger-criteria` options for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger-criteria` option values.
+| -t, --trigger-criteria=<descriptor-tag>:<value> --trigger-criteria=<descriptor-tag>:value  | This flag works in conjunction with the `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger-criteria` flags for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger-criteria` flag values.
 
 Example:
 
-`--trigger-criteria=branch:main --trigger-criteria=anytag:release/ -- trigger=user:admin`
+`--trigger-criteria=branch:main --trigger-criteria=anytag:release/ --trigger=user:admin`
 
 See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
 
 | -v, --verbose | Enable verbose logging. 
 
-| --version-strategy-criteria=<descriptor-tag>:<value> --version-strategy-criteria=<descriptor-tag>:<value>  | This option works in conjunction with the `versionStrategyConditions` section in the descriptor file. The `api-catalog publish-asset` command compares the version strategy criteria values to version strategy condition values in the descriptor file to determine the version strategy to use to publish the APIs. To match multiple conditions, specify separate `--version-strategy-criteria` options for each condition. 
+| --version-strategy-criteria=<descriptor-tag>:<value> --version-strategy-criteria=<descriptor-tag>:<value>  | This flag works in conjunction with the `versionStrategyConditions` section in the descriptor file. The `api-catalog publish-asset` command compares the version strategy criteria values to version strategy condition values in the descriptor file to determine the version strategy to use to publish the APIs. To match multiple conditions, specify separate `--version-strategy-criteria` flags for each condition. 
 
 Example:
 
-`--version-strategy-criteria=branch:main --version-strategy-criteria=anytag:release/ -- version-strategy-criteria=user:admin`
+`--version-strategy-criteria=branch:main --version-strategy-criteria=anytag:release/ --version-strategy-criteria=user:admin`
 
 See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
 
@@ -198,16 +198,16 @@ See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor 
 
 // end::publish-asset-command[]
 
-// tag::common-options[]
+// tag::common-flags[]
 
 [[common-options]]
-== Common Options
+== General and Authentication Flags
 
-Following are options that are common to most of the API Catalog CLI commands.
+Following are the general and authentication flags for commands that authenticate to Anypoint Platform.
 
 [%header,cols="20a,80a"]
 |===
-| Option | Description 
+| Flag | Description 
 
 | --client-id=client-id 
 
@@ -225,7 +225,7 @@ or
 
 ANYPOINT_CLIENT_SECRET environment variable
 
-| Prompt for the Connected App secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  
+| Prompt for the connected app secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  
  
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 

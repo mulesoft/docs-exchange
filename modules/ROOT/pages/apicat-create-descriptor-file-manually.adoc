@@ -22,7 +22,7 @@ The descriptor file must start with the the following line. The descriptor versi
 [[trigger-conditions]]
 == triggerConditions
 
-The `triggerConditions` section of the YAML file enables you to optionally set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs are published only when the `api-catalog publish-asset` command is run with `--trigger-criteria` options with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
+The `triggerConditions` section of the YAML file enables you to optionally set conditions to determine when to publish the set of APIs described in the descriptor file. If you add this section to the descriptor file, the APIs are published only when the `api-catalog publish-asset` command is run with `--trigger-criteria` flags with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control whether the APIs are published. 
 
 You can set trigger conditions for specific APIs or for all APIs described in the descriptor file (global). If both types of conditions are used, the specific override the global. 
 
@@ -39,26 +39,26 @@ Following is an example `triggerConditions` section:
 
 ---
 
-The preceding example enables a run of the `api-catalog publish-asset` command to publish the APIs described by the descriptor file only if the command has all of the following `--trigger-criteria` option values: 
+The preceding example enables a run of the `api-catalog publish-asset` command to publish the APIs described by the descriptor file only if the command has all of the following `--trigger-criteria` flag values: 
 
 * `branches` are `main` or have `release/` in the text
 * `tags` are `support` or have `release/` in the text
 
-The `triggerConditions` sections are matched to `trigger-criteria` options as follows:
+The `triggerConditions` sections are matched to `trigger-criteria` flags as follows:
 
-* If only the global `triggerConditions` section is included in the descriptor file, no APIs are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger-criteria` option values. 
+* If only the global `triggerConditions` section is included in the descriptor file, no APIs are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger-criteria` flag values. 
 
-* If `triggerConditions` sections are included for specific APIs, the specific APIs are published only if their trigger conditions are matched by `--trigger-criteria` option values. 
+* If `triggerConditions` sections are included for specific APIs, the specific APIs are published only if their trigger conditions are matched by `--trigger-criteria` flag values. 
 
 * If both global and API level trigger conditions are included, the API level override the global level. 
 
-For an example publish command using the `--trigger-criteria` option, see 
+For an example publish command using the `--trigger-criteria` flag, see 
 xref:apicat-publish-using-api-catalog-cli.adoc#trigger-conditions[Trigger the Publish Using Conditions].
 
 [[version-strategy-conditions]]
 == versionStrategyConditions
 
-The `versionStrategyConditions` section of the YAML file enables you to optionally set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs are set when the `api-catalog publish-asset` command is run with `--version-strategy-criteria` option. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
+The `versionStrategyConditions` section of the YAML file enables you to optionally set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs are set when the `api-catalog publish-asset` command is run with `--version-strategy-criteria` flag. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
 
 You can set version strategy conditions for specific APIs or for all APIs described in the descriptor file (global). If both types of conditions are used, the specific override the global. 
 
@@ -76,18 +76,18 @@ Following is an example `versionStrategyConditions` section:
           - develop
 ----
 
-The `versionStrategyConditions` sections are matched to `version-strategy-criteria` options as follows:
+The `versionStrategyConditions` sections are matched to `version-strategy-criteria` flags as follows:
 
-* If a `version-criteria` option set in the publish command 
+* If a `version-strategy-criteria` flag set in the publish command 
 matches a `versionStrategyConditions` setting, that version strategy is used. 
 
 * If there are `versionStrategyConditions` matches at both global and API level, the API level overrides the global.
 
 * If there are no conditions matched and there is a `versionStrategy` option set in the descriptor file, that version strategy is used.
 
-* If there is no `versionStrategy` defined and no `versionStrategyConditions` matches, the default version strategy, `patchIncrease`, is used.
+* If there is no `versionStrategy` option set and no `versionStrategyConditions` matches, the default version strategy, `patchIncrease`, is used.
 
-For an example publish command using the `--version-strategy-criteria` option, see 
+For an example publish command using the `--version-strategy-criteria` flag, see 
 xref:apicat-publish-using-api-catalog-cli.adoc#versionStrategyConditions[Set Version Strategy Using Conditions].
 
 == contact

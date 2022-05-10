@@ -28,12 +28,12 @@ The `exchange.json` file contains metadata required by Exchange to describe publ
 [[apicat-trigger-cond]]
 === Trigger Conditions
 
-Trigger conditions are set in descriptor files to enable the automated publication process to determine which APIs to publish during a run of the API Catalog CLI `publish-assets` command using the trigger criteria option.
+Trigger conditions are set in descriptor files to enable the automated publication process to determine which APIs to publish during a run of the API Catalog CLI `publish-assets` command using the `trigger-criteria` flag.
 
 [[apicat-version-strategy-cond]]
 === Version Strategy Conditions
 
-Version strategy conditions are set in descriptor files to enable the automated publication process to determine the version strategy for APIs during a run of the API Catalog CLI `publish-assets` command using the version strategy criteria option.
+Version strategy conditions are set in descriptor files to enable the automated publication process to determine the version strategy for APIs during a run of the API Catalog CLI `publish-assets` command using the `version-strategy-criteria` flag.
 
 == See Also
 
