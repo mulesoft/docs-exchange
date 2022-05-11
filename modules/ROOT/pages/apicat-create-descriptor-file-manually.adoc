@@ -98,7 +98,7 @@ The `contact` section of the schema includes the name and email ID for main cont
 
 The `projects` section of the schema lists the API projects to be cataloged along with the details needed to catalog them. 
 
-spec:: The location of the specification file that describes the API. 
+main:: The location of the specification file that describes the API. 
 
 assetId:: Specifies the ID of the asset to be published in Exchange. 
 
