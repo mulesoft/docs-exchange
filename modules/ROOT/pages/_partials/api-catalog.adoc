@@ -225,11 +225,15 @@ or
 
 ANYPOINT_CLIENT_SECRET environment variable
 
-| Prompt for the connected app secret for the client ID. Set the environment variable to avoid the prompt for the client secret.  
+| Prompt for the connected app secret for the client ID. 
  
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
 | --collectMetrics
+
+or
+
+COLLECT_METRICS environment variable
 
 | Collect metrics.  
 
