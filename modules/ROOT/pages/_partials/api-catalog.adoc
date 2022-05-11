@@ -141,7 +141,7 @@ The name and location in which to save the updated catalog descriptor file infor
 > api-catalog publish-asset [flags] 
 ----
 
-This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-flags[general and authentication flags] in addition to the following flags: 
+This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[general and authentication flags] in addition to the following flags: 
 
 [%header,cols="20a,80a"]
 |===
@@ -198,7 +198,7 @@ See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor 
 
 // end::publish-asset-command[]
 
-// tag::common-flags[]
+// tag::common-options[]
 
 [[common-options]]
 == General and Authentication Flags
