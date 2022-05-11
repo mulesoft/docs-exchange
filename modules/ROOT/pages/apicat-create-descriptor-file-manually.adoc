@@ -2,8 +2,6 @@
 
 The `create-descriptor` and `update-descriptor` commands identify the APIs to catalog and output the essential information needed to catalog them. If you want to add more descriptor information, the most efficient approach is to first create or update the descriptor file using the CLI, and then manually update the file with information that cannot be generated automatically. Use the following information about the descriptor YAML schema to decide what to add. 
 
-If you already have `exchange.json` files associated with your API projects, you can reference the information in those files either in-line or by using an external reference. 
-
 [[descriptor-yaml]]
 == Descriptor YAML Schema
 

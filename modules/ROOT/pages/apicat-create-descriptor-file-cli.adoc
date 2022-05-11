@@ -13,6 +13,10 @@ The output descriptor information includes the following for each API:
 
 Use the `api-catalog create-descriptor` command to identify and output the API catalog descriptor YAML results to a designated file. The command outputs cataloging information for all API definitions it finds in the full directory tree relative to the current working directory.
 
+//include::anypoint-cli::partial$api-catalog.adoc[tag=create-descriptor-command,leveloffset=+1]
+
+include::partial$api-catalog.adoc[tag=create-descriptor-command,leveloffset=+1]
+
 To create a descriptor file using the CLI:
 
 . Navigate to the directory path that contains the APIs you want to catalog. 
@@ -63,13 +67,13 @@ The presence and content of the designated descriptor file affects the result of
 
 * Existing file with content: The command fails and shows an error message that says the descriptor file already exists.
 
-//include::anypoint-cli::partial$api-catalog.adoc[tag=create-descriptor-command]
-
-include::partial$api-catalog.adoc[tag=create-descriptor-command]
-
 == Update a Descriptor File
 
 Use the `api-catalog update-descriptor` command to update the API catalog descriptor YAML results in a designated file. The command adds and updates cataloging information for all new and updated API definitions it finds in the full directory tree relative to the current working directory.
+
+//include::anypoint-cli::partial$api-catalog.adoc[tag=update-descriptor-command,leveloffset=+1]
+
+include::partial$api-catalog.adoc[tag=update-descriptor-command,leveloffset=+1]
 
 To update a descriptor file using the CLI:
 
@@ -85,10 +89,6 @@ The presence and content of the designated descriptor file affects the result of
 * No file or empty file: An error message is shown because the update requires that a valid descriptor file exists. 
 
 * Existing file with content: The command compares the APIs in the directory path to the list of APIs in the descriptor file and updates the descriptor file with new and updated API information.
-
-//include::anypoint-cli::partial$api-catalog.adoc[tag=update-descriptor-command]
-
-include::partial$api-catalog.adoc[tag=update-descriptor-command]
 
 == See Also
 
