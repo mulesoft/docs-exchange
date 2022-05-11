@@ -28,7 +28,7 @@ Example output that is written to the descriptor file:
 #%Catalog Descriptor 1.0
 projects:
  - main: async-spec.json
-  assetId: async-test
+  assetId: async-api
   version: 2.0.0
   apiVersion: v2
  - main: codat.json
@@ -36,35 +36,28 @@ projects:
   version: 1.0.0
   apiVersion: v1
  - main: oas-3-spec.json
-  assetId: oas-3-test
+  assetId: oas-3-api
   version: 3.0.0
   apiVersion: v3
 ----
-
++
 If you use the `external` flag, an `exchange.json` file is generated for each of your APIs and the descriptor file has references to each of those as shown in the following example:
-
++
 ----
 > api-catalog create-descriptor -d mydescriptor.yaml --external
 ----
-
++
 Example output that is written to the descriptor file:
-
++
 ----
 #%Catalog Descriptor 1.0
 projects:
   - ref: api-spec/async-spec.exchange.json
   - ref: api-spec/codat.exchange.json
   - ref: api-spec/oas-3-spec.exchange.json
-  - ref: api-spec/oas-spec.exchange.json
-  - ref: api-spec/order-api.exchange.json
-  - ref: raml-examples-master/defining-examples/organisation-api.exchange.json
-  - ref: raml-examples-master/fragments/datatype/general/api.exchange.json
-  - ref: raml-examples-master/libraries/api.exchange.json
-  - ref: raml-examples-master/media-types/defaults/api.exchange.json
-  - ref: raml-examples-master/media-types/multipart-data/api.exchange.json
 ----
 
-The result of the command depends on the presence and content of the designated descriptor file as follows:
+The presence and content of the designated descriptor file affects the result of the command as follows:
 
 * No file or empty file: The command discovers the APIs and writes the results to standard output and to a file named `catalog.yaml`.
 
@@ -87,7 +80,7 @@ To update a descriptor file using the CLI:
 > api-catalog update-descriptor -d mydescriptor.yaml
 ----
 
-The result of the command depends on the presence and content of the designated descriptor file as follows:
+The presence and content of the designated descriptor file affects the result of the command as follows:
 
 * No file or empty file: An error message is shown because the update requires that a valid descriptor file exists. 
 

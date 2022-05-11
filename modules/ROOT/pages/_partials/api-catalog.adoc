@@ -235,7 +235,9 @@ or
 
 COLLECT_METRICS environment variable
 
-| Collect metrics.  
+| Not currently used
+
+// Collect metrics. 
 
 | --environment=environment 
 
@@ -243,9 +245,7 @@ or
 
 ANYPOINT_ENV environment variable
 
-  | (Required) 
-  
-The ID of the Anypoint Platform environment where the APIs are cataloged.  
+| The ID of the Anypoint Platform environment where the APIs are cataloged.  
  
 |   --host=host
 
@@ -253,9 +253,7 @@ or
 
 ANYPOINT_HOST environment variable
 
- | (Required) 
-
-Default: 
+| Default: 
 ----
 anypoint.mulesoft.com
 ----
@@ -280,15 +278,13 @@ or
 
 ANYPOINT_ORG environment variable
 
-  | (Required) 
-  
-The ID of the Anypoint Platform organization where the APIs are cataloged.  
+| The ID of the Anypoint Platform organization where the APIs are cataloged.  
 
-|   -o, --output=output  
+|  -o, --output=output  
 
-| Default: UI 
-  
-Format for the command output.  
+| Not currently used
+
+// Format for the command output.  
 
 | -p, --password 
 
@@ -296,7 +292,7 @@ or
 
 ANYPOINT_PASSWORD environment variable
 
- | Anypoint user password. Set the environment variable to avoid a prompt for the password.  
+| Anypoint user password. Set the environment variable to avoid a prompt for the password.  
  
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
 
