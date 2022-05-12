@@ -42,7 +42,7 @@ The preceding example enables a run of the `api-catalog publish-asset` command t
 * `branches` are `main` or have `release/` in the text
 * `tags` are `support` or have `release/` in the text
 
-The `triggerConditions` sections are matched to `trigger-criteria` flags as follows:
+The `triggerConditions` sections are matched to `--trigger-criteria` flags as follows:
 
 * If only the global `triggerConditions` section is included in the descriptor file, no APIs are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger-criteria` flag values. 
 
@@ -74,9 +74,9 @@ Following is an example `versionStrategyConditions` section:
           - develop
 ----
 
-The `versionStrategyConditions` sections are matched to `version-strategy-criteria` flags as follows:
+The `versionStrategyConditions` sections are matched to `--version-strategy-criteria` flags as follows:
 
-* If a `version-strategy-criteria` flag set in the publish command 
+* If a `--version-strategy-criteria` flag set in the publish command 
 matches a `versionStrategyConditions` setting, that version strategy is used. 
 
 * If there are `versionStrategyConditions` matches at both global and API level, the API level overrides the global.

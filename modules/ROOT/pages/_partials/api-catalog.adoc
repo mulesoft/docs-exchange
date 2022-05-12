@@ -75,13 +75,13 @@ This command accepts the following flags:
 |===
 | Flag | Description 
 
-| -d, --delete | Deletes the config file entry for the given key.
+| -d, --delete | Deletes the config file entry for the given key
 
-| -h, --help | Shows the help for this command.
+| -h, --help | Shows the help for this command
 
-| -k, --key=key | Shows the value that corresponds with the given key.
+| -k, --key=key | Shows the value that corresponds with the given key
 
-| -v, --value=value | Shows the key that corresponds with the given value.
+| -v, --value=value | Shows the key that corresponds with the given value
 
 |===
 
@@ -147,7 +147,7 @@ This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[gen
 |===
 | Flag | Description 
 
-| --async |  Run the publish job asynchronously. 
+| --async |  Runs the publish job asynchronously. 
 
 |  -d, --descriptor-file=descriptor-file 
 
@@ -203,7 +203,7 @@ See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor 
 [[common-options]]
 == General and Authentication Flags
 
-Following are the general and authentication flags for commands that authenticate to Anypoint Platform.
+Following are the general and authentication flags for commands that authenticate to Anypoint Platform:
 
 [%header,cols="20a,80a"]
 |===
@@ -215,7 +215,7 @@ or
 
 ANYPOINT_CLIENT_ID environment variable
 
-| Connected app client ID.  
+| Connected app client ID 
 
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
@@ -225,7 +225,7 @@ or
 
 ANYPOINT_CLIENT_SECRET environment variable
 
-| Prompt for the connected app secret for the client ID. 
+| Prompt for the connected app secret for the client ID
  
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
@@ -245,7 +245,7 @@ or
 
 ANYPOINT_ENV environment variable
 
-| The ID of the Anypoint Platform environment where the APIs are cataloged.  
+| The ID of the Anypoint Platform environment where the APIs are cataloged  
  
 |   --host=host
 
@@ -258,7 +258,7 @@ ANYPOINT_HOST environment variable
 anypoint.mulesoft.com
 ----
 
-The Anypoint Platform base URL. This should not include the protocol. 
+The Anypoint Platform base URL without the protocol 
 
 For the US Anypoint Platform, use:  
 
@@ -278,7 +278,7 @@ or
 
 ANYPOINT_ORG environment variable
 
-| The ID of the Anypoint Platform organization where the APIs are cataloged.  
+| The ID of the Anypoint Platform organization where the APIs are cataloged  
 
 |  -o, --output=output  
 
@@ -292,7 +292,7 @@ or
 
 ANYPOINT_PASSWORD environment variable
 
-| Anypoint user password. Set the environment variable to avoid a prompt for the password.  
+| Anypoint user password 
  
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
 
@@ -302,7 +302,7 @@ or
 
 ANYPOINT_USERNAME environment variable
 
-| Anypoint username. 
+| Anypoint username
 
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
 
