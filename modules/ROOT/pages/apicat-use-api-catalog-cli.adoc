@@ -15,7 +15,7 @@ include::partial$api-catalog.adoc[tag=summary]
 
 == View Command Help
 
-Use the help option to list the commands or command options and their descriptions. The following examples show how to use the help option:
+Use the help option to list the commands or command flags and their descriptions. The following examples show how to use the help option:
 
 ----
 api-catalog help

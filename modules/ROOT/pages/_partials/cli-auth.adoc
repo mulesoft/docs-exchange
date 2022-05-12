@@ -14,16 +14,16 @@ You can pass Anypoint Platform credentials using the following methods:
 
 * <<single-signon,Using single signon (SSO)>>
 * <<credentials-file,Using a credentials configuration file>>
-* <<command-line-options,Using command line options>>
+* <<command-line-options,Using command line flags>>
 * <<env-variables,Using environment variables>>
 
 Configuration settings are overridden as follows:
 
-* Command line options override all other methods. 
+* Command line flags override all other methods. 
 
-* Environment variables are used if command line options are not specified and override any credentials configuration file settings.
+* Environment variables are used if command line flags are not specified and override any credentials configuration file settings.
 
-* Credentials configuration file options are used if no command line options or environment variables are set.
+* Credentials configuration file options are used if no command line flags or environment variables are set.
 
 // end::summary[]
 
@@ -32,7 +32,7 @@ Configuration settings are overridden as follows:
 [[single-signon]]
 == SSO
 
-If you have configured Anypoint Platform to use SSO with the system on which you are running API Catalog CLI, when you run an API Catalog CLI command with no authentication options, the command logs in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
+If you have configured Anypoint Platform to use SSO with the system on which you are running API Catalog CLI, when you run an API Catalog CLI command with no authentication flags, the command logs in to Anypoint Platform through SSO. For information on configuring login through SSO, see xref:access-management::external-identity.adoc[About Identity Management].
 
 // end::sso[]
 
@@ -43,7 +43,7 @@ If you have configured Anypoint Platform to use SSO with the system on which you
 
 If you are not using SSO, the most secure way to pass credentials to your Anypoint Platform CLI installation is through the credentials configuration file.  
 
-You can authenticate to Anypoint Platform by running the `api-catalog conf` command to add your credentials to a configuration file. After you have created the configuration file with valid credentials, you can run the `api-catalog` commands without specifying any credentials options and the authentication is done using the configuration file values. 
+You can authenticate to Anypoint Platform by running the `api-catalog conf` command to add your credentials to a configuration file. After you have created the configuration file with valid credentials, you can run the `api-catalog` commands without specifying any credentials flags and the authentication is done using the configuration file values. 
 
 You can set authentication values in the configuration file using a combination of the following authentication keys:
 
@@ -124,9 +124,9 @@ Example `config.json` contents after running the above commands:
 // tag::cmdline[]
 
 [[command-line-options]]
-== Command Line Options
+== Command Line Flags
 
-You can authenticate to Anypoint Platform through the command line by running the `api-catalog` command with a combination of the following options:
+You can authenticate to Anypoint Platform through the command line by running the `api-catalog` command with a combination of the following flags:
 
 ----
 --username

@@ -18,7 +18,7 @@ To publish an API definition using the CLI:
 > api-catalog publish-asset -d catalog.yaml --host=anypoint.mulesoft.com --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --username=myAnyPtAccount --password=myPwd@4!myacct 
 ----
 
-The following sections give example commands that show how several catalog options are used:
+The following sections give example commands that show how several catalog flags are used:
 
 * <<default-settings>>
 
@@ -35,7 +35,7 @@ The following sections give example commands that show how several catalog optio
 [[default-settings]]
 == Publish an Asset with Default Settings
 
-The following example publishes the API to an organization in the US control plane for Anypoint Platform. Defaults, credentials configuration file settings, or environment variable settings are used for the unspecified options. 
+The following example publishes the API to an organization in the US control plane for Anypoint Platform. Defaults, credentials configuration file settings, or environment variable settings are used for the unspecified flags. 
 
 ----
 > api-catalog publish-asset --organization 1234abc-b34a-7cd3-4s32-12345abc2345 
@@ -45,10 +45,10 @@ The following example publishes the API to an organization in the US control pla
 [[dry-run]]
 == Perform a Dry Run to Validate the Descriptor File
 
-This example shows the `api-catalog publish-asset` command with the following options:
+This example shows the `api-catalog publish-asset` command with the following flags:
 
-* --dry-run: Runs the command to verify that the descriptor file is valid but does not publish the APIs
-* --verbose: Shows the maximum information in the results
+* --dry-run: Runs the command to verify that the descriptor file is valid but does not publish the APIs.
+* --verbose: Shows the maximum information in the results.
 
 The example command sends the standard output to `mycatdryrun.log`. 
 
@@ -60,9 +60,9 @@ The example command sends the standard output to `mycatdryrun.log`.
 [[force-publish]]
 == Publish an Asset Regardless of the Content
 
-To publish a new version of the asset in Exchange regardless of the content, use the `--force-publish` option. 
+To publish a new version of the asset in Exchange regardless of the content, use the `--force-publish` flag. 
 
-This example shows the `api-catalog publish-asset` command with both of these options. Defaults, credentials configuration file settings, or environment variable settings are used for the unspecified options.
+This example shows the `api-catalog publish-asset` command with both of these flags. Defaults, credentials configuration file settings, or environment variable settings are used for the unspecified flags.
 
 ----
 > api-catalog publish-asset --host=anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish 
@@ -72,7 +72,7 @@ This example shows the `api-catalog publish-asset` command with both of these op
 [[trigger-conditions]]
 == Trigger the Publish Using Conditions 
 
-Custom trigger conditions enable you to control whether APIs are published when the API Catalog `publish-assets` command runs. This example shows how `--trigger-criteria` options correlate with descriptor file trigger conditions to control whether or not to publish the described APIs. If a trigger condition is set at the API level, that setting overrides conditions set at the global level.  
+Custom trigger conditions enable you to control whether APIs are published when the API Catalog `publish-assets` command runs. This example shows how `--trigger-criteria` flags correlate with descriptor file trigger conditions to control whether or not to publish the described APIs. If a trigger condition is set at the API level, that setting overrides conditions set at the global level.  
 
 === Example Trigger Conditions in a Descriptor file
 
@@ -113,11 +113,11 @@ The following command does not trigger the API publish because the trigger optio
 [[versionStrategyConditions]]
 == Set Version Strategy Using Conditions 
 
-Version strategy conditions enable you to set the version of assets when the API Catalog `publish-asset` command runs as part of your CI/CD pipeline or scripts. This example shows how `--version-strategy-criteria` options correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If a version strategy condition is set at the API level, that setting overrides conditions set at the global level. If the value for a condition matches more than one version strategy, the command gives an error.
+Version strategy conditions enable you to set the version of assets when the API Catalog `publish-asset` command runs as part of your CI/CD pipeline or scripts. This example shows how `--version-strategy-criteria` flags correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If a version strategy condition is set at the API level, that setting overrides conditions set at the global level. If the value for a condition matches more than one version strategy, the command gives an error.
 
 === Example Version Strategy Conditions in a Descriptor File
 
-Following is an example `versionStrategyConditions` section in the `mydescriptor.yaml` descriptor file. 
+Following is an example `versionStrategyConditions` section in the `mydescriptor.yaml` descriptor file.
 
 ----
  

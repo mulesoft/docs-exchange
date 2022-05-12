@@ -28,10 +28,10 @@ This command accepts the following flags:
 [%header,cols="20a,80a"]
 |===
 | Flag | Description 
-| blank | Display instructions for configuring autocompletion
-| bash | Install autocompletion using Bash shell settings
-| zsh | Install autocompletion using Z shell settings
-| -r, --refresh cache | Remove the current autocompletion configuration. Use this before running the command with a different shell type.
+| blank | Displays instructions for configuring autocompletion
+| bash | Installs autocompletion using Bash shell settings
+| zsh | Installs autocompletion using Z shell settings
+| -r, --refresh cache | Removes the current autocompletion configuration. Use this before running the command with a different shell type.
 |===
 
 *Examples*
@@ -104,8 +104,8 @@ This command accepts the following flags:
 | -d, --file=file |
 Default: `catalog.yaml`
 
-The name and location in which to save the generated catalog descriptor file.
-|  --external | Generates an `exchange.json` file for each API described in the descriptor file and adds a reference to each of those in the descriptor file using the `ref` option.
+The name and location in which to save the generated catalog descriptor file
+|  --external | Generates an `exchange.json` file for each API described in the descriptor file and adds a reference to each of those in the descriptor file using the `ref` tag in the `projects` section
 |===
 
 // end::create-descriptor-command[]
@@ -127,7 +127,7 @@ This command accepts the following flag:
 | -d, --descriptor-file=descriptor-file |
 Default: `catalog.yaml`
 
-The name and location in which to save the updated catalog descriptor file information.
+The name and location in which to save the updated catalog descriptor file information
 |===
 
 // end::update-descriptor-command[]
@@ -184,7 +184,7 @@ Example:
 
 See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
 
-| -v, --verbose | Enable verbose logging. 
+| -v, --verbose | Enables verbose logging. 
 
 | --version-strategy-criteria=<descriptor-tag>:<value> --version-strategy-criteria=<descriptor-tag>:<value>  | This flag works in conjunction with the `versionStrategyConditions` section in the descriptor file. The `api-catalog publish-asset` command compares the version strategy criteria values to version strategy condition values in the descriptor file to determine the version strategy to use to publish the APIs. To match multiple conditions, specify separate `--version-strategy-criteria` flags for each condition. 
 

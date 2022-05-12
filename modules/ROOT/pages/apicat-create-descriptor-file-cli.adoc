@@ -92,7 +92,7 @@ The presence and content of the designated descriptor file affects the result of
 
 * Existing file with content: The command compares the APIs in the directory path to the list of APIs in the descriptor file and updates the descriptor file with new and updated API information.
 
-* File with `ref` options: The command gives a parsing error, as the `update-descriptor` command does not support descriptor files with references to external `exchange.json` files.
+* File with `ref` tags in the `projects` section: The command gives a parsing error, as the `update-descriptor` command does not support descriptor files with references to external `exchange.json` files.
 
 == See Also
 

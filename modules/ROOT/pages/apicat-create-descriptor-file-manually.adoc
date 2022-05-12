@@ -151,7 +151,7 @@ If the API version is not specified in the descriptor file, the version from the
 +
 Example: v1  
 
-ref:: As an alternative to describing the APIs in your project using the preceding options, you can use the `ref` option to reference `exchange.json` files for each API as shown in the following example:
+ref:: As an alternative to describing the APIs in your project using the preceding tags in the `projects` section, you can use the `ref` tag to reference `exchange.json` files for each API as shown in the following example:
 +
 ----
 projects:
