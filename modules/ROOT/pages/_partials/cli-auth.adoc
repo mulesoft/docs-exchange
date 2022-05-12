@@ -92,7 +92,7 @@ $ api-catalog conf password mypwd
 * Set values for a specific host, organization, and environment:
 +
 ----
-$ api-catalog conf host https://myco.anypoint.mulesoft.com
+$ api-catalog conf host myco.anypoint.mulesoft.com
 $ api-catalog conf environment ec7d16cb-43fd-4796-8b4f-5cff7294fcf9
 $ api-catalog conf organization 8a840abc-e63a-4f8d-87ad-24052eda3018
 ----
@@ -111,7 +111,7 @@ Example `config.json` contents after running the above commands:
      "bearer": "b71cab22-e5cc-43c4-90ed-5a1124b6ae1f",
      "username": "myuser",
      "password": "mypwd",
-     "host": "https://myco.anypoint.mulesoft.com",
+     "host": "myco.anypoint.mulesoft.com",
      "environment": "ec7d16cb-43fd-4796-8b4f-5cff7294fcf9",
      "organization": "8a840abc-e63a-4f8d-87ad-24052eda3018",
      "client_id": "1787c36ab544466698e380131040faad",
