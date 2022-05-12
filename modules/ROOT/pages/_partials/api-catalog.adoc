@@ -105,7 +105,7 @@ This command accepts the following flags:
 Default: `catalog.yaml`
 
 The name and location in which to save the generated catalog descriptor file.
-|  --external | Generates an `exchange.json` file for each API described in the descriptor file.
+|  --external | Generates an `exchange.json` file for each API described in the descriptor file and adds a reference to each of those in the generated descriptor file using the `ref` option.
 |===
 
 // end::create-descriptor-command[]

@@ -17,7 +17,7 @@ Review the following concepts before using API Catalog CLI.
 [[apicat-descriptor-file]]
 === Descriptor File
 
-A descriptor file has the metadata Exchange needs to catalog a set of APIs within a directory and its subdirectory structure. This file is specific to API Catalog CLI. If you already have `exchange.json` files associated with your API projects, you can also use the metadata from those files either by adding it to the descriptor file in-line or by using external references to the files. 
+A descriptor file has the metadata Exchange needs to catalog a set of APIs within a directory and its subdirectory structure. This file's schema supports metadata specific to API Catalog CLI and can include in-line or referenced metadata from `exchange.json` files. 
 
 [[apicat-trigger-cond]]
 === Trigger Conditions
