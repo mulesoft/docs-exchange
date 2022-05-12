@@ -72,7 +72,7 @@ This example shows the `api-catalog publish-asset` command with both of these fl
 [[trigger-conditions]]
 == Trigger the Publish Using Conditions 
 
-Custom trigger conditions enable you to control whether APIs are published when the API Catalog `publish-assets` command runs. This example shows how `--trigger-criteria` flags correlate with descriptor file trigger conditions to control whether or not to publish the described APIs. If a trigger condition is set at the API level, that setting overrides conditions set at the global level.  
+Custom trigger conditions enable you to control whether APIs are published when the API Catalog `publish-assets` runs as part of your CI/CD pipeline or scripts. This example shows how `--trigger-criteria` flags correlate with descriptor file trigger conditions to control whether or not to publish the described APIs. If a trigger condition is set at the API level, that setting overrides conditions set at the global level.  
 
 === Example Trigger Conditions in a Descriptor file
 

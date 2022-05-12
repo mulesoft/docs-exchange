@@ -50,7 +50,7 @@ The `triggerConditions` sections are matched to `--trigger-criteria` flags as fo
 
 * If both global and API level trigger conditions are included, the API level conditions override the global level conditions. 
 
-For an example publish command using the `--trigger-criteria` flag, see 
+For an example `publish-asset` command using the `--trigger-criteria` flag, see 
 xref:apicat-publish-using-api-catalog-cli.adoc#trigger-conditions[Trigger the Publish Using Conditions].
 
 [[version-strategy-conditions]]
@@ -76,7 +76,7 @@ Following is an example `versionStrategyConditions` section:
 
 The `versionStrategyConditions` sections are matched to `--version-strategy-criteria` flags as follows:
 
-* If a `--version-strategy-criteria` flag set in the publish command 
+* If a `--version-strategy-criteria` flag set in the `publish-asset` command
 matches a `versionStrategyConditions` setting, that version strategy is used. 
 
 * If there are `versionStrategyConditions` matches at both global and API level, the API level conditions override the global level conditions.
@@ -85,7 +85,7 @@ matches a `versionStrategyConditions` setting, that version strategy is used.
 
 * If there is no `versionStrategy` option set and no `versionStrategyConditions` matches, the default version strategy, `patchIncrease`, is used.
 
-For an example publish command using the `--version-strategy-criteria` flag, see 
+For an example `publish-asset` command using the `--version-strategy-criteria` flag, see 
 xref:apicat-publish-using-api-catalog-cli.adoc#versionStrategyConditions[Set Version Strategy Using Conditions].
 
 == contact
