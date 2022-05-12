@@ -39,7 +39,7 @@ include::partial$cli-auth.adoc[tag=sso,leveloffset=+1]
 
 include::partial$cli-auth.adoc[tag=conffile,leveloffset=+1]
 
-include::partial$api-catalog.adoc[tag=conf-command,leveloffset=+1]
+include::partial$api-catalog.adoc[tag=conf-command,leveloffset=+2]
 
 include::partial$cli-auth.adoc[tag=cmdline,leveloffset=+1]
 
