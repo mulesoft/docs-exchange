@@ -142,7 +142,7 @@ Following are the possible values:
 * *Snapshot*: Publishes a development asset with the version specified in the descriptor file. If the asset does not exist, it creates it with the state `development`. If the asset exists, it republishes it and keeps it in `development`.
 
 * *Fixed*: Publishes a stable asset with the version specified in the descriptor file. If the asset does not exist, it creates it. If the asset exists, and is in development, it promotes it to `stable`. If the asset is in `stable` state and this version is already published, it fails.
-
++
 For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
 
 apiVersion:: The API version for the asset. 
