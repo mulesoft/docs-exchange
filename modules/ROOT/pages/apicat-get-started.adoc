@@ -1,0 +1,32 @@
+== Getting Started with API Catalog CLI
+
+After you become familiar with the API Catalog CLI concepts covered in xref:apicat-about-api-catalog-cli.adoc[Autocataloging APIs Using API Catalog CLI], you are ready to get started autocataloging your APIs.
+
+[[configure-api-catalog-cli-permissions]]
+== Before You Begin
+
+To grant permission to run the API Catalog CLI commands that interact with Anypoint Platform:
+
+* Enable *API Catalog Contributor*.
+* If you are authenticating using a connected app, set the *View Environment* scope to the main environment for your organization.
+
+NOTE: Permissions must be set in *Access Management* by an Anypoint Platform user with administrative permission. 
+
+See the Access Management documentation for details on xref:access-management::managing-permissions.adoc[managing permissions].
+
+[[get-started]]
+== Get Started with API Catalog CLI
+
+To get started with API Catalog CLI: 
+
+. Ensure MuleSoft has enabled the API Catalog entitlement for your Anypoint Platform organization.
+. xref:apicat-install-api-catalog-cli.adoc[Install] API Catalog CLI.
+. xref:apicat-use-api-catalog-cli.adoc[Get familiar with the general use of API Catalog], such as how to pass authentication information and how to use the general command flags.
+. xref:apicat-create-descriptor-file-cli.adoc[Create a descriptor file] to identify the APIs to publish.
+. xref:apicat-publish-using-api-catalog-cli.adoc[Catalog an asset] using API Catalog CLI and view it in Anypoint Exchange.
+
+TIP: Consider testing the process end-to-end locally by running the commands at a command prompt before adding the commands to your CI/CD pipeline or custom scripts. 
+
+== See Also
+
+* xref:apicat-about-api-catalog-cli.adoc[Autocataloging APIs Using API Catalog CLI]

@@ -1,0 +1,250 @@
+= Creating or Updating Descriptor Files Manually
+
+The `create-descriptor` and `update-descriptor` commands identify the APIs to catalog and output the essential information needed to catalog them. If you want to add more descriptor information, the most efficient approach is to first create or update the descriptor file using the CLI, and then manually update the file with information that cannot be generated automatically. Use the following information about the descriptor YAML schema to decide what to add. 
+
+[[descriptor-yaml]]
+== Descriptor YAML Schema
+
+Following are the YAML tags used to describe the APIs you want to catalog. 
+
+== Catalog Descriptor Line
+
+The descriptor file must start with the the following line. The descriptor version corresponds with the version of API Catalog CLI that you are running. The following example shows the required starting line for API Catalog CLI 1.0.0. 
+
+---
+
+ #%Catalog Descriptor 1.0
+
+---
+
+[[trigger-conditions]]
+== triggerConditions
+
+The `triggerConditions` section of the YAML file enables you to set conditions to determine which of the set of APIs described in the descriptor file to publish. If you add this section to the descriptor file, APIs are published only when the `api-catalog publish-asset` command is run with `--trigger-criteria` flags with matching values for each of the trigger conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control which of the APIs are published. 
+
+You can set trigger conditions for specific APIs or for all APIs described in the descriptor file (global). If both types of conditions are used, the specific override the global. 
+
+Following is an example `triggerConditions` section:
+
+---
+ triggerConditions: 
+   branches:
+     - main
+     - release/(.*)
+   tags:
+     - support
+     - release/(.*)
+
+---
+
+The preceding example enables a run of the `api-catalog publish-asset` command to publish the APIs described by the descriptor file only if the command has all of the following `--trigger-criteria` flag values: 
+
+* `branches` are `main` or have `release/` in the text
+* `tags` are `support` or have `release/` in the text
+
+The `triggerConditions` sections are matched to `--trigger-criteria` flags as follows:
+
+* If only the global `triggerConditions` section is included in the descriptor file, no APIs are published by the `api-catalog publish-asset` command unless all of the trigger conditions are matched by `--trigger-criteria` flag values. 
+
+* If `triggerConditions` sections are included for specific APIs, the specific APIs are published only if their trigger conditions are matched by `--trigger-criteria` flag values. 
+
+* If both global and API level trigger conditions are included, the API level conditions override the global level conditions. 
+
+For an example `publish-asset` command using the `--trigger-criteria` flag, see 
+xref:apicat-publish-using-api-catalog-cli.adoc#trigger-conditions[Trigger the Publish Using Conditions].
+
+[[version-strategy-conditions]]
+== versionStrategyConditions
+
+The `versionStrategyConditions` section of the YAML file enables you to set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs are set when the `api-catalog publish-asset` command is run with `--version-strategy-criteria` flag. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
+
+You can set version strategy conditions for specific APIs or for all APIs described in the descriptor file (global). If both types of conditions are used, the specific override the global. 
+
+Following is an example `versionStrategyConditions` section:
+
+----
+    versionStrategyConditions:
+      minorIncrease:
+        branches:
+          - main
+        tags:
+          - support
+      snapshot:
+        branches:
+          - develop
+----
+
+The `versionStrategyConditions` sections are matched to `--version-strategy-criteria` flags as follows:
+
+* If a `--version-strategy-criteria` flag set in the `publish-asset` command
+matches a `versionStrategyConditions` setting, that version strategy is used. 
+
+* If there are `versionStrategyConditions` matches at both global and API level, the API level conditions override the global level conditions.
+
+* If there are no conditions matched and there is a `versionStrategy` option set in the descriptor file, that version strategy is used.
+
+* If there is no `versionStrategy` option set and no `versionStrategyConditions` matches, the default version strategy, `patchIncrease`, is used.
+
+For an example `publish-asset` command using the `--version-strategy-criteria` flag, see 
+xref:apicat-publish-using-api-catalog-cli.adoc#versionStrategyConditions[Set Version Strategy Using Conditions].
+
+== contact
+
+The `contact` section of the schema includes the name and email ID for main contact for the autocataloging. If none are included, these default to `unknown`.   
+
+== projects 
+
+The `projects` section of the schema lists the API projects to be cataloged along with the details needed to catalog them. 
+
+main:: The location of the specification file that describes the API. 
+
+assetId:: Specifies the ID of the asset to be published in Exchange. 
+
+documentation:: A list of key and value pairs that specify the name of the documentation page and file location for the API.
+These pairs define the order of the documentation pages in Anypoint Platform.
++
+Format: <Name of the documentation page>:<File Location>
++
+If this option is not specified, no documentation pages are imported. 
+
+categories:: A list of key and value pairs that specify the category name and value. These pairs are validated against the categories that exist in the Anypoint Platform organization.
++
+Format: <Category Name>: <Value(s)>
++
+If this option is not specified, no categories are added.
+
+customFields:: A list of key and value pairs that specify the field and value. These pairs are validated against the custom fields and field types that exist in the Anypoint Platform organization.
++
+Format: <Field>: <Value(s)> 
++
+If this option is not specified, no custom fields are added.
+
+tags:: A list of free text strings. 
++
+If this option is not specified, no tags are added.
++
+version:: The version of the API.
++
+If this is not specified, the version is set by the version strategy.
++
+versionStrategy::
++
+You can set the versioning strategy for the assets at the global or API project level. If a version strategy is not specified, the patch version is incremented by one. 
++
+Following are the possible values:
++
+* *majorIncrease:* Searches for the latest version that matches the `version` field in the descriptor and increases the major version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
++
+* *minorIncrease:*  Searches for the latest version that matches the `version` field in the descriptor and increases the minor version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
++
+* *patchIncrease (Default):* Searches for the latest version that matches the `version` field in the descriptor and increases a patch version. If the asset is in the development lifecycle state, the version is increased and the asset stays in development. If the asset is a stable version, a new stable version is published.
+
+* *Snapshot*: Publishes a development asset with the version specified in the descriptor file. If the asset does not exist, it creates it with the state `development`. If the asset exists, it republishes it and keeps it in `development`.
+
+* *Fixed*: Publishes a stable asset with the version specified in the descriptor file. If the asset does not exist, it creates it. If the asset exists, and is in development, it promotes it to `stable`. If the asset is in `stable` state and this version is already published, it fails.
++
+For more information on asset versioning in Exchange, see xref:to-change-raml-version.adoc[Change the Version of an API Asset].
+
+apiVersion:: The API version for the asset. 
++
+If the API version is not specified in the descriptor file, the version from the specification file is used. If the API version is specified in both files, the value in the descriptor file is used. The value must be specified in one of the files. 
++
+Example: v1  
+
+ref:: As an alternative to describing the APIs in your project using the preceding tags in the `projects` section, you can use the `ref` tag to reference `exchange.json` files for each API as shown in the following example:
++
+----
+projects:
+  - ref: api-spec/async-spec.exchange.json
+  - ref: api-spec/codat.exchange.json
+  - ref: api-spec/oas-3-spec.exchange.json
+  - ref: api-spec/oas-spec.exchange.json
+----
+
+[[example-descriptor-file]]
+== Example Descriptor File With Manual Updates
+
+Following is an example descriptor file with manual updates that describes the cataloging information for two APIs. 
+
+[source,yaml]
+----
+
+#%Catalog Descriptor 1.0 # <1>
+triggerConditions: # <2>
+  branches:
+    - main
+    - release/(.*)
+  tags:
+    - support
+    - release/(.*)
+
+contact: # <3>
+  name: 'John Doe'
+  email: 'john.doe@org.com'
+
+versionStrategyConditions:
+  majorIncrease:
+    branches:
+      - master
+    tags:
+      - support
+  fixed:
+    branches:
+      - develop
+
+projects: # <4>
+  - main: api-spec/codat.json
+    assetId: my-awesome-api
+    contact:
+      name: 'Jane Doe'
+      email: 'jane.doe@org.com'
+    documentation:
+      add: documentation/add.md
+    customFields:
+      custom: value
+      another: field
+    tags:
+      - codat
+      - gcp
+    version: 2.0.0
+    versionStrategy: majorIncrease
+    versionStrategyConditions:
+      minorIncrease:
+        branches:
+          - main
+        tags:
+          - support
+      snapshot:
+        branches:
+          - develop
+    apiVersion: v3
+
+  - main: api-spec/billing-api.json
+    assetId: my-awesome-billing-api
+    triggerConditions:
+      user:
+        - admin
+    tags:
+      - finance
+      - aws
+    categories:
+      API Type:
+        - System API
+        - Experience API
+      Organization:
+        - Finance
+        - Billing
+    version: 1.0.0
+    versionStrategy: minorIncrease
+    apiVersion: v1
+----
+<1> Provides the starting line for the descriptor file
+<2> Sets trigger conditions
+<3> Provides the contact name and email ID 
+<4> Specifies the API information to be published
+
+== See Also
+
+* xref:apicat-use-api-catalog-cli.adoc[Using API Catalog CLI]
+* xref:apicat-publish-using-api-catalog-cli.adoc[Publishing Assets Using API Catalog CLI]
+* xref:apicat-create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]

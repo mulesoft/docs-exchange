@@ -1,0 +1,311 @@
+= API Catalog
+
+// tag::summary[]
+
+[%header,cols="35a,65a"]
+|===
+|Command |Description
+|xref:apicat-configure-cli-autocomplete.adoc#autocomplete-command[api-catalog autocomplete]  | Configures autocompletion for API Catalog commands
+|<<conf-command,api-catalog conf>>  | Creates or deletes a credentials configuration file
+|xref:apicat-create-descriptor-file-cli.adoc#create-descriptor-command[api-catalog create-descriptor]  | Creates a descriptor file
+|xref:apicat-create-descriptor-file-cli.adoc#update-descriptor-command[api-catalog update-descriptor]  | Updates a descriptor file
+|xref:apicat-publish-using-api-catalog-cli.adoc#publish-asset-command[api-catalog publish-asset]  | Publishes assets to Exchange
+|===
+
+// end::summary[]
+
+// tag::autocomplete-command[]
+
+[[autocomplete-command]]
+== api-catalog autocomplete
+
+----
+$ api-catalog autocomplete [flags] 
+----
+
+This command accepts the following flags:
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description 
+| blank | Displays instructions for configuring autocompletion
+| bash | Installs autocompletion using Bash shell settings
+| zsh | Installs autocompletion using Z shell settings
+| -r, --refresh cache | Removes the current autocompletion configuration. Use this before running the command with a different shell type.
+|===
+
+*Examples*
+
+----
+$ api-catalog autocomplete
+$ api-catalog autocomplete bash
+$ api-catalog autocomplete zsh
+$ api-catalog autocomplete --refresh-cache
+----
+
+// end::autocomplete-command[]
+
+// tag::conf-command[]
+
+[[conf-command]]
+== api-catalog conf
+
+Manage authentication credentials in a configuration file (config.json) by adding and removing key value pairs. Set one key value pair per command execution.
+
+----
+> api-catalog conf <authkey> <authkeyvalue> [flags] 
+----
+
+`<authkey>` +
+The authentication key name. Possible key names are:
+           username
+           password
+           client_id
+           client_secret
+           host
+           environment
+           organization
+
+`<authkeyvalue>` +
+The value for the specified authentication key.
+
+This command accepts the following flags: 
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description 
+
+| -d, --delete | Deletes the config file entry for the given key
+
+| -h, --help | Shows the help for this command
+
+| -k, --key=key | Shows the value that corresponds with the given key
+
+| -v, --value=value | Shows the key that corresponds with the given value
+
+|===
+
+// end::conf-command[]
+
+// tag::create-descriptor-command[]
+
+[[create-descriptor-command]]
+== api-catalog create-descriptor
+
+----
+> api-catalog create-descriptor [flags] 
+----
+
+This command accepts the following flags: 
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description 
+| -d, --file=file |
+Default: `catalog.yaml`
+
+The name and location in which to save the generated catalog descriptor file
+|  --external | Generates an `exchange.json` file for each API described in the descriptor file and adds a reference to each of those in the descriptor file using the `ref` tag in the `projects` section
+|===
+
+// end::create-descriptor-command[]
+
+// tag::update-descriptor-command[]
+
+[[update-descriptor-command]]
+== api-catalog update-descriptor
+
+----
+> api-catalog update-descriptor [flags] 
+----
+
+This command accepts the following flag: 
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description 
+| -d, --descriptor-file=descriptor-file |
+Default: `catalog.yaml`
+
+The name and location in which to save the updated catalog descriptor file information
+|===
+
+// end::update-descriptor-command[]
+
+// tag::publish-asset-command[]
+
+[[publish-asset-command]]
+== api-catalog publish-asset
+
+----
+> api-catalog publish-asset [flags] 
+----
+
+This command accepts the xref:apicat-use-api-catalog-cli.adoc#common-options[general and authentication flags] in addition to the following flags: 
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description 
+
+| --async |  Runs the publish job asynchronously. 
+
+|  -d, --descriptor-file=descriptor-file 
+
+or
+
+ANYPOINT_DESCRIPTOR_FILE environment variable
+
+ | Default:  ./catalog.yaml 
+ 
+The name and location of the catalog descriptor file.  
+
+  * If the file does not exist, no assets are cataloged.
+  * If the file exists but is empty, the command creates and prints the catalog descriptor YAML results. It outputs cataloging information for all API definitions it finds in the full directory tree relative to the current working directory.
+  * If a valid YAML file exists, the command catalogs the assets as specified. 
+  
+See xref:apicat-create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI]. 
+
+| --dry-run | Runs the command to verify that the descriptor file is valid. No APIs are published. 
+
+| --force-publish |  Bypasses the comparison and 
+ creates a new version of the asset in Exchange regardless of the content.
+
+| --force-update-metadata | Updates the asset's metadata, such as tags, in the latest version in Exchange regardless of the content. This does not republish the asset. 
+
+| --json | Prints the execution result in JSON format. 
+
+| -s, --silent | Enables silent logging.
+
+| -t, --trigger-criteria=<descriptor-tag>:<value> --trigger-criteria=<descriptor-tag>:value  | This flag works in conjunction with the `triggerConditions` section in the descriptor file. For each run of the `api-catalog publish-asset` command, the trigger values are compared to trigger condition values in the descriptor file to determine whether to publish the APIs described in the descriptor file. To match multiple conditions, specify separate `--trigger-criteria` flags for each condition. For the APIs to be published, all trigger conditions set in the descriptor file must be matched by `--trigger-criteria` flag values.
+
+Example:
+
+`--trigger-criteria=branch:main --trigger-criteria=anytag:release/ --trigger=user:admin`
+
+See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
+
+| -v, --verbose | Enables verbose logging. 
+
+| --version-strategy-criteria=<descriptor-tag>:<value> --version-strategy-criteria=<descriptor-tag>:<value>  | This flag works in conjunction with the `versionStrategyConditions` section in the descriptor file. The `api-catalog publish-asset` command compares the version strategy criteria values to version strategy condition values in the descriptor file to determine the version strategy to use to publish the APIs. To match multiple conditions, specify separate `--version-strategy-criteria` flags for each condition. 
+
+Example:
+
+`--version-strategy-criteria=branch:main --version-strategy-criteria=anytag:release/ --version-strategy-criteria=user:admin`
+
+See xref:apicat-create-descriptor-file-manually.adoc#descriptor-yaml[Descriptor YAML Schema]. 
+
+|===
+
+// end::publish-asset-command[]
+
+// tag::common-options[]
+
+[[common-options]]
+== General and Authentication Flags
+
+Following are the general and authentication flags for commands that authenticate to Anypoint Platform:
+
+[%header,cols="20a,80a"]
+|===
+| Flag | Description 
+
+| --client-id=client-id 
+
+or
+
+ANYPOINT_CLIENT_ID environment variable
+
+| Connected app client ID 
+
+See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
+
+| --client-secret 
+
+or
+
+ANYPOINT_CLIENT_SECRET environment variable
+
+| Prompt for the connected app secret for the client ID
+ 
+See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
+
+| --collectMetrics
+
+or
+
+COLLECT_METRICS environment variable
+
+| Not currently used
+
+// Collect metrics. 
+
+| --environment=environment 
+
+or
+
+ANYPOINT_ENV environment variable
+
+| The ID of the Anypoint Platform environment where the APIs are cataloged  
+ 
+|   --host=host
+
+or
+
+ANYPOINT_HOST environment variable
+
+| Default: 
+----
+anypoint.mulesoft.com
+----
+
+The Anypoint Platform base URL without the protocol 
+
+For the US Anypoint Platform, use:  
+
+----
+anypoint.mulesoft.com
+---- 
+
+For the European Anypoint Platform, use:
+
+----
+eu1.anypoint.mulesoft.com
+----
+
+| --organization=organization 
+
+or
+
+ANYPOINT_ORG environment variable
+
+| The ID of the Anypoint Platform organization where the APIs are cataloged  
+
+|  -o, --output=output  
+
+| Not currently used
+
+// Format for the command output.  
+
+| -p, --password 
+
+or
+
+ANYPOINT_PASSWORD environment variable
+
+| Anypoint user password 
+ 
+See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
+
+| -u, --username=username 
+
+or
+
+ANYPOINT_USERNAME environment variable
+
+| Anypoint username
+
+See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication]. 
+
+|===
+
+// end::common-options[]

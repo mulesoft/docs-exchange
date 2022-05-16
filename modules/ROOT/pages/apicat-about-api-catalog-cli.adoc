@@ -1,0 +1,36 @@
+= Autocataloging APIs Using API Catalog CLI
+
+API Catalog CLI enables you to discover and catalog your API definitions, documentation files, and associated metadata as part of an automated process. You can embed the publish asset command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the publishing of your API assets to Exchange. API Catalog CLI is agnostic of CI/CD tools and runtime environments.
+
+With API Catalog CLI you can:
+
+* Identify all APIs in a project directory structure and create a <<apicat-descriptor-file,descriptor file>> to use to publish the APIs to Exchange.
+* Identify all new and changed APIs and update the descriptor file on an ongoing basis. 
+* <<apicat-trigger-cond,Conditionally trigger>> the publish based on criteria such as branches and tags.
+* <<apicat-version-strategy-cond,Conditionally set the asset version strategy>> based on criteria such as branches and tags.
+* Publish APIs described in the descriptor file by running commands either at a command prompt or as part of your CI/CD pipelines or custom scripts.
+
+== API Catalog CLI Concepts
+
+Review the following concepts before using API Catalog CLI.
+
+[[apicat-descriptor-file]]
+=== Descriptor File
+
+A descriptor file has the metadata Exchange needs to catalog a set of APIs within a directory and its subdirectory structure. This file's schema supports metadata specific to API Catalog CLI and can include in-line or referenced metadata from `exchange.json` files. 
+
+[[apicat-trigger-cond]]
+=== Trigger Conditions
+
+Trigger conditions are set in descriptor files to enable the automated publication process to determine which APIs to publish during a run of the API Catalog CLI `publish-assets` command using the `--trigger-criteria` flag.
+
+[[apicat-version-strategy-cond]]
+=== Version Strategy Conditions
+
+Version strategy conditions are set in descriptor files to enable the automated publication process to determine the version strategy for APIs during a run of the API Catalog CLI `publish-assets` command using the `--version-strategy-criteria` flag.
+
+== See Also
+
+* xref:apicat-get-started.adoc[Getting Started with API Catalog CLI]
+* xref:apicat-create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]
+* xref:about-sharing-assets.adoc[Publish Assets]

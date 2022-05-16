@@ -1,0 +1,101 @@
+= Creating or Updating Descriptor Files Using the CLI
+
+Before you run the commands to publish your APIs, you must create a descriptor file that has the information Exchange needs to catalog the APIs. Typically you create the file using the CLI and then update the file manually to set more options to control how the assets are published. 
+
+The output descriptor information includes the following for each API:
+
+* API definition file name
+* Asset ID
+* Asset version
+* API version
+
+== Create a Descriptor File
+
+Use the `api-catalog create-descriptor` command to identify and output the API catalog descriptor YAML results to a designated file. The command outputs cataloging information for all API definitions it finds in the full directory tree relative to the current working directory.
+
+//include::anypoint-cli::partial$api-catalog.adoc[tag=create-descriptor-command,leveloffset=+1]
+
+include::partial$api-catalog.adoc[tag=create-descriptor-command,leveloffset=+1]
+
+To create a descriptor file using the CLI:
+
+. Navigate to the directory path that contains the APIs you want to catalog. 
+. Run the `api-catalog create-descriptor` command. The following example creates a descriptor file called `mydescriptor.yaml` in the current path:
++
+----
+> api-catalog create-descriptor -d mydescriptor.yaml
+----
++
+Example output that is written to the descriptor file:
++
+----
+#%Catalog Descriptor 1.0
+projects:
+ - main: async-spec.json
+  assetId: async-api
+  version: 2.0.0
+  apiVersion: v2
+ - main: codat.json
+  assetId: codat-api
+  version: 1.0.0
+  apiVersion: v1
+ - main: oas-3-spec.json
+  assetId: oas-3-api
+  version: 3.0.0
+  apiVersion: v3
+----
++
+If you use the `--external` flag, an `exchange.json` file is generated for each of your APIs and the descriptor file has references to each of those as shown in the following example:
++
+----
+> api-catalog create-descriptor -d mydescriptor.yaml --external
+----
++
+Example output that is written to the descriptor file:
++
+----
+#%Catalog Descriptor 1.0
+projects:
+  - ref: api-spec/async-spec.exchange.json
+  - ref: api-spec/codat.exchange.json
+  - ref: api-spec/oas-3-spec.exchange.json
+----
+
+The presence and content of the designated descriptor file affects the result of the command as follows:
+
+* No file or empty file: The command discovers the APIs and writes the results to standard output and to a file named `catalog.yaml`.
+
+* Existing file with content: The command fails and shows an error message that says the descriptor file already exists.
+
+== Update a Descriptor File
+
+Use the `api-catalog update-descriptor` command to update the API catalog descriptor YAML results in a designated file. The command adds and updates cataloging information for all new and updated API definitions it finds in the full directory tree relative to the current working directory.
+
+This command cannot be used to update descriptor files created using the `--external` flag.
+
+//include::anypoint-cli::partial$api-catalog.adoc[tag=update-descriptor-command,leveloffset=+1]
+
+include::partial$api-catalog.adoc[tag=update-descriptor-command,leveloffset=+1]
+
+To update a descriptor file using the CLI:
+
+. Navigate to the directory path that contains the APIs you want to catalog. 
+. Run the `api-catalog update-descriptor` command. The following example updates a descriptor file called `mydescriptor.yaml` in the current path:
++
+----
+> api-catalog update-descriptor -d mydescriptor.yaml
+----
+
+The presence and content of the designated descriptor file affects the result of the command as follows:
+
+* No file or empty file: An error message is shown because the update requires that a valid descriptor file exists. 
+
+* Existing file with content: The command compares the APIs in the directory path to the list of APIs in the descriptor file and updates the descriptor file with new and updated API information.
+
+* File with `ref` tags in the `projects` section: The command gives a parsing error, as the `update-descriptor` command does not support descriptor files with references to external `exchange.json` files.
+
+== See Also
+
+* xref:apicat-use-api-catalog-cli.adoc[General Use of Commands and Flags]
+* xref:apicat-publish-using-api-catalog-cli.adoc[Publishing Assets Using API Catalog CLI]
+* xref:apicat-create-descriptor-file-manually.adoc#manual-descriptor[Creating or Updating Descriptor Files Manually]
