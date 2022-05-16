@@ -44,9 +44,6 @@
   ** xref:apicat-create-descriptor-file-cli.adoc[Create or Update Descriptor Files Using the CLI] 
   ** xref:apicat-create-descriptor-file-manually.adoc[Create or Update Descriptor Files Manually]
   ** xref:apicat-publish-using-api-catalog-cli.adoc[Publish Assets Using API Catalog CLI]
-* xref:about-exchange1.adoc[About Exchange 1 (Old Version)]
- ** xref:exchange1.adoc[Using Exchange 1 (Old Version)]
- ** xref:exchange1-faq.adoc[FAQ: Exchange 1 (Old Version)]
 * xref:about-administration-tasks.adoc[Administrator Tasks]
  ** xref:to-share-an-asset.adoc[Share an Asset]
  ** xref:to-share-api-asset-to-portal.adoc[Publish an API to a Public Portal]
@@ -54,4 +51,3 @@
  ** xref:to-enable-the-request-access-button.adoc[Enable the Request Access Button to Display]
  ** xref:to-set-permissions.adoc[Set User Access Permissions]
  ** xref:cookies.adoc[About Exchange Cookies]
-
