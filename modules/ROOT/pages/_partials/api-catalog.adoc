@@ -209,7 +209,7 @@ Following are the general and authentication flags for commands that authenticat
 |===
 | Flag | Description 
 
-| --client-id=client-id 
+| --client_id=client_id 
 
 or
 
@@ -219,7 +219,7 @@ ANYPOINT_CLIENT_ID environment variable
 
 See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
-| --client-secret 
+| --client_secret 
 
 or
 
