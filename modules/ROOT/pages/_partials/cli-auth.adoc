@@ -143,13 +143,13 @@ You can authenticate to Anypoint Platform through the command line by running th
 * Authenticate on the command line using username and password
 +
 ----
-$ api-catalog --username myUserName --password myPassword --organization=myOrgId account:environment:list
+$ api-catalog --username myUserName --password myPassword --organization=myOrgId publish-asset
 ----
 
 * Authenticate on the command line using client ID and client secret
 +
 ----
-$ api-catalog --client_id myClientID myClientSecret --organization=myOrgId account:environment:list
+$ api-catalog --client_id myClientID myClientSecret --organization=myOrgId publish-asset
 ----
 
 * Authenticate on the command line  using a bearer token
@@ -157,7 +157,7 @@ $ api-catalog --client_id myClientID myClientSecret --organization=myOrgId accou
 You can generate a bearer token in Anypoint Platform and pass it to API Catalog CLI directly. When you provide a bearer token, API Catalog CLI ignores any provided user or client credentials.
 +
 ----
-$ api-catalog --bearer myBearerToken --organization=myOrgId account:environment:list
+$ api-catalog --bearer myBearerToken --organization=myOrgId publish-asset
 ----
 +
 Your Anypoint Platform session expires when the bearer token expires.
