@@ -262,7 +262,9 @@ uses:
 [[reserved-keywords]]
 == Reserved Keywords
 
-Valid identifiers cannot match any of the reserved REST Connect keywords:
+Valid identifiers for REST Connect must not match any of the reserved Java keywords or reserved Mule keywords.
+
+The following list shows the reserved Java keywords to avoid when naming valid identifiers for REST Connect:
 
 * `abstract`
 * `assert`
@@ -285,7 +287,6 @@ Valid identifiers cannot match any of the reserved REST Connect keywords:
 * `finally`
 * `float`
 * `for`
-* `friendlyName`
 * `goto`
 * `if`
 * `implements`
@@ -294,11 +295,9 @@ Valid identifiers cannot match any of the reserved REST Connect keywords:
 * `int`
 * `interface`
 * `long`
-* `name`
 * `native`
 * `new`
 * `null`
-* `operationName`
 * `package`
 * `private`
 * `protected`
@@ -310,8 +309,6 @@ Valid identifiers cannot match any of the reserved REST Connect keywords:
 * `super`
 * `switch`
 * `synchronized`
-* `target`
-* `targetValue`
 * `this`
 * `throw`
 * `throws`
@@ -321,6 +318,15 @@ Valid identifiers cannot match any of the reserved REST Connect keywords:
 * `void`
 * `volatile`
 * `while`
+
+The following list shows the reserved Mule keywords to avoid when naming valid identifiers for REST Connect:
+
+* `friendlyName`
+* `name`
+* `operationName`
+* `target`
+* `targetValue`
+
 
 == OAuth2 in Design Center for REST Connect
 
