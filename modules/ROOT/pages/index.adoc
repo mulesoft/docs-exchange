@@ -20,7 +20,7 @@ Assets in the *Provided by MuleSoft* organization are created by MuleSoft and it
 
 You can get started either by searching for an existing asset or creating a new one.
 
-. From https://www.anypoint.mulesoft.com/exchange/[Exchange], either search by type of assets or enter the name of a known asset in the *Search* field.
+. From https://anypoint.mulesoft.com/exchange/[Exchange], either search by type of assets or enter the name of a known asset in the *Search* field.
 . Select an asset from the search results view.
 . Review the description of the asset.
 

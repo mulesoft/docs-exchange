@@ -21,5 +21,3 @@ Exchange generates the group ID, asset ID, and version. You can change these val
 . Click *Add implementation*.
 +
 The implementation displays in the *Manage implementations* table. From this table, manage the implementation versions of a policy asset. See xref:manage-versions.adoc[Manage Versions] for more information.
-
-----

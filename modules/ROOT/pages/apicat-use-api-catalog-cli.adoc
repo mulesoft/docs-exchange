@@ -1,0 +1,48 @@
+= General Use of Commands and Flags
+
+After you have installed API Catalog CLI and configured permissions, you can use API Catalog CLI commands to autocatalog your APIs. Several options are available to <<authentication,authenticate>> to Anypoint Platform as you run the commands. 
+
+//Command summary start
+
+[[api-catalog-commands]]
+== List of API Catalog Commands
+
+API Catalog CLI includes the following commands:
+
+include::partial$api-catalog.adoc[tag=summary]
+
+//Command summary end
+
+== View Command Help
+
+Use the help option to list the commands or command flags and their descriptions. The following examples show how to use the help option:
+
+----
+api-catalog help
+api-catalog create-descriptor --help
+----
+
+//Common Options start
+
+include::partial$api-catalog.adoc[tag=common-options]
+
+//Common Options end
+
+[[authentication]]
+== Authentication
+
+// Authentication start
+
+include::partial$cli-auth.adoc[tag=summary,leveloffset=+1]
+
+include::partial$cli-auth.adoc[tag=sso,leveloffset=+1]
+
+include::partial$cli-auth.adoc[tag=conffile,leveloffset=+1]
+
+include::partial$api-catalog.adoc[tag=conf-command,leveloffset=+2]
+
+include::partial$cli-auth.adoc[tag=cmdline,leveloffset=+1]
+
+include::partial$cli-auth.adoc[tag=envvars,leveloffset=+1]
+
+// Authentication end 
