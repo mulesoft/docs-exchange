@@ -41,9 +41,9 @@ As your organization's administrator, you can enable or disable each external us
 
 Users in your organization can access features that external users cannot, such as deploying an application. You can invite an external user to join your organization so they can use these features.
 
-== Set the status of your organization Public Portal
+== Know the status of your organization's Public Portal
 
-The public portals in Exchange of all organizations are disabled by default, that is, they cannot be used unless you reactivate them.
+All new Public Portals in Exchange in an organization are disabled by default, so you can't enter to see assets or share new assets on your Public Portal unless you re-enable them.
 
 To simply know the status of your Public Portal you can use the following request.
 +
@@ -55,7 +55,7 @@ curl "https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DO
 
 === How to enable a Public Portal
 
-To start using your organization's Public Portal and sharing assets as public you must enable your Public Portal as follows:
+To start using your organization's Public Portal and sharing assets publicly you must enable your Public Portal as follows:
 
 . Get an access token from an Anypoint Platform user account that has the Organization Administrator permission in the root organization:
 +
@@ -64,7 +64,7 @@ To start using your organization's Public Portal and sharing assets as public yo
 ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
 ----
 +
-. Use the access token to change the status of your organization's Public Portal to enabled:
+. Use the access token to change the status of your organization's Public Portal to enabled status:
 +
 [source,console]
 ----
@@ -86,7 +86,7 @@ curl 'https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DO
 ----
 +
 
-Once all the assets of your organization have been marked as private, you must make the following request:
+Once all assets from your organization have been marked as private, you must make the following request:
 
 . Get an access token from an Anypoint Platform user account that has the Organization Administrator permission in the root organization:
 +
