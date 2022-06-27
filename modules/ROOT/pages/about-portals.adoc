@@ -49,7 +49,7 @@ To know the status of your Public Portal you can use the following request:
 +
 [source,console]
 ----
-curl "https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/status
+curl "https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/status"
 ----
 +
 
