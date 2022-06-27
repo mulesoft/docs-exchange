@@ -43,7 +43,7 @@ Users in your organization can access features that external users cannot, such 
 
 == Know the status of your organization's Public Portal
 
-All new Public Portals in Exchange in an organization are disabled by default, so you can't enter to see assets or share new assets on your Public Portal unless you re-enable them.
+All Organizational Public Portals in Exchange created after July 2022 are disabled by default, so you can't sign in to view assets or share new assets on your Public Portal unless you enable them.
 
 To know the status of your Public Portal you can use the following request:
 +
