@@ -1,4 +1,4 @@
-== Getting Started with API Catalog CLI
+= Getting Started with API Catalog CLI
 
 After you become familiar with the API Catalog CLI concepts covered in xref:apicat-about-api-catalog-cli.adoc[Autocataloging APIs Using API Catalog CLI], you are ready to get started autocataloging your APIs.
 
