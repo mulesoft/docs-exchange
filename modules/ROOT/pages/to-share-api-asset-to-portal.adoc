@@ -25,7 +25,7 @@ Follow these steps to add an asset to a portal and make the asset public.
 Adding an asset to a portal does not delete the asset. It is still available internally.
 
 . Select an API asset to show its details.
-. Select *Share* and choose *Public Publish it on the public portal*.
+. Click *Share* and select *Public - Publish it on the public portal*.
 . Select the version of the asset you want to publish in the public portal.
 . Select *Save*.
 
@@ -35,7 +35,7 @@ If no action occurs, refresh your browser, log in again, and add the asset again
 
 Follow these steps to remove an asset from a portal and make the asset private.
 
-Removing an asset from a portal does not delete the asset. It is still available internally.
+Removing an asset from a portal does not delete the asset. The asset is still available internally.
 
 . Select the asset in Exchange and click *Share*.
 . Select *Public - Publish in the on the public portal*.
@@ -43,7 +43,6 @@ Removing an asset from a portal does not delete the asset. It is still available
 +
 The version of the asset is set to *Private*.
 +
-
 . Select *Save*.
 . In Exchange, refresh the browser screen.
 +
