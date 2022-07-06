@@ -1,0 +1,75 @@
+= Enable and Disable a Public Portal
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+All organizational public portals in Exchange created after July 2022 are disabled by default. You cannot sign in to view assets or share new assets on your public portal unless you enable them.
+
+To determine of your public portal is enabled or disabled, use the following request:
+
+----
+curl "https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/status"
+----
+
+
+== Enable a Public Portal
+
+All assets that are shared in the public portal do not require authorization to view the details of an asset or download the specifications.
+
+To start using your organization's public portal and sharing assets publicly, you must enable the portal.
+
+. Get an access token from an Anypoint Platform user account that has the Organization Administrator permission in the root organization:
++
+[source,console]
+----
+ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
+----
++
+. Use the access token to change the status of your organization's public portal to enabled status:
++
+----
+curl -X PUT https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/status -d "enabled" -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
+----
+
+
+== Disable a Public Portal
+
+You can disable your public portal if you do not want to have any publicly shared information about your assets. 
+
+To disable your organization's public portal, all the assets that are shared in the public portal must be private. 
+
+. To view which assets are shared in the public portal, use the following request:
++
+[source,console]
+----
+curl 'https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/assets' | jq '.[] | [.groupId,.assetId]'
+----
+
+. Perform the following steps to set all the assets that are shared publicly in the public portal to private:
+
+.. Select the asset in Exchange, click *Share*.
+.. Select *Public - Publish in the on the public portal*.
+.. Unselect the version checkbox.
++
+ The version of the asset is set to *Private*.
+.. Select *Save*.
+
+. Get an access token from an Anypoint Platform user account that has the Organization Administrator permission in the root organization:
++
+[source,console]
+----
+ACCESS_TOKEN=$(curl https://anypoint.mulesoft.com/accounts/login -XPOST -d "username=YOUR_USERNAME&password=YOUR_PASSWORD" | jq -r ".access_token")
+----
++
+. Use the following access token to change the status of your organization's public portal to enabled:
++
+[source,console]
+----
+curl -X PUT https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/status -d "disabled" -H "content-type: text/plain" -H "authorization: bearer $ACCESS_TOKEN"
+----
+
+
+== See Also
+
+* xref:to-customize-portal.adoc[Customize an Exchange Public Portal]

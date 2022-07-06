@@ -33,6 +33,7 @@
  ** xref:to-use-api-notebook.adoc[Document an Asset Using API Notebook]
  ** xref:to-configure-api-settings.adoc[Configure API Instances]
 * xref:about-portals.adoc[Exchange Public Portals]
+** xref:enable-and-disable-a-public-portal.adoc[Enable and Disable a Public Portal]
  ** xref:to-customize-portal.adoc[Customize an Exchange Public Portal]
  ** xref:portal-vanity-domain.adoc[Public Portal Vanity Domain]
  ** xref:to-manage-public-portal-resources.adoc[Manage Public Portal Resources]
