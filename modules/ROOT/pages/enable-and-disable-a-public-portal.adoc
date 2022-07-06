@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-All organizational public portals in Exchange created after July 2022 are disabled by default. You cannot sign in to view assets or share new assets on your public portal unless you enable them.
+All organizational public portals in Exchange created after July 2022 are disabled by default. You cannot sign in to view assets or share new assets on your public portal unless you enable them. You must be an Exchange administrator to enable or disable a public portal.
 
 To determine of your public portal is enabled or disabled, use the following request:
 
@@ -37,7 +37,7 @@ curl -X PUT https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZAT
 
 You can disable your public portal if you do not want to have any publicly shared information about your assets. 
 
-To disable your organization's public portal, all the assets that are shared in the public portal must be private. 
+To disable your organization's public portal, all the assets that are shared in the public portal must be set to private. 
 
 . To view which assets are shared in the public portal, use the following request:
 +
@@ -48,11 +48,12 @@ curl 'https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DO
 
 . Perform the following steps to set all the assets that are shared publicly in the public portal to private:
 
-.. Select the asset in Exchange, click *Share*.
+.. Select the asset in Exchange and click *Share*.
 .. Select *Public - Publish in the on the public portal*.
 .. Unselect the version checkbox.
 +
- The version of the asset is set to *Private*.
+The version of the asset is set to *Private*.
++
 .. Select *Save*.
 
 . Get an access token from an Anypoint Platform user account that has the Organization Administrator permission in the root organization:
