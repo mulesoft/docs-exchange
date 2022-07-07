@@ -47,7 +47,7 @@ curl 'https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DO
 
 . Perform the following steps to set all the assets that are shared publicly in the public portal to private:
 
-.. Select the asset in Exchange and click *Share*.
+. Select the asset in Exchange and click *Share*.
 .. Select *Public - Publish in the on the public portal*.
 .. Unselect the version checkbox.
 +
