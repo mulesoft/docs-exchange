@@ -6,7 +6,7 @@ endif::[]
 
 All public portals in Exchange created after July 2022 are disabled by default. You cannot sign in to view assets or share new assets on your public portal unless you enable them. You must be an Exchange administrator to enable or disable a public portal.
 
-To determine of your public portal is enabled or disabled, use the following request:
+To determine if your public portal is enabled or disabled, use the following request:
 
 ----
 curl "https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/status"
