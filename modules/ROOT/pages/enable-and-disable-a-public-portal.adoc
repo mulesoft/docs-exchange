@@ -49,7 +49,7 @@ curl 'https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DO
 
 . Select the asset in Exchange and click *Share*.
 .. Select *Public - Publish in the on the public portal*.
-.. Unselect the version checkbox.
+. Unselect the version checkbox.
 +
 The version of the asset is set to *Private*.
 +
