@@ -34,7 +34,7 @@ curl -X PUT https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZAT
 
 == Disable a Public Portal
 
-You can disable your public portal if you do not want to have any publicly shared information about your assets. 
+If you do not want to publicly share any information about your assets, disable your public portal. 
 
 To disable your organization's public portal, all the assets that are shared in the public portal must be set to private. 
 
