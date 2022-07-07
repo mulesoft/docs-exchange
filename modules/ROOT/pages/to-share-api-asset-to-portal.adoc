@@ -38,7 +38,7 @@ Follow these steps to remove an asset from a portal and make the asset private.
 Removing an asset from a portal does not delete the asset. The asset is still available internally.
 
 . Select the asset in Exchange and click *Share*.
-. Select *Public - Publish in the on the public portal*.
+. Select *Public - Publish it on the public portal*.
 . Clear the version checkbox.
 +
 The version of the asset is set to *Private*.
