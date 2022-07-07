@@ -39,7 +39,7 @@ Removing an asset from a portal does not delete the asset. The asset is still av
 
 . Select the asset in Exchange and click *Share*.
 . Select *Public - Publish in the on the public portal*.
-. Deselect the version checkbox.
+. Clear the version checkbox.
 +
 The version of the asset is set to *Private*.
 +
