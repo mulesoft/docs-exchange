@@ -46,7 +46,7 @@ The version of the asset is set to *Private*.
 . Select *Save*.
 . In Exchange, refresh the browser screen.
 +
-In the asset's *Overview* the *Visibility* setting is now *Private*.
+In the asset's *Overview*, the *Visibility* setting is now *Private*.
 
 == See Also
 
