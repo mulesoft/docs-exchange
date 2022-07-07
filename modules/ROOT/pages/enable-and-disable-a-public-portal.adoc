@@ -14,7 +14,7 @@ curl "https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DO
 
 == Enable a Public Portal
 
-All assets that are shared in the public portal do not require authorization to view the details of an asset or download the specifications.
+You do not need authorization to view the details or download the specifications of assets shared in the public portal.
 
 To start using your organization's public portal and sharing assets publicly, you must enable the portal.
 
