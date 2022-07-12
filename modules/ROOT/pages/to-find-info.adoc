@@ -31,7 +31,7 @@ To select the ranking of search results in the new Exchange search experience, u
 
 In the original Exchange search experience, searches apply only to the Exchange organization you are viewing. If you are viewing a private Exchange organization, the search lists only that organization’s assets and not MuleSoft public assets.
 
-In the new Exchange search experience, you can select which of the organizations visible to you to include in each search. 
+In the new Exchange search experience, you can select which of the organizations are visible to you to include in each search. 
 
 
 == Save a Search
