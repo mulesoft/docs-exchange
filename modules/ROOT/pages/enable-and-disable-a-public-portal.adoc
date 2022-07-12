@@ -4,17 +4,15 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-All public portals in Exchange created after July 2022 are disabled by default. You cannot sign in to view assets or share new assets on your public portal unless you enable them. You must be an Exchange administrator to enable or disable a public portal.
+All public portals in Exchange are enabled by default. You can sign in to your portal, view assets, and share new assets. Enabled portals do not require authorization to view asset details or download a specification. If you do not want the portal to be publicly shared, you can manually disable it. You must be an Exchange administrator to enable or disable a public portal.
 
-To determine if your public portal is enabled or disabled, use the following request:
+To determine whether your public portal is enable or disable, use the following request:
 
 ----
 curl "https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/status"
 ----
 
 == Enable a Public Portal
-
-You do not need authorization to view the details or download the specifications of assets shared in the public portal.
 
 To start using your organization's public portal and sharing assets publicly, you must enable the portal.
 
