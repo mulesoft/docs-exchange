@@ -42,6 +42,8 @@ $ api-catalog autocomplete bash
 $ api-catalog autocomplete zsh
 $ api-catalog autocomplete --refresh-cache
 ----
+[WARNING]
+The API Catalog CLI autocomplete plugin is not currently supported in Windows.
 
 // end::autocomplete-command[]
 
