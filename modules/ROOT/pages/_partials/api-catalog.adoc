@@ -247,7 +247,7 @@ or
 
 ANYPOINT_ENV environment variable
 
-| The ID of the Anypoint Platform environment where the APIs are cataloged  
+| The name of the Anypoint Platform environment where the APIs are cataloged  
  
 |   --host=host
 
