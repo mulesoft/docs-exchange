@@ -70,5 +70,31 @@ From the asset details page in Exchange, manage the implementation versions of a
 .. To delete a version, select *Delete version*. 
 . Click *Close*.
 
+=== Placeholder
+
+Placeholder intro.
+
+To update policy implementations to be compatible with your Flex Gateway version:
+
+. In Exchange, go to the *Policies* page.
+. Under *Applied policy status*, select the policy that needs updating. 
+. Click the *placeholder menu icon name* and click *Check for implementation updates* .
+. You'll see a list of all  available implementations for your current version. If there are no policy implementations available, a warning message is shown. See placeholder for more info.
+. Click *Update all*.
++ 
+The policy  displays under *API-level policies*. The error message disappears. 
+
+For automated policies: 
+
+. Go to the *Automated Policies* page.
+. Under *Applied automatic policy status*, select the policy that needs updating.
+. Click the *placeholder menu icon name*. 
++
+You can click *See covered APIs* if you want to see and delete API instances that have no implementations available.
++
+ If your API has no implementations, the system will suggest removing them to correct them. Click *Remove the automated policy*. If your APIs have implementations (?), click *Check for updates*.
++
+Click *Check for implementation updates*. same instructions as arriba.
+. 
 
 
