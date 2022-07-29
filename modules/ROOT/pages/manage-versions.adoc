@@ -76,11 +76,13 @@ To update policy implementations to be compatible with your Flex Gateway version
 
 . Go to the *Policies* page.
 . Under *Applied policy status*, you'll see the policies that need updating. Click the more options menu icon and click *Check for implementation updates*.
-. A list of all available implementations for your current version shows. +
+. The newest policy implementation compatible with your current version shows. +
 An error message will show if you have no policy implementations compatible with your current Flex Gateway version. See https://docs.mulesoft.com/exchange/add-policy-implementation-files-to-published-policy-definition[Add Policy Implementation Files to Published Policy Definition] for more info.
 . In the confirmation dialog box, click *Update all*.
 + 
 The policy displays under *API-level policies*. 
+
+WARNING: This action cannot be undone.
 
 For automated policies: 
 
@@ -93,4 +95,5 @@ For automated policies:
 ** In the confirmation dialog box, click *Update all*.
 ** The policy displays under *Automated policies*.
 
+WARNING: This action cannot be undone.
 
