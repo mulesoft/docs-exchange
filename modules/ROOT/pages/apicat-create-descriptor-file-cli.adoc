@@ -67,11 +67,11 @@ The presence and content of the designated descriptor file affects the result of
 
 * Existing file with content: The command fails and shows an error message that says the descriptor file already exists.
 
-=== Add Images through a Descriptor File
+=== Link Documentation Pages and Images through a Descriptor File
 
-You can add images to your APIs by adding a markdown file in the descriptor with a link to an image (.png, .jpg). You can visualize the image in the documentation page created for the Exchange Asset.
+You can add documentation pages and images to your APIs by adding a markdown file in the descriptor. You can visualize the image in the documentation page created for the Exchange Asset.
 
-Example output that is written to the descriptor file:
+Example descriptor file:
 
 ----
 #%Catalog Descriptor 1.0
@@ -84,7 +84,7 @@ projects:
     apiVersion: v4
     version: 4.0.0
 ----
-With the `summary.md` file containing an image and a documentation markdown file:
+With the `summary.md` file containing a link to an image (.png, .jpg) and a documentation markdown file:
 ----
 This is a caching service that can be used to retrieve picklist values from publishers who wish to provide a caching service for their picklist fields.
 
@@ -95,7 +95,7 @@ This is a caching service that can be used to retrieve picklist values from publ
 
 The presence and content of the designated descriptor file affect the result of the command as follows:
 
-* No documentation entry in the descriptor catalog pointing to the readme file: the link to move between pages in the Asset's portal doesn't work.
+* No documentation entry in the descriptor catalog: the link to move between pages in the Asset's portal doesn't work.
 
 == Update a Descriptor File
 
