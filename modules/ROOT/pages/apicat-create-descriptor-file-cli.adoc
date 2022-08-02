@@ -95,7 +95,7 @@ This is a caching service that can be used to retrieve picklist values from publ
 
 The presence and content of the designated descriptor file affect the result of the command as follows:
 
-* No documentation entry in the descriptor catalog: the link to move between pages in the Asset's portal doesn't work.
+* No documentation entry for the referenced file in the descriptor catalog: the link to move between pages in the Asset's portal doesn't work.
 
 == Update a Descriptor File
 
