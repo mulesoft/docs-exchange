@@ -84,7 +84,7 @@ projects:
     apiVersion: v4
     version: 4.0.0
 ----
-With the `Summary.md` file containing a link to an image (.png, .jpg) and a documentation markdown file:
+With the `Summary.md` file containing a link to an image (.png, .jpg) and a documentation Markdown file:
 ----
 This is a caching service that can be used to retrieve picklist values from publishers who wish to provide a caching service for their picklist fields.
 
