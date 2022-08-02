@@ -69,7 +69,7 @@ The presence and content of the designated descriptor file affects the result of
 
 === Link Documentation Pages and Images through a Descriptor File
 
-You can add documentation pages and images to your APIs by adding a markdown file in the descriptor. You can visualize the image in the documentation page created for the Exchange Asset.
+You can add documentation pages and images to your APIs by adding a Markdown file in the descriptor. You can visualize the image in the documentation page created for the Exchange Asset.
 
 Example descriptor file:
 
@@ -84,7 +84,7 @@ projects:
     apiVersion: v4
     version: 4.0.0
 ----
-With the `summary.md` file containing a link to an image (.png, .jpg) and a documentation markdown file:
+With the `Summary.md` file containing a link to an image (.png, .jpg) and a documentation markdown file:
 ----
 This is a caching service that can be used to retrieve picklist values from publishers who wish to provide a caching service for their picklist fields.
 
@@ -95,7 +95,7 @@ This is a caching service that can be used to retrieve picklist values from publ
 
 The presence and content of the designated descriptor file affect the result of the command as follows:
 
-* No documentation entry for the referenced file in the descriptor catalog: the link to move between pages in the Asset's portal doesn't work.
+* No documentation entry for the referenced file in the descriptor catalog: the link to move between pages in the asset portal doesn't work.
 
 == Update a Descriptor File
 
