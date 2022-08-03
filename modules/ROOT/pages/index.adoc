@@ -24,7 +24,7 @@ You can get started either by searching for an existing asset or creating a new 
 . Select an asset from the search results view.
 . Review the description of the asset.
 
-To create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets, log into Exchange. See xref:workflow-sharing-assets.adoc[Workflow: Publish APIs], for more information.
+To create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets, log into Exchange. See xref:workflow-sharing-assets.adoc[Workflow: Publish APIs] for more information.
 
 == Test APIs
 
