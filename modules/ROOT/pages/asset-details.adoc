@@ -74,7 +74,7 @@ image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
 This is similar to using a program such as Postman to specify custom HTTP headers and test each API's method using the API's endpoint.
 . To connect the API to one of your applications and use the API to send and receive data, click *Request access*.
 
-== View Conformance Status Details
+== View Conformance Status 
 
 You can view conformance status for APIs that are validated by API Governance. If an API is validated:
  
