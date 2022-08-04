@@ -85,7 +85,7 @@ You can view conformance status for APIs that are validated by API Governance. I
 To view conformance status:
 
 . Select an API with governance rulesets.
-. Review the conformance badge beside the lifecycle state badge.
+. Review the conformance badge.
 . To view conformance by version, click *Manage Versions*.
 . Review the *Conformance* column, which shows the governance conformance status for each validated version.
 +
