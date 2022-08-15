@@ -105,9 +105,9 @@ To view conformance status:
 ** *Fix Using Design Center*
 + 
 After your API definition is opened in Design Center, add the listed rulesets as dependencies and view the conformance messages in the *Project Errors* section to fix and republish your API definition.
-** *Fix Using Anypoint CLI*
+** *Instructions for Anypoint CLI*
 +
-Follow the prompts on the page to copy, update, and run the Anypoint CLI commands to dd the listed rulesets as dependencies and fix and republish your API definition.
+Follow the instructions on the page to copy, update, and run the Anypoint CLI commands to dd the listed rulesets as dependencies and fix and republish your API definition.
 
 
 == Test an API with API Notebook
