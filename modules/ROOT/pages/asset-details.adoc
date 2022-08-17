@@ -101,7 +101,7 @@ To view conformance status:
 * View the lists of centralized governance rulesets and additional rulesets against which the API has been validated.
 ** If there are more rulesets than are shown on the initial page, click the *Show All* link to show the full list.
 ** Click the external link icon beside a ruleset to view that ruleset asset's page. 
-* For nonconformant APIs, click *Fix the API Definition* and then select from one of the following:
+* For nonconformant APIs, click *Fix API Definition* and then select from one of the following:
 ** *Fix in Design Center*
 + 
 After your API definition is opened in Design Center, add the listed rulesets as dependencies and view the conformance messages in the *Project Errors* section to fix and republish your API definition.
