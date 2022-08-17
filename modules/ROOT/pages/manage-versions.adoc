@@ -64,11 +64,36 @@ If an asset in the development state depends on one or more other assets in the 
 From the asset details page in Exchange, manage the implementation versions of a policy asset from the *Manage implementations* table, which displays the latest version. You can view, add, and delete versions: 
 
 . Click *Implementations* from the left navigation bar.
-. To manage the versions of an implementation, click the three vertical dots and select an option:
+. To manage the versions of an implementation, click the more options menu and select an option:
 .. To view the versions, select *Implementation versions*.
 .. To add a new version, select *Add new version* and enter the version.
 .. To delete a version, select *Delete version*. 
 . Click *Close*.
 
+== Update Policy Implementations
 
+To update policy implementations to be compatible with your Flex Gateway version:
+
+. Go to the *Policies* page.
+. Under *Applied policy status*, you'll see the policies that need updating. Click the more options menu icon and click *Check for implementation updates*.
+. The newest policy implementation compatible with your current version shows. +
+An error message will show if you have no policy implementations compatible with your current Flex Gateway version. See https://docs.mulesoft.com/exchange/add-policy-implementation-files-to-published-policy-definition[Add Policy Implementation Files to Published Policy Definition] for more info.
+. In the confirmation dialog box, click *Update all*.
++ 
+The policy displays under *API-level policies*. 
+
+WARNING: This action cannot be undone.
+
+For automated policies: 
+
+. Go to the *Automated Policies* page.
+. Under *Applied automated policy status*, you'll see the policies that need updating. Click the more options menu icon and click *See covered APIs* to get a list of the APIs using the incompatible policy. 
+* If you want to remove the policy from the APIs, click *Remove the automated Policy*.
+** The automated policy is removed from the APIs.
+* If you want to update the policy implementation to a compatible version, click *Check for updates*.
+** A list of all available policy implementations for your current version shows.
+** In the confirmation dialog box, click *Update all*.
+** The policy displays under *Automated policies*.
+
+WARNING: This action cannot be undone.
 

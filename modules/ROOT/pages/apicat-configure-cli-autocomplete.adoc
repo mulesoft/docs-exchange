@@ -17,7 +17,7 @@ NOTE: If your terminal starts as a login shell you may need to print the init sc
 
 2) Test it out, e.g.:
 $ api-catalog <TAB><TAB>                 # Command completion
-$ api-catalog command --<TAB><TAB>       # Flag completion
+$ api-catalog [command] --<TAB><TAB>       # Flag completion
 ----
 
 * If you are using a Z shell:
@@ -32,7 +32,7 @@ NOTE: After sourcing, you can run `$ compaudit -D` to ensure that no permissions
 
 2) Test it out, e.g.:
 $ api-catalog <TAB>                 # Command completion
-$ api-catalog command --<TAB>       # Flag completion
+$ api-catalog [command] --<TAB>       # Flag completion
 ----
 
 // autocomplete command start
