@@ -78,7 +78,7 @@ This is similar to using a program such as Postman to specify custom HTTP header
 
 // Include the conformance status page partial doc
 
-include::exchange::partial$task-view-conformance-status.adoc[]
+include::partial$task-view-conformance-status.adoc[]
 
 
 == Test an API with API Notebook
