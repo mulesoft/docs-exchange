@@ -1,11 +1,13 @@
 // Used in docs-exchange/asset-details.adoc and docs-api-governance-documentation/view-conformance-status-in-exchange.adoc
 
 You can view governance conformance status in Exchange for versions of API definitions. The status is one of the following:
-* *Conformant*: The API definition is conformant to governance rulesets against which it has been validated.
 
+* *Conformant*: The API definition is conformant to governance rulesets against which it has been validated.
 * *Not Conformant*: The API definition is not conformant to governance rulesets against which it has been validated.
 * *Not Validated*: The API definition is not validated against governance rulesets.
+
 Conformance status can be viewed in Exchange as follows:
+
 * A conformance badge is displayed for a selected version of an API.
 * In the *Manage Versions* page, a *Conformance* column shows conformance status for each version of the API. 
 * A *Conformance Status* page appears for all REST APIs and AsyncAPIs. If a selected version of an API has been validated against governance rulesets, the conformance status page gives conformance information and gives options to fix nonconformant versions.
@@ -32,4 +34,4 @@ From the conformance status page, you can:
 After your API definition opens in Design Center, add the listed rulesets as dependencies and view the conformance messages in the *Project Errors* section to fix and republish your API definition.
 ** *See instructions for Anypoint CLI*
 +
-Follow the prompts on the page to copy, update, and run the Anypoint CLI commands to add the listed rulesets as dependencies and fix and republish your API definition.
+Follow the instructions on the page to copy, update, and run the Anypoint CLI commands to add the listed rulesets as dependencies and fix and republish your API definition.
