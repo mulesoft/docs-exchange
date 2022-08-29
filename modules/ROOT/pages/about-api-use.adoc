@@ -14,4 +14,4 @@ Exchange helps API consumers understand API functionality and test features with
 
 == See Also
 
-* xref:to-describe-an-asset.adoc[Describe an Asset] - Describes how to view and experiment with REST API functionality directly in Exchange.
+* xref:ex2-to-simulate-api-data.adoc[Simulate Data in REST APIs] - Describes how to view and experiment with REST API functionality directly in Exchange.
