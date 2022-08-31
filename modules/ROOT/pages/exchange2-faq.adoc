@@ -84,7 +84,7 @@ You can use this REST API command:
 ----
 curl -X POST \
 https://anypoint.mulesoft.com/apiplatform/repository/v2/organizations/<org-id>/apis/<api-id>/permissions \
--H 'authorization: Bearer <OMMITED>' \
+-H 'authorization: Bearer <OMITTED>' \
 -H 'content-type: application/json' \
 -d '{"userId":"<user-id>"}'
 ----
