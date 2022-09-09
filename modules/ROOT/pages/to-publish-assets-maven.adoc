@@ -114,11 +114,13 @@ The `name` property is required and represents the visible name of the asset. If
 +
 The `description` property is optional and represents the description of the asset. If you are publishing the first version of a GA (GroupId and AssetId combination), the asset description is taken from the POM file. If there is already at least one version of the GA, the `description` property is ignored. You can change the description in the asset portal as described in xref:to-describe-an-asset.adoc[Describe an Asset].
 +
-Deploy Mule 3 applications by setting the property `<type>` to `app`. The asset is not displayed in the Exchange asset list.
+Deploy Mule 3 applications by setting the property `<type>` to `app` and setting `<classifier>` as `mule-application` in the `mule-maven-plugin` configuration if the `mule-maven-plugin` is used.
 +
 Deploy Mule 3 `templates` and `examples` by using Anypoint Studio 6.3 or later.
 +
-For Mule 4 assets, do not specify the `<type>` element. In the `mule-maven-plugin` configuration, set `<classifier>` as `mule-application` (default), `mule-application-template`, `mule-application-example`, or `mule-policy`.
+For Mule 4 applications, do not specify the `<type>` element. In the `mule-maven-plugin` configuration, set `<classifier>` as `mule-application` (default), `mule-application-template`, `mule-application-example`, or `mule-policy`.
++
+Mule 3 and Mule 4 applications are not displayed in the Exchange asset list.
 +
 . Add the Maven facade as a repository in the distribution management section of your project's POM file:
 +
