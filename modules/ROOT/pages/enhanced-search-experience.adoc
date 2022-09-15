@@ -23,7 +23,7 @@ Use filters to refine your search results. You can filter using the following op
  * Tag
  * Lifecycle state
 
-To filter search results use the search drop-down menus on the Exca page.
+To filter search results use the search drop-down menus on the landing page.
 
 == Sort
 
