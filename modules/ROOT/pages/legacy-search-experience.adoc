@@ -8,6 +8,10 @@ The legacy search experience is also known as the original search. This search e
 
 Discover assets by searching for specific assets from the landing page of the Exchange catalog. 
 
+== Search by keyword 
+
+Use the search field to search by keyword for example, a name of an API.
+
 == Filter
 
 You can filter search results by asset types for example, API groups, REST APIs, and rulesets by selecting an option from the *All types* dropdown menu. The options that appear depend on which types are available within an organization.
