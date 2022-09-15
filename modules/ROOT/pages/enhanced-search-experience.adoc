@@ -19,7 +19,7 @@ Use filters to refine your search results. You can filter using the following op
 
  * Type
  * Organization
- * Catergory
+ * Category
  * Tag
  * Lifecycle state
 
