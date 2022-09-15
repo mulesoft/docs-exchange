@@ -1,4 +1,4 @@
-= Searching for Assets Using the Legacy Search Experience
+= Legacy Search Experience
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
