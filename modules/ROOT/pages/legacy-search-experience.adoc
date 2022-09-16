@@ -10,7 +10,7 @@ Discover assets by searching for specific assets from the landing page of the Ex
 
 == Search by keyword 
 
-Use the search field to search by keyword for example, a name of an API.
+Use the search field to search by keyword for example, enter a name of an API.
 
 == Filter
 
@@ -22,6 +22,8 @@ You can filter search results by asset types for example, API groups, REST APIs,
 You can search only to the Exchange organization that you are currently viewing. If you are viewing a private Exchange organization, the search lists only that organization’s assets and not MuleSoft public assets.
 
 == Save a Search
+
+Search criteria that is used often can be saved for quick discovery of assets.
 
 . Enter a search term and click *Save This Search*.
 . When prompted, give the search a name and select whether the search is an organization search or personal search.
