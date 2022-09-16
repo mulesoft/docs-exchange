@@ -23,7 +23,7 @@ You can search only to the Exchange organization that you are currently viewing.
 
 == Save a Search
 
-Search criteria that is used often can be saved for quick discovery of assets.
+Search criteria that is used often can be saved for quick discovery of specific assets.
 
 . Enter a search term and click *Save This Search*.
 . When prompted, give the search a name and select whether the search is an organization search or personal search.
