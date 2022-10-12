@@ -1,0 +1,57 @@
+= Using the Metrics Dashboard
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Exchange provides usage metrics to gain insight about the consumption of assets. An Exchange Marketplace administrator who manages an organization's catalog of assets, wants to understand the reuse of assets in each business group's catalog. Understanding the reuse metrics can help promote and identify best practices in the organization. Application developers who manage assets in Exchange can evaluate and understand how assets are being reused to make informed decisions about updates, documentation, and deletion of versions of assets.
+
+The Metrics dashboard displays the top assets for a specific time range or for an specific asset and hover-over for more details. 
+
+
+
+//screen capture with callouts of the dashboard and components
+
+
+
+== View Metrics Dashboard
+
+Exchange administrators can view the dashboard by selecting *Metrics dashboard* from the left navigation bar on the Exchange landing page.
+
+image::exchange-nav-bar-analytics.png[Analytics located in navigation bar]
+
+The dashboard displays the top assets for a period of 7 days, 30 days, or 60 days.
+
+The dashboard displays the metrics for all assets in a business group or for an individual asset. The asset metrics can be filtered by asset type and by one or more organizations.
+
+
+The dashboard displays the top assets that are ranked by the assets with the most number of consumption events for RAML fragments and REST APIs. The top assets can be further filtered by type, for example Rest APIs, connectors, or policies.
+
+== Sort by Period of Time
+
+Assets metrics can be sorted the metrics by the last 7 days, 30 days, or 60 days.
+
+To sort by a specific period, select a time from the *Top Assets in This Period* menu.
+
+== Filter Metrics
+
+Metrics can be filtered by REST APIs and fragments (RAML) asset types and by organization.
+
+Follow these steps:
+
+. To filter by an asset type, select an option from *Asset Type*.
+. To filter by an organization, select an option from the *Organization* menu or enter the name of the organization in the Search field. You can select multiple organizations.
+. Click *Apply*.
+
+== View All Time Statistics
+
+
+== Export Metrics
+
+You can export metrics into a CSV file. The CSV file
+
+
+
+== View Metrics for a Specific Asset
+
+In the asset details page of

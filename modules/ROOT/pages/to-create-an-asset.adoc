@@ -118,18 +118,7 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
-== Create a Ruleset Asset
-Rulesets are a group of rules or guidelines that define an application, for example best practices or industry-specific standards. Add a zip file with multiple YAML files that describe the new ruleset.
 
-. In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
-. From the drop-down list, select the asset type *Ruleset* .
-. To select the file to upload, click *Choose the file* .
-. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
-+
-Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
-. Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
 
 == Create Custom Policy Definition Asset 
 Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, and service level agreement (SLA). You can create a policy definition based on your specific business requirements. Develop custom policy definitions and apply them to APIs to extend existing functionality or define new ones.
@@ -153,6 +142,34 @@ The policy must be in the Stable state to upload the implementation file in a la
 *Pending* status appears next to *Implementations* in the left navigation bar.
 
 To implement the policy so that it is available at runtime, follow the steps in xref:add-policy-implementation-files-to-published-policy-definition.adoc[Add Policy Implementation Files to Published Policy Definition].
+
+== Create a GraphQL API
+A GraphQL API an specification of a service that defines a schema, which is the collection of object definitions. These objects are used when interacting with the API, either as input data or part of the API responses. The GraphQL API allows you to query the API instead of accessing operation that returns a fixed definition of data.
+
+To create a GraphQL API:
+
+. In Exchange, select *Publish new asset*.
+. Enter the asset portal name.
+. From the drop-down list, select the asset type *GraphQL API* .
+. To select the file to upload, click *Choose the file* .
+. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
+
+== Create a Ruleset Asset
+Rulesets are a group of rules or guidelines that define an application, for example best practices or industry-specific standards. Add a zip file with multiple YAML files that describe the new ruleset.
+
+. In Exchange, select *Publish new asset*.
+. Enter the asset portal name.
+. From the drop-down list, select the asset type *Ruleset* .
+. To select the file to upload, click *Choose the file* .
+. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
 
 == Asset Name, Icon, and Description Properties
 

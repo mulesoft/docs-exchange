@@ -6,23 +6,56 @@ endif::[]
 
 The following asset types are supported in Exchange:
 
-* Connectors: Packaged connectivity to an Anypoint Platform endpoint using third-party APIs and standard integration protocols
+* API Groups
 +
-Use connectors within your application's flows to send and receive data using a protocol or specific API. Anypoint Studio comes with many bundled connectors, and Exchange has many more.
-* Templates: Packaged integration patterns built on best practices to address common use cases
+A set of APIs bundled into a single asset.
+* API Spec Fragments
 +
-Complete the template's use case or solution by supplying your own information, customizing or extending the templates as needed.
-* Examples: Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution
-* Policies: Configuration modules to extend the functionality of an API and enforce capabilities such as security
-* Ruleset: YAML files that describe a ruleset
-* REST APIs: RAML or OAS files that specify APIs referenced by an HTTP Request connector to expose metadata to Anypoint Studio
-* AsyncAPI specifications: An AsyncAPI specification file that specifies an event-driven API
-* SOAP APIs: A WSDL file that specifies an API
-* HTTP APIs: A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager
-* API Groups: A set of APIs bundled into a single asset
-+
-Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
-* API Spec Fragments: A RAML document that has a version and an identifier but is not in itself a complete RAML specification
+A RAML document that has a version and an identifier but is not in itself a complete RAML specification.
 +
 API spec fragments are also known as _RAML fragments_.
-* Custom: A description and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation
+* AsyncAPI Specifications
++
+An AsyncAPI specification file that specifies an event-driven API
+* Connectors
++
+Packaged connectivity to an Anypoint Platform endpoint using third-party APIs and standard integration protocols.
++
+Use connectors within your application's flows to send and receive data using a protocol or specific API. Anypoint Studio comes with many bundled connectors, and Exchange has many more.
+
+* Custom
++
+A description and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation.
+* Examples
++
+Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
+* GraphQL API 
++
+An specification or description of a service like RAML and OAS. It defines a schema, which is the collection of object definitions. These objects are used when interacting with the API, either as input data or part of the API responses. GraphQL enables you to query the API instead of accessing operation that returns a fixed definition of data. 
+* HTTP APIs
++
+A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
+
++
+Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
+* Policies
++
+Configuration modules to extend the functionality of an API and enforce capabilities such as security.
+* REST APIs
++
+RAML or OAS files that specify APIs referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
+* Ruleset
++
+YAML files that describe a ruleset.
+
+
+* SOAP APIs
++
+A WSDL file that specifies an API.
+* Templates
++
+Packaged integration patterns built on best practices to address common use cases.
++
+Complete the template's use case or solution by supplying your own information, customizing or extending the templates as needed.
+
+
