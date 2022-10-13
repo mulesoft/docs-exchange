@@ -146,11 +146,17 @@ To implement the policy so that it is available at runtime, follow the steps in 
 == Create a GraphQL API
 A GraphQL API an specification of a service that defines a schema, which is the collection of object definitions. These objects are used when interacting with the API, either as input data or part of the API responses. The GraphQL API allows you to query the API instead of accessing operation that returns a fixed definition of data.
 
+There are two types of schemas that you can upload:
+
+* GraphQL API schema
+* GraphQL Apollo API schema 
+
 To create a GraphQL API:
 
 . In Exchange, select *Publish new asset*.
 . Enter the asset portal name.
 . From the drop-down list, select the asset type *GraphQL API* .
+. Select which GraphQL API schema to upload.
 . To select the file to upload, click *Choose the file* .
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
