@@ -439,4 +439,4 @@ image::rest-connect-auth-callback-url.png[]
 . When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+` - my-app.cloudhub.io should be replaced with the one you get with `Copy link`.
 
 == Known limitations
-  - Anypoint platform, including Rest Connect, does not support API fragments for OAS.
+  - Anypoint platform, including REST Connect, does not support API fragments for OAS.
