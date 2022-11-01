@@ -58,7 +58,7 @@ You can use RAML data types, but not a JSON referenced by another JSON schema.
 
 Exchange only works in Windows with the latest versions of Chrome, Firefox, and Internet Explorer 11. IE 9 is not supported and displays Exchange incorrectly.
 
-== When I push a custom connector through Maven to Exchange, how can i define a custom icon?
+== When I push a custom connector through Maven to Exchange, how can I define a custom icon?
 
 You can upload an SVG icon with the icon classifier using a PUT to the Exchange REST API. Exchange adds the round border around the icon. You need to pass the authorization header with a bearer and access token.
 
@@ -84,7 +84,7 @@ You can use this REST API command:
 ----
 curl -X POST \
 https://anypoint.mulesoft.com/apiplatform/repository/v2/organizations/<org-id>/apis/<api-id>/permissions \
--H 'authorization: Bearer <OMMITED>' \
+-H 'authorization: Bearer <OMITTED>' \
 -H 'content-type: application/json' \
 -d '{"userId":"<user-id>"}'
 ----

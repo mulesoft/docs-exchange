@@ -17,9 +17,6 @@ Save and maintain searches for assets within a business group.
 * xref:to-enable-the-request-access-button.adoc[Use API Manager to add the Request Access button]
 +
 Specify which API assets can be shared with users.
-* xref:to-deprecate-asset.adoc[Deprecate an asset]
-+
-Remove access to a version of an asset but keep other versions of the asset available to users.
 * xref:to-set-permissions.adoc[Set User Access Permissions]
 +
 Grant the Exchange Administrator, Contributor, or Viewer permissions to members of your organization, and optionally provide access for individual assets.

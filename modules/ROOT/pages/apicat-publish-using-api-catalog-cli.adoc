@@ -1,0 +1,210 @@
+= Publishing Assets Using API Catalog CLI
+
+You can use the `api-catalog publish-asset` command to publish your API definitions to Exchange. Embed this command in your automation tools, such as a CI/CD pipeline or custom scripts, to automatically trigger the cataloging of your API assets. The command publishes your API definitions using the information in the file specified in the `--descriptor-file` option.   
+
+//include::anypoint-cli::partial$api-catalog.adoc[tag=publish-asset-command,leveloffset=+1]
+
+include::partial$api-catalog.adoc[tag=publish-asset-command,leveloffset=+1]
+
+== Before You Begin
+
+Create a descriptor file that describes the API definitions to publish and copy the file to the file path where your API projects are stored. See xref:apicat-create-descriptor-file-cli#create-desc-file-cli[Create a Descriptor File Using the CLI].
+
+To publish an API definition using the CLI:
+
+* Run the `api-catalog publish-asset` command. The following example publishes API definitions described in the `catalog.yaml` file:
++
+----
+> api-catalog publish-asset -d catalog.yaml --host=anypoint.mulesoft.com --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --username=myAnyPtAccount --password=myPwd@4!myacct 
+----
+
+The following sections give example commands that show how several catalog flags are used:
+
+* <<default-settings>>
+
+* <<dry-run>>
+
+* <<force-publish>>
+
+* <<trigger-conditions>>
+
+* <<versionStrategyConditions>>
+
+* <<jenkins-script>> 
+
+[[default-settings]]
+== Publish an Asset with Default Settings
+
+The following example publishes the API to an organization in the US control plane for Anypoint Platform. Defaults, credentials configuration file settings, or environment variable settings are used for the unspecified flags. 
+
+----
+> api-catalog publish-asset --organization 1234abc-b34a-7cd3-4s32-12345abc2345 
+
+----
+
+[[dry-run]]
+== Perform a Dry Run to Validate the Descriptor File
+
+This example shows the `api-catalog publish-asset` command with the following flags:
+
+* --dry-run: Runs the command to verify that the descriptor file is valid but does not publish the APIs.
+* --verbose: Shows the maximum information in the results.
+
+The example command sends the standard output to `mycatdryrun.log`. 
+
+----
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d catalog.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1787c36ab544466698e380131040faad --client-secret=2dA616efca1E4181A2A77BBF046868BE --dry-run --verbose >> mycatdryrun.log
+
+----
+
+[[force-publish]]
+== Publish an Asset Regardless of the Content
+
+To publish a new version of the asset in Exchange regardless of the content, use the `--force-publish` flag. 
+
+This example shows the `api-catalog publish-asset` command with both of these flags. Defaults, credentials configuration file settings, or environment variable settings are used for the unspecified flags.
+
+----
+> api-catalog publish-asset --host=anypoint.mulesoft.com --descriptor-file=mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --force-publish 
+
+----
+
+[[trigger-conditions]]
+== Trigger the Publish Using Conditions 
+
+Custom trigger conditions enable you to control whether APIs are published when the API Catalog `publish-assets` runs as part of your CI/CD pipeline or scripts. This example shows how `--trigger-criteria` flags correlate with descriptor file trigger conditions to control whether or not to publish the described APIs. If a trigger condition is set at the API level, that setting overrides conditions set at the global level.  
+
+=== Example Trigger Conditions in a Descriptor file
+
+Following is an example `triggerConditions` section in the `mydescriptor.yaml` descriptor file at the global level:
+
+---
+ 
+ triggerConditions:
+  ref:
+   - main
+  tags:
+   - migrate
+   - republish
+  status:
+   - complete
+   - ready
+
+---
+
+=== Example That Triggers the Publish
+
+The following command triggers the API publish because the trigger option values match all of the global trigger conditions in the `mydescriptor.yaml` descriptor file. 
+
+----
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --username=myAnyPtAccount --password=myPwd@4!myacct --trigger-criteria=ref:main --trigger-criteria=tags:migrate --trigger-criteria=status:complete
+
+----
+
+=== Example That Does Not Trigger the Publish
+
+The following command does not trigger the API publish because the trigger option value for `ref` is `test`, not `main`. Because not all trigger values match the corresponding global trigger conditions, no APIs are published. 
+
+----
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --username=myAnyPtAccount --password=myPwd@4!myacct --trigger-criteria=ref:test --trigger-criteria=tags:migrate --trigger-criteria=status:complete
+
+----
+
+[[versionStrategyConditions]]
+== Set Version Strategy Using Conditions 
+
+Version strategy conditions enable you to set the version of assets when the API Catalog `publish-asset` command runs as part of your CI/CD pipeline or scripts. This example shows how `--version-strategy-criteria` flags correlate with descriptor file version strategy conditions to set the version strategy for the described APIs. If a version strategy condition is set at the API level, that setting overrides conditions set at the global level. If the value for a condition matches more than one version strategy, the command gives an error.
+
+=== Example Version Strategy Conditions in a Descriptor File
+
+Following is an example `versionStrategyConditions` section in the `mydescriptor.yaml` descriptor file.
+
+----
+ 
+versionStrategyConditions:
+patchIncrease:
+branch:
+ ‘main’
+author:
+ ‘admin’
+snapshot:
+branch:
+‘test’
+‘Develop’
+
+----
+
+=== Example That Sets the Version Strategy During the Publish
+
+The following command sets multiple version strategies during the publish because the option values match multiple conditions in the `mydescriptor.yaml` descriptor file. 
+
+----
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --username=myAnyPtAccount --password=myPwd@4!myacct --version-strategy-criteria=branch:main --version-strategy-criteria=author:admin --version-strategy-criteria=branch:test --version-strategy-criteria=branch:Develop
+----
+
+The resulting version strategies are:
+
+* Patch increase for APIs in the `main` branch with an author of `admin`. 
+* Snapshot for APIs in the `test` and `Develop` branches. 
+
+=== Example That Does Not Set the Version Strategy During the Publish
+
+The following command does not set the version strategy during the publish because none of the values match the corresponding conditions. The version strategy defaults to `patchIncrease` if no `versionStrategy` tags set other values in the descriptor file.
+
+----
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d mydescriptor.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 -u myAnyPtAccount -p myPwd@4!myacct ----version-strategy-criteria=branch:abc ----version-strategy-criteria=author:dev ----version-strategy-criteria=branch:xyz ----version-strategy-criteria=branch:pop
+----
+
+For more information on version strategies and version strategy conditions, see xref:apicat-create-descriptor-file-manually.adoc[Descriptor YAML Schema].
+
+[[jenkins-script]]
+== Publish Using a Jenkins Script 
+
+This example shows a Jenkins script that runs the `api-catalog publish-asset` command.
+
+[source,java]
+----
+pipeline {
+    agent any
+    environment {
+        ANYPOINT_ORG_ID = '1234abc-b34a-7cd3-4s32-12345abc2345'
+        CATALOG_DESCRIPTOR = './descriptor.yaml' <1>
+     }   
+     stages {
+        stage('git checkout') {
+            steps {
+                git url: 'git@github.com:mygitlocation/api-catalog-cli.git'
+                // additional checkout tasks
+            }
+        }
+        stage('Build Artifacts') {    
+            steps {
+                 // building
+            }
+        }
+        stage('API Cataloging') {    
+            steps {
+                 withCredentials([
+                    usernamePassword(credentialsId: 'my-anypoint-creds',
+                    usernameVariable: 'ANYPOINT_USERNAME',
+                    passwordVariable: 'ANYPOINT_PASSWORD')
+                ]) { 
+                    sh 'api-catalog-cli publish-asset -d $CATALOG_DESCRIPTOR --organization=$ANYPOINT_ORG_ID --host=anypoint.mulesoft.com/ --trigger-criteria=branch:main' <2>
+                }
+            }
+        }
+         stage('Deploy') {    
+            steps {
+                // Any deployment tasks to be performed, here.
+            }
+        }
+    }
+----
+<1> Defines the organization and descriptor file values
+<2> Runs the `api-catalog publish-asset` command to publish APIs found in the `main` Github branch
+
+== See Also
+
+* xref:apicat-use-api-catalog-cli.adoc[General Use of Commands and Flags]
+* xref:apicat-create-descriptor-file-cli.adoc[Creating or Updating Descriptor Files Using the CLI]
+* xref:apicat-create-descriptor-file-manually.adoc[Creating or Updating Descriptor Files Manually]

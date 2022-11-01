@@ -6,19 +6,18 @@ endif::[]
 
 The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 3 and Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
 
-The Anypoint Exchange Download button lets you download the Mule 3 or Mule 4 Connector. 
+The Anypoint Exchange Download button lets you download the Mule 3 or Mule 4 Connector.
 
 REST Connect does not currently support custom TLS configurations.
 
 == Access Generated Connectors
 
-In Exchange, you can download the Mule 3 or Mule 4 connector from the Download menu:
+In Exchange, you can download the Mule 3 or Mule 4 connector from the *Download* menu:
 
-image::ex-downloads.png[]
 
 NOTE: After deploying a REST asset to Exchange, refresh your screen to ensure that all download options are available.
 
-The Mule 3 connector downloads as a zip file, and the Mule 4 connector downloads as a JAR file. 
+The Mule 3 connector downloads as a zip file, and the Mule 4 connector downloads as a JAR file.
 
 == API Specification Format Support
 
@@ -228,6 +227,107 @@ uses:
 
 REST Connect generates metadata for each operation based on your schema definition in the request and response for each method in your RAML. REST Connect cannot generate metadata based on examples in the RAML.
 
+Because only one input/output type is supported for each operation, REST Connect selects the first one that was declared. You can change this behavior by using the 'default' property from the REST Connect library.
+
+Example with REST Connect library:
+
+[source,text,linenums]
+----
+#%RAML 1.0
+title: Sample API
+baseUri: https://jsonplaceholder.typicode.com
+version: 0.1
+mediaType: application/json
+
+uses:
+  rest-connect: exchange_modules/org.mule.connectivity/rest-connect-library/1.0.0/rest-connect-library.raml
+
+  ...
+  /{postId}:
+    uriParameters:
+      postId: integer
+
+    get:
+      displayName: Get a post by ID.
+      responses:
+        200:
+          body:
+            application/json:
+             type: string
+            application/xml:
+             (rest-connect.default): //this sets application/xml response by default
+             type: string
+----
+
+[[reserved-keywords]]
+== Reserved Keywords
+
+Valid identifiers for REST Connect must not match any of the reserved Java keywords or reserved Mule keywords.
+
+The following list shows the reserved Java keywords to avoid when naming valid identifiers for REST Connect:
+
+* `abstract`
+* `assert`
+* `boolean`
+* `break`
+* `byte`
+* `case`
+* `catch`
+* `char`
+* `class`
+* `const`
+* `continue`
+* `default`
+* `do`
+* `double`
+* `else`
+* `extends`
+* `false`
+* `final`
+* `finally`
+* `float`
+* `for`
+* `goto`
+* `if`
+* `implements`
+* `import`
+* `instanceof`
+* `int`
+* `interface`
+* `long`
+* `native`
+* `new`
+* `null`
+* `package`
+* `private`
+* `protected`
+* `public`
+* `return`
+* `short`
+* `static`
+* `strictfp`
+* `super`
+* `switch`
+* `synchronized`
+* `this`
+* `throw`
+* `throws`
+* `transient`
+* `true`
+* `try`
+* `void`
+* `volatile`
+* `while`
+
+The following list shows the reserved Mule keywords to avoid when naming valid identifiers for REST Connect:
+
+* `friendlyName`
+* `name`
+* `operationName`
+* `target`
+* `targetValue`
+
+
 == OAuth2 in Design Center for REST Connect
 
 . Define an API with OAuth2 - Authorization Code and one operation in Design Center. You can use the following GitHub API example:
@@ -337,3 +437,6 @@ image::rest-connect-auth-callback-url.png[]
 +
 . You are ready to retrieve an access token from GitHub. In this case, go to `+http://githubapp-smky.cloudhub.io/authorize+` in a browser, your case would be `+http://my-app.cloudhub.io/authorize+` - replace my-app.cloudhub.io with the one you get with Copy link. When you reach this URL, your browser asks you to log into GitHub.
 . When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+` - my-app.cloudhub.io should be replaced with the one you get with `Copy link`.
+
+== Known limitations
+  - Anypoint platform, including REST Connect, does not support API fragments for OAS.

@@ -22,25 +22,24 @@ applications.
 API providers can view, manage, and revoke these contracts by following the steps in
 xref:api-manager::manage-client-apps-latest-task.adoc[Managing API Instance Contracts on API Manager].
 
-A client application's owners have permission to request access for that client application.
-To request access for a client application created by another user, ask the client application owner
-to add your user account to the application owners list in Anypoint API Manager.
+Both API instance owners and the owners of a specific client application can request access to that client application. All other users must request access from either of these owners.
+For access to a client application created by another user, request that either the client application owner or the API instance owner grant access to you by adding your user account to the application owners list in Anypoint API Manager.
 
 If terms and conditions are set for an asset, you are prompted to accept the
 terms before access is granted, and the created contract includes the terms and
 conditions.
 
 . Click an API or API Group asset to view more details.
-. Click *Request Access*.
+. Click *Request access*.
 . Choose the instance from the list.
 . If you are using an existing application, choose from the list of applications.
 +
 An application and its instance use the same client provider. If an organization administrator has configured xref:api-manager::configure-multiple-credential-providers.adoc[multiple client providers] in Anypoint API Manager, then the application list shows only the applications that use the same client provider as the selected instance.
 . If you do not have an application to which to provide access, click *Select application > Create a new application*. 
 +
-See the section "Create a New Application" for more information.
+See the section "Create a new application" for more information.
 . Choose the service-level agreement (SLA) value for the application.
-. Click Request Access.
+. Click *Request access*.
 +
 The *Request API Access* menu opens to show that the access was automatically granted or submitted for review. This screen lists the client ID and client secret for this access instance.
 
@@ -81,5 +80,4 @@ A client application can access an API either through a contract with only that 
 
 == See Also
 
-* xref:api-manager::configure-multiple-credential-providers.adoc[Configuring Multiple Identity Providers for Client Management] in Anypoint API Manager documentation
 * https://www.google.com/search?q=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token&oq=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token[Search to compare grant types]

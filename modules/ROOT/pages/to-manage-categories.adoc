@@ -13,15 +13,15 @@ image::ex-categories-api-type.png[]
 
 To create a category, you must be either the root organization's Exchange Administrator or Organization Owner.
 
-When you have one or more categories defined in the *Settings* page, your organization's assets display the *Add Category* prompt.
+When you have one or more categories defined in the *Settings* page, your organization's assets display the *Add categories* option in the asset details pane.
 
 == Create a Category
 
 . In Anypoint Exchange, click *Login* and log in to your organization.
-. Click Settings in the left navigation area.
-. Click Add New Category.
-. Specify a category name. Each category name must be unique.
-. Specify one or more values. Each category must have a value.
+. Click *Settings* in the left navigation bar.
+. Click *Add new category*.
+. Enter a category name. Each category name must be unique.
+. Enter one or more values. Each category must have a value.
 . Press the Return/Enter key or click the plus sign next to the value to confirm the value:
 +
 image::ex-category-value.png[]
@@ -34,8 +34,10 @@ effect.
 
 == Apply a Category
 
+After a category is created, it can be applied to an asset in your organization.
+
 . Click an asset in your organization.
-. In Categories in the right side details menu, click Add Category and choose the category and value from the drop-down menu.
+. In the asset details pane, click *Add categories* and choose the category and value from the list.
 
 == Search with Categories in Exchange Private Cloud Edition or MuleSoft Government Cloud
 

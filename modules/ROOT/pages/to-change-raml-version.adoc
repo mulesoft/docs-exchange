@@ -24,36 +24,29 @@ NOTE: New asset versions count toward your organization's xref:to-create-an-asse
 
 == Deploy a New API Asset
 
-You can deploy an API asset directly into Exchange using the *New asset* button. In the *Publish a new asset* window, the Advanced section enables you to specify the version of the asset in the *Version* field, and the version of the API specification in the *API version* field.
+You can deploy an API asset directly into Exchange using the *Publish new asset* button. In the *Publish a new asset* window, the Advanced section enables you to specify the version of the asset in the *Version* field, and the version of the API specification in the *API version* field.
 
-image::ex-publish-a-new-asset.png[]
 
 Only change the API version when an updated API specification has changes that are not backward compatible from the new version to the old version.
 
 == Change RAML or OAS Version
 
-For RAML and OAS API specifications within Exchange, you can change the version number from within Exchange using the *Add new version* button in the Exchange user interface.
+For RAML and OAS API specifications within Exchange, change the version number from within Exchange using the *Add version* button. 
 
-image::ex-add-new-version.png[]
+. From the asset details pane, click *Add version*. 
+. (Required) Select a *Method* for the API specification.
+. (Required) From *File upload* click *Choose file*. For OAS, choose an OAS file with the .yaml or .json file types. For RAML, choose a RAML file with the .raml file type. Zip files are also accepted with the file to upload residing in the zip file’s root directory.
+. Specify the *Main file* if the uploaded file is a zip. Otherwise, Exchange uses the same file name as the file you upload. 
+. (Required) In *Version* , enter a new version for the asset.
+. (Required) In *the *API version*, enter the version of the API specification.
+The Version and API version values must agree. You can only choose minor version updates for a given API version. To set a major Version number, also increase the API version. If you choose minor or patch version updates, the API versions should not changed.
 
-This opens the *Publish a new asset* window (as shown in <<deploy-a-new-api-asset>>).
+. (Optional) Select a *Lifecycle state*. Default is *Stable*.
+. Click *Publish*
 
-These fields are required: *File upload*, *Main file*, and *Version*.
+You can also change the version using the *Manage versions* button. See xref:manage-versions.adoc[Manage Versions] for more information.
 
-[%header%autowidth.spread]
-|===
-|Field |Description
-|File upload |For OAS, choose an OAS file with the .yaml or .json file types.
-For RAML, choose a RAML file with the .raml file type. Zip files are also accepted with the 
-file to upload residing in the zip file's root directory.
-|Main file |Specify the main file if the uploaded file is a zip. Otherwise, Exchange uses the same file name as the file you upload.
-|Version |The new version number. The Version and API version values need to agree 
-in that you can only choose minor version updates for a given API version. To set a major
-Version number, also increase the API version. If you choose minor or patch version 
-updates, you should not change the API version.
-|===
-
-You can also change the version number for RAMLs as described in the next sections.
+Change the version number for RAMLs as described in the next sections.
 
 === Change a RAML Version from Its Specification
 
@@ -64,11 +57,8 @@ When you update the version element in the RAML specification and publish to Exc
 === Change a RAML Version When you Publish to Exchange
 
 . From Design Center, open your API. No changes are necessary.
-. Click the Publish to Exchange button.
-+
-image::apim-publish-api-spec.png[]
-+
-. Change the API Version value. You can also change the Asset Version (the version of the Exchange asset).
+. Click *Publish to Exchange*.
+. Change the *API Version* value. You can also change the Asset Version (the version of the Exchange asset).
 
 When a REST API based on a RAML file is created from Design Center and published to Exchange, the API version is retrieved from the version property in the RAML file.
 
@@ -106,20 +96,15 @@ However, these example values are not allowed in Exchange:
 [[best-practices-api-versioning]]
 == Best Practices for API Versioning
 
-An API should be designed for long term use, but because change is inevitable, the API 
-can never be completely stable. 
+An API should be designed for long term use, but because change is inevitable, the API can never be completely stable. 
 
-What is important is to manage the changes through a comprehensive versioning 
-strategy. This includes a multiple month deprecation schedule and documentation that 
-is up to date and describes the change in sufficient level of detail. 
+It is important is to manage the changes through a comprehensive versioning 
+strategy. This includes a multiple month deprecation schedule and documentation that is up to date and describes the change in sufficient level of detail. 
 
 Not all changes require a new version. APIs designed for backward compatibility
 normally do not require major changes and should use minor or patch changes.
 
-Nevertheless, it is not always possible to design APIs in 
-that way. The table below outlines when to introduce a new version and when a 
-new version is not required. Typically when one clicks *Add new API operation* 
-a minor version increase occurs.
+It is not always possible to design APIs in that way. The table below outlines when to introduce a new version and when a new version is not required. Typically when one clicks *Add new API operation* a minor version increase occurs.
 
 [%header,cols="20a,40a,40a"]
 |===
@@ -179,7 +164,7 @@ Include the API version in the application URL so that consumers can choose whic
 
 === Naming Conventions
 
-You can use these rules to define an API version:
+Use these rules to define an API version:
 
 * Specify the version with a "v" prefix.
 * Use a simple ordinal number, for example, "v1","v2", and so on.
@@ -191,6 +176,5 @@ You can use these rules to define an API version:
 Exchange provides documentation pages with information about an asset for API consumers. 
 You can create different documentation pages for each minor asset version.
 
-Select a minor asset version to edit with the menu next to the API name.
+Select a minor asset version to edit with the menu next to the version.
 
-image::ex-title-version-setting.png[The minor version selection menu]

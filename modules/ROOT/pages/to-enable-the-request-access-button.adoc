@@ -5,37 +5,33 @@ endif::[]
 :imagesdir: ../assets/images/
 
 Users specify what applications can have access to an API by clicking the
-*Request Access* button image:ex2-request-access.png[Button - Request Access].
+*Request access* button.
 
-Exchange Administrators see *Request Access* in the *More Options* menu image:ex2-more-options-icon.png[More Options icon].
+Exchange Administrators see *Request access* in the *More options* menu image:ex2-more-options-icon.png[More Options icon].
 
-Enabling the *Request Access* button requires the Exchange Administrator permission.
+Enabling the *Request access* button requires the Exchange Administrator permission.
 
-To show the *Request Access* button, create an API asset and then configure it:
+To show the *Request access* button, create an API asset and then configure it:
 
 . In API Manager, click *Manage API* > *Manage API from Exchange* to open the API.
 . Use the URL of your API asset in Exchange as the Implementation URI in API Manager.
 . After opening your API in API Manager, you can view the API Instance ID value as well as other useful information.
-. To return to Exchange, click *View API* in Exchange.
-. In Exchange, the *Request Access* button appears in the three dot menu.
+. In Exchange, the *Request access* button appears in the three dots menu.
 
 In API Manager, the API's Status is marked as unregistered. To register the API, deploy the API to Anypoint Runtime Manager. Changing the API Status to registered is not required to make the API usable in Exchange.
 
 == Request Access Display Criteria
 
-To display the *Request Access* button on an Exchange public portal:
+To display the *Request access* button on an Exchange public portal:
 
-* Publish a REST, SOAP, or HTTP API in Exchange.
+. Publish a REST, SOAP, or HTTP API in Exchange.
 +
 A REST API can be either an OAS or RAML API specification.
-* Create an instance of the API in API Manager.
-* Set the instance as public in *API Instances*.
-* If the instance's URL is not present, set the instance's URL in *API Instances*.
+. Create an instance of the API in API Manager.
+. Set the instance as public in *API instances*.
+. If the instance's URL is not present, set the instance's URL in *API instances*.
 
-If the instance is private, then the portal displays the *Request Access* button only to logged-in users.
+If the instance is private, then the portal displays the *Request access* button only to logged-in users.
 
-If the instance is public, then the portal displays the *Request Access* button to all users. If a logged-out user requests access, then Exchange prompts them to log in.
+If the instance is public, then the portal displays the *Request access* button to all users. If a logged-out user requests access, then Exchange prompts them to log in.
 
-== See Also
-
-* xref:to-request-access.adoc[Request Access].
