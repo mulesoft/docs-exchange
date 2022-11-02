@@ -31,7 +31,7 @@ A description and an optional file to explain aspects of your system, to provide
 Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
 * GraphQL API 
 +
-A specification or description of a service like RAML and OAS. It defines a schema, which is the collection of object definitions. These objects are used when interacting with the API, either as input data or part of the API responses. GraphQL enables you to query the API instead of accessing operation that returns a fixed definition of data. 
+A schema definition that contains the object and types definitions that are used to interact with the API through the GraphQL specification. GraphQL enables you to query an API that supports this language in a much more flexible way than REST.
 * HTTP APIs
 +
 A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
