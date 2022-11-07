@@ -105,7 +105,7 @@ The required page *Home* has the URL `pages/home`, and the optional page *Terms 
 
 For other new pages, Exchange sets a URL that contains a page ID of three alphanumeric characters, a hyphen, and three more alphanumeric characters, such as `pages/1a2-b3c/Formats`. Changing the page name from *Formats* to *Formatting* changes the URL to `pages/1a2-b3c/Formatting`, and the old URL automatically redirects to the new URL.
 
-Pages created before the September 2021 update have URLs with no page ID, such as `pages/Messages`. Changing the page name from *Messages* to *Messaging* changes the URL to the new format, such as `pages/de4-56f/Messaging`, and the old URL automatically redirects to the new URL.
+Pages created before the October 31, 2022 update have URLs with no page ID, such as `pages/Messages`. Changing the page name from *Messages* to *Messaging* changes the URL to the new format, such as `pages/de4-56f/Messaging`, and the old URL automatically redirects to the new URL.
 
 For backward compatibility with the Anypoint CLI, each page with a URL with the new format has an automatic redirect, from a URL with the old format, such as `pages/Pagename`, to the new URL, such as `pages/78g-h9i/Pagename`.
 
