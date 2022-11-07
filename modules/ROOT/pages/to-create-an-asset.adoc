@@ -25,14 +25,9 @@ For example: `exchange asset upload --classifier raml --apiVersion v1 --name Hel
 
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
-
 This illustration summarizes how some of the asset types (in green) appear in Exchange:
 
-
 image::ex2-exchange-assets.png[]
-
-
-
 
 == Create an API Asset
 
@@ -118,8 +113,6 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
-
-
 == Create Custom Policy Definition Asset 
 Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, and service level agreement (SLA). You can create a policy definition based on your specific business requirements. Develop custom policy definitions and apply them to APIs to extend existing functionality or define new ones.
 
@@ -196,7 +189,6 @@ When you create an asset in Exchange, you enter the name.
 The name cannot be changed when adding a new version in Exchange.
 
 The name, icon, and description properties can only be changed in the Exchange asset details page.
-
 
 == Create a New Version of an Existing Asset
 
