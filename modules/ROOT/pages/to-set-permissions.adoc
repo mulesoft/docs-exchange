@@ -15,6 +15,7 @@ The following permissions pertain to every business group level:
 Exchange Viewers:: Enables users to view and download assets within a business group. Users with this permission cannot add new assets, edit asset portal content, or share an asset with another user. Assign this permission to those who consume your assets in a specific business group.
 Exchange Contributors:: Enables users to view, create, and download assets within a business group. Users with this permission can edit asset portal content in an existing asset version. Use this permission to invite users to edit and maintain your asset portal descriptions.
 Exchange Administrators:: Enables users to view, create, and download assets within a business group. Users with this permission have all the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. Use this permission to set up Exchange administrators for all the assets within a specific business group.
+Exchange Creator:: Enables users to create new assets within a business group's catalog, but cannot modify assets or asset versions created by other users in the business group. Use this permission to restrict modification of assets other than assets created by this user while allowing all developers across all teams in a business group to create new assets in Exchange. 
 
 == Asset Permissions
 
@@ -34,6 +35,7 @@ Asset Administrators:: Enables users to view, create, download, deprecate, and d
 |Exchange Viewers |For all assets within a business group |View, Download
 |Exchange Contributors |For all assets within a business group |View, Download, Edit Portal
 |Exchange Administrators |For all assets within a business group |View, Download, Edit Portal, Delete, Share, Deprecate Asset Version, Manage API Instances
+|Exchange Creator|For only assets that this user creates within a business group|View, Download, Edit Asset, Share, Manage API Instances, and Delete
 |Asset Viewers |For a specific asset in any business group |View, Download
 |Asset Contributors |For a specific asset in any business group |View, Download, Edit Portal
 |Asset Administrators |For a specific asset in any business group |View, Download, Edit Portal, Delete, Share, Deprecate Asset Version, Manage API Instances
@@ -44,6 +46,7 @@ Asset Administrators:: Enables users to view, create, download, deprecate, and d
 also edit asset descriptions.
 * Exchange Administrators have visibility within a business group and can
 view, download, edit descriptions, deprecate, delete, and share assets.
+* Exchange Creators have visibility within a business group and can view, download, edit descriptions, deprecate, delete, and share only assets that they own.
 * Asset Viewers can view an asset in a business group and can view and download the asset.
 * Asset Contributors can view an asset in a business group and can view and download the asset. This permission can
 also edit the asset's content.
