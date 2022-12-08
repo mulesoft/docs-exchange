@@ -19,7 +19,7 @@ The Exchange Maven Facade API does not support dynamic parameters such as settin
 
 Dynamic parameters for fields other than `<name>` and `<description>` are not supported. If the uploaded asset has a defined parent, the parent must be a valid and already uploaded Exchange asset for the dynamic parameters to be properly interpreted.
 
-New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
+New assets count toward your organization's xref:asset-versions.adoc#asset-limits[asset limit].
 
 == Prerequisites
 
