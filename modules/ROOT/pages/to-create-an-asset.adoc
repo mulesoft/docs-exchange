@@ -137,12 +137,14 @@ The policy must be in the Stable state to upload the implementation file in a la
 To implement the policy so that it is available at runtime, follow the steps in xref:add-policy-implementation-files-to-published-policy-definition.adoc[Add Policy Implementation Files to Published Policy Definition].
 
 == Create a GraphQL API
-A GraphQL API is a specification of a service that defines a schema, which is the collection of object definitions. These objects are used when interacting with the API, either as input data or as part of the API responses. The GraphQL API allows you to query the API instead of accessing an operation that returns a fixed definition of data.
+A GraphQL API schema is a collection of operations and object types that are composed of fields. A GraphQL API allows a client to fetch only the object types and fields needed instead of fetching a fixed response like in a REST API.
 
 There are two types of schemas that you can upload:
 
 * GraphQL API schema
 * GraphQL Apollo API schema 
++
+A GraphQL API schema designed with Apollo GraphQL specific directives and structure, also known as the schema definition language (SDL).
 
 To create a GraphQL API:
 
