@@ -1,15 +1,20 @@
 // Used in docs-exchange/asset-details.adoc and docs-api-governance-documentation/view-conformance-status-in-exchange.adoc
 
-You can view the list of centrally-governed APIs to which a ruleset applies. Depending on the access you have to the ruleset and API assets in exchange, you may see only the APIs that are conformant to the ruleset or you may see APIs that are both conformant and nonconformant to the ruleset. 
+You can view the list of centrally-governed APIs to which a ruleset applies. Depending on the access you have to the ruleset and API assets in exchange, you may see only the APIs that are conformant to the ruleset or you may see APIs that are both conformant and not conformant to the ruleset. 
 
-* Ruleset developers can view the API list to determine which APIs are being governed by a specific ruleset you published, and whether they are conformant or non-conformant to the ruleset
+Developers can use the *Governed APIs* list to help them improve the quality of the rulesets and APIs they develop as follows: 
+
+* Ruleset developers can view the API list to determine which APIs are being governed by a specific ruleset they published, and whether the APIs are conformant to the ruleset. Depending on their access to the APIs, they may also be able to see which APIs are not conformant to the ruleset. 
 * API developers can view the API list to see which APIs are conformant and look at the way they are coded to get help writing their own APIs to be conformant to the ruleset
 
 To view the governed API list for a ruleset:
 
 . Select a ruleset asset that is used in an API Governance profile. 
-. Select *Governed APIs* in the navigation bar.
-From the *Governed APIs* page, you can:
+. Select *Governed APIs* in the navigation bar to see the following information for each API listed:
+
+* Versions of APIs governed by the ruleset in one or more API Governance profiles
+* Whether the API is governed by multiple centralized rulesets and by how many  
+* APIs that passed all of the rules in the ruleset and if you have sufficient access, those that failed
+* APIs that are conformant to all rulesets for which it is governed, and if you have sufficient access, those that are not conformant
 +
-* xxx
-* xxx
+. To open the API's details page, click the external link icon . 
