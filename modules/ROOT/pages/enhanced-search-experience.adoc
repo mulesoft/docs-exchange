@@ -42,8 +42,6 @@ You can select which of the organizations are visible to you to include in each 
 
 == Save a Search
 
-Save a search
-
 Find assets quickly by saving frequently used search queries for yourself or for your organization. Saved searches display in the navigation pane as 
 
 . Enter a search term or select options from a filter, then click *Save this Search*.
