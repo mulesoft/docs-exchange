@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
+The Exchange catalog of assets can display hundreds of assets that help developers discover assets to create projects quickly and drive adoption of best practices and reuse. You can find assets from Mulesoft's ecosystem or your own organization. Based on your permision group, you can search multiple business groups, documentation, tags, custom attributes, and details from API specifications. To help find assets, searches can be refined using search terms like a name of an API, by filters like organizations, categories, tags, and lifecycle states, or by ranking.
+
 Anypoint Exchange search looks for terms in:
 
 . Each asset’s name
@@ -13,13 +15,7 @@ Anypoint Exchange search looks for terms in:
 . The content of the asset portal pages
 . Properties defined in RAML and OAS API specifications
 
-
-
-
 image:exchange-new-search.png[Exchange enhanced search experience]
-
-The Exchange catalog of assets can display hundreds of assets that help developers discover assets to create projects quickly and drive adoption of best practices and reuse. You can find assets from Mulesoft's ecosystem or your own organization. Based on your permision group, you can search multiple business groups, documentation, tags, custom attributes, and details from API specifications. To help find assets, searches can be refined using search terms like a name of an API, by filters like organizations, categories, tags, and lifecycle states, or by ranking.
-
 
 == Filter
 
