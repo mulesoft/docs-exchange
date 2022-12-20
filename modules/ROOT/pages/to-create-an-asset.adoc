@@ -12,7 +12,7 @@ The way to create an asset depends on its type. The type is set when the asset i
 * For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
-* You can also publish a RAML, OAS components, and JSON and RAML fragments using Design Center and publish the API to Exchange.
+* You can also publish REST-APIs and API Spec Fragments using Design Center and publish the API to Exchange.
 +
 Another way to publish these type of assets is using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
 * RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
