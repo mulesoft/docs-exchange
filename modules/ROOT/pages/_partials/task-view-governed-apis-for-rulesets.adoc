@@ -17,4 +17,4 @@ To view the governed API list for a ruleset:
 * APIs that passed all of the rules in the ruleset and if you have sufficient access, those that failed
 * APIs that are conformant to all rulesets for which it is governed, and if you have sufficient access, those that are not conformant
 +
-. To open the API's details page, click the external link icon . 
+. To open the API's details page, click the open external link icon (image:open-external-link-icon.png[width=0.90%,height=0.90%,title="Square with an Arrow Pointing Diagonally Upward"]). 
