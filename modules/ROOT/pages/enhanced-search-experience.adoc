@@ -41,7 +41,6 @@ To sort the ranking of search results, use the Sort by drop-down menu to choose 
 You can select which of the organizations are visible to you to include in each search.
 
 == Save a Search
-
 Find assets quickly by saving frequently used search queries for yourself or for your organization. Saved searches display in the navigation pane as 
 
 . Enter a search term or select options from a filter, then click *Save this Search*.
