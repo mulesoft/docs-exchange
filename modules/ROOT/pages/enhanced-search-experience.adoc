@@ -10,7 +10,7 @@ Search options are located on the landing page of the Exchange catalog.
 
 image:exchange-new-search.png[Exchange enhanced search experience]
 
-The Exchange catalog of assets can display hundreds of assets. You can refine the list of assets that display using search terms like a name of an API or use the type filter option to get a list of all REST APIs.
+The Exchange catalog of assets can display hundreds of assets that help developers discover assets to create projects quickly and drive adoption of best practices and reuse. You can find assets from Mulesoft's ecosystem or your own organization. Based on your permision group, you can search multiple business groups, documentation, tags, custom attributes, and details from API specifications. To help find assets, searches can be refined using search terms like a name of an API, by filters like organizations, categories, tags, and lifecycle states, or by ranking
 
 
 == Filter
@@ -44,11 +44,13 @@ You can select which of the organizations are visible to you to include in each 
 
 Save a search
 
-. Enter a search term and click *Save This Search*.
-. When prompted, give the search a name and select whether the search is an organization search or personal search.
+Find assets quickly by saving frequently used search queries for yourself or for your organization. Saved searches display in the navigation pane as 
+
+. Enter a search term or select options from a filter, then click *Save this Search*.
+. When prompted, give the search a name and select to save the search as personal search or an organization search.
 +
 Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
-. Save the search.
+. Click *Save search*.
 . Confirm that your search appears in the saved searches in the left navigation bar.
 +
 Exchange lists search terms specific to your business group. Below those terms are saved searches you created:
