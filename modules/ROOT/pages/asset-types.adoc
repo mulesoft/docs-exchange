@@ -11,7 +11,7 @@ The following asset types are supported in Exchange:
 A set of APIs bundled into a single asset.
 * API Spec Fragments
 +
-A RAML document that has a version and an identifier but is not in itself a complete RAML specification. API spec fragments are also known as _RAML fragments_. Exchange supports JSON, RAML, or OpenAPI Specification (OAS)files.
+A part of an API specification that is reused to build a complete API specification.
 * AsyncAPI Specifications
 +
 An AsyncAPI specification file that specifies an event-driven API.
