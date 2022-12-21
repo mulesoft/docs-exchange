@@ -27,26 +27,50 @@ Use filters to refine your search results. You can filter using the following op
  * Tag
  * Lifecycle state
 
-To filter search results use the search drop-down menus on the landing page.
+To filter search results:
+
+. Select a filter option.
+. Click an option from the menu and click *Apply*.
+. To clear a filter option, click *Clear filter*.
 
 == Sort
 
 Search results can be sorted by the following options:
 
 * Relevance
++
+Sorts the matching results by where a match is found in the asset metadata, such as name, title, pages, and API specification metadata. API specification metadata includes endpoints and types.
 * Name
++
+Sorts by asset name in ascending alphabetical order.
 * Last modified
++
+Sorts the results by the most recently modified assets at the top, for example, the latest published assets or assets that have new versions recently added. This is the default for all business groups except assets that are provided by Mulesoft.
 * Rating
++
+Sorts by descending order by the review rating of an asset (stars on an asset card). The highest rated assets is at the top. This is the default order for the Provided by MuleSoft and Global Exchange.
+* Featured
++
+Sorts by placing a featured selection of assets at the top of the results, with the rest of them following, ordered by last modified.
 
-To sort the ranking of search results, use the Sort by drop-down menu to choose Relevance (default), Name, Last modified, or Rating. Relevance sorts the matching results by where a match is found in the asset metadata, such as name, title, pages, and API specification metadata. API specification metadata includes endpoints and types.
+To sort the ranking of search results, use the Sort by drop-down menu to choose Relevance (default), Name, Last modified, Rating. Relevance 
 
 == Search Organizations
 
 You can select which organizations are visible to you to include in each search.
 
+To search organizations:
+
+. Select the *Any Organization* filter, add a search term in the search field.
+. Select from the list of organizations that you want to search and click *Apply*.
+
 == Save a Search
 
-Find assets quickly by saving frequently used search queries for yourself or for your organization. Saved searches display in the navigation pane as 
+Find assets quickly by saving frequently used search queries for yourself or for your business group. Saved searches display in the navigation pane.
+
+Exchange lists search terms specific to your business group. The example displays saved searches:
+
+image::ex2-saved-searches-groups.png[Saved Search Groups]
 
 . Enter a search term or select options from a filter, then click *Save this Search*.
 . When prompted, give the search a name and select to save the search as personal search or an organization search.
@@ -55,20 +79,12 @@ Administrators can save searches visible to anyone in their current business gro
 . Click *Save search*.
 . Confirm that your search appears in the saved searches in the left navigation bar.
 +
-Exchange lists search terms specific to your business group. Below those terms are saved searches you created:
-+
-image::ex2-saved-searches-groups.png[Saved Search Groups]
 
 
+. To rename a saved search, click the three dots and select *Rename*.
+. To delete a saved search, click the three dots and select *Delete*.
 
-
-
-
-
-
-
-
-In an asset portal, click a tag or category element to create a filtered search showing similar assets.
+//In an asset portal, click a tag or category element to create a filtered search showing similar assets.
 
 
 
