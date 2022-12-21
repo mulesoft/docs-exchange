@@ -53,7 +53,7 @@ Sorts by descending order by the review rating of an asset (stars on an asset ca
 +
 Sorts by placing a featured selection of assets at the top of the results, with the rest of them following, ordered by last modified.
 
-To sort the ranking of search results, use the Sort by drop-down menu to choose Relevance (default), Name, Last modified, Rating. Relevance 
+To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance (default), Name, Last modified, Rating. Relevance, or Featured.
 
 == Search Organizations
 
