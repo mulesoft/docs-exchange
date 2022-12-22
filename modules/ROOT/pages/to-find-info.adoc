@@ -34,6 +34,7 @@ Use filters to refine your search results. You can filter using the following op
 
 * Type
 +
+
 The list of asset types that display depends on which types are available in a business group.
 * Organization
 * Category
@@ -46,7 +47,7 @@ The options that appear depend on which types are available within an organizati
 
 To filter search results:
 
-. Select a filter option.
+. From the Exchange landing page, select a filter option.
 . Click an option from the menu and click *Apply*.
 . To clear a filter option, click *Clear filter*.
 . To clear all filter options, click *Clear all filters*.
@@ -83,7 +84,7 @@ Exchange lists search terms specific to your business group. The example display
 
 image::ex2-saved-searches-groups.png[Saved Search Groups]
 
-. Enter a search term or select options from a filter, then click *Save this Search*.
+. From the Exchange landing page, enter a search term or select options from a filter, then click *Save this Search*.
 . When prompted, give the search a name and select to save the search as personal search or an organization search.
 +
 Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
