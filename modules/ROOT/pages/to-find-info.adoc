@@ -4,16 +4,27 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The Exchange catalog of assets can display hundreds of assets that help developers discover assets to create projects quickly and drive adoption of best practices and reuse. You can find assets from Mulesoft's ecosystem or your own organization. Based on your permision group, you can search multiple business groups, documentation, tags, custom attributes, and details from API specifications. To help find assets, searches can be refined using search terms like a name of an API, by filters like organizations, categories, tags, and lifecycle states, or by ranking.
+The Exchange catalog of assets can display hundreds of assets that help developers discover assets to create projects quickly and drive adoption of best practices and reuse. You can find assets from Mulesoft's ecosystem or your own organization. Based on your permission group, you can search multiple business groups, documentation, tags, custom attributes, and details from API specifications. To help find assets, searches can be refined using search terms like a name of an API, by filters like organizations, categories, tags, and lifecycle states, or by ranking.
 
 Anypoint Exchange search looks for terms in:
 
-. Each asset’s name
-. Tags
-. Categories
-. Custom attributes (also known as custom fields)
-. The content of the asset portal pages
-. Properties defined in RAML and OAS API specifications
+* Each asset’s name
+* Tags
+* Categories
+* Custom attributes (also known as custom fields)
+* The content of the asset portal pages
+* Properties defined in RAML and OAS API specifications
+
+== Search by Keyword 
+
+Use the *Search assets* field to find assets by keyword.
+
+. From the Exchange landing page, enter a keyword in the *Search assets* field, for example Mulesoft and press *enter* or *return* depending on your keyboard.
++
+A list of assets display that contain the keyword.
+. To clear the keyword from the *Search assets* field, click *X*.
+
+The following image is an example search results using the search keyword *Mulesoft*. The search keyword is highlighted in the results.
 
 image:exchange-new-search.png[Exchange enhanced search experience]
 
@@ -31,15 +42,18 @@ The list of asset types that display depends on which types are available in a b
 +
 Lifecycle state can be stable, deprecated, or development.
 
+The options that appear depend on which types are available within an organization. 
+
 To filter search results:
 
 . Select a filter option.
 . Click an option from the menu and click *Apply*.
 . To clear a filter option, click *Clear filter*.
+. To clear all filter options, click *Clear all filters*.
 
 == Sort
 
-Search results can be sorted by the following options:
+Assets can be sorted by the following options:
 
 * Relevance
 +
@@ -57,16 +71,9 @@ Sorts by descending order by the review rating of an asset (stars on an asset ca
 +
 Sorts by placing a featured selection of assets at the top of the results. Other assets that are not featured assets are ordered by last modified.
 
+The sorting options that appear depend on which types are available within an organization.
+
 To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance (default), Name, Last modified, Rating. Relevance, or Featured.
-
-== Search Organizations
-
-You can select which organizations are visible to you to include in each search.
-
-To search organizations:
-
-. Select the *Any Organization* filter, add a search term in the search field.
-. Select from the list of organizations that you want to search and click *Apply*.
 
 == Save a Search
 
