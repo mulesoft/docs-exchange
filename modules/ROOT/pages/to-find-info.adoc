@@ -21,11 +21,15 @@ image:exchange-new-search.png[Exchange enhanced search experience]
 
 Use filters to refine your search results. You can filter using the following options:
 
- * Type
- * Organization
- * Category
- * Tag
- * Lifecycle state
+* Type
++
+The list of asset types that display depends on which types are available in a business group.
+* Organization
+* Category
+* Tag
+* Lifecycle state
++
+Lifecycle state can be stable, deprecated, or development.
 
 To filter search results:
 
@@ -51,7 +55,7 @@ Sorts the results by the most recently modified assets at the top, for example, 
 Sorts by descending order by the review rating of an asset (stars on an asset card). The highest rated assets is at the top. This is the default order for the Provided by MuleSoft and Global Exchange.
 * Featured
 +
-Sorts by placing a featured selection of assets at the top of the results, with the rest of them following, ordered by last modified.
+Sorts by placing a featured selection of assets at the top of the results. Other assets that are not featured assets are ordered by last modified.
 
 To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance (default), Name, Last modified, Rating. Relevance, or Featured.
 
@@ -79,12 +83,8 @@ Administrators can save searches visible to anyone in their current business gro
 . Click *Save search*.
 . Confirm that your search appears in the saved searches in the left navigation bar.
 +
-
-
 . To rename a saved search, click the three dots and select *Rename*.
 . To delete a saved search, click the three dots and select *Delete*.
-
-//In an asset portal, click a tag or category element to create a filtered search showing similar assets.
 
 
 
