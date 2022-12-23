@@ -34,10 +34,14 @@ Use filters to refine your search results. You can filter using the following op
 
 * Type
 +
-
+Types can be AsyncAPIs, connectors, REST APIS, rulesets, and more. See xref:asset-types.adoc[Asset Types] for more details.
 The list of asset types that display depends on which types are available in a business group.
 * Organization
++
+Business groups that you have permission to view those assets.
 * Category
++
+Categories are specific groupings of assets set by the administrator of a business group or an organization owner.
 * Tag
 * Lifecycle state
 +
