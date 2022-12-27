@@ -1,6 +1,6 @@
 // Used in docs-exchange/asset-details.adoc and docs-api-governance-documentation/view-conformance-status-in-exchange.adoc
 
-You can view the list of centrally-governed APIs to which a ruleset applies. Depending on the access you have to the ruleset and API assets in exchange, you may see only the APIs that are conformant to the ruleset or you may see APIs that are both conformant and not conformant to the ruleset. For example, API owners and organization administrators can see APIs in both conformance statuses. 
+You can view the list of centrally-governed APIs to which a ruleset applies. Depending on the access you have to the API assets in exchange, you may see only the APIs that are conformant to the ruleset or you may see APIs that are both conformant and not conformant to the ruleset. For example, API owners and organization administrators can see APIs in both conformance statuses. 
 
 Developers can use the *Governed APIs* list to help them improve the quality of the rulesets and APIs they develop as follows: 
 
