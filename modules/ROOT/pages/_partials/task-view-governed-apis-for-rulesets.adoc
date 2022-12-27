@@ -1,11 +1,16 @@
 // Used in docs-exchange/asset-details.adoc and docs-api-governance-documentation/view-conformance-status-in-exchange.adoc
 
-You can view the list of centrally-governed APIs to which a ruleset applies. Depending on the access you have to the ruleset and API assets in exchange, you may see only the APIs that are conformant to the ruleset or you may see APIs that are both conformant and not conformant to the ruleset. 
+You can view the list of centrally-governed APIs to which a ruleset applies. Depending on the access you have to the ruleset and API assets in exchange, you may see only the APIs that are conformant to the ruleset or you may see APIs that are both conformant and not conformant to the ruleset. For example, API owners and organization administrators can see APIs in both conformance statuses. 
 
 Developers can use the *Governed APIs* list to help them improve the quality of the rulesets and APIs they develop as follows: 
 
-* Ruleset developers can view the API list to determine which APIs are being governed by a specific ruleset they published, and whether the APIs are conformant to the ruleset. Depending on their access to the APIs, they may also be able to see which APIs are not conformant to the ruleset. 
-* API developers can view the API list to see which APIs are conformant and look at the way they are coded to get help writing their own APIs to be conformant to the ruleset
+* When their APIs fail a ruleset, they can see which other APIs are successfully conforming to the ruleset so that they can fix their APIs.
+* When they are discovering available rulesets to use for their API, they can see which APIs are using a specific ruleset to evaluate how helpful it is.
+
+API consumers can use the *Governed APIs* list when they need to create an API service or application that is conformant to a certain set of standards or rules. They can:
+
+* Ensure there is a ruleset in Exchange that has the rules they need
+* See which APIs are conformant to that ruleset so that they can make sure their application is consuming only the conformant APIs
 
 To view the governed API list for a ruleset:
 
