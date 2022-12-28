@@ -96,3 +96,7 @@ Many APIs have an API notebook for interactive testing.
 . Click *Play* to test the method in the code example.
 . Exchange shows the results in real time.
 . Experiment with the example in the code block to try different parameters and values.
+
+== See Also
+
+xref:access-management::permissions-by-product.adoc#exchange[Permissions Available in Anypoint Platform, Exchange].
