@@ -5,7 +5,7 @@ You can view the list of centrally-governed APIs to which a ruleset applies. Dep
 Developers can use the *Governed APIs* list to help them improve the quality of the rulesets and APIs they develop as follows: 
 
 * When their APIs fail a ruleset, they can see which other APIs are successfully conforming to the ruleset so that they can fix their APIs.
-* When they are discovering available rulesets to use for their API, they can see which APIs are using a specific ruleset to evaluate how helpful it is.
+* When they are discovering available rulesets to use for their API, they can see which APIs are conformant to a specific ruleset to evaluate how helpful it is.
 
 API consumers can use the *Governed APIs* list when they need to create an API service or application that is conformant to a certain set of standards or rules. They can:
 
@@ -17,10 +17,9 @@ To view the governed API list for a ruleset:
 . Select a ruleset asset that is used in an API Governance profile. 
 . Select *Governed APIs* in the navigation bar to see the following information for each API listed:
 
-* Versions of APIs governed by the ruleset in one or more API Governance profiles
 * Whether the API is governed by multiple centralized rulesets and by how many  
-* APIs that passed all of the rules in the ruleset and if you have sufficient access, those that failed
-* APIs that are conformant to all rulesets for which it is governed, and if you have sufficient access, those that are not conformant
+* Whether the API passed the ruleset
+* Whether the API is conformant to all rulesets for which it is governed
 +
 . To open an API's details page, click the open external link icon (image:open-external-link-icon.png[width=20,height=18,fit=line]). 
 
