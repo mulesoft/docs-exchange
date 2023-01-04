@@ -5,7 +5,7 @@ In a ruleset's *Governed APIs* page, you can view the list of centrally-governed
 Developers can use the *Governed APIs* list as follows to help improve the quality of the rulesets and APIs that they develop: 
 
 * When their APIs fail a ruleset, they can see which other APIs successfully conform to the ruleset so that they can fix their APIs.
-* When they are discovering available rulesets to use for their API, they can see which APIs are conformant to a specific ruleset to evaluate how helpful it is.
+* When they search for available rulesets to use for their API, they can see which APIs are conformant to a specific ruleset to evaluate how helpful the ruleset is.
 
 API consumers can use the *Governed APIs* list when they need to create an API service or application that is conformant to a certain set of standards or rules. They can:
 
@@ -18,10 +18,9 @@ To view the governed API list for a ruleset:
 . Select *Governed APIs* in the navigation bar to see the following information for each listed API:
 
 * Whether the API is governed by multiple centralized rulesets and by how many  
-* Whether the API passed the ruleset
+* Whether the API passed all the rules in the ruleset
 * Whether the API is conformant to all rulesets for which it is governed
 +
 . To open an API's details page, click the open external link icon (image:open-external-link-icon.png[width=20,height=18,fit=line]). 
 
-NOTE:: 
-Depending on the access you have to the APIs in Exchange, you may see only the APIs that are conformant to the ruleset. This ensures that vulnerabilities are not exposed to consumers who do not have proper access to the APIs. Organization administrators or contributors can see the conformant and non-conformant APIs for their organization. 
+Depending on the access you have to the APIs in Exchange, you might see only the APIs that are conformant to the ruleset. This ensures that vulnerabilities are not exposed to consumers who do not have proper access to the APIs. Organization administrators or contributors can see the conformant and non-conformant APIs for their organization. 
