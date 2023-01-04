@@ -9,15 +9,26 @@ The Exchange catalog of assets can display hundreds of assets that help develope
 Anypoint Exchange search looks for terms in:
 
 * Each asset’s name
+* Description
+* Contact name and email
 * Tags
 * Categories
-* Custom attributes (also known as custom fields)
 * The content of the asset portal pages
 * Properties defined in RAML and OAS API specifications
 
 == Search by Keyword 
 
 Use the *Search assets* field to find assets by keyword.
+
+Keywords can be the following asset information:
+
+* Name 
+* Description
+* Contact name and email
+* Tags
+* Categories (name and value)
+* Endpoints in the API specification
+* Description of API specification (summary or API title)
 
 . From the Exchange landing page, enter a keyword in the *Search assets* field, for example Mulesoft and press *enter* or *return* depending on your keyboard.
 +
@@ -30,7 +41,7 @@ image:exchange-new-search.png[Exchange enhanced search experience]
 
 == Filter
 
-Use filters to refine your search results. You can filter using the following options:
+Use filters to refine your search results to find assets. You can filter using the following options:
 
 * Type
 +
@@ -43,11 +54,13 @@ Business groups that you have permission to view those assets.
 +
 Categories are specific groupings of assets set by the administrator of a business group or an organization owner.
 * Tag
++
+Keyword or term that describes a specific search. 
 * Lifecycle state
 +
 Lifecycle state can be stable, deprecated, or development.
 
-The options that appear depend on which types are available within an organization. 
+Filter options appear if they are available within an organization. 
 
 To filter search results:
 
@@ -76,7 +89,7 @@ Sorts by descending order by the review rating of an asset (stars on an asset ca
 +
 Sorts by placing a featured selection of assets at the top of the results. Other assets that are not featured assets are ordered by last modified.
 
-The sorting options that appear depend on which types are available within an organization.
+The sorting options appear if they are available within an organization.
 
 To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance (default), Name, Last modified, Rating. Relevance, or Featured.
 
