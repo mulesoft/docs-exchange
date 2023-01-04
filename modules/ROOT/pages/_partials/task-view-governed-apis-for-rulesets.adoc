@@ -2,7 +2,7 @@
 
 In a ruleset's *Governed APIs* page, you can view the list of centrally-governed APIs to which the ruleset applies. 
 
-Developers can use the *Governed APIs* list to help them improve the quality of the rulesets and APIs they develop as follows: 
+Developers can use the *Governed APIs* list as follows to help improve the quality of the rulesets and APIs that they develop: 
 
 * When their APIs fail a ruleset, they can see which other APIs successfully conform to the ruleset so that they can fix their APIs.
 * When they are discovering available rulesets to use for their API, they can see which APIs are conformant to a specific ruleset to evaluate how helpful it is.
