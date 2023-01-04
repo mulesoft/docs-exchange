@@ -9,8 +9,8 @@ Developers can use the *Governed APIs* list to help them improve the quality of 
 
 API consumers can use the *Governed APIs* list when they need to create an API service or application that is conformant to a certain set of standards or rules. They can:
 
-* Ensure there is a ruleset in Exchange that has the rules they need
-* See which APIs are conformant to that ruleset so that they can make sure their application is consuming only the conformant APIs
+* Ensure there is a ruleset in Exchange that has the rules they need.
+* See which APIs are conformant to that ruleset so that they can make sure their application is consuming only the conformant APIs.
 
 To view the governed API list for a ruleset:
 
