@@ -15,7 +15,7 @@ API consumers can use the *Governed APIs* list when they need to create an API s
 To view the governed API list for a ruleset:
 
 . Select a ruleset asset that is used in an API Governance profile. 
-. Select *Governed APIs* in the navigation bar to see the following information for each API listed:
+. Select *Governed APIs* in the navigation bar to see the following information for each listed API:
 
 * Whether the API is governed by multiple centralized rulesets and by how many  
 * Whether the API passed the ruleset
