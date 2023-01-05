@@ -4,11 +4,14 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The legacy search experience is also known as the old search option on the Exchange UI. This search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. This search experience does not include enhanced options for searching by rank, tags, categories, organizations, and lifecycle states and does not reflect an updated asset details page.
+The legacy search experience is also known as the old search option on the Exchange UI. This search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. This search experience does not include enhanced options for searching by rank, tags, categories, organizations, and lifecycle states. 
 
 To access the legacy search, click *Back to old search* in the landing page.
 
 Discover assets by searching for specific assets from the landing page of the Exchange catalog. 
+
+== Display Assets in List or Grid View
+You have an option to display the catalog of assets in list or grid view. List view arranges assets in a list format and grid view displays the assets in tiles. Both views sort the assets by the latest modified date and display the asset name, type, modified date, rating, and created by information.
 
 == Filter
 
