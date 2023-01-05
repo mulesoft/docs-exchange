@@ -32,6 +32,8 @@ Keywords can be the following asset information:
 * Endpoints in the API specification
 * Description of API specification (summary or API title)
 
+To find assets using keywords:
+
 . From the Exchange landing page, enter a keyword in the *Search assets* field, for example Mulesoft and press *enter* or *return* depending on your keyboard.
 +
 A list of assets display that contain the keyword.
@@ -62,7 +64,7 @@ Keyword or term that describes a specific search.
 +
 Lifecycle state can be stable, deprecated, or development.
 
-Filter options appear if they are available within an organization. 
+Filter options appear when they are available within an organization. 
 
 To filter search results:
 
@@ -91,7 +93,7 @@ Sorts by descending order by the review rating of an asset (stars on an asset ca
 +
 Sorts by placing a featured selection of assets at the top of the results. Other assets that are not featured assets are ordered by last modified.
 
-The sorting options appear if they are available within an organization.
+The sorting options appear when they are available within an organization.
 
 To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance (default), Name, Last modified, Rating. Relevance, or Featured.
 
@@ -102,6 +104,8 @@ Find assets quickly by saving frequently used search queries for yourself or for
 Exchange lists search terms specific to your business group. The example displays saved searches:
 
 image::ex2-saved-searches-groups.png[Saved Search Groups]
+
+To save a search: 
 
 . From the Exchange landing page, enter a search term or select options from a filter, then click *Save this Search*.
 . When prompted, give the search a name and select to save the search as personal search or an organization search.
