@@ -6,7 +6,7 @@ endif::[]
 
 The legacy search experience is also known as the old search option on the Exchange UI. This search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. This search experience does not include enhanced options for searching by rank, tags, categories, organizations, and lifecycle states and does not reflect an updated asset details page.
 
-You access the legacy search by clicking *Back to old search* in the landing page of Exchange.
+To access the legacy search, click *Back to old search* in the landing page.
 
 Discover assets by searching for specific assets from the landing page of the Exchange catalog. 
 
