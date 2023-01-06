@@ -39,23 +39,23 @@ After a category is created, it can be applied to an asset in your organization.
 . Click an asset in your organization.
 . In the asset details pane, click *Add categories* and choose the category and value from the list.
 
-// == Search with Categories in Exchange Private Cloud Edition or MuleSoft Government Cloud
+== Search with Categories in Exchange Private Cloud Edition or MuleSoft Government Cloud
 
-// In the Exchange search field, specify the `category:` search term and the category value to list the assets.
+In the Exchange search field, specify the `category:` search term and the category value to list the assets.
 
-// For example, to find assets of API Type, search for `category:"API Type" = "System API"`.
+For example, to find assets of API Type, search for `category:"API Type" = "System API"`.
 
-// You can search for a combination of different categories, but you can't search for multiple values of the same category. Multiple search terms use an implicit AND. OR is not supported.
+You can search for a combination of different categories, but you can't search for multiple values of the same category. Multiple search terms use an implicit AND. OR is not supported.
 
-// The following search terms return all assets marked as both System APIs and Salesforce products:
+The following search terms return all assets marked as both System APIs and Salesforce products:
 
-// `category:"API Type" = "System API" category:"Product" = "Salesforce"`
+`category:"API Type" = "System API" category:"Product" = "Salesforce"`
 
-// == Search with Categories in Exchange Cloud
+== Search with Categories in Exchange Cloud
 
-// Select a category such as "API Type" from the list, and select one or more values such as "System API". Anypoint Exchange shows assets that have one of the selected values for the selected category.
+Select a category such as "API Type" from the list, and select one or more values such as "System API". Anypoint Exchange shows assets that have one of the selected values for the selected category.
 
-// You can search for a combination of categories, and you can search for multiple values for the same category. Multiple values for the same category are combined with the OR operator.
+You can search for a combination of categories, and you can search for multiple values for the same category. Multiple values for the same category are combined with the OR operator.
 
 == Change or Delete a Category
 
