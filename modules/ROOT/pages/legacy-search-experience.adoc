@@ -11,6 +11,7 @@ To access the legacy search, click *Back to old search* from the landing page.
 Discover assets by searching for specific assets from the landing page of the Exchange catalog. 
 
 == Display Assets in List or Grid View
+
 You have an option to display the catalog of assets in list or grid view. List view arranges assets in a list format and grid view displays the assets in tiles. Both views sort the assets by the latest modified date and display the asset name, type, modified date, rating, and created by information.
 
 == Filter
