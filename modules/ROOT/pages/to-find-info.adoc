@@ -95,7 +95,7 @@ Sorts by placing a featured selection of assets at the top of the results. Other
 
 The sorting options appear when they are available within an organization.
 
-To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance (default), Name, Last modified, Rating. Relevance, or Featured.
+To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance (default), Name, Last modified, Rating, Relevance, or Featured.
 
 == Save a Search
 
