@@ -25,14 +25,9 @@ For example: `exchange asset upload --classifier raml --apiVersion v1 --name Hel
 
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
-
 This illustration summarizes how some of the asset types (in green) appear in Exchange:
 
-
 image::ex2-exchange-assets.png[]
-
-
-
 
 == Create an API Asset
 
@@ -118,19 +113,6 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
-== Create a Ruleset Asset
-Rulesets are a group of rules or guidelines that define an application, for example best practices or industry-specific standards. Add a zip file with multiple YAML files that describe the new ruleset.
-
-. In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
-. From the drop-down list, select the asset type *Ruleset* .
-. To select the file to upload, click *Choose the file* .
-. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
-+
-Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
-. Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
-
 == Create Custom Policy Definition Asset 
 Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, and service level agreement (SLA). You can create a policy definition based on your specific business requirements. Develop custom policy definitions and apply them to APIs to extend existing functionality or define new ones.
 
@@ -154,6 +136,42 @@ The policy must be in the Stable state to upload the implementation file in a la
 
 To implement the policy so that it is available at runtime, follow the steps in xref:add-policy-implementation-files-to-published-policy-definition.adoc[Add Policy Implementation Files to Published Policy Definition].
 
+== Create a GraphQL API
+A GraphQL API schema is a collection of operations and object types that are composed of fields. A GraphQL API allows a client to fetch only the object types and fields needed instead of fetching a fixed response like in a REST API.
+
+There are two types of schemas that you can upload:
+
+* GraphQL API schema
+* GraphQL Apollo API schema 
++
+A GraphQL API schema designed with Apollo GraphQL specific directives and structure, also known as the schema definition language (SDL).
+
+To create a GraphQL API:
+
+. In Exchange, select *Publish new asset*.
+. Enter the asset portal name.
+. From the drop-down list, select the asset type *GraphQL API* .
+. Select which GraphQL API schema to upload, GraphQL API schema or GraphQL Apollo API schema.
+. To select the file to upload, click *Choose the file* .
+. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
+
+== Create a Ruleset Asset
+Rulesets are a group of rules or guidelines that define an application, for example best practices or industry-specific standards. Add a zip file with multiple YAML files that describe the new ruleset.
+
+. In Exchange, select *Publish new asset*.
+. Enter the asset portal name.
+. From the drop-down list, select the asset type *Ruleset* .
+. To select the file to upload, click *Choose the file* .
+. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
+
 == Asset Name, Icon, and Description Properties
 
 You can create assets in API Designer or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[Describe an Asset].
@@ -173,7 +191,6 @@ When you create an asset in Exchange, you enter the name.
 The name cannot be changed when adding a new version in Exchange.
 
 The name, icon, and description properties can only be changed in the Exchange asset details page.
-
 
 == Create a New Version of an Existing Asset
 
