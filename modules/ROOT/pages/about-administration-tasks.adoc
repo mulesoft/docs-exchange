@@ -19,7 +19,7 @@ Save and maintain searches for assets within a business group.
 Specify which API assets can be shared with users.
 * xref:to-set-permissions.adoc[Set User Access Permissions]
 +
-Grant the Exchange Administrator, Contributor, or Viewer permissions to members of your organization, and optionally provide access for individual assets.
+Grant the Exchange Administrator, Contributor, Viewer, or Creator permissions to members of your organization, and optionally provide access for individual assets.
 * xref:cookies.adoc[About Exchange cookies]
 +
 Find information about Exchange cookies, cookie configuration, and cookies for vanity domains.
