@@ -10,17 +10,17 @@ Developers can use the *Governed APIs* list as follows to help improve the quali
 API consumers can use the *Governed APIs* list when they need to create an API service or application that is conformant to a certain set of standards or rules. They can:
 
 * Ensure there is a ruleset in Exchange that has the rules they need.
-* See which APIs are conformant to that ruleset so that they can make sure their application is consuming only the conformant APIs.
+* See which APIs pass the rules for a ruleset so that they can ensure their application is consuming only the conformant APIs.
+
+Depending on the access you have to the APIs in Exchange, you might see only the APIs that are conformant to the ruleset. This ensures that vulnerabilities are not exposed to consumers who do not have proper access to the APIs. Organization administrators and contributors can see the conformant and non-conformant APIs for their organization. 
 
 To view the governed API list for a ruleset:
 
 . Select a ruleset asset that is used in an API Governance profile. 
-. Select *Governed APIs* in the navigation bar to see the following information for each listed API:
+. Select *Governed APIs* in the navigation bar to see whether each listed API version:
 
-* Whether the API is governed by multiple centralized rulesets and by how many  
-* Whether the API passed all the rules in the ruleset
-* Whether the API is conformant to all rulesets for which it is governed
+* Is governed by multiple centralized rulesets and by how many  
+* Passed all the rules in the ruleset
+* If governed by multiple rulesets, passes all the rules in those rulesets
 +
-. To open an API's details page, click the open external link icon (image:open-external-link-icon.png[width=20,height=18,fit=line]). 
-
-Depending on the access you have to the APIs in Exchange, you might see only the APIs that are conformant to the ruleset. This ensures that vulnerabilities are not exposed to consumers who do not have proper access to the APIs. Organization administrators or contributors can see the conformant and non-conformant APIs for their organization. 
+. To view an API's *Conformance Status* details, click the open external link icon (image:open-external-link-icon.png[width=20,height=18,fit=line]). 
