@@ -23,4 +23,11 @@ To view the governed API list for a ruleset:
 * Passed all the rules in the ruleset
 * If governed by multiple rulesets, passes all the rules in those rulesets
 +
+. Select from the filter menus to refine the list of APIs. Default settings are:
+* Any API Type
+* Any Organization
+* Any Lifecycle State
+* Any Ruleset Status
+* All APIs
++
 . To view an API's *Conformance Status* details, click the open external link icon (image:open-external-link-icon.png[width=20,height=18,fit=line]). 
