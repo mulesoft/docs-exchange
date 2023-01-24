@@ -185,7 +185,7 @@ contact: # <3>
 versionStrategyConditions:
   majorIncrease:
     branches:
-      - master
+      - root
     tags:
       - support
   fixed:
