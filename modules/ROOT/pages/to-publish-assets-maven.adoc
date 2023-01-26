@@ -208,7 +208,7 @@ mvn deploy
 
 The Maven Facade API enables you to both create your asset and set the mutable data describing it in the same request. The mutable data of an asset includes tags, custom fields, categories, and documentation pages.
 
-The GitHub repository of Exchange documentation examples includes a complete example of creating a https://github.com/mulesoft-labs/exchange-documentation-samples/tree/root/template-with-mutable-data[Mule application template with documentation and tags, role=external, window=blank].
+The GitHub repository of Exchange documentation examples includes a complete example of creating a https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/template-with-mutable-data[Mule application template with documentation and tags, role=external, window=blank].
 
 Declare tags, custom fields, and categories in the `pom.xml` file in the properties section, with the XML property `key` set to the key of the custom field or category:
 
