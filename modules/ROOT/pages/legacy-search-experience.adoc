@@ -12,7 +12,7 @@ Discover assets by searching for specific assets from the landing page of the Ex
 
 == Display Assets in List or Grid View
 
-You have an option to display the catalog of assets in list or grid view. List view arranges assets in a list format and grid view displays the assets in tiles. Both views sort the assets by the latest modified date and display the asset name, type, modified date, rating, and created by information.
+You have an option to display the catalog of assets in list or grid view. List view arranges assets in a list format and grid view displays the assets in tiles. Both views display the asset name, type, modified date, rating, and created by information.
 
 == Filter
 
@@ -138,18 +138,6 @@ Searching for a multiple word phrase shows assets that have every word in the ph
 
 If you separate search words with any non-alphanumeric character other than a space, Anypoint Exchange converts the character to a space before searching.
 
-=== Search Phrases 
-
-To search for case-insensitive text that begins with each word you specify, put a space between words.
-This is similar to putting the `*` wildcard regular expression after each word.
-
-For example, searching for `mq module` finds any asset that has text that
-starts with `mq` or `module`.
-
-Searching for a multiple word phrase shows assets that have every word in the phrase.
-
-If you separate search words with any non-alphanumeric character other than a space, Anypoint Exchange
-converts the character to a space before searching.
 
 === Search Separators
 
