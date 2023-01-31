@@ -24,13 +24,13 @@ Use the *Search assets* field to find assets by keyword.
 
 Keywords can be the following asset information:
 
-* Name 
+* Each asset’s name
 * Description
 * Contact name and email
 * Tags
-* Categories (name and value)
-* Endpoints in the API specification
-* Description of API specification (summary or API title)
+* Categories
+* The content of the asset portal pages
+* Properties defined in RAML and OAS API specifications
 
 To find assets using keywords:
 
@@ -88,12 +88,10 @@ Sorts by asset name in ascending alphabetical order.
 Sorts the results by the most recently modified assets at the top, for example, the latest published assets or assets that have new versions recently added. This is the default for all business groups except assets that are provided by Mulesoft.
 * Rating
 +
-Sorts by descending order by the review rating of an asset (stars on an asset card). The highest rated assets is at the top. This is the default order for the Provided by MuleSoft and Global Exchange.
+Sorts by descending order by the review rating of an asset (stars on an asset card). The highest rated assets is at the top. 
 * Featured
 +
-Sorts by placing a featured selection of assets at the top of the results. Other assets that are not featured assets are ordered by last modified.
-
-The sorting options appear when they are available within an organization.
+Sorts by placing a featured selection of assets at the top of the results. This is the default order for the Provided by MuleSoft and Global Exchange. Other assets that are not featured assets are ordered by last modified. The sorting options appear when they are available within an organization.
 
 To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance, Name, Last modified, Rating, Relevance, or Featured.
 
