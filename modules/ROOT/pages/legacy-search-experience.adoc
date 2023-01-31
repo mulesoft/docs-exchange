@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The legacy search experience is also known as the old search option on the Exchange UI. This search experience is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. This search experience does not include enhanced options for searching by rank, organizations, and lifecycle states. 
+The legacy search experience, which was previously called the old search, is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. This search experience does not include enhanced options for searching by rank, organizations, and lifecycle states. 
 
 To access the legacy search, click *Back to old search* from the landing page.
 
