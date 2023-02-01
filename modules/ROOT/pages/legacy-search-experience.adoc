@@ -109,7 +109,7 @@ types:
          description: New team has been created
 ----
 
-This API is found by these searches:
+These search results include this API:
 [%header%autowidth.spread]
 |===
 |Search term |Matches
