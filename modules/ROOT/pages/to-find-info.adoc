@@ -43,13 +43,13 @@ A list of assets display that contain the keyword.
 
 The following image is an example search results using the search keyword *Mulesoft*. The search keyword is highlighted in the results.
 
-image:exchange-new-search.png[Exchange enhanced search experience]
+image:exchange-new-search.png[Search results with the Mulesoft keyword highlighted]
 
 == Filter Search Results
 
 You can use filters to refine your search results to find assets. You can filter using the following options:
 
-image:ex-filters.png[Filters]
+image:ex-filters.png[The search refinement filters]
 
 * Type
 +
@@ -81,8 +81,6 @@ To filter search results:
 
 Assets can be sorted by the following options:
 
-image:ex-sort-by-filter.png[Sort by filter]
-
 * Relevance
 +
 Sorts the matching results by where a match is found in the asset metadata, such as name, title, pages, and API specification metadata. API specification metadata includes endpoints and types. A search term must be entered to see the *Relevance* option in the *Sort by* list. When you search by a term, assets are sorted by *Relevance* by default.  
@@ -100,6 +98,8 @@ Sorts by descending order by the review rating of an asset (stars on an asset ca
 Sorts by placing a featured selection of assets at the top of the results. This is the default order for the Provided by MuleSoft and Global Exchange. Other assets that are not featured assets are ordered by last modified. The sorting options appear when they are available within an organization.
 
 To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance, Name, Last modified, Rating, Relevance, or Featured.
+
+image:ex-sort-by-filter.png[The Sort by filter, 15%,15%]
 
 == Save a Search
 
