@@ -81,6 +81,8 @@ To filter search results:
 
 Assets can be sorted by the following options:
 
+image:ex-sort-by-filter.png[Sort by filter]
+
 * Relevance
 +
 Sorts the matching results by where a match is found in the asset metadata, such as name, title, pages, and API specification metadata. API specification metadata includes endpoints and types. A search term must be entered to see the *Relevance* option in the *Sort by* list. When you search by a term, assets are sorted by *Relevance* by default.  
