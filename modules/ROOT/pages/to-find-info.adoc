@@ -20,7 +20,9 @@ Anypoint Exchange search looks for terms in:
 
 == Search by Keyword 
 
-Use the *Search assets* field to find assets by keyword.
+You can use the *Search assets* box to find assets by keyword.
+
+image:exchange-search-assets-box.png[Search assets box]
 
 Keywords can be the following asset information:
 
