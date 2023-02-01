@@ -14,7 +14,7 @@ Discover assets by searching for specific assets from the landing page of the Ex
 
 You have an option to display the catalog of assets in list or grid view. List view arranges assets in a list format and grid view displays the assets in tiles. Both views display the asset name, type, rating, and created by information.
 
-== Filter
+== Filter Search Results
 
 You can filter search results by asset types for example, API groups, REST APIs, and rulesets by selecting an option from the *All types* drop-down menu. The options that appear depend on which types are available within an organization.
  
