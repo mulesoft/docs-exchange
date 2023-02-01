@@ -56,7 +56,7 @@ Get lists of assets with a curl command like this:
       https://anypoint.mulesoft.com/graph/api/v1/graphql \
       -H 'content-type: application/json' \
       -H 'Authorization: bearer ANYPOINT_TOKEN' \
-      -d '{"query":"{assets(query: { masterOrganizationId:\"ROOT_ORGANIZATION_ID\", limit: 20, offset: 10 }) {groupId assetId version}}"}'
+      -d '{"query":"{assets(query: { rootOrganizationId:\"ROOT_ORGANIZATION_ID\", limit: 20, offset: 10 }) {groupId assetId version}}"}'
 ----
 
 Replace `ROOT_ORGANIZATION_ID` with your root organization ID, and replace `ANYPOINT_TOKEN` with the authorization token that has permissions for the root organization. Vary the `limit` and `offset` values as needed.
