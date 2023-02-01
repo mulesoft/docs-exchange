@@ -45,9 +45,11 @@ The following image is an example search results using the search keyword *Mules
 
 image:exchange-new-search.png[Exchange enhanced search experience]
 
-== Filter
+== Filter Search Results
 
-Use filters to refine your search results to find assets. You can filter using the following options:
+You can use filters to refine your search results to find assets. You can filter using the following options:
+
+image:ex-filters.png[Filters]
 
 * Type
 +
