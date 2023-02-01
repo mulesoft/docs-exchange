@@ -11,7 +11,7 @@ Anypoint Exchange search looks for terms in:
 . Categories
 . Custom attributes (also known as custom fields)
 . The content of the asset portal pages
-. Properties defined in RAML and OAS API specifications
+. Properties defined in RAML, JSON, and OAS API specifications
 
 In an asset portal, click a tag or category element to create a filtered search showing similar assets.
 
