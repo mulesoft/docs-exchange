@@ -34,7 +34,7 @@ Administrators can save searches visible to anyone in their current business gro
 . Save the search.
 . Confirm that your search appears in the saved searches in the left navigation bar.
 +
-Exchange lists search terms specific to your business group. Below those terms are saved searches you created:
+Exchange lists search terms specific to your business group and the saved searches you created:
 +
 image::ex2-saved-searches-groups.png[Saved Search Groups]
 
