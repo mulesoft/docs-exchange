@@ -47,7 +47,7 @@ image:exchange-new-search.png[Search results with the Mulesoft keyword highlight
 
 == Filter Search Results
 
-You can use filters to refine your search results to find assets. The following search filters are available:
+You can use the following filters to refine your search results. 
 
 image:ex-filters.png[The search refinement filters]
 
