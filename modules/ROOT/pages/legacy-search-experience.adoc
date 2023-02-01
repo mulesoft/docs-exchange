@@ -16,7 +16,7 @@ You have an option to display the catalog of assets in list or grid view. List v
 
 == Filter Search Results
 
-You can filter search results by asset types for example, API groups, REST APIs, and rulesets by selecting an option from the *All types* drop-down menu. The options that appear depend on which types are available within an organization.
+You can filter search results by asset types (for example, API groups, REST APIs, and rulesets) by selecting an option from the  *All types* drop-down menu. The options that appear depend on which types are available within an organization.
  
  
 == Search in Organization
@@ -40,7 +40,7 @@ image::ex2-saved-searches-groups.png[Saved Search Groups]
 
 == Search API Specifications
 
-The following API specification properties are used in search:
+You can use the following API specification properties are used in search:
 
 * API title
 * Base URI
@@ -143,7 +143,7 @@ If you separate search words with any non-alphanumeric character other than a sp
 
 The search experience uses search separators to find Exchange assets that contain one or more terms.
 
-If you input search words connected by non-alphanumeric symbols, Exchange replaces the symbols with spaces before searching for the term. The search string only succeeds if both words are present in the result. This is the same as the `word1 AND word2` relationship.
+If you enter search words connected by non-alphanumeric symbols, Exchange replaces the symbols with spaces before searching for the term. The search string only succeeds if both words are present in the result. The result is equivalent to using `word1 AND word2` relationship.
 
 Example search terms:
 
@@ -157,7 +157,7 @@ connect:/sales
 
 This table shows how each search term is interpreted based on the values in the asset name,
 asset ID, and tags for an asset. If the search term maps to the values correctly, a match occurs. If not,
-the reason is provided.
+the reason displays when the match does not occur..
 
 [%header%autowidth.spread]
 |===
@@ -179,7 +179,7 @@ the reason is provided.
 
 Use phrase search to find a group of terms inside quotation marks. Phrase searches match an asset only if all the exact terms inside quotes appear in consecutive order.
 
-If you input any of these searches in Exchange, Exchange replaces non-alphanumeric symbols with spaces before searching for assets.
+If you enter any of these searches in Exchange, Exchange replaces non-alphanumeric symbols with spaces before searching for assets.
 
 Example search terms:
 
@@ -194,7 +194,7 @@ Api-"Sales/connect"
 
 This table shows how each search term is interpreted based on the values in the asset name,
 asset ID, and tags for an asset. If the search term maps to the values correctly, a match occurs. If not,
-the reason is provided.
+the reason displays when the match does not occur.
 
 [%header%autowidth.spread]
 |===
@@ -212,11 +212,11 @@ the reason is provided.
 
 You can enter search text to search for assets. Click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the type menu.
 
-The search experience uses query language to search assets by tags, categories, and custom fields.
+The search experience uses a query language to search assets by tags, categories, and custom fields.
 
 === Search by Tags
 
-Search by tags using either `tag:"some value"` or `tag:value`.
+You can search by tags using either `tag:"some value"` or `tag:value`.
 
 If the value has no spaces, then double quotes are optional.
 
@@ -238,7 +238,7 @@ Examples:
 
 === Search by Categories
 
-Search by categories using `category:"some key" = "some value"`.
+You can search by categories using `category:"some key" = "some value"`.
 
 If the category has no spaces in the key or value, then double quotes are optional.
 
@@ -278,7 +278,7 @@ These search terms return all assets marked as both system APIs and Salesforce p
 
 === Search by Custom Fields
 
-Search by fields using `field:"some key" = "some value"`.
+You can search by fields using `field:"some key" = "some value"`.
 
 If the custom field has no spaces in the key or value, then double quotes are optional.
 
