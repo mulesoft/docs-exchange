@@ -27,6 +27,10 @@ Use connectors within your application's flows to send and receive data using a 
 +
 A description and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation.
 
+* DataWeave Libraries
++
+Packaged modules and mappings to share and reuse across applications.
+
 * Examples
 +
 Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
