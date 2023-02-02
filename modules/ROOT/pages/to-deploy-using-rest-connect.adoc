@@ -437,3 +437,6 @@ image::rest-connect-auth-callback-url.png[]
 +
 . You are ready to retrieve an access token from GitHub. In this case, go to `+http://githubapp-smky.cloudhub.io/authorize+` in a browser, your case would be `+http://my-app.cloudhub.io/authorize+` - replace my-app.cloudhub.io with the one you get with Copy link. When you reach this URL, your browser asks you to log into GitHub.
 . When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+` - my-app.cloudhub.io should be replaced with the one you get with `Copy link`.
+
+== Known limitations
+  - Anypoint platform, including REST Connect, does not support API fragments for OAS.

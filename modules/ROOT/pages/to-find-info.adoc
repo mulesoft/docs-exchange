@@ -122,6 +122,3 @@ Administrators can save searches visible to anyone in their current business gro
 . To delete a saved search, click the three dots and select *Delete*.
 
 
-
-
-

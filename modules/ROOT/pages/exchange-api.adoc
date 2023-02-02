@@ -335,7 +335,7 @@ The following example uses a previously created category with the name `apiType`
 [source,console]
 ----
 curl -X PUT \
-https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/managed/apiType \
+https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/categories/apiType \
   -H 'Authorization: bearer ANYPOINT_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
