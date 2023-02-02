@@ -4,11 +4,9 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The legacy search experience, which was previously called the old search, is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. This search experience does not include enhanced options for searching by rank, organizations, and lifecycle states. 
+The legacy search experience, which was previously called the old search, is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. This search experience does not include the enhanced options for searching by rank, organizations, and lifecycle states. To use the enhanced search experience, click the *Back to legacy search* button from the landing page.
 
-To access the legacy search, click *Back to legacy search* from the landing page.
-
-Discover assets by searching for specific assets from the landing page of the Exchange catalog. 
+To access the legacy search, click the *Back to legacy search* button from the landing page.
 
 == Display Assets in List or Grid View
 
