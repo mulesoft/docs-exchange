@@ -210,7 +210,9 @@ the reason displays when the match does not occur.
 
 == Search by Types, Tags, Categories, and Custom Fields 
 
-You can enter search text to search for assets. Click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the type menu.
+You can enter a search keyword in the *Search assets* box to find an assets. 
+
+You can click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the *Types* menu.
 
 The search experience uses a query language to search assets by tags, categories, and custom fields.
 
@@ -290,6 +292,7 @@ A search value matches an asset value if either of these is true:
 
 * The search value is entirely lowercase.
 * The letter case of the search value and the asset value match.
+ 
 Examples:
 
 [%header%autowidth.spread]
