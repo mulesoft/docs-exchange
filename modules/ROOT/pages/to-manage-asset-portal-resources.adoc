@@ -6,7 +6,7 @@ endif::[]
 
 You can upload up to 100 resources to an asset portal. Attempting to add more will result in an error. You can delete resources to reduce the number and then add more up to the limit.
 
-Only image resources can be uploaded to assset portals. Allowed image formats are: `bmp`, `gif`, `ico`, `jpe`, `jpeg`, `jpg`, `png`, `svg`, `tif`, `tiff`, or `webp`.
+Only image resources can be uploaded to asset portals. Allowed image formats are: `bmp`, `gif`, `ico`, `jpe`, `jpeg`, `jpg`, `png`, `svg`, `tif`, `tiff`, or `webp`. The size limit for an image resource is 2 MB.
 
 
 These examples show how to list, retrieve, and delete resources from an asset portal with the Exchange Experience API.
