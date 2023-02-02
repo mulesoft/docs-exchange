@@ -79,7 +79,7 @@ To filter search results:
 
 == Sort Search Results
 
-Assets can be sorted by the following options:
+You can sort the ranking of search results. Assets can be sorted by the following options:
 
 * Relevance
 +
