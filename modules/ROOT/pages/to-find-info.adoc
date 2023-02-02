@@ -77,7 +77,7 @@ To filter search results:
 . To clear a filter option, click *Clear filter*.
 . To clear all filter options, click *Clear all filters*.
 
-== Sort
+== Sort Search Results
 
 Assets can be sorted by the following options:
 
