@@ -10,7 +10,7 @@ To access the legacy search, click the *Back to legacy search* button from the l
 
 == Display Assets in List or Grid View
 
-You have an option to display the catalog of assets in list or grid view. List view arranges assets in a list format and grid view displays the assets in tiles. Both views display the asset name, type, rating, and created by information.
+You have the option to display the catalog of assets in list or grid view. List view arranges assets in a list format and grid view displays the assets in tiles. Both views display the asset name, type, rating, and created by information.
 
 == Filter Search Results
 
@@ -26,7 +26,7 @@ You can search only in the Exchange organization that you are currently viewing.
 You can save search criteria that you use often for quick discovery of specific assets.
 
 . Enter a search term and click *Save This Search*.
-. When prompted, give the search a name and select whether the search is an organization search or personal search.
+. When prompted, give the search a name and select whether the search is an organizational search or personal search.
 +
 Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
 . Save the search.
@@ -38,7 +38,7 @@ image::ex2-saved-searches-groups.png[Saved Search Groups]
 
 == Search API Specifications
 
-You can use the following API specification properties are used in search:
+You can use the following API specification properties that are used in search:
 
 * API title
 * Base URI
@@ -130,7 +130,7 @@ Note that the last two searches are the same, because special characters are rem
 
 == Search for Phrases 
 
-You can search for case-insensitive text that begins with each word you specify, put a space between words. This is similar to putting the `*` wildcard regular expression after each word. For example, searching for `mq module` finds any asset that has text that starts with `mq` or `module`.
+You can search for case-insensitive text that begins with each word you specify by adding a space between words. This is similar to putting the `*` wildcard regular expression after each word. For example, searching for `mq module` finds any asset that has text that starts with `mq` or `module`.
 
 Searching for a multiple-word phrase shows assets that have every word in the phrase.
 
@@ -155,7 +155,7 @@ connect:/sales
 
 This table shows how each search term is interpreted based on the values in the asset name,
 asset ID, and tags for an asset. If the search term maps to the values correctly, a match occurs. If not,
-the reason displays when the match does not occur..
+the reason displays when the match does not occur.
 
 [%header%autowidth.spread]
 |===
@@ -168,7 +168,7 @@ the reason displays when the match does not occur..
 |Cisco Connector |cisco-connector |com.cisco.connector.sales
 |Yes, because the tag is split into separate terms.
 |Salesforce API |salesforce-api |muleconnector, MuleConnector |No. `connect` was not found.
-|Salesforce Connec |salesforce-connec |REST |No. `connect` was not found.
+|Salesforce Connect |salesforce-connector |REST |No. `connect` was not found.
 |Validations API |validations-api |connector |No. `sales` was not found.
 |Cisco Presales API |cisco-presales-api |Connector, api |No. `sales` was not found.
 |===
@@ -208,9 +208,9 @@ the reason displays when the match does not occur.
 
 == Search by Types, Tags, Categories, and Custom Fields 
 
-You can enter a search keyword in the *Search assets* box to find an assets. 
+You can enter a search keyword in the *Search assets* box to find assets. 
 
-You can click *All Types* to set a filter for specific asset types, or combine search text with the filters listed in the *Types* menu.
+You can click *All Types* to set a filter for specific asset types or combine search text with the filters listed in the *Types* menu.
 
 The search experience uses a query language to search assets by tags, categories, and custom fields.
 
