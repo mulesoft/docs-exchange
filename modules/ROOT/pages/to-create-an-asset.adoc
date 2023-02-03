@@ -28,7 +28,6 @@ Exchange fully supports RAML fragments. Currently, Exchange does not support imp
 This illustration summarizes how some of the asset types (in green) appear in Exchange:
 
 image::ex2-exchange-assets.png[]
-
 == Create an API Asset
 
 An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
@@ -40,13 +39,12 @@ To create an API asset:
 . In Exchange, select *Publish new asset*.
 . Enter the asset portal name.
 . Select the asset type from the drop-down list:
-+
 
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
 * REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
 * AsyncAPI: Provide an AsyncAPI specification file in a YAML (.yaml) file.
-* API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
+* API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml). 
 * API Spec Fragment - JSON: Provide an API Fragment JSON specification (.json) file. 
 * API Spec Fragment - OpenAPI Specification (OAS): Provide an API Fragment OpenAPI specification file either JSON or YAML.
 * HTTP API: This asset does not require a file. This asset type provides an API endpoint that is defined by API Manager.
