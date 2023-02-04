@@ -6,7 +6,7 @@ endif::[]
 
 Use categories to organize Exchange assets into groups to improve asset browsing and discovery.
 
-For example, a category called API Type with possible values System API, Experience API,
+For example, a category named API Type with possible values System API, Experience API,
 and Integration API is applied to assets of type REST API, SOAP API, and HTTP API:
 
 image::ex-categories-api-type.png[]
