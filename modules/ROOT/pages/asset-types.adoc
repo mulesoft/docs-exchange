@@ -33,6 +33,10 @@ Packaged modules and mappings to share and reuse across applications.
 +
 Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
 
+* GraphQL API 
++
+A schema definition that contains the object types and definitions that are used to interact with the API through the GraphQL specification. GraphQL enables you to query an API that supports this language in a much more flexible way than REST.
+
 * HTTP APIs
 +
 A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
