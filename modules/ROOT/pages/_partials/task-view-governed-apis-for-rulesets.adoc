@@ -17,17 +17,11 @@ Depending on the access you have to the APIs in Exchange, you might see only the
 To view the governed API list for a ruleset:
 
 . Select a ruleset asset that is used in an API Governance profile. 
-. Select *Governed APIs* in the navigation bar to see whether each listed API version:
-
-* Is governed by multiple centralized rulesets and by how many  
-* Passed all the rules in the ruleset
-* If governed by multiple rulesets, passes all the rules in those rulesets
+. Select *Governed APIs* in the navigation bar to see whether each listed API version passes all the rules in the ruleset.
 +
 . Select from the filter menus to refine the list of APIs. Default settings are:
-* Any API Type
-* Any Organization
-* Any Lifecycle State
-* Any Ruleset Status
 * All APIs
+* Your root organization
+* Any Ruleset Status
 +
 . To view an API's *Conformance Status* details, click the open external link icon (image:open-external-link-icon.png[width=20,height=18,fit=line]). 
