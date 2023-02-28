@@ -6,9 +6,9 @@ endif::[]
 :page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
 :page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
 
-Anypoint Exchange is a curated catalog of reusable assets such as APIs, policies, API spec fragments, API groups, templates, examples, custom assets, and integration assets such as connectors. You can catalog (publish), share, discover, learn about, and reuse assets within your organization to facilitate collaboration, boost productivity, and promote standards.
+Anypoint Exchange is a curated catalog of reusable assets such as APIs, policies, API spec fragments, API groups, GraphQL APIs, templates, examples, custom assets, rulesets, and integration assets such as connectors. You can catalog (publish), share, discover, learn about, and reuse assets within your organization to facilitate collaboration, boost productivity, and promote standards.
 
-image:ex2-old-search-landing.png[Exchange landing page]
+image:exchange-landing-page.png[Exchange landing page]
 
 Use Exchange to discover, share, and incorporate assets and resources into your applications. Exchange helps you create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
 
@@ -20,7 +20,7 @@ Assets in the *Provided by MuleSoft* organization are created by MuleSoft and it
 
 You can get started either by searching for an existing asset or creating a new one.
 
-. From https://anypoint.mulesoft.com/exchange/[Exchange], either search by type of assets or enter the name of a known asset in the *Search* field.
+. From https://anypoint.mulesoft.com/exchange/[Exchange], either search by type of assets or enter the name of a known asset in the *Search assets* field.
 . Select an asset from the search results view.
 . Review the description of the asset.
 
