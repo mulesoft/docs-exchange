@@ -80,6 +80,12 @@ This is similar to using a program such as Postman to specify custom HTTP header
 
 include::partial$task-view-conformance-status.adoc[]
 
+== View Governed APIs for a Ruleset
+
+// Include the governed apis for rulesets page partial doc
+
+include::exchange::partial$task-view-governed-apis-for-rulesets.adoc[]
+
 
 == Test an API with API Notebook
 
@@ -90,3 +96,7 @@ Many APIs have an API notebook for interactive testing.
 . Click *Play* to test the method in the code example.
 . Exchange shows the results in real time.
 . Experiment with the example in the code block to try different parameters and values.
+
+== See Also
+
+xref:access-management::permissions-by-product.adoc#exchange[Permissions Available in Anypoint Platform, Exchange].
