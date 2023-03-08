@@ -53,7 +53,7 @@ This example shows the `api-catalog publish-asset` command with the following fl
 The example command sends the standard output to `mycatdryrun.log`. 
 
 ----
-> api-catalog publish-asset --host=anypoint.mulesoft.com -d catalog.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --client-id=1787c36ab544466698e380131040faad --client-secret=2dA616efca1E4181A2A77BBF046868BE --dry-run --verbose >> mycatdryrun.log
+> api-catalog publish-asset --host=anypoint.mulesoft.com -d catalog.yaml --organization=1234abc-b34a-7cd3-4s32-12345abc2345 --client_id=1787c36ab544466698e380131040faad --client_secret=2dA616efca1E4181A2A77BBF046868BE --dry-run --verbose >> mycatdryrun.log
 
 ----
 
