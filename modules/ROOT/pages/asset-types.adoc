@@ -53,11 +53,11 @@ RAML or OAS files that specify APIs referenced by an HTTP Request connector to e
 +
 ** RPA Activity Templates
 +
-Activity templates are reusable code within RPA to standardize most used activity steps and make them available to other developers in the organization. Binary file type is .calw.
+Activity templates are reusable code within RPA to standardize most used activity steps and make them available to other developers in the organization. File type is .calw.
 
 ** RPA Process templates
 +
-Templates for RPA processes that can be imported into RPA Builder as projects and can be further customized before deploying to RPA bots. Process templates are built on common patterns for RPA to build automations faster. Binary file type is .crpa.
+Templates for RPA processes that can be imported into RPA Builder as projects and can be further customized before deploying to RPA bots. Process templates are built on common patterns for RPA to build automations faster. File type is .crpa. 
 
 * Ruleset
 +
