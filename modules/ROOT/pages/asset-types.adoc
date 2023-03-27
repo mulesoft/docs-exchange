@@ -57,7 +57,7 @@ Activity templates are reusable code within RPA to standardize most used activit
 
 ** RPA Process templates
 +
-Templates for RPA processes that can be imported into RPA Builder as projects and can be further customized before deploying to RPA bots. Process templates are built on common patterns for RPA to build automations faster. File type is .crpa. 
+Templates for RPA processes that can be imported into RPA Builder as projects and can be further customized before deploying to RPA bots. Process templates are built on common patterns for RPA to build automation faster. File type is .crpa. 
 
 * Ruleset
 +
