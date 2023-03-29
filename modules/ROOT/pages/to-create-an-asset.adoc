@@ -37,7 +37,7 @@ Creating an asset sets the asset type, which cannot be changed. All versions of 
 To create an API asset:
 
 . In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
+. Enter a name for the asset.
 . Select the asset type from the drop-down list:
 
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
@@ -104,7 +104,7 @@ MuleSoft recommends deleting all old Custom assets containing files of types tha
 To create a custom asset:
 
 . In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
+. Enter a name for the asset.
 . Select the asset type *Custom* from the drop-down list.
 . To select the file to upload, click *Choose the file*.
 . To edit the *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
@@ -119,7 +119,7 @@ Policies enforce regulations to help manage security, control traffic, and impro
 To publish a custom policy definition:
 
 . In Exchange, click *Publish new asset*.
-. Enter the asset name.
+. Enter a name for the asset.
 . Select the *Policy* asset type from the drop-down list.
 
 . Click *Choose File* to select a JSON schema file.
@@ -149,10 +149,40 @@ A GraphQL API schema designed with Apollo GraphQL specific directives and struct
 To create a GraphQL API:
 
 . In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
-. From the drop-down list, select the asset type *GraphQL API* .
+. Enter a name for the asset.
+. From the drop-down list, select the asset type *GraphQL API*.
 . Select which GraphQL API schema to upload, GraphQL API schema or GraphQL Apollo API schema.
-. To select the file to upload, click *Choose the file* .
+. To select the file to upload, click *Choose the file*.
+. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
+
+== Create an RPA Activity Template Asset
+Activity templates are reusable code within RPA to standardize the most used activity steps and make them available to other developers in the organization. These templates are .cawl files that are imported in the RPA Activity library for developers to use as part of their RPA processes.
+
+To create an RPA activity template asset:
+
+. In Exchange, select *Publish new asset*.
+. Enter a name for the asset.
+. From the drop-down list, select the asset type *RPA Activity Template* .
+. To select the .cawl file to upload, click *Choose the file*.
+. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
+
+== Create an RPA Process Template Asset
+Templates for RPA processes are imported into RPA Builder as projects and can be further customized before deploying to RPA bots. Process templates are built on common patterns for RPA to build automation faster. These templates are .crpa files that are exported from RPA Builder to share with other developers.
+
+To create an RPA activity template asset:
+
+. In Exchange, select *Publish new asset*.
+. Enter a name for the asset.
+. From the drop-down list, select the asset type *RPA Process Template*.
+. To select the .crpa file to upload, click *Choose the file*.
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
@@ -162,9 +192,11 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 == Create a Ruleset Asset
 Rulesets are a group of rules or guidelines that define an application, for example best practices or industry-specific standards. Add a zip file with multiple YAML files that describe the new ruleset.
 
+To create a ruleset asset:
+
 . In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
-. From the drop-down list, select the asset type *Ruleset* .
+. Enter a name for the asset.
+. From the drop-down list, select the asset type *Ruleset*.
 . To select the file to upload, click *Choose the file* .
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
