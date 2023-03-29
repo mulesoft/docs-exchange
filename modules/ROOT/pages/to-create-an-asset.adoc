@@ -106,7 +106,7 @@ To create a custom asset:
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . Select the asset type *Custom* from the drop-down list.
-. To select the file to upload, click *Choose the file*.
+. To select the file to upload, click *Choose file*.
 . To edit the *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
@@ -152,7 +152,7 @@ To create a GraphQL API:
 . Enter a name for the asset.
 . From the drop-down list, select the asset type *GraphQL API*.
 . Select which GraphQL API schema to upload, GraphQL API schema or GraphQL Apollo API schema.
-. To select the file to upload, click *Choose the file*.
+. To select the file to upload, click *Choose file*.
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
@@ -167,7 +167,7 @@ To create an RPA activity template asset:
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . From the drop-down list, select the asset type *RPA Activity Template* .
-. To select the .cawl file to upload, click *Choose the file*.
+. To select the .cawl file to upload, click *Choose file*.
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
@@ -182,7 +182,7 @@ To create an RPA activity template asset:
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . From the drop-down list, select the asset type *RPA Process Template*.
-. To select the .crpa file to upload, click *Choose the file*.
+. To select the .crpa file to upload, click *Choose file*.
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
@@ -197,7 +197,7 @@ To create a ruleset asset:
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . From the drop-down list, select the asset type *Ruleset*.
-. To select the file to upload, click *Choose the file* .
+. To select the file to upload, click *Choose file*.
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
@@ -237,7 +237,7 @@ If you have contributor or admin access to an asset, you can add a new version f
 * API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
 * HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
 . For RAML, API Spec Fragment, OAS, and WSDL assets:
-* Select Choose File to locate the API specification file.
+* Select *Choose File* to locate the API specification file.
 * Select the main file of the API.
 . (Optional) Choose a file to upload.
 . Enter the *Version* (asset version).
