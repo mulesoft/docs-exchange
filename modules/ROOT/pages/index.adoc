@@ -4,7 +4,6 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
-:page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
 
 Anypoint Exchange is a curated catalog of reusable assets. APIs,  API spec fragments, API groups, custom assets, examples, GraphQL APIs, integration assets such as connectors, policies, RPA assets, rulesets, and templates are some of the types that are supported in Exchange. See xref:asset-types.adoc[Asset Types] for more information about each type of asset. You can catalog (publish), share, discover, learn about, and reuse assets within your organization to facilitate collaboration, boost productivity, and promote standards.
 
