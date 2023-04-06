@@ -160,13 +160,13 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select *Publish*.
 
 == Create an RPA Activity Template Asset
-Activity templates are reusable code within RPA to standardize the most used activity steps and make them available to other developers in the organization. These templates are .cawl files that are imported in the RPA Activity library for developers to use as part of their RPA processes.
+Activity templates are reusable code within RPA that standardize the most used activity steps and make them available to other developers in the organization. These templates are .cawl files that are imported in the RPA Activity library for developers to use as part of their RPA processes.
 
 To create an RPA activity template asset:
 
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
-. From the drop-down list, select the asset type *RPA Activity Template* .
+. From the drop-down list, select the asset type *RPA Activity Template*.
 . To select the .cawl file to upload, click *Choose file*.
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
