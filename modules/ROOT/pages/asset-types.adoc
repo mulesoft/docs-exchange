@@ -53,7 +53,7 @@ RAML or OAS files that specify APIs referenced by an HTTP Request connector to e
 +
 ** RPA Activity Templates
 +
-Activity templates are reusable code within RPA to standardize most used activity steps and make them available to other developers in the organization. File type is .calw.
+Activity templates are reusable code within RPA to standardize the most used activity steps and make them available to other developers in the organization. File type is .calw.
 
 ** RPA Process templates
 +
