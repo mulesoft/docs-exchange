@@ -37,15 +37,15 @@ Creating an asset sets the asset type, which cannot be changed. All versions of 
 To create an API asset:
 
 . In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
+. Enter a name for the asset.
 . Select the asset type from the drop-down list:
 
-* REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
-* REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
-* SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
-* AsyncAPI: Provide an AsyncAPI specification file in a YAML (.yaml) file.
-* API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml). 
-* API Spec Fragment - JSON: Provide an API Fragment JSON specification (.json) file. 
+* REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (`.raml`).
+* REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (`.yaml`) or JSON (`.json`) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
+* SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (`.wsdl`) or XML (`.xml`) file.
+* AsyncAPI: Provide an AsyncAPI specification file in a YAML (`.yaml`) file.
+* API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (`.raml`). 
+* API Spec Fragment - JSON: Provide an API Fragment JSON specification (`.json`) file. 
 * API Spec Fragment - OpenAPI Specification (OAS): Provide an API Fragment OpenAPI specification file either JSON or YAML.
 * HTTP API: This asset does not require a file. This asset type provides an API endpoint that is defined by API Manager.
 +
@@ -56,7 +56,7 @@ To create an API asset:
 +
 If the file is a ZIP, the selected main file must be in the root directory of the ZIP file. If the file is not a ZIP or if the file is a ZIP file with only one main file, then the main file is selected automatically.
 +
-. To edit *GroupId*, *AssetId*, *Version*, and *API version* (GAV), click *Advanced*.
+. If you want to edit the *GroupId*, *AssetId*, *Version*, and *API version* (GAV), click *Advanced*.
 +
 Exchange generates the group ID, asset ID, and version (GAV) for you, and you can change these values as needed. You can change an API's asset version and version separately. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
@@ -104,10 +104,10 @@ MuleSoft recommends deleting all old Custom assets containing files of types tha
 To create a custom asset:
 
 . In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
+. Enter a name for the asset.
 . Select the asset type *Custom* from the drop-down list.
-. To select the file to upload, click *Choose the file*.
-. To edit the *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
+. If you want to upload a file, click *Choose file*.
+. If you want to edit the *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
@@ -119,12 +119,12 @@ Policies enforce regulations to help manage security, control traffic, and impro
 To publish a custom policy definition:
 
 . In Exchange, click *Publish new asset*.
-. Enter the asset name.
+. Enter a name for the asset.
 . Select the *Policy* asset type from the drop-down list.
 
 . Click *Choose File* to select a JSON schema file.
 . Click *Choose File* to select a YAML file.
-. To edit the *GroupId*, *AssetId*, *Version*, and API version (GAV), click *Advanced*. 
+. If you want to edit the *GroupId*, *AssetId*, *Version*, and API version (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version (GAV). You can change these values. You can also change an API asset’s version and API version separately. The advanced settings are most often used to change the asset version.
 . From Lifecycle state, select *Stable*. 
@@ -149,11 +149,41 @@ A GraphQL API schema designed with Apollo GraphQL specific directives and struct
 To create a GraphQL API:
 
 . In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
-. From the drop-down list, select the asset type *GraphQL API* .
+. Enter a name for the asset.
+. From the drop-down list, select the asset type *GraphQL API*.
 . Select which GraphQL API schema to upload, GraphQL API schema or GraphQL Apollo API schema.
-. To select the file to upload, click *Choose the file* .
-. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
+. If you want to select a file to upload, click *Choose file*.
+. If you want to edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
+
+== Create an RPA Activity Template Asset
+Activity templates are reusable code within RPA that standardize the most used activity steps and make them available to other developers in the organization. These templates are `.cawl` files that are imported in the RPA Activity library for developers to use as part of their RPA processes.
+
+To create an RPA activity template asset:
+
+. In Exchange, select *Publish new asset*.
+. Enter a name for the asset.
+. From the drop-down list, select the asset type *RPA Activity Template*.
+. If you want to select a `.cawl` file to upload, click *Choose file*.
+. If you want to edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
+
+== Create an RPA Process Template Asset
+Templates for RPA processes are imported into RPA Builder as projects and are customizable before deploying to RPA bots. Process templates are built on common patterns for RPA to build automation faster. These templates are `.crpa` files that are exported from RPA Builder to share with other developers.
+
+To create an RPA activity template asset:
+
+. In Exchange, select *Publish new asset*.
+. Enter a name for the asset.
+. From the drop-down list, select the asset type *RPA Process Template*.
+. If you wan to select a `.crpa` file to upload, click *Choose file*.
+. If you want to edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
@@ -162,11 +192,13 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 == Create a Ruleset Asset
 Rulesets are a group of rules or guidelines that define an application, for example best practices or industry-specific standards. Add a zip file with multiple YAML files that describe the new ruleset.
 
+To create a ruleset asset:
+
 . In Exchange, select *Publish new asset*.
-. Enter the asset portal name.
-. From the drop-down list, select the asset type *Ruleset* .
-. To select the file to upload, click *Choose the file* .
-. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
+. Enter a name for the asset.
+. From the drop-down list, select the asset type *Ruleset*.
+. If you want to select a file to upload, click *Choose file*.
+. If you want to edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
@@ -205,11 +237,11 @@ If you have contributor or admin access to an asset, you can add a new version f
 * API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
 * HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
 . For RAML, API Spec Fragment, OAS, and WSDL assets:
-* Select Choose File to locate the API specification file.
+* Select *Choose File* to locate the API specification file.
 * Select the main file of the API.
-. (Optional) Choose a file to upload.
-. Enter the *Version* (asset version).
-. (Optional) Select on option for *Lifecycle state*. The default is *Stable*.
+. If you want to select a file to upload, click *Choose file*.
+. Enter the version for the asset.
+. Select on option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
 The new version of the asset has the same name, icon, and description as the previous version. Any changes to these properties apply to all versions of the asset.
