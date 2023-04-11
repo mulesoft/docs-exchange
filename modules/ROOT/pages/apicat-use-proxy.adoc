@@ -1,32 +1,48 @@
 = Using API Catalog CLI with a Network Proxy
+
+
 API Catalog CLI can be run through a network proxy to add a layer of security. To use the API Catalog CLI with a proxy server, configure the `HTTP_PROXY` and `HTTPS_PROXY` environment variables with the hostname or IP addresses of your proxy servers as shown in the following sections.
 
 
 == Configure a Proxy Server Without Authentication
+
 To configure a proxy server that does not require authentication, use the following commands:
+
 * Linux, macOS, or Unix
+
 +
 --
-`$ export HTTP_PROXY=http://__proxy-server__:80`
+`$ export HTTP_PROXY=http://__proxy-server__:80` +
 `$ export HTTPS_PROXY=https://__proxy-server__:443`
 --
 * Windows
+
 +
 --
-`> set HTTP_PROXY=http://__proxy-server__:80`
+`> set HTTP_PROXY=http://__proxy-server__:80` +
 `> set HTTPS_PROXY=https//__proxy-server__:443`
 --
+
+
 == Configure a Proxy Server With Authentication
+
+
 To configure a proxy server that requires authentication, use these commands:
+
 * Linux, macOS, or Unix
+
+
 +
 --
-`$ export HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
+`$ export HTTP_PROXY=http://__username__:__password__@__proxy-server__:80` +
 `$ export HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --
+
+
 * Windows
 +
+
 --
-`> set HTTP_PROXY=http://__username__:__password__@__proxy-server__:80`
+`> set HTTP_PROXY=http://__username__:__password__@__proxy-server__:80` +
 `> set HTTPS_PROXY=https://__username__:__password__@__proxy-server__:443`
 --

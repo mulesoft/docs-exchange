@@ -41,6 +41,8 @@
   ** xref:apicat-get-started.adoc[Get Started with API Catalog CLI]
   ** xref:apicat-install-api-catalog-cli.adoc[Install API Catalog CLI]
   ** xref:apicat-configure-cli-autocomplete.adoc[Configure Command Autocompletion]
+  ** xref:apicat-use-proxy.adoc[Use API Catalog CLI with a Network Proxy
+]
   ** xref:apicat-use-api-catalog-cli.adoc[General Use of Commands and Flags]
   ** xref:apicat-create-descriptor-file-cli.adoc[Create or Update Descriptor Files Using the CLI] 
   ** xref:apicat-create-descriptor-file-manually.adoc[Create or Update Descriptor Files Manually]
