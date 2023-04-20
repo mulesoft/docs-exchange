@@ -49,17 +49,6 @@ From the asset details pane, you can collapse and expand metadata such as versio
 
 The documentation page displays the asset documentation. The documentation can be edited by an administrator or the asset owner by clicking *Edit documentation*. 
 
-== View Assets by Business Group
-
-A system administrator groups individuals within an organization into business groups. Each group has its own Exchange assets. 
-
-To view the business groups, log in to Anypoint Platform and click a group name from the taskbar:
-
-image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-down menu]
-
-An Exchange administrator sets the groups that this menu displays for each user.
-
-If you cannot find an asset in the current business group scopes, search in other scopes. In the left navigation menu click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
 
 == View REST API Elements in an Asset
 
@@ -73,6 +62,34 @@ image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
 +
 This is similar to using a program such as Postman to specify custom HTTP headers and test each API's method using the API's endpoint.
 . To connect the API to one of your applications and use the API to send and receive data, click *Request access*.
+
+== Search API Specification and Pages
+
+The assets details page enables you to find specific information within the pages and API specification of an asset using the CTRL+F or the command+F keyboard shortcut. In Exchange, this enhanced shortcut overrides the native browser shortcut, which only searches for words and phrases on the current page. To quickly find the information you need, use this enhanced shortcut to search the content of every page and the API specification of an asset.
+
+To search pages and the API specification using the enhanced find shortcut:
+  
+. In the asset details page, press CTRL+f or command+f.
+. . In the *Search content* box, enter a search term or phrase.
+. Click a search result from the list.
+. Use the up and down arrows to move through all the occurrences of the search term within the search results.
+. Click the *X* to close the Search content box.
+
+The enhanced keyboard shortcut looks for terms or phrases in:
+
+* Pages
+* Home
+* Additional pages
+* Specification
+** Summary
+** Endpoints
+** Documentation
+** Types
+** Security
+
+When you enter a search term or phrase in the search box, the search results box displays the sections within Pages and Specification that contain the search terms entered. Click the search result to open the page with the search term or phrase highlighted. The search result shows the number of search-term matches in each page. Use the arrows to move up or down in the list of search results and to the next page.
+
+For example, enter the term *ruleset* in the Search content box. Under Pages, there are three search results for ruleset in the Home page. Click *Home* to open the page. Use the up and down arrows to find all of the highlighted instances of ruleset in the Home page.
 
 == View Conformance Status 
 

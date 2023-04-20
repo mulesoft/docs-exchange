@@ -15,6 +15,18 @@ Exchange assets are accessible from many places like Anypoint Studio (connectors
 
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by Mulesoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
+== View Assets by Business Group
+
+A system administrator groups individuals within an organization into business groups. Each group has its own Exchange assets. 
+
+To view the business groups, log in to Anypoint Platform and click a group name from the taskbar:
+
+image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-down menu]
+
+An Exchange administrator sets the groups that this menu displays for each user.
+
+If you cannot find an asset in the current business group scopes, search in other scopes. In the left navigation menu click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
+
 == Get Started
 
 You can get started either by searching for an existing asset or creating a new one.
