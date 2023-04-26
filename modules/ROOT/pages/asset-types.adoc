@@ -9,6 +9,8 @@ The following asset types are supported in Exchange:
 * API Groups
 +
 A set of APIs bundled into a single asset.
++
+Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
 * API Spec Fragments
 +
 A part of an API specification that is reused to build a complete API specification.
@@ -40,8 +42,7 @@ A schema definition that contains the object types and definitions that are used
 * HTTP APIs
 +
 A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
-+
-Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
+
 * Policies
 +
 Configuration modules to extend the functionality of an API and enforce capabilities such as security.
