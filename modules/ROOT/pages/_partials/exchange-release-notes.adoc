@@ -1,0 +1,1 @@
+include::release-notes::partial$mq/exchange-rn-landing-page.adoc[]
