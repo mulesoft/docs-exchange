@@ -81,11 +81,11 @@ The enhanced keyboard shortcut looks for terms or phrases in:
 * Home
 * Additional pages
 * Specification
-** Summary
-** Endpoints
-** Documentation
-** Types
-** Security
+* Summary
+* Endpoints
+* Documentation
+* Types
+* Security
 
 When you enter a search term or phrase in the search box, the search results box displays the sections within Pages and Specification that contain the search terms entered. Click the search result to open the page with the search term or phrase highlighted. The search result shows the number of search-term matches in each page. Use the arrows to move up or down in the list of search results and to the next page.
 
