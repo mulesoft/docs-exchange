@@ -93,6 +93,8 @@ For example, enter the term *ruleset* in the Search content box. Under Pages, th
 
 image::ex-search-spec-and-pages.png[Example asset details page using CTRL+F or the command+F keyboard shortcut]
 
+image::ex-search-spec-and-pages.png[Example asset details page using CTRL+F or the command+F keyboard shortcut]
+
 == View Conformance Status 
 
 // Include the conformance status page partial doc
