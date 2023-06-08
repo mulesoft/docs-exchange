@@ -69,31 +69,30 @@ The assets details page enables you to find specific information within the page
 
 To search pages and the API specification using the enhanced find shortcut:
   
-. In the asset details page, press CTRL+f or command+f.
-. . In the *Search content* box, enter a search term or phrase.
+. In the asset details page, press CTRL+F or Command+F.
+. In the *Search content* box, enter a search term or phrase.
 . Click a search result from the list.
-. Use the up and down arrows to move through all the occurrences of the search term within the search results.
+. Use the arrows to move through all the occurrences of the search term within the search results.
 . Click the *X* to close the Search content box.
 
 The enhanced keyboard shortcut looks for terms or phrases in:
 
 * Pages
-* Home
-* Additional pages
+** Home
+** Additional pages
 * Specification
-* Summary
-* Endpoints
-* Documentation
-* Types
-* Security
+** Summary
+** Endpoints
+** Documentation
+** Types
+** Security
 
 When you enter a search term or phrase in the search box, the search results box displays the sections within Pages and Specification that contain the search terms entered. Click the search result to open the page with the search term or phrase highlighted. The search result shows the number of search-term matches in each page. Use the arrows to move up or down in the list of search results and to the next page.
 
-For example, enter the term *ruleset* in the Search content box. Under Pages, there are three search results for ruleset in the Home page. Click *Home* to open the page. Use the arrows to find all of the highlighted instances of ruleset in the Home page.
+For example, enter the term `ruleset` in the *Search content* box. From Pages, there are three search results for ruleset in the Home page. Click *Home* to open the page. Use the arrows to find all of the highlighted instances of ruleset in the Home page.
 
 image::ex-search-spec-and-pages.png[Example asset details page using CTRL+F or the command+F keyboard shortcut]
 
-image::ex-search-spec-and-pages.png[Example asset details page using CTRL+F or the command+F keyboard shortcut]
 
 == View Conformance Status 
 
