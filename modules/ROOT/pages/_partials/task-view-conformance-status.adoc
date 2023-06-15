@@ -2,9 +2,9 @@
 
 You can view governance conformance status in Exchange for versions of API definitions. The status is one of the following:
 
-* *Conformant*: The API definition is conformant to governance rulesets against which it has been validated.
-* *Not Conformant*: The API definition is not conformant to governance rulesets against which it has been validated.
-* *Not Validated*: The API definition is not validated against governance rulesets.
+* *Conformant*: The API specification is conformant to governance rulesets against which it has been validated.
+* *Not Conformant*: The API specification is not conformant to governance rulesets against which it has been validated.
+* *Not Validated*: The API specification is not validated against governance rulesets.
 
 Conformance status can be viewed in Exchange as follows:
 
@@ -31,7 +31,7 @@ From the conformance status page, you can:
 * For nonconformant APIs, click one of the following:
 ** *Fix in Design Center*
 + 
-After your API definition opens in Design Center, add the listed rulesets as dependencies and view the conformance messages in the *Project Errors* section to fix and republish your API definition.
+After your API specification opens in Design Center, add the listed rulesets as dependencies and view the conformance messages in the *Project Errors* section to fix and republish your API specification.
 ** *See instructions for Anypoint CLI*
 +
-Follow the instructions on the page to copy, update, and run the Anypoint CLI commands to add the listed rulesets as dependencies and fix and republish your API definition.
+Follow the instructions on the page to copy, update, and run the Anypoint CLI commands to add the listed rulesets as dependencies and fix and republish your API specification.
