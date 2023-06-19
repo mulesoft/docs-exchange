@@ -1,0 +1,21 @@
+= Usage and Engagement Metrics
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Exchange provides usage and engagement metrics for administrators and asset owners to gain insight into the consumption and user engagement of their assets. Administrators can view the *Usage and engagement metrics* dashboard for metrics of all the API specification fragments and REST API assets in an organization. Administrators and asset owners with the Exchange contributor permission can view usage and engagement metrics for a specific asset version from the asset details page. You can share data by exporting metrics to a CSV file.
+
+Exchange assets capture usage and engagement metrics to:
+
+* Drive growth, engagement, and reuse across the entire catalog.
++
+Access usage metrics and engagement scores to get a composite view into how your assets are being utilized.
+
+* Track and manage asset adoption with out of the box dashboards.
++
+View performance analytics of your entire asset library in a single location.
+
+* Leverage engagement scores to improve the product experience.
++
+Use factor real-time usage statistics to refine your search and discovery results.

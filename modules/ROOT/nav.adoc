@@ -22,6 +22,7 @@
  ** xref:publish-an-http-api.adoc[Publish an HTTP API Asset]
  ** xref:add-policy-implementation-files-to-published-policy-definition.adoc[Add Policy Implementation Files to Published Custom Policy]
  ** xref:exchange2-faq.adoc[FAQ]
+* xref:usage-and-engagement-metrics.adoc[Usage and Engagement Metrics for Assets] 
 * xref:about-api-use.adoc[Consume an API]
  ** xref:about-my-applications.adoc[My Applications]
  ** xref:to-request-access.adoc[Request Access]
