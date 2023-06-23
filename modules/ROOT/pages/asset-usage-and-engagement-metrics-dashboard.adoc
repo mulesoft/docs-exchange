@@ -55,6 +55,8 @@ To view the data you need, refine API Specification Fragments or REST API assets
 To view metrics:
 
 .  In the navigation bar in Exchange, click *Asset engagement*.
++ 
+image::ex-nav-asset-engagement.png[Asset engagement option in navigation bar,15%,5%]
 . Select a date range from 7 days, 30 days, or 60 days.
 +
 The default date range is the last 7 days.

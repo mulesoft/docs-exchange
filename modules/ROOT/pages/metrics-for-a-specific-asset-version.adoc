@@ -53,8 +53,8 @@ To view usage and engagement metrics for the asset versions of API Specification
 +
 The asset details page displays the asset metadata.
 . In the navigation bar, click *Asset versions engagement*.
-
-image::ex-nav-asset-versions-engagement.png[The navigation bar with Asset Versions Engagement option]
++
+image::ex-nav-asset-versions-engagement.png[The navigation bar with Asset Versions Engagement option,15%,5%]
 +
 The Asset versions engagement page displays.
 . To filter by date, select a date range from 7 days, 30 days, or 60 days.
