@@ -7,7 +7,7 @@ endif::[]
 Administrators and asset owners with contributor permission can view usage details for a specific API specification and REST API assets and each version on the asset details page. 
 
 The following graphic shows the asset details page with usage and engagement metrics for a REST API asset:
-//screen capture placeholder
+
 
 The following data is collected and analyzed:
 
@@ -53,7 +53,8 @@ To view usage and engagement metrics for the asset versions of API Specification
 +
 The asset details page displays the asset metadata.
 . In the navigation bar, click *Asset versions engagement*.
-//nav bar with asset versions engagement highlighted
+
+image::ex-nav-asset-versions-engagement.png[The navigation bar with Asset Versions Engagement option]
 +
 The Asset versions engagement page displays.
 . To filter by date, select a date range from 7 days, 30 days, or 60 days.

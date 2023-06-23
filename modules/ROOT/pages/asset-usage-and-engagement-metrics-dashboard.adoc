@@ -8,8 +8,8 @@ Exchange administrators can view usage and engagement metrics for API specificat
 
 The dashboard displays the metrics for the top assets for a period of the last 7 days, 30 days, or 60 days that are ranked by the most consumption events. You can filter the top assets by API Specification and REST API types and by one or more organizations. Export metric data into a CSV file by clicking CSV to Export.
 
-The following graphic shows the Usage and engagement metrics dashboard: 
-//screen capture placeholder
+//screen capture placeholder The following graphic shows the Usage and engagement metrics dashboard: 
+
 
 The following data is collected and analyzed:
 
