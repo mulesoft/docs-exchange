@@ -30,11 +30,12 @@ Conformance status appears for all REST APIs and AsyncAPIs. Status can be Confor
 +
 The engagement contribution is the percentage of usage of the given asset patch or minor version with regards to its respective minor or major version.
 * Downloads
++
 The number of times the asset was downloaded from Exchange. You can sort by ascending or descending order. 
-* Imports from API Designer
+* API Designer imports
 +
 The number of times the asset was imported into Design Center. You can sort by ascending or descending order.
-* Imports from Studio
+* Studio imports
 +
 The number of times the asset was imported into Studio. You can sort by ascending or descending order.
 * All-time Stats
