@@ -16,9 +16,9 @@ Access usage metrics and engagement scores to get a composite view into how your
 +
 View performance analytics of your entire asset library in a single location.
 
-* Leverage engagement scores to improve the product experience.
-+
-Use factor real-time usage statistics to refine your search and discovery results.
+//* Leverage engagement scores to improve the product experience.
+//+
+//Use factor real-time usage statistics to refine your search and discovery results.
 
 == See Also
 
