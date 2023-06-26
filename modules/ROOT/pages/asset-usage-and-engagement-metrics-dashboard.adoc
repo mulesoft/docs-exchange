@@ -64,6 +64,8 @@ The default date range is the last 7 days.
 . To filter by an organization, click *Organizations*.
 . To search for an organization, enter the name of an organization in the *Search* box.
 . To filter by assets from your organization, select *My organizations* or select one or more organizations.
++
+image::ex-my-organizations.png[My organizations menu,15%,5%]
 . Click *Apply*.
 +
 The dashboard populates with the filter criteria.
