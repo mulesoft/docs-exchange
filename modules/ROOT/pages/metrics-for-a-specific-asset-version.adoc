@@ -38,7 +38,7 @@ The number of times the asset was imported into Design Center. You can sort by a
 * Studio imports
 +
 The number of times the asset was imported into Studio. You can sort by ascending or descending order.
-* All-time Stats
+* All-time stats
 ** Dependents
 +
 The number of dependent assets since the version was created.
