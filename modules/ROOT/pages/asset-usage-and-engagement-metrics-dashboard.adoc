@@ -76,3 +76,7 @@ The asset details page displays the usage and engagement metric information for 
 +
 The dialog displays the list of version dependents for that asset. 
 . To export the usage data, click *Export to CSV*.
+
+== See Also
+
+* xref:metrics-for-a-specific-asset-version.adoc[Metrics for a Specific Asset and Version]
