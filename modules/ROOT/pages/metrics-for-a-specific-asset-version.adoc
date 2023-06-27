@@ -49,9 +49,9 @@ The number of approved contracts since the version was created.
 
 == Viewing Asset Version Engagement
 
-To view usage and engagement metrics for the asset versions of API Specification Fragments and REST APIs:
+To view usage and engagement metrics for the asset versions of API specification fragments and REST APIs:
 
-. In the Exchange catalog, select an API Specification or REST API.
+. In the Exchange catalog, select an API specification fragment or REST API.
 +
 The asset details page displays the asset metadata.
 . In the navigation bar, click *Asset versions engagement*.
