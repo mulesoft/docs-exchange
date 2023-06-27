@@ -24,7 +24,7 @@ The date that the asset was created.
 * Lifecycle state
 +
 Which state the asset is currently in. The states are In Development, Stable, or Deprecated.
-* Conformance status
+* Conformance 
 +
 Conformance status appears for all REST APIs and AsyncAPIs. Status can be Conformant, Not Conformant, and Not Validated.
 * Engagement contribution
@@ -58,7 +58,7 @@ The asset details page displays the asset metadata.
 +
 image::ex-nav-asset-versions-engagement.png[The navigation bar with Asset Versions Engagement option,15%,5%]
 +
-The Asset versions engagement page displays.
+The *Asset versions engagement* page displays.
 . To filter by date, select a date range from 7 days, 30 days, or 60 days.
 +
 The default date range is the last 7 days.
