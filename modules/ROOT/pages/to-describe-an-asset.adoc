@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-You can edit an asset's portal, change its name, icon, description, tags, categories, and custom fields; and add portal pages with content.
+You can edit an asset's portal, change its name, icon, description, tags, categories, and custom fields; and add portal pages with content. There is a maximum limit of 1,024,000 Markdown characters per page.
 
 All versions of an asset have the same name, icon, description, and computed average rating.
 
@@ -144,6 +144,7 @@ clipboard. Then after you log back in, you can paste the content back into the p
 === Markdown Notes
 
 * Anypoint Exchange uses GitHub Markdown.
+* Maximum limit of 1,024,000 Markdown characters per page.
 * Basic HTML 5 code elements are supported in Markdown, such as div, button, a, ul, ol, table, p, span, pre, and code.
 * Insert a link: `+[MuleSoft.com](http://www.mulesoft.com)+` or:
 +
