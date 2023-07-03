@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-You can edit an asset's portal, change its name, icon, description, tags, categories, and custom fields; and add portal pages with content. Each page has a maximum limit of 1,024,000 Markdown characters.
+You can edit an asset's portal, change its name, icon, description, tags, categories, and custom fields; and add portal pages with content. Each page has a maximum limit of 1,024,000 characters in Markdown format.
 
 All versions of an asset have the same name, icon, description, and computed average rating.
 
