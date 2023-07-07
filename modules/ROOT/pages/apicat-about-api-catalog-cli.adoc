@@ -10,6 +10,14 @@ With API Catalog CLI you can:
 * <<apicat-version-strategy-cond,Conditionally set the asset version strategy>> based on criteria such as branches and tags.
 * Publish APIs described in the descriptor file by running commands either at a command prompt or as part of your CI/CD pipelines or custom scripts.
 
+== Supported APIs
+
+The API Catalog CLI supports:
+
+1. Event-driven APIs (AsyncAPI 2.0 JSON and AsyncAPI 2.0 YAML format).
+
+2. REST APIs (OAS 2.0 JSON, OAS 2.0 YAML, OAS 3.0 JSON, OAS 3.0 YAML, RAML 0.8 and RAML 1.0 format).
+
 == API Catalog CLI Concepts
 
 Review the following concepts before using API Catalog CLI.
