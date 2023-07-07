@@ -14,7 +14,7 @@ With API Catalog CLI you can:
 
 The API Catalog CLI supports:
 
-1. Event-driven APIs (AsyncAPI 2.0 JSON and AsyncAPI 2.0 YAML format).
+1. Event-driven APIs (AsyncAPI 2.0 JSON and AsyncAPI 2.0 YAML format)
 
 2. REST APIs (OAS 2.0 JSON, OAS 2.0 YAML, OAS 3.0 JSON, OAS 3.0 YAML, RAML 0.8 and RAML 1.0 format).
 
