@@ -47,7 +47,7 @@ The number of dependent assets since the version was created.
 +
 The number of approved contracts since the version was created.
 
-== Viewing Asset Version Engagement
+== View Asset Version Engagement
 
 To view usage and engagement metrics for the asset versions of API specification fragments and REST APIs:
 

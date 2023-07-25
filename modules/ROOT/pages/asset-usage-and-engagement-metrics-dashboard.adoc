@@ -49,7 +49,7 @@ The number of dependent assets since the version was created.
 +
 The number of approved contracts since the version was created.
 
-== Viewing Asset Usage and Engagement Metrics 
+== View Asset Usage and Engagement Metrics 
 Use the dashboard to view metrics for your assets. Refine API specification fragments or REST API assets using the the filter options from the dashboard. You can select date ranges and filter by asset type and organization.
 
 .  In the navigation bar in Exchange, click *Asset engagement*.
