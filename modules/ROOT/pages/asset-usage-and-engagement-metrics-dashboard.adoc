@@ -28,7 +28,7 @@ The name of the business organization that the asset belongs to.
 The date that the asset was created.
 * Last updated
 +
-The date that the asset was last updated
+The date that the asset was last updated.
 * Engagement score
 +
 The engagement score reflects the usage of the asset in context of usage of all assets in the customer root organization and business groups.
