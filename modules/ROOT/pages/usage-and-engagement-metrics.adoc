@@ -6,6 +6,8 @@ endif::[]
 
 Exchange provides usage and engagement metrics for administrators and asset owners to gain insight into the consumption and user engagement of their assets. Administrators can view the *Usage and engagement metrics* dashboard for metrics of all the API specification fragments and REST API assets in an organization. Administrators and asset owners with the Exchange contributor permission can view usage and engagement metrics for a specific asset version from the asset details page. You can share data by exporting metrics to a CSV file.
 
+Users with starter and industry license packages cannot access the usage and engagement metrics.
+
 Exchange assets capture usage and engagement metrics to:
 
 * Drive growth, engagement, and reuse across the entire catalog.

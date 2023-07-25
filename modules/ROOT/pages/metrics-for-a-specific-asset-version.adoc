@@ -59,10 +59,10 @@ The asset details page displays the asset metadata.
 image::ex-nav-asset-versions-engagement.png[The navigation bar with Asset Versions Engagement option,15%,5%]
 +
 The *Asset versions engagement* page displays.
-. To filter by date, select a date range from 7 days, 30 days, or 60 days.
+. If you want to filter by date, select a date range from 7 days, 30 days, or 60 days.
 +
 The default date range is the last 7 days.
-. To export the usage data, click *Export to CSV*.
+. If you want to export the usage data, click *Export to CSV*.
 
 == See Also
 * xref:asset-details.adoc[Asset Details]
