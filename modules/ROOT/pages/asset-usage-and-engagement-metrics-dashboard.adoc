@@ -6,7 +6,7 @@ endif::[]
 
 Exchange administrators can view usage and engagement metrics for API specification fragments and REST APIs using the dashboard. The usage metrics measure how many times an asset is downloaded from Exchange, imported from API Designer, and imported from Anypoint Studio. The asset engagement score is a composite metric that administrators and asset owners can use to measure the usage of the assets in Exchange. The results for this engagement are the different consumption actions that end-users make across different points of need within Exchange. The engagement score reflects the usage of the asset in the context of the usage for all assets in the customer root organization and business groups. 
 
-The dashboard displays the metrics for the top assets for a period of the last 7 days, 30 days, or 60 days that are ranked by the most consumption events. You can filter the top assets by API specification fragments and REST API types and by one or more organizations. Export metric data into a CSV file by clicking CSV to Export.
+The dashboard displays the metrics for the top fifty assets for a period of the last 7 days, 30 days, or 60 days that are ranked by the most consumption events. You can filter the top assets by API specification fragments and REST API types and by one or more organizations. Export metric data into a CSV file by clicking CSV to Export.
 
 The following graphic shows the Usage and engagement metrics dashboard: 
 
@@ -50,9 +50,7 @@ The number of dependent assets since the version was created.
 The number of approved contracts since the version was created.
 
 == Viewing Asset Usage and Engagement Metrics 
-To view the data you need, refine API specification fragments or REST API assets using the Usage and engagement metrics dashboard. You can select date ranges and filter by asset type and organization.
-
-To view metrics:
+Use the dashboard to view metrics for your assets. Refine API specification fragments or REST API assets using the the filter options from the dashboard. You can select date ranges and filter by asset type and organization.
 
 .  In the navigation bar in Exchange, click *Asset engagement*.
 + 
@@ -60,22 +58,20 @@ image::ex-nav-asset-engagement.png[Asset engagement option in navigation bar,15%
 . Select a date range from 7 days, 30 days, or 60 days.
 +
 The default date range is the last 7 days.
-. To filter by asset type, select an option from *Asset type*.
-. To filter by an organization, click *My Organizations*.
+. If you want to filter by asset type, select an option from *Asset type*.
+. If you want to filter by an organization, click *My Organizations*.
 +
 image::ex-my-organizations.png[My organizations menu,15%,5%]
-. To search for an organization, enter the name of an organization in the *Search* box.
-. To filter by assets from your organization, select one or more organizations.
-. Click *Apply*.
-+
-The dashboard populates with the filter criteria.
-. To view metrics for a specific asset in the list of the dashboard, click the link next to the asset name. 
+. Enter the name of an organization in the *Search* box to search for an organization. 
+. Select one or more organizations and click *Apply* to filter assets by organization. 
+
+. If you want to view metrics for a specific asset in the list of the dashboard, click the link next to the asset name. 
 +
 The asset details page displays the usage and engagement metric information for the asset. 
-. To view the dependents of an asset, click the *Dependents* row that contains one or more dependents.
+. If you want to view the dependents of an asset, click the *Dependents* row that contains one or more dependents.
 +
 The dialog displays the list of version dependents for that asset. 
-. To export the usage data, click *Export to CSV*.
+. If you want to export the usage data, click *Export to CSV*.
 
 == See Also
 
