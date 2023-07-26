@@ -9,8 +9,8 @@ Exchange provides usage and engagement metrics for administrators and asset owne
 The usage metrics measure:
 
 * The number of times the asset was downloaded from Exchange.
-* The number of times the asset was imported from API Designer.
-* The number of times the asset was imported from Anypoint Studio.
+* The number of imports from API Designer.
+* The number of imports from Anypoint Studio.
 * The number of dependents for the asset.
 * The number of contracts for the asset. 
 
