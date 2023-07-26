@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Administrators and asset owners with contributor permission can view usage details for a specific API specification fragment and REST API assets and each version on the asset details page. 
+Administrators and asset owners with contributor permission can view usage details for specific API specification fragments and REST API assets and each version on the asset details page. 
 
 The following graphic shows the asset details page with usage and engagement metrics:
 
