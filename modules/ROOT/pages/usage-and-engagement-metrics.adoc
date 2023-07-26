@@ -4,7 +4,9 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Exchange provides usage and engagement metrics for administrators and asset owners to gain insight into the consumption and user engagement of their assets. Administrators can view the *Usage and engagement metrics* dashboard for metrics of all the API specification fragments and REST API assets in an organization. Administrators and asset owners with the Exchange contributor permission can view usage and engagement metrics for a specific asset version from the asset details page. You can share data by exporting metrics to a CSV file.
+Exchange provides usage and engagement metrics for administrators and asset owners to gain insight into the consumption and user engagement of their API specification fragments and REST API assets. The usage metrics measure how many times those assets are downloaded from Exchange, imported from API Designer, imported from Anypoint Studio, and the number of dependents and contracts for the asset. The asset engagement score is a composite metric that administrators and asset owners can use to measure the usage of the assets in Exchange. 
+
+Administrators can view the *Usage and engagement metrics* dashboard for metrics of API specification fragments and REST API assets in an organization. Administrators and asset owners with the Exchange contributor permission can view usage and engagement metrics for a specific asset version from the asset details page. You can share data by exporting metrics to a CSV file.
 
 Users with starter and industry license packages cannot access the usage and engagement metrics.
 
