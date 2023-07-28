@@ -35,7 +35,7 @@ The engagement contribution is the percentage of usage of the given asset patch 
 The number of times the asset was downloaded from Exchange. You can sort by ascending or descending order. 
 * API Designer imports
 +
-The number of times the asset was imported into Design Center. You can sort by ascending or descending order.
+The number of times the asset was imported in to Design Center. You can sort by ascending or descending order.
 * Studio imports
 +
 The number of times the asset was imported into Studio. You can sort by ascending or descending order.
