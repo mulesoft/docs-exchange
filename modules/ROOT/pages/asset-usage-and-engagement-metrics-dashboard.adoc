@@ -44,7 +44,7 @@ The number of times the asset was imported in to Studio.
 * All-time Stats
 ** Dependents
 +
-The number of dependent assets since the version was created.
+The number of dependent assets from the time the version was created.
 ** Contracts
 +
 The number of approved contracts since the version was created.
