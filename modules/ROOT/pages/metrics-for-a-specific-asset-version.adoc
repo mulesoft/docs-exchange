@@ -38,7 +38,7 @@ The number of times the asset was downloaded from Exchange. You can sort by asce
 The number of times the asset was imported in to Design Center. You can sort by ascending or descending order.
 * Studio imports
 +
-The number of times the asset was imported into Studio. You can sort by ascending or descending order.
+The number of times the asset was imported in to Studio. You can sort by ascending or descending order.
 * All-time stats
 ** Dependents
 +
