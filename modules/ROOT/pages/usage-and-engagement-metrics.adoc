@@ -18,8 +18,6 @@ The asset engagement score is a composite metric that administrators and asset o
 
 Administrators can view the *Usage and engagement metrics* dashboard for metrics of API specification fragments and REST API assets in an organization. Administrators and asset owners with the Exchange contributor permission can view usage and engagement metrics for a specific asset version from the asset details page. You can share data by exporting metrics to a CSV file.
 
-Users with starter and industry license packages cannot access the usage and engagement metrics.
-
 Exchange assets capture usage and engagement metrics to:
 
 * Drive growth and engagement, and asset reuse across the entire catalog.
@@ -34,13 +32,15 @@ View performance analytics of your entire asset library in a single location.
 //+
 //Use factor real-time usage statistics to refine your search and discovery results.
 
-== Permission Requirements
+== Permission and License Requirements
 
-The following permissions are required to view the usage and engagement metrics:
+The following permissions and licenses are required to view the usage and engagement metrics:
 
-*  Users must have the Exchange Administrator role for any organization to view the *Usage and engagement metrics* dashboard.
+*  Administrators must have the Exchange Administrator role permission for any organization to view the *Usage and engagement metrics* dashboard.
 
 * Administrators and asset owners must have the contributor permission to view usage details for a specific API specification fragment and REST API assets, and their versions on the asset details page.
+
+* Every customer tier license can view the metrics except the Industry Starter license.
 
 == See Also
 
