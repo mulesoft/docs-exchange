@@ -10,7 +10,7 @@ The dashboard displays the metrics for the top 50 assets, ranked by the most con
 
 The following graphic shows the Usage and engagement metrics dashboard: 
 
-image::ex-metrics-dashboard.png[Usage and engagement metrics dashboard]
+image::ex-metrics-dashboard.png[""]
 
 The following data is collected and analyzed:
 
