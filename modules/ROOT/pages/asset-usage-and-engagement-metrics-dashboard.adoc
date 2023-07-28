@@ -55,7 +55,7 @@ Use the dashboard to view metrics for your assets and the filter options from th
 .  In the navigation bar in Exchange, click *Asset engagement*.
 + 
 image::ex-nav-asset-engagement.png[Asset engagement option in navigation bar,15%,5%]
-. Select a date range from 7 days, 30 days, or 60 days.
+. Select a date range from 7 days, 30 days, or 90 days.
 +
 The default date range is the last 7 days.
 . If you want to filter by asset type, select an option from *Asset type*.
