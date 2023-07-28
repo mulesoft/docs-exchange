@@ -38,7 +38,7 @@ This example shows how to create a custom field of the type `enum`, a list of en
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/fields \
-  -H 'Authorization: bearer $ACCESS_TOKEN’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "enum",
@@ -53,7 +53,7 @@ This example shows how to add this field to any asset in an organization. Add th
 [source,console,linenums]
 ----
 curl -X PUT \
-  https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/subType \
+  https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/subType \
   -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -69,7 +69,7 @@ This example shows how to create a custom field of the type `number` with the na
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/fields \
-  -H 'Authorization: bearer $ACCESS_TOKEN’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "number",
@@ -83,7 +83,7 @@ This example shows how to add this field to any asset in an organization. Add th
 [source,console,linenums]
 ----
 curl -X PUT \
-  https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/rating \
+  https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/rating \
   -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -99,7 +99,7 @@ This example shows how to create a custom field of the type `date` with the name
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/fields \
-  -H 'Authorization: bearer $ACCESS_TOKEN’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "date",
@@ -113,7 +113,7 @@ This example shows how to add this field to any asset in an organization. Add th
 [source,console,linenums]
 ----
 curl -X PUT \
-  https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/dueDate \
+  https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/dueDate \
   -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -129,7 +129,7 @@ This example shows how to create a custom field of the type `text` with the name
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/fields \
-  -H 'Authorization: bearer $ACCESS_TOKEN’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "text",
@@ -143,7 +143,7 @@ This example shows how to add this field to any asset in an organization. Add th
 [source,console,linenums]
 ----
 curl -X PUT \
-  https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/email \
+  https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/email \
   -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -159,7 +159,7 @@ This example shows how to create a custom field of the type `number-list` with t
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/fields \
-  -H 'Authorization: bearer $ACCESS_TOKEN’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "number-list",
@@ -173,7 +173,7 @@ This example shows how to add this field to any asset in an organization. Add th
 [source,console,linenums]
 ----
 curl -X PUT \
-  https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/supportCases \
+  https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/supportCases \
   -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -189,7 +189,7 @@ This example shows how to create a custom field of the type `text-list` with the
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/fields \
-  -H 'Authorization: bearer $ACCESS_TOKEN’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "text-list",
@@ -203,7 +203,7 @@ This example shows how to add this field to any asset in an organization. Add th
 [source,console,linenums]
 ----
 curl -X PUT \
-  https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/maintainers \
+  https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/maintainers \
   -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -219,7 +219,7 @@ You can restrict a custom field so that it can only be added to certain types of
 ----
 curl -X POST \
   https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/fields \
-  -H 'Authorization: bearer $ACCESS_TOKEN’ \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -d '{
 	"dataType": "enum",
@@ -237,7 +237,7 @@ This example shows how to delete the custom field `subType` from a specific asse
 [source,console,linenums]
 ----
 curl -X DELETE \
-  https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version/tags/fields/:subType \
+  https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/:version/tags/fields/subType \
   -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json'
 ----
@@ -249,7 +249,7 @@ This example shows how to delete the custom field `subType` from all assets in a
 [source,console,linenums]
 ----
 curl -X DELETE \
-  https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/fields/:subType \
-  -H 'Authorization: bearer $ACCESS_TOKEN’ \
+  https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/fields/subType \
+  -H 'Authorization: bearer $ACCESS_TOKEN' \
   -H 'Content-Type: application/json'
 ----
