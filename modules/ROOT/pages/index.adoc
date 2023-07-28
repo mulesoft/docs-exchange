@@ -9,7 +9,7 @@ Anypoint Exchange is a curated catalog of reusable assets. APIs,  API groups, AP
 
 image:exchange-landing-page.png[Exchange landing page]
 
-Use Exchange to discover, share, incorporate assets and resources into your applications, and view asset usage and engagement metrics. Exchange helps you create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
+Use Exchange to discover, share, incorporate assets and resources into your applications, and view asset usage and engagement metrics. In Exchange, you can create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
 
 Exchange assets are accessible from many places like Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). APIs can be published from Design Center to Exchange.
 
