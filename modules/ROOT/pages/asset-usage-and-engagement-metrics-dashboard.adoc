@@ -70,7 +70,7 @@ image::ex-my-organizations.png[My organizations menu,15%,5%]
 The asset details page displays the usage and engagement metric information for the asset. 
 . If you want to view the dependents of an asset, click the *Dependents* row that contains one or more dependents.
 +
-The dialog displays the list of version dependents for that asset. 
+The dialog displays the list of the version's dependents for that asset. 
 . If you want to export the usage data, click *Export to CSV*.
 
 == See Also
