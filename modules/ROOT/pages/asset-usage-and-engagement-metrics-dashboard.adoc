@@ -47,7 +47,7 @@ The number of times the asset was imported in to Studio.
 The number of dependent assets from the time the version was created.
 ** Contracts
 +
-The number of approved contracts since the version was created.
+The number of approved contracts from the time the version was created.
 
 == View Asset Usage and Engagement Metrics 
 Use the dashboard to view metrics for your assets. Refine API specification fragments or REST API assets using the the filter options from the dashboard. You can select date ranges and filter by asset type and organization.
