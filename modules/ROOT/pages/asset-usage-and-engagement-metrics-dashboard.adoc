@@ -16,7 +16,7 @@ The following data is collected and analyzed:
 
 * Rank
 +
-Assets ranked by the most number of consumption events for RAML fragments and REST APIs.
+Assets ranked by the highest number of consumption events for RAML fragments and REST APIs.
 * Name
 +
 The name of the asset.
