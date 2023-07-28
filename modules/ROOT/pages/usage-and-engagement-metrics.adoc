@@ -26,7 +26,7 @@ Exchange assets capture usage and engagement metrics to:
 +
 Access usage metrics and engagement scores to get a composite view into how your assets are being utilized.
 
-* Track and manage asset adoption with out of the box dashboards.
+* Track and manage asset adoption with out-of-the-box dashboards.
 +
 View performance analytics of your entire asset library in a single location.
 
