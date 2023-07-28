@@ -22,7 +22,7 @@ Users with starter and industry license packages cannot access the usage and eng
 
 Exchange assets capture usage and engagement metrics to:
 
-* Drive growth, engagement, and reuse across the entire catalog.
+* Drive growth and engagement, and asset reuse across the entire catalog.
 +
 Access usage metrics and engagement scores to get a composite view into how your assets are being utilized.
 
