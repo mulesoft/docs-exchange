@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Exchange provides usage and engagement metrics for administrators and asset owners to gain insight into the consumption and user engagement of their API specification fragments and REST API assets. 
+In Exchange, administrators and asset owners can gain insight into the consumption and user engagement of their API specification fragments and REST API assets. 
 
 The usage metrics measure:
 
