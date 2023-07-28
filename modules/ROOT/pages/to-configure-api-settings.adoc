@@ -8,7 +8,7 @@ Use Anypoint Exchange to configure whether API instances are public or private i
 
 After you register an API from Exchange in API Manager, the instances for the API appear in Exchange in the API instances list in the navigation bar.
 
-Exchange also creates API instances for APIs managed by another API management program besides Anypoint Platform.
+Exchange also declares API instances for APIs managed by another API management program besides Anypoint Platform.
 
 Visibility for each API instance is either private or public. Users can see a private API instance if the asset is shared with them or if they have an Anypoint Platform permission that grants access. All users accessing an Exchange public portal can see all public API instances. All API instances in an Exchange public portal are read only.
 
