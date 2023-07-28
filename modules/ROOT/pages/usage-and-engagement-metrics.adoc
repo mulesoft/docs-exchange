@@ -34,6 +34,14 @@ View performance analytics of your entire asset library in a single location.
 //+
 //Use factor real-time usage statistics to refine your search and discovery results.
 
+== Permission Requirements
+
+The following permissions are required to view the usage and engagement metrics:
+
+*  Users must have the Exchange Administrator role for any organization to view the *Usage and engagement metrics* dashboard.
+
+* Administrators and asset owners must have the contributor permission to view usage details for a specific API specification fragment and REST API assets, and their versions on the asset details page.
+
 == See Also
 
 * xref:asset-usage-and-engagement-metrics-dashboard.adoc[Asset Usage and Engagement Metrics Dashboard]        
