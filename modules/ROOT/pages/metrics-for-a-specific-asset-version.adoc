@@ -26,7 +26,7 @@ The date that the asset was created.
 Which state the asset is currently in. The states are In Development, Stable, or Deprecated.
 * Conformance 
 +
-Conformance status appears for all REST APIs and AsyncAPIs. Status can be Conformant, Not Conformant, and Not Validated.
+Conformance status appears for all REST APIs and AsyncAPIs. The status can be Conformant, Not Conformant, and Not Validated.
 * Engagement contribution
 +
 The engagement contribution is the percentage of usage of the given asset patch or minor version with regards to its respective minor or major version.
