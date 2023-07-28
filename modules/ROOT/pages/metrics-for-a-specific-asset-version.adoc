@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Administrators and asset owners with contributor permission can view usage details for a specific API specification fragment and REST API asset and each version on the asset details page. This page identifies asset versions with overall high usage and versions with low usage. The usage rates can help you understand the performance and stickiness of specific asset versions within your organization and enable you to make informed decisions about reuse and improvements. 
+Administrators and asset owners with contributor permission can view usage details for a specific API specification fragment, REST API asset. and their versions on the asset details page. This page identifies asset versions with overall high usage and versions with low usage. The usage rates can help you understand the performance and stickiness of specific asset versions within your organization and enable you to make informed decisions about reuse and improvements. 
 
 The following graphic shows the asset details page with usage and engagement metrics:
 
