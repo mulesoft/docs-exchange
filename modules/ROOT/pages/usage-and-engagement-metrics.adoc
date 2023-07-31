@@ -1,0 +1,48 @@
+= Usage and Engagement Metrics
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+In Exchange, administrators and asset owners can gain insight into the consumption and user engagement of their API specification fragments and REST API assets. 
+
+The usage metrics measure:
+
+* The number of times the asset was downloaded from Exchange.
+* The number of imports from API Designer.
+* The number of imports from Anypoint Studio.
+* The number of dependents for the asset.
+* The number of contracts for the asset. 
+
+The asset engagement score is a composite metric that administrators and asset owners can use to measure the usage of the assets in Exchange. 
+
+Administrators can view the *Usage and engagement metrics* dashboard for metrics of API specification fragments and REST API assets in an organization. Administrators and asset owners with the Exchange contributor permission can view usage and engagement metrics for a specific asset version from the asset details page. You can share data by exporting metrics to a CSV file.
+
+Exchange assets capture usage and engagement metrics to:
+
+* Drive growth and engagement, and asset reuse across the entire catalog.
++
+Access usage metrics and engagement scores to get a composite view into how your assets are being utilized.
+
+* Track and manage asset adoption with out-of-the-box dashboards.
++
+View performance analytics of your entire asset library in a single location.
+
+//* Leverage engagement scores to improve the product experience.
+//+
+//Use factor real-time usage statistics to refine your search and discovery results.
+
+== Permission and License Requirements
+
+The following permissions and licenses are required to view the usage and engagement metrics:
+
+*  Administrators must have the Exchange Administrator role permission for any organization to view the *Usage and engagement metrics* dashboard.
+
+* Administrators and asset owners must have the contributor permission to view usage details for a specific API specification fragment and REST API assets, and their versions on the asset details page.
+
+* Every customer tier license can view the metrics except the Industry Starter license.
+
+== See Also
+
+* xref:asset-usage-and-engagement-metrics-dashboard.adoc[Asset Usage and Engagement Metrics Dashboard]        
+* xref:metrics-for-a-specific-asset-version.adoc[Metrics for a Specific Asset and Version]                                         
