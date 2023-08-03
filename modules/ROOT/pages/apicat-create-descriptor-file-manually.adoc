@@ -2,6 +2,8 @@
 
 include::reuse::partial$non-inclusive-banner.adoc[]
 
+WARNING: To create or update Descriptor files manually, your files need to be saved using the correct character encoding format (UTF-8). Encoding problems may occur when the encoding of the Descriptor file doesn't match the expected encoding of API Catalog CLI.
+
 The `create-descriptor` and `update-descriptor` commands identify the APIs to catalog and output the essential information needed to catalog them. If you want to add more descriptor information, the most efficient approach is to first create or update the descriptor file using the CLI, and then manually update the file with information that cannot be generated automatically. Use the following information about the descriptor YAML schema to decide what to add. 
 
 [[descriptor-yaml]]
