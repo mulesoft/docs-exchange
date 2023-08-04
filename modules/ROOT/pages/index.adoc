@@ -4,23 +4,34 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
-:page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
 
-Anypoint Exchange is a curated catalog of reusable assets such as APIs, policies, API spec fragments, API groups, templates, examples, custom assets, and integration assets such as connectors. You can catalog (publish), share, discover, learn about, and reuse assets within your organization to facilitate collaboration, boost productivity, and promote standards.
+Anypoint Exchange is a curated catalog of reusable assets. APIs,  API groups, API spec fragments, custom assets, examples, GraphQL APIs, integration assets such as connectors, policies, RPA assets, rulesets, and templates are some of the types that are supported in Exchange. See xref:asset-types.adoc[Asset Types] for more information about each type of asset. You can catalog (publish), share, discover, learn about, and reuse assets within your organization to facilitate collaboration, boost productivity, and promote standards.
 
-image:ex2-old-search-landing.png[Exchange landing page]
+image:exchange-landing-page.png[Exchange landing page]
 
-Use Exchange to discover, share, and incorporate assets and resources into your applications. Exchange helps you create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
+Use Exchange to discover, share, incorporate assets and resources into your applications, and view asset usage and engagement metrics. In Exchange, you can create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
 
-Exchange assets are accessible from many places like Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). APIs can be published from Design Center to Exchange.
+Exchange assets are accessible from many places, such as Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). APIs can be published from Design Center to Exchange.
 
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by Mulesoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
+
+== View Assets by Business Group
+
+A system administrator groups individuals within an organization into business groups. Each group has its own Exchange assets. 
+
+To view the business groups, log in to Anypoint Platform and click a group name from the taskbar:
+
+image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-down menu]
+
+An Exchange administrator sets the groups that this menu displays for each user.
+
+If you cannot find an asset in the current business group scopes, search in other scopes. In the left navigation menu click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
 
 == Get Started
 
 You can get started either by searching for an existing asset or creating a new one.
 
-. From https://anypoint.mulesoft.com/exchange/[Exchange], either search by type of assets or enter the name of a known asset in the *Search* field.
+. From https://anypoint.mulesoft.com/exchange/[Exchange], either search by type of assets or enter the name of a known asset in the *Search assets* field.
 . Select an asset from the search results view.
 . Review the description of the asset.
 
@@ -35,9 +46,6 @@ You can test APIs using the mocking service.
 navigation bar. 
 . Click a function and more information appears. At the right side of the screen, you can test the API by entering sample values to send to the API and get responses from the API.
 
-== More Information 
-
-Click the Helpful Links item in the left navigation area for links to documentation.
 
 == Language Support
 

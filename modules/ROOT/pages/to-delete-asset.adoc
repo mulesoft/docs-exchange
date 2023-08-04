@@ -13,7 +13,7 @@ After a hard delete or a soft delete, an asset cannot be recovered or undeleted.
 
 If you try to delete an asset version with dependent assets, Exchange shows a warning. Remove the dependencies and then delete the asset version.
 
-If you try to delete an API or policy asset version with dependent API instances, Exchange shows a warning. Remove the dependences and then delete the asset version. The *API instances* page displays each API asset's instances.
+If you try to delete an API or policy asset version with dependent API instances, Exchange shows a warning. Remove the dependencies and then delete the asset version. The *API instances* page displays each API asset's instances.
 
 You cannot delete a policy asset that is applied to any managed API instances. On the policy asset's page, the *APIs using this policy* tab shows which API instances have that policy applied. Use API Manager to remove the policy from the instances, and then delete the policy.
 

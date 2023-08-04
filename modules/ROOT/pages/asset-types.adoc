@@ -6,23 +6,69 @@ endif::[]
 
 The following asset types are supported in Exchange:
 
-* Connectors: Packaged connectivity to an Anypoint Platform endpoint using third-party APIs and standard integration protocols
+* API Groups
++
+A set of APIs bundled into a single asset.
+* API Spec Fragments
++
+A part of an API specification that is reused to build a complete API specification.
+* AsyncAPI Specifications
++
+An AsyncAPI specification file that specifies an event-driven API.
+* Connectors
++
+Packaged connectivity to an Anypoint Platform endpoint using third-party APIs and standard integration protocols.
 +
 Use connectors within your application's flows to send and receive data using a protocol or specific API. Anypoint Studio comes with many bundled connectors, and Exchange has many more.
-* Templates: Packaged integration patterns built on best practices to address common use cases
+
+* Custom
 +
-Complete the template's use case or solution by supplying your own information, customizing or extending the templates as needed.
-* Examples: Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution
-* Policies: Configuration modules to extend the functionality of an API and enforce capabilities such as security
-* Ruleset: YAML files that describe a ruleset
-* REST APIs: RAML or OAS files that specify APIs referenced by an HTTP Request connector to expose metadata to Anypoint Studio
-* AsyncAPI specifications: An AsyncAPI specification file that specifies an event-driven API
-* SOAP APIs: A WSDL file that specifies an API
-* HTTP APIs: A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager
-* API Groups: A set of APIs bundled into a single asset
+A description and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation.
+
+* DataWeave Libraries
++
+Packaged modules and mappings to share and reuse across applications.
+
+* Examples
++
+Applications that are ready to run in Anypoint Studio and demonstrate a use case or solution.
+
+* GraphQL API 
++
+A schema definition that contains the object types and definitions that are used to interact with the API through the GraphQL specification. GraphQL enables you to query an API that supports this language in a much more flexible way than REST.
+
+* HTTP APIs
++
+A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
 +
 Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
-* API Spec Fragments: A RAML document that has a version and an identifier but is not in itself a complete RAML specification
+* Policies
 +
-API spec fragments are also known as _RAML fragments_.
-* Custom: A description and an optional file to explain aspects of your system, to provide instructional videos, or to describe product or organizational documentation
+Configuration modules to extend the functionality of an API and enforce capabilities such as security.
+* REST APIs
++
+RAML or OAS files that specify APIs referenced by an HTTP Request connector to expose metadata to Anypoint Studio.
+
+* RPA Templates
++
+** RPA Activity Templates
++
+Activity templates are reusable code within RPA to standardize the most used activity steps and make them available to other developers in the organization. File type is `.calw`.
+
+** RPA Process templates
++
+Templates for RPA processes that can be imported into RPA Builder as projects and are customizable before deploying to RPA bots. Process templates are built on common patterns for RPA to build automation faster. File type is `.crpa`. 
+
+* Ruleset
++
+YAML files that describe a ruleset.
+
+
+* SOAP APIs
++
+A WSDL file that specifies an API.
+* Templates
++
+Packaged integration patterns built on best practices to address common use cases.
++
+Complete the template's use case or solution by supplying your own information, customizing or extending the templates as needed.

@@ -1,0 +1,1 @@
+include::release-notes::partial$exchange/exchange-rn-landing-page.adoc[tags=!excludeIntroExchange]

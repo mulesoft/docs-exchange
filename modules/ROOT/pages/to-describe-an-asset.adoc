@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-You can edit an asset's portal, change its name, icon, description, tags, categories, and custom fields; and add portal pages with content.
+You can edit an asset's portal, change its name, icon, description, tags, categories, and custom fields; and add portal pages with content. Each page has a maximum limit of 1,024,000 characters in Markdown format.
 
 All versions of an asset have the same name, icon, description, and computed average rating.
 
@@ -101,6 +101,16 @@ All page names are validated:
 * Page names cannot contain these characters: `@` `*` `+` `/` `_` `\`
 * Page names cannot start with `.`
 
+The required page *Home* has the URL `pages/home`, and the optional page *Terms and conditions* has the URL `pages/.terms`.
+
+For other new pages, Exchange sets a URL that contains a page ID of three alphanumeric characters, a hyphen, and three more alphanumeric characters, such as `pages/1a2-b3c/Formats`. Changing the page name from *Formats* to *Formatting* changes the URL to `pages/1a2-b3c/Formatting`, and the old URL automatically redirects to the new URL.
+
+Pages created before the October 31, 2022 update have URLs with no page ID, such as `pages/Messages`. Changing the page name from *Messages* to *Messaging* changes the URL to the new format, such as `pages/de4-56f/Messaging`, and the old URL automatically redirects to the new URL.
+
+For backward compatibility with the Anypoint CLI, each page with a URL with the new format has an automatic redirect, from a URL with the old format, such as `pages/Pagename`, to the new URL, such as `pages/78g-h9i/Pagename`.
+
+A link to another page contains the link text in square brackets and the URL in parentheses: `[the page about messaging](pages/de4-56f/Messaging)`
+
 
 === Specify Terms and Conditions
 
@@ -134,6 +144,7 @@ clipboard. Then after you log back in, you can paste the content back into the p
 === Markdown Notes
 
 * Anypoint Exchange uses GitHub Markdown.
+* Maximum limit of 1,024,000 Markdown characters per page.
 * Basic HTML 5 code elements are supported in Markdown, such as div, button, a, ul, ol, table, p, span, pre, and code.
 * Insert a link: `+[MuleSoft.com](http://www.mulesoft.com)+` or:
 +
@@ -157,6 +168,3 @@ const myString = "abc";
 ```
 ----
 
-== See Also
-
-* https://guides.github.com/features/mastering-markdown/[GitHub Markdown]

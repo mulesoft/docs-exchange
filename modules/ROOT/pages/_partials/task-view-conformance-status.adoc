@@ -1,0 +1,37 @@
+// Used in docs-exchange/asset-details.adoc and docs-api-governance-documentation/view-conformance-status-in-exchange.adoc
+
+You can view governance conformance status in Exchange for versions of API definitions. The status is one of the following:
+
+* *Conformant*: The API specification is conformant to governance rulesets against which it has been validated.
+* *Not Conformant*: The API specification is not conformant to governance rulesets against which it has been validated.
+* *Not Validated*: The API specification is not validated against governance rulesets.
+
+Conformance status can be viewed in Exchange as follows:
+
+* A conformance badge is displayed for a selected version of an API.
+* In the *Manage Versions* page, a *Conformance* column shows conformance status for each version of the API. 
+* A *Conformance Status* page appears for all REST APIs and AsyncAPIs. If a selected version of an API has been validated against governance rulesets, the conformance status page gives conformance information and gives options to fix nonconformant versions. The Conformance Status page also shows the filter criteria that resulted in the API being validated against the listed rulesets.
+
+To view conformance status:
+
+. Select an API asset that is of a type supported by API Governance. 
+. Review the conformance badge.
++
+. To view conformance by version, click *Manage Versions*.
++
+Review the *Conformance* column, which shows the governance conformance status for each version.
++
+. To view conformance details, select *Conformance Status* in the navigation bar.
+From the conformance status page, you can:
++
+* Select the version of the API that you want to view.
+* For validated APIs, view the lists of centralized governance rulesets and additional rulesets against which the APIs have been validated.
+** If there are more rulesets than are shown on the initial page, click the *Show All* link to show the full list.
+** Click the external link icon beside a ruleset to view that ruleset's page in Exchange. 
+* For nonconformant APIs, click one of the following:
+** *Fix in Design Center*
++ 
+After your API specification opens in Design Center, add the listed rulesets as dependencies and view the conformance messages in the *Project Errors* section to fix and republish your API specification.
+** *See instructions for Anypoint CLI*
++
+Follow the instructions on the page to copy, update, and run the Anypoint CLI commands to add the listed rulesets as dependencies and fix and republish your API specification.

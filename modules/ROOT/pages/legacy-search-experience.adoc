@@ -1,0 +1,312 @@
+= Legacy Search Experience
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+The legacy search experience, which was previously called the old search, is available in Anypoint Platform Private Cloud Edition, MuleSoft Government Cloud, the US cloud, and the EU cloud. This search experience does not include the enhanced options for searching by rank, organizations, and lifecycle states. The enhanced search is the default search experience when logging into Exchange.
+
+To access the legacy search, click the *Back to legacy search* button from the landing page.
+
+== Display Assets in List or Grid View
+
+You have the option to display the catalog of assets in list or grid view. List view arranges assets in a list format and grid view displays the assets in tiles. Both views display the asset name, type, rating, and created by information.
+
+== Filter Search Results
+
+You can filter search results by asset types (for example, API groups, REST APIs, and rulesets) by selecting an option from the  *All types* drop-down menu. The options that appear depend on which types are available within an organization.
+ 
+ 
+== Search in Organization
+
+You can search only in the Exchange organization that you are currently viewing. If you are viewing a private Exchange organization, the search lists only that organization’s assets and not MuleSoft public assets.
+
+== Save a Search
+
+You can save search criteria that you use often for quick discovery of specific assets.
+
+. Enter a search term and click *Save This Search*.
+. When prompted, give the search a name and select whether the search is an organizational search or personal search.
++
+Administrators can save searches visible to anyone in their current business group. Personal searches are visible only to the person who creates them.
+. Save the search.
+. Confirm that your search appears in the saved searches in the left navigation bar.
++
+Exchange lists search terms specific to your business group and the saved searches you created:
++
+image::ex2-saved-searches-groups.png[Saved Search Groups]
+
+== Search API Specifications
+
+You can use the following API specification properties that are used in search:
+
+* API title
+* Base URI
+* Endpoints
+** Path
+** Display name
+** Description
+* Methods
+** Method type (GET, POST, PUT)
+** Description
+* Query parameters
+** Name
+** Description
+* URI parameters
+** Name
+* Types
+** Name
+** Properties
+* Traits
+* Properties
+* Security schemas
+
+These property names are based on RAML specifications. Equivalent properties are indexed for OAS specifications. For example, RAML uses base URI but OAS uses host and path.
+
+This example shows an API specification:
+
+[source,text,linenums]
+----
+#%RAML 1.0
+---
+title: Leagues API
+version: v1
+baseUri: https://leagues.com/api/
+
+types:
+ Team:
+   properties:
+     name: string
+     city: string
+
+/leagues/{leagueId}:
+ displayName: League resource
+ description: Contains all the information about a league
+ uriParameters:
+   leagueId:
+     displayName: League ID
+     description: The ID of the league to retrieve information from
+ /teams:
+   get:
+     displayName: Teams directory
+     description: Get list of all teams in the league
+     queryParameters:
+       offset:
+         displayName: Offset
+         description: Offset for the result set
+     responses:
+       200:
+         body:
+           application/json:
+               type: Team[]
+   post:
+     displayName: Create team
+     description: Creates a new team in the league
+     responses:
+       201:
+         description: New team has been created
+----
+
+These search results include this API:
+[%header%autowidth.spread]
+|===
+|Search term |Matches
+|league API |API title
+|leagues.com |API baseUri
+|`/leagues` |Endpoint path
+|League resource |Endpoint display name
+|Information about a league |Endpoint description
+|POST |Endpoint method
+|create team |Endpoint method description
+|offset |Query parameter name, Query parameter description
+|leagueid |URI parameter name
+|team |Type name
+|city |Type property name
+|leagues leagueId teams |Endpoint path
+|`/leagues/LEAGUE_ID/teams` |Endpoint path
+|===
+
+Note that the last two searches are the same, because special characters are removed before searching.
+
+== Search for Phrases 
+
+You can search for case-insensitive text that begins with each word you specify by adding a space between words. This is similar to putting the `*` wildcard regular expression after each word. For example, searching for `mq module` finds any asset that has text that starts with `mq` or `module`.
+
+Searching for a multiple-word phrase shows assets that have every word in the phrase.
+
+If you separate search words with any non-alphanumeric character other than a space, Anypoint Exchange converts the character to a space before searching.
+
+
+=== Search Separators
+
+The search experience uses search separators to find Exchange assets that contain one or more terms.
+
+If you enter search words connected by non-alphanumeric symbols, Exchange replaces the symbols with spaces before searching for the term. The search string only succeeds if both words are present in the result. The result is equivalent to using `word1 AND word2` relationship.
+
+Example search terms:
+
+[source,text,linenums]
+----
+sales:connect
+Sales-Connect
+connect:/sales
+-connect -sales
+----
+
+This table shows how each search term is interpreted based on the values in the asset name,
+asset ID, and tags for an asset. If the search term maps to the values correctly, a match occurs. If not,
+the reason displays when the match does not occur.
+
+[%header%autowidth.spread]
+|===
+|Asset Name |Asset ID |Tags |Matches?
+|Salesforce API |salesforce-api |mule-Connector |Yes
+|Salesforce Connector |salesforce-connector |REST |Yes
+|Validations API |validations-api |salesforce-connecting |Yes
+|Optimized API |optimized-api |resource:/connect, salesforce:enabled |Yes
+|Cisco Sales API  |cisco-sales-api |Connecting, Productive |Yes
+|Cisco Connector |cisco-connector |com.cisco.connector.sales
+|Yes, because the tag is split into separate terms.
+|Salesforce API |salesforce-api |muleconnector, MuleConnector |No. `connect` was not found.
+|Salesforce Connect |salesforce-connector |REST |No. `connect` was not found.
+|Validations API |validations-api |connector |No. `sales` was not found.
+|Cisco Presales API |cisco-presales-api |Connector, api |No. `sales` was not found.
+|===
+
+=== Phrase Search Separators
+
+Use phrase search to find a group of terms inside quotation marks. Phrase searches match an asset only if all the exact terms inside quotes appear in consecutive order.
+
+If you enter any of these searches in Exchange, Exchange replaces non-alphanumeric symbols with spaces before searching for assets.
+
+Example search terms:
+
+[source,text,linenums]
+----
+Api: "Sales connect"
+Api "Sales-connect"
+Api "Sales:/connect"
+Api-"Sales/connect"
+"Sales connect":Api
+----
+
+This table shows how each search term is interpreted based on the values in the asset name,
+asset ID, and tags for an asset. If the search term maps to the values correctly, a match occurs. If not,
+the reason displays when the match does not occur.
+
+[%header%autowidth.spread]
+|===
+|Asset Name |Asset ID |Tags |Matches?
+|Salesforce API |salesforce-api |mule-Connector |No. `sales connect` was not found.
+|Salesforce Connector |salesforce-connector |REST |No
+|Sales Connect Asset |validations-api |mule-connector |Yes
+|Sales Connect Images |validations-images |mule-connector |No. `api` was not found.
+|Optimized API |optimized-api |resource:/connect, sales:enabled |No. `sales connect` was not found.
+|Optimized API |optimized-api |resource:/sales, connect:enabled |No. `sales connect` was not found, because each term is in different tags.
+|Optimized API |optimized-api |sales:/connect |Yes
+|===
+
+== Search by Types, Tags, Categories, and Custom Fields 
+
+You can enter a search keyword in the *Search assets* box to find assets. 
+
+You can click *All Types* to set a filter for specific asset types or combine search text with the filters listed in the *Types* menu.
+
+The search experience uses a query language to search assets by tags, categories, and custom fields.
+
+=== Search by Tags
+
+You can search by tags using either `tag:"some value"` or `tag:value`.
+
+If the value has no spaces, then double quotes are optional.
+
+Tag search is case-insensitive.
+
+Examples:
+
+[%header%autowidth.spread]
+|===
+|Search |Tags |Matches?
+|tag:"some value" |some value |Yes
+|tag:"some value" |value |No
+|tag:"value" |value |Yes
+|tag:value |value |Yes
+|tag:VALUE |value |Yes
+|tag:VaLuE |value |Yes
+|tag:value |val |No
+|===
+
+=== Search by Categories
+
+You can search by categories using `category:"some key" = "some value"`.
+
+If the category has no spaces in the key or value, then double quotes are optional.
+
+The key can include the asterisk (`*`) regular expression to search for characters within a category name.
+
+The key is case-sensitive.
+
+A search value matches an asset value if either of these is true:
+
+* The search value is entirely lowercase.
+* The letter case of the search value and the asset value match.
+
+Examples:
+
+[%header%autowidth.spread]
+|===
+|Search |Category |Matches?
+|category:my-key = my-value |my-key:my-value |Yes
+|category:my-key = MY-VALUE |my-key:MY-VALUE |Yes
+|category:my-key = my-value |my-key:MY-VALUE |Yes
+|category:"my key" = "my value" |my key:my value |Yes
+|category:"key" = "value" |my key:my value |No
+|category:key = value |my-key:my-value |No
+|category:this.* = value |this.is.my.key:value |Yes
+|category:*my.key = value |this.is.my.key:value |Yes
+|category:this.* = value |this.is.my.key:some-value |No
+|category:this.* = some-* |this.is.my.key:some-value |No
+|===
+
+You can search for a combination of different categories. You cannot search for multiple values of the same category.
+
+Multiple search terms use an implicit `AND`. `OR` is not supported.
+
+These search terms return all assets marked as both system APIs and Salesforce products:
+
+`category:"API Type" = "System API" category:"Product" = "Salesforce"`
+
+=== Search by Custom Fields
+
+You can search by fields using `field:"some key" = "some value"`.
+
+If the custom field has no spaces in the key or value, then double quotes are optional.
+
+The key can include the asterisk (`*`) regular expression to search for characters within a field name.
+
+The key is case-sensitive.
+
+A search value matches an asset value if either of these is true:
+
+* The search value is entirely lowercase.
+* The letter case of the search value and the asset value match.
+ 
+Examples:
+
+[%header%autowidth.spread]
+|===
+|Search |Field |Matches?
+|field:my-key = my-value |my-key:my-value |Yes
+|field:my-key = MY-VALUE |my-key:MY-VALUE |Yes
+|field:my-key = my-value |my-key:MY-VALUE |Yes
+|field:my-key = My-ValUe |my-key:MY-VALUE |No
+|field:MY-KEY = my-value |my-key:my-value |No
+|field:my-key = 10 |my-key:10 |Yes
+|field:"my key" = "my value" |my key:my value |Yes
+|field:"key" = "value" |my key:my value |No
+|field:key = value |my-key:my-value |No
+|field:this.* = value |this.is.my.key:value |Yes
+|field:*my.key = value |this.is.my.key:value |Yes
+|field:this.* = value |this.is.my.key:some-value |No
+|field:this.* = some-* |this.is.my.key:some-value |No
+|===
