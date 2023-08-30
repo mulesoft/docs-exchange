@@ -48,7 +48,7 @@ image:exchange-new-search.png[Search results with the Mulesoft keyword highlight
 == Filter Search Results
 
 You can use the following filters to refine your search results. 
-
+//updated screen capture that includes custom field
 image:ex-filters.png[The search refinement filters]
 
 * Type
@@ -68,14 +68,53 @@ Keyword or term that describes a specific search.
 +
 Lifecycle state can be stable, deprecated, or development.
 
-Filter options appear when they are available within an organization. 
+* Custom field
++
+Custom fields are specific metadata fields set by the administrator of a business group or organization owner.
 
-To filter search results:
+Filter options appear when they are available within an organization.
 
-. From the Exchange landing page, select a filter option.
+=== Filter By Type, Organization, Category, and Lifecycle State
+
+. In the Exchange landing page, select a filter option.
+. To find an option from a long list, use the scroll bar or enter a search term.
 . Click one or more options from the menu and click *Apply*. 
 . To clear a filter option, click *Clear filter*.
 . To clear all filter options, click *Clear all filters*.
+
+=== Filter By Custom Fields
+Custom fields are created by Exchange administrators and organization owners using the Exchange API to extend the Exchange asset metadata model and add custom data to any type of asset. The  custom field filter lets you refine a search using preset information.
+
+
+The custom field filter has the following data types:
+
+[%header,cols="1a,1a,2a"]
+|===
+|Data Type |Example Name for Data Type|Operator
+|Enum|Days of the week|Contains and not contains. The default value is contains.
+|Number|Quantity |Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. The default value is equals.
+|Date |Release Date |Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. The default value is equals.
+|Text|Team |Equals and not equals to. The default value is equals.
+|List of numbers|Orders |Contains and not contains. The default value is contains.
+|List of strings|Emails |Contains and not contains. The default value is contains.
+|===
+
+Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can add a specific date using a defined format (YYY-MM-DD). The customized value shows in the list of options as freeform.
+
+//screen capture to show the custom field operator and value
+
+To filter a search using custom fields:
+
+. In the landing page, click *Any custom field*.
+. Use the scroll bar or enter a name for the data type to find an option in a long list. 
+. Select a custom field option from the list.
+. If you want to change the operator, select a operator from the drop-down list. 
+. Click *Select value(s)* and select a value for the operator from the list or enter a custom value. You can select more than one value.
+. If you want to add more custom fields to further filter the search, click *Add Custom Field* and select an option from the list.
+. If you want to delete a custom field from the search filter, click the trash can icon.
+. Click *Apply* to apply the custom field filter.
++
+The search results show assets with the custom fields criteria.
 
 == Sort Search Results
 
@@ -105,7 +144,7 @@ image:ex-sort-by-filter.png[The Sort by filter, 15%,15%]
 
 Find assets quickly by saving frequently used search queries for yourself or for your business group. Saved searches display in the navigation pane.
 
-Exchange lists search terms specific to your business group. The example displays saved searches:
+Exchange lists search terms specific to your business group. The example shows saved searches:
 
 image::ex2-saved-searches-groups.png[Saved Search Groups]
 
@@ -118,7 +157,5 @@ Administrators can save searches visible to anyone in their current business gro
 . Click *Save search*.
 . Confirm that your search appears in the saved searches in the left navigation bar.
 +
-. To rename a saved search, click the three dots and select *Rename*.
-. To delete a saved search, click the three dots and select *Delete*.
-
-
+. If you want to rename a saved search, click the three dots and select *Rename*.
+. If you want to delete a saved search, click the three dots and select *Delete*.
