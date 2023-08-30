@@ -112,9 +112,11 @@ To filter a search using custom fields:
 . Click *Select value(s)* and select a value for the operator from the list or enter a custom value. You can select more than one value.
 . If you want to add more custom fields to further filter the search, click *Add Custom Field* and select an option from the list.
 . If you want to delete a custom field from the search filter, click the trash can icon.
+. If you want to clear the selected filter options, click *Clear filter*.
 . Click *Apply* to apply the custom field filter.
 +
 The search results show assets with the custom fields criteria.
+
 
 == Sort Search Results
 
