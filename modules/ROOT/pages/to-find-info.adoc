@@ -99,7 +99,7 @@ The custom field filter has the following data types:
 |List of strings|Emails |Contains and not contains. The default value is contains.
 |===
 
-Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYY-MM-DD). The customized value shows in the list of options as freeform.
+Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform.
 
 //screen capture to show the custom field operator and value
 
