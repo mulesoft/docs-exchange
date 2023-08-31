@@ -106,7 +106,7 @@ Use preset operators to filter the search results. The values of the operators c
 To filter a search using custom fields:
 
 . In the landing page, click *Any custom field*.
-. Use the scroll bar or enter a name for the data type to find an option in a long list. 
+. Use the scroll bar or enter the name of the custom field to find an option in a long list. 
 . Select a custom field option from the list.
 . If you want to change the operator, select a operator from the drop-down list. 
 . Click *Select value(s)* and select a value for the operator from the list or enter a custom value. You can select more than one value.
