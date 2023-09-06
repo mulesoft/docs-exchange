@@ -88,15 +88,15 @@ Custom fields are created by Exchange administrators and organization owners usi
 
 The custom field filter has the following data types:
 
-[%header,cols="1a,1a,2a"]
+[%header,cols="1a,2a"]
 |===
-|Data Type |Example Name for Data Type|Operator
-|Enum|Days of the week|Contains and not contains. The default value is contains.
-|Number|Quantity |Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. The default value is equals.
-|Date |Release Date |Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. The default value is equals.
-|Text|Team |Equals and not equals to. The default value is equals.
-|List of numbers|Orders |Contains and not contains. The default value is contains.
-|List of strings|Emails |Contains and not contains. The default value is contains.
+|Data Type |Operator
+|Enum|Contains and not contains. The default value is contains.
+|Number|Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. The default value is equals.
+|Date  |Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. The default value is equals.
+|Text |Equals and not equals to. The default value is equals.
+|List of numbers |Contains and not contains. The default value is contains.
+|List of strings |Contains and not contains. The default value is contains.
 |===
 
 Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform.
