@@ -86,7 +86,7 @@ Filter options appear when they are available within an organization.
 Custom fields are created by Exchange administrators and organization owners using the Exchange API to extend the Exchange asset metadata model and add custom data to any type of asset. The custom field filter lets you refine a search using preset information.
 
 
-The custom field filter uses the following data types:
+Custom fields use the following data types:
 
 [%header,cols="1a,2a"]
 |===
