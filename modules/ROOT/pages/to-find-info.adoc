@@ -92,12 +92,12 @@ Custom fields use the following data types:
 [%header,cols="1a,2a"]
 |===
 |Data Type |Operator
-|Enum|Contains and not contains. The default value is contains.
-|Number|Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. The default value is equals.
-|Date  |Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. The default value is equals.
-|Text |Equals and not equals to. The default value is equals.
-|List of numbers |Contains and not contains. The default value is contains.
-|List of strings |Contains and not contains. The default value is contains.
+|Enum|Contains and not contains. 
+|Number|Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. 
+|Date  |Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. 
+|Text |Equals and not equals to. 
+|List of numbers |Contains and not contains. 
+|List of strings |Contains and not contains. 
 |===
 
 Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform.
