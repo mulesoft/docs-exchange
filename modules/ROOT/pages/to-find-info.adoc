@@ -103,7 +103,7 @@ Custom fields use the following data types:
 
 Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform.
 
-The following graphic shows an example of a freeform custom field:
+The following graphic shows a filter example with two custom fields:
 
 image:ex-custom-field-operator-value.png
 
