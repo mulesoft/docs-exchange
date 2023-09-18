@@ -48,7 +48,7 @@ image:exchange-new-search.png[Search results with the Mulesoft keyword highlight
 == Filter Search Results
 
 You can use the following filters to refine your search results. 
-//updated screen capture that includes custom field
+
 image:ex-filters.png[The search refinement filters]
 
 * Type
@@ -85,6 +85,8 @@ Filter options appear when they are available within an organization.
 === Filter By Custom Fields
 Custom fields are created by Exchange administrators and organization owners using the Exchange API to extend the Exchange asset metadata model and add custom data to any type of asset. The custom field filter lets you refine a search using preset information.
 
+For more information about creating custom fields for assets, see xref:to-manage-custom-fields.adoc[Manage Custom Fields].
+
 
 Custom fields use the following data types:
 
@@ -101,7 +103,9 @@ Custom fields use the following data types:
 
 Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform.
 
-//screen capture to show the custom field operator and value
+The following graphic shows an example of a freeform custom field:
+
+image:ex-custom-field-operator-value.png
 
 To filter a search using custom fields:
 
