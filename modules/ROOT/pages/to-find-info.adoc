@@ -83,10 +83,9 @@ Filter options appear when they are available within an organization.
 . To clear all filter options, click *Clear all filters*.
 
 === Filter By Custom Fields
-Custom fields are created by Exchange administrators and organization owners using the Exchange API to extend the Exchange asset metadata model and add custom data to any type of asset. The custom field filter lets you refine a search using preset information.
+Custom fields are created by Exchange administrators and organization owners using the Exchange API to extend the Exchange asset metadata model and add custom data to any type of asset. The custom field filter lets you refine a search using preset information. The filter is available only when you have assets in your organization with custom fields.  
 
 For more information about creating custom fields for assets, see xref:to-manage-custom-fields.adoc[Manage Custom Fields].
-
 
 Custom fields use the following data types:
 
@@ -103,7 +102,7 @@ Custom fields use the following data types:
 
 Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform.
 
-The following filter shows two custom fields:
+The following example shows the search filter with two custom fields. You can add as many custom fields as you need:
 
 image:ex-custom-field-operator-value.png
 
