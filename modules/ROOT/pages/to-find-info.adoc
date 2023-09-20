@@ -83,7 +83,7 @@ Filter options appear when they are available within an organization.
 . To clear all filter options, click *Clear all filters*.
 
 === Filter By Custom Fields
-Custom fields are created by Exchange administrators and organization owners using the Exchange API to extend the Exchange asset metadata model and add custom data to any type of asset. The custom field filter lets you refine a search using preset information. The filter is available only when you have assets in your organization with custom fields.  
+Custom fields are created by Exchange administrators and organization owners using the Exchange API to extend the Exchange asset metadata model and add custom data to any type of asset. Assets can be filtered by custom fields to refine a search using preset information. The custom field filter is available only when assets in your organization have custom fields.  
 
 For more information about creating custom fields for assets, see xref:to-manage-custom-fields.adoc[Manage Custom Fields].
 
@@ -100,11 +100,11 @@ Custom fields use the following data types:
 |List of strings |Contains and not contains. 
 |===
 
-Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform.
+Use preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform. You can add as many custom fields as you need.
 
-The following example shows the search filter with two custom fields. You can add as many custom fields as you need:
+The following example shows the search filter with two custom fields:
 
-image:ex-custom-field-operator-value.png
+image:ex-custom-field-operator-value.png[20%,20%]
 
 To filter a search using custom fields:
 
@@ -119,7 +119,6 @@ To filter a search using custom fields:
 . Click *Apply* to apply the custom field filter.
 +
 The search results show assets with the custom fields criteria.
-
 
 == Sort Search Results
 
