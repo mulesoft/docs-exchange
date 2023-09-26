@@ -74,7 +74,7 @@ Custom fields are specific metadata fields set by the administrator of a busines
 
 Filter options appear when they are available within an organization.
 
-=== Filter By Type, Organization, Category, and Lifecycle State
+=== Filter by Type, Organization, Category, and Lifecycle State
 
 . In the Exchange landing page, select a filter option.
 . To find an option from a long list, use the scroll bar or enter a search term.
