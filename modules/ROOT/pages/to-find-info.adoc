@@ -104,7 +104,7 @@ Use the preset operators to filter the search results. The values of the operato
 
 The following example shows the search filter with two custom fields:
 
-image:ex-custom-field-operator-value.png[20%,20%]
+image:ex-custom-field-operator-value.png[Search filter using two custom fields,20%,20%]
 
 To filter a search using custom fields:
 
