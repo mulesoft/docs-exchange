@@ -74,7 +74,7 @@ Custom fields are specific metadata fields set by the administrator of a busines
 
 Filter options appear when they are available within an organization.
 
-=== Filter by Type, Organization, Category, and Lifecycle State
+=== Filter By Type, Organization, Category, and Lifecycle State
 
 . In the Exchange landing page, select a filter option.
 . To find an option from a long list, use the scroll bar or enter a search term.
@@ -83,7 +83,7 @@ Filter options appear when they are available within an organization.
 . To clear all filter options, click *Clear all filters*.
 
 === Filter By Custom Fields
-Exchange administrators and organization owners create custom fields using the Exchange API to extend the Exchange asset metadata model and add custom data to any type of asset. You can refine a search using preset information by filtering assets by custom fields. The custom field filter is available only when assets in your organization have custom fields.  
+Custom fields are created by Exchange administrators and organization owners using the Exchange API to extend the Exchange asset metadata model and add custom data to any type of asset. Assets can be filtered by custom fields to refine a search using preset information. The custom field filter is available only when assets in your organization have custom fields.  
 
 For more information about creating custom fields for assets, see xref:to-manage-custom-fields.adoc[Manage Custom Fields].
 
@@ -92,15 +92,15 @@ Custom fields use the following data types:
 [%header,cols="1a,2a"]
 |===
 |Data Type |Operator
-|Enum|Contains and not contains. 
-|Number|Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. 
-|Date  |Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to. 
-|Text |Equals and not equals to. 
-|List of numbers |Contains and not contains. 
-|List of strings |Contains and not contains. 
+|Enum|Contains and not contains
+|Number|Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to 
+|Date  |Equals, not equals to, greater than, less than, greater than or equal to, and less than or equal to
+|Text |Equals and not equals to 
+|List of numbers |Contains and not contains
+|List of strings |Contains and not contains 
 |===
 
-Use the preset operators to filter the search results. You can change and customize the values of the operators. For example, select a date from the list of values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform. You can add as many custom fields as you need.
+Use the preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform. You can add as many custom fields as you need.
 
 The following example shows the search filter with two custom fields:
 
