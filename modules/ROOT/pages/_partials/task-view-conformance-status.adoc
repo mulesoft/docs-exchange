@@ -31,7 +31,8 @@ From the conformance status page, you can:
 * For nonconformant APIs, click one of the following:
 ** *Fix in Design Center*
 + 
-After your API specification opens in Design Center, add the listed rulesets as dependencies and view the conformance messages in the *Project Errors* section to fix and republish your API specification.
+After your API specification opens in Design Center, add the listed rulesets as dependencies and view the conformance messages in the *Project Errors* section to fix and republish your API specification. +
+If the asset is published directly on Exchange without an existing version in the Design Center, a read-only version of the project opens. To fix conformance issues,  xref:exchange::to-download-an-asset.adoc[download the asset from Exchange], then xref:design-center::design-create-publish-api-specs-from-file.adoc[import it to Design Center], and xref:design-center::design-publish.adoc[publish it to Exchange] with the same ID and a new minor version. 
 ** *See instructions for Anypoint CLI*
 +
 Follow the instructions on the page to copy, update, and run the Anypoint CLI commands to add the listed rulesets as dependencies and fix and republish your API specification.
