@@ -13,7 +13,7 @@ Use Exchange to discover, share, incorporate assets and resources into your appl
 
 Exchange assets are accessible from many places, such as Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). APIs can be published from Design Center to Exchange.
 
-Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by Mulesoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
+Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
 == View Assets by Business Group
 
