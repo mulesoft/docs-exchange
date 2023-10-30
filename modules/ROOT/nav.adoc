@@ -1,5 +1,5 @@
 .xref:index.adoc[Anypoint Exchange]
-* xref:index.adoc[About Exchange]
+* xref:index.adoc[Overview]
 * xref:exchange-release-notes.adoc[Release Notes]
 * xref:asset-types.adoc[Asset Types]
 * xref:asset-versions.adoc[Asset Versions]
