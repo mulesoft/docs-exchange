@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
+:page-aliases: ex2-graph-api.adoc
 
 Search Exchange assets for a string value by using the Exchange Graph API. You can specify what values to receive in each search.
 
