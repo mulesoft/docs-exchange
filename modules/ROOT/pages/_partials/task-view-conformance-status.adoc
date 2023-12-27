@@ -14,7 +14,7 @@ Conformance status can be viewed in Exchange as follows:
 
 To view conformance status:
 
-. Select an API asset that is of a type supported by API Governance. 
+. Select an API asset that is of a type supported by Anypoint API Governance. 
 . Review the conformance badge.
 +
 . To view conformance by version, click *Manage Versions*.
@@ -27,7 +27,7 @@ From the conformance status page, you can:
 * Select the version of the API that you want to view.
 * For validated APIs, view the lists of centralized governance rulesets and additional rulesets against which the APIs have been validated.
 ** If there are more rulesets than are shown on the initial page, click the *Show All* link to show the full list.
-** Click the external link icon beside a ruleset to view that ruleset's page in Exchange. 
+** Click the external link icon for a ruleset to view that ruleset's page in Exchange. 
 * For nonconformant APIs, click one of the following:
 ** *Fix in Design Center*
 + 
