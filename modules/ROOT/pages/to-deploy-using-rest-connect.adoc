@@ -324,7 +324,7 @@ The following list shows the reserved Mule keywords to avoid when naming valid i
 
 == Generating Connectors With TLS Support
 
-Enable TLS support for your generated connector by adding a `properties.json` file to the root directory of your Design Center API project. 
+Add a `properties.json` file to the root directory of your Design Center API project to enable TLS support to enhance security for your app. 
 
 . In Design Center, Select *Files +* > *New file*.  
 . In the *Add new file* window, select *API format > other*, name the file `properties.json`, then click *Create*.
@@ -347,7 +347,8 @@ To update your REST Connect generated connector to use the latest version of Mul
 +
 The connector is re-generated. 
 
-
+If you want to add TLS support to your application, it is a good idea to add it before re-generating the connector so you only have to test your app once. 
+ 
 //// 
 Does not work. Screen shots are outdated, steps are missing. This needs to be updated before it's published again. 
 == OAuth2 in Design Center for REST Connect
