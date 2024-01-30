@@ -333,10 +333,8 @@ Enable TLS support for your generated connector by adding a `properties.json` fi
 Adding this property and setting it to true customizes the connector generation so that when the Rest Connect Service receives the property, the connector is upgraded to run on Mule runtime 4.6. and the `tlsEnabled` flag propagates to the connector generation. 
 
 This enables Anypoint Studio to display the appropriate form to collect the information required for TLS connection configuration. 
-
-If you add an empty `properties.json` to your API project, or don't add it at all, the Rest Connect Service generates the standard artifacts without TLS support.  
-
-It is best to add the `properties.json` file only if you want to enable TLS support, or explicitly opt out of it. 
+ 
+It is best to add the `properties.json` file only if you want to enable TLS support, or explicitly opt out of it. If you don't add a `properties.json` file to your API project, the REST Connect Service generates the standard connector artifacts, without TLS support.
 
 When you add a properties file to your project, ensure that the `tlsEnabled` property is correctly set, with a valid boolean value. If the `properties.json` file is invalid or if the property is incorrectly set, the connector generation for both Mule 3 (DevKit) and Mule 4 (SmartConnector) versions is aborted.
 
