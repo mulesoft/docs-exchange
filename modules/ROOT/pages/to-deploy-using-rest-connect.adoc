@@ -6,6 +6,7 @@ endif::[]
 
 The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 3 or Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
 
+[[access-generated-connectors]]
 == Access Generated Connectors
 
 In Exchange, download the generated connector from the *Download* menu.
@@ -15,6 +16,7 @@ After deploying a REST asset to Exchange, refresh your screen to ensure that all
 
 Mule 3 connectors download as a ZIP files, and Mule 4 connectors download as JAR files.
 
+[[api-spec-support]]
 == API Specification Format Support
 
 REST Connect supports these API specification formats:
@@ -25,6 +27,7 @@ REST Connect supports these API specification formats:
 * OAS 2 - YAML
 * RAML 1.0
 
+[[security-scheme-support]]
 == Security Scheme Support
 
 REST Connect supports these security schemes:
@@ -164,6 +167,7 @@ securitySchemes:
           type: string
 ----
 
+[[change-connector-name]]
 == Change an Auto-Generated Connector's Name
 
 REST Connect generates the names of operations based on the `operationName`, `displayName`, and `endpoint` attributes, in that order. 
@@ -218,6 +222,7 @@ mediaType: application/json
             type: Post
 ----
 
+[[metadata-limitations]]
 == Metadata Limitations
 
 REST Connect generates metadata for each operation based on your schema definition in the request and response for each method in your RAML. REST Connect cannot generate metadata based on examples in the RAML.
@@ -322,6 +327,7 @@ The following list shows the reserved Mule keywords to avoid when naming valid i
 * `target`
 * `targetValue`
 
+[[tls-support]]
 == Generating Connectors With TLS Support
 
 Add a `properties.json` file to the root directory of your Design Center API project to enable TLS support to enhance security for your app. 
@@ -338,6 +344,7 @@ It is best to add the `properties.json` file only if you want to enable TLS supp
 
 When you add a properties file to your project, ensure that the `tlsEnabled` property is correctly set, with a valid boolean value. If the `properties.json` file is invalid or if the property is incorrectly set, the connector generation for both Mule 3 (DevKit) and Mule 4 (SmartConnector) versions is aborted.
 
+[[upgrade-rest-connector]]
 == Upgrading a REST Connect Generated Connector
 
 To update your REST Connect generated connector to use the latest version of Mule runtime and to be compatible with Java 17:
@@ -347,8 +354,8 @@ To update your REST Connect generated connector to use the latest version of Mul
 +
 The connector is re-generated. 
 
-If you want to add TLS support to your application, it is a good idea to add it before re-generating the connector so you only have to test your app once. 
- 
+If you want to add <<tls-support,TLS support>> to your application, it is a good idea to add it before re-generating the connector so you only have to test your app once. 
+
 //// 
 Does not work. Screen shots are outdated, steps are missing. This needs to be updated before it's published again. 
 == OAuth2 in Design Center for REST Connect
