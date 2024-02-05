@@ -14,7 +14,7 @@ In Exchange, download the generated connector from the *Download* menu.
 [NOTE]
 After deploying a REST asset to Exchange, refresh your screen to ensure that all download options are available.
 
-Mule 3 connectors download as a ZIP files, and Mule 4 connectors download as JAR files.
+Mule 3 connectors download as ZIP files, and Mule 4 connectors download as JAR files.
 
 [[api-spec-support]]
 == API Specification Format Support
