@@ -172,7 +172,30 @@ securitySchemes:
 
 REST Connect generates the names of operations based on the `operationName`, `displayName`, and `endpoint` attributes, in that order. 
 
-To modify a generated connector name, point to the REST Connect library and use the `operationName` annotation from a method such as GET, POST, and DELETE, for example:
+To modify a generated connector name, change the text in `displayName`, for example:
+
+[source,text,linenums]
+----
+#%RAML 1.0
+title: Sample API
+baseUri: https://jsonplaceholder.typicode.com
+version: 0.1
+mediaType: application/json
+
+  ...
+  /{postId}:
+    uriParameters:
+      postId: integer
+
+    get:
+      displayName: Get a post by ID.
+      responses:
+        200:
+          body:
+            type: Post
+----
+
+You can also modify a generated connector name by pointing to the REST Connect library and using the `operationName` annotation from a method such as GET, POST, and DELETE, for example:
 
 [source,text,linenums]
 ----
@@ -199,28 +222,7 @@ uses:
             type: Post
 ----
 
-You can also change the text in `displayName`, for example:
 
-[source,text,linenums]
-----
-#%RAML 1.0
-title: Sample API
-baseUri: https://jsonplaceholder.typicode.com
-version: 0.1
-mediaType: application/json
-
-  ...
-  /{postId}:
-    uriParameters:
-      postId: integer
-
-    get:
-      displayName: Get a post by ID.
-      responses:
-        200:
-          body:
-            type: Post
-----
 
 [[metadata-limitations]]
 == Metadata Limitations
@@ -330,19 +332,20 @@ The following list shows the reserved Mule keywords to avoid when naming valid i
 [[tls-support]]
 == Generating Connectors With TLS Support
 
-Add a `properties.json` file to the root directory of your Design Center API project to enable TLS support to enhance security for your app. 
+Mule 4 (SmartConnector) connectors support Transport Layer Security (TLS). When you enable TLS support and generate the connector, the connector is upgraded to run on Mule runtime 4.6. and TLS is enabled so that Anypoint Studio displays the appropriate form to collect required TLS connection configuration information for the connector. 
+
+To enable TLS, add a `properties.json` file to the root directory of your Design Center API project for your app: 
 
 . In Design Center, Select *Files +* > *New file*.  
 . In the *Add new file* window, select *API format > other*, name the file `properties.json`, then click *Create*.
 . In the new file, add `"tlsEnabled": true`.
 +
-Adding this property and setting it to true customizes the connector generation so that when the Rest Connect Service receives the property, the connector is upgraded to run on Mule runtime 4.6. and the `tlsEnabled` flag propagates to the connector generation. 
+[NOTE]
+Add the `properties.json` file only if you want to enable TLS support or explicitly opt out of it. If you don't add a `properties.json` file to your API project, the REST Connect Service generates the standard connector artifacts, without TLS support.
 
-This enables Anypoint Studio to display the appropriate form to collect the information required for TLS connection configuration. 
+After you add the `properties.json` file and enable TLS, Anypoint Studio displays the TLS configuration form for the connector.  
  
-It is best to add the `properties.json` file only if you want to enable TLS support, or explicitly opt out of it. If you don't add a `properties.json` file to your API project, the REST Connect Service generates the standard connector artifacts, without TLS support.
-
-When you add a properties file to your project, ensure that the `tlsEnabled` property is correctly set, with a valid boolean value. If the `properties.json` file is invalid or if the property is incorrectly set, the connector generation for both Mule 3 (DevKit) and Mule 4 (SmartConnector) versions is aborted.
+When you add a `properties.json` file to your project, ensure that the `tlsEnabled` property is correctly set with a valid boolean value of either `true` to enable TLS or `false` to explicitly disable TLS. If the `properties.json` file is invalid or if the property is incorrectly set, the connector generation is aborted.
 
 [[upgrade-rest-connector]]
 == Upgrading a REST Connect Generated Connector
@@ -482,4 +485,5 @@ When your access token is issued properly, you can get issues related to Salesfo
 
 == Known Limitations
 
-  - Anypoint Platform, including REST Connect, does not support API fragments for OAS.
+* Anypoint Platform, including REST Connect, does not support API fragments for OAS.
+* TLS support can be enabled only for Mule 4 (SmartConnector) connectors. This feature is not supported for Mule 3 (DevKit).
