@@ -357,7 +357,7 @@ To update your REST-Connect-generated connector to use the latest version of Mul
 +
 The connector is re-generated. 
 
-If you want to add <<tls-support,TLS support>> to your application, it is a good idea to add it before re-generating the connector so you only have to test your app once. 
+If you want to add <<tls-support,TLS support>> to your application, add it before re-generating the connector so that you only have to test your app once. 
 
 //// 
 Does not work. Screen shots are outdated, steps are missing. This needs to be updated before it's published again. 
