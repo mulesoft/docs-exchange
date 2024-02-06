@@ -453,7 +453,7 @@ securitySchemes:
 +
 This app listens to `+https://my-app.cloudhub.io/getIssues+` and returns the results based on your search term.
 +
-image::rest-connect-dc-flow.png["Mule flow in Studio canvas that uses HTTP Listener, GitHub API, and Logger components"]
+image::rest-connect-dc-flow.png["Mule flow that uses the HTTP Listener, GitHub API, and Logger components"]
 +
 . Click GitHub API Configuration on the canvas.
 . Configure OAuth 2.0 with an authorization code for the connector. 
