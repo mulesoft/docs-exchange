@@ -264,7 +264,7 @@ uses:
 [[reserved-keywords]]
 == Reserved Keywords
 
-Valid identifiers for REST Connect must not use any reserved Java keywords or reserved Mule keywords.
+Valid identifiers for REST Connect must not use any reserved Java or Mule keywords.
 
 The following list shows the reserved Java keywords to avoid when naming valid identifiers for REST Connect:
 
