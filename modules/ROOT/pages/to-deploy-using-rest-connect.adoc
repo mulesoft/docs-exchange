@@ -477,7 +477,7 @@ image::rest-connect-auth-callback-url.png[]
 You can now retrieve an access token from GitHub. 
 +
 . Go to `+http://githubapp-smky.cloudhub.io/authorize+` in a browser, for example `+http://my-app.cloudhub.io/authorize+`.
-. Replace `my-app.cloudhub.io` with the one you got when you copied the link. 
+. Replace `my-app.cloudhub.io` with the one you received when you copied the link. 
 . Log in to GitHub.
 +
 When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+`. Replace `my-app.cloudhub.io` with the path you received with `Copy link`.
