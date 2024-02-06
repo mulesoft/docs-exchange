@@ -480,7 +480,7 @@ You can now retrieve an access token from GitHub.
 . Replace `my-app.cloudhub.io` with the one you got when you copied the link. 
 . Log in to GitHub.
 +
-When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+` - my-app.cloudhub.io should be replaced with the one you get with `Copy link`.
+When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+`. Replace `my-app.cloudhub.io` with the path you received with `Copy link`.
 ////
 
 == Known Limitations
