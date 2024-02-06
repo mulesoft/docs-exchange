@@ -458,7 +458,7 @@ image::rest-connect-dc-flow.png["Mule flow that uses the HTTP Listener, GitHub A
 . Click GitHub API Configuration on the canvas.
 . Configure OAuth 2.0 with an authorization code for the connector. 
 +
-Most of the fields are auto-populated based in the GitHub API specification.
+Most of the fields are auto-populated based on the GitHub API specification.
 +
 image::rest-connect-api-config.png["Configuration window for the GitHub API Configuration component"]
 +
