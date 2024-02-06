@@ -334,7 +334,7 @@ The following list shows the reserved Mule keywords to avoid when naming valid i
 
 Mule 4 (SmartConnector) connectors support Transport Layer Security (TLS). When you enable TLS support and generate the connector, the connector is upgraded to run on Mule runtime 4.6. and TLS is enabled so that Anypoint Studio displays the appropriate form to collect required TLS connection configuration information for the connector. 
 
-To enable TLS, add a `properties.json` file to the root directory of your Design Center API project for your app: 
+To enable TLS, add a `properties.json` file to the root directory of the Design Center API project for your app: 
 
 . In Design Center, Select *Files +* > *New file*.  
 . In the *Add new file* window, select *API format > other*, name the file `properties.json`, then click *Create*.
