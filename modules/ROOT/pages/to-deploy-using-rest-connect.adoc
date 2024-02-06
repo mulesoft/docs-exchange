@@ -350,7 +350,7 @@ When you add a `properties.json` file to your project, ensure that the `tlsEnabl
 [[upgrade-rest-connector]]
 == Upgrading a REST Connect Generated Connector
 
-To update your REST Connect generated connector to use the latest version of Mule runtime and to be compatible with Java 17:
+To update your REST-Connect-generated connector to use the latest version of Mule runtime and to be compatible with Java 17:
 
 . In Design Center, open your API project. 
 . Click *Publish*. 
