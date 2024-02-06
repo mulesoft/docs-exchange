@@ -474,7 +474,7 @@ image::rest-connect-ready-to-deploy.png[]
 +
 image::rest-connect-auth-callback-url.png[]
 +
-You are ready to retrieve an access token from GitHub. 
+You can now retrieve an access token from GitHub. 
 +
 . Go to `+http://githubapp-smky.cloudhub.io/authorize+` in a browser, for example `+http://my-app.cloudhub.io/authorize+`.
 . Replace `my-app.cloudhub.io` with the one you got when you copied the link. 
