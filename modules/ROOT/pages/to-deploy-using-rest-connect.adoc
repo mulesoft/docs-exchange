@@ -231,7 +231,7 @@ REST Connect generates metadata for each operation based on your schema definiti
 
 REST Connect supports only one input/output type and uses the first one declared in the API specification. You can change this behavior by using the `default` property from the REST Connect library.
 
-The following is an example that uses the REST Connect library:
+The following example uses the REST Connect library:
 
 [source,text,linenums]
 ----
@@ -332,12 +332,17 @@ The following list shows the reserved Mule keywords to avoid when naming valid i
 [[tls-support]]
 == Generating Connectors With TLS Support
 
-Mule 4 (SmartConnector) connectors support Transport Layer Security (TLS). When you enable TLS support and generate the connector, the connector is upgraded to run on Mule runtime 4.6. and TLS is enabled so that Anypoint Studio displays the appropriate form to collect required TLS connection configuration information for the connector. 
+Mule 4 (SmartConnector) connectors support Transport Layer Security (TLS).  
+
+When you enable TLS support and generate a connector:
+
+* The connector is upgraded to run on Mule runtime 4.6.
+* TLS is enabled, so that Anypoint Studio displays a form for collecting the connector's required TLS connection configuration information.
 
 To enable TLS, add a `properties.json` file to the root directory of the Design Center API project for your app: 
 
 . In Design Center, Select *Files +* > *New file*.  
-. In the *Add new file* window, select *API format > other*, name the file `properties.json`, then click *Create*.
+. In the *Add new file* window, select *API format > other*, name the file `properties.json`, and then click *Create*.
 . In the new file, add `"tlsEnabled": true`.
 +
 [NOTE]
@@ -449,13 +454,13 @@ securitySchemes:
 . Click *Publish* to publish the API specification to Exchange so you can use it in your Mule app later.
 . In the Publishing to Exchange window, accept the default values and click *Publish to Exchange*.
 +
-. In Anypoint Studio, create a Mule app with an HTTP Listener, the GitHub API you created in the previous step, and a Logger. 
+. In Anypoint Studio, create a Mule app with an HTTP Listener, the GitHub API you created in the previous step, and a *Logger*. 
 +
 This app listens to `+https://my-app.cloudhub.io/getIssues+` and returns the results based on your search term.
 +
 image::rest-connect-dc-flow.png["Mule flow that uses the HTTP Listener, GitHub API, and Logger components"]
 +
-. Click GitHub API Configuration on the canvas.
+. Click *GitHub API Configuration* on the canvas.
 . Configure OAuth 2.0 with an authorization code for the connector. 
 +
 Most of the fields are auto-populated based on the GitHub API specification.
@@ -466,7 +471,7 @@ image::rest-connect-api-config.png["Configuration window for the GitHub API Conf
 . Because GitHub API’s base URL is api.github.com, you can put “/” in the Base Path.
 . Match and modify your external callback URL. The callback URL receives an access token from GitHub. 
 +
-By default, the connector shows `+http://my-app.cloudhub.io/callback+`, but you need to modify it to be specific to your app. The demo app’s callback URL is `+http://githubapp-smky.cloudhub.io/callback+`, so replace “my-app” with “githubapp-smky.” You can find this information to go to the menu and select the copy link in Design Center.
+By default, the connector shows `+http://my-app.cloudhub.io/callback+`, but you need to modify it to be specific to your app. The demo app’s callback URL is `+http://githubapp-smky.cloudhub.io/callback+`, so replace `my-app` with `githubapp-smky`. To find the callback URL, go to the menu and select *Copy link* in Design Center.
 +
 image::rest-connect-ready-to-deploy.png[]
 +
@@ -477,7 +482,7 @@ image::rest-connect-auth-callback-url.png[]
 You can now retrieve an access token from GitHub. 
 +
 . Go to `+http://githubapp-smky.cloudhub.io/authorize+` in a browser, for example `+http://my-app.cloudhub.io/authorize+`.
-. Replace `my-app.cloudhub.io` with the one you received when you copied the link. 
+. Replace `my-app.cloudhub.io` with the URL you received when you copied the link. 
 . Log in to GitHub.
 +
 When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+`. Replace `my-app.cloudhub.io` with the path you received with `Copy link`.
