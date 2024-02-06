@@ -341,7 +341,7 @@ To enable TLS, add a `properties.json` file to the root directory of the Design 
 . In the new file, add `"tlsEnabled": true`.
 +
 [NOTE]
-Add the `properties.json` file only if you want to enable TLS support or explicitly opt out of it. If you don't add a `properties.json` file to your API project, the REST Connect Service generates the standard connector artifacts, without TLS support.
+Add the `properties.json` file only if you want to enable TLS support or explicitly opt out of it. If you don't add a `properties.json` file to your API project, the REST Connect Service generates the standard connector artifacts without TLS support.
 
 After you add the `properties.json` file and enable TLS, Anypoint Studio displays the TLS configuration form for the connector.  
  
