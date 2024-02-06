@@ -449,7 +449,7 @@ securitySchemes:
 . Click *Publish* to publish the API specification to Exchange so you can use it in your Mule app later.
 . In the Publishing to Exchange window, accept the default values and click *Publish to Exchange*.
 +
-. In Anypoint Studio, create a Mule application with an HTTP Listener, the GitHub API you created in the previous step, and a Logger. 
+. In Anypoint Studio, create a Mule app with an HTTP Listener, the GitHub API you created in the previous step, and a Logger. 
 +
 This app listens to `+https://my-app.cloudhub.io/getIssues+` and returns the results based on your search term.
 +
