@@ -4,24 +4,22 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 3 and Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
+The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 3 or Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
 
-The Anypoint Exchange Download button lets you download the Mule 3 or Mule 4 Connector.
-
-REST Connect does not currently support custom TLS configurations.
-
+[[access-generated-connectors]]
 == Access Generated Connectors
 
-In Exchange, you can download the Mule 3 or Mule 4 connector from the *Download* menu:
+In Exchange, download the generated connector from the *Download* menu.
 
+[NOTE]
+After deploying a REST asset to Exchange, refresh your screen to ensure that all download options are available.
 
-NOTE: After deploying a REST asset to Exchange, refresh your screen to ensure that all download options are available.
+Mule 3 connectors download as ZIP files, and Mule 4 connectors download as JAR files.
 
-The Mule 3 connector downloads as a zip file, and the Mule 4 connector downloads as a JAR file.
-
+[[api-spec-support]]
 == API Specification Format Support
 
-REST Connect has support for these API specification formats:
+REST Connect supports these API specification formats:
 
 * OAS 3 - JSON
 * OAS 3 - YAML
@@ -29,6 +27,7 @@ REST Connect has support for these API specification formats:
 * OAS 2 - YAML
 * RAML 1.0
 
+[[security-scheme-support]]
 == Security Scheme Support
 
 REST Connect supports these security schemes:
@@ -39,11 +38,11 @@ REST Connect supports these security schemes:
 * Pass Through
 * Digest Authentication
 
-If you publish an API specification with another authentication type, you may receive an alert email. To have an auto-generated connector, update your API specification to use one of these supported security schemes.
+If you publish an API specification with an unsupported authentication type, you receive an alert email. If this happens, update your API specification to use one of the supported security schemes.
 
-If the operations defined in your API specification support multiple security schemes, the one that comes first in the list of supported schemes is selected.
+If the operations defined in your API specification support multiple security schemes, the one that comes first in the list of supported schemes is used.
 
-Basic Authentication Example:
+=== Basic Authentication Example
 
 [source,text,linenums]
 ----
@@ -58,7 +57,7 @@ securitySchemes:
     type: Basic Authentication
 ----
 
-OAuth 2.0 Client Credentials Example:
+=== OAuth 2.0 Client Credentials Example
 
 [source,text,linenums]
 ----
@@ -96,7 +95,7 @@ securitySchemes:
                         example: '[ { "rest-connect": "2017-03-13" } ]'
 ----
 
-OAuth 2.0 Authorization Code Example:
+=== OAuth 2.0 Authorization Code Example
 
 [source,text,linenums]
 ----
@@ -149,7 +148,7 @@ securitySchemes:
         - "admin:public_key"
 ----
 
-Pass-through Example:
+=== Pass-through Example
 
 [source,text,linenums]
 ----
@@ -168,11 +167,12 @@ securitySchemes:
           type: string
 ----
 
-== Change an Auto-Generated Connector Name
+[[change-connector-name]]
+== Change an Auto-Generated Connector's Name
 
-REST Connect generates the names of operations based on operationName, displayName, and endpoint in that order. To modify a generated name, you can point to the REST Connect library and use the operationName annotation from a method such as GET, POST, and DELETE, or you can change the text in displayName under the method.
+REST Connect generates the names of operations based on the `operationName`, `displayName`, and `endpoint` attributes, in that order. 
 
-Example with displayName:
+To modify a generated connector name, change the text in `displayName`, for example:
 
 [source,text,linenums]
 ----
@@ -195,7 +195,7 @@ mediaType: application/json
             type: Post
 ----
 
-Example with REST Connect library:
+You can also modify a generated connector name by pointing to the REST Connect library and using the `operationName` annotation from a method such as GET, POST, and DELETE, for example:
 
 [source,text,linenums]
 ----
@@ -223,13 +223,15 @@ uses:
 ----
 
 
+
+[[metadata-limitations]]
 == Metadata Limitations
 
 REST Connect generates metadata for each operation based on your schema definition in the request and response for each method in your RAML. REST Connect cannot generate metadata based on examples in the RAML.
 
-Because only one input/output type is supported for each operation, REST Connect selects the first one that was declared. You can change this behavior by using the 'default' property from the REST Connect library.
+REST Connect supports only one input/output type and uses the first one declared in the API specification. You can change this behavior by using the `default` property from the REST Connect library.
 
-Example with REST Connect library:
+The following example uses the REST Connect library:
 
 [source,text,linenums]
 ----
@@ -262,7 +264,7 @@ uses:
 [[reserved-keywords]]
 == Reserved Keywords
 
-Valid identifiers for REST Connect must not match any of the reserved Java keywords or reserved Mule keywords.
+Valid identifiers for REST Connect must not use any reserved Java or Mule keywords.
 
 The following list shows the reserved Java keywords to avoid when naming valid identifiers for REST Connect:
 
@@ -327,16 +329,53 @@ The following list shows the reserved Mule keywords to avoid when naming valid i
 * `target`
 * `targetValue`
 
+[[tls-support]]
+== Generating Connectors With TLS Support
 
+Mule 4 (SmartConnector) connectors support Transport Layer Security (TLS).  
+
+When you enable TLS support and generate a connector:
+
+* The connector is upgraded to run on Mule runtime 4.6.
+* TLS is enabled, so that Anypoint Studio displays a form for collecting the connector's required TLS connection configuration information.
+
+To enable TLS, add a `properties.json` file to the root directory of the Design Center API project for your app: 
+
+. In Design Center, Select *Files +* > *New file*.  
+. In the *Add new file* window, select *API format > other*, name the file `properties.json`, and then click *Create*.
+. In the new file, add `"tlsEnabled": true`.
++
+[NOTE]
+Add the `properties.json` file only if you want to enable TLS support or explicitly opt out of it. If you don't add a `properties.json` file to your API project, the REST Connect Service generates the standard connector artifacts without TLS support.
+
+After you add the `properties.json` file and enable TLS, Anypoint Studio displays the TLS configuration form for the connector.  
+ 
+When you add a `properties.json` file to your project, ensure that the `tlsEnabled` property is set correctly with a valid boolean value of either `true` to enable TLS or `false` to explicitly disable TLS. If the `properties.json` file is invalid or the property is incorrectly set, the connector generation is aborted.
+
+[[upgrade-rest-connector]]
+== Upgrading a REST Connect Generated Connector
+
+To update your REST-Connect-generated connector to use the latest version of Mule runtime and to be compatible with Java 17:
+
+. In Design Center, open your API project. 
+. Click *Publish*. 
++
+The connector is regenerated. 
+
+If you want to add <<tls-support,TLS support>> to your application, add it before re-generating the connector so that you only have to test your app once. 
+
+//// 
+Does not work. Screen shots are outdated, steps are missing. This needs to be updated before it's published again. 
 == OAuth2 in Design Center for REST Connect
 
-. Define an API with OAuth2 - Authorization Code and one operation in Design Center. You can use the following GitHub API example:
+. Create a new API specification project named `GitHub API` in Design Center, and copy and paste the previous example into the project. 
+. Define an API with OAuth2 - Authorization Code and one operation in Design Center, for example:
 +
 [source,text,linenums]
 ----
 #%RAML 1.0
 version: v1
-title: Github API
+title: GitHub API
 baseUri: https://api.github.com
 
 securitySchemes:
@@ -412,22 +451,27 @@ securitySchemes:
            application/json:
              type: string
 ----
+. Click *Publish* to publish the API specification to Exchange so you can use it in your Mule app later.
+. In the Publishing to Exchange window, accept the default values and click *Publish to Exchange*.
 +
-. Create a new API specification project named Github API in Design Center, and copy and paste the example above. From the API Designer, click Publish to Exchange:
+. In Anypoint Studio, create a Mule app with an HTTP Listener, the GitHub API you created in the previous step, and a *Logger*. 
 +
-image::rest-connect-publish-to-exchange.png[]
+This app listens to `+https://my-app.cloudhub.io/getIssues+` and returns the results based on your search term.
 +
-. Create a simple Mule application in Design Center of an HTTP Listener, the Github API, and a Logger. This app listens to `+https://my-app.cloudhub.io/getIssues+` and returns the results based on your search term.
+image::rest-connect-dc-flow.png["Mule flow that uses the HTTP Listener, GitHub API, and Logger components"]
 +
-image::rest-connect-dc-flow.png[]
+. Click *GitHub API Configuration* on the canvas.
+. Configure OAuth 2.0 with an authorization code for the connector. 
 +
-. Configure OAuth 2.0 with authorization code for a connector. Most of the fields are auto-populate based in the GitHub API specification.
+Most of the fields are auto-populated based on the GitHub API specification.
 +
-image::rest-connect-api-config.png[]
+image::rest-connect-api-config.png["Configuration window for the GitHub API Configuration component"]
 +
 . Get the Client ID and Client Secret for your GitHub Account. You can find your Client ID and Client Secret if you go to Settings > Developer settings in GitHub. If you don’t have an OAuth App in GitHub, you can  create one with the New OAuth App.
 . Because GitHub API’s base URL is api.github.com, you can put “/” in the Base Path.
-. Match and modify your external callback URL. The callback URL receives an access token from GitHub. By default, the connector shows `+http://my-app.cloudhub.io/callback+`, but you need to modify it specific to your app. The demo app’s callback URL should be `+http://githubapp-smky.cloudhub.io/callback+` so I need to replace “my-app” with “githubapp-smky.” You can find this information to go to the menu and select the copy link in Design Center.
+. Match and modify your external callback URL. The callback URL receives an access token from GitHub. 
++
+By default, the connector shows `+http://my-app.cloudhub.io/callback+`, but you need to modify it to be specific to your app. The demo app’s callback URL is `+http://githubapp-smky.cloudhub.io/callback+`, so replace `my-app` with `githubapp-smky`. To find the callback URL, go to the menu and select *Copy link* in Design Center.
 +
 image::rest-connect-ready-to-deploy.png[]
 +
@@ -435,8 +479,16 @@ image::rest-connect-ready-to-deploy.png[]
 +
 image::rest-connect-auth-callback-url.png[]
 +
-. You are ready to retrieve an access token from GitHub. In this case, go to `+http://githubapp-smky.cloudhub.io/authorize+` in a browser, your case would be `+http://my-app.cloudhub.io/authorize+` - replace my-app.cloudhub.io with the one you get with Copy link. When you reach this URL, your browser asks you to log into GitHub.
-. When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+` - my-app.cloudhub.io should be replaced with the one you get with `Copy link`.
+You can now retrieve an access token from GitHub. 
++
+. Go to `+http://githubapp-smky.cloudhub.io/authorize+` in a browser, for example `+http://my-app.cloudhub.io/authorize+`.
+. Replace `my-app.cloudhub.io` with the URL you received when you copied the link. 
+. Log in to GitHub.
++
+When your access token is issued properly, you can get issues related to Salesforce from GitHub by using `+http://my-app.cloudhub.io/getIssues+`. Replace `my-app.cloudhub.io` with the path you received with `Copy link`.
+////
 
-== Known limitations
-  - Anypoint platform, including REST Connect, does not support API fragments for OAS.
+== Known Limitations
+
+* Anypoint Platform, including REST Connect, does not support API fragments for OAS.
+* TLS support can be enabled only for Mule 4 (SmartConnector) connectors. This feature is not supported for Mule 3 (DevKit).
