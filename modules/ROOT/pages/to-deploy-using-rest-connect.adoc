@@ -352,6 +352,15 @@ After you add the `properties.json` file and enable TLS, Anypoint Studio display
  
 When you add a `properties.json` file to your project, ensure that the `tlsEnabled` property is set correctly with a valid boolean value of either `true` to enable TLS or `false` to explicitly disable TLS. If the `properties.json` file is invalid or the property is incorrectly set, the connector generation is aborted.
 
+== View Mule Runtime Version and Compatible Java Version
+
+To view the minimum Mule runtime version or the compatible Java versions for the patch versions of a connector:
+
+. From Exchange, select a connector.
+. In the asset details page, click *View versions*.
++
+image::ex-connector-java-compatibility.png[The asset version showing the minimum runtime version and compatible java versions, 50%, 50%]
+
 [[upgrade-rest-connector]]
 == Upgrading a REST Connect Generated Connector
 
