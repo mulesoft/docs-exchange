@@ -359,7 +359,7 @@ To view the minimum Mule runtime version or the compatible Java versions for the
 . From Exchange, select a connector.
 . In the asset details page, click *View versions*.
 +
-image::ex-connector-java-compatibility.png[Image showing the minimum runtime version and compatible java versions]
+image::ex-connector-java-compatibility.png[The asset version showing the minimum runtime version and compatible java versions, 50%, 50%]
 
 [[upgrade-rest-connector]]
 == Upgrading a REST Connect Generated Connector
