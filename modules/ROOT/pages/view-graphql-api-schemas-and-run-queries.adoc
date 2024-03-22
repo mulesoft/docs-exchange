@@ -1,4 +1,4 @@
-= View GraphQL API Schema and Run Queries
+= View GraphQL API Schemas and Run Queries
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
