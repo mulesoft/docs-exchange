@@ -35,7 +35,7 @@ Use the query editor to write queries into the console without knowing the speci
 
 The *Results* panel provides immediate feedback, displaying the results of the query and any errors. To run queries, a GraphQL instance is required to query between the API instance. You can also add non-managed instances to run the queries.
 
-. In the query editor of the GraphQl console, start typing your query using the in-line autocomplete function or press Control + Space to add types.
+. In the query editor of the GraphQl console, start typing your query using the in-line autocomplete function or press Control+Space to add types.
 . Add any query variables you want to use in the Query Variables pane.
 . From the *Instance selector*, select an available server instance that you want to use. If there are no server instances available, the *Instance selector* is disabled.
 . To add a new a non-managed instance, click *Add new instance*.
