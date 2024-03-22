@@ -8,7 +8,7 @@ The GraphQL console is an easy-to-use interface for API app developers to intera
 
 (placeholder for screen capture of the console and callouts)
 
-The console uses panels for viewing schemas, writing queries, and reviewing query results. These panels can be resized.
+Use the console uses panels to view schemas, write  and run queries, and review query results. These panels can be resized.
 
 * Schema panel: Use the Schema panel to explore the 
 * GraphQL API schema types
