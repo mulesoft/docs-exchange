@@ -14,6 +14,7 @@
  ** xref:manage-versions.adoc[Manage Versions]
  ** xref:to-manage-asset-portal-resources.adoc[Manage Asset Portal Resources]
  ** xref:ex2-to-simulate-api-data.adoc[Simulate Data in REST APIs]
+ ** xref:view-graphql-api-schemas-and-run-queries.adoc[]
  ** xref:to-download-an-asset.adoc[Download an Asset]
  ** xref:to-manage-categories.adoc[Manage Categories]
  ** xref:to-manage-custom-fields.adoc[Manage Custom Fields]
