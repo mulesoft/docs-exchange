@@ -8,19 +8,20 @@ The GraphQL console is an easy-to-use interface for API app developers to intera
 
 (placeholder for screen capture of the console and callouts)
 
-
-* Schema: Use the Schema explorer to explore the 
-* GraphQL API schema types and documentation.
+(callouts)
+* Schema: Use the Schema explorer to explore the GraphQL API schema types and documentation.
 * Query : Use the Query editor to write and run queries.
 * Results: Use the Results panel to review and troubleshoot queries.
+* Variables: Use this tab to enter variables that you want to use to query.
+* Headers: Use this tab to enter header information that you want to use to query.
 
 == Before You Begin
 
-To use the GraphQL console, you must have the Exchange Viewer permission. For more information, see xref:to-set-permissions.adoc[Set User Access Permissions].
+To use the GraphQL console, the Exchange Viewer permission is required. For more information, see xref:to-set-permissions.adoc[Set User Access Permissions].
 
 == View GraphQL API Schemas
 
-Explore the schema by inspecting the types, fields, and relationships defined in the schema to see a visual representation of the data and operations. Use the Schema explorer to inspect the query methods that are available for the API schema. The documentation explorer renders the information and allows us to navigate through the documentation of the API.
+Explore the schema by inspecting the types, fields, and relationships defined in the schema to see a visual representation of the data and operations. Use the Schema explorer to inspect the query methods that are available for the API schema. The documentation explorer renders the information and allows the ability to navigate through the documentation of the API.
 
 Use the *Search* box or keyboard shortcuts to search the schema documentation to find relevant information about specific types, fields, or operation. The search results highlight the search criteria in the corresponding sections of the documentation.
 
@@ -28,10 +29,12 @@ Use the *Search* box or keyboard shortcuts to search the schema documentation to
 . Select a GraphQL API from the results.
 . In the navigation bar, click *Console*.
 . In the *Schema* panel, review the schema documentation.
-. To search the schema documentation using the *Search* box , enter a keyword in the *Search* box or use the CTRL+F or Command+F shortcut.
+. To search the schema documentation using one of the following methods: options:
+.. Use the *Search* box, by clicking the three dots icon and entering a keyword in the *Search* box.
+.. Use the CTRL+F or Command+F keyboard shortcuts, by pressing a shortcut keyboard combination and entering a keyword in the *Search* box..
 
 == Run a GraphQL Query
-Use the query editor to write queries into the console without knowing the specific syntax and run them in real-time. The query builder enables you to add data to the query by selecting from a list to execute the query. The query editor is located in the *Query* panel. 
+Use the query editor to write queries in the console without knowing the specific syntax and run them in real-time. The query builder enables you to add data to the query by selecting from a list to execute the query. The query editor is located in the *Query* panel. 
 
 The *Results* panel provides immediate feedback, displaying the results of the query and any errors. To run queries, a GraphQL instance is required to query between the API instance. You can also add non-managed instances to run the queries.
 
