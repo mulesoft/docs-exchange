@@ -29,16 +29,20 @@ Use the *Search* box or keyboard shortcuts to search the schema documentation to
 . Select a GraphQL API from the results.
 . In the navigation bar, click *Console*.
 . In the *Schema* panel, review the schema documentation.
-. To search the schema documentation using one of the following methods: 
-.. Use the *Search* box by clicking the three dots icon and entering a keyword in the *Search* box.
-.. Use the CTRL+F or Command+F keyboard shortcuts by pressing a shortcut keyboard combination and entering a keyword in the *Search* box..
+. Click *ExchangeGraph* to see the root schema types for each operation.
+. Search the schema documentation using one of the following methods: 
+.. Use the *Search for content* box by clicking the three dots icon, selecting and entering a keyword in the *Search for content* box.
+.. Use the CTRL+F or Command+F keyboard shortcuts by pressing a keyboard shortcut combination and entering a keyword in the *Search* box.
 
 == Run a GraphQL Query
 Use the query editor to write queries in the console without knowing the specific syntax and run them in real-time. The query builder enables you to add data to the query by selecting from a list of options or use the autocomplete function. The query editor is located in the *Query* panel. 
 
 The *Results* panel provides immediate feedback and displaysg the results of the query and any errors. To run queries, a GraphQL instance is required to query between the API instance. Non-managed instances can be added to run the queries.
 
-. In the *Query* panel, click *Clear* and start typing your query using the in-line autocomplete function or press Control+Space to add types.
+. In the *Query* panel, click *Clear* to the clear the editor.
+. Click in the editor and start typing your query using the in-line autocomplete function or press Control+Space to add types.
+. Click *Prettier* to improve the formatting of the query objects in the editor. 
+. Click *Copy* to copy the query and share with others or save for later.
 . In *Variables* section, add any query variables to include in the query.
 . In the *Header* Section, add any header information to include in the query.
 . From the *Instance selector*, select an available server instance that you want to use to run the query. If there are no server instances available, the *Instance selector* is disabled.
@@ -47,6 +51,8 @@ The *Results* panel provides immediate feedback and displaysg the results of the
 . Enter the name and URL of the instance and click the check icon.
 . Click *Execute*.
 . Validate the query results in the *Results* panel.
+. Click *Copy* to share the results with others.
+. Click *Clear* to clear the results.
 
 
 == See Also
