@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The GraphQL console is an easy-to-use interface for API app developers to interact with GraphQL APIs in Exchange. GraphQL APIs are schema definitions that contain the object types and definitions that are used to interact with the API through the GraphQL specification. The GraphQL console enables app developers to query an API that supports this language in a much more flexible way than REST. The console supports standard GraphQL query syntax. From the console, explore and understand the available GraphQL schemas and write, run, and troubleshoot GraphQL queries. The console is located in the asset details page.
+The GraphQL console is an easy-to-use interface for API app developers to interact with GraphQL APIs in Exchange. GraphQL APIs are schema definitions that contain the object types and definitions that are used to interact with the API through the GraphQL specification. The GraphQL console enables app developers to query an API that supports this language in a much more flexible way than REST. The console supports standard GraphQL query syntax. From the console, explore and understand the available GraphQL schemas, write, run, and troubleshoot GraphQL queries. The console is located in the asset details page.
 
 (placeholder for screen capture of the console and callouts)
 
@@ -23,30 +23,33 @@ To use the GraphQL console, the Exchange Viewer permission is required. For more
 
 Explore the schema by inspecting the types, fields, and relationships defined in the schema to see a visual representation of the data and operations. Use the Schema explorer to inspect the query methods that are available for the API schema. The documentation explorer renders the information and allows the ability to navigate through the documentation of the API.
 
-Use the *Search* box or keyboard shortcuts to search the schema documentation to find relevant information about specific types, fields, or operation. The search results highlight the search criteria in the corresponding sections of the documentation.
+Use the *Search* box or keyboard shortcuts to search the schema documentation to find relevant information about specific types, fields, or operations. The search results highlight the search criteria in the corresponding sections of the documentation.
 
 . In the Exchange landing page, click the *Any type* filter and select *GraphQL APIs* from the list.
 . Select a GraphQL API from the results.
 . In the navigation bar, click *Console*.
 . In the *Schema* panel, review the schema documentation.
-. To search the schema documentation using one of the following methods: options:
-.. Use the *Search* box, by clicking the three dots icon and entering a keyword in the *Search* box.
-.. Use the CTRL+F or Command+F keyboard shortcuts, by pressing a shortcut keyboard combination and entering a keyword in the *Search* box..
+. To search the schema documentation using one of the following methods: 
+.. Use the *Search* box by clicking the three dots icon and entering a keyword in the *Search* box.
+.. Use the CTRL+F or Command+F keyboard shortcuts by pressing a shortcut keyboard combination and entering a keyword in the *Search* box..
 
 == Run a GraphQL Query
-Use the query editor to write queries in the console without knowing the specific syntax and run them in real-time. The query builder enables you to add data to the query by selecting from a list  or use the autocomplete function. The query editor is located in the *Query* panel. 
+Use the query editor to write queries in the console without knowing the specific syntax and run them in real-time. The query builder enables you to add data to the query by selecting from a list of options or use the autocomplete function. The query editor is located in the *Query* panel. 
 
-The *Results* panel provides immediate feedback, displaying the results of the query and any errors. To run queries, a GraphQL instance is required to query between the API instance. You can also add non-managed instances to run the queries.
+The *Results* panel provides immediate feedback and displaysg the results of the query and any errors. To run queries, a GraphQL instance is required to query between the API instance. Non-managed instances can be added to run the queries.
 
-. In the query editor of the GraphQl console, click *Clear* and start typing your query using the in-line autocomplete function or press Control+Space to add types.
-. Add any query variables you want to use in the *Query Variables* pane.
+. In the *Query* panel, click *Clear* and start typing your query using the in-line autocomplete function or press Control+Space to add types.
+. In *Variables* section, add any query variables to include in the query.
+. In the *Header* Section, add any header information to include in the query.
 . From the *Instance selector*, select an available server instance that you want to use to run the query. If there are no server instances available, the *Instance selector* is disabled.
-. To add a new a non-managed instance, click *Add new instance*.
-. From non-managed instances page, click *Add new instance*.
+. To add a new a non-managed instance to use to run the query, click *Add new instance*.
+. From *Non-managed instances* page, click *Add new instance*.
 . Enter the name and URL of the instance and click the check icon.
 . Click *Execute*.
 . Validate the query results in the *Results* panel.
 
 
+== See Also
 
+* xref:asset-details.adoc[]
 
