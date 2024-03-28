@@ -6,14 +6,14 @@ endif::[]
 
 The GraphQL console is an easy-to-use interface for API app developers to interact with GraphQL APIs in Exchange. GraphQL APIs are schema definitions that contain the object types and definitions that are used to interact with the API through the GraphQL specification. The GraphQL console enables app developers to query an API that supports this language in a much more flexible way than REST. The console supports standard GraphQL query syntax. From the console, explore and understand the available GraphQL schemas, write, run, and troubleshoot GraphQL queries. The console is located in the asset details page.
 
-(placeholder for screen capture of the console and callouts)
+image::ex-graphql-console.png[GraphQL Console in the asset details page]
 
-(callouts)
-* Schema: Use the Schema explorer to explore the GraphQL API schema types and documentation.
-* Query : Use the Query editor to write and run queries.
-* Results: Use the Results panel to review and troubleshoot queries.
-* Variables: Use this tab to enter variables that you want to use to query.
-* Headers: Use this tab to enter header information that you want to use to query.
+[calloutlist]
+. *Schema*: Use the Schema explorer to explore the GraphQL API schema types and documentation.
+. *Query*: Use the Query editor to write and run queries.
+. *Results*: Use the Results panel to review and troubleshoot queries.
+. *Variables*: Use this tab to enter variables that you want to use to query.
+. *Headers*: Use this tab to enter header information that you want to use to query.
 
 == Before You Begin
 
@@ -42,16 +42,16 @@ The *Results* panel provides immediate feedback and displaysg the results of the
 . In the *Query* panel, click *Clear* to the clear the editor.
 . Click in the editor and start typing your query using the in-line autocomplete function or press Control+Space to add types.
 . Click *Prettier* to improve the formatting of the query objects in the editor. 
-. Click *Copy* to copy the query and share with others or save for later.
+. Click *Copy*, then paste the query text into a text editor and share with others or save for later.
 . In *Variables* section, add any query variables to include in the query.
 . In the *Header* Section, add any header information to include in the query.
-. From the *Instance selector*, select an available server instance that you want to use to run the query. If there are no server instances available, the *Instance selector* is disabled.
+. From the *Instance selector*, select an available server instance  to use to run the query. If there are no server instances available, the *Instance selector* is disabled.
 . To add a new a non-managed instance to use to run the query, click *Add new instance*.
 . From *Non-managed instances* page, click *Add new instance*.
 . Enter the name and URL of the instance and click the check icon.
 . Click *Execute*.
 . Validate the query results in the *Results* panel.
-. Click *Copy* to share the results with others.
+. Click *Copy*, then paste the results into a text editor to share with others.
 . Click *Clear* to clear the results.
 
 
