@@ -12,8 +12,6 @@ image::ex-graphql-console.png[GraphQL Console in the asset details page]
 . *Schema*: Use the Schema explorer to explore the GraphQL API schema types and documentation.
 . *Query*: Use the Query editor to write and run queries.
 . *Results*: Use the Results panel to review and troubleshoot queries.
-. *Variables*: Use this tab to enter variables that you want to use to query.
-. *Headers*: Use this tab to enter header information that you want to use to query.
 
 == Before You Begin
 
