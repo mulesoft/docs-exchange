@@ -1,4 +1,9 @@
 = Connected Application Authentication
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
 
 Connected application authentication enables access to Exchange using the client application credentials of client ID and client secret, so you can execute Exchange requests without sending a token.
 
