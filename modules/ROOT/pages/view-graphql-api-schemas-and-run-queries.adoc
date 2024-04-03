@@ -36,12 +36,12 @@ Use the *Search content* box or keyboard shortcuts to search the schema document
 .. Use the *CTRL+F* or *Command+F* keyboard shortcut and enter a keyword in the *Search content* box.
 
 == Run a GraphQL Query
-Use the query editor to write queries in the console without knowing the specific syntax using autocomplete and run them in real-time. The query editor is located in the *Query* panel. 
+Use the query editor to write queries in the console and run them in real-time. You can use autocomplete or *Control+Space* to add fields without knowing the specific syntax. The query editor is located in the *Query* panel. 
 
 The *Results* panel provides immediate feedback and displays the results of the query and any errors. To run queries, a GraphQL instance is required to query between the API instance. Non-managed instances can be added to run the queries.
 
 . In the *Query* panel, click *Clear* to the clear the editor.
-. Click in the editor and start typing your query using the in-line autocomplete function or press *Control+Space* to add types.
+. Click in the editor and start typing your query using autocomplete or press *Control+Space*.
 . Click *Prettify* to improve the formatting of the query objects in the editor. 
 . Click *Copy*, then paste the query text into a text editor and share with others or save for later.
 . In the *Variables* section, add any query variables to include in the query.
