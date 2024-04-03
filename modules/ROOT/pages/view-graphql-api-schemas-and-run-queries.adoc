@@ -32,7 +32,7 @@ Use the *Search content* box or keyboard shortcuts to search the schema document
 . In the navigation bar, click *Console*.
 . In the *Schema* panel, review the schema documentation.
 . Search the schema documentation using one of the following methods: 
-.. Click the three dots icon, select *Search for content* and enter a keyword in the box.
+.. Click the three dots icon, select *Search for content*, and enter a keyword in the box.
 .. Use the *CTRL+F* or *Command+F* keyboard shortcut and enter a keyword in the *Search content* box.
 
 == Run a GraphQL Query
