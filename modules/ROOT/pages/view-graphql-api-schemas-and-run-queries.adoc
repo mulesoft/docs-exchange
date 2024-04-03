@@ -12,8 +12,8 @@ image::ex-graphql-console.png[GraphQL console in the asset details page]
 . *Schema*: Use the Schema explorer to explore the GraphQL API schema types and documentation.
 . *Query*: Use the Query editor to write and run queries.
 +
-* *Variables*: Use this tab to enter variables that you want to use to query.
-* *Headers*: Use this tab to enter header information that you want to use to query.
+* *Variables*: Use this tab to enter variables to query.
+* *Headers*: Use this tab to enter the header information to query.
 . *Results*: Use this panel to review and troubleshoot queries.
 
 
@@ -46,7 +46,7 @@ The *Results* panel provides immediate feedback and displays the results of the 
 . Click *Copy*, then paste the query text into a text editor and share with others or save for later.
 . In the *Variables* section, add any query variables to include in the query.
 . In the *Header* section, add any header information to include in the query.
-. From the *Instance selector*, select an available server instance to use to run the query. If there are no server instances available, the *Execute* button is disabled.
+. From the *Instance selector*, select an available server instance to run the query. If there are no server instances available, the *Execute* button is disabled.
 . To add a new a non-managed instance to run the query, click *Add new instance*.
 . From the *Non-managed instances* page, click *Add new instance*.
 . Enter the name and URL of the instance and click the check icon.
