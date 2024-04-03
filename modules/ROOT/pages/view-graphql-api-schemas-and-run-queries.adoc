@@ -36,7 +36,7 @@ Use the *Search content* box or keyboard shortcuts to search the schema document
 .. Use the *CTRL+F* or *Command+F* keyboard shortcut and enter a keyword in the *Search content* box.
 
 == Run a GraphQL Query
-Use the query editor to write queries in the console without knowing the specific syntax and run them in real-time. The query builder enables you to add data to the query by selecting from a list of options or using the autocomplete function. The query editor is located in the *Query* panel. 
+Use the query editor to write queries in the console without knowing the specific syntax using autocomplete and run them in real-time. The query editor is located in the *Query* panel. 
 
 The *Results* panel provides immediate feedback and displays the results of the query and any errors. To run queries, a GraphQL instance is required to query between the API instance. Non-managed instances can be added to run the queries.
 
@@ -46,8 +46,8 @@ The *Results* panel provides immediate feedback and displays the results of the 
 . Click *Copy*, then paste the query text into a text editor and share with others or save for later.
 . In the *Variables* section, add any query variables to include in the query.
 . In the *Header* section, add any header information to include in the query.
-. From the *Instance selector*, select an available server instance  to use to run the query. If there are no server instances available, the *Execute* button is disabled.
-. To add a new a non-managed instance to use to run the query, click *Add new instance*.
+. From the *Instance selector*, select an available server instance to use to run the query. If there are no server instances available, the *Execute* button is disabled.
+. To add a new a non-managed instance to run the query, click *Add new instance*.
 . From the *Non-managed instances* page, click *Add new instance*.
 . Enter the name and URL of the instance and click the check icon.
 . Click *Execute*.
