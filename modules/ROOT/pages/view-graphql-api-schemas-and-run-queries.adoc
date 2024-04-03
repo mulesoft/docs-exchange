@@ -55,7 +55,6 @@ The *Results* panel provides immediate feedback and displays the results of the 
 . Click *Copy*, then paste the results into a text editor to share with others.
 . Click *Clear* to clear the results.
 
-
 == See Also
 
 * xref:asset-details.adoc[]
