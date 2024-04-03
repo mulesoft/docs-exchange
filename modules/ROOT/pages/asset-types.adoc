@@ -63,7 +63,6 @@ Templates for RPA processes that can be imported into RPA Builder as projects an
 +
 YAML files that describe a ruleset.
 
-
 * SOAP APIs
 +
 A WSDL file that specifies an API.
@@ -71,4 +70,9 @@ A WSDL file that specifies an API.
 +
 Packaged integration patterns built on best practices to address common use cases.
 +
-Complete the template's use case or solution by supplying your own information, customizing or extending the templates as needed.
+Complete the template's use case or solution by supplying your own information, customizing, or extending the templates as needed.
+
+
+== See Also
+
+* xref:asset-details.adoc[]
