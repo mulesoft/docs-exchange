@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The GraphQL console is an easy-to-use interface for API app developers to interact with GraphQL APIs in Exchange. GraphQL APIs are schema definitions that contain the object types and definitions that are used to interact with the API through the GraphQL specification. The GraphQL console enables app developers to query an API that supports this language in a more flexible way than REST. The console supports standard GraphQL query syntax. From the console, explore and understand the available GraphQL schemas, write, run, and troubleshoot GraphQL queries. The console is located in the asset details page.
+ Use the GraphQL console to explore and understand the available GraphQL schemas, write, run, and troubleshoot GraphQL queries. The console is an easy-to-use interface for API app developers to interact with GraphQL APIs in Exchange. GraphQL APIs are schema definitions that contain the object types and definitions that are used to interact with the API through the GraphQL specification. The GraphQL console enables app developers to query an API that supports this language in a more flexible way than REST. The console supports standard GraphQL query syntax. The console is located in the asset details page.
 
 image::ex-graphql-console.png[GraphQL console in the asset details page]
 
