@@ -31,10 +31,9 @@ Use the *Search content* box or keyboard shortcuts to search the schema document
 . Select a GraphQL API from the results.
 . In the navigation bar, click *Console*.
 . In the *Schema* panel, review the schema documentation.
-. Click *ExchangeGraph* to see the root schema types for each operation.
 . Search the schema documentation using one of the following methods: 
-.. Use the *Search for content* box by clicking the three dots icon, selecting and entering a keyword in the *Search for content* box.
-.. Use the *CTRL+F* or *Command+F* keyboard shortcuts by pressing a keyboard shortcut combination and entering a keyword in the *Search* box.
+.. Click the three dots icon, select *Search for content* and enter a keyword in the box.
+.. Use the *CTRL+F* or *Command+F* keyboard shortcut and enter a keyword in the *Search content* box.
 
 == Run a GraphQL Query
 Use the query editor to write queries in the console without knowing the specific syntax and run them in real-time. The query builder enables you to add data to the query by selecting from a list of options or using the autocomplete function. The query editor is located in the *Query* panel. 
