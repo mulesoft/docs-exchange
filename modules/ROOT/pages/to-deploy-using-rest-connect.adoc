@@ -337,9 +337,9 @@ Mule 4 (SmartConnector) connectors support Transport Layer Security (TLS).
 When you enable TLS support and generate a connector:
 
 * The connector is upgraded to run on Mule runtime 4.6.
-* TLS is enabled, so that Anypoint Studio displays a form for collecting the connector's required TLS connection configuration information. You can view this form from the *General* tab. To see the connection configuration information, select either *Edit inline* or *Global reference* from the *Tls context* field.
+* TLS is enabled, so that Anypoint Studio displays a form for collecting the connector's required TLS connection configuration information. To see the connection configuration properties, select either *Edit inline* or *Global reference* from the *Tls context* field.
 +
-image::rest-connect-tls-configuration.png[, 50%, 50%]
+image::rest-connect-tls-configuration.png[Form for collecting configuration information, 50%, 50%]
 
 
 To enable TLS, add a `properties.json` file to the root directory of the Design Center API project for your app: 
