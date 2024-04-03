@@ -25,7 +25,7 @@ To use the GraphQL console, the Exchange Viewer permission is required. For more
 
 Explore the schema by inspecting the types, fields, and relationships defined in the schema to see a visual representation of the data and operations. Use the Schema explorer to inspect the query methods that are available in the API schema. The documentation explorer renders the information and allows the ability to navigate through the documentation of the API.
 
-Use the *Search* box or keyboard shortcuts to search the schema documentation to find relevant information about specific types, fields, or operations. The search results highlight the search criteria in the corresponding sections of the documentation.
+Use the *Search content* box or keyboard shortcuts to search the schema documentation to find relevant information about specific types, fields, or operations. The search results highlight the search criteria in the corresponding sections of the documentation.
 
 . In the Exchange landing page, click the *Any type* filter and select *GraphQL APIs* from the list.
 . Select a GraphQL API from the results.
@@ -47,7 +47,7 @@ The *Results* panel provides immediate feedback and displays the results of the 
 . Click *Copy*, then paste the query text into a text editor and share with others or save for later.
 . In the *Variables* section, add any query variables to include in the query.
 . In the *Header* section, add any header information to include in the query.
-. From the *Instance selector*, select an available server instance  to use to run the query. If there are no server instances available, the *Instance selector* is disabled.
+. From the *Instance selector*, select an available server instance  to use to run the query. If there are no server instances available, the *Execute* button is disabled.
 . To add a new a non-managed instance to use to run the query, click *Add new instance*.
 . From the *Non-managed instances* page, click *Add new instance*.
 . Enter the name and URL of the instance and click the check icon.
