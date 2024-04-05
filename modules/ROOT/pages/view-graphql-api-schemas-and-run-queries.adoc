@@ -1,0 +1,61 @@
+= View GraphQL API Schemas and Run Queries
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Use the GraphQL console to explore and understand the available GraphQL schemas, and write, run, and troubleshoot GraphQL queries. The console is an easy-to-use interface for API app developers to interact with GraphQL APIs in Exchange. GraphQL APIs are schema definitions that contain the object types and definitions that are used to interact with the API through the GraphQL specification. The GraphQL console enables app developers to query an API that supports this language in a more flexible way than REST. The console supports standard GraphQL query syntax. The console is located in the asset details page.
+
+image::ex-graphql-console.png[GraphQL console in the asset details page]
+
+[calloutlist]
+. *Schema*: Use the Schema explorer to explore the GraphQL API schema types and documentation.
+. *Query*: Use the Query editor to write and run queries.
++
+* *Variables*: Use this tab to enter variables to query.
+* *Headers*: Use this tab to enter the header information to query.
+. *Results*: Use this panel to review and troubleshoot queries.
+
+
+== Before You Begin
+
+To use the GraphQL console, the Exchange Viewer permission is required. For more information, see xref:to-set-permissions.adoc[Set User Access Permissions].
+
+== View GraphQL API Schemas
+
+Explore the schema by inspecting the types, fields, and relationships defined in the schema to see a visual representation of the data and operations. Use the Schema explorer to inspect the query methods that are available in the API schema. The documentation explorer renders the information and allows the ability to navigate through the documentation of the API.
+
+Use the *Search content* box or keyboard shortcuts to search the schema documentation to find relevant information about specific types, fields, or operations. The search results highlight the search criteria in the corresponding sections of the documentation.
+
+. In the Exchange landing page, click the *Any type* filter and select *GraphQL APIs* from the list.
+. Select a GraphQL API from the results.
+. In the navigation bar, click *Console*.
+. In the *Schema* panel, review the schema documentation.
+. Search the schema documentation using one of the following methods: 
+.. Click the three dots icon, select *Search for content*, and enter a keyword in the box.
+.. Use the *CTRL+F* or *Command+F* keyboard shortcut and enter a keyword in the *Search content* box.
+
+== Run a GraphQL Query
+Use the query editor to write queries in the console and run them in real-time. Add fields without knowing the specific syntax using autocomplete or *Control+Space*. The query editor is located in the *Query* panel. 
+
+The *Results* panel provides immediate feedback and displays the results of the query and any errors. To run queries, a GraphQL instance is required to query between the API instance. Non-managed instances can be added to run the queries.
+
+. In the *Query* panel, click *Clear* to the clear the editor.
+. Click in the editor and start typing your query using autocomplete or press *Control+Space*.
+. Click *Prettify* to improve the formatting of the query objects in the editor. 
+. Click *Copy*, then paste the query text into a text editor and share with others or save for later.
+. In the *Variables* section, add any query variables to include in the query.
+. In the *Header* section, add any header information to include in the query.
+. From the *Instance selector*, select an available server instance to run the query. If there are no server instances available, the *Execute* button is disabled.
+. To add a new a non-managed instance to run the query, click *Add new instance*.
+. From the *Non-managed instances* page, click *Add new instance*.
+. Enter the name and URL of the instance and click the check icon.
+. Click *Execute*.
+. Validate the query results in the *Results* panel.
+. Click *Copy*, then paste the results into a text editor to share with others.
+. Click *Clear* to clear the results.
+
+== See Also
+
+* xref:asset-details.adoc[]
+
