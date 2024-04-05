@@ -1,6 +1,6 @@
 // Used in docs-exchange/asset-details.adoc and docs-api-governance-documentation/view-conformance-status-in-exchange.adoc
 
-You can view governance conformance status in Exchange for versions of API definitions. The status is one of the following:
+You can view governance conformance status in Exchange for versions of API specifications. The status is one of the following:
 
 * *Conformant*: The API specification is conformant to governance rulesets against which it has been validated.
 * *Not Conformant*: The API specification is not conformant to governance rulesets against which it has been validated.
