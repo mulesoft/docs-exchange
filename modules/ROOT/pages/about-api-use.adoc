@@ -11,7 +11,11 @@ Exchange helps API consumers understand API functionality and test features with
 * API console to view API functions. This console appears to the right of a REST API detail screen.
 * API Notebook to view API documentation and to test API features.
 * Simulate data to an API using the mocking service.
+* GraphQL console to view GraphQL schemas and run queries.
 
 == See Also
 
-* xref:ex2-to-simulate-api-data.adoc[Simulate Data in REST APIs] - Describes how to view and experiment with REST API functionality directly in Exchange.
+* xref:asset-details.adoc#view-rest-api-elements-in-an-asset[]
+* xref:asset-details.adoc#test-an-api-with-api-notebook[]
+* xref:ex2-to-simulate-api-data.adoc[Simulate Data in REST APIs] 
+* xref:view-graphql-api-schemas-and-run-queries.adoc[] 

@@ -7,8 +7,6 @@ endif::[]
 
 The asset details page provides comprehensive information about an asset. You can view version agnostic information, share the asset with others or publish it on the public portal, download a copy of the asset, view code, manage versions and lifecycle states, add categories and tags, edit the documentation, and test API endpoints. 
 
-The current documentation provides information about the new UI for the asset details page, which includes the lifecycle states feature. The previous UI does not include lifecycle states. 
-
 See xref:workflow-sharing-assets.adoc[Workflow: Publish Assets] for more information about performing these functions.
 
 Select an asset in Exchange to view the asset details page:
@@ -43,7 +41,9 @@ The top asset detail pane provides the following information:
 * For APIs, download specifications and view code
 * Add a new version
 
-For REST APIs, use the right pane to create example calls and mock data to test the API.
+For REST APIs, use the API console to create example calls and mock data to test the API. For more information, see xref:ex2-to-simulate-api-data.adoc[]
+
+For GraphQL APIs, use the GraphQL console to view GraphQL schemas and write and run queries. For more information, see xref:view-graphql-api-schemas-and-run-queries.adoc[]
 
 From the asset details pane, you can collapse and expand metadata such as version, last published, and categories and tags. See version information by clicking *View versions*. Administrators can use *Manage versions* to add a new version of the asset, view version details, and delete a version. See xref:manage-versions.adoc[Manage Versions] for more information.
 
