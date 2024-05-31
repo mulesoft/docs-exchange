@@ -32,7 +32,7 @@ Deleting an asset version in the `development` state is always a hard delete, en
 
 The public portal does not show asset versions in the `development` state.
 
-Anypoint Platform products other than Exchange, such as Anypoint Flow Designer, Anypoint Studio, or Anypoint DataGraph do not consume asset versions in the `development` state.
+Anypoint Platform products other than Exchange, such as Anypoint Flow Designer, Anypoint Studio, API Manager, or Anypoint DataGraph do not consume asset versions in the `development` state.
 
 == Stable State
 
