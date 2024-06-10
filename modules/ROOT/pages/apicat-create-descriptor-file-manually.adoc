@@ -60,7 +60,7 @@ xref:apicat-publish-using-api-catalog-cli.adoc#trigger-conditions[Trigger the Pu
 [[version-strategy-conditions]]
 == versionStrategyConditions
 
-The `versionStrategyConditions` section of the YAML file enables you to set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs are set when the `api-catalog publish-asset` command is run with `--version-strategy-criteria` flag. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
+The `versionStrategyConditions` section of the YAML file enables you to set conditions to determine the version strategy of the set of APIs described in the descriptor file. If you add this section to the descriptor file, the version strategy of the APIs are set when the `api-catalog publish-asset` command is run with `--version-strategy-criteria` flags with matching values for each of the version strategy conditions. This enables you use the same `api-catalog publish-asset` command in your CI/CD scripts for each of your branches or environments and pass parameters to the command to control the version strategy of the APIs that are published. 
 
 You can set version strategy conditions for specific APIs or for all APIs described in the descriptor file (global). If both types of conditions are used, the specific override the global. 
 
@@ -69,12 +69,12 @@ Following is an example `versionStrategyConditions` section:
 ----
     versionStrategyConditions:
       minorIncrease:
-        branches:
+        branch:
           - main
         tags:
           - support
       snapshot:
-        branches:
+        branch:
           - develop
 ----
 
