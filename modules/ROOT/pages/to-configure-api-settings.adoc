@@ -26,7 +26,7 @@ For published assets not managed by API Manager, asset administrators can add, e
 . To edit a non-managed instance:
 .. Click image:ex-pencil-icon.png["pencil icon",3%,3%].
 .. Make your changes and click image:ex-checkmark-icon.png["checkmark icon",3%,3%].
-. To delete a non-managed instance, click image:ex-trash-can-icon.png["trash can icon",3%,3%].
+. To delete a non-managed instance, click image:ex-trash-can-icon.png["trash can icon",3%,3%] and click *Delete instance*.
 
 == See Also
 
