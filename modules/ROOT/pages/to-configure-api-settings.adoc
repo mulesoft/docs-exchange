@@ -21,7 +21,7 @@ For published assets not managed by API Manager, asset administrators can add, e
 
 . Select the asset.
 . In the navigation bar, select *API Instances*.
-. Click *Add non-managed instance*.
+. Click *Add new instance*.
 . In the *API Instances* page, click *Add new instance*.
 . Enter the instance name, URL, and select a visibility option and click image:ex-checkmark-icon.png["checkmark icon",3%,3%].
 . To edit a non-managed instance:
