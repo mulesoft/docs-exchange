@@ -62,4 +62,4 @@ The *Download* button does not appear.
 +
 * AsyncAPI 
 +
-Downloads the API specification as a zip file containing a  YAML file for the specification and a JSON file that contains the metadata of the asset.
+Downloads the API specification as a zip file containing a YAML file for the specification and a JSON file that contains the metadata of the asset.
