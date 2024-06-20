@@ -19,14 +19,19 @@ REST APIs provide a mocking service with data to test API features. The mocking 
 == Configure Non-Managed Instances 
 Exchange enables you to configure APIs with instances not managed by API Manager. Add, edit, and delete non-managed instances that are serving AsyncAPIs, GraphQL, REST, and HTTP APIs. You can change the name, URL, and visibility of non-managed instances.
 
+* Add a non-managed instance:
++
 . Select the asset.
 . In the navigation bar, select *API Instances*.
 . Click *Add new instance*.
 . In the *Non-managed instances* section, enter the instance name, URL, select a visibility option, and click image:ex-checkmark-icon.png["checkmark icon",3%,3%].
-. To edit a non-managed instance:
+
+* Edit a non-managed instance:
++
 .. Click image:ex-pencil-icon.png["pencil icon",3%,3%].
 .. Make your changes and click image:ex-checkmark-icon.png["checkmark icon",3%,3%].
-. To delete a non-managed instance, click image:ex-trash-can-icon.png["trash can icon",3%,3%] and click *Delete instance*.
+
+* Delete a non-managed instance by clicking image:ex-trash-can-icon.png["trash can icon",3%,3%] and clicking *Delete instance*.
 
 == See Also
 
