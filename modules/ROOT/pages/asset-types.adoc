@@ -14,7 +14,7 @@ A set of APIs bundled into a single asset.
 A part of an API specification that is reused to build a complete API specification.
 * AsyncAPI Specifications
 +
-An AsyncAPI specification file that specifies an event-driven API.
+An AsyncAPI specification file that specifies an event-driven API. Exchange supports AsyncAPI 2.0 and 2.6.
 * Connectors
 +
 Packaged connectivity to an Anypoint Platform endpoint using third-party APIs and standard integration protocols.
