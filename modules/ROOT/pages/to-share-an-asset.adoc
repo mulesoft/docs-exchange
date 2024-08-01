@@ -76,9 +76,9 @@ Only users internal to the granting organization can request access to an API or
 
 === Using Assets Shared by a Granting Organization
 
-A user in a receiving organization can use Studio or Flow Designer to search for a shared connector, configure it, and use it in a Mule application.
+A user in a receiving organization can use Studio to search for a shared connector, configure it, and use it in a Mule application.
 
-A user in a receiving organization can use Studio or Flow Designer to implement a Mule application based on a shared example or template.
+A user in a receiving organization can use Studio to implement a Mule application based on a shared example or template.
 
 A user in a receiving organization cannot use API Manager to manage a shared REST, SOAP, or HTTP API that was created in Exchange in the granting organization. API Manager only shows APIs from the user's business group. However, the user can use the API in Studio in the flow as a source for scaffolding an application.
 
