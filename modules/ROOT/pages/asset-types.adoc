@@ -42,6 +42,20 @@ A schema definition that contains the object types and definitions that are used
 A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
 +
 Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
+
+* Mule Applications
++
+Applications that perform system integrations. These applications are published and consumed using APIs and don't appear in the Exchange UI, catalog, or search results. Use the Exchange Maven Facade API or REST API to make calls to Mule applications. 
++ 
+For more information, see:
++
+** xref:about-platform-apis.adoc[]
++
+** xref:exchange-api.adoc[Publish Assets Using the Exchange API]
++
+** xref:to-publish-assets-maven.adoc[]
+
+
 * Policies
 +
 Configuration modules to extend the functionality of an API and enforce capabilities such as security.

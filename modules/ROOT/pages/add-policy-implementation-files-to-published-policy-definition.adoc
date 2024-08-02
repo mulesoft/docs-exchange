@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-When a policy definition asset is published in Exchange, the asset details page displays a *Pending* flag next to *Implementations* in the left navigation bar. The flag indicates that the policy implementation has not been added. Add the policy implementation files to to the policy definition to enable the policy to be available in runtime. The required implementation files are a binary file such as a WebAssembly (WASM) file for Flex Gateway or JAR for Mule 4 runtime and a YAML metadata file. 
+When a policy definition asset is published in Exchange, the asset details page displays a *Pending* flag next to *Implementations* in the left navigation bar. The flag indicates that the policy implementation has not been added. Add the policy implementation files to the policy definition to enable the policy to be available in runtime. The required implementation files are a binary file such as a WebAssembly (WASM) file for Flex Gateway or JAR for Mule 4 runtime and a YAML metadata file. 
 
 Before adding the policy implementation files, ensure that the policy definition asset is in the Stable state.
 
