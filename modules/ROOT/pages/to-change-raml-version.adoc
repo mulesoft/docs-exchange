@@ -166,9 +166,9 @@ Include the API version in the application URL so that consumers can choose whic
 
 Use these rules to define an API version:
 
-* Specify the version with a "v" prefix.
-* Use a simple ordinal number, for example, "v1","v2", and so on.
-* Avoid using dot notation, for example, "v1.2".
+* Specify the version with a v prefix.
+* Use a simple ordinal number, for example, v1, v2, and so on.
+* Avoid using dot notation, for example, v1.2.
 * Only specify the major version as part of the URL.
 
 == Document an API Version

@@ -18,7 +18,7 @@ When you have one or more categories defined in the *Settings* page, your organi
 == Create a Category
 
 . In Anypoint Exchange, click *Login* and log in to your organization.
-. Click *Settings* in the left navigation bar.
+. Click *Settings* in the sidebar.
 . Click *Add new category*.
 . Enter a category name. Each category name must be unique.
 . Enter one or more values. Each category must have a value.
@@ -53,7 +53,7 @@ The following search terms return all assets marked as both System APIs and Sale
 
 == Search with Categories in Exchange Cloud
 
-Select a category such as "API Type" from the list, and select one or more values such as "System API". Anypoint Exchange shows assets that have one of the selected values for the selected category.
+Select a category such as *API Type* from the list, and select one or more values such as *System API*. Exchange shows assets that have one of the selected values for the selected category.
 
 You can search for a combination of categories, and you can search for multiple values for the same category. Multiple values for the same category are combined with the OR operator.
 
