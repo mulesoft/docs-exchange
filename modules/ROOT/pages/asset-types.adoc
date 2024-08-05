@@ -45,7 +45,7 @@ Instead of requesting access to multiple APIs to satisfy a use case, a developer
 
 * Mule Applications
 +
-Applications that perform system integrations. These applications are published and consumed using APIs and don't appear in the Exchange UI, catalog, or search results. Use the Exchange Maven Facade API or REST API to make calls to Mule applications. 
+Applications that perform system integrations. These applications are published and consumed using APIs and don't appear in the Exchange UI. Use the Exchange Maven Facade API or REST API to publish and manage Mule application assets. 
 + 
 For more information, see:
 +
