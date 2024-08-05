@@ -339,7 +339,7 @@ When you enable TLS support and generate a connector:
 * The connector is upgraded to run on Mule runtime 4.6.
 * TLS is enabled, so that Anypoint Studio displays a form for collecting the connector's required TLS connection configuration information. To see the connection configuration properties, select *Edit inline* or *Global reference* from the *Tls context* field.
 +
-image::rest-connect-tls-configuration.png[Form for TLS connection configuration information, 50%, 50%]
+image::rest-connect-tls-configuration.png["Form for TLS connection configuration information", 50%, 50%]
 
 
 To enable TLS, add a `properties.json` file to the root directory of the Design Center API project for your app: 
@@ -362,7 +362,7 @@ To view the minimum Mule runtime version or the compatible Java versions for the
 . From Exchange, select a connector.
 . In the asset details page, click *View versions*.
 +
-image::ex-connector-java-compatibility.png[The asset version showing the minimum runtime version and compatible java versions, 50%, 50%]
+image::ex-connector-java-compatibility.png["The asset version showing the minimum runtime version and compatible java versions", 50%, 50%]
 
 [[upgrade-rest-connector]]
 == Upgrading a REST Connect Generated Connector
@@ -485,11 +485,11 @@ image::rest-connect-api-config.png["Configuration window for the GitHub API Conf
 +
 By default, the connector shows `+http://my-app.cloudhub.io/callback+`, but you need to modify it to be specific to your app. The demo app’s callback URL is `+http://githubapp-smky.cloudhub.io/callback+`, so replace `my-app` with `githubapp-smky`. To find the callback URL, go to the menu and select *Copy link* in Design Center.
 +
-image::rest-connect-ready-to-deploy.png[]
+image::rest-connect-ready-to-deploy.png["Copy link button in the menu"]
 +
 . After you get your external callback URL, specify the same URL in your GitHub settings.
 +
-image::rest-connect-auth-callback-url.png[]
+image::rest-connect-auth-callback-url.png["Authorization callback URL field in GitHub with the specified external callback URL value"]
 +
 You can now retrieve an access token from GitHub. 
 +
