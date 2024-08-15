@@ -26,5 +26,4 @@ To delete an entire asset, delete all of its patch versions.
 
 == See Also
 
-* xref:to-deprecate-asset.adoc[To Deprecate an Asset]
 * xref:to-change-raml-version.adoc[To Change a RAML Version]
