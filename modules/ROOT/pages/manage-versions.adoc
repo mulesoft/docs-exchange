@@ -5,6 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-deprecate-asset.adoc
 
+
 Manage the versions of an asset by viewing version detail, adding a new version, deleting a version, and changing the lifecycle state for a version.
 
 == View Version Detail
