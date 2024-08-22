@@ -313,7 +313,7 @@ Note: An asset that is in development state and is not an SNAPSHOT version canno
 
 == Publish a Custom Asset
 
-Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is 0.0.13.
+Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is 0.0.23.
 
 This example shows the `build` section of `pom.xml`:
 
@@ -324,7 +324,7 @@ This example shows the `build` section of `pom.xml`:
         <plugin>
             <groupId>org.mule.tools.maven</groupId>
             <artifactId>exchange-mule-maven-plugin</artifactId>
-            <version>0.0.13</version>
+            <version>0.0.23</version>
             <executions>
                 <execution>
                     <id>validate</id>
@@ -345,6 +345,43 @@ This example shows the `build` section of `pom.xml`:
     </plugins>
 </build>
 ----
+
+== Publish a Parent POM Project and a Parent POM Dependant Project to Exchange
+
+Parent POMs are published to Exchange as custom assets. See the previous section to publish a custom asset.
+If you want to publish a maven project, like a mule application, using the Mule Maven Plugin, and your maven project depends on a Parent Pom that has already included the exchange-mule-maven-plugin, you need to https://maven.apache.org/guides/mini/guide-configuring-plugins.html#Using_the_.3Cinherited.3E_Tag_In_Build_Plugins[prevent the inheritance]:
+
+[source,xml,linenums]
+----
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.mule.tools.maven</groupId>
+            <artifactId>exchange-mule-maven-plugin</artifactId>
+            <version>0.0.23</version>
+            <inherited>false</inherited>
+            <executions>
+                <execution>
+                    <id>validate</id>
+                    <phase>validate</phase>
+                    <goals>
+                        <goal>exchange-pre-deploy</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>deploy</id>
+                    <phase>deploy</phase>
+                    <goals>
+                        <goal>exchange-deploy</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+----
+
+
 
 === Troubleshooting
 
