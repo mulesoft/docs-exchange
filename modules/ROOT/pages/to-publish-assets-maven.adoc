@@ -346,7 +346,7 @@ This example shows the `build` section of `pom.xml`:
 </build>
 ----
 
-== Publish a parent pom project and a parent pom dependant project to Exchange
+== Publish a Parent POM Project and a Parent POM Dependant Project to Exchange
 
 Parent poms are published to Exchange as custom assets. See previous section in order to publish a custom asset.
 If you want to publish a maven project, like a mule application, using the Mule Maven Plugin, and your maven project depends on a Parent Pom that has already included the exchange-mule-maven-plugin, you need to https://maven.apache.org/guides/mini/guide-configuring-plugins.html#Using_the_.3Cinherited.3E_Tag_In_Build_Plugins[prevent the inheritance]:
