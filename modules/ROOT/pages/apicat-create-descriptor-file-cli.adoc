@@ -78,8 +78,8 @@ Example descriptor file:
 projects:
   - main: sources/api.raml
     documentation:
-      - Summary: Summary.md
-      - Use Cases: Use_Cases.md
+      Summary: Summary.md
+      Use Cases: Use_Cases.md
     assetId: version-basic-api
     apiVersion: v4
     version: 4.0.0
