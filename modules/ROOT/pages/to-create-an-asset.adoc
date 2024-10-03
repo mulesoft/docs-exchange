@@ -43,7 +43,7 @@ To create an API asset:
 * REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (`.raml`).
 * REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (`.yaml`) or JSON (`.json`) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (`.wsdl`) or XML (`.xml`) file.
-* AsyncAPI: Provide an AsyncAPI specification file in a YAML (`.yaml`) file.
+* AsyncAPI: Provide an AsyncAPI specification file in a YAML (`.yaml`) or JSON (`.json`) file.
 * AsyncAPI with Avro schemas: Provide an Avro fragment in  an AVSC (`.avsc`) file.
 * API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (`.raml`). 
 * API Spec Fragment - JSON: Provide an API Fragment JSON specification (`.json`) file. 
