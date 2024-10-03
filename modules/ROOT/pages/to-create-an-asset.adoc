@@ -44,6 +44,7 @@ To create an API asset:
 * REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (`.yaml`) or JSON (`.json`) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (`.wsdl`) or XML (`.xml`) file.
 * AsyncAPI: Provide an AsyncAPI specification file in a YAML (`.yaml`) file.
+* AsyncAPI with Avro schemas: Provide an Avro fragment in  an AVSC (`.avsc`) file.
 * API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (`.raml`). 
 * API Spec Fragment - JSON: Provide an API Fragment JSON specification (`.json`) file. 
 * API Spec Fragment - OpenAPI Specification (OAS): Provide an API Fragment OpenAPI specification file either JSON or YAML.
@@ -248,8 +249,9 @@ If you have contributor or admin access to an asset, you can add a new version f
 * REST API - RAML: Provide a RAML API specification file.  RAML specifications must be a RAML file (.raml).
 * REST API - OAS: Provide an OAS API specification file.  OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
-* API Spec Fragment - RAML : Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
-* AsyncAPI specifications with Avro schemas can be a JSON (.json) or AVSC (.avsc) file.
+* API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
+* AsyncAPI: Provide a JSON (.json) or YAML (.yml) file. 
+* AsyncAPI spec with Avro schema: Provide an Avro fragment spec. Fragment specification must an AVSC (.avsc) file.
 * HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
 . For RAML, API Spec Fragment, OAS, and WSDL assets:
 +
