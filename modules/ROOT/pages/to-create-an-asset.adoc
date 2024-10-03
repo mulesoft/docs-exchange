@@ -205,7 +205,7 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select *Publish*.
 
 == Create an AsyncAPI Asset
-An AsyncAPI is an AsyncAPI specification file that specifies an event-driven API. You can create AsyncAPIs with Avro schemas. The file types for AsyncAPIs with Avro schemas are JSON (.json) and AVSC (.avsc).
+An AsyncAPI is an AsyncAPI specification file that specifies an event-driven API. You can create AsyncAPIs with Avro schemas. The file type for AsyncAPIs with Avro schemas is  AVSC (.avsc).
 
 To create an AsyncAPI:
 
