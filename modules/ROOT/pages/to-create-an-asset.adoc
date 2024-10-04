@@ -246,7 +246,7 @@ If you have contributor or admin access to an asset, you can add a new version f
 . In Exchange, open the asset list and select the asset.
 . Click *Add version*. 
 . For API assets, follow the steps for the corresponding API asset type:
-* REST API - RAML: Provide a RAML API specification file.  RAML specifications must be a RAML file (.raml).
+* REST API - RAML: Provide a RAML API specification file. RAML specifications must be a RAML file (.raml).
 * REST API - OAS: Provide an OAS API specification file. OAS specifications can be either a YAML (.yaml) or JSON (.json) file. Exchange supports OAS 2.0 and OAS 3.0 specifications.
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
 * API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
