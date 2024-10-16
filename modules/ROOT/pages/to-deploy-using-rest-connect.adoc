@@ -504,3 +504,4 @@ When your access token is issued properly, you can get issues related to Salesfo
 
 * Anypoint Platform, including REST Connect, does not support API fragments for OAS.
 * TLS support can be enabled only for Mule 4 (SmartConnector) connectors. This feature is not supported for Mule 3 (DevKit).
+* Asian characters inside api specs or its dependencies are not yet supported.
