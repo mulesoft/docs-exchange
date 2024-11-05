@@ -70,6 +70,14 @@ In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven+`
 +
+In the Canada cloud, use:
++
+`+https://maven.ca1.platform.mulesoft.com/api/v3/maven+`
++
+In the Japan cloud, use:
++
+`+https://maven.jp1.platform.mulesoft.com/api/v3/maven+`
++
 When using MuleSoft Government Cloud, use:
 +
 `+https://maven.gov.anypoint.mulesoft.com/api/v2/organizations/ORGANIZATION_ID/maven+`
