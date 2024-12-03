@@ -37,7 +37,7 @@ An Exchange administrator sets the groups that this menu displays for each user.
 If you cannot find an asset in the current business group scopes, search in other scopes. In the navigation menu click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
 
 [[exchange-on-hyperforce]]
-== Anypoint Exchange on Hyperforce
+== Anypoint Exchange On Hyperforce
 All features of Anypoint Exchange are supported on Hyperforce with these exceptions:
 
 * xref:usage-and-engagement-metrics.adoc[Usage and engagement metrics] aren't supported.
