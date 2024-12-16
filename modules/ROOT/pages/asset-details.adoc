@@ -11,7 +11,7 @@ See xref:workflow-sharing-assets.adoc[Workflow: Publish Assets] for more informa
 
 Select an asset in Exchange to view the asset details page:
 
-image::exchange-asset-detail-view.png[Asset details]
+image::exchange-asset-detail-view.png["The asset details of the Exchange XAPI."]
 
 The left navigation bar lists:
 
@@ -56,7 +56,7 @@ View RAML, OAS, or AsyncAPI API specification information, including resources a
 
 . Click a method button:
 +
-image::ex2-rest-ftns.png[Screenshot - REST API function buttons in left nav bar]
+image::ex2-rest-ftns.png["An API specification showing method resources."]
 +
 . Experiment with the API in the right side of a method view.
 +
@@ -91,12 +91,10 @@ When you enter a search term or phrase in the search box, the search results box
 
 For example, enter the term `ruleset` in the *Search content* box. From Pages, there are three search results for ruleset in the Home page. Click *Home* to open the page. Use the arrows to find all of the highlighted instances of ruleset in the Home page.
 
-image::ex-search-spec-and-pages.png[Example asset details page using CTRL+F or the command+F keyboard shortcut]
+image::ex-search-spec-and-pages.png["Search results for the term ruleset highlighted in the documentation."]
 
 
 == View Conformance Status 
-
-// Include the conformance status page partial doc
 
 include::partial$task-view-conformance-status.adoc[]
 

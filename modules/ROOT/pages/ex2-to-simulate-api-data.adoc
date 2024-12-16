@@ -10,18 +10,18 @@ The following example shows how the mocking service simulates the data for a RES
 
 * In the API console that appears on the right side of an asset detail screen. The mocking service lets you add simulated data to an API function and test the API with the data.
 +
-image::exchange-rest-api-mocking-service.png[Mocking in API Console]
+image::exchange-rest-api-mocking-service.png["API Console showing the mocking service."]
 
 +
 This page shows two URLs. The URL on the left is also used in Design Center and is public. The URL on the right is used only in Exchange and requires authentication.
 +
 * Listed as an instance with each version of an API.
 +
-image::exchange-patch-version-mocking.png[Mocking instance in versions]
+image::exchange-patch-version-mocking.png["A table of patch versions for 1.0 with mocking instances."]
 +
 * Listed on the *API instances* page that also lists the mocking service URL.
 +
-image::ex2-api-instances.png[API Instances Mocking Service URL]
+image::ex2-api-instances.png["A table of API instances, their corresponding environments, URLs, and visibility."]
 
 == Accept Simulated Data in an API
 
