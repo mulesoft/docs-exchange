@@ -17,7 +17,7 @@ This page shows two URLs. The URL on the left is also used in Design Center and 
 +
 * Listed as an instance with each version of an API.
 +
-image::exchange-patch-version-mocking.png["A table of patch versions for 1.0 with mocking instances,"]
+image::exchange-patch-version-mocking.png["A table of patch versions for 1.0 with mocking instances."]
 +
 * Listed on the *API instances* page that also lists the mocking service URL.
 +

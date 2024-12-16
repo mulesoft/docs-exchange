@@ -27,7 +27,7 @@ Exchange fully supports RAML fragments. Currently, Exchange does not support imp
 
 This illustration summarizes how some of the asset types (in green) appear in Exchange:
 
-image::ex2-exchange-assets.png[]
+image::ex2-exchange-assets.png[A flowchart that illustrates the process of how some assets are published into Exchange."]
 == Create an API Asset
 
 An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
