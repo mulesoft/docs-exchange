@@ -21,7 +21,7 @@ image::exchange-patch-version-mocking.png["A table of patch versions for 1.0 wit
 +
 * Listed on the *API instances* page that also lists the mocking service URL.
 +
-image::ex2-api-instances.png[ "A table of API instances, their corresponding environments, URLs, and visibility."]
+image::ex2-api-instances.png["A table of API instances, their corresponding environments, URLs, and visibility."]
 
 == Accept Simulated Data in an API
 
