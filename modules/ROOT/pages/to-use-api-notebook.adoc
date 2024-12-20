@@ -14,7 +14,7 @@ Use API Designer in Anypoint Platform to improve and test your RAML, OAS, or Asy
 NOTE: An OAS specification is converted into RAML so you can follow the RAML conventions in API Notebook. Also, the RAMl specification is converted when you upload an OAS.
 
 . Click the asset to view details.
-. Click *Edit documentation* and click the API Notebook icon image:ex2-api-notebook-icon.png["API Notebook icon in the editor."] in the editor.
+. Click *Edit documentation* and click the API Notebook icon image:ex2-api-notebook-icon.png["API Notebook icon in the editor"] in the editor.
 . Add a description for the asset.
 . In the Visual editor, the API Notebook icon creates a panel where you can add JavaScript code items. Enter the first letter of the function you want to add and Notebook lists the available functions starting with that letter.
 +

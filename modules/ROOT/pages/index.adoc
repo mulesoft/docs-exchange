@@ -7,7 +7,7 @@ endif::[]
 
 Anypoint Exchange is a curated catalog of reusable assets. APIs, API groups, API spec fragments, custom assets, examples, GraphQL APIs, integration assets such as connectors, policies, RPA assets, rulesets, and templates are some of the types that are supported in Exchange. See xref:asset-types.adoc[Asset Types] for more information about each type of asset. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
 
-image:exchange-landing-page.png["Exchange catalog showing assets provided by MuleSoft."]
+image:exchange-landing-page.png["Exchange catalog showing assets provided by MuleSoft"]
 
 Use Exchange to discover, share, incorporate assets and resources into your applications, and view asset usage and engagement metrics. You can create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
 
@@ -30,7 +30,7 @@ A system administrator groups individuals within an organization into business g
 
 To view the business groups, log in to Anypoint Platform and click a group name from the taskbar:
 
-image::ex2-biz-groups.png["List of business groups."]
+image::ex2-biz-groups.png["List of business groups"]
 
 An Exchange administrator sets the groups that this menu displays for each user.
 

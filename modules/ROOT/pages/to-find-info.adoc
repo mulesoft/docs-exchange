@@ -22,7 +22,7 @@ Anypoint Exchange search looks for terms in:
 
 You can use the *Search assets* box to find assets by keyword.
 
-image:exchange-search-assets-box.png["The Search assets box."]
+image:exchange-search-assets-box.png["The Search assets box"]
 
 Keywords can be the following asset information:
 
@@ -43,13 +43,13 @@ A list of assets display that contain the keyword.
 
 The following image is an example search results using the search keyword *MuleSoft*. The search keyword is highlighted in the results.
 
-image:exchange-new-search.png["Search results with the keyword MuleSoft highlighted."]
+image:exchange-new-search.png["Search results with the keyword MuleSoft highlighted"]
 
 == Filter Search Results
 
 You can use the following filters to refine your search results. 
 
-image:ex-filters.png["The search refinement filters."]
+image:ex-filters.png["The search refinement filters"]
 
 * Type
 +
@@ -104,7 +104,7 @@ Use the preset operators to filter the search results. The values of the operato
 
 The following example shows the search filter with two custom fields:
 
-image:ex-custom-field-operator-value.png["Search filter using two custom fields.",20%,20%]
+image:ex-custom-field-operator-value.png["Search filter using two custom fields",20%,20%]
 
 To filter a search using custom fields:
 
@@ -142,7 +142,7 @@ Sorts by placing a featured selection of assets at the top of the results. This 
 
 To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance, Name, Last modified, Rating, Relevance, or Featured.
 
-image:ex-sort-by-filter.png["The Sort by filter.", 15%,15%]
+image:ex-sort-by-filter.png["The Sort by filter", 15%,15%]
 
 == Save a Search
 
@@ -150,7 +150,7 @@ Find assets quickly by saving frequently used search queries for yourself or for
 
 Exchange lists search terms specific to your business group. The example shows saved searches:
 
-image::ex2-saved-searches-groups.png["An example of two saved search groups."]
+image::ex2-saved-searches-groups.png["An example of two saved search groups"]
 
 To save a search: 
 

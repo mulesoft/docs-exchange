@@ -49,7 +49,7 @@ Choose from the screens that follow for what to provide:
 
 * If an organization uses OAuth authentication, this screen appears:
 +
-image::ex2-edit-app2.png["The Create new application dialog showing fields to update for an OAuth authentication."]
+image::ex2-edit-app2.png["The Create new application dialog showing fields to update for an OAuth authentication"]
 +
 Specify:
 +
@@ -60,7 +60,7 @@ Specify:
 
 * If an organization has external authentication, this screen appears:
 +
-image::ex2-edit-app.png["The Edit application dialog showing fields to update for an external authentication."]
+image::ex2-edit-app.png["The Edit application dialog showing fields to update for an external authentication"]
 +
 Specify the same values as above, but also:
 +
