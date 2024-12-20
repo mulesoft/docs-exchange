@@ -10,7 +10,7 @@ The dashboard displays the metrics for the top 50 assets, ranked by the most con
 
 The following graphic shows the Usage and engagement metrics dashboard: 
 
-image::ex-metrics-dashboard.png["The dashboard of usage and engagement metrics for the ten most recent REST APIs."]
+image::ex-metrics-dashboard.png["The dashboard of usage and engagement metrics for the ten most recent REST APIs"]
 
 The following data is collected and analyzed:
 
@@ -54,14 +54,14 @@ Use the dashboard to view metrics for your assets and the filter options from th
 
 .  In the navigation bar in Exchange, click *Asset engagement*.
 + 
-image::ex-nav-asset-engagement.png["Asset engagement option in navigation bar.",15%,5%]
+image::ex-nav-asset-engagement.png["Asset engagement option in navigation bar",15%,5%]
 . Select a date range from 7 days, 30 days, or 90 days.
 +
 The default date range is the last 7 days.
 . If you want to filter by asset type, select an option from *Asset type*.
 . If you want to filter by an organization, click *My Organizations*.
 +
-image::ex-my-organizations.png["Filter options for My Organizations.",15%,5%]
+image::ex-my-organizations.png["Filter options for My Organizations",15%,5%]
 . Enter the name of an organization in the *Search* box to search for an organization. 
 . Select one or more organizations and click *Apply* to filter assets by organization. 
 

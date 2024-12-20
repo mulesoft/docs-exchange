@@ -7,7 +7,7 @@ endif::[]
 Users specify what applications can have access to an API by clicking the
 *Request access* button.
 
-Exchange Administrators see *Request access* in the *More options* menu image:ex2-more-options-icon.png["The More Options icon."].
+Exchange Administrators see *Request access* in the *More options* menu image:ex2-more-options-icon.png["The More Options icon"].
 
 Enabling the *Request access* button requires the Exchange Administrator permission.
 
