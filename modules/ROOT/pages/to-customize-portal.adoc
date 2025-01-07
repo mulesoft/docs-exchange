@@ -1,4 +1,4 @@
-= Customize an Exchange Public Portal
+= Customizing an Exchange Public Portal
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

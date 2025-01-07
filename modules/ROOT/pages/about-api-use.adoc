@@ -1,4 +1,4 @@
-= Consume an API
+= Consuming an API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -17,5 +17,5 @@ Exchange helps API consumers understand API functionality and test features with
 
 * xref:asset-details.adoc#view-rest-api-elements-in-an-asset[View REST API Elements in an Asset]
 * xref:asset-details.adoc#test-an-api-with-api-notebook[Test an API with API Notebook]
-* xref:ex2-to-simulate-api-data.adoc[Simulate Data in REST APIs] 
+* xref:ex2-to-simulate-api-data.adoc[] 
 * xref:view-graphql-api-schemas-and-run-queries.adoc[] 

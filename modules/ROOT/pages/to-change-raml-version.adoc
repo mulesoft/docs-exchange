@@ -1,4 +1,4 @@
-= Change the Version of an API Asset
+= Changing the Version of an API Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

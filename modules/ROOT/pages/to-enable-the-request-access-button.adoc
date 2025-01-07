@@ -1,4 +1,4 @@
-= Enable the Request Access Button
+= Enabling the Request Access Button
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
