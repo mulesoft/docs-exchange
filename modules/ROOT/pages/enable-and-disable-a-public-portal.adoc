@@ -63,4 +63,4 @@ curl -X PUT https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZAT
 
 == See Also
 
-* xref:to-customize-portal.adoc[Customize an Exchange Public Portal]
+* xref:to-customize-portal.adoc[]
