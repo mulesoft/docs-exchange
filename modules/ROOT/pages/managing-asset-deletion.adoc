@@ -4,9 +4,13 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Manage how assets are deleted in Exchange from *Settings*, administrators can choose how asset owners can delete asset versions in Exchange. They can enable or disable hard delete. Hard delete permanently deletes asset versions. It doesn't matter when the asset version was created. If hard delete is enabled, asset owners can see an option to hard delete. This option permanently deletes the asset and allows another asset to reuse the same GAV. If hard delete is disabled, hard deletion is restricted. Asset owners can't hard delete assets older than 7 days. They can delete assets, but the GAV can't be reused for a new asset.
+Control how assets are deleted in Exchange from *Settings*. Admins can choose how asset owners can delete asset versions in Exchange. They can enable or disable the ability to permanently delete an asset to reuse the GAV (group ID, asset ID, and version) for a new asset. It doesn't matter when the asset version was created. When enabled, asset owners can see an option to delete an asset and allow the GAV to be reused. When disabled, the option to delete asset but not the reuse the GAV is avaliable.
 
-To enable or disable hard deletion of asset versions:
+To enable or disable the option to delete an asset and reuse the GAV:
 
 . Select *Settings* from the navigation bar and select *Manage Connected Apps and Asset Deletion*.
-. 
+. Enable or disable the option.
+
+== See More
+
+* xref:to-delete-asset.adoc[]
