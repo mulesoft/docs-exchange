@@ -43,7 +43,7 @@ Perform these tasks to publish an asset to Exchange and add metadata using Excha
 .. <<set-mutable-data>>
 .. <<set-with-json>>
 .. <<set-lifecycle-state>>
-.. <<uploading-asset-icons>>
+.. <<upload-asset-icons>>
 . <<describe-your-assets>>
 .. <<add-tags>>
 .. <<add-categories>>

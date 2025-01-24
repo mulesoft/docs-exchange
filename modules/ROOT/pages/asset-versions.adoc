@@ -6,7 +6,7 @@ endif::[]
 
 Each asset in Exchange is versioned. You can manage which versions are visible by deprecating a version to hide it, and delete versions if needed. All versions of an asset always have the same type.
 
-APIs also have a consumer-facing API version that appears at the top of an asset's detail screen. API providers define this version.
+APIs also have a consumer-facing API version that appears in an asset's detail screen. API providers define this version.
 
 Exchange asset versions follow the https://semver.org/[Semantic Versioning] model of major, minor, and patch releases. For example, if an asset is version 2.4.6, then its major version is 2.x.x, its minor version is 2.4.x, and its patch version is 2.4.6.
 

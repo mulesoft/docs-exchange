@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
+:page-aliases: ex2-migrate.adoc
 
 NOTE: The end of life date for Exchange 1 is July 18, 2021.
 
