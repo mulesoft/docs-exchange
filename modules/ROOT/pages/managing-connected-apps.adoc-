@@ -1,0 +1,22 @@
+= Managing Connected Apps
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+
+Connected apps are applications that allow external applications to securely interact with the Anypoint Platform APIs by providing controlled access to its resources using OAuth 2.0 authentication protocols, without the need to share user credentials directly. For more information, see xref:access-management::connected-apps-overview.adoc[].
+
+When an API, which was created using a connected app, is published to Exchange, the owner of the API also as the owner of the connected app by default.
+
+Control whether 
+
+
+
+
+
+
+
+
+== See Also
+xref:connected-app-authentication.adoc[]
