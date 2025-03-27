@@ -6,6 +6,8 @@ endif::[]
 
 Exchange provides multiple ways to set up access management to provide collaboration across teams and meet governance requirements. Anypoint Platform comes with predefined permissions and roles that can be set in the Access Management section of Anypoint Platform to provide users with different access levels.
 
+To see updated permissions, users must log out of Exchange and log in again.
+
 == Exchange Permissions
 
 To control access to assets in a business group, add users or teams to role groups for Exchange permissions.
