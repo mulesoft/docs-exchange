@@ -39,6 +39,27 @@ API or API Group instance. An API consumer can use the Exchange *My Applications
 the contracts created between an API instance or API Group instance and that consumer's client
 applications.
 
+== Edit Client Application Details
+The details of a client application include name, description, URl, and OAuth 2.0 redirect URIs.
+
+To make changes, click *Edit*. Once you’ve made your updates, click *Update* to save your changes.
+
+== Reset Client Secret
+You can reset the client secret for an application on a set schedule to ensure security, even if users leave the company. Resetting the secret also ensures it isn't unintentionally shared with unauthorized users.
+
+Applications using the current client secret can’t access any of the APIs with which they were registered.
+
+. From the navigation bar, select *My applications* and click the name of the application.
+. From the three-dot icon, select *Reset client secret*.
++
+The client secret is reset. Click *Show* to see the new client secret.
+
+== Delete a Client Application
+When you no longer need the contract for an application, you can delete it. Once the application is deleted, there's no longer a contract with the application and you can’t access it. To regain access, you must request access to the API again.
+
+== Add Client Application Owners
+Client application owners can add more owners to their applications. 
+
 == See Also
 
 * xref:to-request-access.adoc[Request Access]
