@@ -4,8 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The *My Applications* area in the Exchange details view for an asset lists
-applications that hold a contract with an API or an API Group.
+The *My applications* page lists applications that hold a contract with an API or an API group. To view this page, select *My applications* from the navigation bar.
 
 image::ex2-my-applications.png[]
 
@@ -17,7 +16,7 @@ the range is the previous eight days. The usage lists total number of requests t
 the API, average latency, error rate, and graphs for total requests,
 requests by HTTP status code, and error percentage.
 
-Applications in *My Applications* are registered using API Manager in Anypoint Platform.
+Applications in *My applications* are registered using API Manager in Anypoint Platform.
 
 To register a client application to an existing API or API Group, the client application
 must first request access. When the request is approved by the API or API Group owner, a
@@ -39,10 +38,11 @@ API or API Group instance. An API consumer can use the Exchange *My Applications
 the contracts created between an API instance or API Group instance and that consumer's client
 applications.
 
-== Edit Client Application Details
-The details of a client application include name, description, URl, and OAuth 2.0 redirect URIs.
+== View Client Applications
+To see your client applications from Exchange, select *My application* from the navigation bar and select an application in the list.
 
-To make changes, click *Edit*. Once you’ve made your updates, click *Update* to save your changes.
+To find an application, search the list of applications by entering a name or description in *Search* and press *Enter* on the keyboard.
+
 
 == Reset Client Secret
 You can reset the client secret for an application on a set schedule to ensure security, even if users leave the company. Resetting the secret also ensures it isn't unintentionally shared with unauthorized users.
@@ -54,11 +54,18 @@ Applications using the current client secret can’t access any of the APIs with
 +
 The client secret is reset. Click *Show* to see the new client secret.
 
-== Delete a Client Application
-When you no longer need the contract for an application, you can delete it. Once the application is deleted, there's no longer a contract with the application and you can’t access it. To regain access, you must request access to the API again.
+== Edit Client Application Details
+The details of a client application include name, description, URl, and OAuth 2.0 redirect URIs.
 
-== Add Client Application Owners
-Client application owners can add more owners to their applications. 
+To make changes, click *Edit*. After making your updates, click *Update* to save your changes. 
+
+== Delete a Client Application
+When you don't need the contract for an application, you can delete it. Once the application is deleted, there's no longer a contract with the application and you can’t access it. To regain access, you must request access to the API again.
+
+To delete a client application, click the three-dot icon, click *Delete*, and then click *Delete application*.
+
+== Add Users as Client Application Owners
+After a user is granted to an API a client application is created. The owner of the application is the also the owner of the new client application. The owner can add additional users as owners from Exchange.
 
 == See Also
 
