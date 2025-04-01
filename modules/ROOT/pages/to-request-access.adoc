@@ -37,7 +37,7 @@ conditions.
 An application and its instance use the same client provider. If an organization administrator has configured xref:api-manager::configure-multiple-credential-providers.adoc[multiple client providers] in Anypoint API Manager, then the application list shows only the applications that use the same client provider as the selected instance.
 . If you do not have an application to which to provide access, click *Select application > Create a new application*. 
 +
-See the Create a new application section for more information.
+For  more information, see the Create a New Application section.
 . Choose the service-level agreement (SLA) value for the application.
 . Click *Request access*.
 +
