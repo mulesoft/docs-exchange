@@ -7,16 +7,7 @@ endif::[]
 The *My applications* page lists applications that hold a contract with an API or an API group. To view this page, select *My applications* from the navigation bar.
 
 image::ex2-my-applications.png[]
-
-Each client application has a client ID, client secret, description, URL, redirect URIs,
-grant types, and a usage dashboard.
-
-The usage information enables you to set the verification duration. If not specified,
-the range is the previous eight days. The usage lists total number of requests to
-the API, average latency, error rate, and graphs for total requests,
-requests by HTTP status code, and error percentage.
-
-Applications in *My applications* are registered using API Manager in Anypoint Platform.
+Applications are registered using API Manager in Anypoint Platform.
 
 To register a client application to an existing API or API Group, the client application
 must first request access. When the request is approved by the API or API Group owner, a
@@ -38,21 +29,17 @@ API or API Group instance. An API consumer can use the Exchange *My Applications
 the contracts created between an API instance or API Group instance and that consumer's client
 applications.
 
-== View Client Applications
-To see your client applications from Exchange, select *My application* from the navigation bar and select an application from the list.
+== View Client Applications Details
+
+Each client application has a client ID, client secret, description, URL, redirect URIs,
+grant types, and a usage dashboard.
+
+To see the details of a client applications, select *My application* from the navigation bar and select an application from the list.
 
 To find an application, search the list of applications by entering a name or description in *Search* and press *Enter*.
 
 
-== Reset Client Secret
-You can reset the client secret for an application on a set schedule to ensure security, even if users leave the company. Resetting the secret also ensures it isn't unintentionally shared with unauthorized users.
 
-Applications using the current client secret can’t access any of the APIs with which they were registered.
-
-. From the navigation bar, select *My applications* and click the name of the application.
-. From the three-dot icon, select *Reset client secret*.
-+
-The client secret is reset. Click *Show* to see the new client secret.
 
 == Edit Client Application Details
 The details of a client application include name, description, URl, and OAuth 2.0 redirect URIs.
@@ -64,8 +51,27 @@ When you don't need the contract for an application, you can delete it. Once the
 
 To delete a client application, click the three-dot icon, click *Delete*, and then click *Delete application*.
 
+== Reset Client Secret
+You can reset the client secret for an application on a set schedule to ensure security, even if users leave the company. Resetting the secret also ensures it isn't unintentionally shared with unauthorized users.
+
+Applications using the current client secret can’t access any of the APIs with which they were registered.
+
+. From the navigation bar, select *My applications* and click the name of the application.
+. Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Reset client secret*.
++
+The client secret is reset. In the application details section, click *Show* to see the new client secret.
+
 == Add Users as Client Application Owners
-After a user is granted to an API a client application is created. The owner of the application is the also the owner of the new client application. The owner can add additional users as owners from Exchange.
+After a user is granted to an API a client application is created. The owner of the application is the also the owner of the new client application. The owner can add more users as owners from Exchange.
+
+. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. Select the *Manage Owners* tab, enter a user' email, name, or team name in *Search*, and select the user to add them to the list of owners.
+
+== Delete Client Application Owners
+
+
+. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. Select the *Manage Owners* tab, locate the owner in the list, and click image:ex-trash-can-icon.png[3%,3%].
 
 == Add an SLA Tiers
 SLA tiers are defined in API Manager. If an application does not have an SLA tier listed, you can request to add an SLA tier. The instance owner must approve the tier.
@@ -74,6 +80,18 @@ SLA tiers are defined in API Manager. If an application does not have an SLA tie
 . From the instances panel, move the cursor over an instance and click *View SLA Tier*.
 . Click *Manage SLA Tiers*.
 . Select a SLA tier and click *Submit*.
+
+== View Usage Information
+Use the application dashboard to see usage information for the instances of a client application. The dashboard shows graphs for:
+
+* Total requests
+* Average latency (ms)
+* Requests by status code 
+* Requests by HTTP status code
+* Error percentage
+
+The usage information enables you to set the verification duration. If not specified,
+the range is the previous eight days.
 
 == See Also
 
