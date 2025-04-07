@@ -38,6 +38,7 @@ To see the details of a client applications, select *My application* from the na
 
 To find an application, search the list of applications by entering a name or description in *Search* and press *Enter*.
 
+
 == Edit Client Application Details
 The details of a client application include name, description, URl, and OAuth 2.0 redirect URIs.
 
@@ -65,7 +66,7 @@ After a user is granted to an API a client application is created. The owner of 
 . Select the *Manage Owners* tab, enter a user' email, name, or team name in *Search*, and select the user to add them to the list of owners.
 
 == Delete Client Application Owners
-
+You can remove an owner of a client application.
 
 . From the navigation bar in Exchange, select *My applications* and click the name of the application.
 . Select the *Manage Owners* tab, locate the owner in the list, and click image:ex-trash-can-icon.png[3%,3%].
