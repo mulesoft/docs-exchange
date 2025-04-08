@@ -47,7 +47,9 @@ To make changes, click *Edit*. After making your updates, click *Update* to save
 == Delete a Client Application
 When you don't need the contract for an application, you can delete it. Once the application is deleted, there's no longer a contract with the application and you can’t access it. To regain access, you must request access to the API again.
 
-To delete a client application, click the three-dot icon, click *Delete*, and then click *Delete application*.
+. From the navigation bar, select *My applications* and click the name of the application.
+. Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Delete application*. 
+. Confirm that you want to delete the application by clicking  *Delete application*.
 
 == Reset Client Secret
 You can reset the client secret for an application on a set schedule to ensure security, even if users leave the company. Resetting the secret also ensures it isn't unintentionally shared with unauthorized users.
@@ -56,6 +58,7 @@ Applications using the current client secret can’t access any of the APIs with
 
 . From the navigation bar, select *My applications* and click the name of the application.
 . Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Reset client secret*.
+.  Confirm that you want to delete the application by clicking  *Reset client secret*.
 +
 The client secret is reset. In the application details section, click *Show* to see the new client secret.
 
