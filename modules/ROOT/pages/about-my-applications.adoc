@@ -40,7 +40,7 @@ To find an application, search the list of applications by entering a name or de
 
 
 == Edit Client Application Details
-The details of a client application include name, description, URl, and OAuth 2.0 redirect URIs.
+You can change the client application details. These include name, description, URl, and OAuth 2.0 redirect URIs.
 
 To make changes, click *Edit*. After making your updates, click *Update* to save your changes. 
 
@@ -96,7 +96,7 @@ You can set a date range to display for all the charts in your dashboard. If not
 the range is the previous eight days.
 
 . From the navigation bar in Exchange, select *My applications* and click the name of the application.
-. Select an instance.
+. Select one of more instance.
 . Click the calendar drop-down, select a date range, and click *Confirm*.
 
 == See Also
