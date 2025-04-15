@@ -66,7 +66,7 @@ The client secret is reset. In the application details section, click *Show* to 
 After a user is granted to an API a client application is created. The owner of the application is the also the owner of the new client application. The owner can add more users as owners from Exchange.
 
 . From the navigation bar in Exchange, select *My applications* and click the name of the application.
-. Select the *Manage Owners* tab, enter a user' email, name, or team name in *Search*, and select the user to add them to the list of owners.
+. Select the *Manage Owners* tab, enter a user's email, name, or team name in *Search*, and then select the user to add them to the list of owners.
 
 == Delete Client Application Owners
 You can remove an owner of a client application.
@@ -75,7 +75,7 @@ You can remove an owner of a client application.
 . Select the *Manage Owners* tab, locate the owner in the list, and click image:ex-trash-can-icon.png[3%,3%].
 
 == Add and Change an SLA Tier
-SLA tiers are defined in API Manager. If an application doesn't have an SLA tier listed, you can request to add an SLA tier. You can also change the SLA tier for an application. The available SLA tiers are set by an admin in API Manager. The owner of the API instance must approve the request to to add or change the tier level.
+SLA tiers are defined in API Manager. If an application doesn't have an SLA tier listed, you can request to add an SLA tier. You can also change the SLA tier for an application. The available SLA tiers are set by an admin in API Manager. The owner of the API instance must approve the request to add or change the tier level.
 
 To add or change an SLA tier:
 
