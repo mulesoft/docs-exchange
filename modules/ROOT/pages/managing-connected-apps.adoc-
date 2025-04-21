@@ -10,10 +10,10 @@ When an API created using a connected app is published to Exchange, the API’s 
 
 Control whether or not to assign owner roles when creating applications using a connected app to avoid going over the maximum role xref:access-management::troubleshooting-anypoint-platform-access.adoc#access-management-limits[limit].
 
+If enabled, when creating a new asset, roles aren't assigned to connected app owners. If disabled, roles are assigned by default.
+
 . From the navigation bar, select *Settings* and select *Manage Connected Apps and Asset Deletion*.
 . In *Connected Application Owner Configuration*, enable or disable the option.
-+
-If enabled, when creating a new asset, roles aren't assigned to connected app owners. If disabled, roles are assigned by default.
 
 == See Also
 xref:connected-app-authentication.adoc[]
