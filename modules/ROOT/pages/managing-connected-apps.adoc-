@@ -12,7 +12,7 @@ Control whether or not to assign owner roles when creating applications using a 
 
 If enabled, when creating a new asset, roles aren't assigned to connected app owners. If disabled, roles are assigned by default.
 
-. From the navigation bar, select *Settings* and select *Manage Connected Apps and Asset Deletion*.
+. From the navigation bar, select *Settings* and select *Asset Deletion & Connected App Control*.
 . In *Connected Application Owner Configuration*, enable or disable the option.
 
 == See Also

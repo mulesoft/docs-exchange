@@ -4,12 +4,12 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Control how assets are deleted in Exchange from *Settings*. Admins can choose how asset owners can delete asset versions in Exchange. They can enable or disable the ability to permanently delete an asset to reuse the GAV (group ID, asset ID, and version) for a new asset. It doesn't matter when the asset version was created. When enabled, asset owners can see an option to delete an asset and allow the GAV to be reused. When disabled, the option to delete the asset but not the reuse the GAV is avaliable.
+Control how assets are deleted in Exchange from *Settings*. Admins can choose how asset owners can delete asset versions in Exchange. They can enable or disable the ability to permanently delete an asset to reuse the GAV (group ID, asset ID, and version) for a new asset. It doesn't matter when the asset version was created. When enabled, asset owners can see an option to delete an asset and allow the GAV to be reused. When disabled, the option to delete the asset but not the reuse the GAV is available.
 
 To enable or disable the option to delete an asset and reuse the GAV:
 
-. From the navigation bar, select *Settings* and select *Manage Connected Apps and Asset Deletion*.
-. Enable or disable the option.
+. From the navigation bar, select *Settings* and select *Asset Deletion & Connected App Control*.
+. In *Assey Deletion Configuration*, enable or disable the option..
 
 == See More
 
