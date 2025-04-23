@@ -317,7 +317,7 @@ In a terminal:
 
 If you execute `mvn clean deploy` multiple times, the asset is overwritten without any errors.
 
-Note: An asset that is in development state and is not an SNAPSHOT version cannot be consumed through Maven.
+NOTE: An asset that is in development state and is not an SNAPSHOT version cannot be consumed through Maven.
 
 == Publish a Custom Asset
 
