@@ -5,9 +5,7 @@ endif::[]
 
 Keep your asset catalog maintained by deleting outdated or redundant assets. This makes it easier for consumers to find and reuse the assets they need. 
 
-When deleting assets, admins determine if the GAV (group ID, asset ID, and version) information of the deleted asset can be reused for a different asset. Therefore, when you delete an asset, you might not be able to reuse its GAV.
-
-After deleting an asset, it can't be recovered or undeleted.
+When deleting assets, admins determine if the GAV (group ID, asset ID, and version) information of the deleted asset can be reused for a different asset. Therefore, when you delete an asset, you might not be able to reuse its GAV for new asset.
 
 If you try to delete an asset version with dependent assets, Exchange shows a warning. Remove the dependencies and then delete the asset version.
 
@@ -17,11 +15,11 @@ You can't delete a policy asset that is applied to any managed API instances. On
 
 To delete a patch version of an asset:
 
-. In the asset details, click *View versions*.
+. In the asset details, click *Manage versions*.
 . Click the three dots menu and select *Delete version*.
 +
-When GAV reuse is enabled, you have a option to reuse the GAV. If you don't select this option, the asset version's GAV will be deleted and can't be reused. If you select this option, the asset version's GAV can be reused.
-. Click *Delete*.
+If GAV reuse is enabled, you have the option to reuse the GAV for another asset. If you don't select this option, the asset version's GAV will be deleted and can't be reused for another asset. If you select this option, the asset version's GAV can be reused.
+. Click *Delete asset*.
 
 To delete an entire asset, delete all of its patch versions.
 
