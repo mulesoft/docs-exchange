@@ -3,14 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Keep your asset catalog maintained by deleting outdated or redundant assets. This makes is easier for consumers to find and reuse the assets they need. 
+Keep your asset catalog maintained by deleting outdated or redundant assets. This makes it easier for consumers to find and reuse the assets they need. 
 
-When deleting assets, admins determine if the Group ID, Asset ID, and Version (GAV) information for a deleted asset can be reused for a different asset. 
-
-Depending on the asset, you can delete it in one of these ways:
-
-* Delete and reuse the GAV.
-* Delete, but can't reuse the GAV for another asset. 
+When deleting assets, admins determine if the GAV (group ID, asset ID, and version) information of the deleted asset can be reused for a different asset. Therefore, when you delete an asset, you might not be able to reuse its GAV.
 
 After deleting an asset, it can't be recovered or undeleted.
 
