@@ -26,11 +26,11 @@ When GAV reuse is enabled, you have a option to reuse the GAV. If you don't sele
 To delete an entire asset, delete all of its patch versions.
 
 == Restore a Deleted Asset
-You can restore assets that were deleted along with their GAVs using this endpoint:
+You can restore assets that were deleted along with their GAV information using this endpoint:
 
 `/api/v2/organizations/:organizationId/softDeleted`
 
-It is not possible to recover deleted assets if their GAV information have been reassigned to a different asset.
+It is not possible to recover deleted assets if their GAV information have been reused by a different asset.
 
 
 == See Also
