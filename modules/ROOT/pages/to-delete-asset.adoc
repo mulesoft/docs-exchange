@@ -18,13 +18,13 @@ To delete a patch version of an asset:
 . In the asset details, click *Manage versions*.
 . Click the three dots menu and select *Delete version*.
 +
-If GAV reuse is enabled, you have the option to reuse the GAV for another asset. If you don't select this option, the asset version's GAV will be deleted and can't be reused for another asset. If you select this option, the asset version's GAV can be reused.
+When GAV reuse is enabled, you have the option to reuse the GAV for another asset. If you don't select this option, the GAV for that asset won't be available for reuse. If you do select it, the GAV can be reused for another asset.
 . Click *Delete asset*.
 
 To delete an entire asset, delete all of its patch versions.
 
 == Restore a Deleted Asset
-You can restore assets that were deleted along with their GAV information using this endpoint:
+You can restore assets that were deleted and their GAV information is not available for reuse using this endpoint:
 
 `/api/v2/organizations/:organizationId/softDeleted`
 
