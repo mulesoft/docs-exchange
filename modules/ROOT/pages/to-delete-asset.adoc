@@ -5,7 +5,9 @@ endif::[]
 
 Keep your asset catalog maintained by deleting outdated or redundant assets. This makes it easier for consumers to find and reuse the assets they need. 
 
-When deleting assets, admins determine if the GAV (group ID, asset ID, and version) information of the deleted asset can be reused for a different asset. Therefore, when you delete an asset, you might not be able to reuse its GAV for new asset.
+When deleting assets, admins determine if the GAV (group ID, asset ID, and version) information of the deleted asset can be reused for a different asset. Therefore, when you delete an asset, you might not be able to reuse its GAV for a new asset.
+
+An asset can't be restored or undeleted.
 
 If you try to delete an asset version with dependent assets, Exchange shows a warning. Remove the dependencies and then delete the asset version.
 
@@ -23,13 +25,12 @@ When GAV reuse is enabled, you have the option to reuse the GAV for another asse
 
 To delete an entire asset, delete all of its patch versions.
 
-== Restore a Deleted Asset
-You can restore assets that were deleted and their GAV information is not available for reuse using this endpoint:
+== Review GAV Information for Deleted Assets
+You can review details about deleted assets. Find out which GAV information is unavailable for reuse using this endpoint: 
 
 `/api/v2/organizations/:organizationId/softDeleted`
 
-It is not possible to recover deleted assets if their GAV information have been reused by a different asset.
-
+Identify unavailable GAVs of deleted assets for cleanup and permanent deletion. Then, you can make GAVs reusable.
 
 == See Also
 
