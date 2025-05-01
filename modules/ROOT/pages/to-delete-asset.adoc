@@ -30,8 +30,14 @@ You can review details about deleted assets. Find out which GAV information is u
 
 `/api/v2/organizations/:organizationId/softDeleted`
 
-Identify unavailable GAVs of deleted assets for cleanup and permanent deletion. Then, you can make GAVs reusable.
+Identify unavailable GAVs of deleted assets for cleanup and permanent deletion. Then, you can make GAVs reusable by permanently deleting the asset using this example API call:
 
+[source,console]
+----
+DELETE '/api/v2/assets/:groupId/:assetId/:version' 
+--header 'x-delete-type: hard-delete' 
+--header 'Authorization: ***
+----
 == See Also
 
 * xref:to-change-raml-version.adoc[To Change a RAML Version]
