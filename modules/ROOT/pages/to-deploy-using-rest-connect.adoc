@@ -8,7 +8,7 @@ The Exchange backend uses REST Connect to transparently convert a REST API speci
 
 [WARNING]
 ====
-Mule 3 has reached its end of life. The generation of Mule 3 connectors will be disabled in June 2025.
+Mule 3 has reached its End of Life. The generation of Mule 3 connectors will be disabled in June 2025.
 ====
 
 [[access-generated-connectors]]
