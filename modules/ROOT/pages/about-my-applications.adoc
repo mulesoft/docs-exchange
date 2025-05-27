@@ -45,7 +45,7 @@ You can change the client application details. These include name, description, 
 To make changes, click *Edit*. After making your updates, click *Update* to save your changes. 
 
 == Delete a Client Application
-When you don't need the contract for an application, you can delete it. Once the application is deleted, there's no longer a contract with the application and you can’t access it. To regain access, you must request access to the API again.
+When you don't need the contract for an application, you can delete it. After the application is deleted, there's no longer a contract with the application and you can’t access it. To regain access, request access to the API again.
 
 . From the navigation bar, select *My applications* and click the name of the application.
 . Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Delete application*. 
