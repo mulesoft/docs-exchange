@@ -58,7 +58,7 @@ Applications using the current client secret can’t access any of the APIs with
 
 . From the navigation bar, select *My applications* and click the name of the application.
 . Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Reset client secret*.
-.  Confirm that you want to delete the application by clicking  *Reset client secret*.
+. Confirm that you want to delete the application by clicking *Reset client secret*.
 +
 The client secret is reset. In the application details section, click *Show* to see the new client secret.
 
