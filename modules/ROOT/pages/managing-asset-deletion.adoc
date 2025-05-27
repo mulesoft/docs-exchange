@@ -8,7 +8,7 @@ Control how assets are deleted in Exchange from *Settings*. Admins can choose ho
 
 To enable or disable the option to delete an asset and reuse the GAV:
 
-. From the navigation bar, select *Settings* and select *Asset Deletion & Connected App Management*.
+. From the navigation bar, select *Settings* and select *Asset Deletion & Connected Apps Management*.
 . In *Asset Deletion Configuration*, enable or disable the option.
 
 == See More
