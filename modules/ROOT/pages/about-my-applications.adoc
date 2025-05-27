@@ -49,7 +49,7 @@ When you don't need the contract for an application, you can delete it. After th
 
 . From the navigation bar, select *My applications* and click the name of the application.
 . Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Delete application*. 
-. Confirm that you want to delete the application by clicking  *Delete application*.
+. Confirm that you want to delete the application by clicking *Delete application*.
 
 == Reset Client Secret
 You can reset the client secret for an application on a set schedule to ensure security, even if users leave the company. Resetting the secret also ensures it isn't unintentionally shared with unauthorized users.
