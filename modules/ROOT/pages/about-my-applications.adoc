@@ -32,7 +32,7 @@ applications.
 == View Client Applications Details
 
 Each client application has a client ID, client secret, description, URL, redirect URIs,
-grant types, and a usage dashboard.
+grant types, and usage dashboard.
 
 To see the details of a client applications, select *My application* from the navigation bar and select an application from the list.
 
