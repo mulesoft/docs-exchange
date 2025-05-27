@@ -6,6 +6,11 @@ endif::[]
 
 The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 3 or Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
 
+[WARNING]
+====
+Mule 3 has reached its end of life. The generation of Mule 3 connectors will be disabled in June 2025.
+====
+
 [[access-generated-connectors]]
 == Access Generated Connectors
 
