@@ -40,7 +40,7 @@ To find an application, search the list of applications by entering a name or de
 
 
 == Edit Client Application Details
-You can change the client application details. These include name, description, URl, and OAuth 2.0 redirect URIs.
+You can change the client application details. These include name, description, URL, and OAuth 2.0 redirect URIs.
 
 To make changes, click *Edit*. After making your updates, click *Update* to save your changes. 
 
