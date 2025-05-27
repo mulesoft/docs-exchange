@@ -8,7 +8,7 @@ Administrators and asset owners with contributor permission can view usage detai
 
 The following graphic shows the asset details page with usage and engagement metrics:
 
-image::ex-metrics-for-asset-version.png[Metrics for an asset and version]
+image::ex-metrics-for-asset-version.png["Assets details page with usage and engagement metrics"]
 
 The following data is collected and analyzed:
 
@@ -56,7 +56,7 @@ To view usage and engagement metrics for the asset versions of API specification
 The asset details page displays the asset metadata.
 . In the navigation bar, click *Asset versions engagement*.
 +
-image::ex-nav-asset-versions-engagement.png[The navigation bar with Asset Versions Engagement option,15%,5%]
+image::ex-nav-asset-versions-engagement.png["The navigation bar with Asset versions engagement option highlighted" option,15%,5%]
 +
 The *Asset versions engagement* page displays.
 . If you want to filter by date, select a date range from 7 days, 30 days, or 90 days.

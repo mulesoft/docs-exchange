@@ -7,7 +7,7 @@ endif::[]
 
 Anypoint Exchange is a curated catalog of reusable assets. APIs, API groups, API spec fragments, custom assets, examples, GraphQL APIs, integration assets such as connectors, policies, RPA assets, rulesets, and templates are some of the types that are supported in Exchange. See xref:asset-types.adoc[Asset Types] for more information about each type of asset. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
 
-image:exchange-landing-page.png[Exchange landing page]
+image:exchange-landing-page.png["Exchange catalog showing assets provided by MuleSoft"]
 
 Use Exchange to discover, share, incorporate assets and resources into your applications, and view asset usage and engagement metrics. You can create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
 
@@ -30,11 +30,24 @@ A system administrator groups individuals within an organization into business g
 
 To view the business groups, log in to Anypoint Platform and click a group name from the taskbar:
 
-image::ex2-biz-groups.png[Screenshot - Business groups in upper taskbar drop-down menu]
+image::ex2-biz-groups.png["List of business groups"]
 
 An Exchange administrator sets the groups that this menu displays for each user.
 
 If you cannot find an asset in the current business group scopes, search in other scopes. In the navigation menu click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
+
+[[exchange-on-hyperforce]]
+== Anypoint Exchange On Hyperforce
+All features of Anypoint Exchange are supported on Hyperforce with these exceptions:
+
+* xref:usage-and-engagement-metrics.adoc[Usage and engagement metrics] aren't supported.
+* Amazon CloudFront isn't configured on Hyperforce. 
++
+To download files from Japan or Canada Hyperforce environments, use these URLs:
+
+** Canada S3 Bucket URL: https://exchange-asset-manager-d1937357035a847d2ec3.s3.ca-central-1.amazonaws.com
+** Japan S3 Bucket URL: https://exchange-asset-manager-bf62561aafed7e20740f.s3.ap-northeast-1.amazonaws.com
+
 
 == Get Started
 

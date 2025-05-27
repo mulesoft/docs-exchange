@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The Exchange catalog of assets can display hundreds of assets that help developers discover assets to create projects quickly and drive adoption of best practices and reuse. You can find assets from Mulesoft's ecosystem or your own organization. Based on your permission group, you can search multiple business groups, documentation, tags, custom attributes, and details from API specifications. 
+The Exchange catalog of assets can display hundreds of assets that help developers discover assets to create projects quickly and drive adoption of best practices and reuse. You can find assets from MuleSoft's ecosystem or your own organization. Based on your permission group, you can search multiple business groups, documentation, tags, custom attributes, and details from API specifications. 
 
 To help find assets, searches can be refined using search terms like a name of an API, by filters like organizations, categories, tags, and lifecycle states, or by ranking.
 
@@ -18,11 +18,11 @@ Anypoint Exchange search looks for terms in:
 * The content of the asset portal pages
 * Properties defined in RAML and OAS API specifications
 
-== Search by Keyword 
+== Search By Keyword 
 
 You can use the *Search assets* box to find assets by keyword.
 
-image:exchange-search-assets-box.png[Search assets box]
+image:exchange-search-assets-box.png["The Search assets box"]
 
 Keywords can be the following asset information:
 
@@ -36,20 +36,20 @@ Keywords can be the following asset information:
 
 To find assets using keywords:
 
-. From the Exchange landing page, enter a keyword in the *Search assets* field, for example Mulesoft and press *enter* or *return* depending on your keyboard.
+. From the Exchange landing page, enter a keyword in the *Search assets* field, for example MuleSoft and press *enter* or *return* depending on your keyboard.
 +
 A list of assets display that contain the keyword.
 . To clear the keyword from the *Search assets* field, click *X*.
 
-The following image is an example search results using the search keyword *Mulesoft*. The search keyword is highlighted in the results.
+The following image is an example search results using the search keyword *MuleSoft*. The search keyword is highlighted in the results.
 
-image:exchange-new-search.png[Search results with the Mulesoft keyword highlighted]
+image:exchange-new-search.png["Search results with the keyword MuleSoft highlighted"]
 
 == Filter Search Results
 
 You can use the following filters to refine your search results. 
 
-image:ex-filters.png[The search refinement filters]
+image:ex-filters.png["The search refinement filters"]
 
 * Type
 +
@@ -100,11 +100,13 @@ Custom fields use the following data types:
 |List of strings |Contains and not contains 
 |===
 
+NOTE: The contains and not contains operators check whether a specific value exactly matches an item in an enum or list-based field assigned to an asset. These operators perform a full match, not a partial match. For example, the value `Prod1` is contained in the list of environments (Prod1, Prod", and Prod3); the value `Prod` is not contained in the list of environments (Prod1, Prod2, and Prod3).
+
 Use the preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform. You can add as many custom fields as you need.
 
 The following example shows the search filter with two custom fields:
 
-image:ex-custom-field-operator-value.png[Search filter using two custom fields,20%,20%]
+image:ex-custom-field-operator-value.png["Search filter using two custom fields",20%,20%]
 
 To filter a search using custom fields:
 
@@ -132,7 +134,7 @@ Sorts the matching results by where a match is found in the asset metadata, such
 Sorts by asset name in ascending alphabetical order.
 * Last modified
 +
-Sorts the results by the most recently modified assets at the top, for example, the latest published assets or assets that have new versions recently added. This is the default for all business groups except assets that are provided by Mulesoft.
+Sorts the results by the most recently modified assets at the top, for example, the latest published assets or assets that have new versions recently added. This is the default for all business groups except assets that are provided by MuleSoft.
 * Rating
 +
 Sorts by descending order by the review rating of an asset (stars on an asset card). The highest rated assets is at the top. 
@@ -142,7 +144,7 @@ Sorts by placing a featured selection of assets at the top of the results. This 
 
 To sort the ranking of search results, use the *Sort by* drop-down menu to select an option: Relevance, Name, Last modified, Rating, Relevance, or Featured.
 
-image:ex-sort-by-filter.png[The Sort by filter, 15%,15%]
+image:ex-sort-by-filter.png["The Sort by filter", 15%,15%]
 
 == Save a Search
 
@@ -150,7 +152,7 @@ Find assets quickly by saving frequently used search queries for yourself or for
 
 Exchange lists search terms specific to your business group. The example shows saved searches:
 
-image::ex2-saved-searches-groups.png[Saved Search Groups]
+image::ex2-saved-searches-groups.png["An example of two saved search groups"]
 
 To save a search: 
 

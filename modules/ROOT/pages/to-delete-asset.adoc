@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+
 You can delete an asset in the first seven days of its creation and reuse that asset's name, group, asset ID, and version. A delete within the first seven days is known as a _hard delete_.
 
 If you delete the asset after seven days, you can't reuse its name, business group name, account ID, and version.
@@ -26,5 +27,4 @@ To delete an entire asset, delete all of its patch versions.
 
 == See Also
 
-* xref:to-deprecate-asset.adoc[To Deprecate an Asset]
 * xref:to-change-raml-version.adoc[To Change a RAML Version]

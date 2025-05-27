@@ -9,7 +9,7 @@ Use categories to organize Exchange assets into groups to improve asset browsing
 For example, a category named API Type with possible values System API, Experience API,
 and Integration API is applied to assets of type REST API, SOAP API, and HTTP API:
 
-image::ex-categories-api-type.png[]
+image::ex-categories-api-type.png["The Setting page showing categories for API type"]
 
 To create a category, you must be either the root organization's Exchange Administrator or Organization Owner.
 
@@ -18,13 +18,13 @@ When you have one or more categories defined in the *Settings* page, your organi
 == Create a Category
 
 . In Anypoint Exchange, click *Login* and log in to your organization.
-. Click *Settings* in the left navigation bar.
+. Click *Settings* in the sidebar.
 . Click *Add new category*.
 . Enter a category name. Each category name must be unique.
 . Enter one or more values. Each category must have a value.
 . Press the Return/Enter key or click the plus sign next to the value to confirm the value:
 +
-image::ex-category-value.png[]
+image::ex-category-value.png["The Settings page showing the highlighted + icon to confirm a value"]
 +
 Note: If a plus sign is not clicked, the check mark to indicate the category has no
 effect.
@@ -53,7 +53,7 @@ The following search terms return all assets marked as both System APIs and Sale
 
 == Search with Categories in Exchange Cloud
 
-Select a category such as "API Type" from the list, and select one or more values such as "System API". Anypoint Exchange shows assets that have one of the selected values for the selected category.
+Select a category such as *API Type* from the list, and select one or more values such as *System API*. Exchange shows assets that have one of the selected values for the selected category.
 
 You can search for a combination of categories, and you can search for multiple values for the same category. Multiple values for the same category are combined with the OR operator.
 
