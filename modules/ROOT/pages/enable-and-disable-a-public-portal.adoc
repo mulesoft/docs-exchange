@@ -6,6 +6,8 @@ endif::[]
 
 All public portals in Exchange are enabled by default. You can sign in to your portal, view assets, and share new assets. Enabled portals do not require authorization to view asset details or download a specification. If you do not want the portal to be publicly shared, you can manually disable it. You must be an Exchange administrator to enable or disable a public portal.
 
+NOTE: The code examples for enabling and disabling a public portal show you how to obtain an access token with Multi-Factor Authentication (MFA) disabled.
+
 To determine whether your public portal is enable or disable, use the following request:
 
 ----
@@ -42,7 +44,7 @@ To view which assets are shared in the public portal, use the following request:
 ----
 curl 'https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZATION_DOMAIN/assets' | jq '.[] | [.groupId,.assetId]'
 ----
-To disable a puplic portal:
+To disable a public portal:
 
 . Ensure that all assets are private.
 

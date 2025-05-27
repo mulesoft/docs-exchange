@@ -100,6 +100,8 @@ Custom fields use the following data types:
 |List of strings |Contains and not contains 
 |===
 
+NOTE: The contains and not contains operators check whether a specific value exactly matches an item in an enum or list-based field assigned to an asset. These operators perform a full match, not a partial match. For example, the value `Prod1` is contained in the list of environments (Prod1, Prod", and Prod3); the value `Prod` is not contained in the list of environments (Prod1, Prod2, and Prod3).
+
 Use the preset operators to filter the search results. The values of the operators can be changed and customized. For example, you can select a date from the list of the values or add a date by entering a custom date in the defined format (YYYY-MM-DD). The customized value shows in the list of options as freeform. You can add as many custom fields as you need.
 
 The following example shows the search filter with two custom fields:
