@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Manage your client applications using the *My Applications* page. This  page lists applications that hold a contract with an API or an API group. To view this page, select *My applications* from the navigation bar.
+Manage your client applications by using the *My Applications* page. This page lists applications that hold a contract with an API or an API group. To view this page, select *My applications* from the navigation bar.
 
 image::ex2-my-applications.png[]
 Applications are registered using API Manager in Anypoint Platform.
