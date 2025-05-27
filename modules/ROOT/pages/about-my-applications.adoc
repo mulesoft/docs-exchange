@@ -66,7 +66,7 @@ The client secret is reset. In the application details section, click *Show* to 
 After a user is granted to an API a client application is created. The owner of the application is the also the owner of the new client application. The owner can more users as owners from Exchange.
 
 . From the navigation bar in Exchange, select *My applications* and click the name of the application.
-. Select the *Manage Owners* tab, enter a user's email, name, or team name in *Search*.
+. Select the *Manage Owners* tab and enter a user's email, name, or team name in *Search*.
 . From the search results, select the user you want to add.
 +
 The selected user is added to the list of owners for the application.
