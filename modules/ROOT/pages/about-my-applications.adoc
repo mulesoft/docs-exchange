@@ -84,7 +84,7 @@ To add or change an SLA tier:
 
 . From the navigation bar in Exchange, select *My applications* and click the name of the application.
 . From the instances panel, move the cursor over an instance and click *View SLA Tier*.
-. Click *Manage SLA Tiers*, select a SLA tier, and click *Submit*.
+. Click *Manage SLA Tiers*, select an SLA tier, and click *Submit*.
 
 == View Usage Information
 See usage information for the instances of a client application using the application dashboard. The dashboard shows graphs for:
