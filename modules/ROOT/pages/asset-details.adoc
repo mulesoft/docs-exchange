@@ -13,7 +13,7 @@ Select an asset in Exchange to view the asset details page:
 
 image::exchange-asset-detail-view.png["The asset details of the Exchange XAPI"]
 
-The left navigation bar lists:
+The navigation bar lists:
 
 * Additional pages
 * Saved search terms
@@ -23,7 +23,7 @@ The left navigation bar lists:
 * Conformance Status
 * Terms and conditions and APIs using this policy (for a policy)
 
-The top asset detail pane provides the following information:
+The asset detail pane provides the following information:
 
 * Asset name 
 * Description
@@ -117,4 +117,4 @@ Many APIs have an API notebook for interactive testing.
 
 == See Also
 
-xref:access-management::permissions-by-product.adoc#exchange[Permissions Available in Anypoint Platform, Exchange].
+xref:access-management::permissions-by-product.adoc#exchange[Permissions Available in Anypoint Platform for Exchange].
