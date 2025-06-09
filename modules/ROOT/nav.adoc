@@ -27,7 +27,7 @@
 ** xref:asset-usage-and-engagement-metrics-dashboard.adoc[]
 ** xref:metrics-for-a-specific-asset-version.adoc[]
 * xref:about-api-use.adoc[]
- ** xref:about-my-applications.adoc[s]
+ ** xref:about-my-applications.adoc[]
  ** xref:to-request-access.adoc[]
  ** xref:to-deploy-using-rest-connect.adoc[]
 * xref:about-platform-apis.adoc[]
