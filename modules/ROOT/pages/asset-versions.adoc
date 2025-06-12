@@ -29,7 +29,7 @@ An asset's version format must use semantic versioning. Asset fields have these 
 
 Exchange prevents resource exhaustion attacks by limiting the number of asset versions that can be published.
 
-The limit is 500 assets for root organizations with trial accounts, and 100,000 (one hundred thousand) assets for other root organizations.
+The limit is 500 assets for root organizations with trial accounts, and 100,000 (one hundred thousand) assets for root organizations with all other account types.
 
 The limit of dependencies for an asset is 100. For example, in Anypoint API Designer a RAML is limited to 100 RAML Fragment dependencies, and in Anypoint API Manager an API Group is limited to 100 REST API dependencies.
 
