@@ -25,7 +25,9 @@ secret credentials are automatically created when the client application is
 registered.
 
 An API owner can use API Manager to view all API contracts ever created for an
-API or API Group instance. An API consumer can use the Exchange *My Applications* page to view
+API or API Group instance. Client app owners can assign other users and teams to view and manage a client application using the *My Applications* page in Exchange.
+
+An API consumer can use the Exchange *My Applications* page to view
 the contracts created between an API instance or API Group instance and that consumer's client
 applications.
 
@@ -63,7 +65,7 @@ Applications using the current client secret can’t access any of the APIs with
 The client secret is reset. In the application details section, click *Show* to see the new client secret.
 
 == Add Users as Client Application Owners
-After a user is granted to an API a client application is created. The owner of the application is the also the owner of the new client application. The owner can add more users as owners from Exchange.
+After a user is granted to an API a client application is created. The owner of the application is the also the owner of the new client application. The owner can add more users as owners from Exchange. You can add individual users and teams as owners.
 
 . From the navigation bar in Exchange, select *My applications* and click the name of the application.
 . Select the *Manage owners* tab and enter a user's email, name, or team name in *Search*.
