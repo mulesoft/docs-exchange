@@ -4,11 +4,19 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Use Einstein generative AI to generate API documentation for REST APIs in Exchange, and streamline how your organization manages APIs. By using AI technologies, developers can simplify API documentation processes. AI ensures API documentation is consistent, accurate and current, freeing developers to focus on strategic tasks, and enhancing developer satisfaction.
+Use Einstein generative AI to generate API documentation for REST APIs in Exchange, and streamline how your organization manages APIs. By using AI technologies, developers can simplify API documentation processes. AI creates API documentation that is consistent, accurate, and current. This frees developers to focus on strategic tasks and enhances developer satisfaction.
 
-You can generate documentation for single file REST APIs that don't have any documentation. From the asset details page, generate the documentation, then manually edit and improve the documentation after it's generated. After that, publish it to make it available to everyone in your organization.
+You can create documentation for single file REST APIs that don’t have any documentation. From the asset details page, generate the documentation, then manually edit and improve the documentation after it’s generated. After that, publish it to make it available to everyone in your organization.
 
-NOTE: This release doesn't support fragments and multi-file formats.
+This release supports:
+
+* REST APIs only
+* Single file format only
+* Multi-format files and fragments aren’t supported
+* REST APIs published from Exchange only
+
+APIs published to Exchange from other products like Anypoint Code Builder and Anypoint Design Center aren’t supported.
+
 
 //placeholder for screen capture of asset details page
 
@@ -31,7 +39,6 @@ Generated documentation includes:
 * Best practices for implementation
 * Sample code snippets
 
-//JTBD
 == Before You Begin
 Before generating API documentation with Einstein, you must have:
 
