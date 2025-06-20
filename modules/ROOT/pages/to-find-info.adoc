@@ -135,9 +135,6 @@ Sorts by asset name in ascending alphabetical order.
 * Last modified
 +
 Sorts the results by the most recently modified assets at the top, for example, the latest published assets or assets that have new versions recently added. This is the default for all business groups except assets that are provided by MuleSoft.
-* Rating
-+
-Sorts by descending order by the review rating of an asset (stars on an asset card). The highest rated assets is at the top. 
 * Featured
 +
 Sorts by placing a featured selection of assets at the top of the results. This is the default order for the Provided by MuleSoft and Global Exchange. Other assets that are not featured assets are ordered by last modified. The sorting options appear when they are available within an organization.
