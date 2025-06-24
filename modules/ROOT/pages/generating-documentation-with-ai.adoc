@@ -6,22 +6,17 @@ endif::[]
 
 Use Einstein generative AI to generate API documentation for REST APIs in Exchange, and streamline how your organization manages APIs. By using AI technologies, developers can simplify API documentation processes. AI creates API documentation that is consistent, accurate, and current. This frees developers to focus on strategic tasks and enhances developer satisfaction.
 
-You can create documentation for single file REST APIs that don’t have any documentation. From the asset details page, generate the documentation, then manually edit and improve the documentation after it’s generated. After that, publish it to make it available to everyone in your organization.
+You can create documentation for single file REST APIs that don’t have any documentation. From the asset details page in Exchange, generate the documentation, then manually edit and improve the documentation after it’s generated. After that, publish it to make it available to everyone in your organization.
 
 This release supports:
 
 * REST APIs only
 * Single file format only
-* Multi-format files and fragments aren’t supported
-* REST APIs published from Exchange only
-
-APIs published to Exchange from other products like Anypoint Code Builder and Anypoint Design Center aren’t supported.
-
-
-//placeholder for screen capture of asset details page
++
+Multi-format files and fragments aren’t supported
 
 == Documentation Structure
-AI-generated documentation in Anypoint Exchange standardizes API documentation, addressing inconsistency and incompleteness. The structure of the generated documentation is standardized across each API including fonts, headers, text size.
+AI-generated documentation in Anypoint Exchange standardizes API documentation, addressing inconsistency and incompleteness. The structure and format of the generated documentation is standardized across each API including fonts, headers, text size.
 
 Generated documentation includes:
 
@@ -46,7 +41,9 @@ Before generating API documentation with Einstein, you must have:
 +
 To enable Einstein in Anypoint Platform, see xref::access-management:enabling-einstein.adoc#enable-einstein-anypoint[Enable Einstein for Your Anypoint Platform Organization].
 
-* Einstein credits because this feature uses Salesforce Einstein Large Language Model (LLM).
+* Einstein credits 
++
+This feature uses Salesforce Einstein Large Language Model (LLM).
 
 == Generate API Documentation with Einstein
 Generate documentation for REST APIs published from Exchange without documentation.
