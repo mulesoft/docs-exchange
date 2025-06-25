@@ -11,7 +11,7 @@ You can create documentation for single file REST APIs that don't have any docum
 This release supports:
 
 * REST APIs
-* Single file format only
+* Single file format
 +
 Multi-format files and fragments aren’t supported
 
