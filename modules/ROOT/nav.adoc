@@ -36,6 +36,7 @@
  ** xref:to-search-with-graph-api.adoc[Search Using the Graph API]
  ** xref:connected-app-authentication.adoc[Connected Application Authentication]
 * xref:about-documenting-an-api.adoc[Document an API]
+ ** xref:generating-documentation-with-ai.adoc[]
  ** xref:to-use-api-notebook.adoc[Document an Asset Using API Notebook]
  ** xref:to-configure-api-settings.adoc[Configure API Instances]
 * xref:about-portals.adoc[Exchange Public Portals]
