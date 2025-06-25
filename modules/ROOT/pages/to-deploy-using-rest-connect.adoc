@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 3 or Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
+The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
 
 [[access-generated-connectors]]
 == Access Generated Connectors
@@ -14,7 +14,7 @@ In Exchange, download the generated connector from the *Download* menu.
 [NOTE]
 After deploying a REST asset to Exchange, refresh your screen to ensure that all download options are available.
 
-Mule 3 connectors download as ZIP files, and Mule 4 connectors download as JAR files.
+Mule 4 connectors download as JAR files.
 
 [[api-spec-support]]
 == API Specification Format Support
@@ -478,11 +478,11 @@ Most of the fields are auto-populated based on the GitHub API specification.
 +
 image::rest-connect-api-config.png["Configuration window for the GitHub API Configuration component"]
 +
-. Get the Client ID and Client Secret for your GitHub Account. You can find your Client ID and Client Secret if you go to Settings > Developer settings in GitHub. If you don’t have an OAuth App in GitHub, you can  create one with the New OAuth App.
-. Because GitHub API’s base URL is api.github.com, you can put “/” in the Base Path.
+. Get the Client ID and Client Secret for your GitHub Account. You can find your Client ID and Client Secret if you go to Settings > Developer settings in GitHub. If you don't have an OAuth App in GitHub, you can  create one with the New OAuth App.
+. Because GitHub API's base URL is `\api.github.com`, you can put `/` in the Base Path.
 . Match and modify your external callback URL. The callback URL receives an access token from GitHub. 
 +
-By default, the connector shows `+http://my-app.cloudhub.io/callback+`, but you need to modify it to be specific to your app. The demo app’s callback URL is `+http://githubapp-smky.cloudhub.io/callback+`, so replace `my-app` with `githubapp-smky`. To find the callback URL, go to the menu and select *Copy link* in Design Center.
+By default, the connector shows `+http://my-app.cloudhub.io/callback+`, but you need to modify it to be specific to your app. The demo app's callback URL is `+http://githubapp-smky.cloudhub.io/callback+`, so replace `my-app` with `githubapp-smky`. To find the callback URL, go to the menu and select *Copy link* in Design Center.
 +
 image::rest-connect-ready-to-deploy.png["Copy link button in the menu"]
 +
@@ -502,5 +502,4 @@ When your access token is issued properly, you can get issues related to Salesfo
 == Known Limitations
 
 * Anypoint Platform, including REST Connect, does not support API fragments for OAS.
-* TLS support can be enabled only for Mule 4 (SmartConnector) connectors. This feature is not supported for Mule 3 (DevKit).
 * Chinese characters are not supported in API specs or their dependencies. Japanese characters are supported in the `description` and `example` tags.

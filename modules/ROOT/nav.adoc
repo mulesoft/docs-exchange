@@ -27,7 +27,7 @@
 ** xref:asset-usage-and-engagement-metrics-dashboard.adoc[Asset Usage and Metrics Dashboard]
 ** xref:metrics-for-a-specific-asset-version.adoc[Metrics for a Specific Asset and Version]
 * xref:about-api-use.adoc[Consume an API]
- ** xref:about-my-applications.adoc[My Applications]
+ ** xref:about-my-applications.adoc[Manage Client Applications]
  ** xref:to-request-access.adoc[Request Access]
  ** xref:to-deploy-using-rest-connect.adoc[REST Connect Connector Generator]
 * xref:about-platform-apis.adoc[Exchange Platform APIs]

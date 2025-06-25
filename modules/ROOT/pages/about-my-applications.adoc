@@ -1,23 +1,13 @@
-= My Applications
+= Manage Client Applications
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The *My Applications* area in the Exchange details view for an asset lists
-applications that hold a contract with an API or an API Group.
+Manage your client applications by using the *My Applications* page. This page lists applications that hold a contract with an API or an API group. To view this page, select *My applications* from the navigation bar.
 
 image::ex2-my-applications.png[]
-
-Each client application has a client ID, client secret, description, URL, redirect URIs,
-grant types, and a usage dashboard.
-
-The usage information enables you to set the verification duration. If not specified,
-the range is the previous eight days. The usage lists total number of requests to
-the API, average latency, error rate, and graphs for total requests,
-requests by HTTP status code, and error percentage.
-
-Applications in *My Applications* are registered using API Manager in Anypoint Platform.
+Applications are registered using API Manager in Anypoint Platform.
 
 To register a client application to an existing API or API Group, the client application
 must first request access. When the request is approved by the API or API Group owner, a
@@ -35,9 +25,84 @@ secret credentials are automatically created when the client application is
 registered.
 
 An API owner can use API Manager to view all API contracts ever created for an
-API or API Group instance. An API consumer can use the Exchange *My Applications* page to view
+API or API Group instance. Client app owners can assign other users and teams to view and manage a client application using the *My Applications* page in Exchange.
+
+An API consumer can use the Exchange *My Applications* page to view
 the contracts created between an API instance or API Group instance and that consumer's client
 applications.
+
+== View Client Applications Details
+
+Each client application has a client ID, client secret, description, URL, redirect URIs,
+grant types, and usage dashboard.
+
+To see the details of a client application, select *My application* from the navigation bar and select an application from the list.
+
+To find an application, search the list of applications by entering a name or description in *Search* and press *Enter*.
+
+
+== Edit Client Application Details
+You can change the client application details. These include name, description, URL, and OAuth 2.0 redirect URIs.
+
+To make changes, click *Edit*. After making your updates, click *Update* to save your changes. 
+
+== Delete a Client Application
+When you don't need the contract for an application, you can delete it. After the application is deleted, there's no longer a contract with the application and you can’t access it. To regain access, request access to the API again.
+
+. From the navigation bar, select *My applications* and click the name of the application.
+. Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Delete application*. 
+. Confirm that you want to delete the application by clicking *Delete application*.
+
+== Reset Client Secret
+You can reset the client secret for an application on a set schedule to ensure security, even if users leave the company. Resetting the secret also ensures it isn't unintentionally shared with unauthorized users.
+
+Applications using the current client secret can’t access any of the APIs with which they were registered.
+
+. From the navigation bar, select *My applications* and click the name of the application.
+. Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Reset client secret*.
+. Confirm that you want to delete the application by clicking *Reset client secret*.
++
+The client secret is reset. In the application details section, click *Show* to see the new client secret.
+
+== Add Users as Client Application Owners
+After a user is granted to an API a client application is created. The owner of the application is the also the owner of the new client application. The owner can add more users as owners from Exchange. You can add individual users and teams as owners.
+
+. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. Select the *Manage owners* tab and enter a user's email, name, or team name in *Search*.
+. From the search results, select the user you want to add.
++
+The selected user is added to the list of owners for the application.
+
+== Delete Client Application Owners
+You can remove an owner of a client application.
+
+. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. Select the *Manage owners* tab, locate the owner in the list, and click image:ex-trash-can-icon.png[3%,3%].
+
+== Add and Change an SLA Tier
+SLA tiers are defined in API Manager. If an application doesn't have an SLA tier listed, you can request to add an SLA tier. You can also change the SLA tier for an application. The available SLA tiers are set by an admin in API Manager. The owner of the API instance must approve the request to add or change the tier level.
+
+To add or change an SLA tier:
+
+. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. From the instances panel, move the cursor over an instance and click *View SLA Tier*.
+. Click *Manage SLA Tiers*, select an SLA tier, and click *Submit*.
+
+== View Usage Information
+See usage information for the instances of a client application using the application dashboard. The dashboard shows graphs for:
+
+* Total requests
+* Average latency (ms)
+* Requests by status code 
+* Requests by HTTP status code
+* Error percentage
+
+You can set a date range to display for all the charts in your dashboard. If not specified,
+the range is the previous eight days.
+
+. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. Select one of more instance.
+. Click the calendar dropdown, select a date range, and click *Confirm*.
 
 == See Also
 
