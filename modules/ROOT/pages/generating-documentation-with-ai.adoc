@@ -13,7 +13,7 @@ This release supports:
 * REST APIs
 * Single file format
 +
-Multi-format files and fragments aren’t supported
+Multi-format files and fragments aren’t supported.
 
 == Documentation Structure
 AI-generated documentation in Anypoint Exchange standardizes API documentation, addressing inconsistency and incompleteness. The structure and format of the generated documentation is standardized across each API including fonts, headers, text size.
