@@ -47,7 +47,7 @@ For GraphQL APIs, use the GraphQL console to view GraphQL schemas and write and 
 
 From the asset details page, you can collapse and expand metadata such as version, last published, and categories and tags. See version information by clicking *View versions*. Administrators can use *Manage versions* to add a new version of the asset, view version details, and delete a version. See xref:manage-versions.adoc[Manage Versions] for more information.
 
-The documentation page displays the asset documentation. The documentation can be edited by an administrator or the asset owner by clicking *Edit documentation* from the asset details page. You can generate documentation for REST APIs without documentation by clicking *Generate documentation*. For more information, see xref:generating-documentation-with-ai.adoc[].
+The documentation page displays the asset documentation. An administrator or asset owner can edit documentation by clicking *Edit documentation* from the asset details page. You can generate documentation for REST APIs without documentation by clicking *Generate documentation*. For more information, see xref:generating-documentation-with-ai.adoc[].
 
 image:ex-generate-doc.png[asset details page showing the Edit documentation and the Generate documentation buttons]
 
