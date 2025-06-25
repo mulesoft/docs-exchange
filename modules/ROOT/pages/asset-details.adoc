@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 
 
-The asset details page provides comprehensive information about an asset. You can view version agnostic information, share the asset with others or publish it on the public portal, download a copy of the asset, view code, manage versions and lifecycle states, add categories and tags, generate and edit the documentation, and test API endpoints. 
+The asset details page provides comprehensive information about an asset. You can view version-agnostic information, share the asset with others, publish it on the public portal, and download a copy of the asset. You can also view code, manage versions and lifecycle states, add categories and tags, generate and edit asset documentation, and test API endpoints. 
 
 See xref:workflow-sharing-assets.adoc[Workflow: Publish Assets] for more information about performing these functions.
 
