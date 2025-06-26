@@ -23,7 +23,7 @@ The navigation bar lists:
 * Conformance Status
 * Terms and conditions and APIs using this policy (for a policy)
 
-The asset detail pane provides the following information:
+The asset detail page provides the following information:
 
 * Asset name 
 * Description
@@ -49,8 +49,7 @@ From the asset details page, you can collapse and expand metadata such as versio
 
 The documentation page displays the asset documentation. An administrator or asset owner can edit documentation by clicking *Edit documentation* from the asset details page. You can generate documentation for REST APIs without documentation by clicking *Generate documentation*. For more information, see xref:generating-documentation-with-ai.adoc[].
 
-image:ex-generate-doc.png[asset details page showing the Edit documentation and the Generate documentation buttons]
-
+image:ex-generate-doc.png[Asset details page showing the Edit documentation and the Generate documentation buttons]
 
 == View REST API Elements in an Asset
 
