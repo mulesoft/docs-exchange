@@ -53,7 +53,7 @@ image:ex-generate-doc.png[]
 
 . Review the generated documentation in draft mode. Discard to delete the draft, or edit or publish it.
 
-. To edit the AI-generated  documentation, click *Edit* in draft mode, make your changes, and save the draft or publish it.
+. To edit the AI-generated documentation, click *Edit* in draft mode, make your changes, and save the draft or publish it.
 
 + 
 Publishing the documentation makes it available to everyone in your organization.
