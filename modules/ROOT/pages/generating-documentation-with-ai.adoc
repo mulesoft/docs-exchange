@@ -39,16 +39,17 @@ Before generating API documentation with Einstein, you must have a Salesforce or
 
 Einstein is a usage-based product. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_usage.htm&type=5[Generative AI Usage and Billing].
 
+
 == Generate API Documentation with Einstein
 Generate documentation for REST APIs that don't have any documentation. You can edit and save a draft as many times as you like before publishing. Drafts aren't visible to others until they're published.
 
 . Select the API from the catalog and click *Generate documentation* from the asset details page.
+
 image:ex-generate-doc.png[]
 
 . Review the generated documentation in draft mode. Discard to delete the draft, or edit or publish it.
 
-. To edit the AI-generated documentation, click *Edit* in draft mode, make your changes, and save the draft or publish it.
-
+. To edit the AI-generated  documentation, click *Edit* in draft mode, make your changes, and save the draft or publish it.
 + 
 Publishing the documentation makes it available to everyone in your organization.
 +

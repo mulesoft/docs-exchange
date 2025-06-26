@@ -51,7 +51,6 @@ The documentation page displays the asset documentation. An administrator or ass
 
 image:ex-generate-doc.png[Asset details page showing the Edit documentation and the Generate documentation buttons]
 
-
 == View REST API Elements in an Asset
 
 View RAML, OAS, or AsyncAPI API specification information, including resources and the methods in each resource, in the left navigation bar.
