@@ -1,0 +1,70 @@
+= Generating API Documentation With Einstein Generative AI
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Use Einstein generative AI to generate API documentation for REST APIs in Exchange and streamline how your organization manages APIs. By using AI, you can simplify your API documentation processes. Generative AI creates API documentation that is consistent, accurate, and current. This frees you to focus on strategic tasks and enhances developer satisfaction.
+
+You can create documentation for single file REST APIs that don't have any documentation. From the asset details page in Exchange, generate the documentation, then manually edit and improve the documentation. After that, publish it to make it available to everyone in your organization.
+
+This release supports:
+
+* REST APIs
+* Single file format
++
+Multi-format files and fragments aren’t supported.
+
+== Documentation Structure
+AI-generated documentation in Anypoint Exchange standardizes API documentation, addressing inconsistency and incompleteness. The structure and format of the generated documentation is standardized across each API including fonts, headers, text size.
+
+Generated documentation includes:
+
+* Overview and purpose of the API
+* Authentication requirements and security details
+* Base URL and environments
+* Detailed endpoint documentation including:
+
+** Request and response examples 
+** Query parameters
+** Path parameters
+** Request body schemas
+** Response codes and examples
+* Error handling and status codes
+* Best practices for implementation
+* Sample code snippets
+
+== Before You Begin
+Before generating API documentation with Einstein, you must have:
+
+* Salesforce org or trial account with Einstein enabled in Anypoint Platform.
++
+To enable Einstein in Anypoint Platform, see xref::access-management:enabling-einstein.adoc#enable-einstein-anypoint[Enable Einstein for Your Anypoint Platform Organization].
+
+* Einstein credits 
++
+This feature uses Salesforce Einstein Large Language Model (LLM).
+
+== Generate API Documentation with Einstein
+Generate documentation for REST APIs that don't have any documentation. You can edit and save a draft as many times as you like before publishing. Drafts aren't visible to others until they're published.
+
+. Select the API from the catalog and click *Generate Documentation* from the asset details page.
+image:ex-generate-doc.png[]
+
+. Review the generated documentation in draft mode. Discard to delete the draft, or edit or publish it.
+
+. To edit the AI-generated  documentation, click *Edit* in draft mode, make your changes, and save the draft or publish it.
+
++ 
+Publishing the documentation makes it available to everyone in your organization.
++
+image:ex-auto-generate-api-doc.png[]
+
+See xref:to-describe-an-asset#edit-asset-portal-documentation[Edit Asset Documentation], for more information about editing asset documentation.
+
+
+
+
+
+
+
