@@ -43,12 +43,12 @@ To enable Einstein in Anypoint Platform, see xref::access-management:enabling-ei
 
 * Einstein credits 
 +
-This feature uses Salesforce Einstein Large Language Model (LLM).
+This feature uses large language models.
 
 == Generate API Documentation with Einstein
 Generate documentation for REST APIs that don't have any documentation. You can edit and save a draft as many times as you like before publishing. Drafts aren't visible to others until they're published.
 
-. Select the API from the catalog and click *Generate Documentation* from the asset details page.
+. Select the API from the catalog and click *Generate documentation* from the asset details page.
 image:ex-generate-doc.png[]
 
 . Review the generated documentation in draft mode. Discard to delete the draft, or edit or publish it.
