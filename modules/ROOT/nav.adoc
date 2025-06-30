@@ -55,6 +55,7 @@
 * xref:about-administration-tasks.adoc[]
  ** xref:to-share-an-asset.adoc[]
  ** xref:managing-asset-deletion.adoc[]
+ ** xref:managing-connected-apps.adoc[]
  ** xref:to-share-api-asset-to-portal.adoc[]
  ** xref:to-save-searches.adoc[]
  ** xref:to-enable-the-request-access-button.adoc[]
