@@ -1,4 +1,4 @@
-= Publish Assets Using the Exchange API
+= Publishing Assets Using the Exchange API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

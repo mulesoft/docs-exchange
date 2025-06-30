@@ -1,4 +1,4 @@
-= Enable and Disable a Public Portal
+= Enabling and Disabling a Public Portal
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -65,4 +65,4 @@ curl -X PUT https://anypoint.mulesoft.com/exchange/api/v2/portals/YOUR_ORGANIZAT
 
 == See Also
 
-* xref:to-customize-portal.adoc[Customize an Exchange Public Portal]
+* xref:to-customize-portal.adoc[]

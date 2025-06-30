@@ -1,4 +1,4 @@
-= Simulate Data in REST APIs
+= Simulating Data in REST APIs
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

@@ -1,30 +1,43 @@
-= Delete an Asset
+= Deleting an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+Keep your asset catalog maintained by deleting outdated or redundant assets. This makes it easier for consumers to find and reuse the assets they need. 
 
-You can delete an asset in the first seven days of its creation and reuse that asset's name, group, asset ID, and version. A delete within the first seven days is known as a _hard delete_.
+When deleting assets, admins determine if the GAV (group ID, asset ID, and version) information of the deleted asset can be reused for a different asset. Therefore, when you delete an asset, you might not be able to reuse its GAV for a new asset.
 
-If you delete the asset after seven days, you can't reuse its name, business group name, account ID, and version.
-A delete after seven days is known as a _soft delete_. After seven days, if you want to reuse the asset name,
-choose a new version number or put the asset in a different business group.
-
-After a hard delete or a soft delete, an asset cannot be recovered or undeleted.
+An asset can't be restored or undeleted.
 
 If you try to delete an asset version with dependent assets, Exchange shows a warning. Remove the dependencies and then delete the asset version.
 
 If you try to delete an API or policy asset version with dependent API instances, Exchange shows a warning. Remove the dependencies and then delete the asset version. The *API instances* page displays each API asset's instances.
 
-You cannot delete a policy asset that is applied to any managed API instances. On the policy asset's page, the *APIs using this policy* tab shows which API instances have that policy applied. Use API Manager to remove the policy from the instances, and then delete the policy.
+You can't delete a policy asset that is applied to any managed API instances. On the policy asset's page, the *APIs using this policy* tab shows which API instances have that policy applied. Use API Manager to remove the policy from the instances, and then delete the policy.
 
 To delete a patch version of an asset:
 
-. In the asset details pane, click *Manage versions*.
+. In the asset details, click *Manage versions*.
 . Click the three dots menu and select *Delete version*.
++
+When GAV reuse is enabled, you have the option to reuse the GAV for another asset. If you don't select this option, the GAV for that asset won't be available for reuse. If you do select it, the GAV can be reused for another asset.
+. Click *Delete asset*.
 
 To delete an entire asset, delete all of its patch versions.
 
+== Review GAV Information for Deleted Assets
+You can review details about deleted assets. Find out which GAV information is unavailable for reuse using this endpoint: 
+
+`/api/v2/organizations/:organizationId/softDeleted`
+
+Identify unavailable GAVs of deleted assets for cleanup and permanent deletion. Then, you can make GAVs reusable by permanently deleting the asset using this example API call:
+
+[source,console]
+----
+DELETE '/api/v2/assets/:groupId/:assetId/:version' 
+--header 'x-delete-type: hard-delete' 
+--header 'Authorization: ***
+----
 == See Also
 
 * xref:to-change-raml-version.adoc[To Change a RAML Version]
