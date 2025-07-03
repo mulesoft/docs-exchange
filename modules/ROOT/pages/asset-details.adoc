@@ -23,7 +23,7 @@ The navigation bar lists:
 * Conformance Status
 * Terms and conditions and APIs using this policy (for a policy)
 
-The asset detail page provides the following information:
+The asset detail page provides this information:
 
 * Asset name 
 * Description
@@ -41,9 +41,9 @@ The asset detail page provides the following information:
 * For APIs, download specifications and view code
 * Add a new version
 
-For REST APIs, use the API console to create example calls and mock data to test the API. For more information, see xref:ex2-to-simulate-api-data.adoc[]
+For REST APIs, use the API console to create example calls and mock data to test the API. For more information, see xref:ex2-to-simulate-api-data.adoc[].
 
-For GraphQL APIs, use the GraphQL console to view GraphQL schemas and write and run queries. For more information, see xref:view-graphql-api-schemas-and-run-queries.adoc[]
+For GraphQL APIs, use the GraphQL console to view GraphQL schemas and write and run queries. For more information, see xref:view-graphql-api-schemas-and-run-queries.adoc[].
 
 From the asset details page, you can collapse and expand metadata such as version, last published, and categories and tags. See version information by clicking *View versions*. Administrators can use *Manage versions* to add a new version of the asset, view version details, and delete a version. See xref:manage-versions.adoc[Manage Versions] for more information.
 
@@ -101,8 +101,6 @@ include::partial$task-view-conformance-status.adoc[]
 
 == View Governed APIs for a Ruleset
 
-// Include the governed apis for rulesets page partial doc
-
 include::exchange::partial$task-view-governed-apis-for-rulesets.adoc[]
 
 
@@ -118,6 +116,6 @@ Many APIs have an API notebook for interactive testing.
 
 == See Also
 
-xref:access-management::permissions-by-product.adoc#exchange[Permissions Available in Anypoint Platform for Exchange].
+* xref:access-management::permissions-by-product.adoc#exchange[Permissions Available in Anypoint Platform for Exchange]
 
-xref:generating-documentation-with-ai.adoc[]
+* xref:generating-documentation-with-ai.adoc[]
