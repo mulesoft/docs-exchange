@@ -40,4 +40,5 @@ DELETE '/api/v2/assets/:groupId/:assetId/:version'
 ----
 == See Also
 
+* xref:managing-asset-deletion.adoc[]
 * xref:to-change-raml-version.adoc[To Change a RAML Version]
