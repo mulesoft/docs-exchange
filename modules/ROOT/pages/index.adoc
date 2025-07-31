@@ -11,11 +11,11 @@ image:exchange-landing-page.png["Exchange catalog showing assets provided by Mul
 
 Use Exchange to discover, share, incorporate assets and resources into your applications, and view asset usage and engagement metrics. You can create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
 
-Exchange assets are accessible from many places, such as Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). A2A agents, APIs, MCP Servers, and conductor domains, can be published from Anypoint Code Builder to Exchange.
+Exchange assets are accessible from many places, such as Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). A2A agents, APIs, and MCP Servers can be published from Anypoint Code Builder to Exchange.
 
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
-The *Agentic* tab organizes assets such as A2A agents, conductor domains, and MCP servers.
+The *Agent* tab organizes assets such as A2A agents and MCP servers which you can filter and details about the assets.
 //screen capture of Agentic tab showing those assets
 
 == Anypoint Exchange Spotlight Video
