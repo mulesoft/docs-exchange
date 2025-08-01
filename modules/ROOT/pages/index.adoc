@@ -61,7 +61,7 @@ navigation bar.
 Using multiple languages with Unicode is supported fully throughout Exchange and in all metadata fields, including asset names, descriptions, markdown pages, categories, tags, and reviews.
 
 [[exchange-on-control-planes]]
-== Anypoint Exchange On Control Planes
+== Anypoint Exchange on Control Planes
 All features of Anypoint Exchange are supported on Japan and Canada control planes with these exceptions:
 
 * xref:usage-and-engagement-metrics.adoc[Usage and engagement metrics] aren't supported.
