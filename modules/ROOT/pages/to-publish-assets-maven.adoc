@@ -1,4 +1,4 @@
-= Publish Assets Using Maven
+= Publishing Assets Using Maven
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -17,9 +17,9 @@ With the Anypoint Exchange https://anypoint.mulesoft.com/exchange/portals/anypoi
 
 The Exchange Maven Facade API does not support deleting assets. To delete an asset, use the Exchange user interface or the Exchange API.
 
-The Exchange Maven Facade API does not support dynamic parameters such as setting the asset version to `1.0.${revision}`.
+//The Exchange Maven Facade API does not support dynamic parameters such as setting the asset version to `1.0.${revision}`.
 
-Dynamic parameters for fields other than `<name>` and `<description>` are not supported. If the uploaded asset has a defined parent, the parent must be a valid and already uploaded Exchange asset for the dynamic parameters to be properly interpreted.
+The Exchange Maven Facade API does not support dynamic parameters for fields other than `<artifactId>` and `<version>`. If the uploaded asset has a defined parent, the parent must be a valid and already uploaded Exchange asset for the dynamic parameters to be properly interpreted.
 
 New assets count toward your organization's xref:asset-versions.adoc#asset-limits[asset limit].
 
@@ -69,6 +69,14 @@ The URL format is:
 In the EU, use:
 +
 `+https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven+`
++
+In the Canada cloud, use:
++
+`+https://maven.ca1.platform.mulesoft.com/api/v3/maven+`
++
+In the Japan cloud, use:
++
+`+https://maven.jp1.platform.mulesoft.com/api/v3/maven+`
 +
 When using MuleSoft Government Cloud, use:
 +
@@ -309,11 +317,11 @@ In a terminal:
 
 If you execute `mvn clean deploy` multiple times, the asset is overwritten without any errors.
 
-Note: An asset that is in development state and is not an SNAPSHOT version cannot be consumed through Maven.
+NOTE: An asset that is in development state and is not an SNAPSHOT version cannot be consumed through Maven.
 
 == Publish a Custom Asset
 
-Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is 0.0.13.
+Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is 0.0.23.
 
 This example shows the `build` section of `pom.xml`:
 
@@ -324,7 +332,7 @@ This example shows the `build` section of `pom.xml`:
         <plugin>
             <groupId>org.mule.tools.maven</groupId>
             <artifactId>exchange-mule-maven-plugin</artifactId>
-            <version>0.0.13</version>
+            <version>0.0.23</version>
             <executions>
                 <execution>
                     <id>validate</id>
@@ -345,6 +353,43 @@ This example shows the `build` section of `pom.xml`:
     </plugins>
 </build>
 ----
+
+== Publish a Parent POM Project and a Parent POM Dependant Project to Exchange
+
+Parent POMs are published to Exchange as custom assets. See the previous section to publish a custom asset.
+If you want to publish a maven project, like a mule application, using the Mule Maven Plugin, and your maven project depends on a Parent Pom that has already included the exchange-mule-maven-plugin, you need to https://maven.apache.org/guides/mini/guide-configuring-plugins.html#Using_the_.3Cinherited.3E_Tag_In_Build_Plugins[prevent the inheritance]:
+
+[source,xml,linenums]
+----
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.mule.tools.maven</groupId>
+            <artifactId>exchange-mule-maven-plugin</artifactId>
+            <version>0.0.23</version>
+            <inherited>false</inherited>
+            <executions>
+                <execution>
+                    <id>validate</id>
+                    <phase>validate</phase>
+                    <goals>
+                        <goal>exchange-pre-deploy</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>deploy</id>
+                    <phase>deploy</phase>
+                    <goals>
+                        <goal>exchange-deploy</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+----
+
+
 
 === Troubleshooting
 

@@ -1,4 +1,4 @@
-= Configure API Instances
+= Configuring API Instances
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -24,14 +24,14 @@ Exchange enables you to configure APIs with instances not managed by API Manager
 . Select the asset.
 . In the navigation bar, select *API Instances*.
 . Click *Add new instance*.
-. In the *Non-managed instances* section, enter the instance name, URL, select a visibility option, and click image:ex-checkmark-icon.png["checkmark icon",3%,3%].
+. In the *Non-managed instances* section, enter the instance name, URL, select a visibility option, and click image:ex-checkmark-icon.png["The checkmark icon.",3%,3%].
 
 * Edit a non-managed instance:
 +
-.. Click image:ex-pencil-icon.png["pencil icon",3%,3%].
-.. Make your changes and click image:ex-checkmark-icon.png["checkmark icon",3%,3%].
+.. Click image:ex-pencil-icon.png["The pencil icon",3%,3%].
+.. Make your changes and click image:ex-checkmark-icon.png["The checkmark icon",3%,3%].
 
-* Delete a non-managed instance by clicking image:ex-trash-can-icon.png["trash can icon",3%,3%] and clicking *Delete instance*.
+* Delete a non-managed instance by clicking image:ex-trash-can-icon.png["The trash can icon",3%,3%] and clicking *Delete instance*.
 
 == See Also
 

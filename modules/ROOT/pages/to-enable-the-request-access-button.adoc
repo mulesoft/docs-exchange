@@ -1,4 +1,4 @@
-= Enable the Request Access Button
+= Enabling the Request Access Button
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,7 +7,7 @@ endif::[]
 Users specify what applications can have access to an API by clicking the
 *Request access* button.
 
-Exchange Administrators see *Request access* in the *More options* menu image:ex2-more-options-icon.png[More Options icon].
+Exchange Administrators see *Request access* in the *More options* menu image:ex2-more-options-icon.png["The More Options icon"].
 
 Enabling the *Request access* button requires the Exchange Administrator permission.
 

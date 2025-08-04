@@ -1,4 +1,4 @@
-= Manage Asset Portal Resources
+= Managing Asset Portal Resources
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

@@ -11,7 +11,7 @@ Share an asset to publish an API asset to a public portal, or to grant access to
 * xref:to-share-api-asset-to-portal.adoc[Publish an API to a public portal]
 +
 Publish APIs to a public portal for external users.
-* xref:to-save-searches.adoc[Save searches]
+* xref:to-save-searches.adoc[]
 +
 Save and maintain searches for assets within a business group.
 * xref:to-enable-the-request-access-button.adoc[Use API Manager to add the Request Access button]

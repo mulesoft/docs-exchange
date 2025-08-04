@@ -1,4 +1,4 @@
-= Describe an Asset
+= Editing an Asset
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -16,7 +16,7 @@ In Exchange, open the asset list and select the asset. Exchange shows the asset 
 
 You can change the asset icon, name, description, contact name, and contact email. 
 
-. Click the edit pen icon in the asset portal.
+. Click the edit pen icon in the asset details page.
 . To change the icon, click the edit pen icon, select an image file, then click *Open*.
 . To change the asset portal name, enter the new asset portal name.
 . To change the description, enter a new asset description in the *Description* field.
@@ -45,9 +45,9 @@ When searching for assets, tags can be used to filter the search results. Tags c
 . Press the enter or return key on your keyboard.
 . To remove tags, click *Tags*, then click the *X* next to the tag text.
 
-== Edit Asset Portal Documentation
+== Edit Asset Documentation
 
-The documentation for an asset can be changed.
+You can change the documentation for an asset.
 
 . Select *Edit documentation*.
 . Enter the new portal content.
@@ -168,3 +168,6 @@ const myString = "abc";
 ```
 ----
 
+== See More
+
+* xref:generating-documentation-with-ai.adoc[]

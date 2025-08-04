@@ -1,4 +1,4 @@
-= Document an API
+= Documenting an API
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -8,7 +8,7 @@ Anypoint Exchange lets you create API Notebooks which let you describe each func
 
 After creating your API Notebook you can optionally create an API instance to control whether the notebook is private or public. By setting the notebook's instance to private, others in your organization can review it. When you are ready, you can set the API instance to make the API Notebook public.
 
-Note: API Notebooks are independent of the use of an API instance.
+NOTE: API Notebooks are independent of the use of an API instance.
 If you don't use a base URI in your RAML, or use an API instance, you can use the mocking service to generate test data.
 
 Topics:
@@ -19,3 +19,4 @@ Topics:
 == See Also
 
 * xref:to-describe-an-asset.adoc[To Describe an Asset]
+* xref:generating-documentation-with-ai.adoc[]

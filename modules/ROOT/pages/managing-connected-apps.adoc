@@ -1,0 +1,19 @@
+= Managing Connected Apps
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Connected apps are applications that allow external applications to securely interact with the Anypoint Platform APIs by providing controlled access to its resources using OAuth 2.0 authentication protocols, without the need to share user credentials directly. For more information, see xref:access-management::connected-apps-overview.adoc[].
+
+When an asset is created using a connected app and is published to Exchange, the creator of the asset is automatically set as the owner of the connected app. 
+
+Control whether or not to assign owner roles when creating assets using a connected app to avoid going over the maximum role xref:access-management::troubleshooting-anypoint-platform-access.adoc#access-management-limits[limit].
+
+When enabled, when creating new assets using a connected app, roles aren't assigned to connected app owners. When disabled, roles are assigned by default.
+
+. From the navigation bar, select *Settings* and select *Asset Deletion & Connected Apps Management*.
+. In *Connected Application Owner Configuration*, enable or disable the option.
+
+== See Also
+xref:connected-app-authentication.adoc[]

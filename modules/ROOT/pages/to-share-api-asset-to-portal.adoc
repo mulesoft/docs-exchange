@@ -1,4 +1,4 @@
-= Publish an API to a Public Portal
+= Publishing an API to a Public Portal
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
