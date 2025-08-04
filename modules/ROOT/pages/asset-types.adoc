@@ -49,7 +49,7 @@ Instead of requesting access to multiple APIs to satisfy a use case, a developer
 
 * MCP Servers
 +
-Application or APIs exposed through the Model Context Protocol (MCP). MCP is an open protocol designed to standardize how applications provide context and capabilities to Large Language Models (LLMs) and AI agents. Contains files, database schemas, application-specific information in a  JSON file.
+Application or APIs exposed through the Model Context Protocol (MCP). MCP is an open protocol designed to standardize how applications provide context and capabilities to Large Language Models (LLMs) and AI agents. 
 
 * Mule Applications
 +
