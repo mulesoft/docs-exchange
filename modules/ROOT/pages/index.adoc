@@ -15,8 +15,8 @@ Exchange assets are accessible from many places, such as Anypoint Studio (connec
 
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
-You can find A2A agents and MCP servers in *Agents* and *All assets*. You can discover these assets using the search and filter options.
-//screen capture of Agentic tab showing those assets
+You can find A2A agents and MCP servers assets in *AI assets* and *All assets*. You can discover these assets using the search and filter options.
+//screen capture of the tab showing those assets
 
 == Anypoint Exchange Spotlight Video
 
@@ -37,7 +37,7 @@ image::ex2-biz-groups.png["List of business groups"]
 
 An Exchange administrator sets the groups that this menu displays for each user.
 
-If you cannot find an asset in the current business group scopes, search in other scopes. In the navigation menu click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
+If you cannot find an asset in the current business group scopes, search in other scopes. In the navigation menu, click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
 
 
 == Get Started
