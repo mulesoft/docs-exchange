@@ -15,7 +15,8 @@ Exchange assets are accessible from many places, such as Anypoint Studio (connec
 
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
-You can find A2A agents and MCP servers assets in *AI assets (Beta)* and *All assets*. You can discover these assets using the search and filter options.
+You can find A2A agents and MCP servers assets in *AI assets (Beta)* and *All assets*. Brokers groups created in Anypoint Code Builder are published to Exchange as A2A assets. Exchange automatically tags them as brokers for easy identification. 
+
 //screen capture of the tab showing those assets
 
 == Anypoint Exchange Spotlight Video
