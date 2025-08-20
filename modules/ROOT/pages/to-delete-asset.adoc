@@ -38,6 +38,9 @@ DELETE '/api/v2/assets/:groupId/:assetId/:version'
 --header 'x-delete-type: hard-delete' 
 --header 'Authorization: ***
 ----
+
+The limit and offset query parameters are optional. The default limit value is 20. The default offset value is 0.
+
 == See Also
 
 * xref:managing-asset-deletion.adoc[]
