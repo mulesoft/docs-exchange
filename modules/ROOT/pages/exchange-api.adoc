@@ -303,6 +303,12 @@ curl -v \
 https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
 ----
 
+=== Troubleshoot Publishing Errors
+
+A timeout error can occur when publishing custom connector APIs when schema definitions import other schemas with external references. This happens if those references are either private or not reachable from the internet.
+
+To resolve this issue, remove external references that are private or not reachable from the internet.
+
 [[describe-your-assets]]
 == Describe Your Assets
 
