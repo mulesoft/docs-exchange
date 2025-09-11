@@ -37,7 +37,6 @@
  ** xref:connected-app-authentication.adoc[]
 * xref:about-documenting-an-api.adoc[]
  ** xref:generating-documentation-with-ai.adoc[]
- ** xref:to-use-api-notebook.adoc[]
  ** xref:to-configure-api-settings.adoc[]
 * xref:about-portals.adoc[]
 ** xref:enable-and-disable-a-public-portal.adoc[]
