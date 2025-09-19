@@ -219,7 +219,7 @@ ANYPOINT_CLIENT_ID environment variable
 
 | Connected app client ID 
 
-See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
+See xref:exchange::apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
 | --client_secret 
 
@@ -229,7 +229,7 @@ ANYPOINT_CLIENT_SECRET environment variable
 
 | Prompt for the connected app secret for the client ID
  
-See xref:apicat-use-api-catalog-cli.adoc#authentication[Authentication].
+See xref:exchange::apicat-use-api-catalog-cli.adoc#authentication[Authentication].
 
 | --collectMetrics
 
