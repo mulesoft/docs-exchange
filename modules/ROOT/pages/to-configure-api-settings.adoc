@@ -1,28 +1,28 @@
-= Configuring API Instances
+= Configuring Instances
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Use Anypoint Exchange to configure whether API instances are public or private in a private Exchange instance or in an Exchange public portal. For example, configure public or private visibility for proxies or policies associated with your API and set using API Manager.
+Use Anypoint Exchange to configure whether instances are public or private in a private Exchange instance or in an Exchange public portal. For example, configure public or private visibility for proxies or policies associated with your asset and set using API Manager.
 
-After you register an API from Exchange in API Manager, the instances for the API appear in Exchange in the API instances list in the navigation bar.
+After you register an asset from Exchange in API Manager, the instances for the asset appear in Exchange in the Instances list in the navigation bar.
 
-Exchange also declares API instances for APIs managed by another API management program besides Anypoint Platform.
+Exchange also declares instances for APIs managed by another assetmanagement program besides Anypoint Platform.
 
-Visibility for each API instance is either private or public. Users can see a private API instance if the asset is shared with them or if they have an Anypoint Platform permission that grants access. All users accessing an Exchange public portal can see all public API instances. All API instances in an Exchange public portal are read only.
+Visibility for each instance is either private or public. Users can see a private instance if the asset is shared with them or if they have an Anypoint Platform permission that grants access. All users accessing an Exchange public portal can see all public instances. All instances in an Exchange public portal are read only.
 
-In a private Exchange instance, asset administrators have access to change the visibility of API instances, and to add, edit, and delete instances.
+In a private Exchange instance, asset administrators have access to change the visibility of instances, and to add, edit, and delete instances.
 
 REST APIs provide a mocking service with data to test API features. The mocking service is always public.
 
 == Configure Non-Managed Instances 
-Exchange enables you to configure APIs with instances not managed by API Manager. Add, edit, and delete non-managed instances that are serving AsyncAPIs, GraphQL, REST, and HTTP APIs. You can change the name, URL, and visibility of non-managed instances.
+Exchange enables you to configure assets with instances not managed by API Manager. Add, edit, and delete non-managed instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, MCP servers, and LLMs. You can change the name, URL, and visibility of non-managed instances.
 
 * Add a non-managed instance:
 +
 . Select the asset.
-. In the navigation bar, select *API Instances*.
+. In the navigation bar, select *Instances*.
 . Click *Add new instance*.
 . In the *Non-managed instances* section, enter the instance name, URL, select a visibility option, and click image:ex-checkmark-icon.png["The checkmark icon.",3%,3%].
 
