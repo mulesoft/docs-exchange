@@ -6,9 +6,9 @@ endif::[]
 
 The following asset types are supported in Exchange:
 
-* A2A Agents
+* Agents
 +
-AI agents use the Agent2Agent (A2A) Protocol to communicate and collaborate with each other to perform tasks.
+Programs that perform tasks autonomously or semiautonomously. AI agents use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks.
 
 * API Groups
 +
@@ -47,9 +47,13 @@ A placeholder for an endpoint for use by private Exchange users who want to mana
 +
 Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
 
+* LLM 
++
+Large language models (LLM) are AI assets for processing, understanding, and generating human readable language.
+
 * MCP Servers
 +
-Applications or APIs exposed through the Model Context Protocol (MCP). MCP is an open protocol designed to standardize how applications provide context and capabilities to Large Language Models (LLMs) and AI agents. 
+Applications or APIs exposed through the Model Context Protocol (MCP). MCP is an open protocol designed to standardize how applications provide context and capabilities to LLMs and AI agents. 
 
 * Mule Applications
 +
