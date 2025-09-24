@@ -21,7 +21,10 @@ The navigation bar lists:
 * Instances
 * The HTTP functions in the REST specification (for a REST API)
 * Conformance Status
+* For agents, card details   
+* For MCP servers, details and tools
 * Terms and conditions and APIs using this policy (for a policy)
+* Settings
 
 The asset detail page provides this information:
 

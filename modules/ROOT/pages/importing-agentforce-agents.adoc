@@ -1,0 +1,18 @@
+= Importing Agentforce Agents
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images/
+
+Organizations can import their Agentforce agents into Exchange to include them in Anypoint business groups.
+
+Importing from the same Salesforce org into a different business group can create duplicate assets in Enchange.
+////
+== Before You Begin
+You must have a Salesforce org with Einstein enabled in Anypoint Platform. To enable Einstein in Anypoint Platform, see xref:access-management::enabling-einstein.adoc#enable-einstein-anypoint[Enable Einstein for Your Anypoint Platform Organization].
+////
+. Select *Settings* from the navigation bar and select the *Asset import* tab.
+. To change the Salesforce org, xref:access-management::managing-connected-salesforce-orgs.adoc[enable the connection in Access Management].
+. From *Settings* in Exchange, click *Import* and click *Confirm*.
+. Close the dialog and refresh the page after a few minutes.
+. Verify that the Agentforce agents are listed in the Exchange catalog on the *Agents & Tools* page.
