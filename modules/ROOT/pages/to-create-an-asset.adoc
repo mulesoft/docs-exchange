@@ -5,14 +5,14 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-publish-an-asset.adoc
 
-To share an API, API Group, policy, ruleset, example, template, or connector in either an Anypoint Exchange private instance or an Exchange public portal, create an asset of that type.
+To share assets in either an Anypoint Exchange private instance or an Exchange public portal, create an asset an asset type.
 
 The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 
-* For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* menu.
+* For OAS, RAML, RAML fragments, agents, AsyncAPI,  HTTP, WSDL, LLMs, MCP servers, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* menu.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
-* You can also create REST APIs and API Spec Fragments using Design Center and publish the API to Exchange.
+* You can also create REST APIs and API Spec Fragments using Anypoint Code Builder or Design Center and publish the API to Exchange.
 +
 Another way to publish these type of assets is using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
 * RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
@@ -22,12 +22,11 @@ For example: `exchange asset upload --classifier raml --apiVersion v1 --name Hel
 * Mule applications are published to Exchange from Anypoint Runtime Fabric and managed in Runtime Fabric, and are not visible in the Exchange user interface.
 * External libraries are published to Exchange from the xref:to-publish-assets-maven.adoc[Exchange Maven Facade API] and managed with this API, and are not visible in the Exchange user interface.
 
-
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
-This illustration summarizes how some of the asset types (in green) appear in Exchange:
+== Create an Agent Asset
 
-image::ex2-exchange-assets.png[A flowchart that illustrates the process of how some assets are published into Exchange"]
+
 == Create an API Asset
 
 An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
@@ -159,6 +158,32 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
+== Create a LLM
+LLMs are large language models that define model metadata, capabilities, parameters, and usage policies for discovery and governance across Exchange.
+
+. In Exchange, select *Publish new asset*.
+. Enter a name for the asset.
+. Select the *LLM* asset type from the list.
+. Select a platform from the list.
+. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
+
+== Create a MCP Server
+MCP serves provides the protocols and specifications for seamless integration between different AI systems and tools.
+
+. In Exchange, select *Publish new asset*.
+. Enter a name for the asset.
+. Select the *LLM* asset type from the list.
+. Select a platform from the list.
+. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
++
+Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select *Publish*.
+
 == Create an RPA Activity Template Asset
 Activity templates are reusable code within RPA that standardize the most used activity steps and make them available to other developers in the organization. These templates are `.cawl` files that are imported in the RPA Activity library for developers to use as part of their RPA processes.
 
@@ -221,7 +246,12 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 
 == Asset Name, Icon, and Description Properties
 
-You can create assets in API Designer or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[Describe an Asset].
+You can create assets in Anypoint Code Builder, API Designer, or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[Describe an Asset].
+
+=== Properties of Assets Created in Anypoint Code Builder
+When an asset is published from Anypoint Code Builder to Exchange, the project name is used as the asset name in Exchange.
+
+The name, icon, and description properties can only be changed in the Exchange asset details page.
 
 === Properties of Assets Created in API Designer
 
@@ -267,6 +297,8 @@ The new version of the asset has the same name, icon, and description as the pre
 
 == See Also
 
-* Next: xref:to-describe-an-asset.adoc[Describe an Asset]
-* xref:design-center::upload-raml-task.adoc[Create a RAML file in API Designer and Import to Exchange]
-* xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]
+* xref:anypoint-code-builder::des-publish-api-spec-to-exchange.adoc[Publishing API Projects to Exchange]
+* xref:design-center::design-publish.adoc[Publishing API Specifications From API Designer to Exchange]
+* xref:to-publish-assets-maven.adoc[]
+* xref:asset-details.adoc[]
+* xref:to-describe-an-asset.adoc[]
