@@ -280,6 +280,7 @@ MCP server schema files must be in JSON format. They define the definition of th
 .Example MCP server schema file 
 [%collapsible]
 ====
+----
 {
   "protocolVersion": "2025-03-26",
   "introspectedAt": "2025-09-11T10:15:30Z",

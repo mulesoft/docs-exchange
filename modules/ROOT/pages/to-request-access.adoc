@@ -78,6 +78,24 @@ When a developer requests access to the API Group for a client application, the 
 
 A client application can access an API either through a contract with only that API or through a contract with one or more API Groups that include the API. In this latter case, the least restrictive available contract for the API is applied.
 
+== Agent, LLM, and MCP Server Access
+In Exchange, agents, LLMs,and MCP server are assets with a portal. The *Instances* page on the portal lists all of the assets's instances.
+
+When a developer requests access to these assets for a client application, the developer selects an instance, selects a client application, and  selects a service-level agreement (SLA) if available.
+
+. Select the asset from the Exchange catalog to view the details page.
+. Click *Request access*.
+. Choose the instance from the list.
+. If you are using an existing application, choose from the list of applications.
++
+An application and its instance use the same client provider. If an organization administrator has configured xref:api-manager::configure-multiple-credential-providers.adoc[multiple client providers] in Anypoint API Manager, then the application list shows only the applications that use the same client provider as the selected instance.
+. If you do not have an application to which to provide access, click *Select application > Create a new application*. 
++
+For more information, see the Create a New Application section.
+. Choose the service-level agreement (SLA) tier for the application if available.
+. Click *Request access*.
+. If the instance has no SLA tiers, a notification dialog shows that your request is received and approved and lists the client ID and client secret.
+. If the instance has an SLA tier, a notification dialog shows that your request is revieced and pending. You'll be notified by email the status changes. You can also check the status on the application page.
 == See Also
 
 * https://www.google.com/search?q=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token&oq=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token[Search to compare grant types]

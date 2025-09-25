@@ -55,6 +55,7 @@
   ** xref:apicat-publish-using-api-catalog-cli.adoc[]
 * xref:about-administration-tasks.adoc[]
 ** xref:importing-agentforce-agents.adoc[]
+** xref:using-an-agentic-endpoint-for-asset-and-instances.adoc[]
 ** xref:to-share-an-asset.adoc[]
  ** xref:managing-asset-deletion.adoc[]
  ** xref:managing-connected-apps.adoc[]

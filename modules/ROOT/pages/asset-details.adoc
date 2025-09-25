@@ -22,6 +22,7 @@ The navigation bar lists:
 * The HTTP functions in the REST specification (for a REST API)
 * Conformance Status
 * For agents, card details   
+* For brokers, access list and card details
 * For MCP servers, details and tools
 * Terms and conditions and APIs using this policy (for a policy)
 * Settings
@@ -31,6 +32,8 @@ The asset detail page provides this information:
 * Asset name 
 * Description
 * Asset type
+* For broker, asset subtype
+* For agents, protocol 
 * Organization
 * Contact name
 * Contact email
