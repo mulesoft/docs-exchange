@@ -6,7 +6,9 @@ endif::[]
 
 Use Anypoint Exchange to configure whether instances are public or private in a private Exchange instance or in an Exchange public portal. For example, configure public or private visibility for proxies or policies associated with your asset and set using API Manager.
 
-After you register an asset from Exchange in API Manager, the instances for the asset appear in Exchange in the Instances list in the navigation bar.
+After you register an API from Exchange in API Manager, the instances for the API appear in Exchange in the Instances list on the asset details page. 
+
+Instances for Agent Fabric assets are created in the YAML in Anypoint Code Builder. After the agent network project is published to Exchange, the instances appear in the Instances list on the asset details page. 
 
 Exchange also declares instances for APIs managed by another asset management program besides Anypoint Platform.
 
