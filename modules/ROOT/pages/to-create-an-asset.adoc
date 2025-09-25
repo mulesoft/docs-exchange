@@ -252,8 +252,6 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 == Create a Large Language Model
 LLMs are large language models that define model metadata, capabilities, parameters, and usage policies for discovery and governance across Exchange.
 
-//LLM schema files are JSON format that the large language model should produce or consume.
-
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . Select the *LLM* asset type from the dropdown list.
@@ -261,7 +259,7 @@ LLMs are large language models that define model metadata, capabilities, paramet
 . Select *Publish*.
 
 == Create a MCP Server
-MCP serves provides the protocols and specifications for seamless integration between different AI systems and tools.
+MCP servers provide the protocols and specifications for seamless integration between different AI systems and tools.
 
 MCP server schema files must be in JSON format. They define the definition of the tools, the data structures they use, and authentication. When creating an MCP server asset, you upload the schema file you want to use.
 
