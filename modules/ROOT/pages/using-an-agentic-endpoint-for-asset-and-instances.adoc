@@ -5,3 +5,9 @@ endif::[]
 :imagesdir: ../assets/images/
 
 placeholder
+
+Questions:
+What the purpose of this endpoint?
+What's the use case?
+Who should use it?
+Any special setup, permissions, or configuration?
