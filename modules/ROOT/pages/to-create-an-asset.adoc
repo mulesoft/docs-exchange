@@ -24,7 +24,7 @@ For example: `exchange asset upload --classifier raml --apiVersion v1 --name Hel
 
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
-== Create an Agent Asset
+== Create an Agent 
 Agents are programs that perform tasks autonomously or semiautonomously. AI agents use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks.
 
 Agent schema files must be in JSON format. They define the structure and capabilities of the agent asset. When creating an agent asset, Upload the schema file you want to use.
@@ -114,15 +114,8 @@ Agent schema files must be in JSON format. They define the structure and capabil
 . Enter a name for the asset.
 . Select the *Agent* asset type from the dropdown list.
 . Select a method type from the list.
-. Click *Choose file* to upload a .json file.
+. Click *Choose file* to upload a .json file for the agent card.
 . Select a protocol.
-. Click *Choose file* to upload a .json file for the agent.
-////
-. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
-+
-Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
-. Select an option for *Lifecycle state*. The default is *Stable*.
-////
 . Select *Publish*.
 
 == Create an API Asset
@@ -264,12 +257,7 @@ LLMs are large language models that define model metadata, capabilities, paramet
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . Select the *LLM* asset type from the dropdown list.
-. Select a platform from the dropdown list.
-//. Click *Choose a file* to upload a schema file in JSON format.
-//. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
-//+
-//Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
-//. Select an option for *Lifecycle state*. The default is *Stable*.
+. Enter the name of the platform and select it from the list.
 . Select *Publish*.
 
 == Create a MCP Server
@@ -392,11 +380,7 @@ MCP server schema files must be in JSON format. They define the definition of th
 . Enter a name for the asset.
 . Select the *MCP* asset type from the dropdown list.
 . Click *Choose file* to upload a schema file in JSON format.
-. To create the file using the template, click *Download template* and enter the required information, then click *Choose file* to upload the file.
-. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
-+
-Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
-. Select an option for *Lifecycle state*. The default is *Stable*.
+. Enter the name of the platform and select it from the list.
 . Select *Publish*.
 
 == Create an RPA Activity Template Asset
