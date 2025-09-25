@@ -9,7 +9,7 @@ To share assets in either an Anypoint Exchange private instance or an Exchange p
 
 The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 
-* For OAS, RAML, RAML fragments, agents, AsyncAPI,  HTTP, WSDL, LLMs, MCP servers, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* menu.
+* For OAS, RAML, RAML fragments, agents, AsyncAPI,  HTTP, WSDL, LLMs, MCP servers, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* dialog.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
 * You can also create REST APIs and API Spec Fragments using Anypoint Code Builder or Design Center and publish the API to Exchange.
@@ -25,18 +25,104 @@ For example: `exchange asset upload --classifier raml --apiVersion v1 --name Hel
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
 == Create an Agent Asset
-Agent2Agent (A2A) protocol assets enable secure communication and collaboration between intelligent agents.
+Agents are programs that perform tasks autonomously or semiautonomously. AI agents use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks.
+
+Agent schema files must be in JSON format. They define the structure and capabilities of the agent asset. When creating an agent asset, Upload the schema file you want to use.
+
+.Example A2A schema file 
+[%collapsible]
+====
+
+----
+{
+  "protocolVersion": "0.2.9",
+  "name": "Some Company Agent",
+  "description": "Some Company Agent provides all the capabilities that can offer to its customers.",
+  "url": "${registry.url}/company-agent",
+  "capabilities": {},
+  "version": "1.0.0",
+  "provider": {
+    "organization": "Some Company Inc.",
+    "url": "https://weather-agent.ch.anypoint.com"
+  },
+  "securitySchemes": {
+    "anypointClientCredentials": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "clientSecret",
+      "description": "The client secret for Anypoint Platform authentication."
+    }
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "image/png"
+  ],
+  "skills": [
+    {
+      "id": "weather",
+      "name": "Returns the weather for a given location",
+      "description": "Get the current weather conditions for a specified location.",
+      "examples": [
+        "What is the weather like in New York?",
+        "Is it going to rain in San Francisco today?"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "application/vnd.geo+json",
+        "text/html"
+      ],
+      "tags": [
+        "weather",
+        "geolocation"
+      ]
+    },
+    {
+      "id": "exchange-rate",
+      "name": "Returns the exchange rate for a given currency pair",
+      "description": "Get the current exchange rate between two specified currencies.",
+      "examples": [
+        "What is the exchange rate from USD to EUR?",
+        "How much is 100 JPY in USD?"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "application/vnd.geo+json",
+        "text/html"
+      ],
+      "tags": [
+        "exchange_rate"
+      ]
+    }
+  ]
+}
+----
+====
 
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . Select the *Agent* asset type from the dropdown list.
-. Select a method type from the dropdown list.
+. Select a method type from the list.
 . Click *Choose file* to upload a .json file.
-. Select a platform from the dropdown list.
+. Select a protocol.
+. Click *Choose file* to upload a .json file for the agent.
+////
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
+////
 . Select *Publish*.
 
 == Create an API Asset
@@ -170,26 +256,142 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
-== Create a LLM
+== Create a Large Language Model
 LLMs are large language models that define model metadata, capabilities, parameters, and usage policies for discovery and governance across Exchange.
+
+//LLM schema files are JSON format that the large language model should produce or consume.
 
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . Select the *LLM* asset type from the dropdown list.
-. Select a platform from the list.
-. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
-+
-Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
-. Select an option for *Lifecycle state*. The default is *Stable*.
+. Select a platform from the dropdown list.
+//. Click *Choose a file* to upload a schema file in JSON format.
+//. To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
+//+
+//Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
+//. Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
 == Create a MCP Server
 MCP serves provides the protocols and specifications for seamless integration between different AI systems and tools.
 
+MCP server schema files must be in JSON format. They define the definition of the tools, the data structures they use, and authentication. When creating an MCP server asset, you upload the schema file you want to use.
+
+.Example MCP server schema file 
+[%collapsible]
+====
+{
+  "protocolVersion": "2025-03-26",
+  "introspectedAt": "2025-09-11T10:15:30Z",
+  "connectionStatus": "success",
+  "transport": {
+    "kind": "streamableHttp",
+    "path": "/mcp/path"
+  },
+  "provider": {
+    "organization": "Some company AI",
+    "url": "https://company.com"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true,
+    "logging": true
+  },
+  "logging": {
+    "level": "info"
+  },
+  "tools": [
+    {
+      "name": "searchDocuments",
+      "description": "Searches documents by keyword and returns matched snippets.",
+      "annotations": {
+        "title": "Search Documents",
+        "readOnlyHint": true,
+        "openWorldHint": true,
+        "idempotentHint": true
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query text"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Maximum number of results"
+          }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "updateRecord",
+      "description": "Updates a record by ID.",
+      "annotations": {
+        "title": "Update Record",
+        "destructiveHint": true,
+        "readOnlyHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Record identifier"
+          },
+          "payload": {
+            "type": "object",
+            "description": "Fields to update"
+          }
+        },
+        "required": ["id", "payload"]
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Project README",
+      "uri": "file:///workspace/README.md",
+      "description": "Primary project documentation.",
+      "mimeType": "text/markdown",
+      "size": 2048,
+      "annotations": {
+        "audience": ["assistant", "user"],
+        "priority": 0.9
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "name": "summarize",
+      "description": "Summarize a given text.",
+      "arguments": [
+        {
+          "name": "text",
+          "description": "Text to summarize",
+          "required": true
+        },
+        {
+          "name": "tone",
+          "description": "Desired tone (e.g., concise, friendly)",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "platform": "nodejs-20"
+}
+====
+
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
-. Select the *LLM* asset type from the dropdown list.
-. Select a platform from the list.
+. Select the *MCP* asset type from the dropdown list.
+. Click *Choose file* to upload a schema file in JSON format.
+. To create the file using the template, click *Download template* and enter the required information, then click *Choose file* to upload the file.
 . To edit the advanced settings, *GroupId*, *AssetId*, and *Version* (GAV), click *Advanced*. 
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.

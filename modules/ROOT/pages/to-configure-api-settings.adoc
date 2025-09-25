@@ -8,7 +8,7 @@ Use Anypoint Exchange to configure whether instances are public or private in a 
 
 After you register an asset from Exchange in API Manager, the instances for the asset appear in Exchange in the Instances list in the navigation bar.
 
-Exchange also declares instances for APIs managed by another assetmanagement program besides Anypoint Platform.
+Exchange also declares instances for APIs managed by another asset management program besides Anypoint Platform.
 
 Visibility for each instance is either private or public. Users can see a private instance if the asset is shared with them or if they have an Anypoint Platform permission that grants access. All users accessing an Exchange public portal can see all public instances. All instances in an Exchange public portal are read only.
 
@@ -17,7 +17,9 @@ In a private Exchange instance, asset administrators have access to change the v
 REST APIs provide a mocking service with data to test API features. The mocking service is always public.
 
 == Configure Non-Managed Instances 
-Exchange enables you to configure assets with instances not managed by API Manager. Add, edit, and delete non-managed instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, MCP servers, and LLMs. You can change the name, URL, and visibility of non-managed instances.
+Exchange enables you to configure assets with instances not managed by API Manager. Add, edit, and delete non-managed instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, and LLMs. You can change the name, URL, and visibility of non-managed instances an services.
+
+Add and edit MCP Server instances directly in the YAML file within Anypoint Code Builder.
 
 * Add a non-managed instance:
 +

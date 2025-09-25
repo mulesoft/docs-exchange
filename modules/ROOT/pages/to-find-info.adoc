@@ -20,7 +20,10 @@ Anypoint Exchange search looks for terms in:
 
 == Search By Keyword 
 
-You can use the *Search assets* box to find assets by keyword.
+Use the *Search assets* box to find assets by keyword. 
+
+Agent network projects created in Anypoint Code Builder are published to Exchange as A2A assets. Exchange automatically tags them as brokers for easy identification. 
+ 
 
 image:exchange-search-assets-box.png["The Search assets box"]
 
@@ -36,7 +39,7 @@ Keywords can be the following asset information:
 
 To find assets using keywords:
 
-. From the Exchange landing page, enter a keyword in the *Search assets* field, for example MuleSoft and press *enter* or *return* depending on your keyboard.
+. From the Exchange landing page, enter a keyword in the *Search assets* field, for example *MuleSoft* and press *enter* or *return* depending on your keyboard.
 +
 A list of assets display that contain the keyword.
 . To clear the keyword from the *Search assets* field, click *X*.
@@ -44,6 +47,10 @@ A list of assets display that contain the keyword.
 The following image is an example search results using the search keyword *MuleSoft*. The search keyword is highlighted in the results.
 
 image:exchange-new-search.png["Search results with the keyword MuleSoft highlighted"]
+
+For Agent Fabric agent network projects created in Anypoint Code Builder are published to Exchange as A2A assets. Exchange automatically tags these assets as brokers. 
+
+To find agents that are brokers, search the Exchange catalog using the keyword `broker`.
 
 == Filter Search Results
 
