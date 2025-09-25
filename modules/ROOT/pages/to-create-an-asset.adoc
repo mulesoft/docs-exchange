@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-publish-an-asset.adoc
 
-To share assets in either an Anypoint Exchange private instance or an Exchange public portal, create an asset an asset type.
+To share assets in either an Anypoint Exchange private instance or an Exchange public portal, create an asset type.
 
 The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 
@@ -443,7 +443,7 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 
 == Asset Name, Icon, and Description Properties
 
-You can create assets in Anypoint Code Builder, API Designer, or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[Describe an Asset].
+You can create assets in Anypoint Code Builder, API Designer, or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[].
 
 === Properties of Assets Created in Anypoint Code Builder
 When an asset is published from Anypoint Code Builder to Exchange, the project name is used as the asset name in Exchange.

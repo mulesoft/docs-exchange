@@ -21,7 +21,7 @@ REST APIs provide a mocking service with data to test API features. The mocking 
 == Configure Non-Managed Instances 
 Exchange enables you to configure assets with instances not managed by API Manager. Add, edit, and delete non-managed instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, and LLMs. You can change the name, URL, and visibility of non-managed instances an services.
 
-Add and edit MCP Server instances directly in the YAML file within Anypoint Code Builder.
+Add and edit MCP Server instances directly in the YAML file within Anypoint Code Builder. See the Anypoint Code Builder documentation for details.
 
 * Add a non-managed instance:
 +
