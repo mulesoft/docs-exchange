@@ -28,7 +28,9 @@ To delete an entire asset, delete all of its patch versions.
 == Review GAV Information for Deleted Assets
 You can review details about deleted assets. Find out which GAV information is unavailable for reuse using this endpoint: 
 
-`/api/v2/organizations/:organizationId/softDeleted`
+`/api/v2/organizations/:organizationId/softDeleted?limit=40&offset=0`
+
+The limit and offset query parameters are optional. The default limit value is 20. The default offset value is 0.
 
 Identify unavailable GAVs of deleted assets for cleanup and permanent deletion. Then, you can make GAVs reusable by permanently deleting the asset using this example API call:
 
@@ -38,6 +40,9 @@ DELETE '/api/v2/assets/:groupId/:assetId/:version'
 --header 'x-delete-type: hard-delete' 
 --header 'Authorization: ***
 ----
+
+
+
 == See Also
 
 * xref:managing-asset-deletion.adoc[]

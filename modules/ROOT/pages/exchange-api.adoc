@@ -6,7 +6,7 @@ endif::[]
 
 With the Exchange API, you can publish and consume assets, add documentation pages, add or edit categories, and even manage your public portals. This page shows several examples using the Exchange API, and the complete API documentation is at the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[API documentation portal].
 
-The API supports all Exchange asset types:
+The API supports all Exchange asset types, for example:
 
 * REST APIs
 * SOAP APIs
@@ -302,6 +302,12 @@ curl -v \
     -F 'files.icon.png=@/file-path/my-asset-icon.png' \
 https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
 ----
+
+=== Troubleshoot Publishing Errors
+
+When publishing custom connectors, a timeout error can occur. This can happen if schema definitions import other schemas with external references are private or unreachable from the internet.
+
+To resolve this issue, remove external references that are private or not reachable from the internet.
 
 [[describe-your-assets]]
 == Describe Your Assets

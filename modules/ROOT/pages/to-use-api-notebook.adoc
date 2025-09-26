@@ -100,5 +100,4 @@ API notebooks run plain JavaScript in the browser. To ensure sensitive data does
 
 == See Also
 
-* For API Notebook function descriptions, see xref:1.x@api-manager::creating-an-api-notebook.adoc[API Notebook Reference].
 * https://docs.mulesoft.com/design-center/v/1.0/upload-raml-task[Upload an Existing RAML File to Exchange].
