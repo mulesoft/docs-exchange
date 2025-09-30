@@ -1,18 +1,58 @@
-= Using the Agentic Endpoint to Retrieve Asset and Instance Information
+= Retrieving Exchange Asset Metadata Using an MCP Server
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Use the agentic endpoint to get asset and instance metadata without Flex Gateway. This endpoint uses the Exchange API to programmatically search for and retrieve metadata for any assets published to Exchange.
+When Flex Gateway is unavailable, use an MCP server to get asset and instance metadata for any asset published to Exchange. The MCP server leverages the Exchange API to programmatically search for and return this metadata. 
+
+Exchange provides a jar file containing these flows for searching Exchange and retrieving metadata:
+
+* get-asset
+* get-assets
+* portal-search
 
 
-To configure the endpoint:
-//Should the jar file be downloaded first? What's in the jar?
-. Create a Mule application on Runtime Manager. 
-. Deploy a Mule application to CloudHub 2.0.
-. Create the client key and client secret for the application.
-. Create a connected app in Access Management with Exchange Viewer permission.
-. Update the Mule application in Runtime Manager by adding exchange client ID and Exchange client secret.
-. Test the endpoint by verifying the assets are in the catalog on Exchange.
+== Before You Begin
+Before using the MCP server, download the exchange-mcp.jar file and save it locally.
+
+== Retrieve Exchange Asset Metadata Using an MCP Server 
+
+. Create a Mule application on Runtime Manager:
+.. Navigate to Runtime Manager and choose an environment.
+.. Click *Deploy application* and enter or select an option for these fields:
++
+* *Application Name* - Enter the name of the application in lowercase with hyphen separated words, for example, `employee-exchange-mcp`.  
+* *Deployment Type* - Select an option to deploy to CloudHub 2.0.
+* *Application File* - Click *Choose file*, select *Upload file* and select the provided jar file.
+.. Select the *Runtime* tab and enter or select these:
++
+* *Release Channel* - Select *Long-Term Support*.
+* *Runtime version* - Select *4.9.9.5*.
+*  *Replica Count* - Select *1*.
+* *Replica size* - Select *0.1 vCores*.
+* *Deployment Model* - Select *Rolling update*.
+.. Click *Deploy Application*.
+. Create a connected app in Access Management:
+.. Navigate to *Access Management* > *Connected Apps* > and click *Create App* from the *Owned Apps* tab.
+.. From Create App, enter or select these:
++
+* *Name* - Enter a name for the app, for example `ExchangeMCPRead`.
+* *App acts on its own behalf (client credentials)*
+.. Click *Add Scopes* and select *Exchange* and *Exchange Viewer* only.
+.. Select all the business groups and click *Next*.
+.. Click *Add Scopes* and click *Save*.
+.. Copy the client ID and client secret of the connected application.
+. Update the Mule application in Runtime Manager by adding the Exchange client ID and client secret:
+.. Navigate to Runtime Manager and select *employee-exchange-mcp*.
+.. Select the *Properties* tab, enter the name for the client ID in the *New Key* field and copy the client ID to the *New Value* field. 
+.. Click *Protect*.
+.. In the next *New Key* field, enter the name for the client secret and copy the client secret to the *New Value* field. 
+.. Click *Protect* and click *Apply Changes*. 
+.. Deploy the application to a CloudHub 2.0 or Runtime Fabric private space to make sure the endpoint is not publicly available. 
++
+For more details about deploying your application to a private space, see xref:cloud-hub-2::ch2-private-space-about.adoc[] and xref:cloud-hub2::ch2-deploy-private-space.adoc[].
+. Test the MCP server by querying the assets on Exchange and verifying the assets are in the catalog.
+
+
 
