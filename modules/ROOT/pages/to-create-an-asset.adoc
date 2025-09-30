@@ -29,7 +29,11 @@ Agents are programs that perform tasks autonomously or semiautonomously. AI agen
 
 Agent schema files must be in JSON format. They define the structure and capabilities of the agent asset. When creating an agent asset, upload the schema file you want to use.
 
-.Example A2A schema file 
+The required objects for an A2A spec are defined in the https://a2a-protocol.org/dev/specification/[A2A spec]. 
+
+If create an agent using *Other* as the protocol type, the file must be .json file. This card follows the structure of the A2A Spec without required properties.
+
+.Example A2A card 
 [%collapsible]
 ====
 [source,json]
@@ -113,7 +117,7 @@ Agent schema files must be in JSON format. They define the structure and capabil
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . Select the *Agent* asset type from the dropdown list.
-. Select a method type from the list.
+. Select a protocol type.
 . Click *Choose file* to upload a .json file for the agent card.
 . Select a protocol.
 . Select *Publish*.
@@ -263,6 +267,22 @@ MCP servers provide the protocols and specifications for seamless integration be
 
 MCP server schema files must be in JSON format. They define the definition of the tools, the data structures they use, and authentication. When creating an MCP server asset, you upload the schema file you want to use.
 
+The minimum required properties for a MCP server schema file is `transport` over SSE or HTTP. If you declare `capabilities`, you must have all four capability flags: `tools`, `resources`, `prompts`, and `logging`. If you provide `tools`, `resources`, or `prompts`, each must have name and identifier fields.
+
+This is a sample JSON file with the minimum required `transport` property.
+
+[source,json]
+----
+{
+  "transport": {
+    "kind": "myTransport",
+    "ssePath": "/events"
+  }
+}
+----
+
+
+
 .Example MCP server schema file 
 [%collapsible]
 ====
@@ -373,6 +393,28 @@ MCP server schema files must be in JSON format. They define the definition of th
   ],
   "platform": "nodejs-20"
 }
+  ],
+  "prompts": [
+    {
+      "name": "summarize",
+      "description": "Summarize a given text.",
+      "arguments": [
+        {
+          "name": "text",
+          "description": "Text to summarize",
+          "required": true
+        },
+        {
+          "name": "tone",
+          "description": "Desired tone (e.g., concise, friendly)",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "platform": "nodejs-20"
+}
+----
 ====
 
 . In Exchange, select *Publish new asset*.
