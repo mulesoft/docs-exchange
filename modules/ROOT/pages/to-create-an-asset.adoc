@@ -27,12 +27,12 @@ Exchange fully supports RAML fragments. Currently, Exchange does not support imp
 == Create an Agent 
 Agents are programs that perform tasks autonomously or semiautonomously. AI agents use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks.
 
-Agent schema files must be in JSON format. They define the structure and capabilities of the agent asset. When creating an agent asset, Upload the schema file you want to use.
+Agent schema files must be in JSON format. They define the structure and capabilities of the agent asset. When creating an agent asset, upload the schema file you want to use.
 
 .Example A2A schema file 
 [%collapsible]
 ====
-
+[source,json]
 ----
 {
   "protocolVersion": "0.2.9",
@@ -266,6 +266,7 @@ MCP server schema files must be in JSON format. They define the definition of th
 .Example MCP server schema file 
 [%collapsible]
 ====
+[source,json]
 ----
 {
   "protocolVersion": "2025-03-26",

@@ -1,14 +1,18 @@
-= Using the Agent Endpoint to Retrieve Asset and Instance Information
+= Using the Agentic Endpoint to Retrieve Asset and Instance Information
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-PLACEHOLDER
+Use the agentic endpoint to get asset and instance metadata without Flex Gateway. This endpoint uses the Exchange API to programmatically search for and retrieve metadata for any assets published to Exchange.
 
-Questions:
 
-* What's the purpose of this endpoint?
-* What's the use case?
-* Who should use it?
-* Any special setup, permissions, or configuration?
+To configure the endpoint:
+//Should the jar file be downloaded first? What's in the jar?
+. Create a Mule application on Runtime Manager. 
+. Deploy a Mule application to CloudHub 2.0.
+. Create the client key and client secret for the application.
+. Create a connected app in Access Management with Exchange Viewer permission.
+. Update the Mule application in Runtime Manager by adding exchange client ID and Exchange client secret.
+. Test the endpoint by verifying the assets are in the catalog on Exchange.
+
