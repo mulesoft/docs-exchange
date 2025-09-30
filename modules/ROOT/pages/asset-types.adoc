@@ -10,7 +10,7 @@ The following asset types are supported in Exchange:
 +
 Programs that perform tasks autonomously or semiautonomously. AI agents use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks. 
 +
-Agent network projects created in Anypoint Code Builder are published to Exchange as A2A assets. Exchange automatically tags these assets as brokers for easy identification. 
+Agent network projects created in Anypoint Code Builder are published to Exchange as agent assets. Exchange automatically tags these assets as brokers for easy identification. 
 
 * API Groups
 +

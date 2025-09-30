@@ -48,7 +48,7 @@ The following image is an example search results using the search keyword *MuleS
 
 image:exchange-new-search.png["Search results with the keyword MuleSoft highlighted"]
 
-For Agent Fabric, agent network projects created in Anypoint Code Builder are published to Exchange as A2A assets. Exchange automatically tags these assets as brokers. 
+For Agent Fabric, agent network projects created in Anypoint Code Builder are published to Exchange as agent assets. Exchange automatically tags these assets as brokers. 
 
 To find agents that are brokers, search the Exchange catalog using the keyword `broker`.
 
