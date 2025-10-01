@@ -17,9 +17,9 @@ Exchange assets are accessible from many places, such as Anypoint Studio (connec
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
 == Agent Fabric Assets
-Agent Fabric assets include agentic assets and tools to provide support and automate tasks. You can find agent, large language model (LLM), and MCP server assets in the *Agents & Tools (New)* tab. 
+Agent Fabric assets include agentic assets and tools to provide support and automate tasks. You can find agent, LLM, and MCP server assets in the *Agents & Tools (New)* tab. 
 
-You create agent network projects in Anypoint Code Builder which act as central hubs for defining, validating, and executing these multi-step processes using agents and tools like LLMs and MCP servers. Anypoint Code Builder publishes agent network projects as assets to Exchange. Exchange tags them as brokers for identification. See the Anypoint Code Builder documenation. 
+You create agent network projects in Anypoint Code Builder to define, validate, and execute these multi-step processes using agents and tools like LLMs and MCP servers. Anypoint Code Builder publishes agent network projects as assets to Exchange. Exchange tags them as brokers for identification. See the Anypoint Code Builder documenation. 
 
 Agent Fabric assets follow the standard publishing workflow. See xref:workflow-sharing-assets.adoc[] for details.
 

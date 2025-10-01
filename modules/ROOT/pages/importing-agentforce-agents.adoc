@@ -13,5 +13,7 @@ Imported Agentforce agents appear in *Agents & Tools*.
 . Select *Settings* from the navigation bar and select the *Asset import* tab.
 . To change the Salesforce org, xref:access-management::managing-connected-salesforce-orgs.adoc[enable the connection in Access Management].
 . From *Settings* in Exchange, click *Import* and click *Confirm*.
++
+Agentagents are imported in the current business group.
 . Close the dialog and refresh the page after a few minutes.
 . Verify that the Agentforce agents are listed in the Exchange catalog on the *Agents & Tools* page.
