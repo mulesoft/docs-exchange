@@ -51,7 +51,7 @@ Instead of requesting access to multiple APIs to satisfy a use case, a developer
 
 * LLM 
 +
-Large language models (LLM) are AI assets for processing, understanding, and generating human readable language.
+Large language models (LLM) are AI assets for processing, understanding, and generating human readable language. Only OpenAI is supported.
 
 * MCP Servers
 +
