@@ -254,7 +254,12 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select *Publish*.
 
 == Create a Large Language Model
-LLMs are large language models that define model metadata, capabilities, parameters, and usage policies for discovery and governance across Exchange.
+To use an OpenAI LLM in your broker, you must first enable the OpenAI LLM service in your organization. Next, configure the LLM asset using one of these methods:
+
+* Manual Creation: Create the LLM asset manually in Exchange, and then reference this asset in the YAML configuration file within Anypoint Code Builder.
+* Automatic publishing by defining the LLM directly within the YAML configuration file in Anypoint Code Builder. The LLM asset is then automatically published to Exchange.
+
+It's possible that you may need more than one one LLM asset in your organization.
 
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
