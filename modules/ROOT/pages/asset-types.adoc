@@ -10,7 +10,7 @@ The following asset types are supported in Exchange:
 +
 Programs that perform tasks autonomously or semiautonomously. AI agents use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks. 
 +
-Agent network projects created in Anypoint Code Builder are published to Exchange as agent assets. Exchange automatically tags these assets as brokers for easy identification. 
+When agent network projects created in Anypoint Code Builder are published to Exchange, the individual agentic assets defined in the file are registered as either agents or MCP servers. Brokers, which are published with the Agent asset type, are automatically tagged as brokers for easy identification.
 
 * API Groups
 +
@@ -51,7 +51,7 @@ Instead of requesting access to multiple APIs to satisfy a use case, a developer
 
 * LLM 
 +
-Large language models (LLM) are AI assets for processing, understanding, and generating human readable language. Only OpenAI is supported.
+Large language models (LLM) are AI assets for processing, understanding, and generating human readable language. Only OpenAI is supported.The LLM asset type defines only the provider and contract information. The model and connectivity details are defined separately in the YAML configuration file created in Anypoint Code Builder. 
 
 * MCP Servers
 +
