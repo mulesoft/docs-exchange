@@ -9,7 +9,7 @@ To share assets in either an Anypoint Exchange private instance or an Exchange p
 
 The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
 
-* For OAS, RAML, RAML fragments, agents, AsyncAPI,  HTTP, WSDL, LLMs, MCP servers, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* dialog.
+* For OAS, RAML, RAML fragments, agents, AsyncAPI, HTTP, WSDL, LLMs, MCP servers, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* dialog.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
 * You can also create REST APIs and API Spec Fragments using Anypoint Code Builder or Design Center and publish the API to Exchange.
