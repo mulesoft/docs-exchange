@@ -275,7 +275,7 @@ This is a sample JSON file with the minimum required `transport` property.
 ----
 {
   "transport": {
-    "kind": "myTransport",
+    "kind": "see",
     "ssePath": "/events"
   }
 }
