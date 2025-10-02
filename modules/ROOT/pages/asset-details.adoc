@@ -21,8 +21,8 @@ The navigation bar lists:
 * Instances
 * The HTTP functions in the REST specification (for a REST API)
 * Conformance Status
-* Agents show card details   
- *Brokers show access list and card details
+* Agents show card details
+* Brokers show access list and card details
 * MCP servers shows details and tools
 * Terms and conditions and APIs using this policy (for a policy)
 * Settings
