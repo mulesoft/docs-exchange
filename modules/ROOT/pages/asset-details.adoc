@@ -23,7 +23,7 @@ The navigation bar lists:
 * Conformance Status
 * Agents show card details
 * Brokers show access list and card details
-* MCP servers shows details and tools
+* MCP servers show details and tools
 * Terms and conditions and APIs using this policy (for a policy)
 * Settings
 
