@@ -25,7 +25,7 @@ You create agent network projects in Anypoint Code Builder to define, validate, 
 
 Agent Fabric assets follow the standard publishing workflow. See xref:workflow-sharing-assets.adoc[] for details.
 
-//screen capture of the tab showing those assets
+
 
 == Anypoint Exchange Spotlight Video
 
