@@ -10,8 +10,17 @@ Importing from the same Salesforce organization into a different business group 
 
 Imported Agentforce agents appear in *Agents & Tools*.
 
+== Before You Begin
+Before importing Agentforce agents, complete these requirements:
+
+* xref:access-management::managing-connected-salesforce-orgs.adoc#enable-disable-connection[Enable the connection to a Salesforce organization] that has an established tenant relationship with your Anypoint Platform organization.
+* xref:access-management::enabling-einstein.adoc[Enable Einstein in Anypoint]
++
+Accept the terms and conditions and set a default organization for Einstein.
+
+== Import Agentforce Agents
+
 . Select *Settings* from the navigation bar and select the *Asset import* tab.
-. To change the Salesforce org, xref:access-management::managing-connected-salesforce-orgs.adoc[enable the connection in Access Management].
 . From *Settings* in Exchange, click *Import* and click *Confirm*.
 +
 Agentagents are imported in the current business group.

@@ -78,21 +78,6 @@ When a developer requests access to the API Group for a client application, the 
 
 A client application can access an API either through a contract with only that API or through a contract with one or more API Groups that include the API. In this latter case, the least restrictive available contract for the API is applied.
 
-== Agent, LLM, and MCP Server Access
-In Exchange, agents, LLMs, and MCP servers are assets with a portal. The *Instances* page on the portal lists all of the asset's instances.
-
-When a developer requests access to these assets for a client application, the developer selects an instance, selects a client application, and selects a service-level agreement (SLA) if available.
-
-. Select the asset from the Exchange catalog to view the details page.
-. Click *Request access*.
-. Choose the instance from the list.
-. If you are using an existing application, choose from the list of applications.
-+
-An application and its instance use the same client provider. 
-. Choose the service-level agreement (SLA) tier for the application if available.
-. Click *Request access*.
-. If the instance has no SLA tiers, a notification dialog shows that your request is received and approved and lists the client ID and client secret.
-. If the instance has an SLA tier, a notification dialog shows that your request is received and pending. You'll be notified by email the status changes. You can also check the status on the application page.
 == See Also
 
 * https://www.google.com/search?q=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token&oq=oauth2+implicit+grant+vs+authorization+code+grant+refresh+token[Search to compare grant types]

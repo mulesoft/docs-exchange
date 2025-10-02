@@ -6,11 +6,11 @@ endif::[]
 
 Use Anypoint Exchange to configure whether instances are public or private in a private Exchange instance or in an Exchange public portal. For example, configure public or private visibility for proxies or policies associated with your asset and set using API Manager.
 
-After you register an API from Exchange in API Manager, the instances for the API appear in Exchange in the Instances list on the asset details page. 
+After you register an API from Exchange in API Manager, the instances for the asset appear in Exchange in the *Instances* list on the asset details page. 
 
-Instances for Agent Fabric assets are created in the YAML in Anypoint Code Builder. After the agent network project is published to Exchange, the instances appear in the Instances list on the asset details page. 
+Instances for brokers are created in the YAML in Anypoint Code Builder. After the agent network project is published to Exchange, the instances appear in the *Instances* list. 
 
-Exchange also declares instances for APIs managed by another asset management program besides Anypoint Platform.
+Exchange also declares instances for assets managed by other asset management programs besides Anypoint Platform.
 
 Visibility for each instance is either private or public. Users can see a private instance if the asset is shared with them or if they have an Anypoint Platform permission that grants access. All users accessing an Exchange public portal can see all public instances. All instances in an Exchange public portal are read only.
 
@@ -19,9 +19,7 @@ In a private Exchange instance, asset administrators have access to change the v
 REST APIs provide a mocking service with data to test API features. The mocking service is always public.
 
 == Configure Non-Managed Instances 
-Exchange enables you to configure assets with instances not managed by API Manager. Add, edit, and delete non-managed instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, and LLMs. You can change the name, URL, and visibility of non-managed instances an services.
-
-Add and edit MCP Server instances directly in the YAML file within Anypoint Code Builder. See the Anypoint Code Builder documentation for details.
+Configure assets with instances not managed by API Manager. Add, edit, and delete non-managed instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, MCPs, and LLMs. You can change the name, URL, and visibility of non-managed instances an services.
 
 * Add a non-managed instance:
 +
@@ -29,7 +27,6 @@ Add and edit MCP Server instances directly in the YAML file within Anypoint Code
 . In the navigation bar, select *Instances*.
 . Click *Add new instance*.
 . In the *Non-managed instances* section, enter the instance name, URL, select a visibility option, and click image:ex-checkmark-icon.png["The checkmark icon.",3%,3%].
-
 * Edit a non-managed instance:
 +
 .. Click image:ex-pencil-icon.png["The pencil icon",3%,3%].

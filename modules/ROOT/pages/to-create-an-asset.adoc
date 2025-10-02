@@ -5,9 +5,9 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-publish-an-asset.adoc
 
-To share assets in either an Anypoint Exchange private instance or an Exchange public portal, create an asset type.
+To share assets in an Anypoint Exchange private instance or the Exchange public portal, create an asset of that type.
 
-The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
+The method for creating an asset depends on its type. Once the asset type is defined, it is permanent and can't be changed.
 
 * For OAS, RAML, RAML fragments, agents, AsyncAPI, HTTP, WSDL, LLMs, MCP servers, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* dialog.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
@@ -24,14 +24,15 @@ For example: `exchange asset upload --classifier raml --apiVersion v1 --name Hel
 
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
+[[create-agent]]
 == Create an Agent 
-Agents are programs that perform tasks autonomously or semiautonomously. AI agents use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks.
+Agents are programs that perform tasks autonomously or semiautonomously. AI agents can use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks.
 
 Agent schema files must be in JSON format. They define the structure and capabilities of the agent asset. When creating an agent asset, upload the schema file you want to use.
 
 The required objects for an A2A spec are defined in the https://a2a-protocol.org/dev/specification/[A2A spec]. 
 
-If create an agent using *Other* as the protocol type, the file must be .json file. This card follows the structure of the A2A Spec without required properties.
+If you create an agent using *Other* as the protocol type, the file must be json file. This card follows the structure of the A2A Spec without required properties.
 
 .Example A2A card 
 [%collapsible]
@@ -253,13 +254,14 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
+[[create-llm]]
 == Create a Large Language Model
-To use an OpenAI LLM in your broker, you must first enable the OpenAI LLM service in your organization. Next, configure the LLM asset using one of these methods:
+To use an OpenAI LLM in your broker, you must have OpenAI LLM access in your organization. Configure the LLM asset using one of these methods:
 
-* Manual Creation: Create the LLM asset manually in Exchange, and then reference this asset in the YAML configuration file within Anypoint Code Builder.
-* Automatic publishing by defining the LLM directly within the YAML configuration file in Anypoint Code Builder. The LLM asset is then automatically published to Exchange.
+* Automatic Publication: Define the LLM directly within the YAML configuration file in Anypoint Code Builder to automatically publish the LLM asset to Exchange.
+* Manual Creation: Manually create the LLM asset in Exchange, and then reference it in the YAML configuration file within Anypoint Code Builder.
 
-It's possible to have more than one LLM asset in your organization.
+It's possible to have more than one LLM assets in your organization.
 
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
@@ -267,6 +269,7 @@ It's possible to have more than one LLM asset in your organization.
 . Enter the name of the platform and select it from the list.
 . Select *Publish*.
 
+[[create-mcp]]
 == Create an MCP Server
 MCP servers provide the protocols and specifications for seamless integration between different AI systems and tools.
 
@@ -492,7 +495,7 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 You can create assets in Anypoint Code Builder, API Designer, or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[].
 
 === Properties of Assets Created in Anypoint Code Builder
-When an asset is published from Anypoint Code Builder to Exchange, the project name is used as the asset name in Exchange.
+When an asset is published from Anypoint Code Builder to Exchange, the asset name is that is used in the exchange.json file.
 
 The name, icon, and description properties can only be changed in the Exchange asset details page.
 
