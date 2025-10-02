@@ -19,7 +19,9 @@ Assets in the *Provided by MuleSoft* organization are created by MuleSoft and it
 == Agent Fabric Assets
 Agent Fabric assets include agentic assets and tools to provide support and automate tasks. You can find agent, LLM, and MCP server assets in the *Agents & Tools (New)* tab. 
 
-You create agent network projects in Anypoint Code Builder to define, validate, and publish brokers, LLMs, and MCP servers to allow agents to use the assets in your Agent Fabric. Anypoint Code Builder publishes agent network projects as assets to Exchange. Exchange tags them as brokers for identification. See xref:anypoint-code-builder::af-agent-networks[] in the Anypoint Code Builder documentation. 
+image:ex-agents-and-tools.png["Exchange catalog showing assets in Agents & Tools"]
+
+You create agent network projects in Anypoint Code Builder to define, validate, and publish brokers, LLMs, and MCP servers to allow agents to use the assets in your Agent Fabric. Anypoint Code Builder publishes agent network projects as assets to Exchange. Exchange tags them as brokers for identification. See xref:anypoint-code-builder::af-agent-networks.adoc[] in the Anypoint Code Builder documentation. 
 
 Agent Fabric assets follow the standard publishing workflow. See xref:workflow-sharing-assets.adoc[] for details.
 
