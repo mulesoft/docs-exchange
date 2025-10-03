@@ -49,7 +49,7 @@ A placeholder for an endpoint for use by private Exchange users who want to mana
 +
 Instead of requesting access to multiple APIs to satisfy a use case, a developer can access the group in one step.
 
-* LLM 
+* LLMs (Large Language Models)
 +
 Large language models (LLM) are AI assets for processing, understanding, and generating human readable language. Only OpenAI is supported for the broker. The LLM asset type defines only the provider and contract information. The model and connectivity details are defined separately in the YAML configuration file created in Anypoint Code Builder. 
 
