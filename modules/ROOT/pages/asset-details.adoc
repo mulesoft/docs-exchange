@@ -21,13 +21,19 @@ The navigation bar lists:
 * Instances
 * The HTTP functions in the REST specification (for a REST API)
 * Conformance Status
+* Agents show card details
+* Brokers show access list and card details
+* MCP servers show details and tools
 * Terms and conditions and APIs using this policy (for a policy)
+* Settings
 
 The asset detail page provides this information:
 
 * Asset name 
 * Description
 * Asset type
+* Broker show as asset subtype
+* Agents show protocol 
 * Organization
 * Contact name
 * Contact email
@@ -38,7 +44,7 @@ The asset detail page provides this information:
 * Lifecycle state
 * Conformance state
 * Share by inviting users to have access
-* For APIs, download specifications and view code
+* APIs show download specifications and view code
 * Add a new version
 
 For REST APIs, use the API console to create example calls and mock data to test the API. For more information, see xref:ex2-to-simulate-api-data.adoc[].

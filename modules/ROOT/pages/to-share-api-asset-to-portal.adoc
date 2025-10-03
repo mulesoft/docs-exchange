@@ -1,10 +1,10 @@
-= Publishing an API to a Public Portal
+= Publishing an Asset to a Public Portal
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Use your organization's public portal to publish API assets for viewing and use by developers inside and outside your organization.
+Use your organization's public portal to publish assets for viewing and use by developers inside and outside your organization.
 
 A public portal is visible to anyone who has the URL of the portal. The URL for a public portal starts with `+https://anypoint.mulesoft.com/exchange/portals/Domain_Name/+`.
 
@@ -24,7 +24,7 @@ Follow these steps to add an asset to a portal and make the asset public.
 
 Adding an asset to a portal does not delete the asset. It is still available internally.
 
-. Select an API asset to show its details.
+. Select an asset to show its details.
 . Click *Share* and select *Public - Publish it on the public portal*.
 . Select the version of the asset you want to publish in the public portal.
 . Select *Save*.

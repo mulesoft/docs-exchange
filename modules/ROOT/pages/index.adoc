@@ -5,15 +5,27 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
 
-Anypoint Exchange is a curated catalog of reusable assets. APIs, API groups, API spec fragments, custom assets, examples, GraphQL APIs, integration assets such as connectors, policies, RPA assets, rulesets, and templates are some of the types that are supported in Exchange. See xref:asset-types.adoc[Asset Types] for more information about each type of asset. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
+Anypoint Exchange is a curated catalog of reusable assets. Agents, APIs, API groups, API spec fragments, custom assets, examples, GraphQL APIs, large language models (LLMs), Model Control Protocol (MCP) servers, integration assets such as connectors, policies, RPA assets, rulesets, and templates are some of the types that are supported in Exchange. See xref:asset-types.adoc[Asset Types] for more information about each type of asset. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
 
 image:exchange-landing-page.png["Exchange catalog showing assets provided by MuleSoft"]
 
-Use Exchange to discover, share, incorporate assets and resources into your applications, and view asset usage and engagement metrics. You can create API developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
+Use Exchange to discover, share, and incorporate assets and resources into your applications, and view asset usage and engagement metrics. You can create developer portals, view and test APIs, simulate sending data to APIs by using the mocking service, create assets, and use API Notebooks to describe and test API functions.
 
-Exchange assets are accessible from many places, such as Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). APIs can be published from Design Center to Exchange.
+Exchange assets are accessible from many places, such as Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). You can publish assets from agent network projects such as agents, brokers, and MCP servers, as well as APIs from Anypoint Code Builder to Exchange.
 
+== MuleSoft Assets
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
+
+== Agent Fabric Assets
+Agent Fabric assets include agentic assets and tools to provide support and automate tasks. You can find agent, LLM, and MCP server assets in the *Agents & Tools (New)* tab. 
+
+image:ex-agents-and-tools.png["Exchange catalog showing assets in Agents & Tools"]
+
+You create agent network projects in Anypoint Code Builder to define, validate, and publish brokers, LLMs, and MCP servers to allow agents to use the assets in your Agent Fabric. Anypoint Code Builder publishes agent network projects as assets to Exchange. Exchange tags them as brokers for identification. See xref:anypoint-code-builder::af-agent-networks.adoc[] in the Anypoint Code Builder documentation. 
+
+Agent Fabric assets follow the standard publishing workflow. See xref:workflow-sharing-assets.adoc[] for details.
+
+
 
 == Anypoint Exchange Spotlight Video
 
@@ -34,7 +46,7 @@ image::ex2-biz-groups.png["List of business groups"]
 
 An Exchange administrator sets the groups that this menu displays for each user.
 
-If you cannot find an asset in the current business group scopes, search in other scopes. In the navigation menu click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
+If you can't find an asset in the current business group scopes, search in other scopes. In the navigation menu, click *All assets* (assets provided by MuleSoft and your own root organization), *Provided by MuleSoft*, or a business group scope.
 
 == Get Started
 
@@ -44,7 +56,7 @@ You can get started either by searching for an existing asset or creating a new 
 . Select an asset from the search results view.
 . Review the description of the asset.
 
-To create assets for APIs, connectors, templates, examples, API Notebooks, and custom assets, log into Exchange. See xref:workflow-sharing-assets.adoc[Workflow: Publish APIs] for more information.
+To create assets,log into Exchange, then see xref:workflow-sharing-assets.adoc[Workflow: Publish Asserts] for more information.
 
 == Test APIs
 
