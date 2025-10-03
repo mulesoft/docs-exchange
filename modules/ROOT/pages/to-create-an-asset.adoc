@@ -32,7 +32,7 @@ Agent schema files must be in JSON format. They define the structure and capabil
 
 The required objects for an A2A spec are defined in the https://a2a-protocol.org/dev/specification/[A2A spec]. 
 
-If you create an agent using *Other* as the protocol type, the file must be json file. This card follows the structure of the A2A Spec without required properties.
+If you create an agent using *Other* as the protocol type, the file must be a JSON file. This card follows the structure of the A2A Spec without required properties.
 
 .Example A2A card 
 [%collapsible]
