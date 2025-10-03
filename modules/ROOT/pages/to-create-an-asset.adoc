@@ -261,7 +261,7 @@ To use an OpenAI LLM in your broker, you must have OpenAI LLM access in your org
 * Automatic Publication: Define the LLM directly within the YAML configuration file in Anypoint Code Builder to automatically publish the LLM asset to Exchange.
 * Manual Creation: Manually create the LLM asset in Exchange, and then reference it in the YAML configuration file within Anypoint Code Builder.
 
-It's possible to have more than one LLM assets in your organization.
+It's possible to have more than one LLM asset in your organization.
 
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
