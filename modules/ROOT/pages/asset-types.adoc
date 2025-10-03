@@ -51,7 +51,7 @@ Instead of requesting access to multiple APIs to satisfy a use case, a developer
 
 * LLMs (Large Language Models)
 +
-Large language models (LLM) are AI assets for processing, understanding, and generating human readable language. Only OpenAI is supported for the broker. The LLM asset type defines only the provider and contract information. The model and connectivity details are defined separately in the YAML configuration file created in Anypoint Code Builder. 
+AI assets for processing, understanding, and generating human readable language. Only OpenAI is supported for the broker. The LLM asset type defines only the provider and contract information. The model and connectivity details are defined separately in the YAML configuration file created in Anypoint Code Builder. 
 
 * MCP Servers
 +
