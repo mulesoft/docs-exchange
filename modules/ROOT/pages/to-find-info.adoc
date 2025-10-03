@@ -39,7 +39,7 @@ Keywords can be the following asset information:
 
 To find assets using keywords:
 
-. From the Exchange landing page, enter a keyword in the *Search assets* field, for example *MuleSoft* and press *enter* or *return* depending on your keyboard.
+. From the Exchange landing page, enter a keyword in the *Search assets* field, for example *MuleSoft* and press Enter or Return depending on your keyboard.
 +
 A list of assets display that contain the keyword.
 . To clear the keyword from the *Search assets* field, click *X*.
