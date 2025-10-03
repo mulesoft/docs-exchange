@@ -19,7 +19,7 @@ In a private Exchange instance, asset administrators have access to change the v
 REST APIs provide a mocking service with data to test API features. The mocking service is always public.
 
 == Configure Non-Managed Instances 
-Configure assets with instances not managed by API Manager. Add, edit, and delete non-managed instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, MCPs, and LLMs. You can change the name, URL, and visibility of non-managed instances an services.
+Configure assets with instances not managed by API Manager. Add, edit, and delete nonmanaged instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, MCPs, and LLMs. You can change the name, URL, and visibility of nonmanaged instances and services.
 
 * Add a non-managed instance:
 +
