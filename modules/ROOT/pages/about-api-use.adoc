@@ -10,7 +10,10 @@ Exchange helps API consumers understand API functionality and test features with
 
 * API console to view API functions. This console appears to the right of a REST API detail screen.
 * API Notebook to view API documentation and to test API features.
-* Simulate data to an API using the mocking service.
++
+[NOTE]
+include::reuse::partial$eol-note.adoc[tag=eolReachedFeature]
+* A mocking service to simulate data to an API.
 * GraphQL console to view GraphQL schemas and run queries.
 
 == See Also
