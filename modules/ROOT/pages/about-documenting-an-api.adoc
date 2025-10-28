@@ -8,7 +8,7 @@ To increase usability and adoption, create documentation using Einstein generati
 
 * xref:generating-documentation-with-ai.adoc[]
 +
-Create API documentation using use Einstein generative AI.
+Create API documentation by using Einstein generative AI.
 * xref:to-use-api-notebook.adoc[]
 +
 [NOTE]
