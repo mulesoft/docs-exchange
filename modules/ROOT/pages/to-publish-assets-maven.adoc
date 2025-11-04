@@ -366,7 +366,7 @@ If you want to publish a maven project, like a mule application, using the Mule 
         <plugin>
             <groupId>org.mule.tools.maven</groupId>
             <artifactId>exchange-mule-maven-plugin</artifactId>
-            <version>0.0.23</version>
+            <version>0.1.7</version>
             <inherited>false</inherited>
             <executions>
                 <execution>
