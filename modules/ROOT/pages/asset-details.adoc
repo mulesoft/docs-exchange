@@ -112,7 +112,7 @@ include::exchange::partial$task-view-governed-apis-for-rulesets.adoc[]
 
 == Test an API with API Notebook
 [NOTE]
-include::reuse::partial$eol-note.adoc[tag=eolReachedFeature]
+include::reuse::partial$eol-note.adoc[tag=eolScheduledFeature]
 
 Many APIs have an API notebook for interactive testing.
 

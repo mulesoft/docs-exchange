@@ -12,7 +12,7 @@ Create API documentation by using Einstein generative AI.
 * xref:to-use-api-notebook.adoc[]
 +
 [NOTE]
-include::reuse::partial$eol-note.adoc[tag=eolReachedFeature]
+include::reuse::partial$eol-note.adoc[tag=eolScheduledFeature]
 +
 Create API Notebooks to document each function in your API and provide a test area so that users can experiment with sending different values to the API and receiving output.
 
