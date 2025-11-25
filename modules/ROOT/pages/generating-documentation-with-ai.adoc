@@ -37,9 +37,6 @@ Generated documentation includes:
 == Before You Begin
 Before generating API documentation with Einstein, you must have a Salesforce org account with Einstein enabled in Anypoint Platform. To enable Einstein in Anypoint Platform, see xref:access-management::enabling-einstein.adoc#enable-einstein-anypoint[Enable Einstein for Your Anypoint Platform Organization].
 
-Einstein is a usage-based product. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_usage.htm&type=5[Generative AI Usage and Billing].
-
-
 == Generate API Documentation with Einstein
 Generate documentation for REST APIs that don't have any documentation. You can edit and save a draft as many times as you like before publishing. Drafts aren't visible to others until they're published.
 
