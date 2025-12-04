@@ -1,5 +1,5 @@
 = Documenting an Asset Using API Notebook
-::page-support-status: eolReachedFeature
+:page-support-status: eolReachedFeature
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
