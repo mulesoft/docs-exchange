@@ -422,7 +422,7 @@ This is a sample JSON file with the minimum required `transport` property.
 }
 ----
 ====
-MuleSoft uses a customized version of the official MCP schema. While it shares definitions with the standard specification, the implementation is unique to MuleSoft.
+MuleSoft uses a customized, UTF‑8–compatible version of the official MCP schema. It reuses select standard definitions from the official specification but it's not identical to it.
 
 
 .MuleSoft MCP server schema file 
