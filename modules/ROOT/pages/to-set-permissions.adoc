@@ -60,32 +60,36 @@ view, download, edit the content, deprecate, delete, and share the asset.
 
 == Remove Project Administrator role
 
-We can remove our Project Administrator roles using the request below. This is useful when the role limit hsa been reached.
+You can remove Project Administrator roles using the request below. This is useful when the role limit has been reached.
+
+[source,console]
 ----
-DELETE '/accounts/api/organizations/:organizationId/roles?role_groups=true&teams=true'
--H 'Authorization: ***
--H 'Content-Type: application/json'
--d '{
-           "assign": [],
-           "unassign": [
-                   {
-                       "identity_ids": [
-                           "••••••"
-                       ],
-                    "role_id": "••••••",
-                   "context_params": {
-                       "org": "••••••",
-                       "product": "exchange",
-                       "projectId": "••••••"
-                   }
-               }
-           ]
-       }'
+curl -X DELETE 'https://anypoint.mulesoft.com/accounts/api/organizations/:organizationId/roles?role_groups=true&teams=true' \
+  -H 'Authorization: bearer YOUR_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "assign": [],
+  "unassign": [
+    {
+      "identity_ids": [
+        "••••••"
+      ],
+      "role_id": "••••••",
+      "context_params": {
+        "org": "••••••",
+        "product": "exchange",
+        "projectId": "••••••"
+      }
+    }
+  ]
+}'
 ----
 
-The values used in the body refer to the role one wants removed. In order to know this data we can learn what roles we have using the following request:
+The values used in the body refer to the role you want to remove. To identify the role data, retrieve existing roles using the following request:
+
+[source,console]
 ----
-GET '/accounts/api/users/:userId/roles?role_groups=true&teams=true'
--H 'Authorization: ••••••'
+curl 'https://anypoint.mulesoft.com/accounts/api/users/:userId/roles?role_groups=true&teams=true' \
+  -H 'Authorization: bearer YOUR_TOKEN'
 ----
 
