@@ -85,7 +85,7 @@ curl -X DELETE 'https://anypoint.mulesoft.com/accounts/api/organizations/:organi
 }'
 ----
 
-The `identity_ids value is the user ID. The remaining values identify the role to remove. To identify the role data, retrieve existing roles using this request:
+The `identity_ids` value is the user ID. The remaining values identify the role to remove. To identify the role data, retrieve existing roles using this request:
 
 [source,console]
 ----
