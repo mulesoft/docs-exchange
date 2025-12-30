@@ -59,9 +59,9 @@ also edit the asset's content.
 view, download, edit the content, deprecate, delete, and share the asset.
 
 
-== Remove Project Administrator role
+== Remove Roles When Limits Are Reached
 
-We can remove our Project Administrator roles using the request below. This is useful when the role limit hsa been reached.
+One can remove their roles using the request below. This is useful when the role limit has been reached.
 ----
 DELETE '/accounts/api/organizations/:organizationId/roles?role_groups=true&teams=true'
 -H 'Authorization: ***
@@ -71,13 +71,13 @@ DELETE '/accounts/api/organizations/:organizationId/roles?role_groups=true&teams
            "unassign": [
                    {
                        "identity_ids": [
-                           "••••••"
+                           "141nab7c-64d7-4763-816f-a2jj365e8c03"
                        ],
-                    "role_id": "••••••",
+                    "role_id": "67a4f1bc-f798-48ce-a0f5-d96b48cf5c3e",
                    "context_params": {
-                       "org": "••••••",
+                       "org": "ebb22016-f209-4767-s074-2e57245e4399",
                        "product": "exchange",
-                       "projectId": "••••••"
+                       "projectId": "abfa4920-eelf-22f3-8g71-1e60bd71e12c"
                    }
                }
            ]
