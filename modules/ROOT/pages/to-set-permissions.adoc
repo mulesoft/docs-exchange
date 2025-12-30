@@ -58,6 +58,40 @@ also edit the asset's content.
 * Asset Administrators can view an asset in a business group and can
 view, download, edit the content, deprecate, delete, and share the asset.
 
+== Remove Project Administrator Role
+
+Remove the Project Administrator role when you reach the limit. Project Administrator is an internal role included in the Exchange Contributor permission.
+
+[source,console]
+----
+curl -X DELETE 'https://anypoint.mulesoft.com/accounts/api/organizations/:organizationId/roles?role_groups=true&teams=true' \
+  -H 'Authorization: bearer YOUR_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "assign": [],
+  "unassign": [
+    {
+      "identity_ids": [
+        "••••••"
+      ],
+      "role_id": "••••••",
+      "context_params": {
+        "org": "••••••",
+        "product": "exchange",
+        "projectId": "••••••"
+      }
+    }
+  ]
+}'
+----
+
+The `identity_ids` value is the user ID. The remaining values identify the role to remove. To identify the role data, retrieve existing roles using this request:
+
+[source,console]
+----
+curl 'https://anypoint.mulesoft.com/accounts/api/users/:userId/roles?role_groups=true&teams=true' \
+  -H 'Authorization: bearer YOUR_TOKEN'
+----
 
 == Remove Roles When Limits Are Reached
 
