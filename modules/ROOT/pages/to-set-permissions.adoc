@@ -60,7 +60,7 @@ view, download, edit the content, deprecate, delete, and share the asset.
 
 == Remove Roles When Limits Are Reached
 
-Remove roles, including Project Administrator, when you reach the limit. Project Administrator is a built-inrole included in the Exchange Contributor permission.
+Remove roles, including Project Administrator, when you reach the limit. Project Administrator is a built-in role included in the Exchange Contributor permission.
 
 Use this code example to remove roles. Make sure to replace the values with your own.
 
