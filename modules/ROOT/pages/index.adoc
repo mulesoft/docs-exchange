@@ -17,11 +17,24 @@ Exchange assets are accessible from many places, such as Anypoint Studio (connec
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
 == Agent Fabric Assets
-Agent Fabric assets include agentic assets and tools to provide support and automate tasks. You can find agent, LLM, and MCP server assets in the *Agents & Tools (New)* tab. 
+MuleSoft Agent Fabric is an enterprise platform for discovering, orchestrating, governing, and observing AI agents and tools. It serves as a central control plane and registry for agent assets in Anypoint Exchange. For more information, see xref:agent-fabric::index.adoc[Agent Fabric].
+
+The Agent Fabric registry contains AI assets, such as agents and tools. Find agent, LLM, and MCP server assets in the *Agents & Tools (New)* tab. 
 
 image:ex-agents-and-tools.png["Exchange catalog showing assets in Agents & Tools"]
 
-You create agent network projects in Anypoint Code Builder to define, validate, and publish brokers, LLMs, and MCP servers to allow agents to use the assets in your Agent Fabric. Anypoint Code Builder publishes agent network projects as assets to Exchange. Exchange tags them as brokers for identification. See xref:anypoint-code-builder::af-agent-networks.adoc[] in the Anypoint Code Builder documentation. 
+Add AI assets in one of these ways:
+
+* Register them manually.
+* Add MCP servers via URL.
+* Import agents using scanners.
+* Import Agentforce agents from Settings
+
+The agent registry in Exchange includes some hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry]. These assets are tagged as *Provider Managed* in the registry.
+
+Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, large language models (LLMs), and MCP servers. These projects enable agents to use assets in MuleSoft Agent Fabric.
+
+Anypoint Code Builder publishes agent network projects to Anypoint Exchange, where they are tagged as brokers. See xref:anypoint-code-builder::af-agent-networks.adoc[] in the Anypoint Code Builder documentation. 
 
 Agent Fabric assets follow the standard publishing workflow. See xref:workflow-sharing-assets.adoc[] for details.
 
@@ -84,6 +97,9 @@ To download files from Japan or Canada control planes, use these URLs:
 
 == See Also
 
+* xref:discovering-and-importing-external-agents.adoc[Discovering and Importing External Agents With Scanners]
+* xref:agent-fabric::index.adoc[Agent Fabric]
+* xref:anypoint-code-builder::af-agent-networks.adoc[Agent Network Projects]
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
 * https://forums.mulesoft.com[MuleSoft Forum]
 * https://help.mulesoft.com[MuleSoft Help Center]

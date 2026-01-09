@@ -1,0 +1,52 @@
+= Adding a Scanner for Amazon Bedrock 
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to sync agents from Amazon Bedrock into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding this scanner, make sure you have these permissions and access:
+
+* Exchange Administrator permission 
+* Policy permissions for scanning agents on Amazon Bedrock
+* Access keys for Amazon Bedrock
++
+See Amazon Bedrock documentation for adding policy permissions and creating access keys.
+
+==Add a Scanner for Amazon Bedrock 
+Add and configure a scanner to discover and import agents from Amazon Bedrock. You can schedule scans to run at specific intervals and choose whether to sync new agents automatically or require a review.
+
+Verify that you are in the business group where you want to add the scanner.
+
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Enter a name for the scanner.
+. From *Scheduled Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select Auto-resolve.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Agent Provider* |Select Amazon Bedrock.
+|*Authentication Method* |Select API key.
+|*Access Key ID* |Enter the access key ID.
+|*Secret Access Key* |Enter the secret access key.
+|*AWS Region* |Select a region.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.

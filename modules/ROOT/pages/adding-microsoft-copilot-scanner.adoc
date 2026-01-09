@@ -1,0 +1,50 @@
+= Adding a Scanner for Microsoft Azure Copilot
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add and configure a scanner to discover and import agents from Microsoft Azure Copilot. You can schedule scans to run at specific intervals.
+
+== Before You Begin
+Before adding this scanner, make sure you have these permissions and access:
+
+* Exchange Administrator permission 
+* Client ID and secret for Microsoft Azure Copilot
++
+See Microsoft Azure Copilot documentation for more information on how to get a client ID and secret.
+
+== Add a Scanner for Microsoft Azure Copilot
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Enter a name for the scanner.
+. From *Scheduled Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select Auto-resolve.
+|===
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Agent Provider* |Select Microsoft Azure Copilot.
+|*Authentication Method* |Select an option.
+|*Tenant ID* |Enter the tenant ID.
+|*Client ID* |Enter the client ID.
+|*Client Secret* |Enter the client secret.
+|*Scope* |Enter URL.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
