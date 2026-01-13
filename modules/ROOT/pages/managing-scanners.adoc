@@ -40,7 +40,7 @@ To see more information about a scanner and its scan details, from the sidebar i
 
 //Here's an example details page:
 
-The Actions menu on the scanner details page includes these options, depending on the scanner status:
+The *Actions* menu on the scanner details page includes these options, depending on the scanner status:
 
 [%header,cols="1,4"]
 |===
