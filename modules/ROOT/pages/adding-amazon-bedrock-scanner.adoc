@@ -3,18 +3,50 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to sync agents from Amazon Bedrock into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync agents from Amazon Bedrock into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
 Before adding this scanner, make sure you have these permissions and access:
 
 * Exchange Administrator permission 
-* Policy permissions for scanning agents on Amazon Bedrock
-* Access keys for Amazon Bedrock
-+
-See Amazon Bedrock documentation for adding policy permissions and creating access keys.
+* Exchange Administrator permission 
+Amazon Bedrock access key ID
+Amazon Bedrock secret Access Key
+You enter Amazon Bedrock credentials when you configure the scanner in Exchange. For more information, see the Amazon Bedrock documentation.
 
-==Add a Scanner for Amazon Bedrock 
+To create the inline policy, use this policy:
+
+[source,json]
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "BedrockAgentDiscoveryPermissions",
+			"Effect": "Allow",
+			"Action": [
+				"bedrock:ListAgents",
+				"bedrock:GetAgent",
+				"bedrock:ListAgentAliases",
+				"bedrock:GetAgentAlias",
+				"bedrock:InvokeModel",
+				"bedrock:InvokeAgent",
+				"bedrock:InvokeInlineAgent"
+			],
+			"Resource": "*"
+		}
+	]
+}
+
+[NOTE] Actions are optional during scanning, but required to run the agent. You can assign these actions to this policy or a separate one.
+
+[source,json]
+
+				"bedrock:InvokeModel",
+				"bedrock:InvokeAgent",
+				"bedrock:InvokeInlineAgent",
+
+
+== Add a Scanner for Amazon Bedrock 
 Add and configure a scanner to discover and import agents from Amazon Bedrock. You can schedule scans to run at specific intervals and choose whether to sync new agents automatically or require a review.
 
 Verify that you are in the business group where you want to add the scanner.
