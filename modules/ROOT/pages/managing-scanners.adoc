@@ -3,6 +3,19 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+To view and manage your agent scanners you added, click Agent Scanners in the sidebar of Exchange.
+
+You can perform these actions to manage scanners:
+
+Run a scanner
+View scanner details
+Abort a scan
+Delete a scanner
+Edit a scanner configuration
+View audit logs
+Delete missing agents manually
+
+
 == View Scanner Details
 View a list of scanners and the details about their scans. The Agent Scanner page shows a list of  scanners you added for the business group. The scanner details show information about the scanner, connection, last completed run, and scan history.
 

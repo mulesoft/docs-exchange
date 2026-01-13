@@ -58,6 +58,7 @@
 *** xref:adding-amazon-bedrock-scanner.adoc[]
 *** xref:adding-google-vertex-scanner.adoc[]
 *** xref:adding-microsoft-copilot-scanner.adoc[]
+*** xref:managing-scanners.adoc[]
 ** xref:importing-agentforce-agents.adoc[]
 ** xref:to-share-an-asset.adoc[]
  ** xref:managing-asset-deletion.adoc[]
