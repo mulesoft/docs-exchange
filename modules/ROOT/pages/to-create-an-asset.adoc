@@ -273,7 +273,7 @@ It's possible to have more than one LLM asset in your organization.
 == Create an MCP Server
 MCP servers provide the protocols and specifications for seamless integration between different AI systems and tools.
 
-MCP server schema files are in JSON format. They define the definition of the tools, the data structures they use, and authentication. Upload the schema file to use when creating an MCP server asset.
+MCP server schema files are in JSON format. They define the definition of the tools, the data structures they use, and authentication. Upload the schema file to use when creating an MCP server asset or use the MCP server’s URL to fetch the schema information.
 
 The minimum required property for an MCP server schema file is `transport` over SSE or HTTP. If you declare `capabilities`, you must have all four capability flags: `tools`, `resources`, `prompts`, and `logging`. If you provide `tools`, `resources`, or `prompts`, each must have name and identifier fields.
 
@@ -1053,13 +1053,22 @@ MuleSoft uses a customized, UTF‑8–compatible version of the official MCP sch
 }
 ----
 ====
-To create an MCP Server asset:
+To create an MCP server asset:
 
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . Select the *MCP* asset type from the dropdown list.
-. Click *Choose file* to upload a schema file in JSON format.
-. Enter the name of the platform and select it from the list.
+. To upload a schema file:
++
+.. From *Method*, select *Upload MCP file*.
+.. Click *Choose file* to upload a schema file in JSON format.
+. To use a URL to retrieve MCP schema information:
++
+.. From *Method*, select *Add by URL*.
+.. Enter the URL of the MCP server.
+.. To test the connection, click *Test Connection*.
+.. To view the schema, click *Preview*.
+. Enter the name of the platform and then select it from the list.
 . Select *Publish*.
 
 == Create an RPA Activity Template Asset
