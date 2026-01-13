@@ -30,7 +30,7 @@ Add AI assets in one of these ways:
 * Import agents using scanners.
 * Import Agentforce agents from Settings
 
-The agent registry in Exchange includes some hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry]. These assets are tagged as *Provider Managed* in the registry.
+Exchange automatically discovers, translates, and publishes hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry]. Exchange tags these assets as *Provider Managed*.
 
 Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, large language models (LLMs), and MCP servers. These projects enable agents to use assets in MuleSoft Agent Fabric.
 
