@@ -17,7 +17,6 @@ You can perform these actions to manage scanners:
 
 == Run a Scanner
 Run the scanner manually to capture new agents and add them to Exchange. 
-
 Scanners run once daily and retrieve up to 10,000 agents per scan, with a maximum runtime of 1 hour. Exchange retains scan logs and statuses for at least 90 days, and never deletes the most recent run. Run one scan at a time for each agent provider.
 
 . From the sidebar in Exchange, click *Agent Scanners*.
@@ -26,7 +25,7 @@ Scanners run once daily and retrieve up to 10,000 agents per scan, with a maximu
 The scan waits in the queue until the current scan finishes.
 
 == View Scanner Details
-View a list of scanners and the details about their scans. The *Agent Scanner* page shows a list of  scanners you added for the business group. The scanner details show information about the scanner, connection, last completed run, and scan history.
+View a list of scanners and the details about their scans. The *Agent Scanners* page shows a list of  scanners you added for the business group. The scanner details show information about the scanner, connection, last completed run, and scan history.
 
 Scanner statuses are:
 
@@ -55,7 +54,7 @@ The Actions menu on the scanner details page includes these options, depending o
 |===
 
 == Abort Scans
-Abort scans for a scanner when it’s status is queued, running, or importing. When the  scan is aborted, the status is updated to stopped.
+Abort scans for a scanner when its status is queued, running, or importing. When the  scan is aborted, the status is updated to stopped.
 
 * To abort a scan from the Agent Scanners page:
 +
@@ -65,7 +64,7 @@ Abort scans for a scanner when it’s status is queued, running, or importing. W
 * To abort a scan from the scanner details page, click *Actions* and then select *Abort Scan*. 
 
 == Delete a Scanner
-Delete unused scanners when it’s status is scheduled, paused or stopped. Imported assets remain in Exchange.
+Delete unused scanners when its status is scheduled, paused or stopped. Imported assets remain in Exchange.
 
 * To abort a scan from the Agent Scanners page:
 +
@@ -74,7 +73,7 @@ Delete unused scanners when it’s status is scheduled, paused or stopped. Impor
 . Select an option for imported agents and click Delete.
 
 == Edit Scanner Configuration
-Edit the configuration settings for a scanner when it’s status is scheduled, paused, or stopped.
+Edit the configuration settings for a scanner when its status is scheduled, paused, or stopped.
 
 To edit a scanner from the Agent Scanners page:
 +
@@ -95,9 +94,9 @@ View audit logs for scanners. In the audit log, view scan details, such as agent
 . From the sidebar in Exchange, click *Agent Scanners*.
 . Find and select the scanner in the list.
 . Select an event from *Scan History*. 
-. To view imported agents, select the *Imported* tab
+. To view imported agents, select the *Imported* tab.
 . To view updated agents with newer versions available, select the *Updated* tab.
-. To view agents removed from Exchange because they’re missing from the provider,  select the *Removed* tab.
+. To view agents removed from Exchange because they’re missing from the provider, select the *Removed* tab.
 . To view agents that are found in the agent provider’s system and already in Exchange, select the *Already in Exchange* tab.
 
 == Delete Missing Agents
