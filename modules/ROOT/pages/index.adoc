@@ -23,18 +23,24 @@ The Agent Fabric registry contains AI assets, such as agents and tools. Find age
 
 image:ex-agents-and-tools.png["Exchange catalog showing assets in Agents & Tools"]
 
-Add AI assets in one of these ways:
+AI assets are added to the registry via these methods:
 
-* Register them manually.
-* Add MCP servers via URL.
-* Import agents using scanners.
-* Import Agentforce agents from Settings
-
+* xref:to-create-an-asset.adoc[Registering them manually].
++
+Manually create and publish assets directly in Exchange.
+* xref:discovering-and-importing-external-agents.adoc[Importing agents using scanners].
++
+Discover and import agents from external providers into Exchange using scanners.
+* xref:importing-agentforce-agents.adoc[Importing Agentforce agents from Settings]
++
+Import Agentforce agents from Salesforce into Exchange from Settings.
+* xref:to-create-an-asset.adoc[Syncing MCP servers from the official MCP registry].
++
 Exchange automatically discovers, translates, and publishes hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry]. Exchange tags these assets as *Provider Managed*.
 
-Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, large language models (LLMs), and MCP servers. These projects enable agents to use assets in MuleSoft Agent Fabric.
-
-Anypoint Code Builder publishes agent network projects to Anypoint Exchange, where they are tagged as brokers. See xref:anypoint-code-builder::af-agent-networks.adoc[] in the Anypoint Code Builder documentation. 
+* xref:anypoint-code-builder::af-agent-networks.adoc[Creating agent network projects in Anypoint Code Builder and publishing them to Exchange].
++
+Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, large language models (LLMs), and MCP servers. These projects enable agents to use assets in MuleSoft Agent Fabric. Anypoint Code Builder publishes agent network projects to Anypoint Exchange, where they are tagged as *brokers*.  
 
 Agent Fabric assets follow the standard publishing workflow. See xref:workflow-sharing-assets.adoc[] for details.
 
