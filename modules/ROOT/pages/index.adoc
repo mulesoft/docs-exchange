@@ -34,15 +34,13 @@ Discover and import agents from external providers into Exchange using scanners.
 * xref:importing-agentforce-agents.adoc[Importing Agentforce agents from Settings]
 +
 Import Agentforce agents from Salesforce into Exchange from Settings.
-* xref:to-create-an-asset.adoc[Syncing MCP servers from the official MCP registry].
+* Syncing MCP servers from the official MCP registry.
 +
-Exchange automatically discovers, translates, and publishes hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry]. Exchange tags these assets as *Provider Managed*.
+Exchange automatically discovers, translates, and publishes publicly hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry]. Exchange tags these assets as *Provider Managed*.
 
 * xref:anypoint-code-builder::af-agent-networks.adoc[Creating agent network projects in Anypoint Code Builder and publishing them to Exchange].
 +
 Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, large language models (LLMs), and MCP servers. These projects enable agents to use assets in MuleSoft Agent Fabric. Anypoint Code Builder publishes agent network projects to Anypoint Exchange, where they are tagged as *brokers*.  
-
-Agent Fabric assets follow the standard publishing workflow. See xref:workflow-sharing-assets.adoc[] for details.
 
 == Anypoint Exchange Spotlight Video
 
@@ -51,7 +49,6 @@ Watch the Anypoint Exchange Product Spotlight video to see a quick overview of E
 ++++
 include::_partials/exchange-spotlight-video.html[]
 ++++
-
 
 == View Assets by Business Group
 
