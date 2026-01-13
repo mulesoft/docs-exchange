@@ -26,14 +26,14 @@ You enter these Google Vertex AI credentials when you configure the scanner in E
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and time.
-|*Sync Review* |Select Auto-resolve.
+|*Sync Review* |Select *Auto-resolve*.
 |===
 . From *Connection Configuration*, complete these fields:
 +
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select Microsoft Azure Copilot.
+|*Agent Provider* |Select *Microsoft Azure Copilot*.
 |*Authentication Method* |Select an option.
 |*Tenant ID* |Enter the tenant ID.
 |*Client ID* |Enter the client ID.

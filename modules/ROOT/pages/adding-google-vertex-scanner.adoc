@@ -34,8 +34,8 @@ You enter the Microsoft Azure Copilot credentials when you configure the scanner
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select Google Vertex AI.
-|*Authentication Method* |Select Service Account.
+|*Agent Provider* |Select *Google Vertex AI*.
+|*Authentication Method* |Select *Service Account*.
 |*Account Email* |Enter the email address.
 |*Project ID* |Enter the project ID.
 |*Secret Access Key* |Enter the access key.

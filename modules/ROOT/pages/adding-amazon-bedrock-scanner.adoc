@@ -67,8 +67,8 @@ Verify that you are in the business group where you want to add the scanner.
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select Amazon Bedrock.
-|*Authentication Method* |Select API key.
+|*Agent Provider* |Select *Amazon Bedrock*.
+|*Authentication Method* |Select *API key*.
 |*Access Key ID* |Enter the access key ID.
 |*Secret Access Key* |Enter the secret access key.
 |*AWS Region* |Select a region.
