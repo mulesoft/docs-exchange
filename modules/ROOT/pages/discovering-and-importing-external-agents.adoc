@@ -36,4 +36,3 @@ Make sure you have these permissions and access:
 
 * You must have the Exchange Administrator permission to add and manage scanners.
 * Verify that you are in the business group where you want to add the scanner.
-

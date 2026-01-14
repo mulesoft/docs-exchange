@@ -58,7 +58,7 @@ Verify that you are in the business group where you want to add the scanner.
 [%header,cols="1,4"]
 |===
 |*Field/Option* |*Value*
-|*Run Schedule* |Select a frequency and time.
+|*Run Schedule* |Select a frequency and time in UTC.
 |*Sync Review* |Select Auto-resolve.
 |===
 

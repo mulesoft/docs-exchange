@@ -25,7 +25,7 @@ You enter these Google Vertex AI credentials when you configure the scanner in E
 [%header,cols="1,4"]
 |===
 |*Field/Option* |*Value*
-|*Run Schedule* |Select a frequency and time.
+|*Run Schedule* |Select a frequency and time in UTC.
 |*Sync Review* |Select *Auto-resolve*.
 |===
 . From *Connection Configuration*, complete these fields:
