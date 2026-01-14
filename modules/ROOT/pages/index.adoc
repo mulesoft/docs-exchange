@@ -14,7 +14,11 @@ Use Exchange to discover, share, and incorporate assets and resources into your 
 Exchange assets are accessible from many places, such as Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). You can publish assets from agent network projects such as agents, brokers, and MCP servers, as well as APIs from Anypoint Code Builder and Design Center to Exchange.
 
 == MuleSoft Assets
-Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
+Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. 
+
+Exchange automatically discovers, translates, and publishes publicly hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry] into Provided by MuleSoft. Exchange tags these assets as *Provider Managed*. These assets are also to all customers. 
+
+However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
 == Agent Fabric Assets
 MuleSoft Agent Fabric is an enterprise platform for discovering, orchestrating, governing, and observing AI agents and tools. It serves as a central control plane and registry for agent assets in Anypoint Exchange. For more information, see xref:agent-fabric::index.adoc[Agent Fabric].
@@ -34,9 +38,6 @@ Discover and import agents from external providers into Exchange using scanners.
 * xref:importing-agentforce-agents.adoc[Importing Agentforce agents from Settings]
 +
 Import Agentforce agents from Salesforce into Exchange from Settings.
-* Syncing MCP servers from the official MCP registry.
-+
-Exchange automatically discovers, translates, and publishes publicly hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry]. Exchange tags these assets as *Provider Managed*.
 
 * xref:anypoint-code-builder::af-agent-networks.adoc[Creating agent network projects in Anypoint Code Builder and publishing them to Exchange].
 +

@@ -37,10 +37,3 @@ Make sure you have these permissions and access:
 * You must have the Exchange Administrator permission to add and manage scanners.
 * Verify that you are in the business group where you want to add the scanner.
 
-== Add a Scanner
-
-. In Exchange, click *Settings* > *Agent Scanners*.
-. Click *Add Scanner*.
-. Select the agent provider.
-. Configure the connection and email notifications.
-. Click *Save*.

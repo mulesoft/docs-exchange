@@ -1070,6 +1070,7 @@ To create an MCP server asset:
 .. To view the schema, click *Preview*.
 . Enter the name of the platform and then select it from the list.
 . Select *Publish*.
+. To create an instance of this asset, click *Instances* in the sidebar.
 
 == Create an RPA Activity Template Asset
 Activity templates are reusable code within RPA that standardize the most used activity steps and make them available to other developers in the organization. These templates are `.cawl` files that are imported in the RPA Activity library for developers to use as part of their RPA processes.
