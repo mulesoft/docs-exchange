@@ -1064,8 +1064,9 @@ To create an MCP server asset:
 .. Click *Choose file* to upload a schema file in JSON format.
 . To use a URL to retrieve MCP schema information:
 +
-.. From *Method*, select *Add by URL*.
+.. From *Method*, select *Fetch MCP URL*.
 .. Enter the URL of the MCP server.
+.. If required, enter the asset credentials.
 .. To test the connection, click *Test Connection*.
 .. To view the schema, click *Preview*.
 . Enter the name of the platform and then select it from the list.

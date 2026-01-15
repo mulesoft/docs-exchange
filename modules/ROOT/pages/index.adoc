@@ -16,7 +16,7 @@ Exchange assets are accessible from many places, such as Anypoint Studio (connec
 == MuleSoft Assets
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. 
 
-Exchange automatically discovers, translates, and publishes publicly hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry] into Provided by MuleSoft. Exchange tags these assets as *Provider Managed*. These assets are also to all customers. 
+Exchange automatically discovers, translates, and publishes publicly hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry] into *Provided by MuleSoft*. Exchange tags these assets as *Provider Managed*. These assets are also available to all customers. 
 
 However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
