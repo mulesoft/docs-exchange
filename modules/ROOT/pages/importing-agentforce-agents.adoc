@@ -23,6 +23,6 @@ Accept the terms and conditions and set a default organization for Einstein.
 . Select *Settings* from the navigation bar and select the *Asset import* tab.
 . From *Settings* in Exchange, click *Import* and click *Confirm*.
 +
-Agentagents are imported in the current business group.
+Agents are imported in the current business group.
 . Close the dialog and refresh the page after a few minutes.
 . Verify that the Agentforce agents are listed in the Exchange catalog on the *Agents & Tools* page.
