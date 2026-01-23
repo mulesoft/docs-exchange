@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
-:page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
+:page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc, about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
 
 Anypoint Exchange is a curated catalog of reusable assets. Agents, APIs, API groups, API spec fragments, custom assets, examples, GraphQL APIs, large language models (LLMs), Model Control Protocol (MCP) servers, integration assets such as connectors, policies, RPA assets, rulesets, and templates are some of the types that are supported in Exchange. See xref:asset-types.adoc[Asset Types] for more information about each type of asset. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
 
@@ -14,16 +14,34 @@ Use Exchange to discover, share, and incorporate assets and resources into your 
 Exchange assets are accessible from many places, such as Anypoint Studio (connectors, templates, and examples), API Manager (APIs, API groups, and policies), or Runtime Manager (applications). You can publish assets from agent network projects such as agents, brokers, and MCP servers, as well as APIs from Anypoint Code Builder and Design Center to Exchange.
 
 == MuleSoft Assets
-Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
+Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. 
+
+Exchange automatically discovers, translates, and publishes publicly hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry] into *Provided by MuleSoft*. Exchange labels these assets as *Publicly Available*. Find the assets using the *provider-managed* tag. These assets are maintained by their original providers, not by MuleSoft. When you create an instance from publicly available assets, the instance is created within your private organization in Exchange and managed like any other instance in API Manager. You can also request access to running instances from publicly available assets.
+ 
+However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
 == Agent Fabric Assets
-Agent Fabric assets include agentic assets and tools to provide support and automate tasks. You can find agent, LLM, and MCP server assets in the *Agents & Tools (New)* tab. 
+Agent Fabric is an enterprise platform for discovering, orchestrating, governing, and observing AI agents and tools. It serves as a central control plane and registry for agent assets in Anypoint Exchange.
+The registry contains AI assets, including agents, Large Language Models (LLMs), and Model Context Protocol (MCP) servers. Find these assets on the *Agents & Tools* tab. For more information, see xref:agent-fabric::index.adoc[].
+
 
 image:ex-agents-and-tools.png["Exchange catalog showing assets in Agents & Tools"]
 
-You create agent network projects in Anypoint Code Builder to define, validate, and publish brokers, LLMs, and MCP servers to allow agents to use the assets in your Agent Fabric. Anypoint Code Builder publishes agent network projects as assets to Exchange. Exchange tags them as brokers for identification. See xref:anypoint-code-builder::af-agent-networks.adoc[] in the Anypoint Code Builder documentation. 
+You create agent network projects in Anypoint Code Builder to define, validate, and publish brokers, LLMs, and MCP servers to allow agents to use the assets in your Agent Fabric. Anypoint Code Builder publishes agent network projects and their associated assets to Exchange. Exchange tags them as *brokers* for identification. See xref:anypoint-code-builder::af-agent-networks.adoc[] in the Anypoint Code Builder documentation. 
 
-Agent Fabric assets follow the standard publishing workflow. See xref:workflow-sharing-assets.adoc[] for details.
+AI assets are added to the registry via these methods:
+
+* xref:to-create-an-asset.adoc[Registering them manually].
++
+Manually create and publish assets directly in Exchange. For MCPs, enter an MCP server URL or load a schema from a file.
++
+* xref:importing-agentforce-agents.adoc[Importing Agentforce agents from Settings]
++
+Import Agentforce agents from Salesforce into Exchange from Settings.
+
+* xref:anypoint-code-builder::af-agent-networks.adoc[Creating agent network projects in Anypoint Code Builder and publishing them to Exchange].
++
+Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, agents, large language models (LLMs), and MCP servers. Anypoint Code Builder publishes agent network projects and their associated assets to the agent registry in Exchange with a *Broker* label. 
 
 == Anypoint Exchange Spotlight Video
 
@@ -50,11 +68,11 @@ If you can't find an asset in the current business group scopes, search in other
 
 You can get started either by searching for an existing asset or creating a new one.
 
-. From https://anypoint.mulesoft.com/exchange/[Exchange], either search by type of assets or enter the name of a known asset in the *Search assets* field.
+. From https://anypoint.mulesoft.com/exchange/[Exchange], either search by asset type or enter the name of a known asset in the *Search assets* field.
 . Select an asset from the search results view.
 . Review the description of the asset.
 
-To create assets, log into Exchange, then see xref:workflow-sharing-assets.adoc[Workflow: Publish Assets] for more information.
+To create assets, log in to Exchange, then see xref:workflow-sharing-assets.adoc[Workflow: Publish Assets] for more information.
 
 == Test APIs
 

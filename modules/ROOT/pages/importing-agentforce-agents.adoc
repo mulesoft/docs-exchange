@@ -14,15 +14,15 @@ Imported Agentforce agents appear in *Agents & Tools*.
 Before importing Agentforce agents, complete these requirements:
 
 * xref:access-management::managing-connected-salesforce-orgs.adoc#enable-disable-connection[Enable the connection to a Salesforce organization] that has an established tenant relationship with your Anypoint Platform organization.
-* xref:access-management::enabling-einstein.adoc[Enable Einstein in Anypoint]
+* xref:access-management::enabling-einstein.adoc[Enable Einstein in Anypoint Platform]
 +
 Accept the terms and conditions and set a default organization for Einstein.
 
 == Import Agentforce Agents
 
-. Select *Settings* from the navigation bar and select the *Asset import* tab.
-. From *Settings* in Exchange, click *Import* and click *Confirm*.
+. Select *Settings* from the sidebar and then select the *Asset Import* tab.
+. Click *Import Agents* and then click *Confirm*.
 +
-Agentagents are imported in the current business group.
+Agents are imported in the current business group.
 . Close the dialog and refresh the page after a few minutes.
 . Verify that the Agentforce agents are listed in the Exchange catalog on the *Agents & Tools* page.
