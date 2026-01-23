@@ -18,7 +18,6 @@ Assets in the *Provided by MuleSoft* organization are created by MuleSoft and it
 
 Exchange automatically discovers, translates, and publishes publicly hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry] into *Provided by MuleSoft*. Exchange labels these assets as *Publicly Available*. Find the assets using the *provider-managed* tag. These assets are maintained by their original providers, not by MuleSoft. When you create an instance from publicly available assets, the instance is created within your private organization in Exchange and managed like any other instance in API Manager. You can also request access to running instances from publicly available assets.
  
-
 However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
 == Agent Fabric Assets
