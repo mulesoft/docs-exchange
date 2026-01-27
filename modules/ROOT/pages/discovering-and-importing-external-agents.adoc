@@ -5,12 +5,14 @@ endif::[]
 
 
 Use agent scanners to automatically discover and import agents from outside Anypoint Platform. Scanners inspect agent ecosystems on diverse platforms to provide enterprise-grade governance and visibility through MuleSoft Agent Fabric. They extract metadata from agents and tools and synchronize the information with the Agent Fabric registry in Anypoint Exchange.
+
 Create a scanner to connect to external provider platforms and transform native metadata into the canonical Agent-to-Agent (A2A) format. You can review, select, and add discovered agents into the registry. The system detects updates and resolves conflicts to maintain a single source of truth. This secure, metadata-first integration operates as a read-only mechanism to avoid complexity and permission challenges in external systems.
 
 Add and configure a scanner to discover and import agents. Schedule daily scans, and configure the connection and email notifications.
 
-Scanners add supported agents to Agents & Tools as agent asset types or A2A. They detect new agents, identify metadata updates, flag missing agents, and provide a side-by-side comparison of changes. Subsequent scans do not preserve metadata changes or manual deletions. To retain changes, update the provider source.
-After you add a scanner to a business group, you can't move the scanner or its assets to another group. View a list of scanners on the Agent Scanners page. The list displays information about the scanner status, name, agent provider, the last run status, the next run, and the added agents.
+Scanners add supported agents to *Agents & Tools* as agent asset types. They detect new agents, identify metadata updates, flag missing agents, and provide a side-by-side comparison of changes. Subsequent scans overwrite metadata changes and restore agents deleted from Exchange. To retain changes, update the asset in the agent provider‘s source.
+
+After you add a scanner to a business group, you can't move the scanner or its assets to another group. View a list of scanners on the *Agent Scanners* page. The list displays information about the scanner status, name, agent provider, the last run status, the next run, and the added agents.
 
 Agent Scanner supports these providers:
 
@@ -20,16 +22,18 @@ Agent Scanner supports these providers:
 
 == Security and Data Retention
 
-Agents added by scanners generate read-only, system-level credentials. The system stores sensitive material, such as API keys and tokens, securely stored in Anypoint Security secrets manager. 
-
+Agent scanners register agent assets as read-only because the data originated from the agent provider’s platform. Sensitive information, such as API keys and tokens, are securely stored in Anypoint Security secrets manager. To maintain compliance, create credentials with limited permissions. Scanners don't write data to your source system, but read-only access ensures the highest security.
 
 The system retains scan logs and statuses for at least 90 days and never deletes the most recent successful run. 
 
 Scanners enforce these limits:
 
 * Frequency: Once daily
-* Retrieval: 10,000 agents per runtime
-* Runtime: 6 hour
+* Retrieval: 1,2000 agents per runtime limit
+* Runtime: 6 hours
++
+If a scan exceeds the runtime limit, the scanner saves the progress and continues the scan the next time it runs.
+
 
 == Before You Begin Adding a Scanner
 
