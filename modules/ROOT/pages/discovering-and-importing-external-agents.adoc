@@ -20,15 +20,16 @@ Agent Scanner supports these providers:
 
 == Security and Data Retention
 
-Agents added by scanners generate read-only, system-level credentials. The system stores sensitive material, such as API keys and tokens, in an external secret store separate from configurations.
+Agents added by scanners generate read-only, system-level credentials. The system stores sensitive material, such as API keys and tokens, securely stored in Anypoint Security secrets manager. 
 
-The system retains scan logs and statuses for at least 90 days and never deletes the most recent run. 
+
+The system retains scan logs and statuses for at least 90 days and never deletes the most recent successful run. 
 
 Scanners enforce these limits:
 
 * Frequency: Once daily
-* Retrieval: 10,000 agents per scan
-* Runtime: 1 hour
+* Retrieval: 10,000 agents per runtime
+* Runtime: 6 hour
 
 == Before You Begin Adding a Scanner
 

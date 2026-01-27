@@ -9,11 +9,11 @@ Add a scanner to sync agents from Google Vertex AI into Exchange. Then you can g
 Before adding this scanner, make sure you have this permission and credentials:
 
 * Exchange Administrator permission 
-* Microsoft Azure Copilot tenant ID
-* Microsoft Azure Copilot client ID 
-* Microsoft Azure Copilot client secret 
+* Google Vertex AI project ID
+* Google Vertex AI secret access key
 +
-You enter the Microsoft Azure Copilot credentials when you configure the scanner in Exchange. For more information, see the Microsoft Azure Copilot documentation.
+You enter these Google Vertex AI credentials when you configure the scanner in Exchange. For more information about creating a service account key, see Google Vertex AI documentation.
+
 
 == Add a Scanner for Google Vertex AI
 

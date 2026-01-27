@@ -9,9 +9,10 @@ Add a scanner to discover, import, and sync agents from Amazon Bedrock into Exch
 Before adding this scanner, make sure you have these permissions and access:
 
 * Exchange Administrator permission 
+* Knowledge about the Amazon Web Services region where the agents are deployed.
 * Exchange Administrator permission 
 Amazon Bedrock access key ID
-Amazon Bedrock secret Access Key
+Amazon Bedrock secret access key
 You enter Amazon Bedrock credentials when you configure the scanner in Exchange. For more information, see the Amazon Bedrock documentation.
 
 To create the inline policy, use this policy:
@@ -28,22 +29,19 @@ To create the inline policy, use this policy:
 				"bedrock:GetAgent",
 				"bedrock:ListAgentAliases",
 				"bedrock:GetAgentAlias",
-				"bedrock:InvokeModel",
+				"bedrock:ListAgentVersions",
+				"bedrock:GetAgentVersion",
+		"bedrock:InvokeModel",
 				"bedrock:InvokeAgent",
 				"bedrock:InvokeInlineAgent"
+
 			],
 			"Resource": "*"
 		}
 	]
 }
 
-[NOTE] Actions are optional during scanning, but required to run the agent. You can assign these actions to this policy or a separate one.
-
-[source,json]
-
-				"bedrock:InvokeModel",
-				"bedrock:InvokeAgent",
-				"bedrock:InvokeInlineAgent",
+* To ensure the scanner discovers the agent, assign an alias and link it to a version. The scanner ignores agents without an invocable URL.
 
 
 == Add a Scanner for Amazon Bedrock 
@@ -68,7 +66,7 @@ Verify that you are in the business group where you want to add the scanner.
 |===
 |*Field* |*Value*
 |*Agent Provider* |Select *Amazon Bedrock*.
-|*Authentication Method* |Select *API key*.
+|*Authentication Method* |Select *Access key*.
 |*Access Key ID* |Enter the access key ID.
 |*Secret Access Key* |Enter the secret access key.
 |*AWS Region* |Select a region.

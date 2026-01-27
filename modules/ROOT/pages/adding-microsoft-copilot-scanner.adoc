@@ -6,13 +6,15 @@ endif::[]
 Add and configure a scanner to discover and import agents from Microsoft Azure Copilot. You can schedule scans to run at specific intervals.
 
 == Before You Begin
-Before adding this scanner, make sure you have these permission and credentials:
+Before adding this scanner, make sure you have the permission and credentials:
 
 * Exchange Administrator permission 
-* Google Vertex AI project ID
-* Google Vertex AI secret access key
+* Microsoft Azure Copilot tenant ID
+* Microsoft Azure Copilot client ID 
+* Microsoft Azure Copilot client secret 
 +
-You enter these Google Vertex AI credentials when you configure the scanner in Exchange. For more information about creating a service account key, see Google Vertex AI documentation.
+You enter the Microsoft Azure Copilot credentials when you configure the scanner in Exchange. For more information, see the Microsoft Azure Copilot documentation.
+
 
 
 == Add a Scanner for Microsoft Azure Copilot
@@ -38,7 +40,7 @@ You enter these Google Vertex AI credentials when you configure the scanner in E
 |*Tenant ID* |Enter the tenant ID.
 |*Client ID* |Enter the client ID.
 |*Client Secret* |Enter the client secret.
-|*Scope* |Enter URL.
+|*Scope* |Enter the URL.
 |===
 
 . Click *Test Connection*.
