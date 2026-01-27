@@ -17,7 +17,7 @@ You can perform these actions to manage scanners:
 
 == Run a Scanner
 Run the scanner manually to capture new agents and add them to Exchange. 
-Scanners run once daily and retrieve up to 10,000 agents per scan, with a maximum runtime of 1 hour. Exchange retains scan logs and statuses for at least 90 days, and never deletes the most recent run. Run one scan at a time for each agent provider.
+Scanners run once daily and retrieve up to 1,200 agents per scan, with a maximum runtime of 6 hours. Exchange retains scan logs and statuses for at least 90 days, and never deletes the most recent run. Run one scan at a time for each agent provider.
 
 . From the sidebar in Exchange, click *Agent Scanners*.
 . Find the scanner in the list, click the more options icon, and then select *Run Now*.
@@ -64,16 +64,16 @@ Abort scans for a scanner when its status is queued, running, or importing. When
 * To abort a scan from the scanner details page, click *Actions* and then select *Abort Scan*. 
 
 == Delete a Scanner
-Delete unused scanners when its status is scheduled, paused or stopped. Imported assets remain in Exchange.
+Delete unused scanners when its status is scheduled, paused or stopped. Choose whether to keep or delete the agents associated with the scanner. Imported assets remain in Exchange if instances exist in API Manager.
 
 * To abort a scan from the Agent Scanners page:
 +
 . From the sidebar in Exchange, click Agent Scanners.
 . Find the scanner in the list, click, and then select Delete Scanner.
-. Select an option for imported agents and click Delete.
+. Choose whether to keep or delete imported agents and click Delete.
 
 == Edit Scanner Configuration
-Edit the configuration settings for a scanner when its status is scheduled, paused, or stopped.
+Edit settings for a scanner with a status of scheduled, paused, or stopped, and turn scheduled scans on or off.
 
 To edit a scanner from the Agent Scanners page:
 +
@@ -98,18 +98,4 @@ View audit logs for scanners. In the audit log, view scan details, such as agent
 . To view updated agents with newer versions available, select the *Updated* tab.
 . To view agents removed from Exchange because they’re missing from the provider, select the *Removed* tab.
 . To view agents that are found in the agent provider’s system and already in Exchange, select the *Already in Exchange* tab.
-
-== Delete Missing Agents
-If a sync from Exchange doesn’t remove the agent from Exchange that no longer exists in the agent provider’s system, manually delete the agent from Exchange to keep the registry current. For more information, see xref:to-delete-asset.adoc[Deleting an Asset]                                     
-
-If you delete an agent that still exists in the agent provider’s system, the next scan adds the agent back to Exchange. To permanently remove an agent, remove it from the agent provider.
-
-
-
-
-
-
-
-
-
 
