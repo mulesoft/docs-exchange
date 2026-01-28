@@ -8,11 +8,13 @@ Use agent scanners to automatically discover and import agents from outside Anyp
 
 Create a scanner to connect to external provider platforms and transform native metadata into the canonical Agent-to-Agent (A2A) format. You can review, select, and add discovered agents into the registry. The system detects updates and resolves conflicts to maintain a single source of truth. This secure, metadata-first integration operates as a read-only mechanism to avoid complexity and permission challenges in external systems.
 
-Add and configure a scanner to discover and import agents. Schedule daily scans, and configure the connection and email notifications.
+Add and configure a scanner to discover and import agents. Schedule scans to run at specific intervals and configure the connection and email notifications. After a scan is complete, view a summary of added agents and the scan history.
 
-Scanners add supported agents to *Agents & Tools* as agent asset types. They detect new agents, identify metadata updates, flag missing agents, and provide a side-by-side comparison of changes. Subsequent scans overwrite metadata changes and restore agents deleted from Exchange. To retain changes, update the asset in the agent provider‘s source.
+Scanners add supported agents to *Agents & Tools* as agent asset types. They detect new and missing agents and identify metadata updates. Subsequent scans overwrite metadata changes and restore agents deleted from Exchange. To retain changes, update the asset in the agent provider‘s source.
 
 After you add a scanner to a business group, you can't move the scanner or its assets to another group. View a list of scanners on the *Agent Scanners* page. The list displays information about the scanner status, name, agent provider, the last run status, the next run, and the added agents.
+
+image:agent-scanner-list.png["Agent Scanners page showing a list of scanners]
 
 Agent Scanner supports these providers:
 
