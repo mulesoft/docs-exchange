@@ -13,7 +13,6 @@ You can perform these actions to manage scanners:
 * Delete a scanner
 * Edit a scanner configuration
 * View audit logs
-* Delete missing agents manually
 
 == Run a Scanner
 Run the scanner manually to capture new agents and add them to Exchange. 
@@ -22,6 +21,7 @@ Scanners run once daily and retrieve up to 1,200 agents per scan, with a maximum
 . From the sidebar in Exchange, click *Agent Scanners*.
 . Find the scanner in the list, click the more options icon, and then select *Run Now*.
 +
+image:agent-scanner-menu.png["Run Now option in the more options menu"]
 The scan waits in the queue until the current scan finishes.
 
 == View Scanner Details

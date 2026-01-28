@@ -14,7 +14,7 @@ Scanners add supported agents to *Agents & Tools* as agent asset types. They det
 
 After you add a scanner to a business group, you can't move the scanner or its assets to another group. View a list of scanners on the *Agent Scanners* page. The list displays information about the scanner status, name, agent provider, the last run status, the next run, and the added agents.
 
-image:agent-scanner-list.png["Agent Scanners page showing a list of scanners]
+image:agent-scanner-list.png["Agent Scanners page showing a list of scanners"]
 
 Agent Scanner supports these providers:
 
@@ -39,7 +39,7 @@ If a scan exceeds the runtime limit, the scanner saves the progress and continue
 
 == Before You Begin Adding a Scanner
 
-Make sure you have these permissions and access:
+Make sure you have this permissions and access:
 
 * You must have the Exchange Administrator permission to add and manage scanners.
 * Verify that you are in the business group where you want to add the scanner.
