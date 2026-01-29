@@ -6,7 +6,7 @@ endif::[]
 Add a scanner to discover, import, and sync agents from Amazon Bedrock into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission and these Amazon Bedrock credentials:
+Before adding the scanner, verify that you have the permission, context, and these Amazon Bedrock credentials:
 
 * Exchange Administrator permission 
 * Knowledge about the Amazon Web Services region where the agents are deployed.
