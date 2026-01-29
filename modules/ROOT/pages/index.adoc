@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
 
-Anypoint Exchange is a curated catalog of reusable assets. See xref:asset-types.adoc[Asset Types] for more information about each type of asset that is supported. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
+Anypoint Exchange is a curated catalog of reusable assets. See xref:asset-types.adoc[Asset Types] for more information about each type of asset that's supported. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
 
 image:exchange-landing-page.png["Exchange catalog showing assets provided by MuleSoft"]
 
@@ -16,8 +16,8 @@ Exchange assets are accessible from many places, such as Anypoint Studio (connec
 == MuleSoft Assets
 Assets in the *Provided by MuleSoft* organization are created by MuleSoft and its partners and certified by MuleSoft. These assets are publicly available to all customers. 
 
-Exchange automatically discovers, translates, and publishes publicly hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry] into *Provided by MuleSoft*. Exchange tags these assets as *Provider Managed*. These assets are also available to all customers. 
-
+Exchange automatically discovers, translates, and publishes publicly hosted MCP servers from the https://registry.modelcontextprotocol.io/[official MCP registry] into *Provided by MuleSoft*. Exchange labels these assets as *Publicly Available*. Find the assets using the *provider-managed* tag. These assets are maintained by their original providers, not by MuleSoft. When you create an instance from publicly available assets, the instance is created within your private organization in Exchange and managed like any other instance in API Manager. You can also request access to running instances from publicly available assets.
+ 
 However, assets that are created by an organization other than *Provided by MuleSoft* and published in that organization's instance of Exchange are private and not visible outside that organization. Customers are responsible for any private assets they publish within their Exchange instance.
 
 == Agent Fabric Assets
@@ -41,7 +41,7 @@ Import Agentforce agents from Salesforce into Exchange from Settings.
 
 * xref:anypoint-code-builder::af-agent-networks.adoc[Creating agent network projects in Anypoint Code Builder and publishing them to Exchange].
 +
-Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, large language models (LLMs), and MCP servers. These projects enable agents to use assets in MuleSoft Agent Fabric. Anypoint Code Builder publishes agent network projects to Anypoint Exchange, where they are tagged as *brokers*.  
+Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, agents, large language models (LLMs), and MCP servers. Anypoint Code Builder publishes agent network projects and their associated assets to the agent registry in Exchange with a *Broker* label. 
 
 == Anypoint Exchange Spotlight Video
 

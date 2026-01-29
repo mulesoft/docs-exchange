@@ -12,8 +12,7 @@ Before adding the scanner, verify that you have the permission and these Google 
 * Google Vertex AI project ID
 * Google Vertex AI secret access key
 +
-You enter these Google Vertex AI credentials when you configure the scanner in Exchange. For more information about creating a service account key, see Google Vertex AI documentation.
-
+You enter these Google Vertex AI credentials when configuring the scanner in Exchange. For more information about creating a service account key, see Google Vertex AI documentation.
 
 == Add a Scanner for Google Vertex AI
 
@@ -50,4 +49,3 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 .. Select *Advanced Settings* and turn on *Send Email Notifications*.
 .. Enter an email address.
 . Click *Add Scanner*.
-

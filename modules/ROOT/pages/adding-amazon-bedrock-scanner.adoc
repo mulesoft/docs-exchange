@@ -13,7 +13,7 @@ Before adding the scanner, verify that you have the permission and these Amazon 
 * Amazon Bedrock access key ID
 * Amazon Bedrock secret access key
 +
-You enter Amazon Bedrock credentials when you configure the scanner in Exchange. For more information, see the Amazon Bedrock documentation.
+You enter Amazon Bedrock credentials when configuring the scanner in Exchange. For more information, see the Amazon Bedrock documentation.
 
 To create the inline policy, use this policy:
 
@@ -44,10 +44,8 @@ To create the inline policy, use this policy:
 * To ensure the scanner discovers the agent, assign an alias and link it to a version. The scanner ignores agents without an invocable URL.
 
 == Add a Scanner for Amazon Bedrock 
-Add and configure a scanner to discover and import agents from Amazon Bedrock. You can schedule scans to run at specific intervals and choose whether to sync new agents automatically or require a review.
 
-Verify that you are in the business group where you want to add the scanner.
-
+. Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Agent Scanners*.
 . Enter a name for the scanner.
 . From *Scheduled Run Configuration*, complete these fields or options:

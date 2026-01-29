@@ -3,7 +3,6 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-
 Use agent scanners to automatically discover and import agents from outside Anypoint Platform. Scanners inspect agent ecosystems on diverse platforms to provide enterprise-grade governance and visibility through MuleSoft Agent Fabric. They extract metadata from agents and tools and synchronize the information with the Agent Fabric registry in Anypoint Exchange.
 
 Create a scanner to connect to external provider platforms and transform native metadata into the canonical Agent-to-Agent (A2A) format. The system detects updates and resolves conflicts to maintain a single source of truth. This secure, metadata-first integration operates as a read-only mechanism to avoid complexity and permission challenges in external systems.
@@ -16,7 +15,7 @@ After you add a scanner to a business group, you can't move the scanner or its a
 
 image:agent-scanner-list.png["Agent Scanners page showing a list of scanners"]
 
-Agent Scanner supports these providers:
+Agent scanners support these providers:
 
 * Amazon Bedrock 
 * Google Vertex AI
