@@ -273,7 +273,7 @@ It's possible to have more than one LLM asset in your organization.
 == Create an MCP Server
 MCP servers provide the protocols and specifications for seamless integration between different AI systems and tools.
 
-MMCP server schema files are in JSON format. They define the tools, data structures, and authentication. Upload the schema file to use when creating an MCP server asset or use the MCP server’s URL to fetch the schema information.
+MCP server schema files are in JSON format. They define the tools, data structures, and authentication. Upload the schema file to use when creating an MCP server asset or use the MCP server’s URL to fetch the schema information.
 
 The minimum required property for an MCP server schema file is `transport` over HTTP. If you declare `capabilities`, you must have all four capability flags: `tools`, `resources`, `prompts`, and `logging`. If you provide `tools`, `resources`, or `prompts`, each must have name and identifier fields.
 
