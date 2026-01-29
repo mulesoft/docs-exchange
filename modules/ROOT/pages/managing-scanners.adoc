@@ -17,7 +17,7 @@ You can perform these actions to manage scanners:
 [[run-a-scanner]]
 == Run a Scanner
 Run the scanner manually to capture new agents and add them to Exchange. 
-Scanners run once daily and retrieve up to 1,200 agents per scan, with a maximum runtime of 6 hours. Exchange retains scan logs and statuses for at least 90 days, and never deletes the most recent run. Run one scan at a time for each agent provider.
+Scanners run once daily and retrieve up to 1,200 agents per scan, with a maximum runtime of 6 hours. Exchange retains scan logs and statuses for at least 90 days and never deletes the most recent run. Run one scan at a time for each agent provider.
 
 . From the sidebar in Exchange, click *Agent Scanners*.
 . Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Run Now*.
