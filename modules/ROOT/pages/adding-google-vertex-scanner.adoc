@@ -6,7 +6,7 @@ endif::[]
 Add a scanner to discover, import, and sync agents from Google Vertex AI into Exchange. Then you can govern the agents and consume them in other applications.  
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission and these Google Vertex AI credentials
+Before adding the scanner, verify that you have the permission and these Google Vertex AI credentials:
 
 * Exchange Administrator permission 
 * Google Vertex AI project ID

@@ -13,7 +13,7 @@ Before adding the scanner, verify that you have the permission, context, and the
 * Amazon Bedrock access key ID
 * Amazon Bedrock secret access key
 +
-You enter Amazon Bedrock credentials when configuring the scanner in Exchange. For more information, see the Amazon Bedrock documentation.
+You enter your Amazon Bedrock credentials when configuring the scanner in Exchange. For more information, see the Amazon Bedrock documentation.
 
 To create the inline policy, use this policy:
 
