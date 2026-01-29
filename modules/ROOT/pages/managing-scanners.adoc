@@ -69,7 +69,7 @@ Abort scans for a scanner when its status is queued, running, or importing. When
 
 [[delete-a-scanner]]
 == Delete a Scanner
-Delete unused scanners when its status is scheduled, paused or stopped. Choose whether to keep or delete the agents associated with the scanner. Imported assets remain in Exchange if instances exist in API Manager.
+Delete an unused scanner when its status is scheduled, paused or stopped. Choose whether to keep or delete the agents associated with the scanner. Imported assets remain in Exchange if instances exist in API Manager.
 
 . From the sidebar in Exchange, click *Agent Scanners*.
 . Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Delete Scanner*.
