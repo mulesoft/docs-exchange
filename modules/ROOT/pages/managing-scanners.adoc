@@ -58,7 +58,7 @@ The *Actions* menu on the scanner details page includes these options, depending
 
 [[abort-scans]]
 == Abort Scans
-Abort scans for a scanner when its status is queued, running, or importing. When the  scan is aborted, the status is updated to stopped.
+Abort scans for a scanner when its status is queued, running, or importing. When the scan is aborted, the status is updated to stopped.
 
 * To abort a scan from the *Agent Scanners* page:
 +
