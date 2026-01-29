@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add and configure a scanner to discover and import agents from Microsoft Azure Copilot. You can schedule scans to run at specific intervals.
+Add a scanner to discover, import, and sync agents from Microsoft Azure Copilot into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
 Before adding this scanner, verify that you have the permission and these Microsoft Azure Copilot credentials:
