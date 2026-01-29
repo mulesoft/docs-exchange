@@ -18,6 +18,7 @@ You enter Amazon Bedrock credentials when configuring the scanner in Exchange. F
 To create the inline policy, use this policy:
 
 [source,json]
+----
 {
 	"Version": "2012-10-17",
 	"Statement": [
@@ -31,15 +32,15 @@ To create the inline policy, use this policy:
 				"bedrock:GetAgentAlias",
 				"bedrock:ListAgentVersions",
 				"bedrock:GetAgentVersion",
-		"bedrock:InvokeModel",
+				"bedrock:InvokeModel",
 				"bedrock:InvokeAgent",
 				"bedrock:InvokeInlineAgent"
-
 			],
 			"Resource": "*"
 		}
 	]
 }
+----
 
 * To ensure the scanner discovers the agent, assign an alias and link it to a version. The scanner ignores agents without an invocable URL.
 
