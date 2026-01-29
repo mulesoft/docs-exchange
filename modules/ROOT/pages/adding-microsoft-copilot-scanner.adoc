@@ -6,7 +6,7 @@ endif::[]
 Add and configure a scanner to discover and import agents from Microsoft Azure Copilot. You can schedule scans to run at specific intervals.
 
 == Before You Begin
-Before adding this scanner, make sure you have the permission and credentials:
+Before adding this scanner, verify that you have the permission and these Microsoft Azure Copilot credentials:
 
 * Exchange Administrator permission 
 * Microsoft Azure Copilot tenant ID
@@ -14,8 +14,6 @@ Before adding this scanner, make sure you have the permission and credentials:
 * Microsoft Azure Copilot client secret 
 +
 You enter the Microsoft Azure Copilot credentials when you configure the scanner in Exchange. For more information, see the Microsoft Azure Copilot documentation.
-
-
 
 == Add a Scanner for Microsoft Azure Copilot
 
