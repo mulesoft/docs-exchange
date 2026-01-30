@@ -1,0 +1,80 @@
+= Adding a Scanner for Amazon Bedrock
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from Amazon Bedrock into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Amazon Bedrock credentials:
+
+* Exchange Administrator permission 
+* Knowledge about the Amazon Web Services region where the agents are deployed.
+* Amazon Bedrock access key ID
+* Amazon Bedrock secret access key
++
+You enter your Amazon Bedrock credentials when configuring the scanner in Exchange. For more information, see the Amazon Bedrock documentation.
+
+To create the inline policy, use this policy:
+
+[source,json]
+----
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "BedrockAgentDiscoveryPermissions",
+			"Effect": "Allow",
+			"Action": [
+				"bedrock:ListAgents",
+				"bedrock:GetAgent",
+				"bedrock:ListAgentAliases",
+				"bedrock:GetAgentAlias",
+				"bedrock:ListAgentVersions",
+				"bedrock:GetAgentVersion",
+				"bedrock:InvokeModel",
+				"bedrock:InvokeAgent",
+				"bedrock:InvokeInlineAgent"
+			],
+			"Resource": "*"
+		}
+	]
+}
+----
+
+* To ensure the scanner discovers the agent, assign an alias and link it to a version. The scanner ignores agents without an invocable URL.
+
+== Add a Scanner for Amazon Bedrock 
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Enter a name for the scanner.
+. From *Scheduled Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time in UTC.
+|*Sync Review* |Select Auto-resolve.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Agent Provider* |Select *Amazon Bedrock*.
+|*Authentication Method* |Select *Access key*.
+|*Access Key ID* |Enter the access key ID.
+|*Secret Access Key* |Enter the secret access key.
+|*AWS Region* |Select a region.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.

@@ -92,4 +92,4 @@ The public portal customization for the organization's branding applies to the l
 
 * xref:portal-vanity-domain.adoc[Public Portal Vanity Domain]
 * xref:to-describe-an-asset.adoc[Describe an Asset]
-* https://stackoverflow.com/questions/4014823/does-a-favicon-have-to-be-32x32-or-16x16[Stack Overflow Favicon discussion]
+* +https://stackoverflow.com/questions/4014823/does-a-favicon-have-to-be-32x32-or-16x16+[Stack Overflow Favicon discussion]

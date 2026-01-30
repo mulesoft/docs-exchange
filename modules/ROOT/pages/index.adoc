@@ -5,7 +5,7 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc, about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
 
-Anypoint Exchange is a curated catalog of reusable assets. Agents, APIs, API groups, API spec fragments, custom assets, examples, GraphQL APIs, large language models (LLMs), Model Control Protocol (MCP) servers, integration assets such as connectors, policies, RPA assets, rulesets, and templates are some of the types that are supported in Exchange. See xref:asset-types.adoc[Asset Types] for more information about each type of asset. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
+Anypoint Exchange is a curated catalog of reusable assets. See xref:asset-types.adoc[Asset Types] for more information about each type of asset that's supported. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
 
 image:exchange-landing-page.png["Exchange catalog showing assets provided by MuleSoft"]
 
@@ -51,7 +51,6 @@ Watch the Anypoint Exchange Product Spotlight video to see a quick overview of E
 include::_partials/exchange-spotlight-video.html[]
 ++++
 
-
 == View Assets by Business Group
 
 A system administrator groups individuals within an organization into business groups. Each group has its own Exchange assets. 
@@ -96,12 +95,15 @@ All features of Anypoint Exchange are supported on Japan and Canada control plan
 +
 To download files from Japan or Canada control planes, use these URLs:
 
-** Canada S3 Bucket URL: https://exchange-asset-manager-d1937357035a847d2ec3.s3.ca-central-1.amazonaws.com
-** Japan S3 Bucket URL: https://exchange-asset-manager-bf62561aafed7e20740f.s3.ap-northeast-1.amazonaws.com
+** Canada S3 Bucket URL: +https://exchange-asset-manager-d1937357035a847d2ec3.s3.ca-central-1.amazonaws.com+
+** Japan S3 Bucket URL: +https://exchange-asset-manager-bf62561aafed7e20740f.s3.ap-northeast-1.amazonaws.com+
 
 
 == See Also
 
+* xref:discovering-and-importing-external-agents.adoc[Discovering and Importing External Agents With Scanners]
+* xref:agent-fabric::index.adoc[Agent Fabric]
+* xref:anypoint-code-builder::af-agent-networks.adoc[Agent Network Projects]
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
 * https://forums.mulesoft.com[MuleSoft Forum]
 * https://help.mulesoft.com[MuleSoft Help Center]
