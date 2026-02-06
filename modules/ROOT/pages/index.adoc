@@ -22,7 +22,7 @@ However, assets that are created by an organization other than *Provided by Mule
 
 == Agent Fabric Assets
 Agent Fabric is an enterprise platform for discovering, orchestrating, governing, and observing AI agents and tools. It serves as a central control plane and registry for agent assets in Anypoint Exchange.
-The registry contains AI assets, including agents, Large Language Models (LLMs), and Model Context Protocol (MCP) servers. Find these assets on the *Agents & Tools* tab. For more information, see xref:agent-fabric::index.adoc[].
+The registry contains AI assets, including agents, Large Language Models (LLMs), and Model Context Protocol (MCP) servers. Find these assets on the *Agents & Tools* tab. For more information, see xref:general::learning-map-agent-fabric.adoc[].
 
 
 image:ex-agents-and-tools.png["Exchange catalog showing assets in Agents & Tools"]
@@ -102,7 +102,7 @@ To download files from Japan or Canada control planes, use these URLs:
 == See Also
 
 * xref:discovering-and-importing-external-agents.adoc[Discovering and Importing External Agents With Scanners]
-* xref:agent-fabric::index.adoc[Agent Fabric]
+* xref:general::learning-map-agent-fabric.adoc[Agent Fabric]
 * xref:anypoint-code-builder::af-agent-networks.adoc[Agent Network Projects]
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
 * https://forums.mulesoft.com[MuleSoft Forum]
