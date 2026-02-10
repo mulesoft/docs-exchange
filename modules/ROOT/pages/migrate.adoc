@@ -87,5 +87,5 @@ connector-uploader
 
 == See Also
 
-* https://youtu.be/BOAR9glreMw[Migrate SOAP Assets Video]
-* https://youtu.be/WTIJrYydViQ[Migrate RAML REST Assets]
+* https://www.youtube.com/watch?v=BOAR9glreMw&feature=youtu.be[Migrate SOAP Assets Video]
+* https://www.youtube.com/watch?v=WTIJrYydViQ&feature=youtu.be[Migrate RAML REST Assets]

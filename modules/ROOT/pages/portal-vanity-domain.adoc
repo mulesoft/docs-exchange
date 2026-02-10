@@ -145,5 +145,5 @@ The `COOKIE_CONSENT_ID` is linked to your registered domain. If you change the d
 
 == See Also
 
-* https://forums.mulesoft.com[MuleSoft Forum]
+* https://help.mulesoft.com/s/forum[MuleSoft Forum]
 * https://help.mulesoft.com/s/knowledge[Knowledge Base Articles]
