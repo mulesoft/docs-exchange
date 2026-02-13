@@ -5,7 +5,7 @@ endif::[]
 
 Add a scanner to discover, import, and sync agents from GoDaddy ANS into Exchange. Then you can govern the agents and consume them in other applications.
 
-GoDaddy agents are verified by GoDaddy to be safe and secure. 
+GoDaddy agents are verified by GoDaddy to be safe and secure. These agents show a verified badge in the Exchange catalog.
 
 == Before You Begin
 Before adding the scanner, verify that you have the permission and these GoDaddy ANS credentials:
