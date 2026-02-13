@@ -1,20 +1,20 @@
-= Adding a Scanner for Google Vertex AI
+= Adding a Scanner for GoDaddy ANS
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Google Vertex AI into Exchange. Then you can govern the agents and consume them in other applications.  
+Add a scanner to discover, import, and sync agents from GoDaddy ANS into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission and these Google Vertex AI credentials:
+Before adding the scanner, verify that you have the permission and these GoDaddy ANS credentials:
 
 * Exchange Administrator permission 
-* Google Vertex AI project ID
-* Google Vertex AI secret access key
+* GoDaddy ANS API key
+* GoDaddy ANS API secret
 +
-You enter these Google Vertex AI credentials when configuring the scanner in Exchange. For more information about creating a service account key, see Google Vertex AI documentation.
+You enter your GoDaddy ANS credentials when configuring the scanner in Exchange. For more information, see the  GoDaddy ANS documentation.
 
-== Add a Scanner for Google Vertex AI
+== Add a Scanner for Amazon Bedrock 
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Agent Scanners*.
@@ -33,12 +33,11 @@ You enter these Google Vertex AI credentials when configuring the scanner in Exc
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Google Vertex AI*.
-|*Authentication Method* |Select *Service Account*.
-|*Account Email* |Enter the email address.
-|*Project ID* |Enter the project ID.
-|*Secret Access Key* |Enter the access key.
-|*Location* |Select a location.
+|*Agent Provider* |Select *GoDaddy ANS*.
+|*Authentication Method* |Select *SSO Key*.
+|*API Key* |Enter the API key.
+|*API Secret* |Enter the API secret.
+|*Environment* |Select an environment.
 |===
 
 . Click *Test Connection*.

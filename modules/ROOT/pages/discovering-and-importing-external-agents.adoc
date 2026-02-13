@@ -1,13 +1,13 @@
-= Discovering and Importing External Agents With Scanners
+= Discovering and Cataloging External Agents with Scanners
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Use agent scanners to automatically discover and import agents from outside Anypoint Platform. Scanners inspect agent ecosystems on diverse platforms to provide enterprise-grade governance and visibility through MuleSoft Agent Fabric. They extract metadata from agents and tools and synchronize the information with the Agent Fabric registry in Anypoint Exchange.
+Use agent scanners to automatically discover and catalog agents from outside Anypoint Platform. Scanners inspect agent ecosystems on diverse platforms to provide enterprise-grade governance and visibility through MuleSoft Agent Fabric. They extract metadata from agents and tools and synchronize the information with the Agent Fabric registry in Anypoint Exchange.
 
 Create a scanner to connect to external provider platforms and transform native metadata into the canonical Agent-to-Agent (A2A) format. The system detects updates and resolves conflicts to maintain a single source of truth. This secure, metadata-first integration operates as a read-only mechanism to avoid complexity and permission challenges in external systems.
 
-Add and configure a scanner to discover and import agents. Schedule scans to run at specific intervals and configure the connection and email notifications. After a scan is complete, view a summary of added agents and the scan history.
+Add and configure a scanner to discover and catalog agents. Schedule scans to run at specific intervals and configure the connection and email notifications. After a scan is complete, view a summary of added agents and the scan history.
 
 Scanners add supported agents to *Agents & Tools* as agent asset types. They detect new and missing agents and identify metadata updates. Subsequent scans overwrite metadata changes and restore agents deleted from Exchange. To retain changes, update the asset in the agent provider‘s source.
 
@@ -18,6 +18,7 @@ image:agent-scanner-list.png["Agent Scanners page showing a list of scanners"]
 Agent scanners support these providers:
 
 * Amazon Bedrock 
+* GoDaddy ANS
 * Google Vertex AI
 * Microsoft Copilot Studio
 
@@ -37,7 +38,7 @@ If a scan exceeds the runtime limit, the scanner saves the progress and continue
 
 == Before You Begin Adding a Scanner
 
-Make sure you have the permissions and access:
+Make sure you have the permission and access:
 
 * Exchange Administrator permission 
 * Verify that you are in the business group where you want to add the scanner.
