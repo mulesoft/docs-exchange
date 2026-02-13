@@ -54,7 +54,7 @@ To create the inline policy, use this policy:
 [%header,cols="1,4"]
 |===
 |*Field/Option* |*Value*
-|*Run Schedule* |Select a frequency and time in UTC.
+|*Run Schedule* |Select a frequency and time.
 |*Sync Review* |Select Auto-resolve.
 |===
 
