@@ -14,7 +14,7 @@ Before adding the scanner, verify that you have the permission and these GoDaddy
 * GoDaddy ANS API key
 * GoDaddy ANS API secret
 +
-You enter your GoDaddy ANS credentials when configuring the scanner in Exchange. For more information, see the  GoDaddy ANS documentation.
+You enter your GoDaddy ANS credentials when configuring the scanner in Exchange. For more information, see the GoDaddy ANS documentation.
 
 == Add a Scanner for GoDaddy ANS 
 
