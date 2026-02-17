@@ -56,6 +56,7 @@
 * xref:about-administration-tasks.adoc[]
 ** xref:discovering-and-importing-external-agents.adoc[]
 *** xref:adding-amazon-bedrock-scanner.adoc[]
+*** xref:adding-godaddy-scanner.adoc[]
 *** xref:adding-google-vertex-scanner.adoc[]
 *** xref:adding-microsoft-copilot-scanner.adoc[]
 *** xref:managing-scanners.adoc[]

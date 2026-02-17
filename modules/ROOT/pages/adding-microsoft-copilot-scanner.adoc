@@ -20,12 +20,12 @@ You enter the Microsoft Azure Copilot credentials when configuring the scanner i
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Agent Scanners*.
 . Enter a name for the scanner.
-. From *Scheduled Run Configuration*, complete these fields or options:
+. From *Scanner Run Configuration*, complete these fields or options:
 +
 [%header,cols="1,4"]
 |===
 |*Field/Option* |*Value*
-|*Run Schedule* |Select a frequency and time in UTC.
+|*Run Schedule* |Select a frequency and time.
 |*Sync Review* |Select *Auto-resolve*.
 |===
 . From *Connection Configuration*, complete these fields:

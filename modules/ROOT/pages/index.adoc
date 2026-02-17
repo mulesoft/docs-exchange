@@ -35,6 +35,10 @@ AI assets are added to the registry via these methods:
 +
 Manually create and publish assets directly in Exchange. For MCPs, enter an MCP server URL or load a schema from a file.
 +
+* xref:discovering-and-importing-external-agents.adoc[Discovering and cataloging external agents using scanners].
++
+Discover and catalog agents from external providers into Exchange using scanners.
++
 * xref:importing-agentforce-agents.adoc[Importing Agentforce agents from Settings]
 +
 Import Agentforce agents from Salesforce into Exchange from Settings.
