@@ -24,4 +24,4 @@ To view the governed API list for a ruleset:
 * Your root organization
 * Any Ruleset Status
 +
-. To view an API's *Conformance Status* details, click the open external link icon (image:open-external-link-icon.png[width=20,height=18,fit=line]). 
+. To view an API's *Conformance Status* details, click the open external link icon (image:exchange::open-external-link-icon.png[width=20,height=18,fit=line]). 
