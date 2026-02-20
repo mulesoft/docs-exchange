@@ -256,7 +256,7 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 
 [[create-llm]]
 == Create a Large Language Model
-To use an OpenAI LLM in your broker, you must have OpenAI LLM access in your organization. Configure the LLM asset using one of these methods:
+Only OpenAI is supported. To use an OpenAI LLM in your broker, you must have OpenAI LLM access in your organization.  Configure the LLM asset using one of these methods:
 
 * Automatic Publication: Define the LLM directly within the YAML configuration file in Anypoint Code Builder to automatically publish the LLM asset to Exchange.
 * Manual Creation: Manually create the LLM asset in Exchange, and then reference it in the YAML configuration file within Anypoint Code Builder.

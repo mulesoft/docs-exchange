@@ -35,13 +35,18 @@ Generated documentation includes:
 * Sample code snippets
 
 == Before You Begin
-Before generating API documentation with Einstein, you must have a Salesforce org account with Einstein enabled in Anypoint Platform. To enable Einstein in Anypoint Platform, see xref:access-management::enabling-einstein.adoc#enable-einstein-anypoint[Enable Einstein for Your Anypoint Platform Organization].
+Before generating API documentation with Einstein, you must have these:
+
+* Generate Asset Documentation with AI permission
+* Salesforce org account with Einstein enabled in Anypoint Platform. 
++
+To enable Einstein in Anypoint Platform, see xref:access-management::enabling-einstein.adoc#enable-einstein-anypoint[Enable Einstein for Your Anypoint Platform Organization].
 
 == Generate API Documentation with Einstein
 Generate documentation for REST APIs that don't have any documentation. You can edit and save a draft as many times as you like before publishing. Drafts aren't visible to others until they're published.
 
 . Select the API from the catalog and click *Generate documentation* from the asset details page.
-
++
 image:ex-generate-doc.png[]
 
 . Review the generated documentation in draft mode. Discard to delete the draft, or edit or publish it.
