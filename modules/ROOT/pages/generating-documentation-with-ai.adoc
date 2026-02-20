@@ -37,7 +37,7 @@ Generated documentation includes:
 == Before You Begin
 Before generating API documentation with Einstein, you must have these:
 
-* Generate Asset Documentation with AI permission
+* Generate Asset Documentation with AI permission.
 * Salesforce org account with Einstein enabled in Anypoint Platform. 
 +
 To enable Einstein in Anypoint Platform, see xref:access-management::enabling-einstein.adoc#enable-einstein-anypoint[Enable Einstein for Your Anypoint Platform Organization].
