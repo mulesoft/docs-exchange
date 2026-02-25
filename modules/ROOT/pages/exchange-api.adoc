@@ -6,7 +6,7 @@ endif::[]
 
 With the Exchange API, you can publish and consume assets, add documentation pages, add or edit categories, and even manage your public portals. This page shows several examples using the Exchange API, and the complete API documentation is at the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[API documentation portal].
 
-The API supports all Exchange asset types:
+The API supports all Exchange asset types, for example:
 
 * REST APIs
 * SOAP APIs
@@ -253,7 +253,7 @@ To use Exchange API version 2 to create an asset and set its lifecycle state, ad
 
 The following REST API asset example shows how to create an asset and set its lifecycle state:
 
-. Log in to Anypoint Platform and download the https://anypoint.mulesoft.com/exchange/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/assets/68ef9520-24e9-4cf2-b2f5-620025690913/training-american-flights-api/1.0.0/files/fat-raml/zip[example file].
+. Log in to Anypoint Platform and download the https://exchange-files.anypoint.mulesoft.com/68ef9520-24e9-4cf2-b2f5-620025690913/689ce62f6cdfc382f974087bec28af21d3e9b2d525b74a3ab4a90b549e16eba7.zip?response-content-disposition=attachment%3B%20filename%3Dtraining-american-flights-api-1.0.0-raml.zip&Expires=1771053074&Key-Pair-Id=APKAJ3T3QD2CMFEXRAJA&Signature=irKCgALj61kdDfYr4ozcYuGf4B1kcFR0JgDAiVFxwDc8WBbkn-dQA1~zTJ2lJ7bBtzK7n6FbA3n3quc~zeuEeDu8BIPxt77B7x-nMS6LNVjLTbj2r89XJVbcbyjhVg0UyWQUUl-7u3YNw~V~pW-5KltWOaiHtwgQOLatVCQXNg0S2zetAXlxCA~fbM2YWiiTWgdWcu3CgbQuTzzFYfjlTJrbV~Hq8QHwXJpVivW3QaSYtJwhjgf7D3CaIePNrN9UwkQCWTyyta0Ne2x6ROBegLkjlGhL1RpmA3gYCuvV2VFezaWkjsMorEow6D5Ty~eafsDYF8k-EaxOO9xpNJtXXQ__[example file].
 . Replace `/file-path/training-american-flights-api-1.0.0-raml.zip` with the local path of the downloaded file.
 . Replace `ANYPOINT_TOKEN`, `:organizationId`, `:groupId`, `:assetId`, and `:version` with values specific to your implementation.
 . Set the property `status` to `development` or `published`.
@@ -302,6 +302,12 @@ curl -v \
     -F 'files.icon.png=@/file-path/my-asset-icon.png' \
 https://anypoint.mulesoft.com/exchange/api/v2/organizations/:organizationId/assets/:groupId/:assetId/:version
 ----
+
+=== Troubleshoot Publishing Errors
+
+When publishing custom connectors, a timeout error can occur. This can happen if schema definitions import other schemas with external references are private or unreachable from the internet.
+
+To resolve this issue, remove external references that are private or not reachable from the internet.
 
 [[describe-your-assets]]
 == Describe Your Assets

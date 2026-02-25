@@ -36,7 +36,7 @@ applications.
 Each client application has a client ID, client secret, description, URL, redirect URIs,
 grant types, and usage dashboard.
 
-To see the details of a client application, select *My application* from the navigation bar and select an application from the list.
+To see the details of a client application, select *My application* from the sidebar and select an application from the list.
 
 To find an application, search the list of applications by entering a name or description in *Search* and press *Enter*.
 
@@ -49,7 +49,7 @@ To make changes, click *Edit*. After making your updates, click *Update* to save
 == Delete a Client Application
 When you don't need the contract for an application, you can delete it. After the application is deleted, there's no longer a contract with the application and you can’t access it. To regain access, request access to the API again.
 
-. From the navigation bar, select *My applications* and click the name of the application.
+. From the sidebar, select *My applications* and click the name of the application.
 . Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Delete application*. 
 . Confirm that you want to delete the application by clicking *Delete application*.
 
@@ -58,33 +58,36 @@ You can reset the client secret for an application on a set schedule to ensure s
 
 Applications using the current client secret can’t access any of the APIs with which they were registered.
 
-. From the navigation bar, select *My applications* and click the name of the application.
+. From the sidebar, select *My applications* and click the name of the application.
 . Click image:ex2-more-options-icon.png[The more options icon,1%,1%] and select *Reset client secret*.
 . Confirm that you want to delete the application by clicking *Reset client secret*.
 +
 The client secret is reset. In the application details section, click *Show* to see the new client secret.
 
+////
 == Add Users as Client Application Owners
 After a user is granted to an API a client application is created. The owner of the application is the also the owner of the new client application. The owner can add more users as owners from Exchange. You can add individual users and teams as owners.
 
-. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. From the sidebar in Exchange, select *My applications* and click the name of the application.
 . Select the *Manage owners* tab and enter a user's email, name, or team name in *Search*.
 . From the search results, select the user you want to add.
 +
 The selected user is added to the list of owners for the application.
+////
 
+////
 == Delete Client Application Owners
 You can remove an owner of a client application.
 
-. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. From the sidebar in Exchange, select *My applications* and click the name of the application.
 . Select the *Manage owners* tab, locate the owner in the list, and click image:ex-trash-can-icon.png[3%,3%].
-
+////
 == Add and Change an SLA Tier
 SLA tiers are defined in API Manager. If an application doesn't have an SLA tier listed, you can request to add an SLA tier. You can also change the SLA tier for an application. The available SLA tiers are set by an admin in API Manager. The owner of the API instance must approve the request to add or change the tier level.
 
 To add or change an SLA tier:
 
-. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. From the sidebar in Exchange, select *My applications* and click the name of the application.
 . From the instances panel, move the cursor over an instance and click *View SLA Tier*.
 . Click *Manage SLA Tiers*, select an SLA tier, and click *Submit*.
 
@@ -100,7 +103,7 @@ See usage information for the instances of a client application using the applic
 You can set a date range to display for all the charts in your dashboard. If not specified,
 the range is the previous eight days.
 
-. From the navigation bar in Exchange, select *My applications* and click the name of the application.
+. From the sidebar in Exchange, select *My applications* and click the name of the application.
 . Select one of more instance.
 . Click the calendar dropdown, select a date range, and click *Confirm*.
 

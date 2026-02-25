@@ -1,0 +1,109 @@
+= Managing Scanners In Exchange
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+To view and manage your agent scanners, click *Agent Scanners* in the sidebar of Exchange.
+
+You can perform these actions to manage scanners:
+
+* xref:managing-scanners.adoc#run-a-scanner[Run a scanner]
+* xref:managing-scanners.adoc#view-scanner-details[View scanner details]
+* xref:managing-scanners.adoc#abort-scans[Abort a scan]
+* xref:managing-scanners.adoc#delete-a-scanner[Delete a scanner]
+* xref:managing-scanners.adoc#edit-scanner-configuration[Edit a scanner configuration]
+* xref:managing-scanners.adoc#view-audit-logs[View audit logs]
+
+[[run-a-scanner]]
+== Run a Scanner
+Run the scanner manually to capture new agents and add them to Exchange. 
+Scanners run once daily and retrieve up to 1,200 agents per scan, with a maximum runtime of 6 hours. Exchange retains scan logs and statuses for at least 90 days and never deletes the most recent run. Run one scan at a time for each agent provider.
+
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Run Now*.
++
+The scan waits in the queue until the current scan finishes.
+
+[[view-scanner-details]]
+== View Scanner Details
+View a list of scanners and the details about their scans. The *Agent Scanners* page lists the scanners added for the business group. The scanner details show information about the scanner, connection, last completed run, and scan history.
+
+Scanner statuses are:
+
+* Scheduled
+* Paused
+* Queued
+* Running
+* Importing
+* Stopped
+
+To see more information about a scanner and its scan details, from the sidebar in Exchange, click *Agent Scanners* and click the name of a scanner from the list.
+
+Here's an example details page:
+
+image:scanner-details.png["Agent Scanner details page showing a list of scanners"]
+
+The *Actions* menu on the scanner details page includes these options, depending on the scanner status:
+
+[%header,cols="1,4"]
+|===
+|*Scanner Status* |*Actions Menu Options*
+|Scheduled or Paused |Run Now
+|Edit Scanner
+|Delete Scanner
+|Queued, Running, or Importing |Abort Scan
+|Stopped |Edit Scanner
+|Delete Scanner
+|===
+
+[[abort-scans]]
+== Abort Scans
+Abort scans for a scanner when its status is queued, running, or importing. When the scan is aborted, the status is updated to stopped.
+
+* To abort a scan from the *Agent Scanners* page:
++
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Abort Scan*.
+
+* To abort a scan from the scanner details page, click *Actions* and then select *Abort Scan*. 
+
+[[delete-a-scanner]]
+== Delete a Scanner
+Delete an unused scanner when its status is scheduled, paused or stopped. Choose whether to keep or delete the agents associated with the scanner. Imported assets remain in Exchange if instances exist in API Manager.
+
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Delete Scanner*.
+. Choose whether to keep or delete imported agents and click *Delete*.
+
+[[edit-scanner-configuration]]
+== Edit Scanner Configuration
+Edit settings for a scanner with a status of scheduled, paused, or stopped, and turn scheduled scans on or off.
+
+* To edit a scanner from the *Agent Scanners* page:
++
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Edit Scanner*.
+. Make your changes, and click *Update*.
+
+* To edit a scanner from the scanner details page:
++
+. Click *Actions* and then select *Edit Scanner*.
+. Make your changes, and click *Update*.
+
+[[view-audit-logs]]
+== View Audit Logs
+View audit logs for scanners. In the audit log, view scan details, such as agents that were imported, updated, removed, and already in Exchange, and unsuccessful scans. The available tabs depend on the scan results.
+
+Here's an example audit log:
+
+image:scanner-audit-log.png["Audit log showing details of a scan event"]
+
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Select the scanner from the list.
+. Select an event from *Scan History*. 
+. To view imported agents, click the *Imported* tab.
+. To view updated agents with newer versions available, click the *Updated* tab.
+. To view agents removed from Exchange because they’re missing from the provider, click the *Removed* tab.
+. To view agents that are found in the agent provider’s system and already in Exchange, click the *Already in Exchange* tab.
+. To view unsuccessful scans, click the *Unsuccessful* tab.
+

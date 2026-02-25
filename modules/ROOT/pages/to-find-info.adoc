@@ -20,7 +20,10 @@ Anypoint Exchange search looks for terms in:
 
 == Search By Keyword 
 
-You can use the *Search assets* box to find assets by keyword.
+Use the *Search assets* box to find assets by keyword. 
+
+When you publish an agent network project to Exchange, it creates and updates the assets contained in the project and automatically tags brokers for easy identification. 
+ 
 
 image:exchange-search-assets-box.png["The Search assets box"]
 
@@ -36,7 +39,7 @@ Keywords can be the following asset information:
 
 To find assets using keywords:
 
-. From the Exchange landing page, enter a keyword in the *Search assets* field, for example MuleSoft and press *enter* or *return* depending on your keyboard.
+. From the Exchange landing page, enter a keyword in the *Search assets* field, for example *MuleSoft* and press Enter or Return depending on your keyboard.
 +
 A list of assets display that contain the keyword.
 . To clear the keyword from the *Search assets* field, click *X*.
@@ -44,6 +47,8 @@ A list of assets display that contain the keyword.
 The following image is an example search results using the search keyword *MuleSoft*. The search keyword is highlighted in the results.
 
 image:exchange-new-search.png["Search results with the keyword MuleSoft highlighted"]
+
+To find agents that are brokers, search the Exchange catalog using the keyword `broker`.
 
 == Filter Search Results
 
@@ -53,7 +58,7 @@ image:ex-filters.png["The search refinement filters"]
 
 * Type
 +
-Types can be AsyncAPIs, connectors, REST APIS, rulesets, and more. See xref:asset-types.adoc[Asset Types] for more details.
+Types can be agents, AsyncAPIs, connectors, LLM, MCP, REST APIS, rulesets, and more. See xref:asset-types.adoc[Asset Types] for more details.
 The list of asset types that display depends on which types are available in a business group.
 * Organization
 +
@@ -73,6 +78,8 @@ Lifecycle state can be stable, deprecated, or development.
 Custom fields are specific metadata fields set by the administrator of a business group or organization owner.
 
 Filter options appear when they are available within an organization.
+
+If a filter has more than 50 values, the search results display the top 50, sorted in descending order by frequency. If you need to see more values, select the filter and enter a keyword in the search box. The search will then show the top 50 values that match your keyword, using the same sorting criteria.
 
 === Filter By Type, Organization, Category, Tag, and Lifecycle State
 

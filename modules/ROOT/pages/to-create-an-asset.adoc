@@ -5,29 +5,124 @@ endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: to-publish-an-asset.adoc
 
-To share an API, API Group, policy, ruleset, example, template, or connector in either an Anypoint Exchange private instance or an Exchange public portal, create an asset of that type.
+To share assets in an Anypoint Exchange private instance or the Exchange public portal, create an asset of that type.
 
-The way to create an asset depends on its type. The type is set when the asset is created and cannot be changed.
+The method for creating an asset depends on its type. Once the asset type is defined, it is permanent and can't be changed.
 
-* For OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* menu.
+* For OAS, RAML, RAML fragments, agents, AsyncAPI, HTTP, WSDL, LLMs, MCP servers, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* dialog.
 * For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
 * For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
-* You can also create REST APIs and API Spec Fragments using Design Center and publish the API to Exchange.
+* You can also create REST APIs and API spec fragments using Anypoint Code Builder or Design Center and publish them to Exchange.
 +
-Another way to publish these type of assets is using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
+Another way to publish these types of assets is using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
 * RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
 +
-For example: `exchange asset upload --classifier raml --apiVersion v1 --name HelloWorld --mainFile helloworld.raml helloword/1.0.0 /Users/nmouso/Downloads/helloworld.raml.zip`
+For example: `exchange asset upload --classifier raml --apiVersion v1 --name HelloWorld --mainFile helloworld.raml helloworld/1.0.0 /Users/nmouso/Downloads/helloworld.raml.zip`
 * API groups are published to Exchange from Anypoint API Manager.
 * Mule applications are published to Exchange from Anypoint Runtime Fabric and managed in Runtime Fabric, and are not visible in the Exchange user interface.
 * External libraries are published to Exchange from the xref:to-publish-assets-maven.adoc[Exchange Maven Facade API] and managed with this API, and are not visible in the Exchange user interface.
 
-
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
-This illustration summarizes how some of the asset types (in green) appear in Exchange:
+[[create-agent]]
+== Create an Agent 
+Agents are programs that perform tasks autonomously or semiautonomously. AI agents can use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks.
 
-image::ex2-exchange-assets.png[A flowchart that illustrates the process of how some assets are published into Exchange"]
+Agent schema files must be in JSON format. They define the structure and capabilities of the agent asset. When creating an agent asset, upload the schema file you want to use.
+
+The required objects for an A2A spec are defined in the https://a2a-protocol.org/dev/specification/[A2A spec]. 
+
+If you create an agent using *Other* as the protocol type, the file must be a JSON file. This card follows the structure of the A2A Spec without required properties.
+
+.Example A2A card 
+[%collapsible]
+====
+[source,json]
+----
+{
+  "protocolVersion": "0.2.9",
+  "name": "Some Company Agent",
+  "description": "Some Company Agent provides all the capabilities that can offer to its customers.",
+  "url": "${registry.url}/company-agent",
+  "capabilities": {},
+  "version": "1.0.0",
+  "provider": {
+    "organization": "Some Company Inc.",
+    "url": "https://weather-agent.ch.anypoint.com"
+  },
+  "securitySchemes": {
+    "anypointClientCredentials": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "clientSecret",
+      "description": "The client secret for Anypoint Platform authentication."
+    }
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "image/png"
+  ],
+  "skills": [
+    {
+      "id": "weather",
+      "name": "Returns the weather for a given location",
+      "description": "Get the current weather conditions for a specified location.",
+      "examples": [
+        "What is the weather like in New York?",
+        "Is it going to rain in San Francisco today?"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "application/vnd.geo+json",
+        "text/html"
+      ],
+      "tags": [
+        "weather",
+        "geolocation"
+      ]
+    },
+    {
+      "id": "exchange-rate",
+      "name": "Returns the exchange rate for a given currency pair",
+      "description": "Get the current exchange rate between two specified currencies.",
+      "examples": [
+        "What is the exchange rate from USD to EUR?",
+        "How much is 100 JPY in USD?"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "application/vnd.geo+json",
+        "text/html"
+      ],
+      "tags": [
+        "exchange_rate"
+      ]
+    }
+  ]
+}
+----
+====
+
+. In Exchange, select *Publish new asset*.
+. Enter a name for the asset.
+. Select the *Agent* asset type from the dropdown list.
+. Select a protocol type.
+. Click *Choose file* to upload a .json file for the agent card.
+. Select a protocol.
+. Select *Publish*.
+
 == Create an API Asset
 
 An API asset specifies an interface completely, including its functions, descriptions, how to handle return codes, and dependencies.
@@ -159,6 +254,825 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 . Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
+[[create-llm]]
+== Create a Large Language Model
+Only OpenAI is supported. To use an OpenAI LLM in your broker, you must have OpenAI LLM access in your organization.  Configure the LLM asset using one of these methods:
+
+* Automatic Publication: Define the LLM directly within the YAML configuration file in Anypoint Code Builder to automatically publish the LLM asset to Exchange.
+* Manual Creation: Manually create the LLM asset in Exchange, and then reference it in the YAML configuration file within Anypoint Code Builder.
+
+It's possible to have more than one LLM asset in your organization.
+
+. In Exchange, select *Publish new asset*.
+. Enter a name for the asset.
+. Select the *LLM* asset type from the dropdown list.
+. Enter the name of the platform and select it from the list.
+. Select *Publish*.
+
+[[create-mcp]]
+== Create an MCP Server
+MCP servers provide the protocols and specifications for seamless integration between different AI systems and tools.
+
+MCP server schema files are in JSON format. They define the tools, data structures, and authentication. Upload the schema file to use when creating an MCP server asset or use the MCP server’s URL to fetch the schema information.
+
+The minimum required property for an MCP server schema file is `transport` over HTTP. If you declare `capabilities`, you must have all four capability flags: `tools`, `resources`, `prompts`, and `logging`. If you provide `tools`, `resources`, or `prompts`, each must have name and identifier fields.
+
+This is a sample JSON file with the minimum required `transport` property.
+
+[source,json]
+----
+{
+  "transport": {
+    "kind": "streamableHttp",
+    "path": "/events"
+  }
+}
+----
+
+.Example MCP server schema file 
+[%collapsible]
+====
+[source,json]
+----
+{
+  "protocolVersion": "2025-03-26",
+  "introspectedAt": "2025-09-11T10:15:30Z",
+  "connectionStatus": "success",
+  "transport": {
+    "kind": "streamableHttp",
+    "path": "/mcp/path"
+  },
+  "provider": {
+    "organization": "Some company AI",
+    "url": "https://company.com"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true,
+    "logging": true
+  },
+  "logging": {
+    "level": "info"
+  },
+  "tools": [
+    {
+      "name": "searchDocuments",
+      "description": "Searches documents by keyword and returns matched snippets.",
+      "annotations": {
+        "title": "Search Documents",
+        "readOnlyHint": true,
+        "openWorldHint": true,
+        "idempotentHint": true
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query text"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Maximum number of results"
+          }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "updateRecord",
+      "description": "Updates a record by ID.",
+      "annotations": {
+        "title": "Update Record",
+        "destructiveHint": true,
+        "readOnlyHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Record identifier"
+          },
+          "payload": {
+            "type": "object",
+            "description": "Fields to update"
+          }
+        },
+        "required": ["id", "payload"]
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Project README",
+      "uri": "file:///workspace/README.md",
+      "description": "Primary project documentation.",
+      "mimeType": "text/markdown",
+      "size": 2048,
+      "annotations": {
+        "audience": ["assistant", "user"],
+        "priority": 0.9
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "name": "summarize",
+      "description": "Summarize a given text.",
+      "arguments": [
+        {
+          "name": "text",
+          "description": "Text to summarize",
+          "required": true
+        },
+        {
+          "name": "tone",
+          "description": "Desired tone (e.g., concise, friendly)",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "platform": "nodejs-20"
+}
+  ],
+  "prompts": [
+    {
+      "name": "summarize",
+      "description": "Summarize a given text.",
+      "arguments": [
+        {
+          "name": "text",
+          "description": "Text to summarize",
+          "required": true
+        },
+        {
+          "name": "tone",
+          "description": "Desired tone (e.g., concise, friendly)",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "platform": "nodejs-20"
+}
+----
+====
+MuleSoft uses a customized, UTF‑8–compatible version of the official MCP schema. It reuses select standard definitions from the official specification but it's not identical to it.
+
+
+.MuleSoft MCP server schema file 
+[%collapsible]
+====
+[source,json]
+----
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP Asset Schema",
+  "$ref": "#/definitions/MCPServer",
+  "definitions": {
+    "MCPServer": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#Server"
+        ]
+      },
+      "type": "object",
+      "required": [
+        "transport"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "protocolVersion": {
+          "type": "string",
+          "enum": [
+            "2024-11-05",
+            "2025-03-26",
+            "2025-06-18"
+          ],
+          "description": "The version of the protocol being used. This is used to determine the structure and capabilities of the data."
+        },
+        "transport": {
+          "$ref": "#/definitions/MCPTransport",
+          "description": "The transport protocol used for communication. This defines how the data is transmitted between the client and server."
+        },
+        "provider": {
+          "$ref": "#/definitions/MCPProvider",
+          "description": "The service provider of the MCP server."
+        },
+        "capabilities": {
+          "$ref": "#/definitions/ServerCapabilities"
+        },
+        "logging": {
+          "type": "object",
+          "properties": {},
+          "description": "Present if the server supports sending log messages to the client.",
+          "additionalProperties": true
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Tool"
+          },
+          "description": "A list of tools available in the mcp api. Each tool has a name, description, and input schema that defines the expected input format."
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Resource"
+          },
+          "description": "A list of resources available in the mcp api. Each resource has a URI, name, description, MIME type, and annotations that provide additional metadata."
+        },
+        "resourceTemplates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ResourceTemplate"
+          },
+          "description": "A list of resources available in the mcp api. Each resource has a URI, name, description, MIME type, and annotations that provide additional metadata."
+        },
+        "prompts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Prompt"
+          },
+          "description": "A list of prompts available in the mcp api. Each prompt has a name, description, and arguments that define the expected input format for the prompt."
+        },
+        "platform": {
+          "type": "string",
+          "description": "The platform the mcp server is running"
+        },
+        "securitySchemes": {
+          "additionalProperties": {
+            "$ref": "a2a.json#/definitions/SecurityScheme"
+          },
+          "description": "Security scheme details used for authenticating with this agent.",
+          "type": "object"
+        }
+      }
+    },
+    "ServerCapabilities": {
+      "type": "object",
+      "description": "Capabilities that a server may support. Known capabilities are defined here, in this schema, but this is not a closed set: any server can define its own, additional capabilities.",
+      "properties": {
+        "completions": {
+          "additionalProperties": true,
+          "description": "Present if the server supports argument autocompletion suggestions.",
+          "properties": {},
+          "type": "object"
+        },
+        "experimental": {
+          "additionalProperties": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          },
+          "description": "Experimental, non-standard capabilities that the server supports.",
+          "type": "object"
+        },
+        "logging": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "description": "Present if the server supports sending log messages to the client.",
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "type": "boolean",
+              "description": "Deprecated: True if the server supports sending log messages to the client."
+            }
+          ]
+        },
+        "prompts": {
+          "anyOf": [
+            {
+              "description": "Present if the server offers any prompt templates.",
+              "properties": {
+                "listChanged": {
+                  "description": "Whether this server supports notifications for changes to the prompt list.",
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "type": "boolean",
+              "description": "Deprecated: True if the server offers any prompt templates. "
+            }
+          ]
+        },
+        "resources": {
+          "anyOf": [
+            {
+              "description": "Present if the server offers any resources to read.",
+              "properties": {
+                "listChanged": {
+                  "description": "Whether this server supports notifications for changes to the resource list.",
+                  "type": "boolean"
+                },
+                "subscribe": {
+                  "description": "Whether this server supports subscribing to resource updates.",
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "type": "boolean",
+              "description": "Deprecated: True if the server offers any resources to read. "
+            }
+          ]
+        },
+        "tools": {
+          "anyOf": [
+            {
+              "description": "Present if the server offers any tools to call.",
+              "properties": {
+                "listChanged": {
+                  "description": "Whether this server supports notifications for changes to the tool list.",
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "type": "boolean",
+              "description": "Deprecated: True if the server offers any tools to call."
+            }
+          ]
+        }
+      }
+    },
+    "ResourceTemplate": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#ResourceTemplate"
+        ]
+      },
+      "description": "A template description for resources available on the server.",
+      "properties": {
+        "_meta": {
+          "additionalProperties": {},
+          "description": "See [General fields: `_meta`](/specification/2025-06-18/basic/index#meta) for notes on `_meta` usage.",
+          "type": "object"
+        },
+        "annotations": {
+          "$ref": "#/definitions/Annotations",
+          "description": "Optional annotations for the client."
+        },
+        "description": {
+          "description": "A description of what this template is for.\n\nThis can be used by clients to improve the LLM's understanding of available resources. It can be thought of like a \"hint\" to the model.",
+          "type": "string"
+        },
+        "mimeType": {
+          "description": "The MIME type for all resources that match this template. This should only be included if all resources matching this template have the same type.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Intended for programmatic or logical use, but used as a display name in past specs or fallback (if title isn't present).",
+          "type": "string"
+        },
+        "title": {
+          "description": "Intended for UI and end-user contexts — optimized to be human-readable and easily understood,\neven by those unfamiliar with domain-specific terminology.\n\nIf not provided, the name should be used for display (except for Tool,\nwhere `annotations.title` should be given precedence over using `name`,\nif present).",
+          "type": "string"
+        },
+        "uriTemplate": {
+          "description": "A URI template (according to RFC 6570) that can be used to construct resource URIs.",
+          "format": "uri-template",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "uriTemplate"
+      ],
+      "type": "object"
+    },
+    "MCPProvider": {
+      "description": "Represents the service provider of an MCP server.",
+      "examples": [
+        {
+          "organization": "Google",
+          "url": "https://ai.google.dev"
+        }
+      ],
+      "properties": {
+        "organization": {
+          "description": "MCP provider's organization name.",
+          "type": "string"
+        },
+        "url": {
+          "description": "MCP provider's URL.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "organization",
+        "url"
+      ],
+      "type": "object"
+    },
+    "SseTransport": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#Transport",
+          "http://anypoint.com/vocabs/mcp#SseTransport"
+        ],
+        "@base": "http://anypoint.com/vocabs/mcp#"
+      },
+      "required": [
+        "kind",
+        "ssePath"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "sse"
+        },
+        "ssePath": {
+          "type": "string",
+          "description": "Path to the SSE endpoint"
+        },
+        "messagesPath": {
+          "type": "string",
+          "description": "Path to the messages endpoint"
+        }
+      },
+      "additionalProperties": false
+    },
+    "StdioTransport": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#Transport",
+          "http://anypoint.com/vocabs/mcp#StdioTransport"
+        ],
+        "@base": "http://anypoint.com/vocabs/mcp#"
+      },
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "stdio"
+        },
+        "instructions": {
+          "type": "string",
+          "description": "The instructions to run the mcp server"
+        }
+      },
+      "additionalProperties": false
+    },
+    "StreamableHttpTransport": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#Transport",
+          "http://anypoint.com/vocabs/mcp#StreamableHttpTransport"
+        ],
+        "@base": "http://anypoint.com/vocabs/mcp#"
+      },
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "streamableHttp"
+        },
+        "path": {
+          "type": "string",
+          "description": "Path to the mcp endpoint"
+        }
+      },
+      "additionalProperties": false
+    },
+    "MCPTransport": {
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/SseTransport"
+        },
+        {
+          "$ref": "#/definitions/StreamableHttpTransport"
+        },
+        {
+          "$ref": "#/definitions/StdioTransport"
+        }
+      ]
+    },
+    "Tool": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#Tool"
+        ]
+      },
+      "description": "Definition for a tool the client can call.",
+      "properties": {
+        "_meta": {
+          "additionalProperties": {},
+          "description": "See [General fields: `_meta`](/specification/2025-06-18/basic/index#meta) for notes on `_meta` usage.",
+          "type": "object"
+        },
+        "annotations": {
+          "$ref": "#/definitions/ToolAnnotations",
+          "description": "Optional additional tool information.\n\nDisplay name precedence order is: title, annotations.title, then name."
+        },
+        "description": {
+          "description": "A human-readable description of the tool.\n\nThis can be used by clients to improve the LLM's understanding of available tools. It can be thought of like a \"hint\" to the model.",
+          "type": "string"
+        },
+        "inputSchema": {
+          "@context": {
+            "@type": [
+              "http://anypoint.com/vocabs/mcp#ToolInputSchema"
+            ]
+          },
+          "description": "A JSON Schema object defining the expected parameters for the tool.",
+          "properties": {
+            "properties": {
+              "additionalProperties": {
+                "additionalProperties": true,
+                "properties": {},
+                "type": "object"
+              },
+              "type": "object"
+            },
+            "required": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "object",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        "name": {
+          "description": "Intended for programmatic or logical use, but used as a display name in past specs or fallback (if title isn't present).",
+          "type": "string"
+        },
+        "outputSchema": {
+          "@context": {
+            "@type": [
+              "http://anypoint.com/vocabs/mcp#ToolOutputSchema"
+            ]
+          },
+          "description": "An optional JSON Schema object defining the structure of the tool's output returned in\nthe structuredContent field of a CallToolResult.",
+          "properties": {
+            "properties": {
+              "additionalProperties": {
+                "additionalProperties": true,
+                "properties": {},
+                "type": "object"
+              },
+              "type": "object"
+            },
+            "required": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "object",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        "title": {
+          "description": "Intended for UI and end-user contexts — optimized to be human-readable and easily understood,\neven by those unfamiliar with domain-specific terminology.\n\nIf not provided, the name should be used for display (except for Tool,\nwhere `annotations.title` should be given precedence over using `name`,\nif present).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "inputSchema",
+        "name"
+      ],
+      "type": "object"
+    },
+    "ToolAnnotations": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#ToolAnnotations"
+        ]
+      },
+      "description": "Additional properties describing a Tool to clients.\n\nNOTE: all properties in ToolAnnotations are **hints**.\nThey are not guaranteed to provide a faithful description of\ntool behavior (including descriptive properties like `title`).\n\nClients should never make tool use decisions based on ToolAnnotations\nreceived from untrusted servers.",
+      "properties": {
+        "destructiveHint": {
+          "description": "If true, the tool may perform destructive updates to its environment.\nIf false, the tool performs only additive updates.\n\n(This property is meaningful only when `readOnlyHint == false`)\n\nDefault: true",
+          "type": "boolean"
+        },
+        "idempotentHint": {
+          "description": "If true, calling the tool repeatedly with the same arguments\nwill have no additional effect on its environment.\n\n(This property is meaningful only when `readOnlyHint == false`)\n\nDefault: false",
+          "type": "boolean"
+        },
+        "openWorldHint": {
+          "description": "If true, this tool may interact with an \"open world\" of external\nentities. If false, the tool's domain of interaction is closed.\nFor example, the world of a web search tool is open, whereas that\nof a memory tool is not.\n\nDefault: true",
+          "type": "boolean"
+        },
+        "readOnlyHint": {
+          "description": "If true, the tool does not modify its environment.\n\nDefault: false",
+          "type": "boolean"
+        },
+        "title": {
+          "description": "A human-readable title for the tool.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Prompt": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#Prompt"
+        ]
+      },
+      "description": "A prompt or prompt template that the server offers.",
+      "properties": {
+        "_meta": {
+          "additionalProperties": {},
+          "description": "See [General fields: `_meta`](/specification/2025-06-18/basic/index#meta) for notes on `_meta` usage.",
+          "type": "object"
+        },
+        "arguments": {
+          "description": "A list of arguments to use for templating the prompt.",
+          "items": {
+            "$ref": "#/definitions/PromptArgument"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "An optional description of what this prompt provides",
+          "type": "string"
+        },
+        "name": {
+          "description": "Intended for programmatic or logical use, but used as a display name in past specs or fallback (if title isn't present).",
+          "type": "string"
+        },
+        "title": {
+          "description": "Intended for UI and end-user contexts — optimized to be human-readable and easily understood,\neven by those unfamiliar with domain-specific terminology.\n\nIf not provided, the name should be used for display (except for Tool,\nwhere `annotations.title` should be given precedence over using `name`,\nif present).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "PromptArgument": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#PromptArgument"
+        ]
+      },
+      "description": "Describes an argument that a prompt can accept.",
+      "properties": {
+        "description": {
+          "description": "A human-readable description of the argument.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Intended for programmatic or logical use, but used as a display name in past specs or fallback (if title isn't present).",
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether this argument must be provided.",
+          "type": "boolean"
+        },
+        "title": {
+          "description": "Intended for UI and end-user contexts — optimized to be human-readable and easily understood,\neven by those unfamiliar with domain-specific terminology.\n\nIf not provided, the name should be used for display (except for Tool,\nwhere `annotations.title` should be given precedence over using `name`,\nif present).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "Resource": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#Resource"
+        ]
+      },
+      "description": "A known resource that the server is capable of reading.",
+      "properties": {
+        "_meta": {
+          "additionalProperties": {},
+          "description": "See [General fields: `_meta`](/specification/2025-06-18/basic/index#meta) for notes on `_meta` usage.",
+          "type": "object"
+        },
+        "annotations": {
+          "$ref": "#/definitions/Annotations",
+          "description": "Optional annotations for the client."
+        },
+        "description": {
+          "description": "A description of what this resource represents.\n\nThis can be used by clients to improve the LLM's understanding of available resources. It can be thought of like a \"hint\" to the model.",
+          "type": "string"
+        },
+        "mimeType": {
+          "description": "The MIME type of this resource, if known.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Intended for programmatic or logical use, but used as a display name in past specs or fallback (if title isn't present).",
+          "type": "string"
+        },
+        "size": {
+          "description": "The size of the raw resource content, in bytes (i.e., before base64 encoding or any tokenization), if known.\n\nThis can be used by Hosts to display file sizes and estimate context window usage.",
+          "type": "integer"
+        },
+        "title": {
+          "description": "Intended for UI and end-user contexts — optimized to be human-readable and easily understood,\neven by those unfamiliar with domain-specific terminology.\n\nIf not provided, the name should be used for display (except for Tool,\nwhere `annotations.title` should be given precedence over using `name`,\nif present).",
+          "type": "string"
+        },
+        "uri": {
+          "description": "The URI of this resource.",
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "uri"
+      ],
+      "type": "object"
+    },
+    "Annotations": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#Annotations"
+        ]
+      },
+      "description": "Optional annotations for the client. The client can use annotations to inform how objects are used or displayed",
+      "properties": {
+        "audience": {
+          "description": "Describes who the intended customer of this object or data is.\n\nIt can include multiple entries to indicate content useful for multiple audiences (e.g., `[\"user\", \"assistant\"]`).",
+          "items": {
+            "$ref": "#/definitions/Role"
+          },
+          "type": "array"
+        },
+        "priority": {
+          "description": "Describes how important this data is for operating the server.\n\nA value of 1 means \"most important,\" and indicates that the data is\neffectively required, while 0 means \"least important,\" and indicates that\nthe data is entirely optional.",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "Role": {
+      "@context": {
+        "@type": [
+          "http://anypoint.com/vocabs/mcp#Role"
+        ]
+      },
+      "description": "The sender or recipient of messages and data in a conversation.",
+      "enum": [
+        "assistant",
+        "user"
+      ],
+      "type": "string"
+    }
+  }
+}
+----
+====
+To create an MCP server asset:
+
+. In Exchange, select *Publish new asset*.
+. Enter a name for the asset.
+. Select the *MCP* asset type from the dropdown list.
+. To upload a schema file:
++
+.. From *Method*, select *Upload MCP file*.
+.. Click *Choose file* to upload a schema file in JSON format.
+. To use a URL to retrieve MCP schema information:
++
+.. From *Method*, select *Fetch MCP URL*.
+.. Enter the URL of the MCP server.
+.. If needed, enter the asset credentials.
+.. To test the connection, click *Test Connection*.
+.. To view the schema, click *Preview*.
+. Enter the name of the platform and then select it from the list.
+. Select *Publish*.
+. To create an instance of this asset, click *Instances* in the sidebar and click *Go to API Manager*.
+
 == Create an RPA Activity Template Asset
 Activity templates are reusable code within RPA that standardize the most used activity steps and make them available to other developers in the organization. These templates are `.cawl` files that are imported in the RPA Activity library for developers to use as part of their RPA processes.
 
@@ -221,7 +1135,12 @@ Exchange generates the group ID, asset ID, and version for you, and you can chan
 
 == Asset Name, Icon, and Description Properties
 
-You can create assets in API Designer or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[Describe an Asset].
+You can create assets in Anypoint Code Builder, API Designer, or Exchange. After the asset is created, the name, icon, and description properties can only be changed in the Exchange asset details page as described in xref:to-describe-an-asset.adoc[].
+
+=== Properties of Assets Created in Anypoint Code Builder
+When an asset is published from Anypoint Code Builder to Exchange, the asset name is the one used in the exchange.json file.
+
+The name, icon, and description properties can only be changed in the Exchange asset details page.
 
 === Properties of Assets Created in API Designer
 
@@ -251,7 +1170,7 @@ If you have contributor or admin access to an asset, you can add a new version f
 * SOAP API - WSDL: Provide a WSDL API specification file. SOAP specifications file can be either a WSDL (.wsdl) or XML (.xml) file.
 * API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (.raml).
 * AsyncAPI: Provide a JSON (.json) or YAML (.yml) file. 
-* AsyncAPI spec with Avro schema: Provide an Avro fragment spec. Fragment specification must an AVSC (.avsc) file.
+* AsyncAPI spec with Avro schema: Provide an Avro fragment spec. Fragment specification must be an AVSC (.avsc) file.
 * HTTP API - This asset does not require a file. This type of asset provides an API endpoint that is defined by API Manager.
 . For RAML, API Spec Fragment, OAS, and WSDL assets:
 +
@@ -259,7 +1178,7 @@ If you have contributor or admin access to an asset, you can add a new version f
 * Select the main file of the API.
 . If you want to select a file to upload, click *Choose file*.
 . Enter the version for the asset.
-. Select on option for *Lifecycle state*. The default is *Stable*.
+. Select an option for *Lifecycle state*. The default is *Stable*.
 . Select *Publish*.
 
 The new version of the asset has the same name, icon, and description as the previous version. Any changes to these properties apply to all versions of the asset.
@@ -267,6 +1186,8 @@ The new version of the asset has the same name, icon, and description as the pre
 
 == See Also
 
-* Next: xref:to-describe-an-asset.adoc[Describe an Asset]
-* xref:design-center::upload-raml-task.adoc[Create a RAML file in API Designer and Import to Exchange]
-* xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]
+* xref:anypoint-code-builder::des-publish-api-spec-to-exchange.adoc[Publishing API Projects to Exchange]
+* xref:design-center::design-publish.adoc[Publishing API Specifications From API Designer to Exchange]
+* xref:to-publish-assets-maven.adoc[]
+* xref:asset-details.adoc[]
+* xref:to-describe-an-asset.adoc[]

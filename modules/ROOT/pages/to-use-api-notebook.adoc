@@ -1,4 +1,5 @@
 = Documenting an Asset Using API Notebook
+:page-support-status: eolReachedFeature
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,7 +8,6 @@ endif::[]
 API Notebook lets you document an API's functionality with explanations that accompany code windows. Users can
 change the code and execute it by clicking the Play button in each code block. You can create a new API Notebook
 from the Exchange editor and use JavaScript code in the code blocks.
-
 
 Use API Designer in Anypoint Platform to improve and test your RAML, OAS, or AsyncAPI API specification, and to publish the API specification to Anypoint Exchange.
 
@@ -91,6 +91,12 @@ API.authenticate(github);
 ----
 ====
 
+== Create API Instance
+After creating your API Notebook you can optionally create an API instance to control whether the notebook is private or public. By setting the notebook's instance to private, others in your organization can review it. When you are ready, you can set the API instance to make the API Notebook public. See xref:to-configure-api-settings.adoc[] for more information about API instances.
+
+NOTE: API Notebooks are independent of the use of an API instance.
+If you don't use a base URI in your RAML, or use an API instance, you can use the mocking service to generate test data.
+
 == API Notebook Security
 
 API notebooks run plain JavaScript in the browser. To ensure sensitive data does not leak, API Notebook disables certain JavaScript functionality:
@@ -100,5 +106,4 @@ API notebooks run plain JavaScript in the browser. To ensure sensitive data does
 
 == See Also
 
-* For API Notebook function descriptions, see xref:1.x@api-manager::creating-an-api-notebook.adoc[API Notebook Reference].
-* https://docs.mulesoft.com/design-center/v/1.0/upload-raml-task[Upload an Existing RAML File to Exchange].
+* +https://docs.mulesoft.com/design-center/v/1.0/upload-raml-task+[Upload an Existing RAML File to Exchange].

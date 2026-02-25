@@ -218,7 +218,7 @@ mvn deploy
 
 The Maven Facade API enables you to both create your asset and set the mutable data describing it in the same request. The mutable data of an asset includes tags, custom fields, categories, and documentation pages.
 
-The GitHub repository of Exchange documentation examples includes a complete example of creating a https://github.com/mulesoft-labs/exchange-documentation-samples/tree/master/template-with-mutable-data[Mule application template with documentation and tags, role=external, window=blank].
+The GitHub repository of Exchange documentation examples includes a complete example of creating a https://github.com/mulesoft/exchange-documentation-samples-labs/tree/master/template-with-mutable-data[Mule application template with documentation and tags, role=external, window=blank].
 
 Declare tags, custom fields, and categories in the `pom.xml` file in the properties section, with the XML property `key` set to the key of the custom field or category:
 
@@ -321,7 +321,7 @@ NOTE: An asset that is in development state and is not an SNAPSHOT version canno
 
 == Publish a Custom Asset
 
-Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is 0.0.23.
+Publish custom assets with the `exchange-mule-maven-plugin` plugin. The latest version of this plugin is 0.1.7.
 
 This example shows the `build` section of `pom.xml`:
 
@@ -332,7 +332,7 @@ This example shows the `build` section of `pom.xml`:
         <plugin>
             <groupId>org.mule.tools.maven</groupId>
             <artifactId>exchange-mule-maven-plugin</artifactId>
-            <version>0.0.23</version>
+            <version>0.1.7</version>
             <executions>
                 <execution>
                     <id>validate</id>
@@ -366,7 +366,7 @@ If you want to publish a maven project, like a mule application, using the Mule 
         <plugin>
             <groupId>org.mule.tools.maven</groupId>
             <artifactId>exchange-mule-maven-plugin</artifactId>
-            <version>0.0.23</version>
+            <version>0.1.7</version>
             <inherited>false</inherited>
             <executions>
                 <execution>

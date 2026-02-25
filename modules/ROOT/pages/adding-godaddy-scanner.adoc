@@ -1,0 +1,52 @@
+= Adding a Scanner for GoDaddy ANS
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from GoDaddy ANS into Exchange. Then you can govern the agents and consume them in other applications.
+
+GoDaddy agents are verified by GoDaddy to be safe and secure. 
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission and these GoDaddy ANS credentials:
+
+* Exchange Administrator permission 
+* GoDaddy ANS API key
+* GoDaddy ANS API secret
++
+You enter your GoDaddy ANS credentials when configuring the scanner in Exchange. For more information, see the GoDaddy ANS documentation.
+
+== Add a Scanner for GoDaddy ANS 
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select Auto-resolve.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Agent Provider* |Select *GoDaddy ANS*.
+|*Authentication Method* |Select *SSO Key*.
+|*API Key* |Enter the API key.
+|*API Secret* |Enter the API secret.
+|*Environment* |Select an environment.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
