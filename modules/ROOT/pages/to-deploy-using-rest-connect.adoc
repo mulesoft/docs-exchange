@@ -42,7 +42,9 @@ If you publish an API specification with an unsupported authentication type, you
 
 If the operations defined in your API specification support multiple security schemes, the one that comes first in the list of supported schemes is used.
 
-=== Basic Authentication Example
+=== Basic Authentication
+
+RAML Example:
 
 [source,text,linenums]
 ----
@@ -57,7 +59,35 @@ securitySchemes:
     type: Basic Authentication
 ----
 
-=== OAuth 2.0 Client Credentials Example
+OAS Example:
+
+[source,text,linenums]
+----
+openapi: 3.0.3
+info:
+  title: Dropbox API
+  version: "1"
+
+servers:
+  - url: https://api.dropbox.com/{version}
+    variables:
+      version:
+        default: "1"
+
+components:
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: This API supports Basic Authentication.
+
+security:
+  - basic: []
+----
+
+=== OAuth 2.0 Client Credentials
+
+RAML Example:
 
 [source,text,linenums]
 ----
@@ -95,7 +125,46 @@ securitySchemes:
                         example: '[ { "rest-connect": "2017-03-13" } ]'
 ----
 
-=== OAuth 2.0 Authorization Code Example
+OAS Example:
+
+[source,text,linenums]
+----
+openapi: 3.0.3
+info:
+  title: Deadlines API
+  version: v1
+
+servers:
+  - url: http://localhost/deadlines
+
+paths:
+  /deadlines:
+    get:
+      summary: Get deadlines.
+      description: Get a list of all registered deadlines.
+      security:
+        - oauth_2_0: []
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              example:
+                - rest-connect: "2017-03-13"
+
+components:
+  securitySchemes:
+    oauth_2_0:
+      type: oauth2
+      description: Deadlines API supports OAuth 2.0 for authenticating all API requests.
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.example.com/1/oauth2/token
+----
+
+=== OAuth 2.0 Authorization Code
+
+RAML Example:
 
 [source,text,linenums]
 ----
@@ -148,7 +217,57 @@ securitySchemes:
         - "admin:public_key"
 ----
 
-=== Pass-through Example
+OAS Example:
+
+[source,text,linenums]
+----
+openapi: 3.0.3
+info:
+  title: Github API
+  version: v1
+
+servers:
+  - url: https://api.github.com
+
+components:
+  securitySchemes:
+    oauth_2_0:
+      type: oauth2
+      description: |
+        OAuth2 is a protocol that lets external apps request authorization to private details
+        in a user's GitHub account without getting their password. This is preferred over
+        Basic Authentication because tokens can be limited to specific types of data,
+        and can be revoked by users at any time.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://github.com/login/oauth/authorize
+          tokenUrl: https://github.com/login/oauth/access_token
+          scopes:
+            user: ""
+            user:email: ""
+            user:follow: ""
+            public_repo: ""
+            repo: ""
+            repo_deployment: ""
+            repo:status: ""
+            delete_repo: ""
+            notifications: ""
+            gist: ""
+            read:repo_hook: ""
+            write:repo_hook: ""
+            admin:repo_hook: ""
+            admin:org_hook: ""
+            read:org: ""
+            write:org: ""
+            admin:org: ""
+            read:public_key: ""
+            write:public_key: ""
+            admin:public_key: ""
+----
+
+=== Pass-through
+
+RAML Example:
 
 [source,text,linenums]
 ----
@@ -167,12 +286,34 @@ securitySchemes:
           type: string
 ----
 
+OAS Example:
+
+[source,text,linenums]
+----
+openapi: 3.0.3
+info:
+  title: Customer API
+  version: "1"
+
+servers:
+  - url: https://api.customer.com/v2
+
+components:
+  securitySchemes:
+    passthrough:
+      type: apiKey
+      in: header
+      name: api_key
+      description: |
+        This API supports Pass Through Authentication.
+----
+
 [[change-connector-name]]
 == Change an Auto-Generated Connector's Name
 
 REST Connect generates the names of operations based on the `operationName`, `displayName`, and `endpoint` attributes, in that order. 
 
-To modify a generated connector name, change the text in `displayName`, for example:
+To modify a generated connector name using RAML, change the text in `displayName`, for example:
 
 [source,text,linenums]
 ----
@@ -195,7 +336,44 @@ mediaType: application/json
             type: Post
 ----
 
-You can also modify a generated connector name by pointing to the REST Connect library and using the `operationName` annotation from a method such as GET, POST, and DELETE, for example:
+To modify a generated connector name using OAS, change the text in `summary`, for example:
+
+[source,text,linenums]
+----
+openapi: 3.0.3
+info:
+  title: Sample API
+  version: "0.1"
+
+servers:
+  - url: https://jsonplaceholder.typicode.com
+
+paths:
+  /{postId}:
+    parameters:
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Get a post by ID.
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Post"
+
+components:
+  schemas:
+    Post: {}
+----
+
+You can also modify a generated connector name by pointing to the REST Connect library and using the `operationName` annotation (RAML) or `x-rest-connect-operationName` extension (OAS) from a method such as GET, POST, and DELETE.
+
+RAML Example using `operationName`:
 
 [source,text,linenums]
 ----
@@ -222,16 +400,56 @@ uses:
             type: Post
 ----
 
+OAS Example using `x-rest-connect-operationName`:
 
+[source,text,linenums]
+----
+openapi: 3.0.3
+info:
+  title: Sample API
+  version: "0.1"
+
+servers:
+  - url: https://jsonplaceholder.typicode.com
+
+paths:
+  /{postId}:
+    parameters:
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: integer
+
+    get:
+      summary: Get a post by ID.
+      x-rest-connect-operationName: Retrieve a post by id
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+
+components:
+  schemas:
+    Post:
+      type: object
+      additionalProperties: true
+----
 
 [[metadata-limitations]]
 == Metadata Limitations
 
-REST Connect generates metadata for each operation based on your schema definition in the request and response for each method in your RAML. REST Connect cannot generate metadata based on examples in the RAML.
+REST Connect generates metadata for each operation based on your schema definition in the request and response for each method in your API specification. REST Connect cannot generate metadata based on examples in the specification.
 
-REST Connect supports only one input/output type and uses the first one declared in the API specification. You can change this behavior by using the `default` property from the REST Connect library.
+REST Connect supports only one input/output type and uses the first one declared in the API
+specification. You can change this behavior by using the default property from the REST Connect library.
 
-The following example uses the REST Connect library:
+The following examples uses the REST Connect library:
+
+RAML Example:
 
 [source,text,linenums]
 ----
@@ -259,6 +477,42 @@ uses:
             application/xml:
              (rest-connect.default): //this sets application/xml response by default
              type: string
+----
+
+OAS Example:
+
+[source,text,linenums]
+----
+openapi: 3.0.3
+info:
+  title: Sample API
+  version: "0.1"
+
+servers:
+  - url: https://jsonplaceholder.typicode.com
+
+paths:
+  /{postId}:
+    parameters:
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: integer
+
+    get:
+      summary: Get a post by ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: string
+            application/xml:
+              x-rest-connect-default: true  # indicates XML is the default
+              schema:
+                type: string
 ----
 
 [[reserved-keywords]]
