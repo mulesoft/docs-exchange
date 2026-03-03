@@ -143,6 +143,7 @@ To create an API asset:
 * API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (`.raml`). 
 * API Spec Fragment - JSON: Provide an API Fragment JSON specification (`.json`) file. 
 * API Spec Fragment - OpenAPI Specification (OAS): Provide an API Fragment OpenAPI specification file either JSON or YAML.
+* gRPC API: Provide a gRPC API specification file in a .proto file.
 * HTTP API: This asset does not require a file. This asset type provides an API endpoint that is defined by API Manager.
 +
 . For assets that require a file:
