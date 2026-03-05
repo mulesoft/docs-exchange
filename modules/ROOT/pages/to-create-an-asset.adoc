@@ -162,7 +162,7 @@ Exchange generates the group ID, asset ID, and version (GAV) for you, and you ca
 To create a ZIP file and put the items in a folder into the root directory of the ZIP file, use a command like this. Replace `myfolder` with the name of your folder and `name.zip` with the name for the new ZIP file.
 
 ```
-cd myfolder; zip -r name.zip .
+cd myfolder; zip -r name.zip.
 ```
 
 Do not use a command such as `zip -r name.zip myfolder`, which puts the folder into the root directory of the ZIP file. This causes an error message such as `The zip file does not contain a .raml file in the root directory`.
