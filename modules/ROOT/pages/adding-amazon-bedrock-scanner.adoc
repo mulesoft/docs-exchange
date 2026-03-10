@@ -12,8 +12,15 @@ Before adding the scanner, verify that you have the permission, context, and the
 * Knowledge about the Amazon Web Services region where the agents are deployed.
 * Amazon Bedrock access key ID
 * Amazon Bedrock secret access key
+* Have these Amazon Bedrock permissions:
+** bedrock:ListAgents
+** bedrock:GetAgent
+** bedrock:ListAgentAliases
+** bedrock:GetAgentAlias
+** bedrock:GetAgentAlias
+** bedrock:ListAgentVersions
+** bedrock:GetAgentVersion
 +
-You enter your Amazon Bedrock credentials when configuring the scanner in Exchange. For more information, see the Amazon Bedrock documentation.
 
 To create the inline policy, use this policy:
 
@@ -42,7 +49,7 @@ To create the inline policy, use this policy:
 }
 ----
 
-* To ensure the scanner discovers the agent, assign an alias and link it to a version. The scanner ignores agents without an invocable URL.
+* To make sure the scanner discovers the agent, assign an alias and link that alias to a version. The scanner ignores agents without an invocable URL.
 
 == Add a Scanner for Amazon Bedrock 
 
