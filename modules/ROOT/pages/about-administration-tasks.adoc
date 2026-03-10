@@ -5,7 +5,7 @@ endif::[]
 
 Exchange administrators have permissions to perform these tasks:
 
-* xref:discovering-and-importing-external-agents.adoc[Discover and import external agents]
+* xref:discovering-and-importing-external-agents.adoc[Discover and catalog external agents]
 +
 Use agent scanners to automatically discover and catalog agents from outside Anypoint Platform.
 * xref:importing-agentforce-agents.adoc[]
