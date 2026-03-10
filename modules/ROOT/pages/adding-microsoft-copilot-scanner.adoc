@@ -9,7 +9,7 @@ Add a scanner to discover, import, and sync agents from Microsoft Azure Copilot 
 Before adding this scanner, verify that you have the permission and these Microsoft Azure Copilot credentials:
 
 * Exchange Administrator permission 
-* Microsoft Azure Copilot System Administrator/System Customizer role (assign the app user and security role in Power Platform before configuring the scanner).
+* Microsoft Azure Copilot System Administrator/System Customizer role (Before configuring the scanner, assign the app user and security role in Power Platform).
 * Microsoft Azure Copilot tenant ID
 * Microsoft Azure Copilot client ID 
 * Microsoft Azure Copilot client secret 
