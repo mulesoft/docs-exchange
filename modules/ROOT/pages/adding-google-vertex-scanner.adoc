@@ -9,6 +9,7 @@ Add a scanner to discover, import, and sync agents from Google Vertex AI into Ex
 Before adding the scanner, verify that you have the permission and these Google Vertex AI credentials:
 
 * Exchange Administrator permission 
+* Vertex AI Viewer permission
 * Google Vertex AI project ID
 * Google Vertex AI secret access key
 +
