@@ -110,4 +110,4 @@ To download files from Japan or Canada control planes, use these URLs:
 * xref:anypoint-code-builder::af-agent-networks.adoc[Agent Network Projects]
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
 * https://trailhead.salesforce.com/trailblazer-community/neighborhoods/mulesoft[MuleSoft Forum]
-* https://help.mulesoft.com[MuleSoft Help Center]
+* https://help.salesforce.com[Salesforce Help]
