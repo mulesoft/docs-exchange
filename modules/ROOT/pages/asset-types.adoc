@@ -43,6 +43,10 @@ Applications that are ready to run in Anypoint Studio and demonstrate a use case
 +
 A schema definition that contains the object types and definitions that are used to interact with the API through the GraphQL specification. GraphQL enables you to query an API that supports this language in a much more flexible way than REST.
 
+* gRPC API
++
+A Protocol Buffers (.proto) specification that defines a gRPC API—its services and message contracts. gRPC is RPC-based and supports unary and streaming calls. Interface definitions use the proto3 syntax, with message payloads expressed as Protobuf message schemas, and the .proto file type.
+
 * HTTP APIs
 +
 A placeholder for an endpoint for use by private Exchange users who want to manage the endpoint with API Manager.
