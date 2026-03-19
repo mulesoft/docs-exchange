@@ -145,5 +145,5 @@ The `COOKIE_CONSENT_ID` is linked to your registered domain. If you change the d
 
 == See Also
 
-* https://trailhead.salesforce.com/trailblazer-community/neighborhoods/mulesoft[MuleSoft Forum]
-* https://help.mulesoft.com/s/knowledge[Knowledge Base Articles]
+* https://trailhead.salesforce.com/trailblazer-community/neighborhoods/mulesoft[MuleSoft Trailblazer Community]
+* https://help.salesforce.com[Salesforce Help]
