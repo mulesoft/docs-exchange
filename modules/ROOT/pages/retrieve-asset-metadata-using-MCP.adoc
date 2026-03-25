@@ -8,7 +8,7 @@ If you don't have Flex Gateway deployed, use the Exchange MCP server endpoint to
 
 == Using the MCP Server Endpoint
 
-Use this endpoint when configuring an MCP server connection in your AI client: `https://anypoint.mulesoft.com/exchange/mcp`
+Use this endpoint to configure an MCP server connection in your AI client: `https://anypoint.mulesoft.com/exchange/mcp`
 
 You must authenticate to access private Exchange assets. Configure your AI client to use your Anypoint Platform credentials when connecting to the endpoint.
 
