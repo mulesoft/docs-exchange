@@ -23,7 +23,7 @@ Topics:
 * xref:exchange-api.adoc[]
 * xref:to-publish-assets-maven.adoc[]
 * xref:to-search-with-graph-api.adoc[]
-* xref:retrieve-asset-metadata-using-mcp.adoc[]
+* xref:retrieve-asset-metadata-using-mcp-endpoint.adoc[]
 
 == See Also
 
