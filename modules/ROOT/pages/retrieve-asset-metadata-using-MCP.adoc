@@ -12,7 +12,6 @@ Use this endpoint when configuring an MCP server connection in your AI client: `
 
 You must authenticate to access private Exchange assets. Configure your AI client to use your Anypoint Platform credentials when connecting to the endpoint.
 
-== What You Can Do
 
 After you connect your AI client to the MCP server endpoint, you can perform these tasks:
 
