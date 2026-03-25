@@ -14,7 +14,7 @@ You must authenticate to access private Exchange assets. Configure your AI clien
 
 == What You Can Do
 
-After you connect your AI client to the Exchange MCP server, you can perform these tasks:
+After you connect your AI client to the MCP server endpoint, you can perform these tasks:
 
 * *Search for assets* – Search by asset name, description, or keywords to find agents, MCP servers, large language models (LLMs), and other assets in Exchange.
 * *Retrieve asset metadata* – Get metadata for an asset, including available versions, dependencies, and documentation so you can evaluate and use the asset in your projects.
