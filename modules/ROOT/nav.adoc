@@ -35,6 +35,7 @@
  ** xref:to-publish-assets-maven.adoc[]
  ** xref:to-search-with-graph-api.adoc[]
  ** xref:connected-app-authentication.adoc[]
+ ** xref:retrieve-asset-metadata-using-MCP.adoc[]
 * xref:about-documenting-an-api.adoc[]
  ** xref:generating-documentation-with-ai.adoc[]
  ** xref:to-use-api-notebook.adoc[]
