@@ -1,4 +1,4 @@
-= Retrieve Asset Metadata Using an MCP Server Endpoint
+= Retrieving Asset Metadata Using an MCP Server Endpoint
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
