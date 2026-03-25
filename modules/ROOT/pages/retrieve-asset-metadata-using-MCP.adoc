@@ -23,4 +23,5 @@ After you connect your AI client to the Exchange MCP server, you can perform the
 
 == See Also
 
-* xref:about-platform-apis.adoc[Exchange Platform APIs]
+* xref:about-platform-apis.adoc[]
+* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/minor/2.4/pages/p1k-jaq/MCP%20Server/[Exchange MCP Server]
