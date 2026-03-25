@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-If you don't have Flex Gateway deployed, use the Exchange MCP server endpoint to get asset and instance metadata from Exchange for your AI agents. The MCP server endpoint uses the Exchange API to search and retrieve this metadata programmatically.
+If you don’t have Flex Gateway deployed, use an MCP server endpoint to retrieve Agent Fabric asset and instance metadata from Exchange for your AI agents. The endpoint uses the Exchange API to search for and return this metadata.
 
 == Using the MCP Server Endpoint
 
