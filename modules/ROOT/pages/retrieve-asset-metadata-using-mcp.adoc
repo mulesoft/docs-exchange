@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-If you don’t have Flex Gateway deployed, use an MCP server endpoint to retrieve Agent Fabric asset and instance metadata from Exchange for your AI agents. The endpoint uses the Exchange API to search for and return this metadata.
+You can now use an MCP server endpoint to retrieve Agent Fabric asset and instance metadata from Exchange for your assets in Exchange, including Agents and MCP servers. The endpoint uses the Exchange API to search for and return this metadata.
 
 == Using the MCP Server Endpoint
 
@@ -16,9 +16,10 @@ You must authenticate to access private Exchange assets. Configure your AI clien
 After you connect your AI client to the MCP server endpoint, you can perform these tasks:
 
 * *Search for assets* – Search by asset name, description, or keywords to find agents, MCP servers, large language models (LLMs), and other assets in Exchange.
-* *Retrieve asset metadata* – Get metadata for an asset, including available versions, dependencies, and documentation so you can evaluate and use the asset in your projects.
-* *Access reviews and ratings* – Read reviews and ratings for assets to compare options and choose the right asset for your use case.
+* *Retrieve asset metadata* – Get metadata for an asset, including available versions, dependencies, instances, and documentation so you can evaluate and use the asset in your projects.
 * *Query user profile and permissions* – Check your user profile and permissions so you know what you can access, publish, or manage in Exchange.
+
+You can perform other actions, including reading reviews and ratings for an asset on the platform.
 
 == See Also
 
