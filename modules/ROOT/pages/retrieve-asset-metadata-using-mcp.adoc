@@ -17,7 +17,7 @@ After you connect your AI client to the MCP server endpoint, you can perform the
 
 * *Search for assets* – Search by asset name, description, or keywords to find agents, MCP servers, large language models (LLMs), and other assets in Exchange.
 * *Retrieve asset metadata* – Get metadata for an asset, including available versions, dependencies, instances, and documentation so you can evaluate and use the asset in your projects.
-* *Query user profile and permissions* – Check your user profile and permissions so you know what you can access, publish, or manage in Exchange. To maximize security control, assign the required Exchange permissions to your agents.See xref:to-set-permissions.adoc[].
+* *Query user profile and permissions* – Check your user profile and permissions so you know what you can access, publish, or manage in Exchange. To maximize security control, assign the required Exchange permissions to your agents. See xref:to-set-permissions.adoc[].
 
 You can perform other actions, including reading reviews and ratings for an asset on the platform.
 
