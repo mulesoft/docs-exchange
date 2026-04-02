@@ -6,15 +6,38 @@ endif::[]
 Add a scanner to discover, import, and sync agents from Microsoft Azure Copilot into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
-Before adding this scanner, verify that you have the permission and these Microsoft Azure Copilot credentials:
+This setup requires specific configurations and access privileges in Microsoft Copilot Studio and Power Platform so the scanner can access and list agents.
 
-* Exchange Administrator permission 
-* Microsoft Azure Copilot System Administrator/System Customizer role (Before configuring the scanner, assign the app user and security role in Power Platform).
-* Microsoft Azure Copilot tenant ID
-* Microsoft Azure Copilot client ID 
-* Microsoft Azure Copilot client secret 
+* Prerequisites
+
+** An Azure App Registration must be completed in the Azure Portal to generate necessary credentials.
+
+* Required Configuration Values
+** Power Platform tenant ID
+** Power Platform client ID (Application ID)
+** Power Platform client secret
+
+* Required Permissions and Roles
+** Exchange Administrator permission 
+** Microsoft Azure Copilot System Administrator role 
+** Add the registered application as an Application User in Power Platform Admin Center and assign the required security role.
 +
-You enter the Microsoft Azure Copilot credentials when configuring the scanner in Exchange. For more information, see the Microsoft Azure Copilot documentation.
+Make sure you use these settings in the *Create New Role* panel:
+
++
+*** Role Name: Copilot Studio Scanner Role
+*** Business Unit: OrgID, for example, orge00a0000
+*** Description: Read-only access to scan Copilot Studio agent metadata
+*** Applies To: Copilot Studio scanning and auditing
+*** Summary of Core Table Privileges: Read access to the bot and botcomponents tables.
+*** Member's privilege to a Team: Direct User (Basic) access level and Team privileges.
+*** Select *Include App Opener privileges for running Model-Driven apps*.
+** Assign the *Copilot Studio Scanner Role* to the app owner.
+
+* Required Scopes:
+** For Microsoft APIs (for example, Microsoft Graph), use this scope: `https://<orgId>.api.crm.dynamics.com/.default`. The `.default` suffix uses the permissions configured in the Azure app registration.
+** To retrieve agent metadata, the scanner uses the Dataverse Web API. Set the scope to https://<orgId>.api.crm.dynamics.com.
+
 
 == Add a Scanner for Microsoft Azure Copilot
 
