@@ -7,7 +7,7 @@ Add a scanner to discover, import, and sync agents from Amazon Bedrock AgentCore
 
 == Before You Begin
 
-This setup requires specific configurations and access privileges in AWS Bedrock to enable the scanner to access and list Amazon Bedrock AgentCore agents.
+This setup requires specific configurations and access privileges in Amazon Bedrock to enable the scanner to access and list Amazon Bedrock AgentCore agents.
 
 * Prerequisites
 +
