@@ -1,12 +1,12 @@
-= Adding a Scanner for Azure AI Foundry
+= Adding a Scanner for Microsoft Foundry
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Azure AI Foundry into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync agents from Microsoft Foundry into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
-This setup requires specific configurations and access privileges within the Azure environment to enable the agent scanner to access and list Azure Foundry AI agents.
+This setup requires specific configurations and access privileges within the Azure environment to enable the agent scanner to access and list Microsoft Foundry agents.
 
 * Prerequisites
 +
@@ -33,7 +33,7 @@ Agent listing is project-specific:
 +
 For more information, see the Azure documentation.
 
-== Add a Scanner for Azure AI Foundry
+== Add a Scanner for Microsoft Foundry
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Agent Scanners*.

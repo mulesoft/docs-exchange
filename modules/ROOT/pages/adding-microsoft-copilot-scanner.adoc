@@ -10,7 +10,7 @@ This setup requires specific configurations and access privileges in Microsoft C
 
 * Prerequisites
 
-** An Azure App Registration must be completed in the Azure Portal to generate necessary credentials.
+** An App Registration must be completed in the Azure Portal to generate necessary credentials.
 
 * Required Configuration Values
 ** Power Platform tenant ID
@@ -18,28 +18,48 @@ This setup requires specific configurations and access privileges in Microsoft C
 ** Power Platform client secret
 
 * Required Permissions and Roles
-** Exchange Administrator permission 
-** Microsoft Azure Copilot System Administrator role 
-** Add the registered application as an Application User in Power Platform Admin Center and assign the required security role.
 +
-Make sure you use these settings in the *Create New Role* panel:
-
-+
-*** Role Name: Copilot Studio Scanner Role
-*** Business Unit: OrgID, for example, orge00a0000
-*** Description: Read-only access to scan Copilot Studio agent metadata
-*** Applies To: Copilot Studio scanning and auditing
-*** Summary of Core Table Privileges: Read access to the bot and botcomponents tables.
-*** Member's privilege to a Team: Direct User (Basic) access level and Team privileges.
-*** Select *Include App Opener privileges for running Model-Driven apps*.
-** Assign the *Copilot Studio Scanner Role* to the app owner.
+Add the registered application as an Application User in Power Platform admin center and assign it the Copilot Studio Scanner Role security role. 
 
 * Required Scopes:
 ** For Microsoft APIs (for example, Microsoft Graph), use this scope: `https://<orgId>.api.crm.dynamics.com/.default`. The `.default` suffix uses the permissions configured in the Azure app registration.
 ** To retrieve agent metadata, the scanner uses the Dataverse Web API. Set the scope to https://<orgId>.api.crm.dynamics.com.
 
+== High-level Steps to Configure Microsoft Copilot Studio
 
-== Add a Scanner for Microsoft Azure Copilot
+To configure Microsoft Copilot Studio before you add a scanner, review these high-level steps. For details, see the Microsoft Copilot Studio documentation.
+
+. Create an app registration:
+.. Create a new app registration, select the account types, and register the application.
+.. Create client secrets and copy the values.
+.. Record these configuration values from the registered application. These values are required when adding a scanner in Exchange:
+
+*** Client ID (Application ID)
+*** Client Secret
+*** Tenant ID (Directory ID)
+. Configure permissions:
+.. In Power Platform, go to *Manage* > *Environments* and select the environment.
+.. Create a custom security role with read-only permission to the `bot` and `botcomponents` tables:
+... Go to *Settings* > *User + Permissions* > *Security roles* and add a new role.
+... Add or select these values in the *Create New Role* panel, and then save:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Role Name* |Copilot Studio Scanner Role
+|*Business Unit* |Select the business unit.
+|*Description* |Read-only access to scan Copilot Studio agent metadata.
+|*Applies To* |Copilot Studio scanning and auditing.
+|*Summary of Core Table Privileges* |Read access to the `bot` and `botcomponents` tables.
+|===
++
+... From the Details page, enter `bot` to locate the Agent and Agent Component table records.
+... Select *Organization Access* from the *Read* column for both Agent and Agent Component, and then save.
+.. In Power Platform admin center, create a new app user by selecting *Application users* and adding the app you created.
+.. Select the *Business Unit* and edit the *Security Role* by selecting the *Copilot Studio Scanner Role* that you created.
+. After you complete these steps, add the scanner in Exchange.
+
+== Add a Scanner for Microsoft Copilot Studio
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Agent Scanners*.

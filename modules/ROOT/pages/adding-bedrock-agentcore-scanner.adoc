@@ -3,11 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from AWS Bedrock AgentCore into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync agents from Amazon Bedrock AgentCore into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
 
-This setup requires specific configurations and access privileges in AWS Bedrock to enable the scanner to access and list AWS Bedrock AgentCore agents.
+This setup requires specific configurations and access privileges in AWS Bedrock to enable the scanner to access and list Amazon Bedrock AgentCore agents.
 
 * Prerequisites
 +
@@ -23,7 +23,6 @@ This setup requires specific configurations and access privileges in AWS Bedrock
 
 * Required Permissions and Roles
 +
-** Exchange Administrator permission.
 ** An IAM user with an inline policy that allows:
 *** `bedrock-agentcore:ListAgentRuntimes`
 *** `bedrock-agentcore:ListAgentRuntimeEndpoints`
@@ -34,9 +33,10 @@ This setup requires specific configurations and access privileges in AWS Bedrock
 *** `bedrock:GetAgent`
 *** `bedrock:ListAgents`
 *** `bedrock:InvokeAgent`
-
++
 To create the inline policy, use this policy:
 
++
 [source,json]
 ----
 {
