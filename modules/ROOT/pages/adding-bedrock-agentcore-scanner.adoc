@@ -33,30 +33,7 @@ This setup requires specific configurations and access privileges in Amazon Bedr
 *** `bedrock:GetAgent`
 *** `bedrock:ListAgents`
 *** `bedrock:InvokeAgent`
-+
-To create the inline policy, use this policy:
 
-+
-[source,json]
-----
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "VisualEditor0",
-      "Effect": "Allow",
-      "Action": [
-        "bedrock-agentcore:ListAgentRuntimes",
-        "bedrock-agentcore:ListAgentRuntimeEndpoints",
-        "bedrock-agentcore:GetAgentCard",
-        "bedrock-agentcore:GetAgentRuntime",
-        "bedrock-agentcore:ListAgentRuntimeVersions"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-----
 
 * Required Authentication
 +
@@ -69,7 +46,7 @@ To create the inline policy, use this policy:
 ** Security reviews indicate medium SSRF risk if a user-supplied region is not validated during URL construction.
 ** Basic AgentCore agents do not expose A2A cards, but AgentCore supports A2A cards when agents expose them.
 
-For more information, see the Amazon Bedrock AgentCore documentation.
+For more information, see the Amazon Bedrock documentation.
 
 == Add a Scanner for Amazon Bedrock AgentCore
 
