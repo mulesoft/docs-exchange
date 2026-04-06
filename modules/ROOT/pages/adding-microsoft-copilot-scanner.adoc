@@ -27,7 +27,7 @@ Add the registered application as an Application User in Power Platform admin ce
 
 == High-level Steps to Configure Microsoft Copilot Studio
 
-To configure Microsoft Copilot Studio before you add a scanner, review these high-level steps. For details, see the https://learn.microsoft.com/en-us/microsoft-copilot-studio/[MicrosoftCopilot Studio documentation].
+To configure Microsoft Copilot Studio before you add a scanner, review these high-level steps. For details, see the https://learn.microsoft.com/en-us/microsoft-copilot-studio/[Microsoft Copilot Studio documentation].
 
 . Create an app registration:
 .. Create a new app registration, select the account types, and register the application.
