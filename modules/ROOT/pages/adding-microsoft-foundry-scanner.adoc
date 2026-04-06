@@ -15,15 +15,15 @@ This setup requires specific configurations and access privileges within the Azu
 ** A new project created using the resource type, Microsoft Foundry resource.
 * Required Configuration Values
 +
-The following values, obtained during the Azure App registration setup, are required for scanner configuration:
+These values, which are obtained during the Azure App registration setup, are required for scanner configuration:
 +
 ** Tenant ID (Directory ID)
 ** Client ID (Application ID)
 ** Client Secret
-* Required Permissions and Roles
+* Required Permissions and Roles:
 +
 ** The application principal from the prerequisite step must be assigned the Azure AI Developer role within the Azure portal to grant the scanner access.
-* Scanner Configuration Limitations
+* Scanner Configuration Limitations:
 +
 Agent listing is project-specific:
 +
@@ -31,14 +31,14 @@ Agent listing is project-specific:
 ** A new scanner configuration is required for every new project created.
 
 +
-For more information, see the Azure documentation.
+For more information, see the https://learn.microsoft.com/en-us/azure/ai-foundry/[Microsoft Foundry documentation].
 
 == Add a Scanner for Microsoft Foundry
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Agent Scanners*.
 . Enter a name for the scanner.
-. From *Scanner Run Configuration*, complete these fields or options:
+. In *Scanner Run Configuration*, complete these fields or options:
 +
 [%header,cols="1,4"]
 |===
