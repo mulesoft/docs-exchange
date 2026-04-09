@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Use Einstein generative AI to generate API documentation for REST APIs, SOAP APIs, AsyncAPI, and GraphQL API in Exchange and streamline how your organization manages APIs. By using AI, you can simplify your API documentation processes. Generative AI creates consistent, accurate, and current API documentation. This frees you to focus on strategic tasks and enhances developer satisfaction.
+Use generative AI to generate API documentation for REST, SOAP, AsyncAPI, and GraphQL in Exchange, streamlining how your organization manages APIs. AI simplifies your processes by creating consistent, accurate, and current content, which frees you to focus on strategic tasks and enhances developer satisfaction.
 
 You can create documentation for API assets that don't have any documentation. From the asset details page in Exchange, generate the documentation, then manually edit and improve the documentation. After that, publish it to make it available to everyone in your organization.
 
