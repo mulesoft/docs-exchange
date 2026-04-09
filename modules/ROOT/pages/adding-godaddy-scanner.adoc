@@ -41,7 +41,7 @@ You enter your GoDaddy ANS credentials when configuring the scanner in Exchange.
 |*API Secret* |Enter the API secret.
 |*Environment* |Select an environment.
 |*Agent Display Name Filter* |Enter a name to partially match and include specific agents, or leave blank to include all agents.
-|*Agent FQDN Filter*| Enter a fully qualified domain name (FQDN) for an exact match to include specific agents, or leave blank to include all agents.
+|*Agent FQDN Filter*| Enter a fully qualified domain name (FQDN) for an exact match to include specific agents, or leave blank to include all agents. For example, `agent.example.com`.
 |===
 
 . Click *Test Connection*.
