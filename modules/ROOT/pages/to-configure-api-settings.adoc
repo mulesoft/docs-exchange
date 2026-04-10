@@ -6,7 +6,9 @@ endif::[]
 
 Use Anypoint Exchange to configure whether instances are public or private in a private Exchange instance or in an Exchange public portal. For example, configure public or private visibility for proxies or policies associated with your asset and set using API Manager.
 
-After you register an API from Exchange in API Manager, the instances for the asset appear in Exchange in the *Instances* list on the asset details page. 
+After you register an API or other asset from Exchange in API Manager, the instances for the asset appear in Exchange in the *Instances* list on the asset details page. 
+
+You can also verify agent instances via GoDaddy Agent Naming Service (ANS) during the registration process in API Manager. Implement GoDaddy's trust layer to verify and secure trusted agents across Anypoint Platform. Verified agents display in the *Agents & Tools* list and on asset details pages with a verified badge. Managed instances in Exchange show if an agent is verified in the *Instances* list on the asset details page.
 
 Instances for brokers are created in the YAML in Anypoint Code Builder. After the agent network project is published to Exchange, the instances appear in the *Instances* list. 
 
@@ -19,7 +21,7 @@ In a private Exchange instance, asset administrators have access to change the v
 REST APIs provide a mocking service with data to test API features. The mocking service is always public.
 
 == Configure Non-Managed Instances 
-Configure assets with instances not managed by API Manager. Add, edit, and delete nonmanaged instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, MCPs, and LLMs. You can change the name, URL, and visibility of nonmanaged instances and services.
+Configure assets with instances not managed by API Manager. Add, edit, and delete nonmanaged instances that are serving AsyncAPIs, GraphQL, REST, HTTP APIs, agents, MCPs, and LLMs. Add these manually on the asset’s *Instances* page by providing a display name and base URL so developers know where the API is hosted. You can change the name, URL, and visibility of nonmanaged instances and services.
 
 * Add a non-managed instance:
 +
@@ -36,4 +38,6 @@ Configure assets with instances not managed by API Manager. Add, edit, and delet
 
 == See Also
 
+* xref:api-manager::godaddy-ans-registration.adoc[]
+* xref:asset-details.adoc#view-instances[View Instances]
 * xref:design-center::design-mocking-service.adoc[Simulate Calls to an API]
