@@ -15,7 +15,7 @@ This release supports:
 * AsyncAPI
 * GraphQL API
 
-Generate documentation for these APIs whether they are created using a single specification file or multiple specification files.
+Generate documentation for these APIs whether they are created using a single specification file or multiple specification files. Fragments aren't supported.
 
 == Documentation Structure
 AI-generated documentation in Anypoint Exchange standardizes API documentation, addressing inconsistency and incompleteness. The structure and format of the generated documentation is standardized across each API including fonts, headers, text size.
