@@ -18,9 +18,11 @@ image:agent-scanner-list.png["Agent Scanners page showing a list of scanners"]
 Agent scanners support these providers:
 
 * Amazon Bedrock 
+* Amazon Bedrock AgentCore
 * GoDaddy ANS
 * Google Vertex AI
 * Microsoft Copilot Studio
+* Microsoft Foundry
 
 == Security and Data Retention
 
