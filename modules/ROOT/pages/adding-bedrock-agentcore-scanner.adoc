@@ -50,7 +50,7 @@ For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Ama
 == Add a Scanner for Amazon Bedrock AgentCore
 
 . Verify that you are in the business group where you want to add the scanner.
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
 . In *Scanner Run Configuration*, complete these fields or options:
 +

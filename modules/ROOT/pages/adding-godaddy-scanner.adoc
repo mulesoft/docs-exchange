@@ -19,7 +19,7 @@ You enter your GoDaddy ANS credentials when configuring the scanner in Exchange.
 == Add a Scanner for GoDaddy ANS 
 
 . Verify that you are in the business group where you want to add the scanner.
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
 . From *Scanner Run Configuration*, complete these fields or options:
 +

@@ -18,15 +18,15 @@ You enter these Google Vertex AI credentials when configuring the scanner in Exc
 == Add a Scanner for Google Vertex AI
 
 . Verify that you are in the business group where you want to add the scanner.
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
 . From *Scanner Run Configuration*, complete these fields or options:
 +
 [%header,cols="1,4"]
 |===
 |*Field/Option* |*Value*
-|*Run Schedule* |Select a frequency and time.
-|*Sync Review* |Select Auto-resolve.
+|*Run Schedule* |Select a frequency and localtime.
+|*Sync Review* |Select an option: Auto-resolve or Ask to review.
 |===
 
 . From *Connection Configuration*, complete these fields:

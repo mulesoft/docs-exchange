@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-To view and manage your agent scanners, click *Agent Scanners* in the sidebar of Exchange.
+To view and manage your scanners, click *Scanners* in the sidebar of Exchange.
 
 You can perform these actions to manage scanners:
 
@@ -16,32 +16,33 @@ You can perform these actions to manage scanners:
 
 [[run-a-scanner]]
 == Run a Scanner
-Run the scanner manually to capture new agents and add them to Exchange. 
-Scanners run once daily and retrieve up to 1,200 agents per scan, with a maximum runtime of 6 hours. Exchange retains scan logs and statuses for at least 90 days and never deletes the most recent run. Run one scan at a time for each agent provider.
+Run the scanner manually to capture new assets and add them to Exchange. 
+Scanners run once daily and retrieve up to 1,200 assets per scan, with a maximum runtime of 6 hours. Exchange retains scan logs and statuses for at least 90 days and never deletes the most recent run. Run one scan at a time for each provider.
 
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Run Now*.
 +
 The scan waits in the queue until the current scan finishes.
 
 [[view-scanner-details]]
 == View Scanner Details
-View a list of scanners and the details about their scans. The *Agent Scanners* page lists the scanners added for the business group. The scanner details show information about the scanner, connection, last completed run, and scan history.
+View a list of scanners and the details about their scans. The *Scanners* page lists the scanners added for the business group. The scanner details show information about the scanner, connection, last completed run, and scan history.
 
 Scanner statuses are:
 
 * Scheduled
 * Paused
+* Pending review
 * Queued
 * Running
 * Importing
 * Stopped
 
-To see more information about a scanner and its scan details, from the sidebar in Exchange, click *Agent Scanners* and click the name of a scanner from the list.
+To see more information about a scanner and its scan details, from the sidebar in Exchange, click *Scanners* and click the name of a scanner from the list.
 
 Here's an example details page:
 
-image:scanner-details.png["Agent Scanner details page showing a list of scanners"]
+image:scanner-details.png["Scanner details page showing a list of scanners"]
 
 The *Actions* menu on the scanner details page includes these options, depending on the scanner status:
 
@@ -56,32 +57,101 @@ The *Actions* menu on the scanner details page includes these options, depending
 |Delete Scanner
 |===
 
+[[review-scan-results-manually]]
+== Review Scan Results Manually
+When a scanner's scheduled run configuration is set to *Ask to review*, its status changes to *Pending review* in the scanner details page after the scan completes. Review the scan results and determine which assets to import into Exchange.
+
+If another scan completes while you are reviewing, the current queue becomes stale and can’t be submitted. It remains available read‑only in the audit history. Open the newest queue to continue. If another scan configuration already registered the same asset, the system skips or updates as needed (no downgrades) and logs the outcome.
+
+Heres's what you see when you review the scan results:
+
+- A tabular list of discovered assets that respects the filters in the scanner configuration.
+- Key columns: asset name, asset ID (source identifier), Status (Active/Inactive from the source), Last updated (from the source). Foundational model may also appear when available.
+- State badges indicate how each asset will be handled:
+  * New/Add: first discovery; not yet in the registry
+  * Update: already in the registry; metadata changed at source
+  * Missing from source/Remove: in the registry but not found in this scan; if in use, show “missing from source”; if not used, it can be removed after a retention window (for example, 30 days)
+  * Previously Skipped: you deselected it in a prior review
+  * Already in Exchange: in the registry; no changes detected
+Select what to import
+- All asset are selected by default. Deselect individual assets, or deselect all and pick only the ones to import.
+- The Import button reflects your selection count (for example, “Import 4 of 9 asset”).
+- Deselected assets aren’t imported now and aren’t added to the ignore list; they remain pending and will reappear in the next scan. Previously deselected items show a “Previously Skipped” badge; if the source version changed, the badge indicates a newer version is available.
+Skip assets from future scans
+- Use the action menu to add an asset to the Skipped (Ignore) list. Skipped gents won’t appear in future scan results for that source unless you remove them from the Skipped list.
+- A Skipped list view lets you review and restore ignored assets.
+Review and confirm changes
+- Before changes are written, a Review Changes modal summarizes:
+  * Imported: new assets to be added
+  * Updated: existing assets whose records will be refreshed
+  * Skipped: assets you added to the Skipped list
+- Confirm to execute the import.
+Queue freshness and rescans
+- If another scan completes while you’re reviewing, the current review queue becomes stale and can’t be submitted; it’s preserved read‑only in audit history, and a banner directs you to the newest queue.
+- A “Last scanned X days ago” label indicates freshness. If available, use Rescan to refresh results without losing your current selections.
+Multiple scan configurations
+- If another scan configuration already registered an asset:
+  * Same version: skip and log
+  * Newer version: update in place and log the version change
+  * Older version: skip (no downgrade) and log
+  * Flagged for deletion but already removed: treat as success and log
+- After import, a summary shows what was imported, updated, or skipped and why.
+
+To manually review the scan results:
+
+. From the sidebar in Exchange, click *Scanners*.
+. Click the scanner with a status of *Pending review* to open the review queue.
+. Review the list of discovered assets. The table shows:
++
+- Provider/Source (for example, AWS Bedrock, Google Vertex AI, Microsoft Copilot)
+- assets name
+-assets ID (source identifier)
+- Status (Active/Inactive from the source)
+- Last updated (from the source)
+- Foundational model (when available)
+. Choose what to import:
++
+.. Keep assets selected to include them.
+.. Deselect any assets you don’t want to import now (the Import button shows the selection count, for example, “Import 4 of 9 agents”).
+. Optionally skip assets from future scans:
++
+.. For an asset, open the action menu and select *Skip* to add it to the Skipped list.
+.. Skipped assets don’t appear in future scan results for this source until you remove them from the Skipped list.
+. Click *Review changes* and confirm the summary:
++
+- Imported: new assets to add
+- Updated: existing assets whose records will be refreshed
+- Skipped: assets added to the Skipped list
+. Click *Import* to apply changes.
+
+
+
 [[abort-scans]]
 == Abort Scans
 Abort scans for a scanner when its status is queued, running, or importing. When the scan is aborted, the status is updated to stopped.
 
-* To abort a scan from the *Agent Scanners* page:
+* To abort a scan from the *Scanners* page:
 +
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Abort Scan*.
 
 * To abort a scan from the scanner details page, click *Actions* and then select *Abort Scan*. 
 
 [[delete-a-scanner]]
 == Delete a Scanner
-Delete an unused scanner when its status is scheduled, paused or stopped. Choose whether to keep or delete the agents associated with the scanner. Imported assets remain in Exchange if instances exist in API Manager.
+Delete an unused scanner when its status is scheduled, paused or stopped. Choose whether to keep or delete the assets associated with the scanner. Imported assets remain in Exchange if instances exist in API Manager.
 
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Delete Scanner*.
-. Choose whether to keep or delete imported agents and click *Delete*.
+. Choose whether to keep or delete imported assets and click *Delete*.
 
 [[edit-scanner-configuration]]
 == Edit Scanner Configuration
 Edit settings for a scanner with a status of scheduled, paused, or stopped, and turn scheduled scans on or off.
 
-* To edit a scanner from the *Agent Scanners* page:
+* To edit a scanner from the *Scanners* page:
 +
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Edit Scanner*.
 . Make your changes, and click *Update*.
 
@@ -92,18 +162,19 @@ Edit settings for a scanner with a status of scheduled, paused, or stopped, and 
 
 [[view-audit-logs]]
 == View Audit Logs
-View audit logs for scanners. In the audit log, view scan details, such as agents that were imported, updated, removed, and already in Exchange, and unsuccessful scans. The available tabs depend on the scan results.
+View audit logs for scanners. In the audit log, view scan details, such as assets that were imported, updated, removed, and already in Exchange, and unsuccessful scans. The available tabs depend on the scan results.
 
 Here's an example audit log:
 
 image:scanner-audit-log.png["Audit log showing details of a scan event"]
 
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Select the scanner from the list.
 . Select an event from *Scan History*. 
-. To view imported agents, click the *Imported* tab.
-. To view updated agents with newer versions available, click the *Updated* tab.
-. To view agents removed from Exchange because they’re missing from the provider, click the *Removed* tab.
-. To view agents that are found in the agent provider’s system and already in Exchange, click the *Already in Exchange* tab.
+. To view imported assets, click the *Imported* tab.
+. To view updated assets with newer versions available, click the *Updated* tab.
+. To view assets removed from Exchange because they’re missing from the provider, click the *Removed* tab.
+. To view assets that are found in the provider’s system and already in Exchange, click the *Already in Exchange* tab.
 . To view unsuccessful scans, click the *Unsuccessful* tab.
 
+a
