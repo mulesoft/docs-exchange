@@ -44,7 +44,7 @@ Before generating API documentation with Einstein, you must have these:
 +
 To enable Einstein in Anypoint Platform, see xref:access-management::enabling-einstein.adoc#enable-einstein-anypoint[Enable Einstein for Your Anypoint Platform Organization].
 
-== Generate API Documentation with Einstein
+== Generate API Documentation with Generative AI
 Generate documentation for API assets that don't have any documentation. You can edit and save a draft as many times as you like before publishing.
 
 IMPORTANT: Drafts aren't visible to others until they're published. You must publish the documentation for it to be available to your organization.
