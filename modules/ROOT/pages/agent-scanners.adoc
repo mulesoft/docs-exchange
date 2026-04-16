@@ -1,0 +1,12 @@
+= Agent Scanners
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+
+== Before You Begin Adding a Scanner
+
+Make sure you have the permission and access:
+
+* Exchange Administrator permission 
+* Verify that you are in the business group where you want to add the scanner.

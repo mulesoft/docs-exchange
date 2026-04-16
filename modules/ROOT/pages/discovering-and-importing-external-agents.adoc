@@ -15,14 +15,10 @@ After you add a scanner to a business group, you can't move the scanner or its m
 
 // update image with more asset types image:agent-scanner-list.png["Agent Scanners page showing a list of scanners"]
 
-Scanners support these providers:
+Exhange support these asset types:
 
-* Amazon Bedrock 
-* Amazon Bedrock AgentCore
-* GoDaddy ANS
-* Google Vertex AI
-* Microsoft Copilot Studio
-* Microsoft Foundry
+* Agents
+* APIs
 
 For setup steps for a specific provider, see the adding a scanner topics. 
 

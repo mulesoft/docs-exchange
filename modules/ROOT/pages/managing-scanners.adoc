@@ -63,19 +63,21 @@ When a scanner's scheduled run configuration is set to *Ask to review*, its stat
 
 If another scan completes while you are reviewing, the current queue becomes stale and can’t be submitted. It remains available read‑only in the audit history. Open the newest queue to continue. If another scan configuration already registered the same asset, the system skips or updates as needed (no downgrades) and logs the outcome.
 
-Heres's what you see when you review the scan results:
+Heres's what you see in the scanner's list page:
 
 - A tabular list of discovered assets that respects the filters in the scanner configuration.
 - Key columns: asset name, asset ID (source identifier), Status (Active/Inactive from the source), Last updated (from the source). Foundational model may also appear when available.
-- State badges indicate how each asset will be handled:
-  * New/Add: first discovery; not yet in the registry
+
+Select the scanner with a status of *Pending review* to open the review details.
+These tabs indicate how each asset will be handled:
+  * Add: first discovery; not yet in the registry
   * Update: already in the registry; metadata changed at source
-  * Missing from source/Remove: in the registry but not found in this scan; if in use, show “missing from source”; if not used, it can be removed after a retention window (for example, 30 days)
-  * Previously Skipped: you deselected it in a prior review
-  * Already in Exchange: in the registry; no changes detected
+  * Missing: in the registry but not found in this scan; if in use, show “missing from source”; if not used, it can be removed after a retention window (for example, 30 days)
+  * Skipped: you deselected it in a prior review
+  * Existing: already in the Exchange; no changes detected
 Select what to import
 - All asset are selected by default. Deselect individual assets, or deselect all and pick only the ones to import.
-- The Import button reflects your selection count (for example, “Import 4 of 9 asset”).
+- The Proceed button reflects your selection count (for example, “Proceed (4 of 9 assets)”).
 - Deselected assets aren’t imported now and aren’t added to the ignore list; they remain pending and will reappear in the next scan. Previously deselected items show a “Previously Skipped” badge; if the source version changed, the badge indicates a newer version is available.
 Skip assets from future scans
 - Use the action menu to add an asset to the Skipped (Ignore) list. Skipped gents won’t appear in future scan results for that source unless you remove them from the Skipped list.
