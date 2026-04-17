@@ -9,6 +9,7 @@ You can perform these actions to manage scanners:
 
 * xref:managing-scanners.adoc#run-a-scanner[Run a scanner]
 * xref:managing-scanners.adoc#view-scanner-details[View scanner details]
+* xref:managing-scanners.adoc#review-scan-results-manually[Review scan results manually]
 * xref:managing-scanners.adoc#abort-scans[Abort a scan]
 * xref:managing-scanners.adoc#delete-a-scanner[Delete a scanner]
 * xref:managing-scanners.adoc#edit-scanner-configuration[Edit a scanner configuration]
@@ -61,7 +62,11 @@ The *Actions* menu on the scanner details page includes these options, depending
 == Review Scan Results Manually
 When a scanner's scheduled run configuration is set to *Ask to review*, its status changes to *Pending review* in the scanner details page after the scan completes. Review the scan results and determine which assets to import into Exchange.
 
-If another scan completes while you are reviewing, the current queue becomes stale and can’t be submitted. It remains available read‑only in the audit history. Open the newest queue to continue. If another scan configuration already registered the same asset, the system skips or updates as needed (no downgrades) and logs the outcome.
+While reviewing scan results, note these behaviors:
+
+* If another scan completes while you are reviewing, the current queue becomes stale and can’t be submitted. It remains available read‑only in the audit history. Open the newest queue to continue. If another scan configuration already registered the same asset, the system skips or updates as needed (no downgrades) and logs the outcome.
+
+* If you don't confirm the scan result changes, the assets are not imported into Exchange. The scan results are available in the audit log. When the scanner runs again, the assets are scanned again and the previous results are stale and are overwritten by the new scan results. Consider updating the scanner configuration to *Auto-resolve* to automatically import assets without manual  review.
 
 Heres's what you see in the scanner's list page:
 
@@ -102,28 +107,28 @@ Multiple scan configurations
 To manually review the scan results:
 
 . From the sidebar in Exchange, click *Scanners*.
-. Click the scanner with a status of *Pending review* to open the review queue.
+. Click the scanner with a status of *Pending review* to open the review details.
 . Review the list of discovered assets. The table shows:
 +
 - Provider/Source (for example, AWS Bedrock, Google Vertex AI, Microsoft Copilot)
 - assets name
--assets ID (source identifier)
+- assets ID (source identifier)
 - Status (Active/Inactive from the source)
 - Last updated (from the source)
 - Foundational model (when available)
 . Choose what to import:
 +
 .. Keep assets selected to include them.
-.. Deselect any assets you don’t want to import now (the Import button shows the selection count, for example, “Import 4 of 9 agents”).
+.. Deselect any assets you don’t want to import now (the Import button shows the selection count, for example, “Import 4 of 9 assets”).
 . Optionally skip assets from future scans:
 +
 .. For an asset, open the action menu and select *Skip* to add it to the Skipped list.
 .. Skipped assets don’t appear in future scan results for this source until you remove them from the Skipped list.
 . Click *Review changes* and confirm the summary:
 +
-- Imported: new assets to add
-- Updated: existing assets whose records will be refreshed
-- Skipped: assets added to the Skipped list
+- Imported: New assets to add
+- Updated: Existing assets whose records will be refreshed
+- Skipped: Assets added to the Skipped list
 . Click *Import* to apply changes.
 
 

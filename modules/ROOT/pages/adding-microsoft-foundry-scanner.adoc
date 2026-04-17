@@ -44,7 +44,7 @@ For more information, see the https://learn.microsoft.com/en-us/azure/ai-foundry
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and local time.
-|*Sync Review* |Only *Auto-resolve* is supported.
+|*Sync Review* |Select an option: Auto-resolve or Ask to review.
 |===
 
 . From *Connection Configuration*, complete these fields:
@@ -52,7 +52,7 @@ For more information, see the https://learn.microsoft.com/en-us/azure/ai-foundry
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Azure AI Foundry*.
+|*Provider* |Select *Azure AI Foundry*.
 |*Asset Type* |Only agents are supported.
 |*Authentication Method* |Select *OAuth 2 Client Credentials*.
 |*Tenant ID* |Enter the application ID.

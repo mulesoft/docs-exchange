@@ -64,6 +64,7 @@
 *** xref:adding-microsoft-copilot-scanner.adoc[]
 *** xref:adding-microsoft-foundry-scanner.adoc[]
 ** xref:api-scanners.adoc[]
+** xref:mcp-scanners.adoc[]
 ** xref:managing-scanners.adoc[]
 ** xref:importing-agentforce-agents.adoc[]
 ** xref:to-share-an-asset.adoc[]
