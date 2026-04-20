@@ -42,8 +42,9 @@ The asset detail page provides this information:
 * Version 
 * Categories and tags of the asset
 * Lifecycle state
-* Conformance state
+* Managed and unmanaged instances and includes whether agent instances are verified via GoDaddy Agent Naming Service (ANS)
 * Share by inviting users to have access
+* Conformance state
 * APIs show download specifications and view code
 * Add a new version
 
@@ -101,6 +102,21 @@ For example, enter the term `ruleset` in the *Search content* box. From Pages, t
 image::ex-search-spec-and-pages.png["Search results for the term ruleset highlighted in the documentation"]
 
 
+== View Instances
+
+View the instances of APIs and other assets in the *Instances* list on the asset details page. Instances are managed or unmanaged (non-managed). Managed instances are managed in API Manager. For example, when you register an API in API Manager, it creates a managed instance. This instance is linked to a specific runtime (like Mule Gateway or Anypoint Flex Gateway). Its environments (sandbox and production) appear automatically in the *Instances* list. The list includes the instance name, version, environment, URL, visibility, and whether an agent instance is verified via GoDaddy Agent Naming Service (ANS).
+
+Unmanaged (external) instances run outside Anypoint Platform. These instances are primarily for discovery—helping your team find all APIs in one catalog even if they aren’t governed in API Manager.
+
+Instances for brokers are created in YAML in Anypoint Code Builder. After the agent network project is published to Exchange, the instances appear in the *Instances* list.
+
+To view instances:
+
+. Select an asset in Exchange.
+. In the navigation bar, select *Instances*.
+. The *Instances* list displays the instances of the asset.
+
+
 == View Conformance Status 
 
 include::partial$task-view-conformance-status.adoc[]
@@ -113,5 +129,5 @@ include::exchange::partial$task-view-governed-apis-for-rulesets.adoc[]
 == See Also
 
 * xref:access-management::permissions-by-product.adoc#exchange[Permissions Available in Anypoint Platform for Exchange]
-
+* xref:to-configure-api-settings.adoc[]
 * xref:generating-documentation-with-ai.adoc[]
