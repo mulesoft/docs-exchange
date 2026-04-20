@@ -1,0 +1,84 @@
+= Adding a Scanner for Amazon Bedrock AgentCore
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from Amazon Bedrock AgentCore into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+
+This setup requires specific configurations and access privileges in Amazon Bedrock to enable the scanner to access and list Amazon Bedrock AgentCore agents.
+
+* Prerequisites:
++
+** An active AWS account to register and host agents.
+** Access to Amazon Bedrock AgentCore in the AWS Console.
+** An AWS app registration in the AWS Console to generate credentials.
+
+* Required Configuration Values:
++
+** *AWS Region* for endpoint URL construction (for example, `https://bedrock.<region>.amazonaws.com`).
+** *Agent Endpoint and Version* because created agents must have an assigned endpoint and version to be discoverable.
+** *Access Key and Secret Access Key* generated for the Identity and Access Management (IAM) user.
+
+* Required Permissions and Roles:
++
+** An IAM user with an inline policy that allows:
+*** `bedrock-agentcore:ListAgentRuntimes`
+*** `bedrock-agentcore:ListAgentRuntimeEndpoints`
+*** `bedrock-agentcore:GetAgentCard`
+*** `bedrock-agentcore:GetAgentRuntime`
+*** `bedrock-agentcore:ListAgentRuntimeVersions`
+** Standard Bedrock permissions are also required:
+*** `bedrock:GetAgent`
+*** `bedrock:ListAgents`
+*** `bedrock:InvokeAgent` (for AgentCore agents)                                
+
+* Required Authentication:
++
+** IAM Signature (SigV4) is the default authentication method for AWS users.
+** OAuth 2.0 is available for AgentCore through `CreateOauth2CredentialProvider`.
+
+* Scanner Configuration Scope and Limitations:
++
+** Agents must be published with an active endpoint for scanner discovery.
+** Security reviews indicate medium server-side request forgery (SSRF) risk if a user-supplied region is not validated during URL construction.
+** Basic AgentCore agents do not expose A2A cards, but AgentCore supports A2A cards when agents expose them.
+
+For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Amazon Bedrock documentation].
+
+== Add a Scanner for Amazon Bedrock AgentCore
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Agent Scanners*.
+. Enter a name for the scanner.
+. In *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and local time.
+|*Sync Review* |Only *Auto-resolve* is supported.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Agent Provider* |Select *AgentCore*.
+|*Asset Type* |Only agents are supported.
+|*Authentication Method* |Select *Access key*.
+|*Access Key ID* |Enter the access key ID.
+|*Secret Access Key* |Enter the secret access key.
+|*AWS Region* |Select a region.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
