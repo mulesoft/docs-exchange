@@ -143,6 +143,7 @@ To create an API asset:
 * API Spec Fragment - RAML: Provide an API Fragment RAML specification file. Fragment specifications must be a RAML file (`.raml`). 
 * API Spec Fragment - JSON: Provide an API Fragment JSON specification (`.json`) file. 
 * API Spec Fragment - OpenAPI Specification (OAS): Provide an API Fragment OpenAPI specification file either JSON or YAML.
+* gRPC API: Provide a gRPC API specification file in a .proto file.
 * HTTP API: This asset does not require a file. This asset type provides an API endpoint that is defined by API Manager.
 +
 . For assets that require a file:
@@ -161,7 +162,7 @@ Exchange generates the group ID, asset ID, and version (GAV) for you, and you ca
 To create a ZIP file and put the items in a folder into the root directory of the ZIP file, use a command like this. Replace `myfolder` with the name of your folder and `name.zip` with the name for the new ZIP file.
 
 ```
-cd myfolder; zip -r name.zip .
+cd myfolder; zip -r name.zip.
 ```
 
 Do not use a command such as `zip -r name.zip myfolder`, which puts the folder into the root directory of the ZIP file. This causes an error message such as `The zip file does not contain a .raml file in the root directory`.

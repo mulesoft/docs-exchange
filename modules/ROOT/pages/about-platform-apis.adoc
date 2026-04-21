@@ -4,10 +4,11 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Anypoint Exchange provides API features for publishing
-and consuming assets by using the Exchange API, publishing
-and consuming assets by using the Exchange Maven Facade API, and searching
-for assets by using the Exchange Graph API.
+Anypoint Exchange provides several APIs to help you manage assets:
+
+* *Exchange API*: Publish and consume assets, and retrieve metadata for Agent Fabric assets.
+* *Exchange Maven Facade API*: Publish and consume assets.
+* *Exchange Graph API*: Search for assets.
 
 The Maven facade also enables you to publish federated assets.
 
@@ -19,12 +20,13 @@ Exchange APIs:
 
 Topics:
 
-* xref:exchange-api.adoc[Publish and Deploy Exchange Assets Using Exchange API]
-* xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven]
-* xref:to-search-with-graph-api.adoc[Search Using the Graph API]
+* xref:exchange-api.adoc[]
+* xref:to-publish-assets-maven.adoc[]
+* xref:to-search-with-graph-api.adoc[]
+* xref:retrieve-asset-metadata-using-mcp.adoc[]
 
 == See Also
 
 * https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[Anypoint Platform APIs - Developer Portal]
-* xref:about-api-use.adoc[Consume an API]
-* xref:to-configure-api-settings.adoc[Configure API Instances]
+* xref:about-api-use.adoc[]
+* xref:to-configure-api-settings.adoc[]
