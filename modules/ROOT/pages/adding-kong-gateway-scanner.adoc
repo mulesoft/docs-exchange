@@ -1,0 +1,48 @@
+= Adding a Scanner for Kong Gateway
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync APIs from Kong Gateway into Exchange. Then you can govern the APIs and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Kong credentials:
+
+* Exchange Administrator permission 
+* Kong Gateway region
+* Personal access token (PAT)
+
+== Add a Scanner for Kong Gateway
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and local time.
+|*Sync Review* |Select an option: Auto-resolve or Ask to review.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Kong*.
+|*Platform* |Select *Kong Gateway*.
+|*Service Type* |Select *REST APIs*.
+|*Authentication Method* |Select *Service Account*.
+|*Kong Gateway Region* |Select the Kong Gateway region.
+|*Personal Access Token* |Enter the personal access token.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.*

@@ -1,30 +1,20 @@
-= Adding a Scanner for Amazon Bedrock
+= Adding a Scanner for Amazon API Gateway
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Amazon Bedrock into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync agents from Amazon API Gateway into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission, context, and these Amazon Bedrock credentials:
+Before adding the scanner, verify that you have the permission, context, and these Amazon API Gateway credentials:
 
 * Exchange Administrator permission 
+* AWS APIGatewayScannerReadOnly permission
 * Knowledge about the Amazon Web Services region where the agents are deployed.
-* Amazon Bedrock access key ID
-* Amazon Bedrock secret access key
-* Ensure you have these Amazon Bedrock permissions:
-** bedrock:ListAgents
-** bedrock:GetAgent
-** bedrock:ListAgentAliases
-** bedrock:GetAgentAlias
-** bedrock:ListAgentVersions
-** bedrock:GetAgentVersion
-+
+* AWS access key ID
+* AWS secret access key
 
-* To make sure the scanner discovers the agent, assign an alias and link that alias to a version. The scanner ignores agents without an invocable URL.
-
-== Add a Scanner for Amazon Bedrock 
-
+== Add a Scanner for Amazon API Gateway
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
@@ -33,8 +23,8 @@ Before adding the scanner, verify that you have the permission, context, and the
 [%header,cols="1,4"]
 |===
 |*Field/Option* |*Value*
-|*Run Schedule* |Select a frequency and time.
-|*Sync Review* |Select Auto-resolve.
+|*Run Schedule* |Select a frequency and local time.
+|*Sync Review* |Select an option: Auto-resolve or Ask to review.
 |===
 
 . From *Connection Configuration*, complete these fields:
@@ -42,10 +32,12 @@ Before adding the scanner, verify that you have the permission, context, and the
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Amazon Bedrock*.
+|*Agent Provider* |Select *Amazon*.
+|*Platform* |Select *AWS AgentCore*.
+|*Service Type* |Select *MCPs*.
 |*Authentication Method* |Select *Access key*.
-|*Access Key ID* |Enter the access key ID.
-|*Secret Access Key* |Enter the secret access key.
+|*AWS Access Key ID* |Enter the access key ID.
+|*AWS Secret Access Key* |Enter the secret access key.
 |*AWS Region* |Select a region.
 |===
 

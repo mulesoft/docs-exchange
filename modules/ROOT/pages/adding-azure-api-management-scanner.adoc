@@ -1,0 +1,57 @@
+= Adding a Scanner for Azure API Management
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from Azure API Management into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Amazon API Gateway credentials:
+
+* Exchange Administrator permission 
+* API Management Service Reader Role permission
+* Tenant ID
+* Client ID
+* Client Secret
+* Subscription ID
+* Resource Group
+* Service Name
+
+== Add a Scanner for Azure API Management
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and local time.
+|*Sync Review* |Select an option: Auto-resolve or Ask to review.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Microsoft*.
+|*Platform* |Select *Azure API Management*.
+|*Service Type* |Select *REST APIs*.
+|*Authentication Method* |Select *OAuth*.
+|*Tenant ID* |Enter the access key ID.
+|*Client ID* |Enter the secret access key.
+|*Client Secret* |Enter the client secret.
+|*Subscription ID* |Enter the subscription ID.
+|*Resource Group* |Enter the resource group.
+|*Service Name* |Enter the service name.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.*
