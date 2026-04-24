@@ -7,10 +7,10 @@ API scanners connect external API gateways to Anypoint Platform. They discover, 
 
 These are the supported API gateway scanners:
 
-* Amazon API Gateway
-* Azure API Management
-* Kong API Gateway
-* Google Apigee API Gateway
+* xref:adding-amazon-gateway-scanner.adoc[Amazon API Gateway]
+* xref:adding-azure-api-management-scanner.adoc[Azure API Management]
+* xref:adding-kong-gateway-scanner.adoc[Kong API Gateway]
+* xref:adding-apigee-scanner.adoc[Google Apigee API Gateway]
 
 == Before You Begin Adding a Scanner
 
@@ -22,5 +22,5 @@ Make sure you have the permission and access:
 == See Also
 
 * xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
-
 * xref:managing-scanners.adoc[Managing Scanners]
+* Browse by provider: xref:aws-scanners.adoc[AWS], xref:google-scanners.adoc[Google], xref:microsoft-scanners.adoc[Microsoft], xref:kong-scanners.adoc[Kong]

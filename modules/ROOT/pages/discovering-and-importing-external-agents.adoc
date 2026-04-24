@@ -15,12 +15,26 @@ After you add a scanner to a business group, you can't move the scanner or its m
 
 // update image with more asset types image:agent-scanner-list.png["Agent Scanners page showing a list of scanners"]
 
-Exhange support these asset types:
+Exchange supports these asset types:
 
 * Agents
 * APIs
 
-For setup steps for a specific provider, see the adding a scanner topics. 
+== Find a scanner
+
+By scanner type::
+
+* xref:agent-scanners.adoc[Agent scanners]
+* xref:api-scanners.adoc[API scanners]
+* xref:mcp-scanners.adoc[MCP scanners]
+
+By cloud or vendor::
+
+* xref:aws-scanners.adoc[AWS scanners]
+* xref:google-scanners.adoc[Google scanners]
+* xref:microsoft-scanners.adoc[Microsoft scanners]
+* xref:kong-scanners.adoc[Kong scanners]
+* xref:godaddy-scanners.adoc[GoDaddy scanners]
 
 == Security and Data Retention
 

@@ -52,3 +52,9 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 .. Select *Advanced Settings* and turn on *Send Email Notifications*.
 .. Enter an email address.
 . Click *Add Scanner*.
+
+== See Also
+
+* xref:godaddy-scanners.adoc[GoDaddy scanners]
+* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
+* xref:managing-scanners.adoc[Managing Scanners]

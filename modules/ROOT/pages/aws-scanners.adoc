@@ -1,0 +1,34 @@
+= AWS Scanners
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+When your organization standardizes on Amazon Web Services (AWS), use this page to see which Exchange scanners apply to AWS services. Step-by-step setup lives in each linked topic; this page only maps scanners to AWS.
+
+== Agent scanners
+
+* xref:adding-amazon-bedrock-scanner.adoc[Add a scanner for Amazon Bedrock]
+* xref:adding-bedrock-agentcore-scanner.adoc[Add a scanner for Amazon Bedrock AgentCore]
+
+== API scanners
+
+* xref:adding-amazon-gateway-scanner.adoc[Add a scanner for Amazon API Gateway]
+
+== MCP scanners
+
+* xref:adding-agentcore-mcp-scanner.adoc[Add a scanner for Amazon Bedrock AgentCore MCP Server]
+
+== Before You Begin Adding a Scanner
+
+Make sure you have the permission and access:
+
+* Exchange Administrator permission
+* Verify that you are in the business group where you want to add the scanner.
+
+== See Also
+
+* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
+* xref:agent-scanners.adoc[Agent scanners]
+* xref:api-scanners.adoc[API scanners]
+* xref:mcp-scanners.adoc[MCP scanners]
+* xref:managing-scanners.adoc[Managing Scanners]
