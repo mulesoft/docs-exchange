@@ -5,12 +5,12 @@ endif::[]
 
 When your organization uses Microsoft Azure, Copilot Studio, or Microsoft Foundry, use this page to find the right Exchange scanner. Procedures are in the linked topics; this page is only a map.
 
-== Agent scanners
+== Agent Scanners
 
 * xref:adding-microsoft-copilot-scanner.adoc[Add a scanner for Microsoft Azure Copilot]
 * xref:adding-microsoft-foundry-scanner.adoc[Add a scanner for Microsoft Foundry]
 
-== API scanners
+== API Scanners
 
 * xref:adding-azure-api-management-scanner.adoc[Add a scanner for Azure API Management]
 

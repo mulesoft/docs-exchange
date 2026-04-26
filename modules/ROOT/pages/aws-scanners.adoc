@@ -5,16 +5,16 @@ endif::[]
 
 When your organization standardizes on Amazon Web Services (AWS), use this page to see which Exchange scanners apply to AWS services. Step-by-step setup lives in each linked topic; this page only maps scanners to AWS.
 
-== Agent scanners
+== Agent Scanners
 
 * xref:adding-amazon-bedrock-scanner.adoc[Add a scanner for Amazon Bedrock]
 * xref:adding-bedrock-agentcore-scanner.adoc[Add a scanner for Amazon Bedrock AgentCore]
 
-== API scanners
+== API Scanners
 
 * xref:adding-amazon-gateway-scanner.adoc[Add a scanner for Amazon API Gateway]
 
-== MCP scanners
+== MCP Scanners
 
 * xref:adding-agentcore-mcp-scanner.adoc[Add a scanner for Amazon Bedrock AgentCore MCP Server]
 
