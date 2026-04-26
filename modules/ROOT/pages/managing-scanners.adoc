@@ -60,7 +60,7 @@ The *Actions* menu on the scanner details page includes these options, depending
 
 [[review-scan-results-manually]]
 == Review Scan Results Manually
-When a scanner's scheduled run configuration is set to *Ask to review*, its status changes to *Pending review* in the scanner details page after the scan completes. Review the scan results and determine which assets to import into Exchange.
+Review the scan results and determine which assets to import into Exchange. When a scanner's scheduled run configuration is set to *Ask to review*, its status changes to *Pending review* in the scanner details page after the scan completes. Otherwise, the scan results are automatically imported into Exchange if set to *Auto-resolve*.
 
 While reviewing scan results, note these behaviors:
 
@@ -68,7 +68,7 @@ While reviewing scan results, note these behaviors:
 
 * If you don't confirm the scan result changes, the assets are not imported into Exchange. The scan results are available in the audit log. When the scanner runs again, the assets are scanned again and the previous results are stale and are overwritten by the new scan results. Consider updating the scanner configuration to *Auto-resolve* to automatically import assets without manual  review.
 
-Heres's what you see in the scanner's list page:
+Here's what you see in the scanner's list page:
 
 - A tabular list of discovered assets that respects the filters in the scanner configuration.
 - Key columns: Scanner Status, Scanner Name, Provider, Service Type, Last Completed Run, Last Run Status, Next Run, Total Services
@@ -79,16 +79,15 @@ For each scanner in the list, you can perform these actions from the overflow me
 * Edit the scanner configuration
 * Delete the scanner
 
-
 Select the scanner with a status of *Pending review* to open the review details.
 
-These tabs indicate how each asset will be handled:
+These tabs indicate how each service will be handled:
 
 * Add: first discovery; not yet in the registry
-* Update: already in the registry; metadata changed at source
-* Missing: in the registry but not found in this scan; if in use, show “missing from source”; if not used, it can be removed after a retention window (for example, 30 days)
-* Existing: already in the Exchange; no changes detected
-* Skipped: you deselected it in a prior review
+* Update: Already in the registry; metadata changed at source
+* Missing: In the registry but not found in this scan; if in use, show “missing from source”; if not used, it can be removed after a retention window (for example, 30 days)
+* Existing: Already in the Exchange; no changes detected
+* Skipped: Services that were deselected in a prior review
 
 Select what to import:
 
@@ -96,8 +95,9 @@ Select what to import:
 * Deselected assets aren’t imported now and aren’t added to the ignore list; they remain pending and will reappear in the next scan. Previously deselected items show a “Previously Skipped” badge; if the source version changed, the badge indicates a newer version is available.
 Skip assets from future scans
 
-* Use the action menu to add an asset to the Skipped (Ignore) list. Skipped gents won’t appear in future scan results for that source unless you remove them from the Skipped list.
+* Use the action menu to add an asset to the Skipped (ignore) list. Skipped services won’t appear in future scan results for that source unless you remove them from the Skipped list.
 * A Skipped list view lets you review and restore ignored assets.
+
 Review and confirm changes
 
 * Before changes are written, a Review Changes modal summarizes:
@@ -112,12 +112,13 @@ Queue freshness and rescans:
 * If another scan completes while you’re reviewing, the current review queue becomes stale and can’t be submitted; it’s preserved read‑only in audit history, and a banner directs you to the newest queue.
 * A “Last scanned X days ago” label indicates freshness. If available, use Rescan to refresh results without losing your current selections.
 
-Multiple scan configurations
+Multiple scan configurations:
 
-* If another scan configuration already registered an asset:
-  ** Same version: skip and log
-  ** Newer version: update in place and log the version change
-  ** Older version: skip (no downgrade) and log
+* If another scan configuration already registered a service:
+
+  ** Same version: Skip and log
+  ** Newer version: Update in place and log the version change
+  ** Older version: Skip (no downgrade) and log
   ** Flagged for deletion but already removed: treat as success and log
 * After import, a summary shows what was imported, updated, or skipped and why.
 
@@ -147,8 +148,6 @@ To manually review the scan results:
 * Updated: Existing assets whose records will be refreshed
 * Skipped: Assets added to the Skipped list
 . Click *Import* to apply changes.
-
-
 
 [[abort-scans]]
 == Abort Scans
