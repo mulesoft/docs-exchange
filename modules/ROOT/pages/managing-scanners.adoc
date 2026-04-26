@@ -79,7 +79,7 @@ For each scanner in the list, you can perform these actions from the overflow me
 * Edit the scanner configuration
 * Delete the scanner
 
-Select the scanner with a status of *Pending review* to open the review details.
+Select the scanner with a status of *Pending review* to open the review details and click *Review & Import*.
 
 These tabs indicate how each service will be handled:
 
@@ -95,17 +95,8 @@ Select what to import:
 * Deselected assets aren’t imported now and aren’t added to the ignore list; they remain pending and will reappear in the next scan. Previously deselected items show a “Previously Skipped” badge; if the source version changed, the badge indicates a newer version is available.
 Skip assets from future scans
 
-* Use the action menu to add an asset to the Skipped (ignore) list. Skipped services won’t appear in future scan results for that source unless you remove them from the Skipped list.
-* A Skipped list view lets you review and restore ignored assets.
-
-Review and confirm changes
-
-* Before changes are written, a Review Changes modal summarizes:
-
-  ** Imported: new assets to be added
-  ** Updated: existing assets whose records will be refreshed
-  ** Skipped: assets you added to the Skipped list
-* Confirm to execute the import.
+//* Use the action menu to add an asset to the Skipped (ignore) list. Skipped services won’t appear in future scan results for that source unless you remove them from the Skipped list.
+* The Skipped list view lets you review and restore ignored assets.
 
 Queue freshness and rescans:
 
