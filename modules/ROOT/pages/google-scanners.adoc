@@ -5,11 +5,11 @@ endif::[]
 
 When your organization uses Google Cloud or Google API management products, use this page to find the right Exchange scanner. Procedures are in the linked topics; this page is only a map.
 
-== Agent scanners
+== Agent Scanners
 
 * xref:adding-google-vertex-scanner.adoc[Add a scanner for Google Vertex AI]
 
-== API scanners
+== API Scanners
 
 * xref:adding-apigee-scanner.adoc[Add a scanner for Google Apigee]
 

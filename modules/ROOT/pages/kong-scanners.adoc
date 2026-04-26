@@ -5,7 +5,7 @@ endif::[]
 
 When your APIs are published through Kong Gateway, use this topic to jump to the Exchange scanner setup. Step-by-step instructions are in the linked page.
 
-== API scanners
+== API Scanners
 
 * xref:adding-kong-gateway-scanner.adoc[Add a scanner for Kong Gateway]
 

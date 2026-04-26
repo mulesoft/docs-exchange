@@ -71,22 +71,28 @@ While reviewing scan results, note these behaviors:
 Heres's what you see in the scanner's list page:
 
 - A tabular list of discovered assets that respects the filters in the scanner configuration.
-- Key columns: asset name, asset ID (source identifier), Status (Active/Inactive from the source), Last updated (from the source). Foundational model may also appear when available.
+- Key columns: Scanner Status, Scanner Name, Provider, Service Type, Last Completed Run, Last Run Status, Next Run, Total Services
+
+For each scanner in the list, you can perform these actions from the overflow menu (image:more-options-icon.png[2%,2%]):
+
+* Run the scanner now
+* Edit the scanner configuration
+* Delete the scanner
+
 
 Select the scanner with a status of *Pending review* to open the review details.
 
 These tabs indicate how each asset will be handled:
 
-  * Add: first discovery; not yet in the registry
-  * Update: already in the registry; metadata changed at source
-  * Missing: in the registry but not found in this scan; if in use, show “missing from source”; if not used, it can be removed after a retention window (for example, 30 days)
-  * Skipped: you deselected it in a prior review
-  * Existing: already in the Exchange; no changes detected
+* Add: first discovery; not yet in the registry
+* Update: already in the registry; metadata changed at source
+* Missing: in the registry but not found in this scan; if in use, show “missing from source”; if not used, it can be removed after a retention window (for example, 30 days)
+* Existing: already in the Exchange; no changes detected
+* Skipped: you deselected it in a prior review
 
-Select what to import
+Select what to import:
 
 * All asset are selected by default. Deselect individual assets, or deselect all and pick only the ones to import.
-* The Proceed button reflects your selection count (for example, “Proceed (4 of 9 assets)”).
 * Deselected assets aren’t imported now and aren’t added to the ignore list; they remain pending and will reappear in the next scan. Previously deselected items show a “Previously Skipped” badge; if the source version changed, the badge indicates a newer version is available.
 Skip assets from future scans
 
@@ -95,14 +101,17 @@ Skip assets from future scans
 Review and confirm changes
 
 * Before changes are written, a Review Changes modal summarizes:
+
   ** Imported: new assets to be added
   ** Updated: existing assets whose records will be refreshed
   ** Skipped: assets you added to the Skipped list
 * Confirm to execute the import.
-Queue freshness and rescans
+
+Queue freshness and rescans:
 
 * If another scan completes while you’re reviewing, the current review queue becomes stale and can’t be submitted; it’s preserved read‑only in audit history, and a banner directs you to the newest queue.
 * A “Last scanned X days ago” label indicates freshness. If available, use Rescan to refresh results without losing your current selections.
+
 Multiple scan configurations
 
 * If another scan configuration already registered an asset:
@@ -119,10 +128,10 @@ To manually review the scan results:
 . Review the list of discovered assets. The table shows:
 +
 * Provider/Source (for example, AWS Bedrock, Google Vertex AI, Microsoft Copilot)
-* assets name
-* assets ID (source identifier)
+* Assets name
+* Assets ID (source identifier)
 * Status (Active/Inactive from the source)
-*Last updated (from the source)
+* Last updated (from the source)
 * Foundational model (when available)
 . Choose what to import:
 +

@@ -5,7 +5,7 @@ endif::[]
 
 When your agents are hosted on GoDaddy ANS, use this page to open the scanner setup topic.
 
-== Agent scanners
+== Agent Scanners
 
 * xref:adding-godaddy-scanner.adoc[Add a scanner for GoDaddy ANS]
 
