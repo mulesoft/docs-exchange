@@ -190,5 +190,3 @@ image:scanner-audit-log.png["Audit log showing details of a scan event"]
 . To view assets removed from Exchange because they’re missing from the provider, click the *Removed* tab.
 . To view assets that are found in the provider’s system and already in Exchange, click the *Already in Exchange* tab.
 . To view unsuccessful scans, click the *Unsuccessful* tab.
-
-a
