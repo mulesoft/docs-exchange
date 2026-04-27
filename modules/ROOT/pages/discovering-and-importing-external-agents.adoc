@@ -15,12 +15,13 @@ After you add a scanner to a business group, you can't move the scanner or its m
 
 // update image with more asset types image:agent-scanner-list.png["Agent Scanners page showing a list of scanners"]
 
-Exchange supports these asset types:
+Exchange supports these scanner types:
 
 * Agents
 * APIs
+* MCP servers
 
-== Find a scanner
+== Find a Scanner
 
 By scanner type::
 
@@ -28,7 +29,7 @@ By scanner type::
 * xref:api-scanners.adoc[API scanners]
 * xref:mcp-scanners.adoc[MCP scanners]
 
-By cloud or vendor::
+By provider::
 
 * xref:aws-scanners.adoc[AWS scanners]
 * xref:google-scanners.adoc[Google scanners]
