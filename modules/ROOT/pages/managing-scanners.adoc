@@ -70,6 +70,8 @@ While reviewing scan results, note these behaviors:
 
 Here's what you see in the scanner's list page:
 
+image:scanners-list.png["Scanners list page"]
+
 * A tabular list of discovered assets that respects the filters in the scanner configuration.
 * Key columns: Scanner Status, Scanner Name, Provider, Service Type, Last Completed Run, Last Run Status, Next Run, Total Services
 
