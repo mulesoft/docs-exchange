@@ -11,9 +11,9 @@ Create a scanner to connect to a supported external platform and configure how o
 
 Imported assets appear in the Exchange catalog in the views that match their type—for example *Agents & Tools* for agents, MCP servers, and related agentic assets, and the usual API experiences for API specifications your provider exposes to the scanner. Scanners detect new and missing assets and metadata changes. Later scans overwrite metadata from Exchange with values from the source and can restore assets removed from Exchange while the scanner still sees them externally. To keep local edits, change the asset in the provider’s source of truth.
 
-After you add a scanner to a business group, you can't move the scanner or its managed assets to another group. Open *Scanners* in the sidebar to see all scanners for the group. The list shows status, name, provider, last run, next run, and counts of added or updated assets (including agents where the UI surfaces them).
+After you add a scanner to a business group, you can't move the scanner or its managed assets to another group. Click *Scanners* in the sidebar to see all scanners for the group. The list shows the scanner status, name, provider, service type,last run status, next run, and counts of added or updated services.
 
-// update image with more asset types image:agent-scanner-list.png["Agent Scanners page showing a list of scanners"]
+image:scanner-list.png["Scanners page showing a list of scanners"]
 
 Exchange supports these scanner types:
 
