@@ -1,18 +1,18 @@
-= Adding a Scanner for Amazon Bedrock AgentCore MCP Server
+= Adding a Scanner for Amazon AgentCore MCP Server
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync MCP servers from Amazon Bedrock AgentCore into Exchange. Then you can govern the MCP servers and consume them in other applications.
+Add a scanner to discover, import, and sync MCP servers from Amazon AgentCore into Exchange. Then you can govern the MCP servers and consume them in other applications.
 
 == Before You Begin
 
-Before adding the scanner, verify that you have the permission, context, and these Amazon Bedrock credentials:
+Before adding the scanner, verify that you have the permission, context, and these Amazon AgentCore credentials:
 
 * An active AWS account to register and host MCP servers.
-* AWS access key ID
-* AWS secret access key
-* AWS region
+* Amazon access key ID
+* Amazon secret access key
+* Amazon region
 * Exchange Administrator permission
 * An IAM user with an inline policy that allows these permissions:
 +
@@ -24,7 +24,7 @@ Before adding the scanner, verify that you have the permission, context, and the
  
 For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Amazon Bedrock documentation].
 
-== Add a Scanner for Amazon Bedrock AgentCore
+== Add a Scanner for Amazon  AgentCore
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.

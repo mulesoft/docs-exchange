@@ -70,16 +70,18 @@ While reviewing scan results, note these behaviors:
 
 Here's what you see in the scanner's list page:
 
-- A tabular list of discovered assets that respects the filters in the scanner configuration.
-- Key columns: Scanner Status, Scanner Name, Provider, Service Type, Last Completed Run, Last Run Status, Next Run, Total Services
+* A tabular list of discovered assets that respects the filters in the scanner configuration.
+* Key columns: Scanner Status, Scanner Name, Provider, Service Type, Last Completed Run, Last Run Status, Next Run, Total Services
 
-For each scanner in the list, you can perform these actions from the overflow menu (image:more-options-icon.png[2%,2%]):
+For each scanner in the list, you can perform these actions from the more options menu (image:more-options-icon.png[2%,2%]):
 
 * Run the scanner now
 * Edit the scanner configuration
 * Delete the scanner
 
 Select the scanner with a status of *Pending review* to open the review details and click *Review & Import*.
+
+image:scan-details-for-manual-review.png["Scan details for manual review"]
 
 These tabs indicate how each service will be handled:
 
