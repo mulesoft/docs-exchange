@@ -68,11 +68,11 @@ While reviewing scan results, note these behaviors:
 
 * If you don't confirm the scan result changes, the assets are not imported into Exchange. The scan results are available in the audit log. When the scanner runs again, the assets are scanned again and the previous results are stale and are overwritten by the new scan results. Consider updating the scanner configuration to *Auto-resolve* to automatically import assets without manual  review.
 
-Here's what you see in the scanner's list page:
+Here's what you see on the scanner's list page:
 
 image:scanner-list.png["Scanners list page showing a list of scanners"]
 
-* A tabular list of discovered assets that respects the filters in the scanner configuration.
+* A tabular list of discovered scanners that respects the filters and the scanner configuration.
 * Key columns: Scanner Status, Scanner Name, Provider, Service Type, Last Completed Run, Last Run Status, Next Run, Total Services
 
 For each scanner in the list, you can perform these actions from the more options menu (image:more-options-icon.png[2%,2%]):
