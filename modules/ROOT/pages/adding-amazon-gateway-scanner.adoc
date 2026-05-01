@@ -32,8 +32,8 @@ Before adding the scanner, verify that you have the permission, context, and the
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Amazon*.
-|*Platform* |Select *AWS AgentCore*.
+|*Provider* |Select *Amazon*.
+|*Platform* |Select *API Gateway*.
 |*Service Type* |Select *MCPs*.
 |*Authentication Method* |Select *Access key*.
 |*AWS Access Key ID* |Enter the access key ID.
