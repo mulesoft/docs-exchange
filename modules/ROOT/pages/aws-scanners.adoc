@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-When your organization standardizes on Amazon Web Services (AWS), use this page to see which Exchange scanners apply to Amazon services. Step-by-step setup lives in each linked topic; this page only maps scanners to AWS.
+When your organization standardizes on Amazon, use this page to see which Exchange scanners apply to Amazon services. Step-by-step setup lives in each linked topic; this page only maps scanners to Amazon.
 
 == Agent Scanners
 
