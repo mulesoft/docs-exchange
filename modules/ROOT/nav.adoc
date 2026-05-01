@@ -70,7 +70,7 @@
 **** xref:adding-amazon-gateway-scanner.adoc[]
 *** xref:mcp-scanners.adoc[]
 **** xref:adding-agentcore-mcp-scanner.adoc[]
-*** xref:aws-scanners.adoc[AWS Scanners]
+*** xref:aws-scanners.adoc[Amazon Scanners]
 *** xref:google-scanners.adoc[Google Scanners]
 *** xref:godaddy-scanners.adoc[GoDaddy Scanners]
 *** xref:kong-scanners.adoc[Kong Scanners]
