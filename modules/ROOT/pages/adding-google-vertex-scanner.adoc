@@ -25,7 +25,7 @@ You enter these Google Vertex AI credentials when configuring the scanner in Exc
 [%header,cols="1,4"]
 |===
 |*Field/Option* |*Value*
-|*Run Schedule* |Select a frequency and localtime.
+|*Run Schedule* |Select a frequency and local time.
 |*Sync Review* |Select an option: Auto-resolve or Ask to review.
 |===
 

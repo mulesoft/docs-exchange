@@ -9,7 +9,7 @@ Add a scanner to discover, import, and sync MCP servers from Amazon AgentCore in
 
 Before adding the scanner, verify that you have the permission, context, and these Amazon AgentCore credentials:
 
-* An active AWS account to register and host MCP servers.
+* An active AWS account to register and host MCP servers
 * Amazon access key ID
 * Amazon secret access key
 * Amazon region

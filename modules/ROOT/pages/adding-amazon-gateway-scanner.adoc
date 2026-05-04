@@ -10,7 +10,7 @@ Before adding the scanner, verify that you have the permission, context, and the
 
 * Exchange Administrator permission 
 * AWS APIGatewayScannerReadOnly permission
-* Knowledge about the Amazon Web Services region where the agents are deployed.
+* Knowledge about the Amazon Web Services region where the agents are deployed
 * AWS access key ID
 * AWS secret access key
 
