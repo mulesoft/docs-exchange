@@ -17,8 +17,8 @@ You can perform these actions to manage scanners:
 
 [[run-a-scanner]]
 == Run a Scanner
-Run the scanner manually to capture new assets and add them to Exchange. 
-Scanners run once daily and retrieve up to 1,200 assets per scan, with a maximum runtime of 6 hours. Exchange retains scan logs and statuses for at least 90 days and never deletes the most recent run. Run one scan at a time for each provider.
+Run the scanner manually to capture new services and add them to Exchange. 
+Scanners run once daily and retrieve up to 1,200 services per scan, with a maximum runtime of 6 hours. Exchange retains scan logs and statuses for at least 90 days and never deletes the most recent run. Run one scan at a time for each provider.
 
 . From the sidebar in Exchange, click *Scanners*.
 . Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Run Now*.
@@ -60,13 +60,13 @@ The *Actions* menu on the scanner details page includes these options, depending
 
 [[review-scan-results-manually]]
 == Review Scan Results Manually
-Review the scan results and determine which assets to import into Exchange. When a scanner's scheduled run configuration is set to *Ask to review*, its status changes to *Pending review* in the scanner details page after the scan completes. Otherwise, the scan results are automatically imported into Exchange if set to *Auto-resolve*.
+Review the scan results and determine which services to import into Exchange. When a scanner's scheduled run configuration is set to *Ask to review*, its status changes to *Pending review* in the scanner details page after the scan completes. Otherwise, the scan results are automatically imported into Exchange if set to *Auto-resolve*.
 
 While reviewing scan results, note these behaviors:
 
-* If another scan completes while you are reviewing, the current queue becomes stale and can’t be submitted. It remains available read‑only in the audit history. Open the newest queue to continue. If another scan configuration already registered the same asset, the system skips or updates as needed (no downgrades) and logs the outcome.
+* If another scan completes while you are reviewing, the current queue becomes stale and can’t be submitted. It remains available read‑only in the audit history. Open the newest queue to continue. If another scan configuration already registered the same service, the system skips or updates as needed (no downgrades) and logs the outcome.
 
-* If you don't confirm the scan result changes, the assets are not imported into Exchange. The scan results are available in the audit log. When the scanner runs again, the assets are scanned again and the previous results are stale and are overwritten by the new scan results. Consider updating the scanner configuration to *Auto-resolve* to automatically import assets without manual  review.
+* If you don't confirm the scan result changes, the services are not imported into Exchange. The scan results are available in the audit log. When the scanner runs again, the services are scanned again and the previous results are stale and are overwritten by the new scan results. Consider updating the scanner configuration to *Auto-resolve* to automatically import services without manual  review.
 
 Here's what you see on the scanner's list page:
 
@@ -95,10 +95,10 @@ These tabs indicate how each service will be handled:
 
 Select what to import:
 
-* All asset are selected by default. Deselect individual assets, or deselect all and pick only the ones to import.
-* Deselected assets aren’t imported now and aren’t added to the Skipped list; they remain pending and will reappear in the next scan. Previously deselected items show a “Previously Skipped” badge; if the source version changed, the badge indicates a newer version is available.
+* All services are selected by default. Deselect individual services, or deselect all and pick only the ones to import.
+* Deselected services aren’t imported now and aren’t added to the Skipped list; they remain pending and will reappear in the next scan. Previously deselected items show a “Previously Skipped” badge; if the source version changed, the badge indicates a newer version is available.
 
-Skip assets from future scans:
+Skip services from future scans:
 
 * Use the action menu to add the service to the Skipped (ignore) list. Skipped services won’t appear in future scan results for that source unless you remove them from the Skipped list.
 * The Skipped list view lets you review and restore skipped services by selecting *Remove from Skipped* from the more options menu (image:more-options-icon.png[2%,2%]).
@@ -122,28 +122,12 @@ To manually review the scan results:
 
 . From the sidebar in Exchange, click *Scanners*.
 . Click the scanner with a status of *Pending review* to open the review details.
-. Review the list of discovered assets. The table shows:
-+
-* Provider/Source (for example, AWS Bedrock, Google Vertex AI, Microsoft Copilot)
-* Assets name
-* Assets ID (source identifier)
-* Status (Active/Inactive from the source)
-* Last updated (from the source)
-* Foundational model (when available)
+. Review the list of discovered services. 
 . Choose what to import:
 +
-.. Keep assets selected to include them.
-.. Deselect any assets you don’t want to import now (the Import button shows the selection count, for example, “Import 4 of 9 assets”).
-. Optionally skip assets from future scans:
-+
-.. For an asset, open the action menu and select *Skip* to add it to the Skipped list.
-.. Skipped assets don’t appear in future scan results for this source until you remove them from the Skipped list.
-. Click *Review changes* and confirm the summary:
-+
-* Imported: New assets to add
-* Updated: Existing assets whose records will be refreshed
-* Skipped: Assets added to the Skipped list
-. Click *Import* to apply changes.
+.. Keep services selected to include them.
+.. Deselect any services you don’t want to import now.
+. Click the available action button for your current selection to apply changes.
 
 [[abort-scans]]
 == Abort Scans
@@ -158,11 +142,11 @@ Abort scans for a scanner when its status is queued, running, or importing. When
 
 [[delete-a-scanner]]
 == Delete a Scanner
-Delete an unused scanner when its status is scheduled, paused or stopped. Choose whether to keep or delete the assets associated with the scanner. Imported assets remain in Exchange if instances exist in API Manager.
+Delete an unused scanner when its status is scheduled, paused or stopped. Choose whether to keep or delete the services associated with the scanner. Imported services remain in Exchange if instances exist in API Manager.
 
 . From the sidebar in Exchange, click *Scanners*.
 . Find the scanner in the list, click the more options icon (image:more-options-icon.png[2%,2%]) and then select *Delete Scanner*.
-. Choose whether to keep or delete imported assets and click *Delete*.
+. Choose whether to keep or delete imported services and click *Delete*.
 
 [[edit-scanner-configuration]]
 == Edit Scanner Configuration
@@ -181,7 +165,7 @@ Edit settings for a scanner with a status of scheduled, paused, or stopped, and 
 
 [[view-audit-logs]]
 == View Audit Logs
-View audit logs for scanners. In the audit log, view scan details, such as assets that were imported, updated, removed, and already in Exchange, and unsuccessful scans. The available tabs depend on the scan results.
+View audit logs for scanners. In the audit log, view scan details, such as services that were imported, updated, removed, and already in Exchange, and unsuccessful scans. The available tabs depend on the scan results.
 
 Here's an example audit log:
 
@@ -190,8 +174,8 @@ image:scanner-audit-log.png["Audit log showing details of a scan event"]
 . From the sidebar in Exchange, click *Scanners*.
 . Select the scanner from the list.
 . Select an event from *Scan History*. 
-. To view imported assets, click the *Imported* tab.
-. To view updated assets with newer versions available, click the *Updated* tab.
-. To view assets removed from Exchange because they’re missing from the provider, click the *Removed* tab.
-. To view assets that are found in the provider’s system and already in Exchange, click the *Already in Exchange* tab.
+. To view imported services, click the *Imported* tab.
+. To view updated services with newer versions available, click the *Updated* tab.
+. To view services removed from Exchange because they’re missing from the provider, click the *Removed* tab.
+. To view services that are found in the provider’s system and already in Exchange, click the *Already in Exchange* tab.
 . To view unsuccessful scans, click the *Unsuccessful* tab.
