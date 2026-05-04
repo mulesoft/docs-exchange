@@ -72,7 +72,7 @@ Here's what you see on the scanner's list page:
 
 image:scanner-list.png["Scanners list page showing a list of scanners"]
 
-* A tabular list of discovered scanners that respects the filters and the scanner configuration.
+* A tabular list of discovered scanners that reflects the filters and the scanner configuration.
 * Key columns: Scanner Status, Scanner Name, Provider, Service Type, Last Completed Run, Last Run Status, Next Run, Total Services
 
 For each scanner in the list, you can perform these actions from the more options menu (image:more-options-icon.png[2%,2%]):
@@ -100,7 +100,7 @@ Select what to import:
 
 Skip services from future scans:
 
-* Use the action menu to add the service to the Skipped (ignore) list. Skipped services won’t appear in future scan results for that source unless you remove them from the Skipped list.
+* Use the action menu to add the service to the Skipped list. Skipped services won’t appear in future scan results for that source unless you remove them from the Skipped list.
 * The Skipped list view lets you review and restore skipped services by selecting *Remove from Skipped* from the more options menu (image:more-options-icon.png[2%,2%]).
 
 Queue freshness and rescans:
