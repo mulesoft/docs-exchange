@@ -39,7 +39,7 @@ By provider::
 
 == Security and Data Retention
 
-Scanners register imported services as read-only when the data originated from the external platform. Sensitive information, such as API keys and tokens, is stored in Anypoint Security secrets manager. To maintain compliance, create credentials with least privilege. Scanners don't write data back to your source system; read-only access keeps the integration surface small.
+Sensitive information, such as API keys and tokens, is stored in Anypoint Security secrets manager. To maintain compliance, create credentials with least privilege. 
 
 The system retains scan logs and statuses for at least 90 days and never deletes the most recent successful run. 
 
