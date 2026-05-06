@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-API scanners connect external API gateways to Anypoint Platform, enabling teams to discover, catalog, and sync APIs from third-party platforms directly into Exchange. From there, organizations can enforce governance standards and policies across all connected gateways.
+API scanners connect external API gateways to Anypoint Platform, enabling you to discover, import, and sync APIs from external platforms directly into Anypoint Exchange. Once synced, you can enforce governance policies across all connected gateways.
 
 These are the supported API gateway scanners:
 
