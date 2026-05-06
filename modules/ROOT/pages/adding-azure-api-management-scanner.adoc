@@ -39,7 +39,7 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Platform* |Select *Azure API Management*.
 |*Service Type* |Select *REST APIs*.
 |*Authentication Method* |Select *OAuth*.
-|*Tenant ID* |Enter the access key ID.
+|*Tenant ID* |Enter the tenant ID.
 |*Client ID* |Enter the secret access key.
 |*Client Secret* |Enter the client secret.
 |*Subscription ID* |Enter the subscription ID.
