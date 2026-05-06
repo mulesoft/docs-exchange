@@ -24,7 +24,7 @@ Before adding the scanner, verify that you have the permission, context, and the
  
 For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Amazon Bedrock documentation].
 
-== Add a Scanner for Amazon  AgentCore
+== Add a Scanner for Amazon AgentCore
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
