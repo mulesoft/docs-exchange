@@ -64,7 +64,7 @@ Review the scan results and determine which services to import into Exchange. Wh
 
 While reviewing scan results, note these behaviors:
 
-* If another scan completes while you are reviewing, the current queue becomes stale and can’t be submitted. It remains available read‑only in the audit history. Open the newest queue to continue. If another scan configuration already registered the same service, the system skips or updates as needed (no downgrades) and logs the outcome.
+* If another scan completes while you are reviewing, the current queue becomes stale and can’t be submitted. It remains available read‑only in the audit history. Open the latest scan to continue. If another scan configuration already registered the same service, the system skips or updates as needed (no downgrades) and logs the outcome.
 
 * If you don't confirm the scan result changes, the services are not imported into Exchange. The scan results are available in the audit log. When the scanner runs again, the services are scanned again and the previous results are stale and are overwritten by the new scan results. Consider updating the scanner configuration to *Auto-resolve* to automatically import services without manual  review.
 
