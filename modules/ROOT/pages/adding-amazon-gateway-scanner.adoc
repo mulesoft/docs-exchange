@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Amazon API Gateway into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync services from Amazon API Gateway into Exchange. Once imported, these services are available for governance, policy enforcement, and exposure through your developer portal.
 
 == Before You Begin
 Before adding the scanner, verify that you have the permission, context, and these Amazon API Gateway credentials:
