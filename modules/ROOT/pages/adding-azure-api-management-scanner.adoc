@@ -38,7 +38,7 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Provider* |Select *Microsoft*.
 |*Platform* |Select *Azure API Management*.
 |*Service Type* |Select *REST APIs*.
-|*Authentication Method* |Select *OAuth*.
+|*Authentication Method* |*OAuth* will be preselected.
 |*Tenant ID* |Enter the tenant ID.
 |*Client ID* |Enter the client id.
 |*Client Secret* |Enter the client secret.
