@@ -34,8 +34,8 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Field* |*Value*
 |*Provider* |Select *Amazon*.
 |*Platform* |Select *API Gateway*.
-|*Service Type* |*REST APIs* preselected.
-|*Authentication Method* |*Access key* preselected.
+|*Service Type* |*REST APIs* selected by default.
+|*Authentication Method* |*Access key* selected by default.
 |*AWS Access Key ID* |Enter the access key ID.
 |*AWS Secret Access Key* |Enter the secret access key.
 |*AWS Region* |Select a region.
