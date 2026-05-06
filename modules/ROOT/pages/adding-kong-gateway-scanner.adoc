@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync services from Kong Gateway into Exchange. Once imported, these services are available for governance, policy enforcement, and exposure through your developer portal.
+Add a scanner to discover, import, and sync services from Kong Gateway into Anypoint Exchange. Once imported, you can apply governance, enforce policies, and publish them to your developer portal.
 
 == Before You Begin
 Before adding the scanner, verify that you have the permission, context, and these Kong credentials:
@@ -32,8 +32,8 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Field* |*Value*
 |*Provider* |Select *Kong*.
 |*Platform* |Select *Kong Gateway*.
-|*Service Type* |*REST APIs* will be preselected.
-|*Authentication Method* |*Service Account* will be preselected.
+|*Service Type* |*REST APIs* selected by default.
+|*Authentication Method* |*Service Account* selected by default.
 |*Kong Gateway Region* |Select the Kong Gateway region.
 |*Personal Access Token* |Enter the personal access token.
 |===
