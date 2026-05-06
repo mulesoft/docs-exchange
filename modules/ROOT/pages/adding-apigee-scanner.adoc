@@ -34,8 +34,8 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Field* |*Value*
 |*Provider* |Select *Google*.
 |*Platform* |Select *Google Apigee*.
-|*Service Type* |*REST APIs* will be preselected.
-|*Authentication Method* |*Service Account* will be preselected.
+|*Service Type* |*REST APIs* selected by default.
+|*Authentication Method* |*Service Account* selected by default.
 |*GCP Project ID* |Enter the Google Cloud Platform project ID.
 |*Service Account Email* |Enter the service account email.
 |*Private Key* |Enter the private key.
