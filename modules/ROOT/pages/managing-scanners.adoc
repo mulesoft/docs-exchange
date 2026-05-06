@@ -105,7 +105,7 @@ Skip services from future scans:
 
 Queue freshness and rescans:
 
-* If another scan completes while you’re reviewing, the current review queue becomes stale and can’t be submitted; it’s preserved read‑only in audit history, and a banner directs you to the newest queue.
+* If another scan completes while you’re reviewing, the current review queue becomes stale and can’t be submitted; it’s preserved read‑only in audit history, and a banner directs you to the latest scan.
 * A “Last scanned X days ago” label indicates freshness. If available, use Rescan to refresh results without losing your current selections.
 
 Multiple scan configurations:
