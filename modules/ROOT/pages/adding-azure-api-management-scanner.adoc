@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync services from Azure API Management into Exchange. Once imported, these services are available for governance, policy enforcement, and exposure through your developer portal.
+Add a scanner to discover, import, and sync services from Azure API Management into Anypoint Exchange. Once imported, you can apply governance, enforce policies, and publish them to your developer portal.
 
 == Before You Begin
 Before adding the scanner, verify that you have the permission, context, and these Amazon API Gateway credentials:
@@ -37,8 +37,8 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Field* |*Value*
 |*Provider* |Select *Microsoft*.
 |*Platform* |Select *Azure API Management*.
-|*Service Type* |*REST APIs* will be preselected.
-|*Authentication Method* |*OAuth* will be preselected.
+|*Service Type* |*REST APIs* selected by default.
+|*Authentication Method* |*OAuth* selected by default.
 |*Tenant ID* |Enter the tenant ID.
 |*Client ID* |Enter the client id.
 |*Client Secret* |Enter the client secret.
