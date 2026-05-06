@@ -40,7 +40,7 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Service Type* |Select *REST APIs*.
 |*Authentication Method* |Select *OAuth*.
 |*Tenant ID* |Enter the tenant ID.
-|*Client ID* |Enter the secret access key.
+|*Client ID* |Enter the client id.
 |*Client Secret* |Enter the client secret.
 |*Subscription ID* |Enter the subscription ID.
 |*Resource Group* |Enter the resource group.
