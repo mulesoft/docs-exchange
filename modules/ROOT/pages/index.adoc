@@ -91,15 +91,16 @@ Using multiple languages with Unicode is supported fully throughout Exchange and
 
 [[exchange-on-control-planes]]
 == Anypoint Exchange on Control Planes
-All features of Anypoint Exchange are supported on Japan and Canada control planes with these exceptions:
+All features of Anypoint Exchange are supported Canada, Japan and India control planes with these exceptions:
 
 * xref:usage-and-engagement-metrics.adoc[Usage and engagement metrics] aren't supported.
 * Amazon CloudFront isn't configured on control planes. 
 +
-To download files from Japan or Canada control planes, use these URLs:
+To download files from Canada, Japan, or India control planes, use these URLs:
 
 ** Canada S3 Bucket URL: +https://exchange-asset-manager-d1937357035a847d2ec3.s3.ca-central-1.amazonaws.com+
 ** Japan S3 Bucket URL: +https://exchange-asset-manager-bf62561aafed7e20740f.s3.ap-northeast-1.amazonaws.com+
+** India S3 Bucket URL: +https://exchange-asset-manager-a2e86fbaee6d85765a10.s3.ap-south-1.amazonaws.com+
 
 
 == See Also
