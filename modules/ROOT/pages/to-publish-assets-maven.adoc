@@ -53,7 +53,7 @@ Starting May 18, 2026, connectors and Mule plugins published to Exchange require
 Choose the approach that matches your development setup:
 
 * If you use the parent POM, update to the latest parent POM version that includes `mule-extension-plugin` 1.9.0 and later.
-* If you use Mule SDK, upgrade to a version that includes mule-extension-plugin 1.9.0 and later.
+* If you use Mule SDK, upgrade to a version that includes `mule-extension-plugin` 1.9.0 and later.
 * If you manually configure plugins:* Update your POM file to reference mule-extension-plugin version 1.9.0 or higher
 
 == Publish an Asset to Exchange Using Maven
