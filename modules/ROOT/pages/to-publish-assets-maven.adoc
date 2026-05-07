@@ -48,13 +48,13 @@ To construct the elements of a Maven POM file, you need to determine your organi
 [[update-plugin-exchange-publishing]]
 == Update Your Plugin for Exchange Publishing
 
-Starting May 18, 2026, connectors and Mule plugins published to Exchange require `mule-extension-plugin` version 1.9.0 and later. This version includes Java compatibility information in your asset's `mule-artifact.json` file.
+Starting May 18, 2026, connectors and Mule plugins published to Exchange require `mule-extension-plugin` version 1.9.0 or later. This version includes Java compatibility information in your asset's `mule-artifact.json` file.
 
 Choose the approach that matches your development setup:
 
 * If you use the parent POM, update to the latest parent POM version that includes `mule-extension-plugin` 1.9.0 and later.
 * If you use Mule SDK, upgrade to a version that includes `mule-extension-plugin` 1.9.0 and later.
-* If you manually configure plugins: Update your POM file to reference `mule-extension-plugin` version 1.9.0 or higher
+* If you manually configure plugins: Update your POM file to reference `mule-extension-plugin` version 1.9.0 or later.
 
 == Publish an Asset to Exchange Using Maven
 
