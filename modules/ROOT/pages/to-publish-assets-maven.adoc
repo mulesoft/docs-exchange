@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
+:page-notice-banner-message: <b>Important:</b> Starting May 18, 2026, publishing connectors and Mule plugins to Exchange requires mule-extension-plugin version 1.9.0 or higher. See <a href="#connector-publishing-requirements">Connector Publishing Requirements</a>.
 
 include::reuse::partial$non-inclusive-banner.adoc[]
 
@@ -43,6 +44,35 @@ To construct the elements of a Maven POM file, you need to determine your organi
 . Log in to Anypoint Platform and click *Access Management*.
 . Click the name of the top-level organization or a business group, and view your organization ID in the organization information screen.
 . Copy the organization ID so you can add it to your project's POM file for the following examples.
+
+[[connector-publishing-requirements]]
+== Connector and Plugin Publishing Requirements
+
+Starting May 18, 2026, connectors and Mule plugins published to Exchange must use mule-extension-plugin version 1.9.0 or higher. This version ensures Java compatibility information is included in your asset's `mule-artifact.json` file.
+
+=== What You Need to Do
+
+Choose the approach that matches your development setup:
+
+* *If you use the parent POM (recommended):* Update to the latest parent POM version that includes mule-extension-plugin 1.9.0+
+* *If you use Mule SDK:* Upgrade to a version that includes mule-extension-plugin 1.9.0+. See the https://docs.mulesoft.com/release-notes/mule-sdk/mule-sdk-release-notes[Mule SDK Release Notes].
+* *If you manually configure plugins:* Update your POM file to reference mule-extension-plugin version 1.9.0 or higher
+
+=== Who Is Affected
+
+* Internal developers and partners publishing new connector versions
+* Customers building custom connectors with Mule SDK
+
+=== Who Isn't Affected
+
+* Users publishing with Anypoint Code Builder (ACB) or Anypoint Studio (these tools already include the required configuration)
+* Existing published connectors (no action needed unless you publish a new version)
+* Mule applications (no action needed)
+
+[IMPORTANT]
+====
+Starting May 18, 2026, connectors built with older versions of mule-extension-plugin fail to publish to Exchange. Update your plugin version before publishing new connector versions.
+====
 
 == Publish an Asset to Exchange Using Maven
 
