@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
-:page-notice-banner-message: Starting <b> May 18, 2026</b>, publishing connectors and Mule plugins to Exchange requires <code>mule-extension-plugin</code> <b>1.9.0 or later</b>. Update your plugin version before publishing new connector versions. See <a href="#update-plugin-exchange-publishing">Update Your Plugin for Exchange Publishing</a>.
+:page-notice-banner-message: Starting <b> May 18, 2026</b>, publishing connectors and Mule plugins to Exchange requires <b><code>mule-extension-plugin</code> 1.9.0 or later</b>. Update your plugin version before publishing new connector versions. See <a href="#update-plugin-exchange-publishing">Update Your Plugin for Exchange Publishing</a>.
 
 include::reuse::partial$non-inclusive-banner.adoc[]
 
