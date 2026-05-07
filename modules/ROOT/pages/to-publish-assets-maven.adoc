@@ -46,7 +46,7 @@ To construct the elements of a Maven POM file, you need to determine your organi
 . Copy the organization ID so you can add it to your project's POM file for the following examples.
 
 [[update-plugin-exchange-publishing]]
-== Connector and Plugin Publishing Requirements
+== Update Your Plugin for Exchange Publishing
 
 Starting May 18, 2026, connectors and Mule plugins published to Exchange must use mule-extension-plugin version 1.9.0 or higher. This version ensures Java compatibility information is included in your asset's `mule-artifact.json` file.
 
