@@ -104,7 +104,7 @@ image::ex-search-spec-and-pages.png["Search results for the term ruleset highlig
 
 == View Instances
 
-View the instances of APIs and other assets in the *Instances* list on the asset details page. Instances are managed or unmanaged (non-managed). Managed instances are managed in API Manager. For example, when you register an API in API Manager, it creates a managed instance. This instance is linked to a specific runtime (like Mule Gateway or Anypoint Flex Gateway). Its environments (sandbox and production) appear automatically in the *Instances* list. The list includes the instance name, version, environment, URL, visibility, and whether an agent instance is verified via GoDaddy Agent Naming Service (ANS).
+View the instances of APIs and other assets in the *Instances* list on the asset details page. Instances are managed or unmanaged (non-managed). Managed instances are managed in API Manager. For example, when you register an API in API Manager, it creates a managed instance. This instance is linked to a specific runtime (like Mule Gateway or Anypoint Omni Gateway). Its environments (sandbox and production) appear automatically in the *Instances* list. The list includes the instance name, version, environment, URL, visibility, and whether an agent instance is verified via GoDaddy Agent Naming Service (ANS).
 
 Unmanaged (external) instances run outside Anypoint Platform. These instances are primarily for discovery—helping your team find all APIs in one catalog even if they aren’t governed in API Manager.
 
