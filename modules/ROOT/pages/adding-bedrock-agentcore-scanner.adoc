@@ -67,7 +67,7 @@ For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Ama
 |===
 |*Field* |*Value*
 |*Provider* |Select *Amazon*.
-|*Platform* |Select *Bedrock AgentCore*.
+|*Platform* |Select *AWS AgentCore*.
 |*Asset Type* |Only agents are supported.
 |*Authentication Method* |Select *Access key*.
 |*Access Key ID* |Enter the access key ID.
