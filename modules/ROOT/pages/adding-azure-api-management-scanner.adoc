@@ -1,22 +1,23 @@
-= Adding a Scanner for Google Vertex AI
+= Adding a Scanner for Azure API Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Google Vertex AI into Exchange. Then you can govern the agents and consume them in other applications.  
+Add a scanner to discover, import, and sync APIs from Azure API Management into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission and these Google Vertex AI credentials:
+Before adding the scanner, verify that you have the permission, context, and these Amazon API Gateway credentials:
 
 * Exchange Administrator permission 
-* Vertex AI Viewer permission
-* Google Vertex AI project ID
-* Google Vertex AI secret access key
-+
-You enter these Google Vertex AI credentials when configuring the scanner in Exchange. For more information about creating a service account key, see Google Vertex AI documentation.
+* API Management Service Reader Role permission
+* Tenant ID
+* Client ID
+* Client Secret
+* Subscription ID
+* Resource Group
+* Service Name
 
-== Add a Scanner for Google Vertex AI
-
+== Add a Scanner for Azure API Management
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
@@ -34,12 +35,16 @@ You enter these Google Vertex AI credentials when configuring the scanner in Exc
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Google Vertex AI*.
-|*Authentication Method* |Select *Service Account*.
-|*Account Email* |Enter the email address.
-|*Project ID* |Enter the project ID.
-|*Secret Access Key* |Enter the access key.
-|*Location* |Select a location.
+|*Provider* |Select *Microsoft*.
+|*Platform* |Select *Azure API Management*.
+|*Service Type* |*REST APIs* selected by default.
+|*Authentication Method* |*OAuth* selected by default.
+|*Tenant ID* |Enter the tenant ID.
+|*Client ID* |Enter the client id.
+|*Client Secret* |Enter the client secret.
+|*Subscription ID* |Enter the subscription ID.
+|*Resource Group* |Enter the resource group.
+|*Service Name* |Enter the service name.
 |===
 
 . Click *Test Connection*.
@@ -53,6 +58,6 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:google-scanners.adoc[Google scanners]
+* xref:microsoft-scanners.adoc[Microsoft scanners]
 * xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
 * xref:managing-scanners.adoc[Managing Scanners]

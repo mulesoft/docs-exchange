@@ -20,39 +20,13 @@ Before adding the scanner, verify that you have the permission, context, and the
 ** bedrock:ListAgentVersions
 ** bedrock:GetAgentVersion
 +
-To create the inline policy, use this policy:
-
-[source,json]
-----
-{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "BedrockAgentDiscoveryPermissions",
-			"Effect": "Allow",
-			"Action": [
-				"bedrock:ListAgents",
-				"bedrock:GetAgent",
-				"bedrock:ListAgentAliases",
-				"bedrock:GetAgentAlias",
-				"bedrock:ListAgentVersions",
-				"bedrock:GetAgentVersion",
-				"bedrock:InvokeModel",
-				"bedrock:InvokeAgent",
-				"bedrock:InvokeInlineAgent"
-			],
-			"Resource": "*"
-		}
-	]
-}
-----
 
 * To make sure the scanner discovers the agent, assign an alias and link that alias to a version. The scanner ignores agents without an invocable URL.
 
 == Add a Scanner for Amazon Bedrock 
 
 . Verify that you are in the business group where you want to add the scanner.
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
 . From *Scanner Run Configuration*, complete these fields or options:
 +
@@ -68,7 +42,8 @@ To create the inline policy, use this policy:
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Amazon Bedrock*.
+|*Provider* |Select *Amazon*.
+|*Platform* |Select *AWS Bedrock*.
 |*Authentication Method* |Select *Access key*.
 |*Access Key ID* |Enter the access key ID.
 |*Secret Access Key* |Enter the secret access key.
@@ -83,3 +58,9 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 .. Select *Advanced Settings* and turn on *Send Email Notifications*.
 .. Enter an email address.
 . Click *Add Scanner*.
+
+== See Also
+
+* xref:aws-scanners.adoc[AWS scanners]
+* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
+* xref:managing-scanners.adoc[Managing Scanners]

@@ -1,22 +1,20 @@
-= Adding a Scanner for Google Vertex AI
+= Adding a Scanner for Google Apigee
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Google Vertex AI into Exchange. Then you can govern the agents and consume them in other applications.  
+Add a scanner to discover, import, and sync APIs from Google Apigee into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission and these Google Vertex AI credentials:
+Before adding the scanner, verify that you have the permission, context, and these Google Apigee credentials:
 
 * Exchange Administrator permission 
-* Vertex AI Viewer permission
-* Google Vertex AI project ID
-* Google Vertex AI secret access key
-+
-You enter these Google Vertex AI credentials when configuring the scanner in Exchange. For more information about creating a service account key, see Google Vertex AI documentation.
+* Apigee Read-only Admin permission
+* Google Cloud Platform (GCP) project ID
+* Service account email
+* Private key
 
-== Add a Scanner for Google Vertex AI
-
+== Add a Scanner for Google Apigee
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
@@ -34,12 +32,13 @@ You enter these Google Vertex AI credentials when configuring the scanner in Exc
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Google Vertex AI*.
-|*Authentication Method* |Select *Service Account*.
-|*Account Email* |Enter the email address.
-|*Project ID* |Enter the project ID.
-|*Secret Access Key* |Enter the access key.
-|*Location* |Select a location.
+|*Provider* |Select *Google*.
+|*Platform* |Select *Google Apigee*.
+|*Service Type* |*REST APIs* selected by default.
+|*Authentication Method* |*Service Account* selected by default.
+|*GCP Project ID* |Enter the Google Cloud Platform project ID.
+|*Service Account Email* |Enter the service account email.
+|*Private Key* |Enter the private key.
 |===
 
 . Click *Test Connection*.
