@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync services from Amazon API Gateway into Anypoint Exchange. Once imported, you can apply governance, enforce policies, and publish them to your developer portal.
+Add a scanner to discover, import, and sync APIs from Amazon API Gateway into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
 == Before You Begin
 Before adding the scanner, verify that you have the permission, context, and these Amazon API Gateway credentials:
