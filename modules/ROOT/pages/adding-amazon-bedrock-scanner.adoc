@@ -43,7 +43,7 @@ Before adding the scanner, verify that you have the permission, context, and the
 |===
 |*Field* |*Value*
 |*Provider* |Select *Amazon*.
-|*Platform* |Select *Bedrock AgentCore*.
+|*Platform* |Select *AWS Bedrock*.
 |*Authentication Method* |Select *Access key*.
 |*Access Key ID* |Enter the access key ID.
 |*Secret Access Key* |Enter the secret access key.
