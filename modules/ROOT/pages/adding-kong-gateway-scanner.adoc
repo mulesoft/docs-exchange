@@ -9,6 +9,8 @@ Add a scanner to discover, import, and sync APIs from Kong Gateway into Anypoint
 Before adding the scanner, verify that you have the permission, context, and these Kong credentials:
 
 * Exchange Administrator permission 
+*Kong Control Plane Viewer permission 
+
 * Kong Gateway region
 * Personal access token (PAT)
 
