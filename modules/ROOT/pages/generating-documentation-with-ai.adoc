@@ -47,7 +47,7 @@ Before generating API documentation with Generative AI, you must have these:
 * Salesforce org account with Agentforce enabled in Anypoint Platform. 
 +
 To enable Agentforce in Anypoint Platform, see xref:access-management::enabling-agentforce.adoc#enable-einstein-anypoint[Enable Agentforce for Your Anypoint Platform Organization].
-* When you upload a zip file, Anypoint Exchange extracts its content before processing. The extracted size of your API specification must not exceed 1.2 MB.
+* When you upload a zip file, Anypoint Exchange extracts its content before processing. The extracted size of your API specification must not exceed 1.2 MB, and the zip file must not contain more than 50 files.
 
 == Generate API Documentation with Generative AI
 
