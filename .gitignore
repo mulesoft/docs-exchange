@@ -1,2 +1,5 @@
 .DS_Store
+.cursor
+.claude
 *.DS_Store
+docs-exchange/
