@@ -6,7 +6,7 @@ endif::[]
 Add a scanner to discover, import, and sync APIs from Azure API Management into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission, context, and these Amazon API Gateway credentials:
+Before adding the scanner, verify that you have the permission, context, and these Azure API Management credentials:
 
 * Exchange Administrator permission 
 * API Management Service Reader Role permission

@@ -8,11 +8,27 @@ Add a scanner to discover, import, and sync APIs from Amazon API Gateway into An
 == Before You Begin
 Before adding the scanner, verify that you have the permission, context, and these Amazon API Gateway credentials:
 
-* Exchange Administrator permission 
-* AWS APIGatewayScannerReadOnly permission
+* Exchange Administrator permission
+* IAM policy with read-only permissions for Amazon API Gateway
 * Knowledge about the Amazon Web Services region where the services are deployed
 * AWS access key ID
 * AWS secret access key
+
+Example custom IAM policy for read-only access:
+
+[source,json,linenums]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["apigateway:GET"],
+      "Resource": "*"
+    }
+  ]
+}
+----
 
 == Add a Scanner for Amazon API Gateway
 . Verify that you are in the business group where you want to add the scanner.
