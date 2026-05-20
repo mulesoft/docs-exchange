@@ -1,0 +1,142 @@
+= API Scanners FAQ
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+This topic lists frequently asked questions about API scanners and provides answers.
+
+== Which API gateways does MuleSoft support?
+
+Anypoint now supports API scanning and cataloging from:
+
+* Amazon API Gateway
+* Azure API Management
+* Kong
+* Google Apigee
+
+== I don't see the Scanners tab in Exchange. Why?
+
+The Scanners tab is only visible to users with the *Exchange Administrator* role in the Anypoint Platform. Reach out to your organization administrator if you need access.
+
+== Why don't I see these new providers when configuring a scanner?
+
+API Scanner support is gated by your Anypoint Platform entitlements. If the new providers aren't appearing, it's likely a licensing issue. Reach out to your Account Executive to confirm your organization's entitlements.
+
+== Can I use API Scanners with a trial Anypoint account?
+
+Yes. API Scanner creation is supported for new Anypoint Trial accounts.
+
+== What permissions are needed to create or manage a scanner?
+
+Creating, editing, or deleting scanners requires the *Exchange Administrator* role in the Anypoint Platform.
+
+== Can I have multiple scanners for the same provider?
+
+Yes. You can configure multiple scanners for the same provider. Scanners that discover the same asset will not create duplicates in Exchange. Instead, those assets appear under the *Already in Exchange* status in scan reviews.
+
+== How often do scanners run?
+
+You can configure scanners to run on a schedule (hourly, daily, weekly) or trigger them manually from the scanner detail page. You can pause or modify scheduled scans at any time without losing scan history.
+
+== What's the Difference between Auto-Resolve and Manual Review?
+
+Each scanner can be configured in one of two modes:
+
+*Auto-resolve*: detected changes (new APIs, updates, deletions) flow into Exchange automatically.
+
+*Manual review*: detected changes surface in a review queue for administrator approval before they affect Exchange.
+
+Mode can be changed at any time without re-running the scanner.
+
+== What Happens when a Scanner Detects a Deleted API?
+
+If an asset is removed from the source gateway and the scanner is set to auto-resolve, the asset is deleted in Exchange after the next scan. Under manual review, the deletion is surfaced for administrator review and will be deleted once the scan is finalized.
+
+== Can I scan APIs that aren't published yet?
+
+No. Scanners only discover APIs that are deployed and accessible through the gateway's published surface. Draft APIs, undeployed proxies, and unstaged revisions are not detected.
+
+== Do scanners pull the OpenAPI spec from each gateway?
+
+What the scanner ingests varies by gateway:
+
+*Amazon API Gateway*: deployed REST API definition (resources, methods)
+
+*Azure API Management*: published API definition with operations
+
+*Kong Konnect*: gateway services and routes
+
+*Apigee*: proxy configuration plus any OAS spec attached to the proxy's resources folder
+
+Asset richness depends on what each gateway exposes at the runtime layer. Future releases will aim to expand spec ingestion across providers.
+
+== I can't see certain metadata from my source gateway in Exchange. Why?
+
+Exchange presents an opinionated view of each asset, mapped to the Exchange object model. This means scanners surface a normalized subset of what's available in the source gateway, enough for consistent discoverability and governance across providers, but not a complete one-to-one reflection of every field your gateway tracks.
+
+If there's specific gateway metadata you'd like to see surfaced in Exchange, please submit an idea on the https://ideas.salesforce.com/[Salesforce Ideas Exchange^]. We use customer feedback there to prioritize scanner enhancements.
+
+== My test connection succeeds, but my APIs aren't appearing. What should I check?
+
+Each provider has its own setup requirements. If the scanner authenticates successfully but doesn't surface assets, verify the following:
+
+=== Amazon API Gateway
+
+* IAM policy tied to the user with read-only permissions for Amazon API Gateway
++
+For example, a custom policy similar to:
++
+[source,json,linenums]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:GET"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
++
+* The API has been deployed to a *stage* (undeployed APIs are not discoverable)
+
+=== Azure API Management
+
+* The app registration has the *API Management Service Reader Role* on the APIM service
+* The API has been published as part of a revision (draft revisions are not discoverable)
+
+=== Kong Konnect
+
+* The personal access token's user (or system account) has the *Control Plane Viewer* role assigned, scoped to the control plane being scanned
+* The control plane has gateway services and routes configured
+
+=== Apigee
+
+* The Google Cloud service account has the *Apigee Read-only Admin* role
+* The proxy is deployed to an environment (undeployed proxies are not discoverable)
+
+== Can two scanners share the same name?
+
+No. Scanner names must be unique across all service types (APIs, Agents, MCP servers) within your Anypoint organization.
+
+== I can see my Apigee proxy in Exchange, but the endpoints are missing.
+
+For endpoint information to surface in Exchange, an *OpenAPI specification must be attached to the proxy's resources folder* in Apigee. Without an attached OAS spec, the scanner pulls the proxy's runtime metadata (name, environments, base path) but cannot enumerate endpoints.
+
+To add a spec: open the proxy in Apigee, navigate to *Develop → Resources*, and upload your OAS YAML or JSON file as a new resource. Redeploy the proxy, then re-run your scanner.
+
+== How do skipped assets behave on subsequent scans?
+
+Skipped assets are remembered and will re-appear in future scan results under the *Skipped* tab unless they're explicitly removed from the skipped list. This prevents repeatedly being asked about pilot APIs, deprecated services, or assets you've intentionally chosen not to catalog.
+
+== I added an API to the "Skipped" list. How do I remove it?
+
+Run a new scan against the affected scanner. In the scan results, navigate to the *Skipped* tab, click the three-dot menu next to the asset, and choose *Remove from skipped*. From there, the asset will move back into the review queue, where you can choose to import or update it.
+
+== Can I rename or relabel a federated asset after it's in Exchange?
+
+Asset names, descriptions, and other metadata cannot be edited in Exchange, but users are able to customize the content that appears on the service's *Home* page in Exchange and create additional documentation pages. Please keep in mind that any edits made in Exchange may be overwritten on the next scan if the underlying gateway's metadata has changed. We recommend treating the source gateway as the source of truth for asset details.
