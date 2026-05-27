@@ -2,7 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:page-notice-banner-message: Use the enhanced MuleSoft experience to import services from third-party providers and manage them in a unified experience. xref:exp-add-scanners-from-providers.adoc[Learn more.]
+//:page-notice-banner-message: Use the enhanced MuleSoft experience to import services from third-party providers and manage them in a unified experience. xref:docs-general::exp-scanners-add-from-providers.adoc[Learn more]
 
 Use scanners to automatically discover, import, and catalog services from outside Anypoint Platform. Scanners connect to external provider platforms and pull in metadata for agents, APIs, and Model Context Protocol (MCP) servers your teams rely on. They give enterprise-grade governance and visibility through MuleSoft Agent Fabric by synchronizing that metadata with the Agent Fabric registry in Anypoint Exchange.
 
