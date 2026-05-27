@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 :page-aliases: general::getting-started:anypoint-exchange.adoc, ex-ref-raml.adoc, about-exchange1.adoc, exchange1.adoc, exchange1-faq.adoc
-//:page-notice-banner-message: Use the enhanced MuleSoft experience to view and manage agents, MCP servers, and APIs in a single, consolidated portfolio across providers. xref:docs-general::exp-portfolio-overview.adoc[Learn more]
+//:page-notice-banner-message: Use the enhanced MuleSoft experience to view and manage agents, MCP servers, and APIs in a single, consolidated portfolio across providers. xref:docs-general::exp-portfolio-overview.adoc[Learn more.]
 
 Anypoint Exchange is a curated catalog of reusable assets. See xref:asset-types.adoc[Asset Types] for more information about each type of asset that's supported. You can catalog (publish), share, discover, learn about, and reuse assets within your organization of developers to facilitate collaboration, boost productivity, and promote standards.
 
