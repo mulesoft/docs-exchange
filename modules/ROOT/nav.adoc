@@ -76,6 +76,7 @@
 *** xref:kong-scanners.adoc[Kong Scanners]
 *** xref:microsoft-scanners.adoc[Microsoft Scanners]
 *** xref:managing-scanners.adoc[]
+*** xref:api-scanners-faq.adoc[]
 ** xref:importing-agentforce-agents.adoc[]
 ** xref:to-share-an-asset.adoc[]
  ** xref:managing-asset-deletion.adoc[]

@@ -56,5 +56,9 @@ If a scan exceeds the runtime limit, the scanner saves the progress and continue
 
 Make sure you have the permission and access:
 
-* Exchange Administrator permission 
+* Exchange Administrator permission
 * Verify that you are in the business group where you want to add the scanner.
+
+== See Also
+
+* xref:api-scanners-faq.adoc[]
