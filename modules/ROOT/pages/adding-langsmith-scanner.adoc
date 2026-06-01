@@ -1,0 +1,53 @@
+= Adding a Scanner for LangChain LangSmith
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from LangSmith into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Amazon Bedrock credentials:
+
+* Exchange Administrator permission 
+* Plus plan (or higher) workspace in LangSmith
+* API key for the workspace
+
+== Add a Scanner for LangChain LangSmith  
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *LangChain*.
+|*Platform* |Select *LangSmith*.
+|*Authentication Method* |Select *API key*.
+|*Tenant ID* |Enter the tentant ID.
+|*API Host* |Enter the URL for your workspace region: US Cloud: https://api.host.langchain.com, EU Cloud: https://api.eu.host.langchain.com. Default is the US region URL.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:aws-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
