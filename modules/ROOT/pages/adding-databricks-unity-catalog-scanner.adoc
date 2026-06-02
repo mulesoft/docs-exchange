@@ -1,0 +1,80 @@
+= Adding a Scanner for Databricks Unity Catalog
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from Databricks Unity Catalog into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Amazon Bedrock credentials:
+
+* Exchange Administrator permission 
+* Workspace URL
+* Client ID
+* Client secret
+* The Service Principal requires CAN_QUERY permission on each Serving Endpoint to enable full discovery and invocation.
++
+Use the Databricks Permissions API:
++
+[source,json]
+----
+PATCH /api/2.0/permissions/serving-endpoints/{endpoint_id}
+{
+  "access_control_list": [
+    {
+      "service_principal_name": "<clientId>",
+      "permission_level": "CAN_QUERY"
+    }
+  ]
+}
+----
++
+[cols="2,1",options="header"]
+|===
+|API Endpoint |Required Permission
+|GET /api/2.0/serving-endpoints |CAN_VIEW or higher
+|GET /api/2.0/serving-endpoints/{name} |CAN_VIEW or higher
+|GET /api/2.0/serving-endpoints/{name}/openapi |CAN_VIEW or higher
+|POST /serving-endpoints/{name}/invocations |CAN_QUERY or higher
+|===
+
+== Add a Scanner for Databricks Unity Catalog  
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Databricks*.
+|*Platform* |Select *Unity Catalog*.
+|*Workspace URL* |Enter the workspace URL.
+|*Client ID* |Enter the client ID.
+|*Client Secret* |Enter the client secret.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:aws-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
