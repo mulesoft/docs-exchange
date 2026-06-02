@@ -12,7 +12,7 @@ Before adding the scanner, verify that you have the permission, context, and the
 * Workspace URL
 * Client ID
 * Client secret
-* The Service Principal requires CAN_QUERY permission on each Serving Endpoint to enable full discovery and invocation.
+* The Service Principal requires CAN_QUERY permission on each serving endpoint to enable full discovery and invocation.
 +
 Use the Databricks Permissions API:
 +
