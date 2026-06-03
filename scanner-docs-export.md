@@ -1,0 +1,335 @@
+# Scanner Setup Documentation
+
+## `adding-claude-scanner.adoc`
+
+```adoc
+= Adding a Scanner for Anthropic Claude Managed Agents
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from Claude Managed Agents into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Anthropic Claude credentials:
+
+* Exchange Administrator permission
+* Paid Anthropic account
+* Claude API key
+
+== Add a Scanner for Anthropic Claude Managed Agents
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Anthropic*.
+|*Platform* |Select *Anthropic Claude*.
+|*Service Type*|*Agents* selected by default.
+|*Authentication Method* |Select *Access Keys*.
+|*API Key* |Enter the API key.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:aws-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
+```
+
+## `adding-databricks-unity-catalog-scanner.adoc`
+
+```adoc
+= Adding a Scanner for Databricks Unity Catalog
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from Databricks Unity Catalog into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Amazon Bedrock credentials:
+
+* Exchange Administrator permission
+* Workspace URL
+* DatabricksClient ID
+* DatabricksClient secret
+* The Service Principal requires CAN_QUERY permission on each serving endpoint to enable full discovery and invocation.
++
+Use the Databricks Permissions API:
++
+[source,json]
+----
+PATCH /api/2.0/permissions/serving-endpoints/{endpoint_id}
+{
+  "access_control_list": [
+    {
+      "service_principal_name": "<clientId>",
+      "permission_level": "CAN_QUERY"
+    }
+  ]
+}
+----
++
+[cols="2,1",options="header"]
+|===
+|API Endpoint |Required Permission
+|GET /api/2.0/serving-endpoints |CAN_VIEW or higher
+|GET /api/2.0/serving-endpoints/{name} |CAN_VIEW or higher
+|GET /api/2.0/serving-endpoints/{name}/openapi |CAN_VIEW or higher
+|POST /serving-endpoints/{name}/invocations |CAN_QUERY or higher
+|===
+
+== Add a Scanner for Databricks Unity Catalog
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Databricks*.
+|*Platform* |Select *Agent Bricks*.
+|*Service Type*|Select *Agents* selected by default.
+|*Authentication Method* |*OAuth* selected by default..
+|*Workspace URL* |Enter the workspace URL.
+|*Client ID* |Enter the client ID.
+|*Client Secret* |Enter the client secret.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:aws-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
+```
+
+## `adding-snowflake-mcp-scanner.adoc`
+
+```adoc
+= Adding a Scanner for Snowflake MCP Server
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync MCP servers from Snowflake MCP Serverinto Exchange. Then you can govern the servers and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Snowflake MCP credentials:
+
+* Exchange Administrator permission
+* Snowflake ACCOUNTADMIN role permission
+* Snowflake Enterprise edition account with MCP servers enabled
+* Snowflake account URL
+* Snowflake programmatic access token (PAT)
+
+== Add a Scanner for Snowflake MCP
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Snowflake*.
+|*Platform* |Select *Cortex AI*.
+|*Service Type*|Select *MCPs*.
+|*Authentication Method* |*Service Account* selected by default.
+|*Account URL* |Enter the Snowflake account URL.
+|*Programmatic Access Token* |Enter the programmatic access token.
+|*Database Filter* |To filter by database, enter the database name, or a comma-separated list of database names.
+|*Schema Filter* |To filter by schema, enter the schema name, or a comma-separated list of schema names.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:aws-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
+```
+
+## `adding-snowflake-cortex-ai-scanner.adoc`
+
+```adoc
+= Adding a Scanner for Snowflake Cortex AI
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from Snowflake Cortex AI into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Snowflake Cortex AI credentials:
+
+* Exchange Administrator permission
+* Snowflake Enterprise edition account with Cortex agents enabled
+* Snowflake ACCOUNTADMIN role permission
+* Snowflake account URL
+* Snowflake programmatic access token (PAT)
+
+== Add a Scanner for Snowflake Cortex AI
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Snowflake*.
+|*Platform* |Select *Cortex AI*.
+|*Service Type*|*Agents* is selected by default.
+|*Authentication Method* |*Service Account* selected by default.
+|*Account URL* |Enter the account URL.
+|*Programmatic Access Token* |Enter the programmatic access token.
+|*Database Filter* |To filter by database, enter the database name, or a comma-separated list of database names.
+|*Schema Filter* |To filter by schema, enter the schema name, or a comma-separated list of schema names.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:aws-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
+```
+
+## `adding-langsmith-scanner.adoc`
+
+```adoc
+= Adding a Scanner for LangChain LangSmith
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from LangSmith into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have the permission, context, and these Amazon Bedrock credentials:
+
+* Exchange Administrator permission
+* Plus plan (or higher) workspace in LangSmith
+* LangSmithAPI key for the workspace
+* LangSmith workspace ID
+
+== Add a Scanner for LangChain LangSmith
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *LangChain*.
+|*Platform* |Select *LangSmith*.
+|Service Type* |*Agents* is selected by default.
+|*Authentication Method* |*Access Keys* selected by default.
+|*LangSmith API Key* |Enter the API key.
+|*Workspace ID* |Enter the workspace ID.
+|*Region* |Select the region for your workspace: US or EU. Default is the US region.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:aws-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
+```
