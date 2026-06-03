@@ -58,7 +58,8 @@ PATCH /api/2.0/permissions/serving-endpoints/{endpoint_id}
 |===
 |*Field* |*Value*
 |*Provider* |Select *Databricks*.
-|*Platform* |Select *Unity Catalog*.
+|*Platform* |Select *Agent Bricks*.
+|*Service Type*|Select *Agents* selected by default.
 |*Workspace URL* |Enter the workspace URL.
 |*Client ID* |Enter the client ID.
 |*Client Secret* |Enter the client secret.
