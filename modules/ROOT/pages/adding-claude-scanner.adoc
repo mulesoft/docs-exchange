@@ -10,7 +10,7 @@ Before adding the scanner, verify that you have the permission, context, and the
 
 * Exchange Administrator permission 
 * Paid Anthropic account
-* Anthropic Claude API key
+* Claude API key
 
 == Add a Scanner for Anthropic Claude Managed Agents 
 

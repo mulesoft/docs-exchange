@@ -11,6 +11,8 @@ Before adding the scanner, verify that you have the permission, context, and the
 * Exchange Administrator permission
 * Snowflake Enterprise edition account with Cortex agents enabled
 * Snowflake ACCOUNTADMIN role permission
+* Snowflake account URL
+* Snowflake programmatic access token (PAT)
 
 == Add a Scanner for Snowflake Cortex AI
 
@@ -33,9 +35,12 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Field* |*Value*
 |*Provider* |Select *Snowflake*.
 |*Platform* |Select *Cortex AI*.
-|*Service Type*|Select *Agents*.
-|*Authentication Method* |Select *API key*.
-|*API Key* |Enter the API key.
+|*Service Type*|*Agents* is selected by default.
+|*Authentication Method* |*Service Account* selected by default.
+|*Account URL* |Enter the account URL.
+|*Programmatic Access Token* |Enter the programmatic access token.
+|*Database Filter* |To filter by database, enter the database name, or a comma-separated list of database names.
+|*Schema Filter* |To filter by schema, enter the schema name, or a comma-separated list of schema names.
 |===
 
 . Click *Test Connection*.

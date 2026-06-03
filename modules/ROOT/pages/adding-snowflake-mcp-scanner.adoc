@@ -10,9 +10,9 @@ Before adding the scanner, verify that you have the permission, context, and the
 
 * Exchange Administrator permission
 * Snowflake ACCOUNTADMIN role permission
-* Snowflake Enterprise edition account with MCP enabled
+* Snowflake Enterprise edition account with MCP servers enabled
 * Snowflake account URL
-* Snowflake access token
+* Snowflake programmatic access token (PAT)
 
 == Add a Scanner for Snowflake MCP
 

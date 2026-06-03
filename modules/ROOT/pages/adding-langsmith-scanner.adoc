@@ -10,7 +10,8 @@ Before adding the scanner, verify that you have the permission, context, and the
 
 * Exchange Administrator permission 
 * Plus plan (or higher) workspace in LangSmith
-* API key for the workspace
+* LangSmithAPI key for the workspace
+* LangSmith workspace ID
 
 == Add a Scanner for LangChain LangSmith  
 
@@ -32,9 +33,11 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Field* |*Value*
 |*Provider* |Select *LangChain*.
 |*Platform* |Select *LangSmith*.
-|*Authentication Method* |Select *API key*.
-|*Tenant ID* |Enter the tentant ID.
-|*API Host* |Enter the URL for your workspace region: US Cloud: https://api.host.langchain.com, EU Cloud: https://api.eu.host.langchain.com. Default is the US region URL.
+|Service Type* |*Agents* is selected by default.
+|*Authentication Method* |*Access Keys* selected by default.
+|*LangSmith API Key* |Enter the API key.
+|*Workspace ID* |Enter the workspace ID.
+|*Region* |Select the region for your workspace: US or EU. Default is the US region.
 |===
 
 . Click *Test Connection*.
