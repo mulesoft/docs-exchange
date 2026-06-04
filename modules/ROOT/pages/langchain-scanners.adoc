@@ -1,13 +1,13 @@
-= GoDaddy Scanners
+= LangChain Platform Scanners
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-When your agents are hosted on GoDaddy ANS, use this page to open the scanner setup topic.
+When your agents are hosted on LangChain, use this page to jump to the Exchange scanner setup. Step-by-step instructions are in the linked page.
 
 == Agent Scanners
 
-* xref:adding-godaddy-scanner.adoc[Add a scanner for GoDaddy ANS]
+* xref:adding-langsmith-scanner.adoc[Add a scanner for LangChain LangSmith]
 
 == Before You Begin Adding a Scanner
 

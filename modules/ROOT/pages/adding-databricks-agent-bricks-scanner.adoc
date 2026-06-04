@@ -1,18 +1,18 @@
-= Adding a Scanner for Databricks Unity Catalog
+= Adding a Scanner for Databricks Agent Bricks
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Databricks Unity Catalog into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync agents from Databricks Agent Bricks into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission, context, and these Amazon Bedrock credentials:
+Before adding the scanner, verify that you have these:
 
 * Exchange Administrator permission 
 * Workspace URL
-* DatabricksClient ID
-* DatabricksClient secret
-* The Service Principal requires CAN_QUERY permission on each serving endpoint to enable full discovery and invocation.
+* Databricks Client ID
+* Databricks Client secret
+* Service Principal requires CAN_QUERY permission on each serving endpoint to enable full discovery and invocation.
 +
 Use the Databricks Permissions API:
 +
@@ -38,7 +38,7 @@ PATCH /api/2.0/permissions/serving-endpoints/{endpoint_id}
 |POST /serving-endpoints/{name}/invocations |CAN_QUERY or higher
 |===
 
-== Add a Scanner for Databricks Unity Catalog  
+== Add a Scanner for Databricks Agent Bricks  
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.

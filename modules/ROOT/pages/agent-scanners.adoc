@@ -10,7 +10,7 @@ Supported agent scanners:
 * xref:adding-amazon-bedrock-scanner.adoc[]
 * xref:adding-bedrock-agentcore-scanner.adoc[]
 * xref:adding-claude-scanner.adoc[]
-* xref:adding-databricks-unity-catalog-scanner.adoc[]
+* xref:adding-databricks-agent-bricks-scanner.adoc[]
 * xref:adding-godaddy-scanner.adoc[]
 * xref:adding-google-vertex-scanner.adoc[]
 * xref:adding-langsmith-scanner.adoc[]
