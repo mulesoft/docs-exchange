@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync MCP servers from Snowflake MCP Serverinto Exchange. Then you can govern the servers and consume them in other applications.
+Add a scanner to discover, import, and sync MCP servers from Snowflake MCP Server into Exchange. Then you can govern the servers and consume them in other applications.
 
 == Before You Begin
 Before adding the scanner, verify that you have these:
@@ -34,7 +34,7 @@ Before adding the scanner, verify that you have these:
 |===
 |*Field* |*Value*
 |*Provider* |Select *Snowflake*.
-|*Platform* |Select *Cortex AI*.
+|*Platform* |Select *Snowflake MCP Server*.
 |*Service Type*|Select *MCPs*.
 |*Authentication Method* |*Service Account* selected by default.
 |*Account URL* |Enter the Snowflake account URL.
