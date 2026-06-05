@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-With the Exchange API, you can publish and consume assets, add documentation pages, add or edit categories, and even manage your public portals. This page shows several examples using the Exchange API, and the complete API documentation is at the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[API documentation portal].
+With the Exchange API, you can publish and consume assets, add documentation pages, add or edit categories, and even manage your public portals. This page shows several examples using the Exchange API, and the complete API documentation is at the https://dev-portal.mulesoft.com/apis/exchange-experience.html#overview[API documentation portal].
 
 The API supports all Exchange asset types, for example:
 
@@ -507,7 +507,7 @@ curl https://anypoint.mulesoft.com/exchange/api/v2/assets/:groupId/:assetId/vers
 == See Also
 
 * https://eu1.anypoint.mulesoft.com/exchange/[EU Exchange]
-* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange API]
+* https://dev-portal.mulesoft.com/apis/exchange-experience.html#overview[Exchange API]
 
 
 
