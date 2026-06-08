@@ -24,6 +24,7 @@ Before adding the scanner, verify that you have these:
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and time.
 |*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+|===
 
 . From *Connection Configuration*, complete these fields:
 +
@@ -48,6 +49,6 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:aws-scanners.adoc[]
+* xref:agent-scanners.adoc[]
 * xref:discovering-and-importing-external-agents.adoc[]
 * xref:managing-scanners.adoc[]

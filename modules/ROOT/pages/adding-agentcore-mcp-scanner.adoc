@@ -62,6 +62,7 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:aws-scanners.adoc[AWS scanners]
+* xref:aws-scanners.adoc[Amazon scanners]
 * xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
+* xref:mcp-scanners.adoc[MCP scanners]
 * xref:managing-scanners.adoc[Managing Scanners]

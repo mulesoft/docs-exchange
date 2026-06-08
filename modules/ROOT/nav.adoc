@@ -72,7 +72,6 @@
 **** xref:adding-apigee-scanner.adoc[]
 **** xref:adding-azure-api-management-scanner.adoc[]
 **** xref:adding-kong-gateway-scanner.adoc[]
-**** xref:adding-langsmith-scanner.adoc[]
 *** xref:mcp-scanners.adoc[]
 **** xref:adding-agentcore-mcp-scanner.adoc[]
 **** xref:adding-snowflake-mcp-scanner.adoc[]
