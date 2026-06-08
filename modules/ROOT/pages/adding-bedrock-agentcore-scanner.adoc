@@ -1,9 +1,9 @@
-= Adding a Scanner for Amazon Bedrock AgentCore
+= Adding a Scanner for Amazon Bedrock AgentCore Runtime
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Amazon Bedrock AgentCore into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync agents from Agent Runtime into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
 
@@ -86,6 +86,6 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:aws-scanners.adoc[AWS scanners]
-* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
-* xref:managing-scanners.adoc[Managing Scanners]
+* xref:aws-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]

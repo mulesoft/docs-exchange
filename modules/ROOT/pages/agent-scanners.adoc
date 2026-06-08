@@ -7,12 +7,16 @@ Agent scanners connect external agent platforms to Anypoint Platform. They disco
 
 Supported agent scanners:
 
-* xref:adding-amazon-bedrock-scanner.adoc[Amazon Bedrock]
-* xref:adding-bedrock-agentcore-scanner.adoc[Amazon Bedrock AgentCore]
-* xref:adding-google-vertex-scanner.adoc[Google Vertex AI]
-* xref:adding-microsoft-copilot-scanner.adoc[Microsoft Azure Copilot]
-* xref:adding-microsoft-foundry-scanner.adoc[Microsoft Foundry]
-* xref:adding-godaddy-scanner.adoc[GoDaddy ANS]
+* xref:adding-amazon-bedrock-scanner.adoc[]
+* xref:adding-bedrock-agentcore-scanner.adoc[]
+* xref:adding-claude-scanner.adoc[]
+* xref:adding-databricks-agent-bricks-scanner.adoc[]
+* xref:adding-godaddy-scanner.adoc[]
+* xref:adding-google-vertex-scanner.adoc[]
+* xref:adding-langsmith-scanner.adoc[]
+* xref:adding-microsoft-copilot-scanner.adoc[]
+* xref:adding-microsoft-foundry-scanner.adoc[]
+* xref:adding-snowflake-cortex-ai-scanner.adoc[]
 
 == Before You Begin Adding a Scanner
 
