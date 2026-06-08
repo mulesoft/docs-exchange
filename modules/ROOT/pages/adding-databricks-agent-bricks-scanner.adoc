@@ -9,7 +9,7 @@ Add a scanner to discover, import, and sync agents from Databricks Agent Bricks 
 Before adding the scanner, verify that you have these:
 
 * Exchange Administrator permission 
-* DatabricksWorkspace access 
+* Databricks Workspace access 
 * Workspace URL
 * Databricks Client ID
 * Databricks Client secret
