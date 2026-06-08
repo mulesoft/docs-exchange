@@ -12,6 +12,7 @@ Before adding the scanner, verify that you have these:
 * Workspace URL
 * Databricks Client ID
 * Databricks Client secret
+* Databricks Workspace Administrator permission
 * Service Principal requires CAN_QUERY permission on each serving endpoint to enable full discovery and invocation.
 +
 Use the Databricks Permissions API:

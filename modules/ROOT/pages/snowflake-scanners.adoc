@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-When your agents are hosted on Snowflake, use this page to jump to the Exchange scanner setup. Step-by-step instructions are in the linked page.
+When your services are hosted on Snowflake, use this page to jump to the Exchange scanner setup. Step-by-step instructions are in the linked page.
 
 == Agent Scanners
 
