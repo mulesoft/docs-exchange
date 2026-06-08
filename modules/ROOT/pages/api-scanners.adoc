@@ -28,4 +28,4 @@ Make sure you have the permission and access:
 
 * xref:discovering-and-importing-external-agents.adoc[]
 * xref:managing-scanners.adoc[]
-* Browse by provider: xref:aws-scanners.adoc[Amazon], xref:google-scanners.adoc[Google], xref:microsoft-scanners.adoc[Microsoft], xref:kong-scanners.adoc[Kong]
+

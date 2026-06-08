@@ -21,4 +21,3 @@ Make sure you have the permission and access:
 
 * xref:discovering-and-importing-external-agents.adoc[]
 * xref:managing-scanners.adoc[]
-* xref:aws-scanners.adoc[]
