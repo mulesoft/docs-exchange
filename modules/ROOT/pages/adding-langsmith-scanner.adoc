@@ -8,12 +8,12 @@ Add a scanner to discover, import, and sync agents from LangSmith into Exchange.
 == Before You Begin
 Before adding the scanner, verify that you have these:
 
-* Exchange Administrator permission 
+* Exchange Administrator permission
 * Plus plan (or higher) workspace in LangSmith
-* LangSmithAPI key for the workspace
+* LangSmith API key for the workspace
 * LangSmith workspace ID
 
-== Add a Scanner for LangChain LangSmith  
+== Add a Scanner for LangChain LangSmith
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
@@ -25,6 +25,7 @@ Before adding the scanner, verify that you have these:
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and time.
 |*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+|===
 
 . From *Connection Configuration*, complete these fields:
 +
@@ -33,7 +34,7 @@ Before adding the scanner, verify that you have these:
 |*Field* |*Value*
 |*Provider* |Select *LangChain*.
 |*Platform* |Select *LangSmith*.
-|Service Type* |*Agents* is selected by default.
+|*Service Type* |*Agents* is selected by default.
 |*Authentication Method* |*Access Keys* selected by default.
 |*LangSmith API Key* |Enter the API key.
 |*Workspace ID* |Enter the workspace ID.
@@ -51,6 +52,6 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:aws-scanners.adoc[]
+* xref:agent-scanners.adoc[]
 * xref:discovering-and-importing-external-agents.adoc[]
 * xref:managing-scanners.adoc[]

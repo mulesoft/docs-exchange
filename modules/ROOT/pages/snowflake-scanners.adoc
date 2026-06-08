@@ -24,4 +24,5 @@ Make sure you have the permission and access:
 
 * xref:discovering-and-importing-external-agents.adoc[]
 * xref:agent-scanners.adoc[]
+* xref:mcp-scanners.adoc[]
 * xref:managing-scanners.adoc[]

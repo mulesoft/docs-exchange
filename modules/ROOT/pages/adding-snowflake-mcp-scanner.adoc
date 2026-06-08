@@ -54,6 +54,7 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:aws-scanners.adoc[]
+* xref:snowflake-scanners.adoc[]
 * xref:discovering-and-importing-external-agents.adoc[]
+* xref:mcp-scanners.adoc[]
 * xref:managing-scanners.adoc[]
