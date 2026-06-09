@@ -48,6 +48,17 @@ The asset detail page provides this information:
 * APIs show download specifications and view code
 * Add a new version
 
+These actions trigger an update to the last updated date on the asset details page:
+
+* Create a new asset
+* Create a new asset version
+* Update any version agnostic property:
+** Name
+** Description
+** Icon
+** Contact name
+** Contact email
+
 For REST APIs, use the API console to create example calls and mock data to test the API. For more information, see xref:ex2-to-simulate-api-data.adoc[].
 
 For GraphQL APIs, use the GraphQL console to view GraphQL schemas and write and run queries. For more information, see xref:view-graphql-api-schemas-and-run-queries.adoc[].
