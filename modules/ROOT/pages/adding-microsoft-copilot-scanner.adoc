@@ -23,7 +23,7 @@ Add the registered application as an Application User in Power Platform admin ce
 
 * Required Scopes:
 ** For Microsoft APIs (for example, Microsoft Graph), use this scope: `https://<orgId>.api.crm.dynamics.com/.default`. The `.default` suffix uses the permissions configured in the Azure app registration.
-** To retrieve agent metadata, the scanner uses the Dataverse Web API. Set the scope to https://<orgId>.api.crm.dynamics.com.
+** To retrieve agent metadata, the scanner uses the Dataverse Web API. Set the scope to Dataverse Environment URL, `https://<org-Id>.crm.dynamics.com`.
 
 == High-level Steps to Configure Microsoft Copilot Studio
 
