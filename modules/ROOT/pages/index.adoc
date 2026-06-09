@@ -91,7 +91,7 @@ Using multiple languages with Unicode is supported fully throughout Exchange and
 
 [[exchange-on-control-planes]]
 == Anypoint Exchange on Control Planes
-All features of Anypoint Exchange are supported Canada, Japan and India control planes with these exceptions:
+All features of Anypoint Exchange are supported Canada, Japan, and India control planes with these exceptions:
 
 * xref:usage-and-engagement-metrics.adoc[Usage and engagement metrics] aren't supported.
 * Amazon CloudFront isn't configured on control planes. 
