@@ -8,13 +8,9 @@ API scanners connect external API gateways to Anypoint Platform, enabling you to
 These are the supported API gateway scanners:
 
 * xref:adding-amazon-gateway-scanner.adoc[Amazon API Gateway]
-* xref:adding-claude-scanner.adoc[Anthropic Claude Managed Agents]
 * xref:adding-azure-api-management-scanner.adoc[Azure API Management]
-* xref:adding-databricks-agent-bricks-scanner.adoc[Databricks Agent Bricks]
 * xref:adding-apigee-scanner.adoc[Google Apigee API Gateway]
 * xref:adding-kong-gateway-scanner.adoc[Kong API Gateway]
-* xref:adding-langsmith-scanner.adoc[LangChain LangSmith]
-*:
 
 
 == Before You Begin Adding a Scanner
