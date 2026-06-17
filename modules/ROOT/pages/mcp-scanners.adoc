@@ -7,7 +7,8 @@ MCP server scanners connect external MCP server gateways to Anypoint Platform. T
 
 These are the supported MCP server scanners:
 
-* xref:adding-agentcore-mcp-scanner.adoc[Amazon Bedrock AgentCore MCP Server]
+* xref:adding-agentcore-mcp-scanner.adoc[]
+* xref:adding-snowflake-mcp-scanner.adoc[]
 
 == Before You Begin Adding a Scanner
 
@@ -18,6 +19,5 @@ Make sure you have the permission and access:
 
 == See Also
 
-* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
-* xref:managing-scanners.adoc[Managing Scanners]
-* xref:aws-scanners.adoc[AWS scanners]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]

@@ -9,8 +9,9 @@ These are the supported API gateway scanners:
 
 * xref:adding-amazon-gateway-scanner.adoc[Amazon API Gateway]
 * xref:adding-azure-api-management-scanner.adoc[Azure API Management]
-* xref:adding-kong-gateway-scanner.adoc[Kong API Gateway]
 * xref:adding-apigee-scanner.adoc[Google Apigee API Gateway]
+* xref:adding-kong-gateway-scanner.adoc[Kong API Gateway]
+
 
 == Before You Begin Adding a Scanner
 
@@ -21,6 +22,6 @@ Make sure you have the permission and access:
 
 == See Also
 
-* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
-* xref:managing-scanners.adoc[Managing Scanners]
-* Browse by provider: xref:aws-scanners.adoc[AWS], xref:google-scanners.adoc[Google], xref:microsoft-scanners.adoc[Microsoft], xref:kong-scanners.adoc[Kong]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
+

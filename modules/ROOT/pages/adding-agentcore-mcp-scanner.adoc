@@ -1,9 +1,9 @@
-= Adding a Scanner for Amazon AgentCore MCP Server
+= Adding a Scanner for Amazon Bedrock AgentCore MCP 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync MCP servers from Amazon AgentCore into Exchange. Then you can govern the MCP servers and consume them in other applications.
+Add a scanner to discover, import, and sync MCP servers from Amazon Bedrock AgentCore MCP Gateway into Exchange. Then you can govern the MCP servers and consume them in other applications.
 
 == Before You Begin
 
@@ -62,6 +62,7 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:aws-scanners.adoc[AWS scanners]
+* xref:aws-scanners.adoc[Amazon scanners]
 * xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
+* xref:mcp-scanners.adoc[MCP scanners]
 * xref:managing-scanners.adoc[Managing Scanners]

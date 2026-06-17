@@ -1,13 +1,13 @@
-= Kong Scanners
+= LangChain Platform Scanners
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-When your APIs are published through Kong Gateway, use this topic to jump to the Exchange scanner setup. Step-by-step instructions are in the linked page.
+When your agents are hosted on LangChain, use this page to jump to the Exchange scanner setup. Step-by-step instructions are in the linked page.
 
-== API Scanners
+== Agent Scanners
 
-* xref:adding-kong-gateway-scanner.adoc[]
+* xref:adding-langsmith-scanner.adoc[Add a scanner for LangChain LangSmith]
 
 == Before You Begin Adding a Scanner
 
@@ -19,5 +19,5 @@ Make sure you have the permission and access:
 == See Also
 
 * xref:discovering-and-importing-external-agents.adoc[]
-* xref:api-scanners.adoc[]
+* xref:agent-scanners.adoc[]
 * xref:managing-scanners.adoc[]

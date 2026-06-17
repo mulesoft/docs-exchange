@@ -33,10 +33,16 @@ By scanner type::
 By provider::
 
 * xref:aws-scanners.adoc[]
-* xref:google-scanners.adoc[]
-* xref:microsoft-scanners.adoc[]
-* xref:kong-scanners.adoc[]
+* xref:anthropic-scanners.adoc[]
+* xref:databricks-scanners.adoc[]
 * xref:godaddy-scanners.adoc[]
+* xref:google-scanners.adoc[]
+* xref:kong-scanners.adoc[]
+* xref:langchain-scanners.adoc[]
+* xref:microsoft-scanners.adoc[]
+* xref:snowflake-scanners.adoc[]
+
+
 
 == Security and Data Retention
 
@@ -48,6 +54,7 @@ Scanners enforce these limits:
 
 * Frequency: Once daily
 * Retrieval: 1,200 services per runtime limit
+* Capacity: 10,000 services 
 * Runtime: 6 hours
 +
 If a scan exceeds the runtime limit, the scanner saves the progress and continues the scan the next time it runs.

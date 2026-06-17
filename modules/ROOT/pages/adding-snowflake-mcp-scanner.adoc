@@ -1,0 +1,60 @@
+= Adding a Scanner for Snowflake MCP Server
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync MCP servers from Snowflake MCP Server into Exchange. Then you can govern the servers and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have these:
+
+* Exchange Administrator permission
+* Snowflake ACCOUNTADMIN role permission
+* Snowflake Enterprise edition account with MCP servers enabled
+* Snowflake account URL
+* Snowflake programmatic access token (PAT)
+
+== Add a Scanner for Snowflake MCP
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Snowflake*.
+|*Platform* |Select *Snowflake MCP Server*.
+|*Service Type*|Select *MCPs*.
+|*Authentication Method* |*Service Account* selected by default.
+|*Account URL* |Enter the Snowflake account URL.
+|*Programmatic Access Token* |Enter the programmatic access token.
+|*Database Filter* |To filter by database, enter the database name, or a comma-separated list of database names.
+|*Schema Filter* |To filter by schema, enter the schema name, or a comma-separated list of schema names.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:snowflake-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:mcp-scanners.adoc[]
+* xref:managing-scanners.adoc[]
