@@ -14,7 +14,7 @@ The Maven facade also enables you to publish federated assets.
 
 Exchange APIs:
 
-* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange API]
+* https://dev-portal.mulesoft.com/apis/exchange-experience.html#overview[Exchange API]
 * https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-maven-facade-api-http/[Exchange Maven Facade API]
 * https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-graph-http/[Exchange Graph API]
 
@@ -27,6 +27,6 @@ Topics:
 
 == See Also
 
-* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[Anypoint Platform APIs - Developer Portal]
+* https://dev-portal.mulesoft.com/index.html[Anypoint Platform APIs - Developer Portal]
 * xref:about-api-use.adoc[]
 * xref:to-configure-api-settings.adoc[]

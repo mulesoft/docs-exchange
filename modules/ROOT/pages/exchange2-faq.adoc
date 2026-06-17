@@ -22,7 +22,7 @@ Users can delete a draft, which discards all changes made in the draft.
 
 == Where is the latest version of the Developer Portal?
 
-The MuleSoft Developer Portal is at https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/.
+The MuleSoft Developer Portal is at https://dev-portal.mulesoft.com/index.html.
 
 == How do I create an API Portal?
 
@@ -70,11 +70,11 @@ https://maven.anypoint.mulesoft.com/api/v1/organizations/:organizationId/maven/:
 
 == Can I integrate publication of assets to Exchange as part of a CI and CD pipeline?
 
-You can use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API] to detect the difference if it exists so you don't republish to Exchange when there is no change.
+You can use the https://dev-portal.mulesoft.com/apis/exchange-experience.html#overview[Exchange Experience API] to detect the difference if it exists so you don't republish to Exchange when there is no change.
 
 == Is there an API to download RAML files from Exchange?
 
-You can use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-graph-http/[Graph API (preferred)], or the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
+You can use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-graph-http/[Graph API (preferred)], or the https://dev-portal.mulesoft.com/apis/exchange-experience.html#overview[Exchange Experience API].
 
 == How do I change an API's owner?
 
