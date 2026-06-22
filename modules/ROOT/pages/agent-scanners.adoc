@@ -16,6 +16,7 @@ Supported agent scanners:
 * xref:adding-langsmith-scanner.adoc[]
 * xref:adding-microsoft-copilot-scanner.adoc[]
 * xref:adding-microsoft-foundry-scanner.adoc[]
+* xref:adding-agentforce-scanner.adoc[]
 * xref:adding-snowflake-cortex-ai-scanner.adoc[]
 
 == Before You Begin Adding a Scanner

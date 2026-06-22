@@ -1,0 +1,23 @@
+= SalesforcePlatform Scanners
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+When your agents are hosted on Salesforce, use this page to jump to the Exchange scanner setup. Step-by-step instructions are in the linked page.
+
+== Agent Scanners
+
+* xref:adding-agentforce-scanner.adoc[Add a scanner for Salesforce Agentforce agent scanner]
+
+== Before You Begin Adding a Scanner
+
+Make sure you have the permission and access:
+
+* Exchange Administrator permission
+* Verify that you are in the business group where you want to add the scanner.
+
+== See Also
+
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:agent-scanners.adoc[]
+* xref:managing-scanners.adoc[]

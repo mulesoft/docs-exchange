@@ -8,6 +8,7 @@ MCP server scanners connect external MCP server gateways to Anypoint Platform. T
 These are the supported MCP server scanners:
 
 * xref:adding-agentcore-mcp-scanner.adoc[]
+* xref:adding-databricks-mcp-scanner.adoc[]
 * xref:adding-snowflake-mcp-scanner.adoc[]
 
 == Before You Begin Adding a Scanner
