@@ -45,8 +45,7 @@ Not all Databricks endpoints are discoverable by the scanner. Before running a s
 === What the Scanner Discovers
 
 [cols="1,3",options="header"]
-|===
-|Discoverability Requirement |Required Value
+|Agent Type |Required Value
 |Deployment type |Model Serving Endpoint
 |Model source |Custom model registered in Unity Catalog
 |Entity name pattern |`catalog.schema.model_name` (for example, `ml_catalog.agents.customer_support_v2`)
