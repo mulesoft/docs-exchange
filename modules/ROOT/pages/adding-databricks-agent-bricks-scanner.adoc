@@ -39,6 +39,58 @@ PATCH /api/2.0/permissions/serving-endpoints/{endpoint_id}
 |POST /serving-endpoints/{name}/invocations |CAN_QUERY or higher
 |===
 
+== Agent Discoverability
+
+Not all Databricks endpoints are discoverable by the scanner. Before running a scan, confirm that the scanner can discover your agent.
+=== What the Scanner Discovers
+
+[cols="1,3",options="header"]
+|===
+|Discoverability Requirement |Required Value
+|Deployment type |Model Serving Endpoint
+|Model source |Custom model registered in Unity Catalog
+|Entity name pattern |`catalog.schema.model_name` (for example, `ml_catalog.agents.customer_support_v2`)
+|Endpoint state |`READY`
+|===
+
+=== What the Scanner Doesn't Discover
+
+[cols="1,3",options="header"]
+|===
+|Agent Type |Exclusion Reason
+|Foundation models (GPT, Claude, Llama, Gemini, and so on) |These are platform-provided models, not custom agents.
+|External models |These are hosted outside Databricks.
+|Knowledge Assistants (Agent Builder) |These use a foundation model internally and aren't registered as a custom Unity Catalog model.
+|Databricks Apps |These use a different deployment path and aren't Model Serving Endpoints.
+|===
+
+=== Make an Agent Discoverable
+
+If you built your agent with Databricks Agent Builder (for example, a Knowledge Assistant), it isn't discovered automatically. To make it scannable:
+
+. Log the agent with MLflow, the Databricks framework for model logging and tracking.
++
+Use `mlflow.langchain.log_model()` or `mlflow.pyfunc.log_model()` in a notebook.
+. Register the model in Unity Catalog.
++
+Register the model under a catalog and schema (for example, `my_catalog.my_schema.knowledge_assistant_mulesoft`).
+. Deploy the model as a Serving Endpoint.
++
+Create a Model Serving Endpoint from the registered Unity Catalog model.
+. Grant permissions to the scanner service principal.
++
+The service principal used in the scanner must have at least *CAN_QUERY* on the endpoint.
++
+After this deployment, the scanner discovers the agent in the next scan.
+
+=== Quick Check
+
+Run this API call with your service principal credentials to verify what the scanner can see:
+
+`GET https://<workspace-url>/api/2.0/serving-endpoints`
+
+Look for your agent in the response. If `served_entities[0].entity_name` follows the `catalog.schema.model_name` pattern, the scanner discovers it.
+
 == Add a Scanner for Databricks Agent Bricks  
 
 . Verify that you are in the business group where you want to add the scanner.

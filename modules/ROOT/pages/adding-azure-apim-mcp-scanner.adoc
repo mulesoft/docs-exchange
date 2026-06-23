@@ -17,8 +17,9 @@ Before adding the scanner, verify that you have the permission, context, and the
 * Resource Group
 * Service Name
 
-    == Add a Scanner for Azure API Management MCP Server
-    . Verify that you are in the business group where you want to add the scanner.
+== Add a Scanner for Azure API Management MCP Server
+
+. Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
 . From *Scanner Run Configuration*, complete these fields or options:
