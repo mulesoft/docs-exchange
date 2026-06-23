@@ -75,6 +75,7 @@
 **** xref:adding-kong-gateway-scanner.adoc[]
 *** xref:mcp-scanners.adoc[]
 **** xref:adding-agentcore-mcp-scanner.adoc[]
+**** xref:adding-azure-apim-mcp-scanner.adoc[]
 **** xref:adding-databricks-mcp-scanner.adoc[]
 **** xref:adding-snowflake-mcp-scanner.adoc[]
 *** xref:aws-scanners.adoc[]
