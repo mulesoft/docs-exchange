@@ -3,12 +3,12 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Google Gemini Enterprise Platform into Exchange. Then you can govern the agents and consume them in other applications.  
+Add a scanner to discover, import, and sync agents from Google Gemini Enterprise Platform into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission 
+* Exchange Administrator permission
 * Vertex AI Viewer permission
 * Google Cloud Platform project ID
 * Google private key
@@ -26,7 +26,7 @@ You enter these Google Vertex AI credentials when configuring the scanner in Exc
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and local time.
-|*Sync Review* |Select an option: Auto-resolve or Ask to review.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
 |===
 
 . From *Connection Configuration*, complete these fields:

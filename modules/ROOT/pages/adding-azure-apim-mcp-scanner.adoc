@@ -8,7 +8,7 @@ Add a scanner to discover, import, and sync MCPs from Azure API Management into 
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission 
+* Exchange Administrator permission
 * API Management Service Reader Role permission
 * Tenant ID
 * Client ID
@@ -28,7 +28,7 @@ Before adding the scanner, verify that you have these prerequisites:
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and local time.
-|*Sync Review* |Select an option: Auto-resolve or Ask to review.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
 |===
 
 . From *Connection Configuration*, complete these fields:

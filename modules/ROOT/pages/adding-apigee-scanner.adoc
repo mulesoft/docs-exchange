@@ -8,7 +8,7 @@ Add a scanner to discover, import, and sync APIs from Google Apigee into Anypoin
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission 
+* Exchange Administrator permission
 * Apigee Read-only Admin permission
 * Google Cloud Platform (GCP) project ID
 * Service account email
@@ -24,7 +24,7 @@ Before adding the scanner, verify that you have these prerequisites:
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and local time.
-|*Sync Review* |Select an option: Auto-resolve or Ask to review.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
 |===
 
 . From *Connection Configuration*, complete these fields:

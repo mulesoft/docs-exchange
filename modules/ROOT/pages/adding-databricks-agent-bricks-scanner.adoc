@@ -11,8 +11,8 @@ Before adding the scanner, verify that you have these prerequisites:
 * Exchange Administrator permission 
 * Databricks Workspace access 
 * Workspace URL
-* Databricks Client ID
-* Databricks Client secret
+* Databricks client ID
+* Databricks client secret
 * Service Principal requires CAN_QUERY permission on each serving endpoint to enable full discovery and invocation.
 +
 Use the Databricks Permissions API:
@@ -46,7 +46,7 @@ Not all Databricks endpoints are discoverable by the scanner. Before running a s
 
 [cols="1,3",options="header"]
 |===
-|Requirement |Details
+|Requirement |Required Value
 |Deployment type |Model Serving Endpoint
 |Model source |Custom model registered in Unity Catalog
 |Entity name pattern |`catalog.schema.model_name` (for example, `ml_catalog.agents.customer_support_v2`)
