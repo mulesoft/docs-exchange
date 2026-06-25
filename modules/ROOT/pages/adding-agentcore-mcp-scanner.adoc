@@ -7,7 +7,7 @@ Add a scanner to discover, import, and sync MCP servers from Amazon Bedrock Agen
 
 == Before You Begin
 
-Before adding the scanner, verify that you have the permission, context, and these Amazon AgentCore credentials:
+Before adding the scanner, verify that you have these prerequisites:
 
 * An active AWS account to register and host MCP servers
 * Amazon access key ID

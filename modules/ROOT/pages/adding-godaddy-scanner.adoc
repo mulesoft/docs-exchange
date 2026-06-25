@@ -8,7 +8,7 @@ Add a scanner to discover, import, and sync agents from GoDaddy ANS into Exchang
 GoDaddy agents are verified by GoDaddy to be safe and secure. 
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission and these GoDaddy ANS credentials:
+Before adding the scanner, verify that you have these prerequisites:
 
 * Exchange Administrator permission 
 * GoDaddy ANS API key

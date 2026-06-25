@@ -6,7 +6,7 @@ endif::[]
 Add a scanner to discover, import, and sync MCPs from Azure API Management into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission, context, and these Azure API Management credentials:
+Before adding the scanner, verify that you have these prerequisites:
 
 * Exchange Administrator permission 
 * API Management Service Reader Role permission
@@ -41,7 +41,7 @@ Before adding the scanner, verify that you have the permission, context, and the
 |*Service Type* |*MCPs* selected by default.
 |*Authentication Method* |*OAuth* selected by default.
 |*Tenant ID* |Enter the tenant ID.
-|*Client ID* |Enter the client id.
+|*Client ID* |Enter the client ID.
 |*Client Secret* |Enter the client secret.
 |*Subscription ID* |Enter the subscription ID.
 |*Resource Group* |Enter the resource group.

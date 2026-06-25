@@ -8,7 +8,7 @@ Add a scanner to discover, import, and sync agents from Salesforce Agentforce in
 //Importing from the same Salesforce organization into a different business group can create duplicate agents in Exchange.
 
 == Before You Begin
-Before importing Agentforce agents, complete these requirements:
+Before adding the scanner, verify that you have these prerequisites:
 
 * xref:access-management::managing-connected-salesforce-orgs.adoc#enable-disable-connection[Enable the connection to a Salesforce organization] that has an established tenant relationship with your Anypoint Platform organization.
 * xref:access-management::enabling-agentforce.adoc#enable-einstein-anypoint[Enable Agentforce in Anypoint Platform]
@@ -52,6 +52,5 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:google-scanners.adoc[Google scanners]
-* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
-* xref:managing-scanners.adoc[Managing Scanners]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
