@@ -5,7 +5,7 @@ endif::[]
 
 Add a scanner to discover, import, and sync agents from Salesforce Agentforce into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
-Importing from the same Salesforce organization into a different business group can create duplicate assets in Exchange.
+//Importing from the same Salesforce organization into a different business group can create duplicate agents in Exchange.
 
 == Before You Begin
 Before importing Agentforce agents, complete these requirements:
