@@ -8,7 +8,7 @@ Add a scanner to discover, import, and sync MCPs from Databricks into Exchange. 
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission 
+* *Exchange Administrator* permission 
 * Databricks Workspace access 
 * Workspace URL
 * Databricks Client ID

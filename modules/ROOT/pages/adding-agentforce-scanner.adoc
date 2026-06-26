@@ -14,7 +14,7 @@ Before adding the scanner, verify that you have these prerequisites:
 * xref:access-management::enabling-agentforce.adoc#enable-einstein-anypoint[Enable Agentforce in Anypoint Platform]
 +
 Accept the terms and conditions and set a default organization for Agentforce.
-* Exchange Administrator permission
+* *Exchange Administrator* permission
 
 == Add a Scanner for Salesforce Agentforce
 

@@ -13,7 +13,7 @@ When your agents are hosted on Salesforce, use this page to jump to the Exchange
 
 Make sure you have the permission and access:
 
-* Exchange Administrator permission
+* *Exchange Administrator* permission
 * Verify that you are in the business group where you want to add the scanner.
 
 == See Also
