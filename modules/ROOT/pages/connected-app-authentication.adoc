@@ -4,17 +4,81 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
+Connected application authentication enables access to Exchange using OAuth 2.0 client credentials, so you can execute Exchange requests without sending user credentials.
 
-Connected application authentication enables access to Exchange using the client application credentials of client ID and client secret, so you can execute Exchange requests without sending a token.
+== Create a Connected Application
 
 To create a new connected application:
 
-. Log in to the Anypoint Platform.
-. Navigate to *Access Management* > *Connected Apps* > *Create App*.
-. Choose *App acts on its own behalf (client credentials)*.
-. To provide read and write access, ensure the application has either the scope *Exchange Administrator* or the scope *Exchange Contributor*.
+. Log in to Anypoint Platform.
+. Go to *Access Management* > *Connected Apps* > *Create App*.
+. Select *App acts on its own behalf (client credentials)*.
+. Click *Add Scopes* and add the appropriate Exchange scopes:
 +
-To provide read-only access, ensure the application has the scope *Exchange Viewer*.
+* *Exchange Administrator* or *Exchange Contributor* for read and write access
+* *Exchange Viewer* for read-only access
+. Select the business groups and environments for the scopes, and click *Add Scopes*.
 . Click *Save* and copy the client ID and client secret of the connected application.
 
-To use connected application authentication, provide basic authentication and define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`. Replace `clientID` with the client ID. Replace `clientSecret` with the client secret.
+For more information about creating connected apps, see xref:access-management::creating-connected-apps-dev.adoc[].
+
+[[obtain-a-bearer-token]]
+== Obtain a Bearer Token
+
+Use the OAuth 2.0 `client_credentials` grant type to obtain a bearer token for the connected application. Replace `CLIENT_ID` and `CLIENT_SECRET` with your client ID and secret:
+
+[source,console]
+----
+curl --location --request POST 'https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=CLIENT_ID' \
+--data-urlencode 'client_secret=CLIENT_SECRET' \
+--data-urlencode 'grant_type=client_credentials'
+----
+
+You receive a response similar to:
+
+[source,json]
+----
+{
+    "access_token": "YOUR_BEARER_TOKEN",
+    "token_type": "bearer"
+}
+----
+
+Use this bearer token in Exchange API calls by including it in the `Authorization` header:
+
+[source,console]
+----
+curl -H 'Authorization: bearer YOUR_BEARER_TOKEN' \
+https://anypoint.mulesoft.com/exchange/api/v2/assets
+----
+
+[[basic-auth-for-maven-and-graph]]
+== Basic Authentication for Maven Facade and Graph API
+
+The Exchange Maven Facade API and the Exchange Graph API also support a basic authentication shortcut using connected application credentials directly. To use this method, define the username as `\~~~Client\~~~` and the password as `clientID\~?~clientSecret`.
+
+Replace `clientID` with the client ID and `clientSecret` with the client secret.
+
+For example, in a Maven `settings.xml` file:
+
+[source,xml]
+----
+<servers>
+  <server>
+    <id>Repository</id>
+    <username>~~~Client~~~</username>
+    <password>clientID~?~clientSecret</password>
+  </server>
+</servers>
+----
+
+For the Exchange Experience API, MuleSoft recommends using the <<obtain-a-bearer-token,bearer token method>>.
+
+== See Also
+
+* xref:access-management::connected-app-bearer-token-example.adoc[]
+* xref:access-management::connected-apps-overview.adoc[]
+* xref:exchange-api.adoc[]
+* xref:to-publish-assets-maven.adoc[]
