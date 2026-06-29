@@ -9,18 +9,34 @@ To share assets in an Anypoint Exchange private instance or the Exchange public 
 
 The method for creating an asset depends on its type. Once the asset type is defined, it is permanent and can't be changed.
 
-* For OAS, RAML, RAML fragments, agents, AsyncAPI, HTTP, WSDL, LLMs, MCP servers, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* dialog.
-* For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
-* For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
-* You can also create REST APIs and API spec fragments using Anypoint Code Builder or Design Center and publish them to Exchange.
-+
-Another way to publish these types of assets is using the https://dev-portal.mulesoft.com/apis/exchange-experience.html#overview[Exchange Experience API].
-* RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
-+
-For example: `exchange asset upload --classifier raml --apiVersion v1 --name HelloWorld --mainFile helloworld.raml helloworld/1.0.0 /Users/nmouso/Downloads/helloworld.raml.zip`
-* API groups are published to Exchange from Anypoint API Manager.
-* Mule applications are published to Exchange from Anypoint Runtime Fabric and managed in Runtime Fabric, and are not visible in the Exchange user interface.
-* External libraries are published to Exchange from the xref:to-publish-assets-maven.adoc[Exchange Maven Facade API] and managed with this API, and are not visible in the Exchange user interface.
+[%header%autowidth.spread]
+|===
+| Asset Type | Creation Method
+
+| OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, agents, LLMs, MCP servers, rulesets, custom
+| Exchange *Publish new asset* dialog
+
+| REST APIs, API spec fragments
+| Anypoint Code Builder, Design Center, or the https://dev-portal.mulesoft.com/apis/exchange-experience.html#overview[Exchange Experience API^]
+
+| RAML, OAS API specifications
+| xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform CLI]. For example: `exchange asset upload --classifier raml --apiVersion v1 --name HelloWorld --mainFile helloworld.raml helloworld/1.0.0 /Users/nmouso/Downloads/helloworld.raml.zip`
+
+| Examples, templates
+| Mavenize feature in Anypoint Studio
+
+| Connectors, policies, examples, templates
+| xref:to-publish-assets-maven.adoc[Maven]
+
+| API groups
+| Anypoint API Manager
+
+| Mule applications
+| Anypoint Runtime Fabric (not visible in the Exchange UI)
+
+| External libraries
+| xref:to-publish-assets-maven.adoc[Exchange Maven Facade API] (not visible in the Exchange UI)
+|===
 
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
