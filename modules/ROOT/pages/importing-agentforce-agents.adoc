@@ -1,8 +1,11 @@
 = Importing Agentforce Agents
+:page-support-status: eolReachedFeature
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
+
+NOTE: Importing Agentforce agents from *Settings* is no longer supported. To import Agentforce agents, create an Agentforce scanner. For more information, see xref:adding-agentforce-scanner.adoc[].
 
 Organizations can import their Agentforce agents into Exchange to include them in business groups.
 
@@ -26,3 +29,7 @@ Accept the terms and conditions and set a default organization for Einstein.
 Agents are imported in the current business group.
 . Close the dialog and refresh the page after a few minutes.
 . Verify that the Agentforce agents are listed in the Exchange catalog on the *Agents & Tools* page.
+
+== See Also
+
+* xref:adding-agentforce-scanner.adoc[]
