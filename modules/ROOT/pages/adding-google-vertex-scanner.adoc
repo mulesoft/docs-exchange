@@ -1,21 +1,21 @@
-= Adding a Scanner for Google Vertex AI
+= Adding a Scanner for Google Gemini Agent Enterprise Platform
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Google Vertex AI into Exchange. Then you can govern the agents and consume them in other applications.  
+Add a scanner to discover, import, and sync agents from Google Gemini Agent Enterprise Platform into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission and these Google Vertex AI credentials:
+Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission 
+* Exchange Administrator permission
 * Vertex AI Viewer permission
-* Google Vertex AI project ID
-* Google Vertex AI secret access key
-+
-You enter these Google Vertex AI credentials when configuring the scanner in Exchange. For more information about creating a service account key, see Google Vertex AI documentation.
+* Google Cloud Platform project ID
+Service acccount email
+* Google private key
 
-== Add a Scanner for Google Vertex AI
+
+== Add a Scanner for Google Gemini Enterprise Platform
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
@@ -26,7 +26,7 @@ You enter these Google Vertex AI credentials when configuring the scanner in Exc
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and local time.
-|*Sync Review* |Select an option: Auto-resolve or Ask to review.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
 |===
 
 . From *Connection Configuration*, complete these fields:
@@ -34,11 +34,13 @@ You enter these Google Vertex AI credentials when configuring the scanner in Exc
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Google Vertex AI*.
+|*Provider* |Select *Google*.
+|*Platform* |Select *Gemini Enterprise Platform*.
+|*Service Type* |*Agents* selected by default.
 |*Authentication Method* |Select *Service Account*.
-|*Account Email* |Enter the email address.
-|*Project ID* |Enter the project ID.
-|*Secret Access Key* |Enter the access key.
+|*GCP Project ID*|Enter the Google Cloud Platform project ID.
+|*Service Account Email* |Enter the email address.
+|*Private Key* |Enter the private key.
 |*Location* |Select a location.
 |===
 

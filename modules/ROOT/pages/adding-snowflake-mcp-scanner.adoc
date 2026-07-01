@@ -6,7 +6,7 @@ endif::[]
 Add a scanner to discover, import, and sync MCP servers from Snowflake MCP Server into Exchange. Then you can govern the servers and consume them in other applications.
 
 == Before You Begin
-Before adding the scanner, verify that you have these:
+Before adding the scanner, verify that you have these prerequisites:
 
 * Exchange Administrator permission
 * Snowflake ACCOUNTADMIN role permission

@@ -1,14 +1,14 @@
-= Adding a Scanner for Azure API Management
+= Adding a Scanner for Azure API Management MCP Server
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync APIs from Azure API Management into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
+Add a scanner to discover, import, and sync MCPs from Azure API Management into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission
+* *Exchange Administrator* permission
 * API Management Service Reader Role permission
 * Tenant ID
 * Client ID
@@ -17,7 +17,8 @@ Before adding the scanner, verify that you have these prerequisites:
 * Resource Group
 * Service Name
 
-== Add a Scanner for Azure API Management
+== Add a Scanner for Azure API Management MCP Server
+
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
@@ -37,7 +38,7 @@ Before adding the scanner, verify that you have these prerequisites:
 |*Field* |*Value*
 |*Provider* |Select *Microsoft*.
 |*Platform* |Select *Azure API Management*.
-|*Service Type* |*REST APIs* selected by default.
+|*Service Type* |*MCPs* selected by default.
 |*Authentication Method* |*OAuth* selected by default.
 |*Tenant ID* |Enter the tenant ID.
 |*Client ID* |Enter the client ID.
@@ -58,6 +59,6 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:microsoft-scanners.adoc[Microsoft scanners]
-* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
-* xref:managing-scanners.adoc[Managing Scanners]
+* xref:microsoft-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]

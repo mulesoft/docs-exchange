@@ -6,7 +6,7 @@ endif::[]
 Add a scanner to discover, import, and sync APIs from Amazon API Gateway into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
 == Before You Begin
-Before adding the scanner, verify that you have the permission, context, and these Amazon API Gateway credentials:
+Before adding the scanner, verify that you have these prerequisites:
 
 * Exchange Administrator permission
 * IAM policy with read-only permissions for Amazon API Gateway
@@ -40,7 +40,7 @@ Example custom IAM policy for read-only access:
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and local time.
-|*Sync Review* |Select an option: Auto-resolve or Ask to review.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
 |===
 
 . From *Connection Configuration*, complete these fields:

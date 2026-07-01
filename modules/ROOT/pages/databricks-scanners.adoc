@@ -10,6 +10,10 @@ When your agents are hosted on Databricks, use this page to jump to the Exchange
 * xref:adding-databricks-agent-bricks-scanner.adoc[Add a scanner for Databricks Agent Bricks]
 
 
+== MCP Scanners
+
+* xref:adding-databricks-mcp-scanner.adoc[Add a scanner for Databricks MCP Server]
+
 == Before You Begin Adding a Scanner
 
 Make sure you have the permission and access:
