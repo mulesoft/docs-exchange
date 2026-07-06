@@ -6,15 +6,15 @@ endif::[]
 
 The following asset types are supported in Exchange:
 
+* Agent Networks
++
+An agent network is a coordinated group of agents, brokers, LLMs, and MCP servers that acts as a central hub for defining, validating, and executing agentic processes across your enterprise. This asset is read-only. To make changes, edit the agent network project YAML file in Anypoint Code Builder. Agent networks and their agents, brokers, LLMs, and MCP servers are published as individual assets in Exchange. You can view them in the *Agents & Tools* section of Exchange.
+
 * Agents
 +
 Programs that perform tasks autonomously or semiautonomously. AI agents can use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks. 
 +
 When agent network projects created in Anypoint Code Builder are published to Exchange, the individual agentic assets defined in the agent network project YAML file are registered as either agents or MCP servers. Brokers, which are published with the agent asset type, are automatically tagged as brokers for easy identification.
-
-* Agent Networks
-+
-An agent network is a coordinated group of agents, brokers, LLMs, and MCP servers that acts as a central hub for defining, validating, and executing agentic processes across your enterprise. This asset is read-only. To make changes, edit the agent network project YAML file in Anypoint Code Builder. Agent networks and their agents, brokers, LLMs, and MCP servers are published as individual assets in Exchange. You can view them in the *Agents & Tools* section of Exchange.
 
 * API Groups
 +
