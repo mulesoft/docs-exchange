@@ -1,4 +1,4 @@
-= SalesforcePlatform Scanners
+= Salesforce Platform Scanners
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
