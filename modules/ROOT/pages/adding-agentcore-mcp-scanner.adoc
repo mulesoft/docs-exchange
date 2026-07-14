@@ -3,24 +3,29 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync MCP servers from Amazon Bedrock AgentCore MCP Gateway into Exchange. Then you can govern the MCP servers and consume them in other applications.
+Add a scanner to discover, import, and sync MCP servers from Amazon Bedrock AgentCore MCP Gateway into Exchange and to discover and read policies from MCP server configurations. Then you can govern the MCP servers and consume them in other applications.
 
 == Before You Begin
 
 Before adding the scanner, verify that you have these prerequisites:
+
+For discovering and importing MCP servers:
 
 * An active AWS account to register and host MCP servers
 * Amazon access key ID
 * Amazon secret access key
 * Amazon region
 * Exchange Administrator permission
-* An IAM user with an inline policy that allows these permissions:
+ 
+Additional requirements for discovering and reading policies:
+
+* An IAM user with an inline policy that allows these read/runtime actions:
 +
  ** bedrock-agentcore:ListAgentRuntimes
  ** bedrock-agentcore:GetAgentRuntime
  ** bedrock-agentcore:ListAgentRuntimeVersions
  ** bedrock-agentcore:ListAgentRuntimeEndpoints
- ** bedrock-agentcore:InvokeAgentRuntime    
+ ** bedrock-agentcore:InvokeAgentRuntime
  
 For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Amazon Bedrock documentation].
 

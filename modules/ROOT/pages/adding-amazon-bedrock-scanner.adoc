@@ -3,25 +3,28 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Amazon Bedrock into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync agents from Amazon Bedrock into Exchange and to discover and read policies from agent configurations. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission 
+For discovering and importing agents:
+
+* Exchange Administrator permission
 * Knowledge about the Amazon Web Services region where the agents are deployed.
 * Amazon Bedrock access key ID
 * Amazon Bedrock secret access key
-* Ensure you have these Amazon Bedrock permissions:
+* To make sure the scanner discovers the agent, assign an alias and link that alias to a version. The scanner ignores agents without an invocable URL.
+
+Additional requirements for discovering and reading policies:
+
+* Ensure you have these Amazon Bedrock read permissions:
 ** bedrock:ListAgents
 ** bedrock:GetAgent
 ** bedrock:ListAgentAliases
 ** bedrock:GetAgentAlias
 ** bedrock:ListAgentVersions
 ** bedrock:GetAgentVersion
-+
-
-* To make sure the scanner discovers the agent, assign an alias and link that alias to a version. The scanner ignores agents without an invocable URL.
 
 == Add a Scanner for Amazon Bedrock 
 
