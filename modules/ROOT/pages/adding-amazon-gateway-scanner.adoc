@@ -58,7 +58,7 @@ The scanner reads and extracts these policy areas from AWS API Gateway configura
 |Observability |Access logging, X-Ray tracing, and CloudWatch metrics.
 |===
 
-Policies that aren't represented in this supported coverage list aren't currently scanned by this AWS API Gateway scanner.
+Policies that aren't represented in this supported coverage list aren't currently scanned by this Amazon API Gateway scanner.
 
 The scanner doesn't currently read these policy areas:
 
