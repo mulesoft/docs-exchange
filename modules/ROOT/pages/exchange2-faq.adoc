@@ -88,3 +88,14 @@ https://anypoint.mulesoft.com/apiplatform/repository/v2/organizations/<org-id>/a
 -H 'content-type: application/json' \
 -d '{"userId":"<user-id>"}'
 ----
+
+== Why does Exchange use both v2 and v3 endpoints?
+
+Exchange has multiple APIs, and each has its own version:
+
+* The *Exchange API* (REST) is version 2. Its endpoints are on `anypoint.mulesoft.com/exchange/api/v2/`. Use this API to publish and manage assets over HTTP.
+* The *Exchange Maven Facade API* is version 3. Its endpoints are on `maven.anypoint.mulesoft.com/api/v3/`. Use this API only from a Maven client, such as the Mule Maven plugin. It’s not a REST API.
+
+If you’re configuring `<distributionManagement>` in a Maven POM, use the `/api/v3/` URL. If you are calling Exchange over REST, keep using the `/api/v2/` URL. Don’t mix versions within the same POM (for example, a parent POM using v2 and a child using v3 fails to deploy).
+
+For details, see xref:to-publish-assets-maven.adoc[] and xref:exchange-api.adoc[].
