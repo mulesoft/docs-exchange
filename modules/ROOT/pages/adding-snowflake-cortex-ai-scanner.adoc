@@ -10,9 +10,97 @@ Before adding the scanner, verify that you have these prerequisites:
 
 * Exchange Administrator permission
 * Snowflake Enterprise edition account with Cortex agents enabled
-* Snowflake ACCOUNTADMIN role permission
+* Snowflake user with the ACCOUNTADMIN role for one-time setup
 * Snowflake account URL
-* Snowflake programmatic access token (PAT)
+* Snowflake programmatic access token (PAT) generated during one-time setup
+
+== Set Up Snowflake for the Scanner
+
+Complete these steps once in Snowflake before adding the scanner.
+
+After setup, the scanner authenticates as a service user with a least-privilege custom role. Use the ACCOUNTADMIN role only for the initial grants in this section.
+
+. Create a custom scanner role and grant it access to Cortex agents.
++
+Sign in to Snowflake as a user with the ACCOUNTADMIN role and run:
++
+[source,sql]
+----
+USE ROLE ACCOUNTADMIN;
+
+CREATE ROLE ANYPOINT_SCANNER_ROLE;
+GRANT DATABASE ROLE SNOWFLAKE.CORTEX_AGENT_USER TO ROLE ANYPOINT_SCANNER_ROLE;
+----
+
+. Create or reuse a warehouse for the scanner.
++
+The scanner only calls the Cortex REST API, so an XSMALL warehouse is sufficient.
++
+To create a new warehouse:
++
+[source,sql]
+----
+CREATE WAREHOUSE COMPUTE_WH WITH WAREHOUSE_SIZE = 'XSMALL' AUTO_SUSPEND = 60 INITIALLY_SUSPENDED = TRUE;
+GRANT USAGE ON WAREHOUSE COMPUTE_WH TO ROLE ANYPOINT_SCANNER_ROLE;
+----
++
+To reuse an existing warehouse, grant usage on it:
++
+[source,sql]
+----
+GRANT USAGE ON WAREHOUSE <WAREHOUSE_NAME> TO ROLE ANYPOINT_SCANNER_ROLE;
+----
+
+. Create a service user for the scanner and assign the scanner role.
++
+[source,sql]
+----
+CREATE USER ANYPOINT_SCANNER
+  TYPE = SERVICE
+  DEFAULT_ROLE = ANYPOINT_SCANNER_ROLE
+  DEFAULT_WAREHOUSE = COMPUTE_WH;
+
+GRANT ROLE ANYPOINT_SCANNER_ROLE TO USER ANYPOINT_SCANNER;
+----
+
+. Grant the scanner role read access to the databases and schemas that contain Cortex agents you want to scan.
++
+Run this block for each database and schema you want to scan, replacing `<DATABASE>` and `<SCHEMA>`:
++
+[source,sql]
+----
+GRANT USAGE ON DATABASE <DATABASE> TO ROLE ANYPOINT_SCANNER_ROLE;
+GRANT USAGE ON SCHEMA <DATABASE>.<SCHEMA> TO ROLE ANYPOINT_SCANNER_ROLE;
+GRANT USAGE ON ALL AGENTS IN SCHEMA <DATABASE>.<SCHEMA> TO ROLE ANYPOINT_SCANNER_ROLE;
+GRANT USAGE ON FUTURE AGENTS IN SCHEMA <DATABASE>.<SCHEMA> TO ROLE ANYPOINT_SCANNER_ROLE;
+----
+
+. (Optional) Restrict the service user to the scanner's egress IP ranges.
++
+MuleSoft recommends this step to reduce the service user's attack surface. Replace `<SCANNER_EGRESS_CIDRS>` with the CIDR blocks that MuleSoft provides:
++
+[source,sql]
+----
+CREATE NETWORK RULE ANYPOINT_SCANNER_NR
+  MODE = INGRESS
+  TYPE = IPV4
+  VALUE_LIST = ('<SCANNER_EGRESS_CIDRS>');
+
+CREATE NETWORK POLICY ANYPOINT_SCANNER_NP
+  ALLOWED_NETWORK_RULE_LIST = (ANYPOINT_SCANNER_NR);
+
+ALTER USER ANYPOINT_SCANNER SET NETWORK_POLICY = ANYPOINT_SCANNER_NP;
+----
+
+. Generate a programmatic access token (PAT) for the service user.
++
+.. In Snowsight, click *Admin* and then click *Users & roles*.
+.. Open the `ANYPOINT_SCANNER` user.
+.. Click *Programmatic access tokens*, and then click *Generate new token*.
+.. Set the role to `ANYPOINT_SCANNER_ROLE`.
+.. Copy the token immediately. Snowflake displays the token only once.
++
+Use this token in the *Programmatic Access Token* field when you add the scanner.
 
 == Add a Scanner for Snowflake Cortex AI
 
