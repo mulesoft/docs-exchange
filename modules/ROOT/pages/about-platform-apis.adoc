@@ -6,11 +6,11 @@ endif::[]
 
 Anypoint Exchange provides several APIs to help you manage assets:
 
-* *Exchange API*: Publish and consume assets, and retrieve metadata for Agent Fabric assets.
-* *Exchange Maven Facade API*: Publish and consume assets.
+* *Exchange API* (v2, REST): Publish and consume assets, and retrieve metadata for Agent Fabric assets.
+* *Exchange Maven Facade API* (v3, Maven only): Publish and consume assets from Maven clients.
 * *Exchange Graph API*: Search for assets.
 
-The Maven facade also enables you to publish federated assets.
+The Maven Facade API supports Maven plugin clients only, not REST clients. The Maven Facade also enables you to publish federated assets.
 
 Exchange APIs:
 

@@ -23,6 +23,11 @@ The Exchange Maven Facade API does not support dynamic parameters for fields oth
 
 New assets count toward your organization's xref:asset-versions.adoc#asset-limits[asset limit].
 
+[NOTE]
+====
+The v3 in this page refers only to the Exchange *Maven Facade API*. If you’re publishing assets over REST using the Exchange API, that API remains v2. Use `/api/v3/` endpoints only when publishing with the Mule Maven plugin or the `exchange-mule-maven-plugin`. See xref:exchange-api.adoc[] for REST-based publishing.
+====
+
 == Prerequisites
 
 To benefit from this documentation, you must be familiar with Maven, programming concepts, and command line

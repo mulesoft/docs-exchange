@@ -22,6 +22,11 @@ The API supports all Exchange asset types, for example:
 
 New assets count toward your organization's xref:to-create-an-asset.adoc#asset-limits[asset limit].
 
+[NOTE]
+====
+The Exchange API is a REST API on version 2 (`/exchange/api/v2/`). The `/api/v3/` endpoints on `maven.anypoint.mulesoft.com` belong to a separate API, the Exchange Maven Facade API, which supports only Maven-based publishing. See xref:to-publish-assets-maven.adoc[] for Maven publishing.
+====
+
 == Prerequisites
 
 To benefit from this documentation, you must be familiar with Exchange, programming concepts, and command line
