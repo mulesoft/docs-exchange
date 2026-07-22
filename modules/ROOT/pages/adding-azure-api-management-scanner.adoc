@@ -5,6 +5,8 @@ endif::[]
 
 Add a scanner to discover, import, and sync APIs from Azure API Management into Anypoint Exchange and to discover and read policies from API configurations. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
+The scanner discovers policies attached to supported Azure API Management API and operation configurations and shows discovered policies in the enhanced MuleSoft experience as policies applied per imported API. 
+
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 

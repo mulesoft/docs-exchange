@@ -5,6 +5,8 @@ endif::[]
 
 Add a scanner to discover, import, and sync APIs from Amazon API Gateway into Anypoint Exchange and to discover and read policies from API configurations. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
+The scanner discovers policies attached to supported Amazon API Gateway API, stage, route, and integration configurations and shows discovered policies in the enhanced MuleSoft experience as policies applied per imported API. Policies outside the supported scanner coverage aren't currently scanned.
+
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
