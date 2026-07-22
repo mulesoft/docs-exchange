@@ -5,14 +5,20 @@ endif::[]
 
 Add a scanner to discover, import, and sync APIs from Kong Gateway into Anypoint Exchange and to discover and read policies from API configurations. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
+In Kong, policies are called plugins. The scanner discovers plugins attached to Kong Gateway services and routes, and the enhanced MuleSoft experience shows those discovered plugins as policies. Plugins applied directly at the service instance level are not currently scanned.
+
+
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
 * Exchange Administrator permission 
 * Kong Control Plane Viewer permission 
-
 * Kong Gateway region
 * Personal access token (PAT)
+
+Credential scope required for discovering and reading policies:
+
+* Kong Admin API read
 
 == Add a Scanner for Kong Gateway
 . Verify that you are in the business group where you want to add the scanner.
