@@ -8,13 +8,10 @@ Add a scanner to discover, import, and sync agents from Amazon Bedrock into Exch
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-For discovering and importing agents:
-
 * Exchange Administrator permission
 * Knowledge about the Amazon Web Services region where the agents are deployed.
 * Amazon Bedrock access key ID
 * Amazon Bedrock secret access key
-* To make sure the scanner discovers the agent, assign an alias and link that alias to a version. The scanner ignores agents without an invocable URL.
 * Ensure you have these Amazon Bedrock permissions:
 ** bedrock:ListAgents
 ** bedrock:GetAgent
