@@ -11,6 +11,7 @@ Before adding the scanner, verify that you have these prerequisites:
 For discovering and importing APIs:
 
 * Exchange Administrator permission
+* Apigee Read-only Admin permission
 * Google Cloud Platform (GCP) project ID
 * Service account email
 * Private key
