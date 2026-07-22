@@ -1,4 +1,4 @@
-= Adding a Scanner for Amazon Bedrock AgentCore MCP 
+= Adding a Scanner for Amazon Bedrock AgentCore MCP
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -16,14 +16,14 @@ For discovering and importing MCP servers:
 * Amazon secret access key
 * Amazon region
 * Exchange Administrator permission
-* An IAM user with an inline policy that allows these read/runtime actions:
+* An IAM user with an inline policy that allows these permissions:
 +
  ** bedrock-agentcore:ListAgentRuntimes
  ** bedrock-agentcore:GetAgentRuntime
  ** bedrock-agentcore:ListAgentRuntimeVersions
  ** bedrock-agentcore:ListAgentRuntimeEndpoints
  ** bedrock-agentcore:InvokeAgentRuntime
- 
+
 For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Amazon Bedrock documentation].
 
 == Add a Scanner for Amazon AgentCore

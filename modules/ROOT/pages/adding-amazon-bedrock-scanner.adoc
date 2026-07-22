@@ -15,7 +15,7 @@ For discovering and importing agents:
 * Amazon Bedrock access key ID
 * Amazon Bedrock secret access key
 * To make sure the scanner discovers the agent, assign an alias and link that alias to a version. The scanner ignores agents without an invocable URL.
-* Ensure you have these Amazon Bedrock read permissions:
+* Ensure you have these Amazon Bedrock permissions:
 ** bedrock:ListAgents
 ** bedrock:GetAgent
 ** bedrock:ListAgentAliases
@@ -24,7 +24,7 @@ For discovering and importing agents:
 ** bedrock:GetAgentVersion
 * To make sure the scanner discovers the agent, assign an alias and link that alias to a version. The scanner ignores agents without an invocable URL.
 
-== Add a Scanner for Amazon Bedrock 
+== Add a Scanner for Amazon Bedrock
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
@@ -35,7 +35,7 @@ For discovering and importing agents:
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and time.
-|*Sync Review* |Select Auto-resolve.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
 |===
 
 . From *Connection Configuration*, complete these fields:
