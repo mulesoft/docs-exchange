@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-MCP server scanners connect external MCP server gateways to Anypoint Platform. They discover, catalog, and sync MCP servers from third‑party platforms into Exchange, apply governance rulesets across gateways, optionally front external endpoints with Flex Gateway, and support guided migrations to bring external APIs under Anypoint management. 
+MCP server scanners connect external MCP server gateways to Anypoint Platform. They discover, catalog, and sync MCP servers from third‑party platforms into Exchange, apply governance rulesets across gateways, optionally front external endpoints with Omni Gateway, and support guided migrations to bring external APIs under Anypoint management. 
 
 These are the supported MCP server scanners:
 
