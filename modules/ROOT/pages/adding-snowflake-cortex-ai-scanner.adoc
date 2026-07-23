@@ -92,15 +92,19 @@ ALTER USER ANYPOINT_SCANNER SET NETWORK_POLICY = ANYPOINT_SCANNER_NP;
 
 . Generate a programmatic access token (PAT) for the service user.
 +
-.. In Snowsight, click *Governance & security* and then click *Users & roles*.
+.. In Snowsight, click *Governance & security*
+.. Click *Users & roles*.
 .. Open the `ANYPOINT_SCANNER` user.
-.. Click *Programmatic access tokens*, and then click *Generate new token*.
+.. Click *Programmatic access tokens*
+.. Click *Generate new token*.
 .. In *Name*, enter `anypoint_scanner`.
-.. In *Expires in*, set an expiry that follows your secret-rotation policy. The Snowflake maximum is 365 days.
-.. For *Role*, select *One specific role*, and then select `ANYPOINT_SCANNER_ROLE`.
-.. Click *Generate*, and copy the token immediately. Snowflake displays the token only once.
+.. In *Expires in*, set an expiry that follows your secret-rotation policy. 
 +
-Use this token in the *Programmatic Access Token* field when you add the scanner.
+The Snowflake maximum is 365 days.
+.. For *Role*, select *One specific role*, and then select `ANYPOINT_SCANNER_ROLE`.
+.. Click *Generate*, and copy the token immediately. 
++
+Snowflake displays the token only once. Use this token in the *Programmatic Access Token* field when you add the scanner.
 
 == Add a Scanner for Snowflake Cortex AI
 
