@@ -11,8 +11,8 @@ In Kong, policies are called plugins. The scanner discovers plugins attached to 
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission 
-* Kong Control Plane Viewer permission 
+* Exchange Administrator permission
+* Kong Control Plane Viewer permission
 * Kong Gateway region
 * Personal access token (PAT)
 
@@ -30,7 +30,7 @@ Credential scope required for discovering and reading policies:
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and local time.
-|*Sync Review* |Select an option: Auto-resolve or Ask to review.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
 |===
 
 . From *Connection Configuration*, complete these fields:

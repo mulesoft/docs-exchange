@@ -5,7 +5,7 @@ endif::[]
 
 Add a scanner to discover, import, and sync APIs from Google Apigee into Anypoint Exchange and to discover and read policies from API configurations. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
-The scanner discovers policies attached to supported Apigee API proxy configurations and shows discovered policies in the enhanced MuleSoft experience as policies applied per imported API. 
+The scanner discovers policies attached to supported Apigee API proxy configurations and shows discovered policies in the enhanced MuleSoft experience as policies applied per imported API.
 
 
 == Before You Begin
