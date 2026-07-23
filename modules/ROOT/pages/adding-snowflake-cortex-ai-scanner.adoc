@@ -73,9 +73,9 @@ GRANT USAGE ON ALL AGENTS IN SCHEMA <DATABASE>.<SCHEMA> TO ROLE ANYPOINT_SCANNER
 GRANT USAGE ON FUTURE AGENTS IN SCHEMA <DATABASE>.<SCHEMA> TO ROLE ANYPOINT_SCANNER_ROLE;
 ----
 
-. (Optional) Restrict the service user to the scanner's egress IP ranges.
+. Restrict the service user to the scanner's egress IP ranges.
 +
-MuleSoft recommends this step to reduce the service user's attack surface. Replace `<SCANNER_EGRESS_CIDRS>` with the CIDR blocks that MuleSoft provides:
+This step reduces the service user's attack surface. Replace `<SCANNER_EGRESS_CIDRS>` with the CIDR blocks that MuleSoft provides:
 +
 [source,sql]
 ----
