@@ -34,7 +34,7 @@ GRANT DATABASE ROLE SNOWFLAKE.CORTEX_AGENT_USER TO ROLE ANYPOINT_SCANNER_ROLE;
 
 . Create or reuse a warehouse for the scanner.
 +
-To create a new warehouse:
+** To create a new warehouse:
 +
 [source,sql]
 ----
@@ -42,7 +42,7 @@ CREATE WAREHOUSE COMPUTE_WH WITH WAREHOUSE_SIZE = 'XSMALL' AUTO_SUSPEND = 60 INI
 GRANT USAGE ON WAREHOUSE COMPUTE_WH TO ROLE ANYPOINT_SCANNER_ROLE;
 ----
 +
-To reuse an existing warehouse, grant usage on it:
+** To reuse an existing warehouse, grant usage on it:
 +
 [source,sql]
 ----
