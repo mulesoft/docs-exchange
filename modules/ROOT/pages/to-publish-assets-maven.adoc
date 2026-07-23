@@ -210,6 +210,43 @@ mvn deploy
 ----
 . Search Exchange for the asset ID to find the asset.
 
+=== Resolve Parallel File Publishing Failures with Maven 3.9.12 or Later
+
+Maven 3.9.12 and later versions enable parallel file publishing by default. The Exchange Maven Facade API v1 and v2 require sequential file publishing and do not support this behavior. If you publish to a v1 or v2 endpoint using Maven 3.9.12 or later, the publish operation fails.
+
+To resolve this issue, use one of these workarounds:
+
+* *Upgrade to the Maven Facade API v3* — Use a v3 endpoint instead of v1 or v2.
+* *Upgrade to ASF Parent POM 37* — Use https://maven.apache.org/pom/asf/[ASF Parent POM 37^], which includes the workaround for parallel publishing.
+* *Disable parallel publishing from the command line* — Add the following property to your Maven command:
++
+[source,console]
+----
+-Daether.connector.basic.parallelPut=false
+----
+* *Disable parallel publishing in your project* — Create a `.mvn/maven.config` file in your project root directory and add the following line. See https://maven.apache.org/configure.html#mvn-maven-config-file[Maven configuration^] for more information.
++
+[source,console]
+----
+-Daether.connector.basic.parallelPut=false
+----
+* *Disable parallel publishing globally* — Add the following property to an always-enabled profile in your `~/.m2/settings.xml` file:
++
+[source,xml]
+----
+<profiles>
+  <profile>
+    <id>disable-parallel-put</id>
+    <properties>
+      <aether.connector.basic.parallelPut>false</aether.connector.basic.parallelPut>
+    </properties>
+  </profile>
+</profiles>
+<activeProfiles>
+  <activeProfile>disable-parallel-put</activeProfile>
+</activeProfiles>
+----
+
 == Publish an Asset with Mutable Data
 
 The Maven Facade API enables you to both create your asset and set the mutable data describing it in the same request. The mutable data of an asset includes tags, custom fields, categories, and documentation pages.
