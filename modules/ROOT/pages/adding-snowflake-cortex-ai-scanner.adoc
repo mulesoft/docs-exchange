@@ -34,8 +34,6 @@ GRANT DATABASE ROLE SNOWFLAKE.CORTEX_AGENT_USER TO ROLE ANYPOINT_SCANNER_ROLE;
 
 . Create or reuse a warehouse for the scanner.
 +
-The scanner only calls the Cortex REST API, so an XSMALL warehouse is sufficient.
-+
 To create a new warehouse:
 +
 [source,sql]
