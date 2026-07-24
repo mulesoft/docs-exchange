@@ -41,6 +41,20 @@ You must have a unique artifact name and organization ID to publish your asset.
 
 The US cloud and EU cloud use slightly different URLs, as shown in the examples.
 
+[IMPORTANT]
+====
+Starting August 1, 2026, publishing custom connectors and Mule plugins to Exchange requires Java compatibility metadata in `mule-artifact.json` for new versions that change supported Java compatibility.
+
+* Java connectors: Include the `@JavaVersionSupport` annotation when changing supported Java compatibility.
+* XML connectors: Update to `mule-extensions-maven-plugin` so Java compatibility metadata is generated at build time.
+
+Use Maven 3.8.0 or later (3.9.8+ recommended) and JDK 17+ in your build pipeline.
+
+This change doesn't affect connectors already published to Exchange or running applications.
+
+For complete requirements and update instructions, see xref:mule-sdk::publishing-connectors-exchange.adoc[].
+====
+
 == View Your Organization ID
 
 To construct the elements of a Maven POM file, you need to determine your organization ID:
