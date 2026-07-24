@@ -1,24 +1,28 @@
-= Generating API Documentation With Einstein Generative AI
+= Generating API Documentation with Generative AI
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-Use generative AI to generate API documentation for REST, SOAP, AsyncAPI, and GraphQL in Exchange, streamlining how your organization manages APIs. AI simplifies your processes by creating consistent, accurate, and current content, which frees you to focus on strategic tasks and enhances developer satisfaction.
+Use generative AI to generate API documentation for REST, SOAP, AsyncAPI, GraphQL, gRPC APIs, MCP, and Agents in Exchange, streamlining how your organization manages APIs. AI simplifies your processes by creating consistent, accurate, and current content, which frees you to focus on strategic tasks and enhances developer satisfaction.
 
 You can create documentation for API assets that don't have any documentation. From the asset details page in Exchange, generate the documentation, then manually edit and improve the documentation. After that, publish it to make it available to everyone in your organization.
 
 This release supports:
 
-* REST APIs
+* REST APIs (RAML, OAS 2.0/3.0)
 * SOAP APIs
 * AsyncAPI
 * GraphQL API
+* gRPC API
+* MCP
+* Agents
 
 Generate documentation for these APIs whether they are created using a single specification file or multiple specification files. Fragments aren't supported.
 
 == Documentation Structure
-AI-generated documentation in Anypoint Exchange standardizes API documentation, addressing inconsistency and incompleteness. The structure and format of the generated documentation is standardized across each API including fonts, headers, text size.
+
+AI-generated documentation in Anypoint Exchange standardizes API documentation, addressing inconsistency and incompleteness. AI standardizes the structure and format of the generated documentation across each API including fonts, headers, and text size.
 
 Generated documentation includes:
 
@@ -26,8 +30,7 @@ Generated documentation includes:
 * Authentication requirements and security details
 * Base URL and environments
 * Detailed endpoint documentation including:
-
-** Request and response examples 
+** Request and response examples
 ** Query parameters
 ** Path parameters
 ** Request body schemas
@@ -37,26 +40,26 @@ Generated documentation includes:
 * Sample code snippets
 
 == Before You Begin
-Before generating API documentation with Einstein, you must have these:
+
+Before generating API documentation with Generative AI, you must have these:
 
 * Generate Asset Documentation with AI permission.
-* Salesforce org account with Einstein enabled in Anypoint Platform. 
+* Salesforce org account with Agentforce enabled in Anypoint Platform. 
 +
-To enable Einstein in Anypoint Platform, see xref:access-management::enabling-einstein.adoc#enable-einstein-anypoint[Enable Einstein for Your Anypoint Platform Organization].
+To enable Agentforce in Anypoint Platform, see xref:access-management::enabling-agentforce.adoc#enable-einstein-anypoint[Enable Agentforce for Your Anypoint Platform Organization].
+* When you upload a zip file, Anypoint Exchange extracts its content before processing. The extracted size of your API specification must not exceed 1.2 MB, and the zip file must not contain more than 50 files.
 
 == Generate API Documentation with Generative AI
+
 Generate documentation for API assets that don't have any documentation. You can edit and save a draft as many times as you like before publishing.
 
-IMPORTANT: Drafts aren't visible to others until they're published. You must publish the documentation for it to be available to your organization.
+IMPORTANT: Drafts aren't visible to others until you publish them. You must publish the documentation for it to be available to your organization.
 
 . Select the API from the catalog and click *Generate documentation* from the asset details page.
 +
 image:ex-generate-doc.png["Generate documentation button on asset details page"]
-
 . Review the generated documentation in draft mode.
-
 . To edit the AI-generated documentation, click *Edit* in draft mode, make your changes, and save the draft.
-
 . Click *Publish* to make the documentation visible to everyone in your organization.
 +
 image:ex-auto-generate-api-doc.png["AI-generated documentation in draft mode with Edit documentation option"]

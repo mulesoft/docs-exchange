@@ -9,32 +9,138 @@ To share assets in an Anypoint Exchange private instance or the Exchange public 
 
 The method for creating an asset depends on its type. Once the asset type is defined, it is permanent and can't be changed.
 
-* For OAS, RAML, RAML fragments, agents, AsyncAPI, HTTP, WSDL, LLMs, MCP servers, rulesets, and custom assets, create the asset directly using the Exchange *Publish new asset* dialog.
-* For an example or template, create each using the Mavenize feature in Anypoint Studio, and publish each to Exchange.
-* For a connector, policy, example, or template, see xref:to-publish-assets-maven.adoc[Publish and Deploy Exchange Assets Using Maven].
-* You can also create REST APIs and API spec fragments using Anypoint Code Builder or Design Center and publish them to Exchange.
-+
-Another way to publish these types of assets is using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/exchange-experience-api/[Exchange Experience API].
-* RAML and OAS API specifications can be uploaded to Exchange with the xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform Command Line Interface (CLI)].
-+
-For example: `exchange asset upload --classifier raml --apiVersion v1 --name HelloWorld --mainFile helloworld.raml helloworld/1.0.0 /Users/nmouso/Downloads/helloworld.raml.zip`
-* API groups are published to Exchange from Anypoint API Manager.
-* Mule applications are published to Exchange from Anypoint Runtime Fabric and managed in Runtime Fabric, and are not visible in the Exchange user interface.
-* External libraries are published to Exchange from the xref:to-publish-assets-maven.adoc[Exchange Maven Facade API] and managed with this API, and are not visible in the Exchange user interface.
+[%header%autowidth.spread]
+|===
+| Asset Type | Creation Method
+
+| OAS, RAML, RAML fragments, AsyncAPI, HTTP, WSDL, agents, LLMs, MCP servers, rulesets, custom
+| Exchange *Publish new asset* dialog
+
+| REST APIs, API spec fragments
+| Anypoint Code Builder, Design Center, or the https://dev-portal.mulesoft.com/apis/exchange-experience.html#overview[Exchange Experience API^]
+
+| RAML, OAS API specifications
+| xref:runtime-manager::anypoint-platform-cli.adoc[Anypoint Platform CLI]. For example: `exchange asset upload --classifier raml --apiVersion v1 --name HelloWorld --mainFile helloworld.raml helloworld/1.0.0 /Users/nmouso/Downloads/helloworld.raml.zip`
+
+| Examples, templates
+| Mavenize feature in Anypoint Studio
+
+| Connectors, policies, examples, templates
+| xref:to-publish-assets-maven.adoc[Maven]
+
+| API groups
+| Anypoint API Manager
+
+| Mule applications
+| Anypoint Runtime Fabric (not visible in the Exchange UI)
+
+| External libraries
+| xref:to-publish-assets-maven.adoc[Exchange Maven Facade API] (not visible in the Exchange UI)
+|===
 
 Exchange fully supports RAML fragments. Currently, Exchange does not support importing and managing OAS 3.0 components as Exchange dependencies inside a specification.
 
 [[create-agent]]
-== Create an Agent 
+== Create an Agent
 Agents are programs that perform tasks autonomously or semiautonomously. AI agents can use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks.
 
 Agent schema files must be in JSON format. They define the structure and capabilities of the agent asset. When creating an agent asset, upload the schema file you want to use.
 
-The required objects for an A2A spec are defined in the https://a2a-protocol.org/dev/specification/[A2A spec]. 
+The required objects for an A2A spec are defined in the https://a2a-protocol.org/dev/specification/[A2A spec^].
 
-If you create an agent using *Other* as the protocol type, the file must be a JSON file. This card follows the structure of the A2A Spec without required properties.
+=== Protocol Types
 
-.Example A2A card 
+When you create an agent asset, select a protocol type:
+
+* *A2A v1.0 card*: Publishes the agent card with the `a2a_v1` protocol value and the `a2a-v1-card` classifier. Use this for agents that comply with A2A Protocol v1.0.0.
+* *A2A v0.3 card*: Publishes the agent card with the `a2a` protocol value and the `a2a-card` classifier. Use this for agents that comply with A2A Protocol v0.3.0.
+* *Other card*: Publishes the agent card as a generic JSON file. The file must be valid JSON but does not require specific A2A properties.
+
+NOTE: The *A2A v1.0 card* and *A2A v0.3 card* labels are visible when the feature flag is enabled. With the flag off, the options are *A2A card* and *Other card*.
+
+A single asset version can carry both an A2A v0.3 card and an A2A v1.0 card. Each card is published separately under its own classifier. Exchange does not auto-convert between v0.3 and v1.0.
+
+=== A2A v1.0 Agent Card
+
+An A2A v1.0 agent card declares the agent's identity, capabilities, supported transports, security requirements, and skills. The v1.0 card uses the `supportedInterfaces` array to declare transport bindings.
+
+Each entry in `supportedInterfaces` contains:
+
+* `url`: The endpoint URL for this transport.
+* `protocolBinding`: The transport protocol (for example, `JSONRPC`, `HTTP+JSON`, or `GRPC`).
+* `protocolVersion`: The A2A protocol version supported at this endpoint.
+* `tenant`: The tenant identifier for multi-tenant deployments.
+
+.Example A2A v1.0 card
+[%collapsible]
+====
+[source,json]
+----
+{
+  "name": "Weather Agent",
+  "description": "Provides current weather conditions and forecasts for any location.",
+  "url": "https://weather-agent.example.com/a2a",
+  "version": "1.0.0",
+  "provider": {
+    "organization": "Example Corp",
+    "url": "https://example.com"
+  },
+  "supportedInterfaces": [
+    {
+      "url": "https://weather-agent.example.com/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0.0",
+      "tenant": "example-org"
+    },
+    {
+      "url": "https://weather-agent.example.com/a2a/rest",
+      "protocolBinding": "HTTP+JSON",
+      "protocolVersion": "1.0.0",
+      "tenant": "example-org"
+    }
+  ],
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "securitySchemes": {
+    "oauth2": {
+      "type": "oauth2",
+      "description": "OAuth 2.0 client credentials for Anypoint Platform authentication."
+    }
+  },
+  "skills": [
+    {
+      "id": "get-weather",
+      "name": "Get Weather",
+      "description": "Get the current weather conditions for a specified location.",
+      "examples": [
+        "What is the weather like in New York?",
+        "Is it going to rain in San Francisco today?"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "weather",
+        "geolocation"
+      ]
+    }
+  ]
+}
+----
+====
+
+=== A2A v0.3 Agent Card
+
+An A2A v0.3 agent card uses the original A2A protocol structure with JSON-RPC as the only transport. The v0.3 card uses `preferredTransport` and `additionalInterfaces` to declare transport bindings.
+
+.Example A2A v0.3 card
 [%collapsible]
 ====
 [source,json]
@@ -88,40 +194,53 @@ If you create an agent using *Other* as the protocol type, the file must be a JS
         "weather",
         "geolocation"
       ]
-    },
-    {
-      "id": "exchange-rate",
-      "name": "Returns the exchange rate for a given currency pair",
-      "description": "Get the current exchange rate between two specified currencies.",
-      "examples": [
-        "What is the exchange rate from USD to EUR?",
-        "How much is 100 JPY in USD?"
-      ],
-      "inputModes": [
-        "application/json",
-        "text/plain"
-      ],
-      "outputModes": [
-        "application/json",
-        "application/vnd.geo+json",
-        "text/html"
-      ],
-      "tags": [
-        "exchange_rate"
-      ]
     }
   ]
 }
 ----
 ====
 
+=== Card Details
+
+After you publish an agent card, the Card Details page in Exchange displays different fields depending on the protocol version.
+
+==== A2A v1.0 Card Details
+
+* Name
+* Description
+* URL
+* Protocol version
+* Supported interfaces (protocol binding, URL, protocol version, and tenant for each)
+* Signature (shown only for signed cards)
+* Provider
+* Security schemes
+* Capabilities (streaming, push notifications, state transition history)
+* Skills (with descriptions, input/output modes, and examples)
+
+==== A2A v0.3 Card Details
+
+* Name
+* Description
+* URL
+* Protocol version
+* Preferred transport
+* Additional interfaces
+* Provider
+* Security schemes
+* Capabilities
+* Skills
+
+=== Create an Agent Asset
+
 . In Exchange, select *Publish new asset*.
 . Enter a name for the asset.
 . Select the *Agent* asset type from the dropdown list.
-. Select a protocol type.
-. Click *Choose file* to upload a .json file for the agent card.
-. Select a protocol.
-. Select *Publish*.
+. Select a protocol type:
+* *A2A v1.0 card*: For agents using A2A Protocol v1.0.0.
+* *A2A v0.3 card*: For agents using A2A Protocol v0.3.0.
+* *Other card*: For agent cards that do not follow a specific A2A protocol version.
+. Click *Choose file* to upload a `.json` file for the agent card.
+. Click *Publish*.
 
 == Create an API Asset
 
@@ -157,7 +276,7 @@ If the file is a ZIP, the selected main file must be in the root directory of th
 +
 Exchange generates the group ID, asset ID, and version (GAV) for you, and you can change these values as needed. You can change an API's asset version and version separately. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
+. Click *Publish*.
 
 To create a ZIP file and put the items in a folder into the root directory of the ZIP file, use a command like this. Replace `myfolder` with the name of your folder and `name.zip` with the name for the new ZIP file.
 
@@ -208,7 +327,7 @@ To create a custom asset:
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
+. Click *Publish*.
 
 == Create Custom Policy Definition Asset 
 Policies enforce regulations to help manage security, control traffic, and improve API adoption. For example, a policy can control authentication, access, and service level agreement (SLA). You can create a policy definition based on your specific business requirements. Develop custom policy definitions and apply them to APIs to extend existing functionality or define new ones.
@@ -226,7 +345,7 @@ Exchange generates the group ID, asset ID, and version (GAV). You can change the
 . From Lifecycle state, select *Stable*. 
 +
 The policy must be in the Stable state to upload the implementation file in a later step.
-. Select *Publish*. 
+. Click *Publish*. 
 +
 *Pending* status appears next to *Implementations* in the left navigation bar.
 
@@ -253,7 +372,7 @@ To create a GraphQL API:
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
+. Click *Publish*.
 
 [[create-llm]]
 == Create a Large Language Model
@@ -268,7 +387,7 @@ It's possible to have more than one LLM asset in your organization.
 . Enter a name for the asset.
 . Select the *LLM* asset type from the dropdown list.
 . Enter the name of the platform and select it from the list.
-. Select *Publish*.
+. Click *Publish*.
 
 [[create-mcp]]
 == Create an MCP Server
@@ -1071,7 +1190,7 @@ To create an MCP server asset:
 .. To test the connection, click *Test Connection*.
 .. To view the schema, click *Preview*.
 . Enter the name of the platform and then select it from the list.
-. Select *Publish*.
+. Click *Publish*.
 . To create an instance of this asset, click *Instances* in the sidebar and click *Go to API Manager*.
 
 == Create an RPA Activity Template Asset
@@ -1087,7 +1206,7 @@ To create an RPA activity template asset:
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
+. Click *Publish*.
 
 == Create an RPA Process Template Asset
 Templates for RPA processes are imported into RPA Builder as projects and are customizable before deploying to RPA bots. Process templates are built on common patterns for RPA to build automation faster. These templates are `.crpa` files that are exported from RPA Builder to share with other developers.
@@ -1102,7 +1221,7 @@ To create an RPA activity template asset:
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
+. Click *Publish*.
 
 == Create a Ruleset Asset
 Rulesets are a group of rules or guidelines that define an application, for example best practices or industry-specific standards. Add a zip file with multiple YAML files that describe the new ruleset.
@@ -1117,7 +1236,7 @@ To create a ruleset asset:
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
+. Click *Publish*.
 
 == Create an AsyncAPI Asset
 An AsyncAPI is an AsyncAPI specification file that specifies an event-driven API. You can create AsyncAPIs with Avro schemas. The file type for Avro schemas is AVSC (.avsc).
@@ -1132,7 +1251,7 @@ To create an AsyncAPI:
 +
 Exchange generates the group ID, asset ID, and version for you, and you can change these values as needed. Use the advanced settings to change the asset version.
 . Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
+. Click *Publish*.
 
 == Asset Name, Icon, and Description Properties
 
@@ -1180,7 +1299,7 @@ If you have contributor or admin access to an asset, you can add a new version f
 . If you want to select a file to upload, click *Choose file*.
 . Enter the version for the asset.
 . Select an option for *Lifecycle state*. The default is *Stable*.
-. Select *Publish*.
+. Click *Publish*.
 
 The new version of the asset has the same name, icon, and description as the previous version. Any changes to these properties apply to all versions of the asset.
 

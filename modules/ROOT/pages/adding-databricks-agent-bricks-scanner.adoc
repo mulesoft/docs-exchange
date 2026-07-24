@@ -1,0 +1,135 @@
+= Adding a Scanner for Databricks Agent Bricks
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from Databricks Agent Bricks into Exchange. Then you can govern the agents and consume them in other applications.
+
+== Before You Begin
+Before adding the scanner, verify that you have these prerequisites:
+
+* Exchange Administrator permission 
+* Databricks Workspace access 
+* Workspace URL
+* Databricks client ID
+* Databricks client secret
+* Service Principal requires CAN_QUERY permission on each serving endpoint to enable full discovery and invocation.
++
+Use the Databricks Permissions API:
++
+[source,json]
+----
+PATCH /api/2.0/permissions/serving-endpoints/{endpoint_id}
+{
+  "access_control_list": [
+    {
+      "service_principal_name": "<clientId>",
+      "permission_level": "CAN_QUERY"
+    }
+  ]
+}
+----
++
+[cols="2,1",options="header"]
+|===
+|API Endpoint |Required Permission
+|GET /api/2.0/serving-endpoints |CAN_VIEW or higher
+|GET /api/2.0/serving-endpoints/{name} |CAN_VIEW or higher
+|GET /api/2.0/serving-endpoints/{name}/openapi |CAN_VIEW or higher
+|POST /serving-endpoints/{name}/invocations |CAN_QUERY or higher
+|===
+
+== Agent Discoverability
+
+Not all Databricks endpoints are discoverable by the scanner. Before running a scan, confirm that the scanner can discover your agent.
+=== What the Scanner Discovers
+
+[cols="1,3",options="header"]
+|===
+|Requirement |Required Value
+|Deployment type |Model Serving Endpoint
+|Model source |Custom model registered in Unity Catalog
+|Entity name pattern |`catalog.schema.model_name` (for example, `ml_catalog.agents.customer_support_v2`)
+|Endpoint state |`READY`
+|===
+
+=== What the Scanner Doesn't Discover
+
+[cols="1,3",options="header"]
+|===
+|Agent Type |Exclusion Reason
+|Foundation models (GPT, Claude, Llama, Gemini, and so on) |These are platform-provided models, not custom agents.
+|External models |These are hosted outside Databricks.
+|Knowledge Assistants (Agent Builder) |These use a foundation model internally and aren't registered as a custom Unity Catalog model.
+|Databricks Apps |These use a different deployment path and aren't Model Serving Endpoints.
+|===
+
+=== Make an Agent Discoverable
+
+If you built your agent with Databricks Agent Builder (for example, a Knowledge Assistant), it isn't discovered automatically. To make it scannable:
+
+. Log the agent with MLflow, the Databricks framework for model logging and tracking.
++
+Use `mlflow.langchain.log_model()` or `mlflow.pyfunc.log_model()` in a notebook.
+. Register the model in Unity Catalog.
++
+Register the model under a catalog and schema (for example, `my_catalog.my_schema.knowledge_assistant_mulesoft`).
+. Deploy the model as a Serving Endpoint.
++
+Create a Model Serving Endpoint from the registered Unity Catalog model.
+. Grant permissions to the scanner service principal.
++
+The service principal used in the scanner must have at least *CAN_QUERY* on the endpoint.
++
+After this deployment, the scanner discovers the agent in the next scan.
+
+=== Quick Check
+
+Run this API call with your service principal credentials to verify what the scanner can see:
+
+`GET https://<workspace-url>/api/2.0/serving-endpoints`
+
+Look for your agent in the response. If `served_entities[0].entity_name` follows the `catalog.schema.model_name` pattern, the scanner discovers it.
+
+== Add a Scanner for Databricks Agent Bricks  
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Databricks*.
+|*Platform* |Select *Agent Bricks*.
+|*Service Type*|Select *Agents* selected by default.
+|*Authentication Method* |*OAuth* selected by default.
+|*Workspace URL* |Enter the workspace URL.
+|*Client ID* |Enter the client ID.
+|*Client Secret* |Enter the client secret.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:agent-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]

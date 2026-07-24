@@ -1,0 +1,34 @@
+= Microsoft Platform Scanners
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+When your organization uses Microsoft Azure, Copilot Studio, or Microsoft Foundry, use this page to find the right Exchange scanner. Procedures are in the linked topics; this page is only a map.
+
+== Agent Scanners
+
+* xref:adding-microsoft-copilot-scanner.adoc[Add a scanner for Microsoft Azure Copilot]
+* xref:adding-microsoft-foundry-scanner.adoc[Add a scanner for Microsoft Foundry]
+
+== API Scanners
+
+* xref:adding-azure-api-management-scanner.adoc[Add a scanner for Azure API Management]
+
+== MCP Scanners
+
+* xref:adding-azure-apim-mcp-scanner.adoc[Add a scanner for Azure API Management MCP Server]
+
+== Before You Begin Adding a Scanner
+
+Make sure you have the permission and access:
+
+* Exchange Administrator permission
+* Verify that you are in the business group where you want to add the scanner.
+
+== See Also
+
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:agent-scanners.adoc[]
+* xref:api-scanners.adoc[]
+* xref:mcp-scanners.adoc[]
+* xref:managing-scanners.adoc[]

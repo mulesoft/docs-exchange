@@ -1,9 +1,9 @@
-= Adding a Scanner for Amazon Bedrock AgentCore
+= Adding a Scanner for Amazon Bedrock AgentCore Runtime
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Amazon Bedrock AgentCore into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync agents from Agent Runtime into Exchange. Then you can govern the agents and consume them in other applications.
 
 == Before You Begin
 
@@ -32,8 +32,7 @@ This setup requires specific configurations and access privileges in Amazon Bedr
 ** Standard Bedrock permissions are also required:
 *** `bedrock:GetAgent`
 *** `bedrock:ListAgents`
-*** `bedrock:InvokeAgent` (for AgentCore agents)                                
-
+                            
 * Required Authentication:
 +
 ** IAM Signature (SigV4) is the default authentication method for AWS users.
@@ -50,7 +49,7 @@ For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Ama
 == Add a Scanner for Amazon Bedrock AgentCore
 
 . Verify that you are in the business group where you want to add the scanner.
-. From the sidebar in Exchange, click *Agent Scanners*.
+. From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
 . In *Scanner Run Configuration*, complete these fields or options:
 +
@@ -58,7 +57,7 @@ For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Ama
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and local time.
-|*Sync Review* |Only *Auto-resolve* is supported.
+|*Sync Review* |Select an option: Auto-resolve or Ask to review.
 |===
 
 . From *Connection Configuration*, complete these fields:
@@ -66,7 +65,8 @@ For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Ama
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *AgentCore*.
+|*Provider* |Select *Amazon*.
+|*Platform* |Select *AWS AgentCore*.
 |*Asset Type* |Only agents are supported.
 |*Authentication Method* |Select *Access key*.
 |*Access Key ID* |Enter the access key ID.
@@ -82,3 +82,9 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 .. Select *Advanced Settings* and turn on *Send Email Notifications*.
 .. Enter an email address.
 . Click *Add Scanner*.
+
+== See Also
+
+* xref:aws-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]

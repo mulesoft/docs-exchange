@@ -1,22 +1,20 @@
-= Adding a Scanner for Google Gemini Agent Enterprise Platform
+= Adding a Scanner for Kong Gateway
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Google Gemini Agent Enterprise Platform into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync APIs from Kong Gateway into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission
-* Vertex AI Viewer permission
-* Google Cloud Platform project ID
-Service acccount email
-* Google private key
+* Exchange Administrator permission 
+* Kong Control Plane Viewer permission 
 
+* Kong Gateway region
+* Personal access token (PAT)
 
-== Add a Scanner for Google Gemini Enterprise Platform
-
+== Add a Scanner for Kong Gateway
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
@@ -26,7 +24,7 @@ Service acccount email
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and local time.
-|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
+|*Sync Review* |Select an option: Auto-resolve or Ask to review.
 |===
 
 . From *Connection Configuration*, complete these fields:
@@ -34,14 +32,12 @@ Service acccount email
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Provider* |Select *Google*.
-|*Platform* |Select *Gemini Enterprise Platform*.
-|*Service Type* |*Agents* selected by default.
-|*Authentication Method* |Select *Service Account*.
-|*GCP Project ID*|Enter the Google Cloud Platform project ID.
-|*Service Account Email* |Enter the email address.
-|*Private Key* |Enter the private key.
-|*Location* |Select a location.
+|*Provider* |Select *Kong*.
+|*Platform* |Select *Kong Gateway*.
+|*Service Type* |*REST APIs* selected by default.
+|*Authentication Method* |*Service Account* selected by default.
+|*Kong Gateway Region* |Select the Kong Gateway region.
+|*Personal Access Token* |Enter the personal access token.
 |===
 
 . Click *Test Connection*.
@@ -55,6 +51,6 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:google-scanners.adoc[Google scanners]
+* xref:kong-scanners.adoc[Kong scanners]
 * xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
 * xref:managing-scanners.adoc[Managing Scanners]

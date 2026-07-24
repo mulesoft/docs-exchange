@@ -1,0 +1,25 @@
+= MCP Scanners
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+MCP server scanners connect external MCP server gateways to Anypoint Platform. They discover, catalog, and sync MCP servers from third‑party platforms into Exchange, apply governance rulesets across gateways, optionally front external endpoints with Omni Gateway, and support guided migrations to bring external APIs under Anypoint management. 
+
+These are the supported MCP server scanners:
+
+* xref:adding-agentcore-mcp-scanner.adoc[]
+* xref:adding-azure-apim-mcp-scanner.adoc[]
+* xref:adding-databricks-mcp-scanner.adoc[]
+* xref:adding-snowflake-mcp-scanner.adoc[]
+
+== Before You Begin Adding a Scanner
+
+Make sure you have the permission and access:
+
+* Exchange Administrator permission 
+* Verify that you are in the business group where you want to add the scanner.
+
+== See Also
+
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]

@@ -1,22 +1,36 @@
-= Adding a Scanner for Google Gemini Agent Enterprise Platform
+= Adding a Scanner for Amazon API Gateway
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync agents from Google Gemini Agent Enterprise Platform into Exchange. Then you can govern the agents and consume them in other applications.
+Add a scanner to discover, import, and sync APIs from Amazon API Gateway into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
 
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
 * Exchange Administrator permission
-* Vertex AI Viewer permission
-* Google Cloud Platform project ID
-Service acccount email
-* Google private key
+* IAM policy with read-only permissions for Amazon API Gateway
+* Knowledge about the Amazon Web Services region where the services are deployed
+* AWS access key ID
+* AWS secret access key
 
+Example custom IAM policy for read-only access:
 
-== Add a Scanner for Google Gemini Enterprise Platform
+[source,json,linenums]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["apigateway:GET"],
+      "Resource": "*"
+    }
+  ]
+}
+----
 
+== Add a Scanner for Amazon API Gateway
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
@@ -34,14 +48,13 @@ Service acccount email
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Provider* |Select *Google*.
-|*Platform* |Select *Gemini Enterprise Platform*.
-|*Service Type* |*Agents* selected by default.
-|*Authentication Method* |Select *Service Account*.
-|*GCP Project ID*|Enter the Google Cloud Platform project ID.
-|*Service Account Email* |Enter the email address.
-|*Private Key* |Enter the private key.
-|*Location* |Select a location.
+|*Provider* |Select *Amazon*.
+|*Platform* |Select *API Gateway*.
+|*Service Type* |*REST APIs* selected by default.
+|*Authentication Method* |*Access key* selected by default.
+|*AWS Access Key ID* |Enter the access key ID.
+|*AWS Secret Access Key* |Enter the secret access key.
+|*AWS Region* |Select a region.
 |===
 
 . Click *Test Connection*.
@@ -55,6 +68,6 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:google-scanners.adoc[Google scanners]
+* xref:aws-scanners.adoc[AWS scanners]
 * xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
 * xref:managing-scanners.adoc[Managing Scanners]

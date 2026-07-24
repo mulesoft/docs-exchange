@@ -1,0 +1,33 @@
+= Agent Scanners
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Agent scanners connect external agent platforms to Anypoint Platform. They discover, import, and catalog agents into Exchange so you can govern them and use them from other applications.
+
+Supported agent scanners:
+
+* xref:adding-amazon-bedrock-scanner.adoc[]
+* xref:adding-bedrock-agentcore-scanner.adoc[]
+* xref:adding-claude-scanner.adoc[]
+* xref:adding-databricks-agent-bricks-scanner.adoc[]
+* xref:adding-godaddy-scanner.adoc[]
+* xref:adding-google-vertex-scanner.adoc[]
+* xref:adding-langsmith-scanner.adoc[]
+* xref:adding-microsoft-copilot-scanner.adoc[]
+* xref:adding-microsoft-foundry-scanner.adoc[]
+* xref:adding-agentforce-scanner.adoc[]
+* xref:adding-snowflake-cortex-ai-scanner.adoc[]
+
+== Before You Begin Adding a Scanner
+
+Make sure you have the permission and access:
+
+* Exchange Administrator permission
+* Verify that you are in the business group where you want to add the scanner.
+
+== See Also
+
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
+
