@@ -47,15 +47,20 @@ image:scanner-details.png["Scanner details page showing a list of scanners"]
 
 The *Actions* menu on the scanner details page includes these options, depending on the scanner status:
 
-[%header,cols="1,4"]
+[%header,cols="1,4a"]
 |===
 |*Scanner Status* |*Actions Menu Options*
-|Scheduled or Paused |Run Now
-|Edit Scanner
-|Delete Scanner
-|Queued, Running, or Importing |Abort Scan
-|Stopped |Edit Scanner
-|Delete Scanner
+|Scheduled or Paused |
+* Run Now
+* Edit Scanner
+* Delete Scanner
+|Queued, Running, or Importing |
+
+* Abort Scan
+|Stopped |
+
+* Edit Scanner
+* Delete Scanner
 |===
 
 [[review-scan-results-manually]]

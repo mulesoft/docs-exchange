@@ -6,6 +6,10 @@ endif::[]
 
 The following asset types are supported in Exchange:
 
+* Agent Networks
++
+An agent network is a coordinated group of agents, brokers, LLMs, and MCP servers that acts as a central hub for defining, validating, and executing agentic processes across your enterprise. This asset is read-only. To make changes, edit the agent network project YAML file in Anypoint Code Builder. Agent networks and their agents, brokers, LLMs, and MCP servers are published as individual assets in Exchange. You can view them in the *Agents & Tools* section of Exchange.
+
 * Agents
 +
 Programs that perform tasks autonomously or semiautonomously. AI agents can use the Agent2Agent (A2A) protocol to communicate and collaborate with each other to perform tasks. 
@@ -18,6 +22,7 @@ A set of APIs bundled into a single asset.
 * API Spec Fragments
 +
 A part of an API specification that is reused to build a complete API specification.
+
 * AsyncAPI Specifications
 +
 An AsyncAPI specification file that specifies an event-driven API. Exchange supports AsyncAPI 2.0 and 2.6. AsyncAPI 2.6 supports specs with Avro schemas. The file type for AsyncAPIs with Avro schemas is AVSC.
