@@ -13,7 +13,7 @@ Before adding the scanner, verify that you have these prerequisites:
 For discovering and importing APIs:
 
 * Exchange Administrator permission
-* Knowledge about the Amazon Web Services region where the services are deployed
+* Knowledge about the Amazon Web Services region where the services are deployed.
 * AWS access key ID
 * AWS secret access key
 

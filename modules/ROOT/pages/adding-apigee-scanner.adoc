@@ -7,7 +7,6 @@ Add a scanner to discover, import, and sync APIs from Google Apigee into Anypoin
 
 The scanner discovers policies attached to supported Apigee API proxy configurations and shows discovered policies in the enhanced MuleSoft experience as policies applied per imported API.
 
-
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 

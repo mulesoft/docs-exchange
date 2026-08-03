@@ -7,7 +7,6 @@ Add a scanner to discover, import, and sync APIs from Kong Gateway into Anypoint
 
 In Kong, policies are called plugins. The scanner discovers plugins attached to Kong Gateway services and routes, and the enhanced MuleSoft experience shows those discovered plugins as policies. Plugins applied directly at the service instance level are not currently scanned.
 
-
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
