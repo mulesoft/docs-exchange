@@ -3,16 +3,30 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Add a scanner to discover, import, and sync APIs from Amazon API Gateway into Anypoint Exchange. Once imported, you can apply governance rulesets and publish them to your developer portal.
+Add a scanner to discover, import, and sync APIs from Amazon API Gateway into Anypoint Exchange and to discover and read policies from API configurations. Once imported, you can apply governance rulesets and publish them to your developer portal.
+
+The scanner discovers policies attached to supported Amazon API Gateway API, stage, route, and integration configurations and shows discovered policies in the enhanced MuleSoft experience as policies applied per imported API. Policies outside the supported scanner coverage aren't currently scanned.
 
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
+For discovering and importing APIs:
+
 * Exchange Administrator permission
-* IAM policy with read-only permissions for Amazon API Gateway
-* Knowledge about the Amazon Web Services region where the services are deployed
+* Knowledge about the Amazon Web Services region where the services are deployed.
 * AWS access key ID
 * AWS secret access key
+
+Additional requirements for discovering and reading policies:
+
+* IAM policy with read permissions for Amazon API Gateway:
+** `apigateway:GET`
+** `apigateway:GET*` actions on REST and HTTP API resources
+* Resource scope:
+** `arn:aws:apigateway:{region}::/restapis/*`
+** `arn:aws:apigateway:{region}::/apis/*`
++
+For web application firewall (WAF) policies, the scanner also uses `software.amazon.awssdk:wafv2` and `software.amazon.awssdk:route53`.
 
 Example custom IAM policy for read-only access:
 
@@ -29,6 +43,35 @@ Example custom IAM policy for read-only access:
   ]
 }
 ----
+
+== Policy Coverage for Amazon API Gateway
+
+The scanner reads and extracts these policy areas from AWS API Gateway configurations:
+
+[cols="1,3",options="header"]
+|===
+|Policy area |What the scanner reads
+|Authentication and authorization |IAM signature enforcement (`aws-iam`), Cognito/custom authorizers (`cognito-authorizer`), and API key requirements (`api-key-required`).
+|Rate limiting and quotas |Usage plan throttles and quotas, stage and method throttles, and account-level default throttle settings.
+|Network and access control |Resource policies (including IP-filter conditions), mutual TLS settings, and CORS-related request filtering.
+|Application firewall and threat protection |WAF Web ACLs, WAF IP filtering rules, WAF size restrictions, and WAF bot control rules.
+|Traffic, resilience, and optimization |Canary settings, Route53 health-check associations, and API cache settings.
+|Request and response processing |Integration timeout settings, header mappings, VTL mapping templates, request validators, and integration type patterns (including Step Functions and mock integrations).
+|Observability |Access logging, X-Ray tracing, and CloudWatch metrics.
+|===
+
+Policies that aren't represented in this supported coverage list aren't currently scanned by this Amazon API Gateway scanner.
+
+The scanner doesn't currently read these policy areas:
+
+[cols="1,3",options="header"]
+|===
+|Policy area not scanned |Reason
+|JWT check (`jwt-check`) |JWT authorizers are tied to HTTP API v2 patterns and aren't covered by this scanner's current API model.
+|Attribute-based access control (`attribute-based-access-control`) |There isn't a reliable API-to-policy linkage signal in the current scanner flow.
+|Tokenization (`tokenization`) |This is typically enforced in downstream services (for example, Lambda/KMS usage), not directly in API Gateway configuration.
+|PII protection (`pii-protection`) |This is typically implemented in downstream processing services, not as direct API Gateway policy configuration.
+|===
 
 == Add a Scanner for Amazon API Gateway
 . Verify that you are in the business group where you want to add the scanner.
