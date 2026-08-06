@@ -58,7 +58,7 @@ For more information, see the https://learn.microsoft.com/en-us/azure/ai-foundry
 |*Tenant ID* |Enter the application ID.
 |*Client ID* |Enter the directory ID.
 |*Client Secret* |Enter the client secret.
-|*Project Endpoints* |Enter the project endpoint URLs separated by commas. The endpoints must be publicly accessible; private endpoints with network restrictions will fail because the scanner runs on AWS infrastructure with no private connectivity to customer Azure environments.
+|*Project Endpoints* |Enter the project endpoint URLs separated by commas. Confirm you are using the public endpoint, not a private or VNet-restricted endpoint. If the connection fails, verify your endpoint type matches your network configuration, as private endpoints may not be accessible to the scanner running on AWS infrastructure.
 |===
 
 . Click *Test Connection*.
