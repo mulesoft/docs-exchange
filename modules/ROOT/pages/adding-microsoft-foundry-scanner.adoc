@@ -22,7 +22,7 @@ These values, which are obtained during the Azure App registration setup, are re
 ** Client Secret
 * Required Permissions and Roles:
 +
-** The application principal from the prerequisite step must be assigned the Azure AI Developer role within the Azure portal to grant the scanner access.
+** The application principal from the prerequisite step must be assigned the Cognitive Services User role within the Azure portal to grant the scanner access.
 * Scanner Configuration Limitations:
 +
 Agent listing is project-specific:
@@ -58,7 +58,7 @@ For more information, see the https://learn.microsoft.com/en-us/azure/ai-foundry
 |*Tenant ID* |Enter the application ID.
 |*Client ID* |Enter the directory ID.
 |*Client Secret* |Enter the client secret.
-|*Project Endpoints* |Enter the project endpoint URLs separated by commas.
+|*Project Endpoints* |Enter the project endpoint URLs separated by commas. The endpoints must be publicly accessible; private endpoints with network restrictions will fail because the scanner runs on AWS infrastructure with no private connectivity to customer Azure environments.
 |===
 
 . Click *Test Connection*.
