@@ -1,4 +1,4 @@
-= Adding a Scanner for Amazon Bedrock AgentCore MCP 
+= Adding a Scanner for Amazon Bedrock AgentCore MCP
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -8,6 +8,8 @@ Add a scanner to discover, import, and sync MCP servers from Amazon Bedrock Agen
 == Before You Begin
 
 Before adding the scanner, verify that you have these prerequisites:
+
+For discovering and importing MCP servers:
 
 * An active AWS account to register and host MCP servers
 * Amazon access key ID
@@ -20,8 +22,8 @@ Before adding the scanner, verify that you have these prerequisites:
  ** bedrock-agentcore:GetAgentRuntime
  ** bedrock-agentcore:ListAgentRuntimeVersions
  ** bedrock-agentcore:ListAgentRuntimeEndpoints
- ** bedrock-agentcore:InvokeAgentRuntime    
- 
+ ** bedrock-agentcore:InvokeAgentRuntime
+
 For more information, see the https://docs.aws.amazon.com/bedrock-agentcore/[Amazon Bedrock documentation].
 
 == Add a Scanner for Amazon AgentCore

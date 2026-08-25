@@ -8,7 +8,7 @@ Add a scanner to discover, import, and sync agents from Amazon Bedrock into Exch
 == Before You Begin
 Before adding the scanner, verify that you have these prerequisites:
 
-* Exchange Administrator permission 
+* Exchange Administrator permission
 * Knowledge about the Amazon Web Services region where the agents are deployed.
 * Amazon Bedrock access key ID
 * Amazon Bedrock secret access key
@@ -19,11 +19,9 @@ Before adding the scanner, verify that you have these prerequisites:
 ** bedrock:GetAgentAlias
 ** bedrock:ListAgentVersions
 ** bedrock:GetAgentVersion
-+
-
 * To make sure the scanner discovers the agent, assign an alias and link that alias to a version. The scanner ignores agents without an invocable URL.
 
-== Add a Scanner for Amazon Bedrock 
+== Add a Scanner for Amazon Bedrock
 
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
@@ -34,7 +32,7 @@ Before adding the scanner, verify that you have these prerequisites:
 |===
 |*Field/Option* |*Value*
 |*Run Schedule* |Select a frequency and time.
-|*Sync Review* |Select Auto-resolve.
+|*Sync Review* |Select an option: *Auto-resolve* or *Ask to review*.
 |===
 
 . From *Connection Configuration*, complete these fields:
