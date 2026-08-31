@@ -14,6 +14,39 @@ To select a minor version of an asset, use the menu next to the asset name at th
 
 RAML versions are automatically generated for all OAS assets published since xref:release-notes::exchange/anypoint-exchange-release-notes.adoc#january-2019[January 12, 2019]. OAS 2.0 versions are automatically generated for all RAML assets published since that date.
 
+== Choose a Version Number When Publishing
+
+When you publish a new asset version through the API, you can let Exchange determine the next available version number instead of specifying it manually. The `nextAvailableVersion` endpoint in Exchange API v2 returns the next version number that is free to publish.
+
+Use the `versionOrder` parameter to control which part of the semantic version increments:
+
+[%header,cols="1a,3a"]
+|===
+|Value |Result
+|`MAJOR` |Returns the next available major version, such as 3.0.0.
+|`MINOR` |Returns the next available minor version, such as 2.5.0.
+|`PATCH` |Returns the next available patch version, such as 2.4.7.
+|===
+
+All three values are valid for any asset type. REST APIs and SOAP APIs commonly publish major, minor, and patch versions. HTTP APIs and API Groups usually publish only major versions, but the endpoint returns a minor or patch version when you request one explicitly.
+
+=== Reserved Version Numbers for Deleted Versions
+
+When you soft-delete an asset version, its combination of `groupId`, `assetId`, and `version` (GAV) remains permanently reserved. This behavior applies to every asset type, including API Groups. The `nextAvailableVersion` endpoint skips reserved version numbers and never reuses them, even though a soft-deleted version no longer appears in the catalog.
+
+To make a specific version number available again, enable GAV reuse and then hard-delete that version. Enabling GAV reuse frees only the version numbers that you hard-delete; it does not free an asset's entire version history. To free every version number for an asset, delete every version of the asset.
+
+[NOTE]
+====
+If you republish a version number that belongs to a soft-deleted version, Exchange returns a `409 Conflict` response with the message `There is a deleted asset with the same version number.`
+
+To resolve the conflict, do one of the following:
+
+* Use the `nextAvailableVersion` endpoint to publish at the next free version number.
+* Manually choose a higher version number that is not reserved.
+* Enable GAV reuse, hard-delete the conflicting version, and then republish.
+====
+
 == Asset Limits
 
 An asset's version format must use semantic versioning. Asset fields have these length limits:
