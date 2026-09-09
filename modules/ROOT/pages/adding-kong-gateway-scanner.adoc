@@ -54,6 +54,35 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 .. Enter an email address.
 . Click *Add Scanner*.
 
+== Protocol to Asset Type Mapping
+
+When the scanner discovers an API in Kong Gateway, it assigns an asset type in Exchange based on the API’s Kong protocol and plugins.
+
+[%header,cols="1,1,1"]
+|===
+|Protocol |Plugin |Asset type
+
+|`grpc` / `grpcs`
+|—
+|gRPC
+
+|`http` / `https`
+|`graphql-*`
+|GraphQL
+
+|`http` / `https`
+|No matching plugin
+|REST
+|===
+
+The scanner currently detects gRPC and GraphQL protocols only.
+
+NOTE: APIs that use other protocols or plugins, such as Model Context Protocol (MCP), WebSocket, or Simple Object Access Protocol (SOAP), are registered in Exchange as asset type REST for now. MuleSoft plans to support these protocols in a future release.
+
+== Rescanning Behavior
+
+The scanner assigns an asset type to an API the first time it discovers that API in Exchange. Later scans do not update that asset type, even if the API’s protocol changes in Kong Gateway. To change an asset’s type, remove the asset from Exchange, and let the scanner import it again.
+
 == See Also
 
 * xref:kong-scanners.adoc[Kong scanners]
