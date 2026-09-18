@@ -10,6 +10,7 @@ These are the supported MCP server scanners:
 * xref:adding-agentcore-mcp-scanner.adoc[]
 * xref:adding-azure-apim-mcp-scanner.adoc[]
 * xref:adding-databricks-mcp-scanner.adoc[]
+* xref:adding-kong-mcp-server-scanner.adoc[]
 * xref:adding-snowflake-mcp-scanner.adoc[]
 
 == Before You Begin Adding a Scanner
