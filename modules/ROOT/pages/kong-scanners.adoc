@@ -3,11 +3,15 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-When your APIs are published through Kong Gateway, use this topic to jump to the Exchange scanner setup. Step-by-step instructions are in the linked page.
+When your APIs or MCP servers are published through Kong Gateway, use this topic to jump to the Exchange scanner setup. Step-by-step instructions are in the linked pages.
 
 == API Scanners
 
 * xref:adding-kong-gateway-scanner.adoc[]
+
+== MCP Scanners
+
+* xref:adding-kong-mcp-server-scanner.adoc[]
 
 == Before You Begin Adding a Scanner
 
