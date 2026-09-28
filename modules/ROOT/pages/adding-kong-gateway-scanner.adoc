@@ -80,21 +80,20 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == Protocol to Asset Type Mapping
 
-When the scanner discovers an API in Kong Gateway, it assigns an asset type in Exchange based on the API’s Kong protocol and plugins.
+When the scanner discovers an API in Kong Gateway, it assigns an asset type in Exchange based on the API’s Kong protocol and plugins. The scanner identifies gRPC APIs by their protocol alone and does not check plugins for these APIs. For HTTP APIs, the scanner checks the API’s plugins because both REST and GraphQL APIs use the HTTP protocol. If the API has a `graphql-*` plugin, the scanner classifies it as a GraphQL API. Otherwise, the scanner classifies it as a REST API.
 
 [%header,cols="1,1,1"]
 |===
 |Protocol |Plugin |Asset type
 
 |`grpc` / `grpcs`
-|—
+|No matching plugin
 |gRPC
 
-|`http` / `https`
+.2+|`http` / `https`
 |`graphql-*`
 |GraphQL
 
-|`http` / `https`
 |No matching plugin
 |REST
 |===
