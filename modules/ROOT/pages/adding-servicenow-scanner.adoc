@@ -1,0 +1,66 @@
+= Adding a Scanner for ServiceNow AI Agents
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync agents from ServiceNow AI Agents into Exchange. Then you can govern the agents and consume them in other applications.
+
+The scanner imports only native ServiceNow AI Agent Studio agents. Agents registered in ServiceNow from external systems are not imported.
+
+== Before You Begin
+Before adding the scanner, verify that you have these prerequisites:
+
+* Exchange Administrator permission
+* AI Asset Governance enabled and synced on your ServiceNow instance
+* A ServiceNow Table API integration user with read access to the `alm_ai_*` tables
+* An Application Registry entry in ServiceNow, which generates the OAuth client ID and client secret pair that the scanner uses to authenticate
++
+The scanner authenticates to ServiceNow by using the OAuth 2.0 client credentials grant. You enter the instance URL, client ID, and client secret when configuring the scanner in Exchange. To create an Application Registry entry and obtain the client ID and client secret, see the ServiceNow documentation.
+
+[NOTE]
+====
+If AI Asset Governance is not enabled and synced on your ServiceNow instance, the scanner returns zero agents even when agents exist. Verify that AI Asset Governance is enabled and synced before you run the scanner.
+====
+
+== Add a Scanner for ServiceNow AI Agents
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Ask to review* or *Auto-resolve*.
+|===
+
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *ServiceNow*.
+|*Platform* |Select *ServiceNow AI Agents*.
+|*Service Type* |*Agents* selected by default.
+|*Authentication Method* |*OAuth* selected by default.
+|*Instance URL* |Enter the ServiceNow instance URL, for example, `https://<instance>.service-now.com`.
+|*Client ID* |Enter the OAuth client ID.
+|*Client Secret* |Enter the OAuth client secret.
+|===
+
+. Click *Test Connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== See Also
+
+* xref:servicenow-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
