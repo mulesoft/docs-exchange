@@ -10,7 +10,7 @@ You can create documentation for API assets that don't have any documentation. F
 
 This release supports:
 
-* REST APIs (RAML, OAS 2.0/3.0)
+* REST APIs (RAML, OAS 2.0/3.0/3.1)
 * SOAP APIs
 * AsyncAPI
 * GraphQL API
