@@ -113,7 +113,7 @@ REST Connect supports these security schemes:
 * Pass Through
 * Digest Authentication
 
-If you publish an API specification with an unsupported authentication type, you receive an alert email. If this happens, update your API specification to use one of the supported security schemes.
+If you publish an API specification with a security scheme that REST Connect does not support, such as `bearer`, `openIdConnect`, or `mutualTLS`, REST Connect still generates the connector, but the connector does not send credentials. Update your API specification to use one of the supported security schemes.
 
 If the operations defined in your API specification support multiple security schemes, the one that comes first in the list of supported schemes is used.
 
