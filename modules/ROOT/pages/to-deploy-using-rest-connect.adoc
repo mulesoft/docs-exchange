@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images/
 
-The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 4 connector. You can use this connector as you would any other in Anypoint Studio.
+The Exchange backend uses REST Connect to transparently convert a REST API specification to a Mule 4 connector. You can use this connector as you would any other in Anypoint Code Builder.
 
 [[access-generated-connectors]]
 == Access Generated Connectors
