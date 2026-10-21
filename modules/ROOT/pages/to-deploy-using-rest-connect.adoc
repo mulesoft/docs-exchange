@@ -27,6 +27,81 @@ REST Connect supports these API specification formats:
 * OAS 2 - YAML
 * RAML 1.0
 
+[[oas-31-example]]
+== OAS 3.1 Example
+
+REST Connect generates connectors from OAS 3.1 API specifications, including specifications that use JSON Schema 2020-12 constructs. This example uses nullable types declared with a `type` array (`type: [string, "null"]`) and a description alongside a `$ref`:
+
+[source,text,linenums]
+----
+openapi: 3.1.0
+info:
+  title: Pet Store 3.1
+  version: 1.0.0
+servers:
+  - url: https://petstore.example.com/v1
+paths:
+  /pets:
+    get:
+      operationId: listPets
+      summary: List pets
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: [integer, "null"]
+      responses:
+        "200":
+          description: A list of pets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Pet"
+    post:
+      operationId: createPet
+      summary: Create a pet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Pet"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pet"
+components:
+  schemas:
+    Owner:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        email:
+          type: [string, "null"]
+    Pet:
+      type: object
+      required: [id, name]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        nickname:
+          type: [string, "null"]
+          description: Optional nickname, may be null
+        owner:
+          $ref: "#/components/schemas/Owner"
+          description: The pet's owner (a sibling keyword next to $ref, new in 3.1)
+----
+
 [[security-scheme-support]]
 == Security Scheme Support
 
