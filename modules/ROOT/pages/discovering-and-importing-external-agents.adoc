@@ -41,6 +41,7 @@ By provider::
 * xref:langchain-scanners.adoc[]
 * xref:microsoft-scanners.adoc[]
 * xref:agentforce-scanners.adoc[]
+* xref:servicenow-scanners.adoc[]
 * xref:snowflake-scanners.adoc[]
 
 
