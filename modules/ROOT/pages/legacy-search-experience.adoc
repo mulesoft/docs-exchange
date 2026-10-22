@@ -61,7 +61,7 @@ You can use the following API specification properties that are used in search:
 * Properties
 * Security schemas
 
-These property names are based on RAML specifications. Equivalent properties are indexed for OAS specifications. For example, RAML uses base URI but OAS uses host and path.
+These property names are based on RAML specifications. Equivalent properties are indexed for OAS specifications. For example, RAML uses base URI, OAS 2.0 uses host and base path, and OAS 3.x uses servers.
 
 This example shows an API specification:
 

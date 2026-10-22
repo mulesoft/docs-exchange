@@ -25,7 +25,7 @@ image::ex2-api-instances.png["A table of API instances, their corresponding envi
 
 == Accept Simulated Data in an API
 
-. From Design Center > API Specification, provide example data that the implementation returns. Alternatively, you can develop an OAS (Swagger) specification from a text editor and add the example data there.
+. From Design Center > API Specification, provide example data that the implementation returns. Alternatively, you can develop an OAS specification from a text editor and add the example data there.
 . In the REST specification provide an HTTP status code for a successful API call.
 
 == Test a REST API With Simulated Data
