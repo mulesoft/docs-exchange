@@ -395,7 +395,11 @@ MCP servers provide the protocols and specifications for seamless integration be
 
 MCP server schema files are in JSON format. They define the tools, data structures, and authentication. Upload the schema file to use when creating an MCP server asset or use the MCP server’s URL to fetch the schema information.
 
-The minimum required property for an MCP server schema file is `transport` over HTTP. If you declare `capabilities`, you must have all four capability flags: `tools`, `resources`, `prompts`, and `logging`. If you provide `tools`, `resources`, or `prompts`, each must have name and identifier fields.
+The minimum required property for an MCP server schema file is `transport` over HTTP. If you declare `capabilities`, you must have all four capability flags: `tools`, `resources`, `prompts`, and `logging`. If you provide `tools`, `resources`, or `prompts`, each element must include the fields that the MCP specification requires for its type:
+
+* Each tool requires `name` and `inputSchema`.
+* Each resource requires `name` and `uri`.
+* Each prompt requires `name`.
 
 This is a sample JSON file with the minimum required `transport` property.
 
