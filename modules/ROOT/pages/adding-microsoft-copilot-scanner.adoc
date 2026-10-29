@@ -1,4 +1,4 @@
-= Adding a Scanner for Microsoft Azure Copilot
+= Adding a Scanner for Microsoft Copilot Studio
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -19,7 +19,15 @@ This setup requires specific configurations and access privileges in Microsoft C
 
 * Required Permissions and Roles:
 +
-Add the registered application as an Application User in Power Platform admin center and assign it the Copilot Studio Scanner Role security role. 
+Add the registered application as an Application User in Power Platform admin center and assign it the Copilot Studio Scanner Role security role.
++
+When you configure the scanner with a single Dataverse environment, the Dataverse security role must have `Read` permission on these tables:
++
+** `bot`
+** `botcomponent`
+** `systemuser`
++
+If the security role doesn't have Read permission on the `systemuser` table, the scanner fails with a `403 prvReadUser` error.
 
 * Required Scope:
 +
@@ -39,7 +47,7 @@ To configure Microsoft Copilot Studio before you add a scanner, review these hig
 *** Tenant ID (Directory ID)
 . Configure permissions:
 .. In Power Platform, go to *Environments* and select the environment.
-.. Create a custom security role with read-only permission to the `bot` and `botcomponents` tables:
+.. Create a custom security role with read-only permission to the `bot`, `botcomponent`, and `systemuser` tables:
 ... Go to *Security roles* and add a new role.
 ... Add or select these values in the *Create New Role* panel, and then save:
 +
@@ -50,11 +58,13 @@ To configure Microsoft Copilot Studio before you add a scanner, review these hig
 |*Business Unit* |Select the business unit.
 |*Description* |Read-only access to scan Copilot Studio agent metadata.
 |*Applies To* |Copilot Studio scanning and auditing.
-|*Summary of Core Table Privileges* |Read access to the `bot` and `botcomponents` tables.
+|*Summary of Core Table Privileges* |Read access to the `bot`, `botcomponent`, and `systemuser` tables.
 |===
 +
 ... From the Details page, enter `bot` to locate the Agent and Agent Component table records.
-... Select *Organization Access* from the *Read* column for both Agent and Agent Component, and then save.
+... Select *Organization Access* from the *Read* column for both Agent and Agent Component.
+... Enter `user` to locate the User (`systemuser`) table record.
+... Select *Organization Access* from the *Read* column for User, and then save.
 .. In Power Platform admin center, create a new app user by selecting *Application users* and adding the app you created.
 .. Select the *Business Unit* and edit the *Security Role* by selecting the *Copilot Studio Scanner Role* that you created.
 . After you complete these steps, add the scanner in Exchange.
@@ -77,7 +87,7 @@ To configure Microsoft Copilot Studio before you add a scanner, review these hig
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Microsoft Azure Copilot*.
+|*Agent Provider* |Select *Microsoft Copilot Studio*.
 |*Authentication Method* |Select an option.
 |*Tenant ID* |Enter the tenant ID.
 |*Client ID* |Enter the client ID.
@@ -96,6 +106,6 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:microsoft-scanners.adoc[Microsoft scanners]
-* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
-* xref:managing-scanners.adoc[Managing Scanners]
+* xref:microsoft-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
