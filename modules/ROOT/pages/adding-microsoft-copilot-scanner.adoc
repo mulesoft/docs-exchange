@@ -1,4 +1,4 @@
-= Adding a Scanner for Microsoft Azure Copilot
+= Adding a Scanner for Microsoft Copilot Studio
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -17,8 +17,6 @@ This setup requires specific configurations and access privileges in Microsoft C
 ** Power Platform client ID (Application ID)
 ** Power Platform client secret
 
-// TODO (engineering): Confirm the table name. The Dataverse logical name is `botcomponent` (singular); `botcomponents` is the Web API entity set name. If the singular is correct, update it here, in the "Create a custom security role" step, and in the Summary of Core Table Privileges row.
-// TODO (engineering): Confirm that the `systemuser` table appears as *User* in the security role editor, so the "Enter `user`" step in Configure permissions matches the UI.
 * Required Permissions and Roles:
 +
 Add the registered application as an Application User in Power Platform admin center and assign it the Copilot Studio Scanner Role security role.
@@ -26,7 +24,7 @@ Add the registered application as an Application User in Power Platform admin ce
 When you configure the scanner with a single Dataverse environment, the Dataverse security role must have Read permission on these tables:
 +
 ** `bot`
-** `botcomponents`
+** `botcomponent`
 ** `systemuser`
 +
 If the security role doesn't have Read permission on the `systemuser` table, the scanner fails with a `403 prvReadUser` error.
@@ -89,7 +87,7 @@ To configure Microsoft Copilot Studio before you add a scanner, review these hig
 [%header,cols="1,4"]
 |===
 |*Field* |*Value*
-|*Agent Provider* |Select *Microsoft Azure Copilot*.
+|*Agent Provider* |Select *Microsoft Copilot Studio*.
 |*Authentication Method* |Select an option.
 |*Tenant ID* |Enter the tenant ID.
 |*Client ID* |Enter the client ID.
