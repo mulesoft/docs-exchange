@@ -47,7 +47,7 @@ To configure Microsoft Copilot Studio before you add a scanner, review these hig
 *** Tenant ID (Directory ID)
 . Configure permissions:
 .. In Power Platform, go to *Environments* and select the environment.
-.. Create a custom security role with read-only permission to the `bot`, `botcomponents`, and `systemuser` tables:
+.. Create a custom security role with read-only permission to the `bot`, `botcomponent`, and `systemuser` tables:
 ... Go to *Security roles* and add a new role.
 ... Add or select these values in the *Create New Role* panel, and then save:
 +
@@ -58,7 +58,7 @@ To configure Microsoft Copilot Studio before you add a scanner, review these hig
 |*Business Unit* |Select the business unit.
 |*Description* |Read-only access to scan Copilot Studio agent metadata.
 |*Applies To* |Copilot Studio scanning and auditing.
-|*Summary of Core Table Privileges* |Read access to the `bot`, `botcomponents`, and `systemuser` tables.
+|*Summary of Core Table Privileges* |Read access to the `bot`, `botcomponent`, and `systemuser` tables.
 |===
 +
 ... From the Details page, enter `bot` to locate the Agent and Agent Component table records.
@@ -106,6 +106,6 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == See Also
 
-* xref:microsoft-scanners.adoc[Microsoft scanners]
-* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
-* xref:managing-scanners.adoc[Managing Scanners]
+* xref:microsoft-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
