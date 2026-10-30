@@ -7,7 +7,7 @@ When your organization uses Microsoft Azure, Copilot Studio, or Microsoft Foundr
 
 == Agent Scanners
 
-* xref:adding-microsoft-copilot-scanner.adoc[Add a scanner for Microsoft Azure Copilot]
+* xref:adding-microsoft-copilot-scanner.adoc[Add a scanner for Microsoft Copilot Studio]
 * xref:adding-microsoft-foundry-scanner.adoc[Add a scanner for Microsoft Foundry]
 
 == API Scanners
