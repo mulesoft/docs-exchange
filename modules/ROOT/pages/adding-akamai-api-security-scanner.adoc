@@ -29,6 +29,7 @@ For more information about tenant connectivity, see xref:general::exp-akamai-ris
 . Verify that you are in the business group where you want to add the scanner.
 . From the sidebar in Exchange, click *Scanners*.
 . Enter a name for the scanner.
+//TODO confirm this is correct
 . From *Scanner Run Configuration*, complete these fields or options:
 +
 [%header,cols="1,4"]
