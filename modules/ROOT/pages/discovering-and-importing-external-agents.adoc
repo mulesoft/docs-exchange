@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :page-notice-banner-message: Use the enhanced MuleSoft experience to import services from third-party providers and manage them in a unified experience. <a href="https://docs.mulesoft.com/general/exp-scanners-add-from-providers" target="_blank" rel="noopener">Learn more</a>.
 
-Use scanners to automatically discover, import, and catalog services from outside Anypoint Platform. Scanners connect to external provider platforms and pull in metadata for agents, APIs, and Model Context Protocol (MCP) servers your teams rely on. They give enterprise-grade governance and visibility through MuleSoft Agent Fabric by synchronizing that metadata with the Agent Fabric registry in Anypoint Exchange.
+Use scanners to automatically discover, import, and catalog services from outside Anypoint Platform. Scanners connect to external provider platforms and pull in metadata for agents, APIs, Model Context Protocol (MCP) servers, and data services your teams rely on. They give enterprise-grade governance and visibility through MuleSoft Agent Fabric by synchronizing that metadata with the Agent Fabric registry in Anypoint Exchange.
 
 What each scan imports depends on the provider: some ecosystems expose agents; others also surface API definitions or MCP endpoints that Exchange can represent as catalog services. Scanners extract metadata, map it into Exchange-friendly forms (including the canonical Agent-to-Agent (A2A) representation for agentic services where applicable), and keep the catalog aligned with the source. The system detects updates and resolves conflicts to maintain a single source of truth. 
 
@@ -21,6 +21,7 @@ Exchange supports these scanner types:
 * Agents
 * APIs
 * MCP servers
+* Data
 
 == Find a Scanner
 
@@ -29,6 +30,7 @@ By scanner type::
 * xref:agent-scanners.adoc[]
 * xref:api-scanners.adoc[]
 * xref:mcp-scanners.adoc[]
+* xref:data-scanners.adoc[]
 
 By provider::
 
@@ -37,6 +39,7 @@ By provider::
 * xref:databricks-scanners.adoc[]
 * xref:godaddy-scanners.adoc[]
 * xref:google-scanners.adoc[]
+* xref:informatica-scanners.adoc[]
 * xref:kong-scanners.adoc[]
 * xref:langchain-scanners.adoc[]
 * xref:microsoft-scanners.adoc[]
