@@ -1,0 +1,99 @@
+= Adding a Scanner for Microsoft 365 Copilot
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync Microsoft 365 Copilot agents into Exchange. Then you can govern the agents and consume them in other applications.
+
+The scanner discovers only agents whose platform is Microsoft 365 Copilot Agent Builder. It does not scan agents that the Copilot Studio or Azure AI Foundry scanners discover, and it does not deduplicate agents. The scanner reads agent metadata from the Microsoft Graph Package Management API. It does not change your agents.
+
+[NOTE]
+====
+The scanner counts toward the service capacity limit of 20,000 services. The *Scanners* page shows the capacity your organization has used.
+====
+
+== Before You Begin
+
+Before you add the scanner, make sure you have these accounts, permissions, and values so the scanner can access and list agents:
+
+* Prerequisites:
+** A Microsoft tenant with a Microsoft Agent 365 license. Without the license, the scanner cannot read agents.
+** A Microsoft Entra app registration to generate the necessary credentials. The scanner supports client-credentials OAuth only.
+
+* Required configuration values:
+** Tenant ID (Directory ID)
+** Client ID (Application ID)
+** Client secret
+
+* Required permissions:
++
+Admin consent for the `CopilotPackages.Read.All` Microsoft Graph application permission.
+
+== Configure Microsoft Entra ID
+
+To configure Microsoft Entra ID before you add a scanner, review these high-level steps. For details, see the https://learn.microsoft.com/en-us/entra/[Microsoft Entra documentation^].
+
+. Create an app registration:
+.. In the https://entra.microsoft.com/[Microsoft Entra admin center^], click *App registrations*, and then register a new application.
+.. Create a client secret and copy the value.
+.. Record the tenant ID, client ID, and client secret. You need these values when you add the scanner in Exchange.
+. Add the Microsoft Graph permission:
+.. From the app registration, click *API permissions*, and then click *Add a permission*.
+.. Click *Microsoft Graph*, and then click *Application permissions*.
+.. Search for `CopilotPackages.Read.All`, select it, and click *Add permissions*.
+.. Click *Grant admin consent*. [CONFIRM: button label]
+
+== Add a Scanner for Microsoft 365 Copilot
+
+. Verify that you are in the business group where you want to add the scanner.
+. From the sidebar in Exchange, click *Scanners*.
+. Enter a name for the scanner. Optionally, enter a description.
+. From *Scanner Run Configuration*, complete these fields or options:
++
+[%header,cols="1,4"]
+|===
+|*Field/Option* |*Value*
+|*Run Schedule* |Select a frequency and time.
+|*Sync Review* |Select an option: *Ask to review* or *Auto-resolve*.
+|===
+. From *Connection Configuration*, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Provider* |Select *Microsoft*.
+|*Platform* |Select *Microsoft 365 Copilot*.
+|*Service Type* |*Agents* is set automatically.
+|*Authentication Method* |*OAuth* is set automatically.
+|*Tenant ID* |Enter the tenant ID.
+|*Client ID* |Enter the client ID.
+|*Client Secret* |Enter the client secret.
+|===
+. Click *Test connection*.
++
+If the connection fails, review the *Connection Configuration* settings. Update the settings, and then test the connection again.
+. To send email notifications:
++
+.. Select *Advanced Settings* and turn on *Send Email Notifications*.
+.. Enter an email address.
+. Click *Add Scanner*.
+
+== Information the Scanner Imports
+
+For each agent, the scanner imports the name, description, publisher, version, agent type (declarative or custom engine), supported host products such as Teams, Outlook, and SharePoint, availability, and last modified date. For declarative agents, the scanner also imports the agent instructions. For custom engine agents, the scanner imports the foundation model when one is available.
+
+The scanner does not import the agent owner or the creation date. Declarative agents do not have a customer-selected foundation model.
+
+== Troubleshooting
+
+If *Test connection* returns a `403 Forbidden` error, verify that: [CONFIRM: how the license error appears in the UI]
+
+* The tenant has a Microsoft Agent 365 license.
+* An admin granted consent for the `CopilotPackages.Read.All` permission.
+
+== See Also
+
+* xref:microsoft-scanners.adoc[Microsoft scanners]
+* xref:adding-microsoft-copilot-scanner.adoc[Adding a scanner for Microsoft Azure Copilot]
+* xref:discovering-and-importing-external-agents.adoc[Discovering and Cataloging External Assets with Scanners]
+* xref:managing-scanners.adoc[Managing Scanners]

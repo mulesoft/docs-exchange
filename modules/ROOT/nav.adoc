@@ -64,6 +64,7 @@
 **** xref:adding-godaddy-scanner.adoc[]
 **** xref:adding-google-vertex-scanner.adoc[]
 **** xref:adding-langsmith-scanner.adoc[]
+**** xref:adding-microsoft-365-copilot-scanner.adoc[]
 **** xref:adding-microsoft-copilot-scanner.adoc[]
 **** xref:adding-microsoft-foundry-scanner.adoc[]
 **** xref:adding-agentforce-scanner.adoc[]
