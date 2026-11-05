@@ -5,7 +5,7 @@ endif::[]
 
 Add a scanner to discover, import, and sync Microsoft 365 Copilot agents into Exchange. Then you can govern the agents and consume them in other applications.
 
-The scanner discovers only agents whose platform is Microsoft 365 Copilot Agent Builder. It does not scan agents that the Copilot Studio or Azure AI Foundry scanners discover, and it does not deduplicate agents. The scanner reads agent metadata from the Microsoft Graph Package Management API. It does not change your agents.
+The scanner discovers declarative agents and custom engine agents in Microsoft 365 Copilot. The scanner reads agent metadata from the Microsoft Graph Package Management API. It does not change your agents.
 
 [NOTE]
 ====
