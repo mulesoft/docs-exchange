@@ -86,7 +86,7 @@ The scanner does not import the agent owner or the creation date. Declarative ag
 
 == Troubleshooting
 
-If *Test connection* returns a `403 Forbidden` error, verify that: [CONFIRM: how the license error appears in the UI]
+If *Test connection* returns an error, verify that:
 
 * The tenant has a Microsoft Agent 365 license.
 * An admin granted consent for the `CopilotPackages.Read.All` permission.
