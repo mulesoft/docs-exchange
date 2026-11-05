@@ -41,7 +41,10 @@ To configure Microsoft Entra ID before you add a scanner, review these high-leve
 .. From the app registration, click *API permissions*, and then click *Add a permission*.
 .. Click *Microsoft Graph*, and then click *Application permissions*.
 .. Search for `CopilotPackages.Read.All`, select it, and click *Add permissions*.
-.. Click *Grant admin consent*. [CONFIRM: button label]
+.. Grant admin consent, which is required for Microsoft Graph application permissions:
+... If you have permission to grant tenant-wide consent, click *Grant admin consent for _<tenant_name>_* and confirm.
+... If you do not have permission, ask your Microsoft Entra administrator to grant consent.
+.. Before you continue, verify that the status of the permission is *Granted for _<tenant_name>_*.
 
 == Add a Scanner for Microsoft 365 Copilot
 
