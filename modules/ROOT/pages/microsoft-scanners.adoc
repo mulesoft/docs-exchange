@@ -3,10 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-When your organization uses Microsoft Azure, Copilot Studio, or Microsoft Foundry, use this page to find the right Exchange scanner. Procedures are in the linked topics; this page is only a map.
+When your organization uses Microsoft Azure, Microsoft 365 Copilot, Copilot Studio, or Microsoft Foundry, use this page to find the right Exchange scanner. Procedures are in the linked topics; this page is only a map.
 
 == Agent Scanners
 
+* xref:adding-microsoft-365-copilot-scanner.adoc[Add a scanner for Microsoft 365 Copilot]
 * xref:adding-microsoft-copilot-scanner.adoc[Add a scanner for Microsoft Azure Copilot]
 * xref:adding-microsoft-foundry-scanner.adoc[Add a scanner for Microsoft Foundry]
 
