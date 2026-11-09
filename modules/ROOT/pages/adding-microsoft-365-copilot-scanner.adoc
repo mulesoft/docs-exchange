@@ -83,9 +83,21 @@ If the connection fails, review the *Connection Configuration* settings. Update 
 
 == Information the Scanner Imports
 
-For each agent, the scanner imports the name, description, publisher, version, agent type (declarative or custom engine), supported host products such as Teams, Outlook, and SharePoint, availability, and last modified date. For declarative agents, the scanner also imports the agent instructions. For custom engine agents, the scanner imports the foundation model when one is available.
+For each agent it discovers, the scanner imports this information when it's available:
 
-The scanner does not import the agent owner or the creation date. Declarative agents do not have a customer-selected foundation model.
+* Name
+* Description
+* Publisher
+* Version
+* Package type
+* Availability
+* Deployment status
+* Blocked status
+* Owner ID, creation date, and last modified date of the catalog package
+
+For declarative agents, the scanner also imports the agent instructions, truncated to 2,000 characters. For custom engine agents, the scanner imports the foundation model if the agent manifest identifies one.
+
+The owner and dates describe the catalog package, not the agent. The scanner doesn't import supported host products. Declarative agents use the managed models in Microsoft 365 Copilot, so the scanner doesn't import a foundation model for them.
 
 == Troubleshooting
 
