@@ -21,8 +21,8 @@ Mule 4 connectors download as JAR files.
 
 REST Connect supports these API specification formats:
 
-* OAS 3.0 and 3.1 - JSON
-* OAS 3.0 and 3.1 - YAML
+* OAS 3.0, 3.1, and 3.2 - JSON
+* OAS 3.0, 3.1, and 3.2 - YAML
 * OAS 2 - JSON
 * OAS 2 - YAML
 * RAML 1.0
