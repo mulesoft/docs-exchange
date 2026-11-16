@@ -102,6 +102,48 @@ components:
           description: The pet's owner (a sibling keyword next to $ref, new in 3.1)
 ----
 
+[[oas-32-example]]
+== OAS 3.2 Example
+
+REST Connect generates connectors from OAS 3.2 API specifications. This example uses a `query` operation, which sends a structured filter in the request body:
+
+[source,text,linenums]
+----
+openapi: 3.2.0
+info:
+  title: Product Search API
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/v1
+paths:
+  /products:
+    query:
+      operationId: searchProducts
+      summary: Search products with a structured filter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: { type: string }
+                maxPrice: { type: number }
+      responses:
+        '200':
+          description: Matching products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id: { type: string }
+                    name: { type: string }
+                    price: { type: number }
+----
+
 [[security-scheme-support]]
 == Security Scheme Support
 
