@@ -873,7 +873,7 @@ When your access token is issued properly, you can get issues related to Salesfo
 == Known Limitations
 
 * Anypoint Platform, including REST Connect, does not support API fragments for OAS.
-* REST Connect does not support webhooks in OAS 3.1 API specifications.
-* REST Connect does not support the `mutualTLS` security scheme in OAS 3.1 API specifications.
-* For XML request and response bodies, the generated XSD does not enforce the OAS 3.1 keywords `prefixItems`, `if`/`then`/`else`, `patternProperties`, and `not`.
+* REST Connect does not support webhooks in OAS 3.1 and 3.2 API specifications.
+* REST Connect does not support the `mutualTLS` security scheme in OAS 3.1 and 3.2 API specifications.
+* For XML request and response bodies, the generated XSD does not enforce the OAS 3.1 and 3.2 keywords `prefixItems`, `if`/`then`/`else`, `patternProperties`, and `not`.
 * Chinese characters are not supported in API specs or their dependencies. Japanese characters are supported in the `description` and `example` tags.
