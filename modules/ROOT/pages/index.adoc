@@ -96,14 +96,15 @@ All features of Anypoint Exchange are supported Canada, Brazil, Japan, India, Au
 
 * Amazon CloudFront isn't configured on control planes. 
 +
-To download files from Canada, Brazil, Japan, India, Australia, or United Kingdom control planes, use these URLs:
+To download files from Canada, Brazil, Japan, India, Australia, United Kingdom, or MuleSoft Government Cloud Plus control planes, use these URLs:
 
 ** Canada S3 Bucket URL: +https://exchange-asset-manager-d1937357035a847d2ec3.s3.ca-central-1.amazonaws.com+
-** Brazil S3 Bucket URL: +<placeholder>+
+** Brazil S3 Bucket URL: +https://exchange-asset-manager-92e0982b8ff2fad7e802.s3.sa-east-1.amazonaws.com+
 ** Japan S3 Bucket URL: +https://exchange-asset-manager-bf62561aafed7e20740f.s3.ap-northeast-1.amazonaws.com+
 ** India S3 Bucket URL: +https://exchange-asset-manager-a2e86fbaee6d85765a10.s3.ap-south-1.amazonaws.com+
 ** Australia S3 Bucket URL: +https://exchange-asset-manager-1fe7d550c2397312a1b5.s3.ap-southeast-2.amazonaws.com+
 ** United Kingdom S3 Bucket URL: +https://exchange-asset-manager-2d14a46096b613e686dd.s3.eu-west-2.amazonaws.com/+
+** MuleSoft Government Cloud Plus S3 Bucket URL: +https://exchange-asset-manager-ad5887e20ade1fc0e913.s3-fips.us-gov-east-1.amazonaws.com+
 
 
 
