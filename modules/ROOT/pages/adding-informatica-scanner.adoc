@@ -1,0 +1,126 @@
+= Adding a Scanner for Informatica Cloud Data Governance and Catalog
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Add a scanner to discover, import, and sync data services from Informatica Cloud Data Governance and Catalog (CDGC) into Exchange. Then you can govern the data services and consume them in other applications.
+
+Unlike other scanners, the Informatica CDGC scanner imports data services from the catalog sources registered in CDGC, and gives Context Catalog the metadata it needs to build lineage from agents to data.
+
+When the scanner runs, it imports and normalizes this information from CDGC:
+
+* Dataset names, schemas, and owners
+* Classifications and regulatory tags, such as PII, PHI, confidential, GDPR, HIPAA, and PCI
+* Data quality scores and freshness metrics
+* Business glossary terms, classification rules, and asset-to-term associations, including field-level PII tags
+
+[NOTE]
+====
+The Informatica CDGC scanner is part of the Context Catalog capability in Agent Fabric. Informatica appears in the provider list only when your administrator enables the feature for your organization.
+====
+
+== Before you begin
+
+Before you add the scanner, make sure you have these accounts and values:
+
+* An Informatica Intelligent Cloud Services (IICS) account with CDGC enabled and access to the catalog sources you want to scan.
+* At least one CDGC catalog source, for example, a Snowflake connection, so that the scanner has datasets, classifications, glossary terms, and quality metrics to import as data services.
+* The IICS username and password for the account that the scanner uses. The scanner authenticates against the pod for the region you select and exchanges the credentials for a session token.
+* The region where your IICS organization is hosted:
++
+[%header,cols="1,1"]
+|===
+|*Region* |*Pod*
+|North America |NA
+|EMEA |EM
+|United Kingdom |UK
+|Asia Pacific & Japan |AP
+|Canada |NA
+|===
++
+[CONFIRM: remaining region names in the dropdown, and the pod behind each region]
+
+The IICS account must have a role with the privileges described in <<configure-privileges>>.
+
+[[configure-privileges]]
+== Configure Informatica privileges
+
+If you are an Informatica administrator who sets up the account for the scanner, use a Custom Admin role that can create and manage users and groups in CDGC. Use this role when you stand up the account that provisions the scanner’s service user, or when you hand off the account.
+
+In Informatica, privileges and permissions are different:
+
+* *Privileges* are feature-level and asset-type-level rights, such as the Create, Read, Update, and Delete toggles for each asset type. You bundle privileges into a role and assign the role to a user or group. This topic covers privileges.
+* *Permissions* are object-level access to an individual object, such as one catalog source, project, or folder. This topic does not cover permissions.
+
+A Custom Admin can create a user or group only when the assigned role grants Read access to the Role asset. If the admin does not have Read access to the User, Group, and Role assets, the create flow fails because Informatica cannot populate the role-assignment list.
+
+Grant these privileges on the Custom Admin’s role:
+
+[%header,cols="2,1,1,1,1"]
+|===
+|*Asset type* |*Create* |*Read* |*Update* |*Delete*
+|Group |Yes |Yes |Yes |Yes
+|User |Yes |Yes |Yes |Yes
+|Role |No |Yes |No |No
+|===
+
+The Role asset needs only Read access because the admin assigns existing roles and does not create them.
+
+To grant the privileges:
+
+. Log in to the Informatica Administrator portal at `https://<pod>.informaticacloud.com/identity-service/home`, where `<pod>` is the pod for your region: `dm-us`, `dm-em`, `dm-uk`, `dm-ap`, or `dm-na`. [CONFIRM: pod-to-region mapping]
+. Select the Custom Admin user or group to modify.
+. Assign the role that includes the privileges in the previous table. Make sure the Role asset is set to Read.
+. Save your changes.
+
+For more information, see the https://docs.informatica.com/[Informatica documentation^]. [CONFIRM: link to the CDGC administration topic]
+
+== Add a scanner for Informatica CDGC
+
+. In the sidebar, under *Platform*, click *Providers*.
+. Click *Informatica*. [CONFIRM: control that opens the Connect to a Provider page]
+. On the *Connect to Provider* page, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Region* |Select the region where your IICS organization is hosted, for example, *North America (NA pod)*.
+|*Username* |Enter the IICS username.
+|*Password* |Enter the IICS password.
+|===
+. Click *Test Connection*.
+. After the connection test succeeds, click *Continue*. [CONFIRM: behavior when the test fails]
+. On the *Connection Setup* page, complete these fields:
++
+[%header,cols="1,4"]
+|===
+|*Field* |*Value*
+|*Connection Name* |Enter a name for the connection. This field is required.
+|*Description* |Optional. Enter a description.
+|*Frequency* |Select how often the scanner runs. The default is *Every 24 hours*.
+|*Time* |Select the time the scanner runs. The default is *2 AM*.
+|===
++
+A message states that Exchange imports all discovered services into the portfolio.
+. Click *Connect*.
+
+== View the imported data
+
+After the scanner runs, the imported data services appear under *Data Assets* in the sidebar. Open a data service to see its details:
+
+* *Overview* shows the description and key details, such as the catalog source name, type, owner, and last updated time.
+* *Hierarchy* shows the content of the catalog source as a tree: source, database, schema, table, and column. Columns show a sensitivity label, such as *Sensitive PII*, *PII*, or *Medium*, when CDGC classifies them.
+
+== Troubleshooting
+
+If you cannot create a user or group in Informatica, verify these items in order:
+
+. The role grants Read access to the Role asset. This is the most common cause of creation failures, because without it Informatica cannot offer roles to assign to the new user or group.
+. The role grants Read access to the User and Group assets.
+. The role is assigned to the admin user or group. A correctly configured role that is not assigned has no effect.
+
+== See also
+
+* xref:informatica-scanners.adoc[]
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:managing-scanners.adoc[]
