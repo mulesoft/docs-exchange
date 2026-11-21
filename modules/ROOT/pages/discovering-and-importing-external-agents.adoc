@@ -21,6 +21,9 @@ Exchange supports these scanner types:
 * Agents
 * APIs
 * MCP servers
+* API security reports
+
+The API security scanner for Akamai API Security doesn't import services. It correlates security findings with services that already exist in Exchange.
 
 == Find a Scanner
 
@@ -28,10 +31,12 @@ By scanner type::
 
 * xref:agent-scanners.adoc[]
 * xref:api-scanners.adoc[]
+* xref:api-security-scanners.adoc[]
 * xref:mcp-scanners.adoc[]
 
 By provider::
 
+* xref:akamai-scanners.adoc[]
 * xref:aws-scanners.adoc[]
 * xref:anthropic-scanners.adoc[]
 * xref:databricks-scanners.adoc[]

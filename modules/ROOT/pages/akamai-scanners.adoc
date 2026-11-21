@@ -1,0 +1,23 @@
+= Akamai Scanners
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+When you use Akamai API Security to monitor your APIs, use this page to open the scanner setup topic.
+
+== API Security Scanners
+
+* xref:adding-akamai-api-security-scanner.adoc[Add a scanner for Akamai API Security]
+
+== Before You Begin Adding a Scanner
+
+Make sure you have the permission and access:
+
+* Exchange Administrator permission
+* Verify that you are in the business group where you want to add the scanner.
+
+== See Also
+
+* xref:discovering-and-importing-external-agents.adoc[]
+* xref:api-security-scanners.adoc[]
+* xref:managing-scanners.adoc[]
