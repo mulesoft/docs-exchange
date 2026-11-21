@@ -21,8 +21,8 @@ Mule 4 connectors download as JAR files.
 
 REST Connect supports these API specification formats:
 
-* OAS 3.0 and 3.1 - JSON
-* OAS 3.0 and 3.1 - YAML
+* OAS 3.0, 3.1, and 3.2 - JSON
+* OAS 3.0, 3.1, and 3.2 - YAML
 * OAS 2 - JSON
 * OAS 2 - YAML
 * RAML 1.0
@@ -100,6 +100,48 @@ components:
         owner:
           $ref: "#/components/schemas/Owner"
           description: The pet's owner (a sibling keyword next to $ref, new in 3.1)
+----
+
+[[oas-32-example]]
+== OAS 3.2 Example
+
+REST Connect generates connectors from OAS 3.2 API specifications. This example uses a `query` operation, which sends a structured filter in the request body:
+
+[source,text,linenums]
+----
+openapi: 3.2.0
+info:
+  title: Product Search API
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/v1
+paths:
+  /products:
+    query:
+      operationId: searchProducts
+      summary: Search products with a structured filter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: { type: string }
+                maxPrice: { type: number }
+      responses:
+        '200':
+          description: Matching products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id: { type: string }
+                    name: { type: string }
+                    price: { type: number }
 ----
 
 [[security-scheme-support]]
@@ -831,7 +873,7 @@ When your access token is issued properly, you can get issues related to Salesfo
 == Known Limitations
 
 * Anypoint Platform, including REST Connect, does not support API fragments for OAS.
-* REST Connect does not support webhooks in OAS 3.1 API specifications.
-* REST Connect does not support the `mutualTLS` security scheme in OAS 3.1 API specifications.
-* For XML request and response bodies, the generated XSD does not enforce the OAS 3.1 keywords `prefixItems`, `if`/`then`/`else`, `patternProperties`, and `not`.
+* REST Connect does not support webhooks in OAS 3.1 and 3.2 API specifications.
+* REST Connect does not support the `mutualTLS` security scheme in OAS 3.1 and 3.2 API specifications.
+* For XML request and response bodies, the generated XSD does not enforce the OAS 3.1 and 3.2 keywords `prefixItems`, `if`/`then`/`else`, `patternProperties`, and `not`.
 * Chinese characters are not supported in API specs or their dependencies. Japanese characters are supported in the `description` and `example` tags.
