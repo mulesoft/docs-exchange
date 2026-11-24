@@ -27,7 +27,7 @@ The registry contains AI assets, including agents, Large Language Models (LLMs),
 
 image:ex-agents-and-tools.png["Exchange catalog showing assets in Agents & Tools"]
 
-You create agent network projects in Anypoint Code Builder to define, validate, and publish brokers, LLMs, and MCP servers to allow agents to use the assets in your Agent Fabric. Anypoint Code Builder publishes agent network projects and their associated assets to Exchange. Exchange tags them as *brokers* for identification. See xref:anypoint-code-builder::af-agent-networks.adoc[] in the Anypoint Code Builder documentation. 
+You create agent network projects in Anypoint Code Builder to define, validate, and publish brokers, LLMs, and MCP servers to allow agents to use the assets in your Agent Fabric. Anypoint Code Builder publishes agent network projects and their associated assets to Exchange. Exchange tags them as *brokers* for identification. See xref:agent-network::agent-network-overview.adoc[]. 
 
 AI assets are added to the registry via these methods:
 
@@ -43,7 +43,7 @@ Discover and catalog agents from external providers into Exchange using scanners
 +
 Import Agentforce agents from Salesforce into Exchange from Settings.
 
-* xref:anypoint-code-builder::af-agent-networks.adoc[Creating agent network projects in Anypoint Code Builder and publishing them to Exchange].
+* xref:anypoint-network::agent-network-overview.adoc[Creating agent network projects in Anypoint Code Builder and publishing them to Exchange].
 +
 Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, agents, large language models (LLMs), and MCP servers. Anypoint Code Builder publishes agent network projects and their associated assets to the agent registry in Exchange with a *Broker* label. 
 
@@ -113,8 +113,8 @@ To download files from Canada, Brazil, Japan, India, Australia, United Kingdom, 
 == See Also
 
 * xref:discovering-and-importing-external-agents.adoc[Discovering and Importing External Agents With Scanners]
-* xref:general::learning-map-agent-fabric.adoc[Agent Fabric]
-* xref:anypoint-code-builder::af-agent-networks.adoc[Agent Network Projects]
+* xref:agent-fabric::learning-map-agent-fabric.adoc[]
+* xref:anypoint-network::agent-network-overview.adoc[]
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
 * https://trailhead.salesforce.com/trailblazer-community/neighborhoods/mulesoft[MuleSoft Trailblazer Community]
 * https://help.salesforce.com[Salesforce Help]
