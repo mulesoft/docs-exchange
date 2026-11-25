@@ -43,7 +43,7 @@ Discover and catalog agents from external providers into Exchange using scanners
 +
 Import Agentforce agents from Salesforce into Exchange from Settings.
 
-* xref:anypoint-network::agent-network-overview.adoc[Creating agent network projects in Anypoint Code Builder and publishing them to Exchange].
+* xref:agent-network::agent-network-overview.adoc[Creating agent network projects in Anypoint Code Builder and publishing them to Exchange].
 +
 Use Anypoint Code Builder to create agent network projects that define, validate, and publish brokers, agents, large language models (LLMs), and MCP servers. Anypoint Code Builder publishes agent network projects and their associated assets to the agent registry in Exchange with a *Broker* label. 
 
@@ -114,7 +114,7 @@ To download files from Canada, Brazil, Japan, India, Australia, United Kingdom, 
 
 * xref:discovering-and-importing-external-agents.adoc[Discovering and Importing External Agents With Scanners]
 * xref:agent-fabric::learning-map-agent-fabric.adoc[]
-* xref:anypoint-network::agent-network-overview.adoc[]
+* xref:agent-network::agent-network-overview.adoc[]
 * xref:release-notes::exchange/anypoint-exchange-release-notes.adoc[Anypoint Exchange Release Notes]
 * https://trailhead.salesforce.com/trailblazer-community/neighborhoods/mulesoft[MuleSoft Trailblazer Community]
 * https://help.salesforce.com[Salesforce Help]
